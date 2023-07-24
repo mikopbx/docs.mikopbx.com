@@ -1,0 +1,2 @@
+# Yealink T28
+
