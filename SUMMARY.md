@@ -163,7 +163,7 @@
   * [Имитация внешних входящих и исходящих звонков](faq/providers/imitaciya-vneshnikh-vkhodyashikh-i-iskhodyashikh-zvonkov.md)
 * [Настройка софтфонов](faq/softphones/README.md)
   * [Sessiontalk](faq/softphones/sessiontalk.md)
-  * [Groundware](faq/softphones/groundware.md)
+  * [Groundwire](faq/softphones/groundwire.md)
   * [MicroSIP](faq/softphones/microsip.md)
   * [Zoiper](faq/softphones/zoiper.md)
   * [Jitsi](faq/softphones/jitsi.md)
