@@ -185,15 +185,16 @@
 ## Модули <a href="#modules" id="modules"></a>
 
 * [Модули МИКО](modules/miko/README.md)
-  * [Панель телефонии 1.0 для 1С](modules/miko/module-pt1c-core.md)
+  * [Интеграция с 1С](modules/miko/integraciya-s-1s/README.md)
+    * [Панель телефонии 1.0 для 1С](modules/miko/integraciya-s-1s/module-pt1c-core.md)
+    * [Панель телефонии 4.0 для 1С](https://docs.telefon1c.ru)
+    * [Модуль умной маршрутизации](https://docs.telefon1c.ru/user-guides/routing/smart-ivr-miko/)
   * [Группы пользователей](modules/miko/module-users-groups.md)
   * [Интеграция с CRM Bitrix24](modules/miko/module-bitrix24-integration.md)
   * [Резервное копирование](modules/miko/module-backup.md)
   * [Провижининг телефонов](modules/miko/module-autoprovision.md)
   * [Автообработка пропущенных](modules/miko/module-callback-queues.md)
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
-  * [Панель телефонии 4.0 для 1С](https://docs.telefon1c.ru)
-  * [Модуль умной маршрутизации](https://docs.telefon1c.ru/user-guides/routing/smart-ivr-miko/)
   * [Управление доступом в систему](modules/miko/module-users-u-i.md)
   * [Модуль автообзвона](modules/miko/module-auto-dialer.md)
 
