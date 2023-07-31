@@ -1,0 +1,2 @@
+# Bare-metal installation
+
