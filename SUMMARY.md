@@ -194,7 +194,7 @@
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
   * [Панель телефонии 4.0 для 1С](https://docs.telefon1c.ru)
   * [Модуль умной маршрутизации](https://docs.telefon1c.ru/user-guides/routing/smart-ivr-miko/)
-  * [Управление доступом в систему](modules/miko/upravlenie-dostupom-v-sistemu.md)
+  * [Управление доступом в систему](modules/miko/module-users-ui.md)
 
 ## Прочее
 
