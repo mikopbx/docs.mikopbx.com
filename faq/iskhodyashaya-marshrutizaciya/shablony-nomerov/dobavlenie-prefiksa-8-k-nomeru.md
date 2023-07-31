@@ -10,6 +10,6 @@
 
 2. Создайте шаблон как представлено на изображении:
 
-<figure><img src="../../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/15 (2).png" alt=""><figcaption></figcaption></figure>
 
 3. Нажмите "**Сохранить**"

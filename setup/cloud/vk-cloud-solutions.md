@@ -8,15 +8,15 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 1. Авторизуйтесь на сайте [mcs.mail.ru](https://mcs.mail.ru/).&#x20;
 
-<figure><img src="../../.gitbook/assets/1 (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (12).png" alt=""><figcaption></figcaption></figure>
 
 2. Откройте меню **Виртуальных сетей**
 
-<figure><img src="../../.gitbook/assets/2 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (11).png" alt=""><figcaption></figcaption></figure>
 
 3. Перейдите во вкладку "**Сети**"
 
-<figure><img src="../../.gitbook/assets/3 (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (16).png" alt=""><figcaption></figcaption></figure>
 
 4.  Для начала следует убедиться, что в разделе «**Виртуальные сети**» - «**Сети**» доступа локальная подсеть.
 
@@ -24,7 +24,7 @@ description: Установка MikoPBX в облако VK Cloud solution
 
     Если сеть не создана: нажмите **"Создать"**
 
-<figure><img src="../../.gitbook/assets/4 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (5).png" alt=""><figcaption></figcaption></figure>
 
 &#x20;       Введите **название** Сети и нажмите "**Добавить Сеть**"
 
@@ -36,7 +36,7 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 &#x20;       Для этого нажмите на свой e-mail, далее на надпись "**Ключевые пары**"
 
-<figure><img src="../../.gitbook/assets/6 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (13).png" alt=""><figcaption></figcaption></figure>
 
 2. Создайте или импортируйте ключ.
 
@@ -46,15 +46,15 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 1. Перейдите во вкладку "**Облачные вычисления**"
 
-<figure><img src="../../.gitbook/assets/7 (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (8).png" alt=""><figcaption></figcaption></figure>
 
 2. Оттуда перейдите к вкладке "**Образы**":
 
-<figure><img src="../../.gitbook/assets/8 (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (4).png" alt=""><figcaption></figcaption></figure>
 
 3. Нажмите "**Создать образ**":
 
-<figure><img src="../../.gitbook/assets/9 (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (5).png" alt=""><figcaption></figcaption></figure>
 
 4. Скачайте образ диска формата raw.
 
@@ -101,7 +101,7 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 5. Как только инстанс будет создан, сразу остановите его запуск:
 
-<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (4).png" alt=""><figcaption></figcaption></figure>
 
 Инстанс создан.
 
@@ -123,9 +123,9 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 Нажмите "**Создать диск**"
 
-<figure><img src="../../.gitbook/assets/19 (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (4).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (2).png" alt=""><figcaption></figcaption></figure>
 
 3. Запустите инстанс:
 
@@ -143,15 +143,15 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 5. Выберите пункт «**\[6] Data storage**»
 
-<figure><img src="../../.gitbook/assets/22 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/22 (4).png" alt=""><figcaption></figcaption></figure>
 
 6. Далее выберите пункт «**\[1] Mount drive as data storage**»&#x20;
 
-<figure><img src="../../.gitbook/assets/23 (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/23 (1).png" alt=""><figcaption></figcaption></figure>
 
 7. На следующем шаге нажмите **ENTER**
 
-<figure><img src="../../.gitbook/assets/24 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/24 (1).png" alt=""><figcaption></figcaption></figure>
 
 Система перезагрузится, надпись **"**<mark style="color:red;">**Storage disk not connected**</mark>**"** пропадет
 
@@ -163,7 +163,7 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 1. Определите шлюз, маску, внешний IP-адрес с помощью раздела **"Облачные вычисления" -> "Виртуальные машины" -> "Ваша виртуальная машина" -> "Сети"**
 
-<figure><img src="../../.gitbook/assets/extra7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extra7 (2).png" alt=""><figcaption></figcaption></figure>
 
 **Для данного примера:**
 
@@ -185,11 +185,11 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 3. Перейдите к разделу «**\[2] Configure LAN IP Address**»
 
-<figure><img src="../../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
 
 4. Выбираем «**\[2] Manual settings**»
 
-<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
 
 5. Введите внешний IP-адрес.
 

@@ -6,11 +6,11 @@ AMI часто используют для интеграции с бизнес-
 
 Первое что необходимо сделать, это включить AMI и завести пользователя, с помощью которого клиентская программа будет аутентифицироваться. «**Система**» - «**Доступ к AMI**»
 
-<figure><img src="../../.gitbook/assets/1 (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (53).png" alt=""><figcaption></figcaption></figure>
 
 Для добавления новой учетной записи необходимо указать **Имя пользователя** и **Пароль**. Кроме того, необходимо задать **Сетевой фильтр**, т.е. из какой подсети разрешено подключение к пользователю AMI. Вы можете разрешить подключения с любых адресов, либо указать конкретную сеть, настройку который Вы произвели в разделе **Сеть и Firewall** → [Сетевой экран](../connectivity/firewall.md).
 
-<figure><img src="../../.gitbook/assets/2 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (18).png" alt=""><figcaption></figcaption></figure>
 
 ## Опции и права пользователя AMI <a href="#opcii_i_prava_polzovatelja_ami" id="opcii_i_prava_polzovatelja_ami"></a>
 

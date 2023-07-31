@@ -2,7 +2,7 @@
 
 **История вызовов** - это список истории входящих, исходящих и внутренних вызовов. Располагается в **Телефония -> История вызовов**.
 
-<figure><img src="../../.gitbook/assets/istor_viz_0.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/istor_viz_0 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Чем она полезна
 

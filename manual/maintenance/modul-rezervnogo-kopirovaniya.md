@@ -10,7 +10,7 @@
 
 2. Затем включите его, нажав на переключатель. После обновления страницы браузера модуль появится в разделе **Обслуживание**.
 
-<figure><img src="../../.gitbook/assets/mod_rezerv_kopir_0 (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mod_rezerv_kopir_0.gif" alt=""><figcaption></figcaption></figure>
 
 В разделе **Обслуживание** нажмите **Модуль резервного копирования** для открытия его главной страницы.
 

@@ -18,19 +18,19 @@
 
 В нашем примере ID провайдера принимает вид: **SIP-1687947415**
 
-<figure><img src="../../.gitbook/assets/1 (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (22).png" alt=""><figcaption></figcaption></figure>
 
 2. Перейдите в раздел **Система** → **Кастомизация системных файлов**.
 
-<figure><img src="../../.gitbook/assets/2 (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (23).png" alt=""><figcaption></figcaption></figure>
 
 3. Откройте для редактирования конфигурационный файл **extensions.conf**. &#x20;
 
-<figure><img src="../../.gitbook/assets/3 (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (11).png" alt=""><figcaption></figcaption></figure>
 
 4. Установите режим «**Добавлять в конец файла**».
 
-<figure><img src="../../.gitbook/assets/4 (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (34).png" alt=""><figcaption></figcaption></figure>
 
 5. В черное окно добавьте следующий фрагмент кода:
 

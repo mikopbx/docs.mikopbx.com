@@ -4,16 +4,16 @@
 
 Меню выключения/перезагрузки системы вы можете найти в MikoPBX, нажав на "**Перезагрузка**" в разделе "**Обслуживание**"
 
-<figure><img src="../../.gitbook/assets/1 (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (54).png" alt=""><figcaption></figcaption></figure>
 
 При открытии страницы будет отображен список активных звонков на АТС. Отображается дата начала звонка, «**Кто**» и «**Кому**» звонит.
 
-<figure><img src="../../.gitbook/assets/8 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (10).png" alt=""><figcaption></figcaption></figure>
 
 * «**Перезагрузить АТС**» - команда начинает перезагрузку станции.
 * «**Выключение АТС**» - завершает все процессы и отключает станцию.
 
-<figure><img src="../../.gitbook/assets/9 (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Пока есть активные вызовы перезагрузка и отключение не будут доступны через web интерфейс.
@@ -23,13 +23,13 @@
 
 Вы можете перезагрузить станцию через консольное меню. Для этого выберете раздел «**\[3] Перезагрузить систему**»
 
-<figure><img src="../../.gitbook/assets/4 (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (14).png" alt=""><figcaption></figcaption></figure>
 
 Если вы хотите перезагрузить станцию: нажмите «**\[1] Перезагрузить MikoPBX**»
 
 Если вы хотите выключить станцию: нажмите «**\[2] Выключить**»
 
-<figure><img src="../../.gitbook/assets/5 (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 
 Система перезагрузится.
 
@@ -39,7 +39,7 @@
 
 В консольном меню АТС введите команду «**\[9] Консоль(Shell)**» и нажмите **Enter**&#x20;
 
-<figure><img src="../../.gitbook/assets/6 (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (5).png" alt=""><figcaption></figcaption></figure>
 
 Система запустить консоль АТС
 
@@ -47,6 +47,6 @@
 
 Нажмите **Enter**
 
-<figure><img src="../../.gitbook/assets/7 (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (17).png" alt=""><figcaption></figcaption></figure>
 
 Система перезагрузится с проверкой диска.

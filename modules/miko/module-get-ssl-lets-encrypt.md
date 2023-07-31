@@ -16,12 +16,12 @@
 
 Установить и включить модуль "**Lets Encrypt Get ssl**"
 
-<figure><img src="../../.gitbook/assets/1 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (14).png" alt=""><figcaption></figcaption></figure>
 
 2. Перейти в интерфейс модуля&#x20;
 
-<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (20).png" alt=""><figcaption></figcaption></figure>
 
 3. Выполнись действие «**Get/update cert**»:
 
-<figure><img src="../../.gitbook/assets/3 (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (19).png" alt=""><figcaption></figcaption></figure>

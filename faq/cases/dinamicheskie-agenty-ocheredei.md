@@ -7,13 +7,13 @@
 1. Создайте новую очередь с четырехзначным внутренним номером. К примеру **2001**. (см. документацию «[Очереди вызовов](../../manual/telefoniya/call-queues.md)»)
 2. Опишите новое «**Приложение диалпланов**»
 
-<figure><img src="../../.gitbook/assets/6 (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (22).png" alt=""><figcaption></figcaption></figure>
 
 3. Назначьте «**Номер для вызова приложения**» - **999XXXXX** первые три цифры можете переопределить своей комбинацией
 
 &#x20;      Тип кода - «**PHP AGI скрипт**»
 
-<figure><img src="../../.gitbook/assets/7 (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (5).png" alt=""><figcaption></figcaption></figure>
 
 4. На вкладке «**Программный код**» вставьте следующее содержимое:
 
@@ -79,7 +79,7 @@ $agi->hangup();
 
 Нажмите "**Сохранить**"
 
-<figure><img src="../../.gitbook/assets/8 (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (12).png" alt=""><figcaption></figcaption></figure>
 
 Приложение готово!&#x20;
 

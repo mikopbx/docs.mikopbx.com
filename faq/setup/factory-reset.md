@@ -4,17 +4,17 @@
 
 1. Перейдите в раздел «**Общие настройки**» -> "**Удаление настроек системы**"
 
-<figure><img src="../../.gitbook/assets/1 (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (37).png" alt=""><figcaption></figcaption></figure>
 
 2. В поле ввода вставьте текст "**удалить всё**", нажмите "**Сохранить**"
 
-<figure><img src="../../.gitbook/assets/2 (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (3).png" alt=""><figcaption></figcaption></figure>
 
 ## Способ 2
 
 1. Откройте консольное меню MikoPBX. С клавиатуры введите **9** для перехода в **консоль АТС**.
 
-<figure><img src="../../.gitbook/assets/3 (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (3).png" alt=""><figcaption></figcaption></figure>
 
 2. Введите последовательно две команды:
 
