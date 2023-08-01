@@ -18,7 +18,7 @@
 
 3. Выполните действие «**Создать архивную копию**»
 
-<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 4. Необходимо выбрать, какие именно данные будут включены в архивную копию АТС, т.е. какие данные необходимо сохранить:
    * **Настройки PBX** - все **настройки конфигурации** MikoPBX, которые были выполнены в web-интерфейсе в соответствующих разделах.
@@ -62,7 +62,7 @@
 
 3. Выполните действие «**Восстановить из архива**»
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 Будет запущен процесс восстановления, после завершения АТС будет перезагружена
 

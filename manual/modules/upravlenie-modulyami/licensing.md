@@ -64,7 +64,7 @@
 
 Нажмите "**Сохранить**"
 
-<figure><img src="../../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Активация регистрационного номера <a href="#aktivacija_registracionnogo_nomera" id="aktivacija_registracionnogo_nomera"></a>
 

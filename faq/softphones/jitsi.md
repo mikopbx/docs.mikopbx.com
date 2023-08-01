@@ -31,7 +31,7 @@
 
 9. В поле "**Регистратор"** вводим IP-адрес MikoPBX к которой производится подключение.
 
-<figure><img src="../../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 10. Нажмите **"Следующий"**
 

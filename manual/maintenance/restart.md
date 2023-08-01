@@ -13,7 +13,7 @@
 * «**Перезагрузить АТС**» - команда начинает перезагрузку станции.
 * «**Выключение АТС**» - завершает все процессы и отключает станцию.
 
-<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Пока есть активные вызовы перезагрузка и отключение не будут доступны через web интерфейс.
@@ -29,7 +29,7 @@
 
 Если вы хотите выключить станцию: нажмите «**\[2] Выключить**»
 
-<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Система перезагрузится.
 

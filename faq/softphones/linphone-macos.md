@@ -17,7 +17,7 @@
 
 5. В поле "**Домен SIP**" введите **IP-адрес** MikoPBX, к которой собираетесь подключится
 
-<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/3 (28).png" alt=""><figcaption></figcaption></figure>
 

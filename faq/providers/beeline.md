@@ -30,7 +30,7 @@
 
 7. Нажмите на только что созданного сотрудника&#x20;
 
-<figure><img src="../../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 8. Перейдите во вкладку "**Настройки**"
 
@@ -40,7 +40,7 @@
 
 9. Заполните поле "**Пароль**"
 
-<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Подключение провайдера в MikoPBX <a href="#podkljuchenie_provajdera_v_mikopbx" id="podkljuchenie_provajdera_v_mikopbx"></a>
 
