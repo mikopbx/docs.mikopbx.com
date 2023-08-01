@@ -77,7 +77,7 @@ username=SIP01XXXXXXXXX@ip.beeline.ru
 username=SIP01XXXXXXXXX@ip.beeline.ru
 ```
 
-<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Результатом успешного подключения является зеленый индикатор.
 

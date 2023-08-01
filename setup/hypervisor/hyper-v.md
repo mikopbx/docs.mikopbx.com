@@ -72,7 +72,7 @@
 
 8. Нажмите "**Готово**"
 
-<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
 
 9. Удалите DVD-дисковод
 
@@ -82,7 +82,7 @@
 
 1. Перейдите в "**Действие**" -> "**Пуск**"
 
-<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
 
 2. Нажмите "**Подключить**"
 

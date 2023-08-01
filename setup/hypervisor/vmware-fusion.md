@@ -94,13 +94,13 @@
 
 6. Система перезагрузится и MikoPBX будет готова к использованию.
 
-<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Первое подключение к MikoPBX
 
 1. В АТС отображается **IP адрес** станции, по которому к ней можно подключится&#x20;
 
-<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
 2. Введите IP адрес станции в строку браузера и у вас откроется меню входа в MIkoPBX&#x20;
 

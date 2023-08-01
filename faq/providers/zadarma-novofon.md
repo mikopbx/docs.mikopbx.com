@@ -71,11 +71,11 @@
 
 1. Переходим **Маршрутизация** → **Исходящие маршруты**. Нажимаем на кнопку «**Добавить новое правило**».
 
-<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2. Настройка как на скриншоте означает, что если номер начинается с **«7»** или **«8»** и остальная часть содержит 10 цифр, звонок будет осуществляться через провайдера Novofon.\
    Подробнее про настройку исходящих маршрутов можно прочитать [здесь.](../../manual/routing/outbound-routes.md)
 
-<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
 
 На этом настройка провайдера Novofon завершена!
