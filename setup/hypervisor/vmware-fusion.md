@@ -22,7 +22,7 @@
 
 Нажимаем "**Continue**"
 
-<figure><img src="../../.gitbook/assets/4 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 5. Нажимаем "**Finish**"
 
@@ -36,7 +36,7 @@
 
 2. Перейдите в раздел "**\[3] Reboot the system**"
 
-<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Выберите "**\[2]** **Shutdown**"
 

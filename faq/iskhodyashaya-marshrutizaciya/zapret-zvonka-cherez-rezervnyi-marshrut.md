@@ -10,15 +10,15 @@
 
 1. Перейдите в настройки провайдера и скопируйте его ID в адресной строке браузера:
 
-<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (2).png" alt=""><figcaption></figcaption></figure>
 
 2. Переходим в раздел «[Кастомизация системных файлов](../../manual/system/custom-files.md)»
 
-<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (2).png" alt=""><figcaption></figcaption></figure>
 
 3. Переходим в раздел редактирования файла **extensions.conf**.&#x20;
 
-<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
 
 4. Добавьте в конец файла следующий контекст:
 
@@ -28,6 +28,6 @@ exten => _X!,1,Hangup()
 	same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
 Сохраните изменения. Теперь все звонки через маршруты, связанные с провайдером будут происходить без учета резервного провайдера. Будет отрабатывать только первый из исходящих маршрутов.
