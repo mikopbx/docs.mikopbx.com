@@ -3,7 +3,7 @@
 1. Скачайте программу для подключения по SSH. Это можно сделать на официальном сайте по [ссылке](https://putty.org.ru/download.html)
 2. Запустите скаченную программу. У вас откроется главное меню.
 
-<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Перейдите в раздел «**Соединение**» - «**Данные**»
 
