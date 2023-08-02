@@ -79,7 +79,7 @@
     * [Добавление префикса "8" к номеру](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/dobavlenie-prefiksa-8-k-nomeru.md)
     * [Замена префикса номера с "8, 7" на "+7"](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/zamena-prefiksa-nomera-s-8-7-na-+7.md)
     * [Замена префикса номера с "+7" на "8"](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/zamena-prefiksa-nomera-s-+7-na-8.md)
-    * [Пример шаблона: звонки в другую страну (Укарина, Беларусь, Латвия)](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/primer-shablona-zvonki-v-druguyu-stranu-ukarina-belarus-latviya.md)
+    * [Пример шаблона: звонки в другую страну (Украина, Беларусь, Латвия)](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/primer-shablona-zvonki-v-druguyu-stranu-ukraina-belarus-latviya.md)
     * [Как запретить замену "+" на "00"](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/kak-zapretit-zamenu-+-na-00.md)
 * [Входящая маршрутизация](faq/vkhodyashaya-marshrutizaciya/README.md)
   * [Выбор провайдера при переадресации на мобильный](faq/vkhodyashaya-marshrutizaciya/vybor-provaidera-pri-pereadresacii-na-mobilnyi.md)
