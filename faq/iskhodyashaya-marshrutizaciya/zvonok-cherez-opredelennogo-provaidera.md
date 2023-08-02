@@ -120,7 +120,7 @@ exten => _.!,1,NoOp(Start custom context)
 
 **ID-ПРОВАЙДЕРА** - значение, которое вы сохранили на третьем шаге, описанном в данном способе. В нашем примере это **SIP-1690973516**
 
-<figure><img src="../../.gitbook/assets/CodeInExtensions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeInExtensions.png" alt=""><figcaption><p>Код для Extensions.conf</p></figcaption></figure>
 
 **Сохраняем** изменения и возвращаемся обратно к списку конфигурационных файлов.
 
