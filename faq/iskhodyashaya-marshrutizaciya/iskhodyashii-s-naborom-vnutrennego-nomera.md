@@ -4,11 +4,11 @@
 
 1. Для решения задачи следует описать дополнительные контексты через меню [Кастомизация системных файлов](../../manual/system/custom-files.md).
 
-<figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption><p>меню <a href="../../manual/system/custom-files.md">Кастомизация системных файлов</a>.</p></figcaption></figure>
 
 2. Править будем файл **extensions.conf**.
 
-<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption><p>Правка файла "<strong>extensions.conf"</strong></p></figcaption></figure>
 
 3.  Добавьте в конец файла следующий текст:
 
@@ -29,19 +29,19 @@
       same => n,return
     ```
 
-<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption><p>Добавление кода в конец файла файл "<strong>extensions.conf"</strong></p></figcaption></figure>
 
 4. Далее необходимо описать [Приложения диалпланов](../../manual/modules/dialplan-applications.md)
 
-<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption><p>Создание нового <a href="../../manual/modules/dialplan-applications.md">Приложения диалпланов</a></p></figcaption></figure>
 
 5. Выберите «**Тип кода**» - «**Диалплан Asterisk**»
 
-<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption><p>Указание типа кода Диалплана</p></figcaption></figure>
 
 6. Допустим «донабрать» нужно номер **3542331**, установим это значение в «**Номер для вызова приложения**»
 
-<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption><p>Указание номера "донабора" для вызова приложения </p></figcaption></figure>
 
 7. Перейдите во вкладку "Программный код" Вставьте шаблон:
 
