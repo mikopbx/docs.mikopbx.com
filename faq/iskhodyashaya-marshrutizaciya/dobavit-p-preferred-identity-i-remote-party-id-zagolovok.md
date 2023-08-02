@@ -4,11 +4,11 @@
 
 1. Для решения задачи следует описать дополнительные контексты через меню [Кастомизация системных файлов](../../manual/system/custom-files.md).&#x20;
 
-<figure><img src="../../.gitbook/assets/1 (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (57).png" alt="Раздел &#x22;Кастомизация системных файлов&#x22;"><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
 2. Править будем файл **extensions.conf**.&#x20;
 
-<figure><img src="../../.gitbook/assets/2 (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (43).png" alt=""><figcaption><p>Файл "extensions.conf"</p></figcaption></figure>
 
 3. Добавьте в конец файла следующий текст:
 
@@ -30,7 +30,7 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
     same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/3 (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (38).png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
 
 {% hint style="danger" %}
 **Обратите внимание**:
