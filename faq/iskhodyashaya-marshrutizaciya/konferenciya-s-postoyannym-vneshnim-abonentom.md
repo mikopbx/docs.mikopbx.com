@@ -8,35 +8,35 @@
 
 1. В разделе «**Телефония**» - «**Конференция**» создаем новую конференцию
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption><p>Раздел "Конференция"</p></figcaption></figure>
 
 2. Укажем название комнаты «**Z-CONF-354233**»
 
-<figure><img src="../../.gitbook/assets/2 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1).png" alt=""><figcaption><p>Окно создания новой конференции</p></figcaption></figure>
 
 3. Укажем внутренний номер «**354233**»
 
-<figure><img src="../../.gitbook/assets/3 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1) (1) (1).png" alt=""><figcaption><p>Внутренний номер</p></figcaption></figure>
 
 4. Опишем «**Приложение Dialplan**» (см. [Приложения диалпланов](../../manual/modules/dialplan-applications.md))
 
-<figure><img src="../../.gitbook/assets/4 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1).png" alt=""><figcaption><p>Раздел Приложения диалпланов</p></figcaption></figure>
 
 5. Название «**Z-Worker-CONF**»
 
-<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption><p>Указание названия в меню создания диалплана</p></figcaption></figure>
 
 6. Номер для вызова «**2200103**» (может быть произвольным)
 
-<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption><p>Указание номера для вызова приложения в меню создания диалплана</p></figcaption></figure>
 
 7. Укажите тип кода «**PHP-AGI скрипт**»
 
-<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption><p>Указание типа кода в меню создания диалплана</p></figcaption></figure>
 
 8. Код
 
-<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption><p>Код в меню создания диалплана</p></figcaption></figure>
 
 ```php
 <?php
@@ -111,11 +111,11 @@ if($action === 'start'){
 
 9. Правим файл «**/var/spool/cron/crontabs/root**» через меню [Кастомизация системных файлов](../../manual/system/custom-files.md)
 
-<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption><p>Файл "<strong>/var/spool/cron/crontabs/root"</strong> в меню кастомизация системных файлов </p></figcaption></figure>
 
 10. &#x20;Добавляем задачу в конец файла:
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption><p>Добавление задачи в конец файла </p></figcaption></figure>
 
 ```php
 */1 * * * * /usr/bin/php -f /var/lib/asterisk/agi-bin/DIALPLAN-APP-EC12CFAE6783FE82FD34F16E40C7386B.php start > /dev/null 2> /dev/null
@@ -124,9 +124,9 @@ if($action === 'start'){
 11. В данном примере «**DIALPLAN-APP-EC12CFAE6783FE82FD34F16E40C7386B**» - Это идентификатор созданного ранее приложения. ID можно подсмотреть в адресной строке браузера при редактировании приложения.
 12. Опишем дополнительные контексты через меню [Кастомизация системных файлов](../../manual/system/custom-files.md). Править будем файл **extensions.conf**.&#x20;
 
-<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption><p>Правка файла "extensions.conf" в меню "Кастомизация системных файлов"</p></figcaption></figure>
 
-13. Добавьте в конец файла следущий код:
+13. Добавьте в конец файла следующий код:
 
 ```php
 [z-outgoing]
@@ -150,7 +150,7 @@ exten => _X!,1,Answer()
   same => n,Hangup()
 ```
 
-<figure><img src="../../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12.png" alt=""><figcaption><p>Добавление кода в конец файла "extensions.conf" </p></figcaption></figure>
 
 {% hint style="info" %}
 При звонке в конференцию по номеру **354233** автоматически будет подключаться внешний абонент с номером **84957776675**. Как только абонент ответи, будет произведен набор добавочного номера **354233**. Как только все «внутренние» участники покинули конференцию, внешний абонент будет отключен.
