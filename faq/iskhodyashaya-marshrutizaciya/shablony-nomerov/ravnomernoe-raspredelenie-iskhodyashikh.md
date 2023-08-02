@@ -70,7 +70,7 @@ exten => _X!,1,NoOp()
 ```
 {% endcode %}
 
-<figure><img src="../../../.gitbook/assets/codeForExtensionsConf2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/codeForExtensionsConf2.png" alt=""><figcaption><p>Код для extensions.conf</p></figcaption></figure>
 
 {% hint style="info" %}
 В строках вида «**Set(PUSH(rrItem)=SIP-1601534775)**» перечисляются идентификаторы провайдеров, среди которых следует равномерно распределять исходящие. Идентификатор можно скопировать в адресной строке браузера при редактировании провайдера.\
