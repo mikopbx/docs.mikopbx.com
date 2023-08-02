@@ -81,7 +81,6 @@
     * [Замена префикса номера с "+7" на "8"](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/zamena-prefiksa-nomera-s-+7-na-8.md)
     * [Пример шаблона: звонки в другую страну (Укарина, Беларусь, Латвия)](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/primer-shablona-zvonki-v-druguyu-stranu-ukarina-belarus-latviya.md)
     * [Как запретить замену "+" на "00"](faq/iskhodyashaya-marshrutizaciya/shablony-nomerov/kak-zapretit-zamenu-+-na-00.md)
-  * [Настройка исходящего АОН для сотрудника](faq/iskhodyashaya-marshrutizaciya/nastroika-iskhodyashego-aon-dlya-sotrudnika.md)
 * [Входящая маршрутизация](faq/vkhodyashaya-marshrutizaciya/README.md)
   * [Выбор провайдера при переадресации на мобильный](faq/vkhodyashaya-marshrutizaciya/vybor-provaidera-pri-pereadresacii-na-mobilnyi.md)
   * [Уведомление о занятости, Call Waiting](faq/vkhodyashaya-marshrutizaciya/uvedomlenie-o-zanyatosti-call-waiting.md)
