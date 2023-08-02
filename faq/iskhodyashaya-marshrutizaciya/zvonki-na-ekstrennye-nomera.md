@@ -35,7 +35,7 @@
 exten => _1XX,1,Goto(outgoing,${EXTEN},1)	
 ```
 
-<figure><img src="../../.gitbook/assets/7.png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newForm.png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
 
 В выше приведенном фрагменте кода мы описали правила для всех трехзначных номеров, начинающихся с 1. Если нужно указать конкретные экстренные номера, то вместо выше представленного кода нужно вставить следующие строки:
 

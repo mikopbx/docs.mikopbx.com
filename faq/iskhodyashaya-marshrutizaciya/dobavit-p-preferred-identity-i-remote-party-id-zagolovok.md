@@ -30,7 +30,7 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
     same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/3 (38).png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new.png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
 
 {% hint style="danger" %}
 **Обратите внимание**:

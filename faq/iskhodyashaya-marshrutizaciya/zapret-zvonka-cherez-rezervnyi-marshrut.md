@@ -28,6 +28,6 @@ exten => _X!,1,Hangup()
 	same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newForm1.png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
 
 Сохраните изменения. Теперь все звонки через маршруты, связанные с провайдером будут происходить без учета резервного провайдера. Будет отрабатывать только первый из исходящих маршрутов.

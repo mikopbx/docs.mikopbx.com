@@ -29,7 +29,7 @@
       same => n,return
     ```
 
-<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption><p>Добавление кода в конец файла файл "<strong>extensions.conf"</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new1 (3).png" alt=""><figcaption><p>Добавление кода в конец файла файл "<strong>extensions.conf"</strong></p></figcaption></figure>
 
 4. Далее необходимо описать [Приложения диалпланов](../../manual/modules/dialplan-applications.md)
 

@@ -115,7 +115,7 @@ if($action === 'start'){
 
 10. &#x20;Добавляем задачу в конец файла:
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption><p>Добавление задачи в конец файла </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newform.png" alt=""><figcaption><p>Добавление задачи в конец файла </p></figcaption></figure>
 
 ```php
 */1 * * * * /usr/bin/php -f /var/lib/asterisk/agi-bin/DIALPLAN-APP-EC12CFAE6783FE82FD34F16E40C7386B.php start > /dev/null 2> /dev/null
@@ -150,7 +150,7 @@ exten => _X!,1,Answer()
   same => n,Hangup()
 ```
 
-<figure><img src="../../.gitbook/assets/12.png" alt=""><figcaption><p>Добавление кода в конец файла "extensions.conf" </p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Добавление кода в конец файла "extensions.conf" </p></figcaption></figure>
 
 {% hint style="info" %}
 При звонке в конференцию по номеру **354233** автоматически будет подключаться внешний абонент с номером **84957776675**. Как только абонент ответи, будет произведен набор добавочного номера **354233**. Как только все «внутренние» участники покинули конференцию, внешний абонент будет отключен.

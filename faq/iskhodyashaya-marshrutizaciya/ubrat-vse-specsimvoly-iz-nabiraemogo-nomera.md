@@ -23,7 +23,7 @@ exten => s,1,NoOp(Cleaning dst number)
 	same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/3 (1) (1).png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newForm1 (1).png" alt=""><figcaption><p>Добавление кода в конец файла</p></figcaption></figure>
 
 {% hint style="success" %}
 Согласно описанному правилу, в набираемом номере останутся только символы \*#1234567890
