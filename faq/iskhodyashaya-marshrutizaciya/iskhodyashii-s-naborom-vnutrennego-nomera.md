@@ -52,7 +52,7 @@ n,Set(_ZPROVIDERID=SIP-1601534775)
 n,Goto(z-outgoing,${ZDST},1)
 ```
 
-<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption><p>Вставка шаблона во вкладку "Программный код" </p></figcaption></figure>
 
 * Если в поле «**Номер для вызова приложения**» указать шаблон **9XXXX**, то станет возможно «донабрать» любые пятизначные номера, начинающиеся с цифры «**9**»
 * В приложении переменной «**ZDST**» присвойте номер, на который следует совершить вызов
