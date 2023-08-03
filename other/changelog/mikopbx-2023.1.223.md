@@ -152,5 +152,3 @@ A lot of work has been done on bug fixing. This version is considered stable. Te
 Only the most important changes have been listed. The full list can be found in the [release description](https://github.com/mikopbx/Core/releases/tag/2023.1.223).
 
 We strive to make MikoPBX stable, easy to configure, and maintain. We hope it becomes a reliable tool for your company.
-
-Мы стараемся сделать MikoPBX стабильной, простой, понятной в настройке и сопровождении. Надеемся, что она станет надежным инструментом в вашей компании.
