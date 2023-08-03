@@ -80,63 +80,77 @@ same => n,retutn
 
 In this context, you can perform arbitrary actions before the call is directed to the queue. Play a media file, set additional channel variables, send an email to the responsible person.
 
-### Call Recording
+### **Call Recording**
 
 Several bugs related to call recording and call resumption have been fixed.
 
 Now, in the employee's profile, there is an option to disable call recording:
 
-<figure><img src="https://809364261-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MPK4TuzRBnP7rt8htho-887967055%2Fuploads%2FLmjThVW6Hte7UMTQGMDy%2FChangeLog223CallRecording.png?alt=media&#x26;token=2784dd35-9cef-419e-bc9e-c4545a2159ce" alt=""><figcaption></figcaption></figure>
+![Call Recording](../../.gitbook/assets/ChangeLog223CallRecording.png)
 
-Все диалоги, в которых будут участвовать внутренний и мобильный номера сотрудника записаны НЕ будут. Это может быть полезно для Директора и прочих руководителей компании.
+All dialogs involving internal and mobile numbers of the employee will NOT be recorded. This can be useful for directors and other company executives.
 
-Появилась возможность отключить запись всех внутренних разговоров. Для этого следует отключить флаг в разделе "**Система**" - "**Общие настройки**" - "**Запись разговоров**" - "**Запись внутренних разговоров**"
+An option to disable recording of all internal calls has been added. To do this, you should uncheck the flag in the "**System**" - "**General Settings**" - "**Call Recording**" - "**Record Internal Calls**".
 
-### **Нерабочее время**
+![Record Internal Calls](../../.gitbook/assets/recording-2.png)
 
-Новый интерфейс отображения списка нерабочего времени: Он стал более информативным и компактным.
+### **Non-Working Time**
 
-Ранее, чтобы описать нерабочее время с 18:00 по 8:00 было необходимо создать два правила 00:00 - 08:00 и 18:00 - 23:59. Теперь возможно указать одно правило **18:00 - 08:00**:
+The new interface for displaying the list of non-working time is more informative and compact:
 
-Это позволит сократить количество правил и навести порядок.
+![Non-Working Time](../../.gitbook/assets/Release223NonWorkingTime1.png)
 
-Нас часто просили предоставить возможность настроить разное расписание работы для разных отделов компании. Теперь это стало возможно.
+Previously, to describe non-working time from 18:00 to 8:00, it was necessary to create two rules: 00:00 - 08:00 and 18:00 - 23:59. Now it is possible to specify a single rule **18:00 - 08:00**:
 
-В карточке правила нерабочего времени появилась опция "**Применять только к определенным входящим маршрутам**". Теперь правило можно привязать к конкретным входящим маршрутам. Именно эта опция позволит создавать более гибкие правила, которые будут действовать на конкретных подразделения компании.
+![Non-Working Time Rule](../../.gitbook/assets/Release223NonWorkingTime2.png)
 
-Пример:
+This allows reducing the number of rules and organizing the schedule more efficiently.
 
-В данном примере правило будет действовать только для одного номера компании.
+We were often asked to provide the ability to configure different working schedules for different company departments. Now it is possible.
 
-### **Анализ проблем со звонками**
+In the non-working time rule card, there is an option "**Apply only to specific inbound routes**". Now the rule can be linked to specific inbound routes. This option allows creating more flexible rules that will apply to specific company departments.
 
-В журнал истории звонка добавлена кнопка перехода к логу звонка:
+Example:
 
-Такой лог можно передать в техническую поддержку для анализа поведения АТС.
+![Non-Working Time Rule for Specific Route](../../.gitbook/assets/Release223NonWorkingTime2.png)
 
-Расширены возможности отбора в журнале лога:
+In this example, the rule will only apply to one company number.
 
-Можно ввести несколько подстрок, разделенных символом &, в итоге будет выведен лог, содержащий все перечисленные подстроки.
+### **Call Analysis**
 
-В сборку asterisk добавлены модули для подключения к [Homer](https://github.com/sipcapture/homer). Модули можно настроить через кастомизацию системных файлов.
+A button has been added to the call history log to navigate to the call log:
+
+![Call History Log](../../.gitbook/assets/Release223CDR.png)
+
+Such logs can be passed to technical support for analysis of PBX behavior.
+
+Extended filtering options have been added to the call log:
+
+![Call Log Filtering](../../.gitbook/assets/Release223Logs.png)
+
+You can enter several substrings separated by the "&" symbol, and the log containing all listed substrings will be displayed.
+
+Modules for connecting to [Homer](https://github.com/sipcapture/homer) have been added to the Asterisk build. The modules can be configured through customization of system files.
 
 ### **Docker**
 
-Проведена большая работа над ошибками. Считаю эту версию стабильной. Проверено из под **Ubuntu, Debian**, тут основное требование - **Linux 5** версии.
+A lot of work has been done on bug fixing. This version is considered stable. Tested on **Ubuntu, Debian**, with the main requirement being **Linux 5** version.
 
-**Новые инструкции**
+**New Instructions**
 
-* [Настройка Jitter](https://wiki.mikopbx.ru/faq)
-* [Мониторинг провайдеров на MikoPBX](https://wiki.mikopbx.ru/faq:monitoring-trunks)
-* [Объединение MIKOPBX и FreePBX (PJSIP)](https://wiki.mikopbx.ru/faq:mikopbx\_freepbx)
-* [Настройка Grandstream HT503](https://wiki.mikopbx.ru/faq:grandstreamht503)
-* [Настройка шлюза GOIP](https://wiki.mikopbx.ru/faq:goip)
-* [Инструкции по подключению почтового клиента](https://wiki.mikopbx.ru/mail-settings)
-* [Маршрутизация по DID номеру](https://wiki.mikopbx.ru/faq:did-routs)
-* [Уведомление в телеграмм о пропущенных](https://wiki.mikopbx.ru/faq:simple\_tg\_notify)
+- [Jitter Configuration](https://wiki.mikopbx.ru/faq)
+- [Monitoring Providers on MikoPBX](https://wiki.mikopbx.ru/faq:monitoring-trunks)
+- [Integration of MIKOPBX and FreePBX (PJSIP)](https://wiki.mikopbx.ru/faq:mikopbx\_freepbx)
+- [Grandstream HT503 Configuration](https://wiki.mikopbx.ru/faq:grandstreamht503)
+- [GOIP Gateway Configuration](https://wiki.mikopbx.ru/faq:goip)
+- [Instructions for Setting up Mail Client](https://wiki.mikopbx.ru/mail-settings)
+- [Routing by DID Number](https://wiki.mikopbx.ru/faq:did-routs)
+- [Telegram Notification for Missed Calls](https://wiki.mikopbx.ru/faq:simple\_tg\_notify)
 
-### **Заключение**
+### **Conclusion**
 
-Перечислены лишь наиболее важные изменения. Полный список можно найти в [описании релиза](https://github.com/mikopbx/Core/releases/tag/2023.1.223).
+Only the most important changes have been listed. The full list can be found in the [release description](https://github.com/mikopbx/Core/releases/tag/2023.1.223).
+
+We strive to make MikoPBX stable, easy to configure, and maintain. We hope it becomes a reliable tool for your company.
 
 Мы стараемся сделать MikoPBX стабильной, простой, понятной в настройке и сопровождении. Надеемся, что она станет надежным инструментом в вашей компании.
