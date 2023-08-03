@@ -38,7 +38,7 @@ description: >-
 
 Переходим на вкладку настройка прав и выбираем только необходимые права для открытия и модификации существующих IVR меню.
 
-<figure><img src="../../.gitbook/assets/rights-control.png" alt=""><figcaption><p>Детальная настройка прав доступа в MikoPBX</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rights-control (1).png" alt=""><figcaption><p>Детальная настройка прав доступа в MikoPBX</p></figcaption></figure>
 
 Назначаем группу сотрудникам, которые будут администрировать IVR меню и сохраняем группу доступа.
 

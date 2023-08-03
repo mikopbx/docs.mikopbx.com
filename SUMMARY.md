@@ -202,3 +202,4 @@
 * [Версии и пакеты Linux](other/linux-versions-and-packages.md)
 * [История версий](other/changelog/README.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
+  * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
