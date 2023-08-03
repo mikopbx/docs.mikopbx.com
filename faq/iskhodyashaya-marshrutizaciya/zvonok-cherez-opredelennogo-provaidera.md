@@ -86,7 +86,7 @@
 
 &#x20;8\. Открываем для редактирования конфигурационный файл **extensions.conf**.
 
-<figure><img src="../../.gitbook/assets/extensionsConf.png" alt=""><figcaption><p>Файл Extensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extensionsConf (1).png" alt=""><figcaption><p>Файл Extensions.conf</p></figcaption></figure>
 
 9. Выбираем режим «**Добавлять в конец файла**». В окне редактирования вставляем следующие строки:&#x20;
 
