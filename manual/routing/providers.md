@@ -77,7 +77,7 @@
 * **force\_rport,comedia** опция заменяющая nat=yes;
 * **force\_rport** даже если ни одного параметра rport не было указано, действовать, так, как если бы он был;
 * **comedia** отправлять RTP пакеты обратно к порту с которого они были получены, игнорируя требуемый порт в SDP заголовке;
-* <mark style="color:red;"><mark style="background-color:red;">**auto\_comedia**<mark style="background-color:red;"></mark> <mark style="color:red;"></mark><mark style="color:red;">если Asterisk сможет определить, что устройство находится за NAT, установить опцию comedia;</mark>
+* <mark style="color:red;">**auto\_comedia**</mark> <mark style="color:red;"></mark><mark style="color:red;">если Asterisk сможет определить, что устройство находится за NAT, установить опцию comedia;</mark>
 * **no** не выполнять никакой специальной обработки NAT, кроме той что указана в RFC 3581.
 
 #### **Поддерживать NAT сессию**&#x20;
