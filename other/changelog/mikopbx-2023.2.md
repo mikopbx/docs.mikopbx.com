@@ -46,7 +46,11 @@ The system settings now allow you to set the retention period for call recording
 
 ### Docker Container Optimization
 
-Installing MikoPBX inside a Docker container is one of the installation options. In the new release, we optimized the web interface and console menu, hiding menu items not used in the container installation. We've also improved network settings, allowing you to specify the system's external address, particularly useful for complex network topologies with port forwarding to public addresses on systems deployed within the perimeter and installed inside Docker containers.
+Installing MikoPBX inside a Docker container is one of the installation options. In the new release, we optimized the web interface and console menu, hiding menu items not used in the container installation.&#x20;
+
+We've also improved network settings, allowing you to specify the system's external address, particularly useful for complex network topologies with port forwarding to public addresses on systems deployed within the perimeter and installed inside Docker containers.
+
+<figure><img src="../../.gitbook/assets/New2023.2 - docker-nework-en.png" alt=""><figcaption><p><em>New in MikoPBX 2023.2: Optimized network settings for the docker instalation</em></p></figcaption></figure>
 
 ### Customizing System Files with Scripts
 
