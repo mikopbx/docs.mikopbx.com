@@ -86,23 +86,23 @@ Several bugs related to call recording and call resumption have been fixed.
 
 Now, in the employee's profile, there is an option to disable call recording:
 
-![Call Recording](../../.gitbook/assets/ChangeLog223CallRecording.png)
+<figure><img src="../../.gitbook/assets/New223CallREcording.png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Call recording option</p></figcaption></figure>
 
 All dialogs involving internal and mobile numbers of the employee will NOT be recorded. This can be useful for directors and other company executives.
 
 An option to disable recording of all internal calls has been added. To do this, you should uncheck the flag in the "**System**" - "**General Settings**" - "**Call Recording**" - "**Record Internal Calls**".
 
-![Record Internal Calls](../../.gitbook/assets/recording-2.png)
+<figure><img src="../../.gitbook/assets/New223RecordInternalCalls.png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Call internal conversations option</p></figcaption></figure>
 
 ### **Non-Working Time**
 
 The new interface for displaying the list of non-working time is more informative and compact:
 
-![Non-Working Time](../../.gitbook/assets/Release223NonWorkingTime1.png)
+<figure><img src="../../.gitbook/assets/New223NotWorkongHours.png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 optomized won working hours</p></figcaption></figure>
 
 Previously, to describe non-working time from 18:00 to 8:00, it was necessary to create two rules: 00:00 - 08:00 and 18:00 - 23:59. Now it is possible to specify a single rule **18:00 - 08:00**:
 
-![Non-Working Time Rule](../../.gitbook/assets/Release223NonWorkingTime2.png)
+<figure><img src="../../.gitbook/assets/New224NoeWorkingHours918.png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Now you can have only one rule for overnigt</p></figcaption></figure>
 
 This allows reducing the number of rules and organizing the schedule more efficiently.
 
@@ -112,7 +112,7 @@ In the non-working time rule card, there is an option "**Apply only to specific 
 
 Example:
 
-![Non-Working Time Rule for Specific Route](../../.gitbook/assets/Release223NonWorkingTime2.png)
+<figure><img src="../../.gitbook/assets/New223RulesForSpecificRoutes.png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Non working hours, specify routes</p></figcaption></figure>
 
 In this example, the rule will only apply to one company number.
 
@@ -120,13 +120,13 @@ In this example, the rule will only apply to one company number.
 
 A button has been added to the call history log to navigate to the call log:
 
-![Call History Log](../../.gitbook/assets/Release223CDR.png)
+<figure><img src="../../.gitbook/assets/New223CDR (1).png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Quick go to logs from CDR</p></figcaption></figure>
 
 Such logs can be passed to technical support for analysis of PBX behavior.
 
 Extended filtering options have been added to the call log:
 
-![Call Log Filtering](../../.gitbook/assets/Release223Logs.png)
+<figure><img src="../../.gitbook/assets/New223Logs.png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Filtered logs by one call</p></figcaption></figure>
 
 You can enter several substrings separated by the "&" symbol, and the log containing all listed substrings will be displayed.
 
@@ -138,14 +138,14 @@ A lot of work has been done on bug fixing. This version is considered stable. Te
 
 **New Instructions**
 
-- [Jitter Configuration](https://wiki.mikopbx.ru/faq)
-- [Monitoring Providers on MikoPBX](https://wiki.mikopbx.ru/faq:monitoring-trunks)
-- [Integration of MIKOPBX and FreePBX (PJSIP)](https://wiki.mikopbx.ru/faq:mikopbx\_freepbx)
-- [Grandstream HT503 Configuration](https://wiki.mikopbx.ru/faq:grandstreamht503)
-- [GOIP Gateway Configuration](https://wiki.mikopbx.ru/faq:goip)
-- [Instructions for Setting up Mail Client](https://wiki.mikopbx.ru/mail-settings)
-- [Routing by DID Number](https://wiki.mikopbx.ru/faq:did-routs)
-- [Telegram Notification for Missed Calls](https://wiki.mikopbx.ru/faq:simple\_tg\_notify)
+* [Jitter Configuration](https://wiki.mikopbx.ru/faq)
+* [Monitoring Providers on MikoPBX](https://wiki.mikopbx.ru/faq:monitoring-trunks)
+* [Integration of MIKOPBX and FreePBX (PJSIP)](https://wiki.mikopbx.ru/faq:mikopbx\_freepbx)
+* [Grandstream HT503 Configuration](https://wiki.mikopbx.ru/faq:grandstreamht503)
+* [GOIP Gateway Configuration](https://wiki.mikopbx.ru/faq:goip)
+* [Instructions for Setting up Mail Client](https://wiki.mikopbx.ru/mail-settings)
+* [Routing by DID Number](https://wiki.mikopbx.ru/faq:did-routs)
+* [Telegram Notification for Missed Calls](https://wiki.mikopbx.ru/faq:simple\_tg\_notify)
 
 ### **Conclusion**
 
