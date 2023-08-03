@@ -12,7 +12,7 @@
 
 3. В черном окне найдите секцию очереди, которую необходимо настроить
 
-<figure><img src="../../.gitbook/assets/SalesDepartment.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SalesDepartment.png" alt=""><figcaption><p>Секции очереди</p></figcaption></figure>
 
 4. Выберите режим "**Добавлять в конец файла**".  Добавьте аналогичную секцию с приставкой (+) :
 
@@ -21,7 +21,7 @@
 context=internal
 ```
 
-<figure><img src="../../.gitbook/assets/codeForQueues.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/codeForQueues.png" alt=""><figcaption><p>Код для "queues.conf"</p></figcaption></figure>
 
 {% hint style="success" %}
 В данном примере мы описали контекст **internal**, разрешен набор всех внутренних номеров. Можно указать контекст IVR меню, в формате ivr<БВнутреннийНомерIVR>
