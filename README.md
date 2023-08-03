@@ -11,7 +11,7 @@
 * **Asterisk 16.5.1**
 * **Linux 4.10.13**
 
-Более подробная информация о пакетах Linux и их версий представлена [здесь](prochee/versii-i-pakety-linux.md).
+Более подробная информация о пакетах Linux и их версий представлена [здесь](other/linux-versions-and-packages.md).
 {% endhint %}
 
 {% hint style="success" %}

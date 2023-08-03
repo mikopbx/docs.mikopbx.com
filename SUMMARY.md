@@ -197,8 +197,8 @@
   * [Управление доступом в систему](modules/miko/module-users-u-i.md)
   * [Модуль автообзвона](modules/miko/module-auto-dialer.md)
 
-## Прочее
+## Прочее <a href="#other" id="other"></a>
 
-* [Версии и пакеты Linux](prochee/versii-i-pakety-linux.md)
-* [История версий](prochee/changelog/README.md)
-  * [MikoPBX 2023.1.223](prochee/changelog/mikopbx-2023.1.223.md)
+* [Версии и пакеты Linux](other/linux-versions-and-packages.md)
+* [История версий](other/changelog/README.md)
+  * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
