@@ -62,4 +62,4 @@ This completes the basic setup of MikoPBX! For a deeper study of the capabilitie
 
 ### Step 9. Register in the Marketplace
 
-To use the various modules, you need to register in the Marketplace. You can read about how to do this [here](../manual/modules/extensions-and-plugins/licensing.md).
+To use the various modules, you need to register in the Marketplace. You can read about how to do this [here](../manual/modules/pbx-extension-modules/licensing.md).
