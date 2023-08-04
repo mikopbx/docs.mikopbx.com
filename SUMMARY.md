@@ -92,6 +92,7 @@
   * [Add P-Preferred-Identity and Remote-Party-ID header](faq/outgoing-routing/add-p-preferred-identity-and-remote-party-id-header.md)
   * [Conference with a regular external subscriber](faq/outgoing-routing/conference-with-a-regular-external-subscriber.md)
   * [Outgoing with internal number dialing](faq/outgoing-routing/outgoing-with-internal-number-dialing.md)
+  * [Remove all special characters from the dialed number](faq/outgoing-routing/remove-all-special-characters-from-the-dialed-number.md)
 
 ## Modules
 
