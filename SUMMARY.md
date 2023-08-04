@@ -88,6 +88,9 @@
   * [Yealink T19](faq/ip-telefones/yealink-t19.md)
 * [Setup](faq/setup/README.md)
   * [Reset to factory settings](faq/setup/reset-to-factory-settings.md)
+* [Outgoing routing](faq/outgoing-routing/README.md)
+  * [Add P-Preferred-Identity and Remote-Party-ID header](faq/outgoing-routing/add-p-preferred-identity-and-remote-party-id-header.md)
+  * [Conference with a regular external subscriber](faq/outgoing-routing/conference-with-a-regular-external-subscriber.md)
 
 ## Modules
 
