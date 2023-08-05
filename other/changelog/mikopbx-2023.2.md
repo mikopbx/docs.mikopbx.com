@@ -78,10 +78,30 @@ The advice mechanism is now integrated with the notification mechanism. When cha
 
 In the future, additional metrics will be added to this system, including average CPU load, memory usage, issues with IP telephony provider registration, and critical kernel issues.
 
-### Romanian Language Translation
+### Refactoring of the App Store
 
-We are gradually expanding the set of basic translations for the web interface. In the new release, we've added the Romanian language.
+We've rewritten the marketplace's code, unified the tabs, and moved part of the modules to the backend. As you already know, MikoPBX is a free open-source system without any restrictions. We don't plan on changing this policy, but development requires resources. Therefore, we plan to monetize MikoPBX through the development and sale of our own and partner extensions in our app store.&#x20;
+
+In the latest update, we've made some changes to the interface of the section, combining module management and system registration into separate tabs in one section. Paid and free modules are now marked with different icons in the list. We've also optimized the module installation code and fixed all identified errors.
+
+<figure><img src="../../.gitbook/assets/New2023.2 - marketplace-en.png" alt=""><figcaption><p><em>New in MikoPBX 2023.2: Updated marketplace UI</em></p></figcaption></figure>
+
+Under the hood, MikoPBX hides a lot of changes and improvements that allow the development of functional extensions. If you're proficient in PHP and JS programming languages, understand how Asterisk works, and have ideas for developing new modules or are already actively doing so, we invite you to join the [developer channel on Telegram](https://t.me/mikopbx\_dev). Let's develop MikoPBX together!
+
+### New Interface Languages: Romanian and Dutch
+
+We're gradually expanding the set of basic translations for the web interface. In the new release, we've added 2 new languages and are improving the others.
 
 <figure><img src="../../.gitbook/assets/New2023.2.RomanianLanguage.png" alt=""><figcaption><p><em>New in MikoPBX 2023.2: Interface translation to Romanian</em></p></figcaption></figure>
 
-If you want to help with the translation to Romanian or any other language, you can [follow this link](https://weblate.mikopbx.com/projects/mikopbx/admin-web-interface/).
+<figure><img src="../../.gitbook/assets/New2023.2 - new translation Dutch.png" alt=""><figcaption><p><em>New in MikoPBX 2023.2: Interface translation to Dutch</em></p></figcaption></figure>
+
+A huge thanks to our translators for their help:&#x20;
+
+* Jochem Pluim&#x20;
+* Secrieru Ion&#x20;
+* Mikayil Isayev&#x20;
+* Voutsas Theocharis&#x20;
+* Everton Massen Goncalves&#x20;
+
+If you want to help with the translation of the MikoPBX interface and modules, [follow this link](https://weblate.mikopbx.com/projects/mikopbx/admin-web-interface/).
