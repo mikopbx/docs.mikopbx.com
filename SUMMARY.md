@@ -93,6 +93,7 @@
   * [Conference with a regular external subscriber](faq/outgoing-routing/conference-with-a-regular-external-subscriber.md)
   * [Outgoing with internal number dialing](faq/outgoing-routing/outgoing-with-internal-number-dialing.md)
   * [Remove all special characters from the dialed number](faq/outgoing-routing/remove-all-special-characters-from-the-dialed-number.md)
+  * [Prohibiting calls via a backup route](faq/outgoing-routing/prohibiting-calls-via-a-backup-route.md)
 
 ## Modules
 
