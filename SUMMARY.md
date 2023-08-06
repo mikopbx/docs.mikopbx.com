@@ -88,12 +88,13 @@
   * [Yealink T19](faq/ip-telefones/yealink-t19.md)
 * [Setup](faq/setup/README.md)
   * [Reset to factory settings](faq/setup/reset-to-factory-settings.md)
-* [Outgoing routing](faq/outgoing-routing/README.md)
-  * [Add P-Preferred-Identity and Remote-Party-ID header](faq/outgoing-routing/add-p-preferred-identity-and-remote-party-id-header.md)
-  * [Conference with a regular external subscriber](faq/outgoing-routing/conference-with-a-regular-external-subscriber.md)
-  * [Outgoing with internal number dialing](faq/outgoing-routing/outgoing-with-internal-number-dialing.md)
-  * [Remove all special characters from the dialed number](faq/outgoing-routing/remove-all-special-characters-from-the-dialed-number.md)
-  * [Prohibiting calls via a backup route](faq/outgoing-routing/prohibiting-calls-via-a-backup-route.md)
+* [Outbound routing](faq/outbound-routing/README.md)
+  * [Add P-Preferred-Identity and Remote-Party-ID header](faq/outbound-routing/add-p-preferred-identity-and-remote-party-id-header.md)
+  * [Conference with a regular external subscriber](faq/outbound-routing/conference-with-a-regular-external-subscriber.md)
+  * [Outgoing with internal number dialing](faq/outbound-routing/outgoing-with-internal-number-dialing.md)
+  * [Remove all special characters from the dialed number](faq/outbound-routing/remove-all-special-characters-from-the-dialed-number.md)
+  * [Prohibiting calls via a backup route](faq/outbound-routing/prohibiting-calls-via-a-backup-route.md)
+  * [Calls to emergency numbers](faq/outbound-routing/calls-to-emergency-numbers.md)
 
 ## Modules
 
