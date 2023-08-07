@@ -97,6 +97,7 @@
   * [Calls to emergency numbers](faq/outbound-routing/calls-to-emergency-numbers.md)
   * [Number Template](faq/outbound-routing/number-template/README.md)
     * [Uniform distribution of outgoing](faq/outbound-routing/number-template/uniform-distribution-of-outgoing.md)
+    * [Sample template: calls to another country](faq/outbound-routing/number-template/sample-template-calls-to-another-country.md)
 
 ## Modules
 
