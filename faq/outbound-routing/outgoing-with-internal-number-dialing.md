@@ -29,7 +29,7 @@ exten => s,1,NoOp(Answered send DTMF...)
   same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForExtensions.png" alt=""><figcaption><p>Code for extensions,conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForExtensions (3).png" alt=""><figcaption><p>Code for extensions,conf</p></figcaption></figure>
 
 4. Next, it is necessary to describe the [Applications of dialplans](../../manual/modules/dialplan-applications.md)
 

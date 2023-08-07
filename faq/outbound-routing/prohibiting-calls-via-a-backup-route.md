@@ -28,6 +28,6 @@ exten => _X!,1,Hangup()
 	same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForExtensions (1).png" alt=""><figcaption><p>Code in extensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForExtensions (1) (1).png" alt=""><figcaption><p>Code in extensions.conf</p></figcaption></figure>
 
 Save the changes. Now all calls via routes associated with the provider will occur without taking into account the backup provider. It will work out only the first of the outgoing routes.

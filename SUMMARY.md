@@ -98,6 +98,8 @@
   * [Number Template](faq/outbound-routing/number-template/README.md)
     * [Uniform distribution of outgoing](faq/outbound-routing/number-template/uniform-distribution-of-outgoing.md)
     * [Sample template: calls to another country](faq/outbound-routing/number-template/sample-template-calls-to-another-country.md)
+* [Incoming Routing](faq/incoming-routing/README.md)
+  * [Choosing a provider when redirecting to a mobile](faq/incoming-routing/choosing-a-provider-when-redirecting-to-a-mobile.md)
 
 ## Modules
 
