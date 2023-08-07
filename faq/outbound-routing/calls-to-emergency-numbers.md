@@ -35,7 +35,7 @@ It is necessary to be able to call emergency numbers 112, 1xx
 exten => _1XX,1,Goto(outgoing,${EXTEN},1)	
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForExtensionsConf (1).png" alt=""><figcaption><p>Code for extensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForExtensionsConf (1) (1).png" alt=""><figcaption><p>Code for extensions.conf</p></figcaption></figure>
 
 In the above code snippet, we described the rules for all three-digit numbers starting with 1. If you need to specify specific emergency numbers, then instead of the above code, you need to insert the following lines:
 

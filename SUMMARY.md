@@ -95,6 +95,8 @@
   * [Remove all special characters from the dialed number](faq/outbound-routing/remove-all-special-characters-from-the-dialed-number.md)
   * [Prohibiting calls via a backup route](faq/outbound-routing/prohibiting-calls-via-a-backup-route.md)
   * [Calls to emergency numbers](faq/outbound-routing/calls-to-emergency-numbers.md)
+  * [Number Template](faq/outbound-routing/number-template/README.md)
+    * [Uniform distribution of outgoing](faq/outbound-routing/number-template/uniform-distribution-of-outgoing.md)
 
 ## Modules
 

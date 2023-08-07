@@ -30,7 +30,7 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
     same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForExtensionsConf.png" alt=""><figcaption><p>Code for extrensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForExtensionsConf (2).png" alt=""><figcaption><p>Code for extrensions.conf</p></figcaption></figure>
 
 {% hint style="danger" %}
 **Pay attention:**&#x20;
