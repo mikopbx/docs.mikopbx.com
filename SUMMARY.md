@@ -196,6 +196,7 @@
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
   * [Управление доступом в систему](modules/miko/module-users-u-i.md)
   * [Модуль автообзвона](modules/miko/module-auto-dialer.md)
+  * [Оценка качества разговора](modules/miko/module-quality-assessment.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
