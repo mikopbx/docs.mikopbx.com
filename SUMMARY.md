@@ -118,6 +118,7 @@
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
   * [Access control management](modules/miko/module-users-u-i.md)
   * [Module auto dialer](modules/miko/module-auto-dialer.md)
+  * [Call quality assessment](modules/miko/module-quality-assessment.md)
 
 ## other
 
