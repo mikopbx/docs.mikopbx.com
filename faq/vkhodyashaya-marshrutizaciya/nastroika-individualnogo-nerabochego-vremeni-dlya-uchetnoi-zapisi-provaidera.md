@@ -37,15 +37,15 @@ n,Goto(internal,201,1)
 
 <figure><img src="../../.gitbook/assets/ProviderID.png" alt=""><figcaption><p>ID провайдера</p></figcaption></figure>
 
-2. Перейдите в раздел **Система** -> **Конфигурация системных файлов**
+2. Перейдите в раздел **Система** -> **Кастомизация системных файлов**
 
 <figure><img src="../../.gitbook/assets/customizationFiles.png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
-3. Откройте для редактирования конфигурационный файл **extensions.conf**. Установите режим «**Добавлять в конец файла**».
+3. Откройте для редактирования конфигурационный файл **extensions.conf**.&#x20;
 
 <figure><img src="../../.gitbook/assets/extensionsConf.png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
-4. В черное окно добавьте следующий фрагмент кода:
+4. Установите режим «**Добавлять в конец файла**». В черное окно добавьте следующий фрагмент кода:
 
 ```php
 [SIP-1687941868-incoming-custom]
