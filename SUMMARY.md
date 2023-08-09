@@ -102,6 +102,7 @@
   * [Choosing a provider when redirecting to a mobile](faq/incoming-routing/choosing-a-provider-when-redirecting-to-a-mobile.md)
   * [Notification of Employment, Call Waiting](faq/incoming-routing/notification-of-employment-call-waiting.md)
   * [Black and white lists](faq/incoming-routing/black-and-white-lists.md)
+  * [Allow additional dialing of the internal number in the queue](faq/incoming-routing/allow-additional-dialing-of-the-internal-number-in-the-queue.md)
 
 ## Modules
 
