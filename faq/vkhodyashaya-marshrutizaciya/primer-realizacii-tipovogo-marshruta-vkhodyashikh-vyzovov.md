@@ -63,7 +63,7 @@
 
 2. Указываем настройки IVR согласно нашему описанию.
 
-<figure><img src="../../.gitbook/assets/IVRMenu.png" alt=""><figcaption><p>IVR Menu</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/IVRMenu (1).png" alt=""><figcaption><p>IVR Menu</p></figcaption></figure>
 
 ### Входящий маршрут <a href="#vxodjaschij_marshrut" id="vxodjaschij_marshrut"></a>
 
