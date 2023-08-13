@@ -4,7 +4,7 @@
 
 В MikoPBX (_**Телефония → Сотрудники**_) настроены следующие учетные записи сотрудников:
 
-<figure><img src="../../.gitbook/assets/extensions (1) (1).png" alt=""><figcaption><p>Раздел "Сотрудники"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extensions (1) (1) (1).png" alt=""><figcaption><p>Раздел "Сотрудники"</p></figcaption></figure>
 
 В MikoPBX настроены **два провайдера** (_**Маршрутизация → Провайдеры телефонии**_):
 

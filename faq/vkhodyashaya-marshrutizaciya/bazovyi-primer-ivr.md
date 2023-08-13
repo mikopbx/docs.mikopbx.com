@@ -21,7 +21,7 @@
 
 &#x20;1\. Создаем **учетные записи сотрудников** по [инструкции](../../manual/telefoniya/extensions.md). Подключаем программные или аппаратные телефоны к данным учетным записям.
 
-<figure><img src="../../.gitbook/assets/extensions.png" alt=""><figcaption><p>Сотрудники </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extensions (1).png" alt=""><figcaption><p>Сотрудники </p></figcaption></figure>
 
 2. Добавляем **звуковой файл** приветствия по [инструкции](../../manual/telefoniya/sound-files.md), который будет слышать клиент при звонке на номер компании.
 
