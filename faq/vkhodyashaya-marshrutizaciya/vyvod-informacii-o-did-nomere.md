@@ -53,7 +53,7 @@ set_var=MIKO_LINE_NAME=PT
 
 В нашем примере наименование линии будет идентично наименованию провайдера - **PT**.
 
-<figure><img src="../../.gitbook/assets/extraParameters.png" alt=""><figcaption><p>Дополнительные параметры для провайдера </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extraParameters (1).png" alt=""><figcaption><p>Дополнительные параметры для провайдера </p></figcaption></figure>
 
 2. Перейдите в раздел **Система** -> **Кастомизация системных файлов**
 
