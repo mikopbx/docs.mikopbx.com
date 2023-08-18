@@ -1,6 +1,6 @@
 # Отключение "нерабочего времени" для VIP номеров
 
-1. Подключите провайдеров, зарегистрированных на одном хосте, как описано в [<mark style="color:red;">инструкции</mark>](https://wiki.mikopbx.ru/providers:many\_hosts)
+1. Подключите провайдеров, зарегистрированных на одном хосте, как описано в [инструкции](registraciya-neskolkikh-uchetnykh-zapisei-ot-odnogo-provaidera.md).
 2. Перейдите в раздел **Система** → **Кастомизация системных файлов**.
 
 <figure><img src="../../.gitbook/assets/CustomizationSystemFiles.png" alt=""><figcaption><p>Раздел кастомизации системных файлов</p></figcaption></figure>
