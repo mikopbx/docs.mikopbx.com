@@ -16,9 +16,9 @@
 
 4. Перейдите в раздел «**Система**» - «**Кастомизация системных файлов**»
 
-<figure><img src="../../.gitbook/assets/CustomizationSystemFiles.png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CustomizationFilesMenu.png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
-5. Откройте на редактирование файл «**/etc/asterisk/extensions.conf**»
+5. Откройте для редактирования файл «**/etc/asterisk/extensions.conf**»
 
 <figure><img src="../../.gitbook/assets/extensionsConf (1) (1).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
