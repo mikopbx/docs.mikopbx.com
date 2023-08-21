@@ -52,7 +52,7 @@ n,Set(_ZPROVIDERID=SIP-1601534775)
 n,Goto(z-outgoing,${ZDST},1)
 ```
 
-<figure><img src="../../.gitbook/assets/codeForDialplan.png" alt=""><figcaption><p>Code for dialplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/codeForDialplan (1).png" alt=""><figcaption><p>Code for dialplan</p></figcaption></figure>
 
 * If you specify the **9XXXX** template in the "**Application call number**" field, it will be possible to "dial" any five-digit numbers starting with the digit "**9**"&#x20;
 * In the application, assign the variable "ZDST" the number to which the call should be made In the "**ZDTMF**" variable, specify the number for the additional set&#x20;

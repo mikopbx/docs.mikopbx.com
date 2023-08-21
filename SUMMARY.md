@@ -69,6 +69,7 @@
 * [Интеграция с 1С](faq/integraciya-s-1s.md)
 * [Сценарии и кейсы](faq/cases/README.md)
   * [Customer's assessment of the quality of service](faq/cases/customers-assessment-of-the-quality-of-service.md)
+  * [Call the company from your mobile and dial an extension to call a third-party company](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
 * [Настройка провайдеров](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
