@@ -108,6 +108,8 @@
   * [Output of information about the did number](faq/incoming-routing/output-of-information-about-the-did-number.md)
   * [Setting individual non-working hours for a provider account](faq/incoming-routing/setting-individual-non-working-hours-for-a-provider-account.md)
   * [An example of the implementation of a typical route of incoming calls](faq/incoming-routing/an-example-of-the-implementation-of-a-typical-route-of-incoming-calls.md)
+* [Service](faq/service/README.md)
+  * [Change the login name](faq/service/change-the-login-name.md)
 
 ## Modules
 
