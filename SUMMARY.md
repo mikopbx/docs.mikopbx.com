@@ -106,6 +106,7 @@
   * [Black and white lists](faq/incoming-routing/black-and-white-lists.md)
   * [Allow additional dialing of the internal number in the queue](faq/incoming-routing/allow-additional-dialing-of-the-internal-number-in-the-queue.md)
   * [Output of information about the did number](faq/incoming-routing/output-of-information-about-the-did-number.md)
+  * [Setting individual non-working hours for a provider account](faq/incoming-routing/setting-individual-non-working-hours-for-a-provider-account.md)
 
 ## Modules
 
