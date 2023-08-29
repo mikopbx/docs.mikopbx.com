@@ -72,6 +72,7 @@
   * [Call the company from your mobile and dial an extension to call a third-party company](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
   * [Disabling "off-hours" for VIP rooms](faq/cases/disabling-off-hours-for-vip-rooms.md)
   * [Unique background music for the queue](faq/cases/unique-background-music-for-the-queue.md)
+  * [Pause for Queue agent](faq/cases/pause-for-queue-agent.md)
 * [Настройка провайдеров](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
