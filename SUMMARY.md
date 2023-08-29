@@ -67,12 +67,6 @@
   * [Анализ трафика средствами Sngrep](faq/troubleshooting/analiz-trafika-sredstvami-sngrep.md)
   * [Adjusting the volume](faq/troubleshooting/adjusting-the-volume.md)
 * [Интеграция с 1С](faq/integraciya-s-1s.md)
-* [Setting up the "Paging" function](faq/cases/README.md)
-  * [Customer's assessment of the quality of service](faq/cases/customers-assessment-of-the-quality-of-service.md)
-  * [Call the company from your mobile and dial an extension to call a third-party company](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
-  * [Disabling "off-hours" for VIP rooms](faq/cases/disabling-off-hours-for-vip-rooms.md)
-  * [Unique background music for the queue](faq/cases/unique-background-music-for-the-queue.md)
-  * [Pause for Queue agent](faq/cases/pause-for-queue-agent.md)
 * [Настройка провайдеров](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
@@ -114,6 +108,13 @@
   * [Change the login name](faq/service/change-the-login-name.md)
   * [The extra disk space has run out, the disk size has increased](faq/service/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
   * [Getting logs using the tcpdump application](faq/service/getting-logs-using-the-tcpdump-application.md)
+* [Scenarios and cases](faq/scenarios-and-cases/README.md)
+  * [Customer's assessment of the quality of service](faq/scenarios-and-cases/customers-assessment-of-the-quality-of-service.md)
+  * [Call the company from your mobile and dial an extension to call a third-party company](faq/scenarios-and-cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
+  * [Disabling "off-hours" for VIP rooms](faq/scenarios-and-cases/disabling-off-hours-for-vip-rooms.md)
+  * [Unique background music for the queue](faq/scenarios-and-cases/unique-background-music-for-the-queue.md)
+  * [Pause for Queue agent](faq/scenarios-and-cases/pause-for-queue-agent.md)
+  * [Setting up the "Paging" function](faq/scenarios-and-cases/cases.md)
 
 ## Modules
 

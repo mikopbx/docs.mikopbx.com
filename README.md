@@ -92,7 +92,7 @@ The section presents the solution of telephony problems that telephone exchange 
 
 * [Diagnosis of problems](faq/troubleshooting/)
 * [Integration with 1C ](faq/integraciya-s-1s.md)
-* [Scenarios and cases ](faq/cases/)
+* [Scenarios and cases ](faq/scenarios-and-cases/cases.md)
 * [Configuring Providers ](faq/providers/)
 * [Setting up softphones ](faq/softphones/)
 * [Voip gateways ](faq/voip-gateways/)
