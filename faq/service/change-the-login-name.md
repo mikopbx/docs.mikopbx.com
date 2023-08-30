@@ -26,4 +26,4 @@ username = MIKO204
 
 Instead of **MIKO204**, specify a name for authorization, it is advisable to use both letters and numbers
 
-<figure><img src="../../.gitbook/assets/extraOptions.png" alt=""><figcaption><p>Additional parameters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extraOptions (1).png" alt=""><figcaption><p>Additional parameters</p></figcaption></figure>
