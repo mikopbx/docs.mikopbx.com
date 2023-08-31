@@ -116,6 +116,7 @@
   * [Pause for Queue agent](faq/scenarios-and-cases/pause-for-queue-agent.md)
   * [Setting up the "Paging" function](faq/scenarios-and-cases/cases.md)
   * [Limit the number of authorizations per SIP account](faq/scenarios-and-cases/limit-the-number-of-authorizations-per-sip-account.md)
+  * [How to implement the prompter function](faq/scenarios-and-cases/how-to-implement-the-prompter-function.md)
 
 ## Modules
 
