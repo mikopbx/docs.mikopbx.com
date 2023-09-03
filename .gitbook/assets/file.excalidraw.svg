@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 93" width="190" height="186">
+  <!-- svg-source:excalidraw -->
+  <!-- payload-type:application/vnd.excalidraw+json --><!-- payload-version:2 --><!-- payload-start -->eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29kZWQiOiJ4nM1Vy47TMFx1MDAxNN33K6LMXHUwMDE2dVx1MDAxMufdXHUwMDFkXGavXG5cdTAwMDEjdSRcdTAwMDRcYiE3dlx1MDAxM1PXjmz3NaN+XHUwMDE5P8EnYbuZOGlcdTAwMDc0I7HAi6o+916d+zi+uVx1MDAxYnmer/ZccvYnno93JaRcdTAwMDRcdLj1n1x1MDAxOXyDhSScaVx1MDAxM7B3ydeitJ61Uo2cXFxewqZcdTAwMTlXRM05X45LvjqGYYpXmCmpXHUwMDFkv+q7593Z31x1MDAxZZHApYKsothcdTAwMDZYk+NcbuNT8Fx1MDAwM2eWNlx1MDAwNHFcdTAwMTaEWVx1MDAxMoPOg8iXmk5hpM1cdTAwMGJIJXZcdTAwMTZcdTAwMDP5pNng/MtN/b1cdTAwMDTXXGLLN1dZUuxcdTAwMWTrglA6U3t6LFxulvVa9HKSSvAl/kSQqlxy+1x03sVJrpvmolx1MDAwNF9XNcNSXHUwMDBlYnhcdTAwMDNLovZcdTAwMDZcdTAwMGKCXHUwMDBlPTZh4jlkp28xSLu7iVx1MDAwMGF+wn3FKVx1MDAxN4b7XCKwx7HPYbmsdFxuXGZ1PkpAJlx1MDAxYij0TJzftq0qSzqoxqSqlcFcIkeHbWvDNIujKMx6iVx1MDAxOJJmiuyUv/WLZ6gt/n7sbvBRi1x1MDAxY1xcusb/1alg+qJcdTAwMTlcYkfhnauhN+bkx+3n91x1MDAxMVDxdFx1MDAwMd9cdTAwMDWLjzuEomu/8zu0/1xcnutcdTAwMDZB1ZZWRFmYgKKIXHUwMDAzV1x1MDAxZCVsqY1sTanDeLl0Qlx1MDAxYvVcbjlcdTAwMTP4IM+etqM/SrtI0iAv0vTRyn645P9d2Uk+XHUwMDA2qVEsXHUwMDAweZ6HeTxcdTAwMTR672X/a6GHwTjOXG599PpcdTAwMDBRXHUwMDFhgfxcXPggOVx1MDAxNX5RXHUwMDA0SZGBMHiC7lx1MDAwN6I5XHUwMDEz+F80XHUwMDE4XHUwMDA1IMrAXHUwMDEzNOimzZmakVvTcFx1MDAxMFxm0NdwReh+MDArTt2uXz/9XHUwMDAx9pySyojUL3WuWFxm9KuI/jR0XHUwMDBlK4JQf3mXmlxiXHUwMDEyhsX0MUuXXHUwMDBiUlx1MDAxMVx1MDAwNunNXHUwMDAzeeia8dv7cYTj3kDmUGJjNXh+fHyj9kX7+jM0U7qX3dLRU1wiqG2I65+/IXj74lxcN1x1MDAxN1x1MDAwYnvMvrBcdTAwMGbaPFx1MDAxZWw32GF0+FxyZsDPwyJ9<!-- payload-end -->
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://unpkg.com/@excalidraw/excalidraw@0.15.3/dist/excalidraw-assets/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://unpkg.com/@excalidraw/excalidraw@0.15.3/dist/excalidraw-assets/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="95" height="93" fill="#ffffff"/><g stroke-linecap="round" transform="translate(10 10) rotate(0 37.5 36.5)"><path d="M18.25 0 M18.25 0 C29.16 1.71, 42.53 -0.07, 56.75 0 M18.25 0 C27.45 0.36, 34.1 -1.18, 56.75 0 M56.75 0 C69.23 1, 75.34 4.94, 75 18.25 M56.75 0 C70.39 0.85, 76.8 5.13, 75 18.25 M75 18.25 C74.4 34.28, 75.09 45.73, 75 54.75 M75 18.25 C74.73 26, 75.74 35.09, 75 54.75 M75 54.75 C75.26 65.51, 68.1 72.15, 56.75 73 M75 54.75 C76.6 67.02, 68.78 72.79, 56.75 73 M56.75 73 C45.18 75.11, 32.42 74.36, 18.25 73 M56.75 73 C46.02 72.95, 32.84 73, 18.25 73 M18.25 73 C4.42 71.23, 1.69 67.03, 0 54.75 M18.25 73 C5.77 73.61, -0.72 65.05, 0 54.75 M0 54.75 C0.16 47.44, -1.28 39.71, 0 18.25 M0 54.75 C0.3 44.31, 0.34 34.74, 0 18.25 M0 18.25 C0.43 6.59, 4.67 -1.56, 18.25 0 M0 18.25 C1.12 5.76, 5.89 -1.86, 18.25 0" stroke="#000000" stroke-width="1" fill="none"/></g><g transform="translate(42.260000228881836 34) rotate(0 5.239999771118164 12.5)"><text x="5.239999771118164" y="0" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">л</text></g></svg>
