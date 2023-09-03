@@ -24,5 +24,5 @@ context=internal
 <figure><img src="../../.gitbook/assets/codeForQueues.png" alt=""><figcaption><p>Код для "queues.conf"</p></figcaption></figure>
 
 {% hint style="success" %}
-В данном примере мы описали контекст **internal**, разрешен набор всех внутренних номеров. Можно указать контекст IVR меню, в формате ivr<БВнутреннийНомерIVR>
+В данном примере мы описали контекст **internal**, разрешен набор всех внутренних номеров. Можно указать контекст IVR меню, в формате ivr<ВнутреннийНомерIVR>
 {% endhint %}
