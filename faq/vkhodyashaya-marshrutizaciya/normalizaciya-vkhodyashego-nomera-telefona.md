@@ -24,6 +24,7 @@
 
 4. Выберите режим "**Добавлять в конец файла**". В черное окно добавьте следующий фрагмент кода:
 
+{% code fullWidth="true" %}
 ```php
 [SIP-1687947415-incoming-custom]
 exten => _.!,1,NoOp(---)
@@ -38,6 +39,7 @@ exten => _.!,1,NoOp(---)
 exten => _.X!/_886142XXXXX,1,Set(CALLERID(num)=${CALLERID(num):5})
     same => n,return
 ```
+{% endcode %}
 
 В выше приведенном фрагменте кода Вам необходимо составить правильное наименование контекста.\
 Формат создаваемого контекста:
@@ -56,8 +58,10 @@ exten => _.X!/_886142XXXXX,1,Set(CALLERID(num)=${CALLERID(num):5})
 
 Если необходимо добавить нормализацию для всех провайдеров сразу, то достаточно описать контекст «**add-trim-prefix-clid-custom**». Пример, все 10ти значным АОН добавить 7ку:
 
+{% code fullWidth="true" %}
 ```php
 [add-trim-prefix-clid-custom]
 exten => _.X!,1,ExecIf($[ ${LEN(${CALLERID(num)})} == 10 ]?Set(CALLERID(num)=7${CALLERID(num)}))
 	same => n,return
 ```
+{% endcode %}
