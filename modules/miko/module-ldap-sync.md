@@ -2,6 +2,8 @@
 
 This module is designed for bidirectional synchronization of employee account data with MikoPBX. The data source is either an Active Directory or LDAP server.
 
+When a new employee is created in the domain, they will automatically be uploaded into MikoPBX, with an available internal number assigned to them. The information about the number will then be sent back to the domain and recorded in the employee's profile. The same will happen with their mobile phone number and photograph. As always, the setup is extremely straightforward.
+
 <figure><img src="../../.gitbook/assets/ModuleLdapSync - index.png" alt=""><figcaption><p>Setting up Active Directory servers for user synchronization with MikoPBX</p></figcaption></figure>
 
 ## Synchronization Parameters
@@ -40,7 +42,6 @@ After testing, you can initiate manual or automatic data synchronization.
 <figure><img src="../../.gitbook/assets/ModuleLdapSync - modify 5.png" alt=""><figcaption><p>Status of employee synchronization between the domain and MikoPBX</p></figcaption></figure>
 
 In the columns "_status_" and "_updated_", you can track the current synchronization process.
-
 
 {% hint style="info" %}
 As of now, the removal of an employee from the domain will not lead to their automatic removal from MikoPBX. The account will be retained until manually deleted by a MikoPBX administrator. This is because there may be various complex call routing scenarios where it's not feasible to simply remove an employee from the call route without replacing them with someone else.
