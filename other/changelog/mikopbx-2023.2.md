@@ -14,6 +14,16 @@ We made numerous changes to the MikoPBX code to enable user access management to
 
 You can read more about the user access management module in [its documentation](../../modules/miko/module-users-u-i.md).
 
+
+
+### Active directory and LDAP synchronisation
+
+The new domain synchronization module facilitates a bidirectional exchange of employee data and their contact numbers between the domain and MikoPBX. This module automates the data synchronization process, ensuring that the information in the domain remains up-to-date. When onboarding a new employee, their details are automatically integrated into the MikoPBX telephony system, with an available internal number being assigned.
+
+<figure><img src="../../.gitbook/assets/ModuleLdapSync - index.png" alt=""><figcaption></figcaption></figure>
+
+You can read more about the ldap sync module in [its documentation](../../modules/miko/module-ldap-sync.md).
+
 ### Additional Fields and Tabs from Modules
 
 In the new version of MikoPBX, we expanded the API to manage the interface. Now, when you install additional modules, you can modify the web interface of existing forms, add tabs, buttons, and input fields.
