@@ -134,6 +134,7 @@
   * [Access control management](modules/miko/module-users-u-i.md)
   * [Module auto dialer](modules/miko/module-auto-dialer.md)
   * [Call quality assessment](modules/miko/module-quality-assessment.md)
+  * [Synchronization with LDAP/AD](modules/miko/module-ldap-sync.md)
 
 ## other
 

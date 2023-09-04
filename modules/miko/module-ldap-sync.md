@@ -1,0 +1,2 @@
+# Synchronization with LDAP/AD
+
