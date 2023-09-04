@@ -197,6 +197,7 @@
   * [Управление доступом в систему](modules/miko/module-users-u-i.md)
   * [Модуль автообзвона](modules/miko/module-auto-dialer.md)
   * [Оценка качества разговора](modules/miko/module-quality-assessment.md)
+  * [Синхронизация с LDAP/AD](modules/miko/module-ldap-sync.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
