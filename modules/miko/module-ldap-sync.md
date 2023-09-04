@@ -31,7 +31,7 @@ During the initial synchronization, the system will match the existing MikoPBX a
 
 ## Testing and Launch
 
-Before enabling automatic synchronization, it is recommended to test the correctness of the specified attributes by clicking the **Execute Request** button.
+Before enabling automatic synchronization, it is recommended to test the correctness of the specified attributes by clicking the **Run request** button.
 
 If all parameters are correctly specified, you will see a list of employees with attributes from the domain. This is a safe request and will not result in changes to the system.
 
