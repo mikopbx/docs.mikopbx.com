@@ -26,6 +26,7 @@ The added rule allows blocking all incoming requests over the UDP protocol that 
 
 A more complete example of a set of rules:
 
+{% code fullWidth="true" %}
 ```php
 iptables -I INPUT 2 -p udp -m udp --dport 5060 -m string --string 'sipcli' --algo bm --to 65535 -j DROP
 iptables -I INPUT 2 -p udp -m udp --dport 5060 -m string --string 'sip-scan' --algo bm --to 65535 -j DROP
@@ -45,5 +46,6 @@ iptables -I INPUT 2 -p tcp -m tcp --dport 5060 -m string --string 'sundayddr' --
 iptables -I INPUT 2 -p tcp -m tcp --dport 5060 -m string --string 'VaxSIPUserAgent' --algo bm --to 65535 -j DROP
 iptables -I INPUT 2 -p tcp -m tcp --dport 5060 -m string --string 'friendly-scanner' --algo bm --to 65535 -j DROP
 ```
+{% endcode %}
 
 This will protect you from most scanners that I mention User-Agent when requesting.
