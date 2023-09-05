@@ -15,7 +15,7 @@
 
 Схематично задачу можно представить следующим образом:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Схема поставленной задачи </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Схема поставленной задачи </p></figcaption></figure>
 
 ## Решение <a href="#reshenie" id="reshenie"></a>
 
