@@ -30,7 +30,7 @@ The data storage disk is usually mounted in the "/storage/usbdisk1" directory. F
 Before starting work, you should unmount the disk. To do this, run the script:
 
 ```
-~ # /etc/rc/freestorage
+~ # /sbin/freestorage
 ```
 
 Make sure that the data storage disk is no longer mounted:
