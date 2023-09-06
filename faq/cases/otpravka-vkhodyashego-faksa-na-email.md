@@ -79,3 +79,5 @@ load => res_fax_spandsp.so
 fax_detect=yes
 fax_detect_timeout=30
 ```
+
+<figure><img src="../../.gitbook/assets/codeForProviders (1).png" alt=""><figcaption><p>Код в дополнительных параметрах провайдера</p></figcaption></figure>
