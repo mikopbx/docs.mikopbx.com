@@ -112,7 +112,7 @@
 * [Scenarios and cases](faq/scenarios-and-cases/README.md)
   * [Customer's assessment of the quality of service](faq/scenarios-and-cases/customers-assessment-of-the-quality-of-service.md)
   * [Call the company from your mobile and dial an extension to call a third-party company](faq/scenarios-and-cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
-  * [Disabling "off-hours" for VIP rooms](faq/scenarios-and-cases/disabling-off-hours-for-vip-rooms.md)
+  * [Disabling "off-hours" for VIP numbers](faq/scenarios-and-cases/disabling-off-hours-for-vip-rooms.md)
   * [Unique background music for the queue](faq/scenarios-and-cases/unique-background-music-for-the-queue.md)
   * [Pause for Queue agent](faq/scenarios-and-cases/pause-for-queue-agent.md)
   * [Setting up the "Paging" function](faq/scenarios-and-cases/cases.md)

@@ -1,4 +1,4 @@
-# Disabling "off-hours" for VIP rooms
+# Disabling "off-hours" for VIP numbers
 
 1. Connect providers registered on the same host as described in the <mark style="color:red;">instructions</mark>.
 2. Go to **System** → **System file customization**
@@ -13,7 +13,7 @@
 
 ```php
 [add-trim-prefix-clid-custom]
-; Ignoring non-working hours of VIP rooms for a double work rate:
+; Ignoring non-working hours for VIP numbers for a double work rate:
 exten => _.X!/_X9522140000,1,Set(IGNORE_TIME=1)
     same => n,return
 exten => _.X!/_X9629771111,1,Set(IGNORE_TIME=1)
