@@ -141,7 +141,7 @@
   * [Динамические агенты очередей](faq/cases/dinamicheskie-agenty-ocheredei.md)
   * [Настройка функции "Paging"](faq/cases/nastroika-funkcii-paging.md)
   * [Ограничить количество авторизаций на одном SIP аккаунте](faq/cases/ogranichit-kolichestvo-avtorizacii-na-odnom-sip-akkaunte.md)
-  * [Как реализовать функцию суфлера](faq/cases/kak-realizovat-funkciyu-suflera.md)
+  * [Как реализовать функцию супервизора](faq/cases/kak-realizovat-funkciyu-suflera.md)
   * [Голосовая почта](faq/cases/golosovaya-pochta.md)
 * [Настройка провайдеров](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
