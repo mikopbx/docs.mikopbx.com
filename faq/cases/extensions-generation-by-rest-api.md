@@ -79,7 +79,7 @@ def main():
     faker_ja = Faker('ja_JP')
 
     for number in range(1, 699):
-        # Получение шаблона данных для нового сотрудника
+        # Retrieving the data template for a new employee
         get_response = requests.get("http://127.0.0.1:8081/pbxcore/api/extensions/getRecord?id=")
 
         if get_response.json().get('result', False) == False:
@@ -88,7 +88,7 @@ def main():
 
         data = get_response.json().get('data', {})
 
-        # Генерация произвольных данных
+        # Generating random data
         locale = random.choice(['ru_RU', 'en_US', 'zh_CN', 'ja_JP'])
         faker = locals()[f"faker_{locale.split('_')[0].lower()}"]
         data['user_username'] = faker.name()
@@ -97,7 +97,7 @@ def main():
         data['fwd_forwarding'] = data['mobile_number']
         data['fwd_forwardingonbusy'] = data['mobile_number']
 
-        # Создание нового сотрудника
+        # Creating a new employee
         post_response = requests.post("http://127.0.0.1:8081/pbxcore/api/extensions/saveRecord", data=data, headers={'Content-Type': 'application/x-www-form-urlencoded'})
 
         if post_response.json().get('result', False):
