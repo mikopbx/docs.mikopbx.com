@@ -2,18 +2,9 @@
 
 ## Introduction
 
-Thank You for choosing **MikoPBX**!&#x20;
+Thank You for choosing **MikoPBX ♥️**&#x20;
 
 **MikoPBX** is a telephony server with an operating system and a convenient web interface. It works with almost any phone technology in the world. MikoPBX is based on **Asterisk** and has very low PC hardware requirements.
-
-{% hint style="info" %}
-**MikoPBX** is based on:
-
-* **Asterisk 16.5.1**
-* **Linux 4.10.13**
-
-More detailed information about Linux packages and their versions is provided [here](other/linux-versions-and-packages.md).
-{% endhint %}
 
 {% hint style="success" %}
 Don't know where to start? Follow [these instructions](master/quick-start.md) to help you get MikoPBX up and running as quickly as possible.
