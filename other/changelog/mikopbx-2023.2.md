@@ -120,7 +120,7 @@ If you want to help with the translation of the MikoPBX interface and modules, [
 
 When configuring calls, developing new applications, and analyzing issues, it's sometimes necessary to analyze system logs, which are available in the MikoPBX web interface. We have added a clear log file button that allows you to start your analysis with a clean slate.
 
-### API for programmatic extensions creation
+## API for programmatic extensions creation
 
 In the current release, an API for quickly creating a large number of employees has been implemented. During testing, we described the algorithm for generating new employees in ChatGPT and conducted stress testing for creating 700 random accounts in different languages. It took about 1 minute to complete the load test, and it was successful.&#x20;
 
