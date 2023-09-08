@@ -75,7 +75,7 @@
   * [Мониторинг провайдеров на MikoPBX](faq/setup/monitoring-providers-on-mikopbx.md)
 * [Обслуживание](faq/management/README.md)
   * [Изменить имя для авторизации](faq/management/change-the-login-name.md)
-  * [Закончилось место на доп. диске, увеличение размера диска](faq/management/extension-of-storage-disk.md)
+  * [Закончилось место на доп. диске, увеличение размера диска](faq/management/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
   * [Порядок обновления до актуальной версии](faq/management/the-order-of-updating-to-the-current-version.md)
   * [Закончилось место на доп. диске, перенос данных на новый диск](faq/management/move-data-from-storage-to-another-disk.md)
   * [Хранение записей в общей папке windows](faq/management/storing-records-in-a-windows-shared-folder.md)
