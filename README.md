@@ -22,7 +22,7 @@
 
 ### Глава 2. Знакомство с MikoPBX <a href="#glava_2_znakomstvo_s_mikopbx" id="glava_2_znakomstvo_s_mikopbx"></a>
 
-Первые шаги с MikoPBX. Как узнать IP адрес вашей системы, войти в веб-интерфейс и выполнить базовые настройки. [читать далее...](master/znakomstvo-s-mikopbx.md)
+Первые шаги с MikoPBX. Как узнать IP адрес вашей системы, войти в веб-интерфейс и выполнить базовые настройки. [читать далее...](readme/getting-to-know-mikopbx.md)
 
 ### Глава 3. Настройка лицензирования в MikoPBX <a href="#glava_3_nastrojka_licenzirovanija_v_mikopbx" id="glava_3_nastrojka_licenzirovanija_v_mikopbx"></a>
 
@@ -60,7 +60,7 @@
 * [Обновление системы](manual/maintenance/update.md)
 * [Диагностика системы](manual/maintenance/system-diagnostic.md)
 * [Перезагрузка и выключение системы](manual/maintenance/restart.md)
-* [Модуль резервного копирования ](manual/maintenance/modul-rezervnogo-kopirovaniya.md)
+* [Модуль резервного копирования ](manual/maintenance/backup.md)
 
 ### Глава 8. Сеть и Firewall <a href="#glava_8_set_i_firewall" id="glava_8_set_i_firewall"></a>
 

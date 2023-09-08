@@ -26,9 +26,9 @@ ssl://smtp.gmail.com
 {% hint style="info" %}
 Настройка уведомлений для почтовых сервисов:
 
-* [Gmail](nastroika-e-mail-uvedomlenii-dlya-pochtovogo-servisa-gmail.md)
-* [Yandex](nastroika-e-mail-uvedomlenii-dlya-pochtovogo-servisa-yandex.md)
-* [Mail](nastroika-e-mail-uvedomlenii-dlya-pochtovogo-servisa-mail.md)
+* [Gmail](gmail.md)
+* [Yandex](yandex.md)
+* [Mail](mailru.md)
 {% endhint %}
 
 ## Оповещения о пропущенных
