@@ -91,7 +91,7 @@ MikoPBX manages phone accounts, service providers. You will learn how to set up 
 The section presents the solution of telephony problems that telephone exchange administrators most often face. By clicking on the links below, you can get acquainted with practical examples and find answers to frequently asked questions about MikoPBX.&#x20;
 
 * [Diagnosis of problems](faq/troubleshooting/)
-* [Integration with 1C ](faq/integraciya-s-1s.md)
+* [Integration with 1C ](faq/1c-integrations.md)
 * [Scenarios and cases ](faq/cases/cases.md)
 * [Configuring Providers ](faq/providers/)
 * [Setting up softphones ](faq/softphones/)
