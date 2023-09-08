@@ -9,6 +9,7 @@ In release 2023.2, an API for quickly creating a large number of employees was i
 To perform this task, a request to ChatGPT was written with the following content.
 
 {% code fullWidth="true" %}
+```
 {"jsonapi":{"version":"1.0"},
     "result":true,
     "data":
@@ -49,6 +50,8 @@ To perform this task, a request to ChatGPT was written with the following conten
         "hash":"a16f973985cb3d0cbe75abb2c10a7c39b2203a87"
         }
 }
+```
+{% endcode %}
 
 If the result parameter in the response is true, we will take the data for creating a new user from the data parameter and make a POST request to the address http://127.0.0.1:8081/pbxcore/api/extensions/saveRecord, using the modified array of form fields in x-www-form-urlencoded format.
 
@@ -81,7 +84,7 @@ def main():
     faker_ja = Faker('ja_JP')
 
     for number in range(1, 699):
-        # Retrieving the data template for a new employee
+        # Получение шаблона данных для нового сотрудника
         get_response = requests.get("http://127.0.0.1:8081/pbxcore/api/extensions/getRecord?id=")
 
         if get_response.json().get('result', False) == False:
@@ -90,7 +93,7 @@ def main():
 
         data = get_response.json().get('data', {})
 
-        # Generating random data
+        # Генерация произвольных данных
         locale = random.choice(['ru_RU', 'en_US', 'zh_CN', 'ja_JP'])
         faker = locals()[f"faker_{locale.split('_')[0].lower()}"]
         data['user_username'] = faker.name()
@@ -99,7 +102,7 @@ def main():
         data['fwd_forwarding'] = data['mobile_number']
         data['fwd_forwardingonbusy'] = data['mobile_number']
 
-        # Creating a new employee
+        # Создание нового сотрудника
         post_response = requests.post("http://127.0.0.1:8081/pbxcore/api/extensions/saveRecord", data=data, headers={'Content-Type': 'application/x-www-form-urlencoded'})
 
         if post_response.json().get('result', False):
@@ -113,22 +116,14 @@ def main():
 if __name__ == "__main__":
     main()
 
-{% endcode %}
-
-To run such a script, save it in the /tmp folder inside MikoPBX. Since the script has several dependencies, add them through the pip3 package manager and run the script for generation.
-
-```bash
-
-pip3 install faker requests
-
-python CreateRandomExtensions.py
-
 ```
+{% endcode %}
 
 As a result of the script's execution, you will see a list of created employees in the console, and new user accounts will appear in the web interface.
 
 <figure><img src="../../.gitbook/assets/3. Processing.png" alt=""><figcaption><p>MikoPBX stress testing process for the interface and REST API</p></figcaption></figure>
-<figure><img src="../../.gitbook/assets/Screenshot 2023-09-06 at 14.04.52.png" alt=""><figcaption><p>MikoPBX result of the script for generating a random set of employees</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/Screenshot 2023-09-06 at 14.04.52.png" alt=""><figcaption><p>>MikoPBX result of the script for generating a random set of employees</p></figcaption></figure>
 
 It's important to note that since the system is read-only, you need to install Python libraries after each reboot, and the /tmp folder will be cleared. Development and refinement of the script should be done in an external system.
 
