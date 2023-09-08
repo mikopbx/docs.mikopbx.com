@@ -25,7 +25,7 @@ ssl://smtp.gmail.com
 {% hint style="info" %}
 Setting up notifications for mail services:
 
-* [Gmail](setting-up-e-mail-notifications-for-the-gmail-mail-service.md)
+* [Gmail](gmail.md)
 {% endhint %}
 
 ## Missed Notifications
