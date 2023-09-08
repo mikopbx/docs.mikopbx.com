@@ -14,8 +14,6 @@ We made numerous changes to the MikoPBX code to enable user access management to
 
 You can read more about the user access management module in [its documentation](../../modules/miko/module-users-u-i.md).
 
-
-
 ### Active directory and LDAP synchronisation
 
 The new domain synchronization module facilitates a bidirectional exchange of employee data and their contact numbers between the domain and MikoPBX. This module automates the data synchronization process, ensuring that the information in the domain remains up-to-date. When onboarding a new employee, their details are automatically integrated into the MikoPBX telephony system, with an available internal number being assigned.
@@ -56,7 +54,7 @@ The system settings now allow you to set the retention period for call recording
 
 ### Docker Container Optimization
 
-Installing MikoPBX inside a Docker container is one of the installation options. In the new release, we optimized the web interface and console menu, hiding menu items not used in the container installation.&#x20;
+Installing MikoPBX inside a Docker container is one of the installation options. In the new release, we optimized the web interface and console menu, hiding menu items not used in the container installation.
 
 We've also improved network settings, allowing you to specify the system's external address, particularly useful for complex network topologies with port forwarding to public addresses on systems deployed within the perimeter and installed inside Docker containers.
 
@@ -90,7 +88,7 @@ In the future, additional metrics will be added to this system, including averag
 
 ### Refactoring of the App Store
 
-We've rewritten the marketplace's code, unified the tabs, and moved part of the modules to the backend. As you already know, MikoPBX is a free open-source system without any restrictions. We don't plan on changing this policy, but development requires resources. Therefore, we plan to monetize MikoPBX through the development and sale of our own and partner extensions in our app store.&#x20;
+We've rewritten the marketplace's code, unified the tabs, and moved part of the modules to the backend. As you already know, MikoPBX is a free open-source system without any restrictions. We don't plan on changing this policy, but development requires resources. Therefore, we plan to monetize MikoPBX through the development and sale of our own and partner extensions in our app store.
 
 In the latest update, we've made some changes to the interface of the section, combining module management and system registration into separate tabs in one section. Paid and free modules are now marked with different icons in the list. We've also optimized the module installation code and fixed all identified errors.
 
@@ -106,17 +104,15 @@ We're gradually expanding the set of basic translations for the web interface. I
 
 <figure><img src="../../.gitbook/assets/New2023.2 - new translation Dutch.png" alt=""><figcaption><p><em>New in MikoPBX 2023.2: Interface translation to Dutch</em></p></figcaption></figure>
 
-A huge thanks to our translators for their help:&#x20;
+A huge thanks to our translators for their help:
 
-* Jochem Pluim&#x20;
-* Secrieru Ion&#x20;
-* Mikayil Isayev&#x20;
-* Voutsas Theocharis&#x20;
-* Everton Massen Goncalves&#x20;
+* Jochem Pluim
+* Secrieru Ion
+* Mikayil Isayev
+* Voutsas Theocharis
+* Everton Massen Goncalves
 
 If you want to help with the translation of the MikoPBX interface and modules, [follow this link](https://weblate.mikopbx.com/projects/mikopbx/admin-web-interface/).
-
-
 
 ## Clear Current Log Button
 
@@ -128,4 +124,4 @@ When configuring calls, developing new applications, and analyzing issues, it's 
 
 In the current release, an API for quickly creating a large number of employees has been implemented. During testing, we described the algorithm for generating new employees in ChatGPT and conducted stress testing for creating 700 random accounts in different languages. It took about 1 minute to complete the load test, and it was successful. You can read more about this case in detail [here](../../faq/cases/extensions-generation-by-rest-api.md).
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-09-06 at 14.04.52.png" alt=""><figcaption><p>New in MikoPBX 2023.2. Programmatic generation of employee accounts</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot%202023-09-06%20at%2014.04.52.png" alt=""><figcaption></figcaption></figure>
