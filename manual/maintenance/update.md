@@ -7,7 +7,7 @@ description: >-
 # System upgrade
 
 {% hint style="danger" %}
-Перед обновлением обязательно сделайте резервную копию настроек АТС. Делается это при помощи [**модуля резервного копирования**](modul-rezervnogo-kopirovaniya.md).
+Перед обновлением обязательно сделайте резервную копию настроек АТС. Делается это при помощи [**модуля резервного копирования**](broken-reference).
 {% endhint %}
 
 ## Обновление из web-интерфейса <a href="#obnovlenie_iz_web-interfejsa" id="obnovlenie_iz_web-interfejsa"></a>
