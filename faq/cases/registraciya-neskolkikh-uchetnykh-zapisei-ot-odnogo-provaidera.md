@@ -30,5 +30,5 @@ context=public-direct-dial
 <figure><img src="../../.gitbook/assets/newRule.png" alt=""><figcaption><p>Новое правило обработки входящих вызовов</p></figcaption></figure>
 
 {% hint style="success" %}
-Инструкции по настройке входящей маршрутизации доступны по [ссылке](../vkhodyashaya-marshrutizaciya/).
+Инструкции по настройке входящей маршрутизации доступны по [ссылке](../incoming-routing/).
 {% endhint %}
