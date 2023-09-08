@@ -126,6 +126,7 @@
   * [Настройка Jitter](faq/troubleshooting/nastroika-jitter.md)
   * [Диагностика проблем с лицензированием](faq/troubleshooting/diagnostika-problem-s-licenzirovaniem.md)
 * [Сценарии и кейсы](faq/cases/README.md)
+  * [Программное создание сотрудников](faq/cases/extensions-generation-by-rest-api.md)
   * [Уведомление в телеграмм о пропущенных](faq/cases/uvedomlenie-v-telegramm-o-propushennykh.md)
   * [Позвонить в компанию с мобильного и набрав добавочный позвонить сторонней компании](faq/cases/pozvonit-v-kompaniyu-s-mobilnogo-i-nabrav-dobavochnyi-pozvonit-storonnei-kompanii.md)
   * [Отправка входящего факса на email](faq/cases/otpravka-vkhodyashego-faksa-na-email.md)
