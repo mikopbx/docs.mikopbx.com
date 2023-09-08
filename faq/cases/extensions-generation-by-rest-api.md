@@ -55,16 +55,11 @@ To perform this task, a request to ChatGPT was written with the following conten
 
 If the result parameter in the response is true, we will take the data for creating a new user from the data parameter and make a POST request to the address http://127.0.0.1:8081/pbxcore/api/extensions/saveRecord, using the modified array of form fields in x-www-form-urlencoded format.
 
-The script should be written in Python without using NodeJS and should allow creating 100 different employees.
-In the user_username field, enter the name and surname of a random person so that national alphabets are used.
-In the user_email field, enter any email address.
-In the mobile_number field, enter random mobile phone numbers, only digits, without duplicates.
-In the fwd_forwarding and fwd_forwardingonbusy fields, fill in with mobile_number values.
+The script should be written in Python without using NodeJS and should allow creating 100 different employees. In the user\_username field, enter the name and surname of a random person so that national alphabets are used. In the user\_email field, enter any email address. In the mobile\_number field, enter random mobile phone numbers, only digits, without duplicates. In the fwd\_forwarding and fwd\_forwardingonbusy fields, fill in with mobile\_number values.
 
-When creating an employee, print user_username, user_email, and number to the console and report the result.
+When creating an employee, print user\_username, user\_email, and number to the console and report the result.
 
 If the result of the saveRecord or getRecord request is false, also print the messages parameter from the received response. If the response results in an error of another type or cannot be parsed, print the complete text received from the API server to the console.
-{% endcode %}
 
 As a result, a Python script was generated that allowed us to perform this test.
 
@@ -123,11 +118,10 @@ As a result of the script's execution, you will see a list of created employees 
 
 <figure><img src="../../.gitbook/assets/3. Processing.png" alt=""><figcaption><p>MikoPBX stress testing process for the interface and REST API</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-09-06 at 14.04.52.png" alt=""><figcaption><p>>MikoPBX result of the script for generating a random set of employees</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ResultOfGenerationExtensions.png" alt=""><figcaption><p>MikoPBX result of the script for generating a random set of employees</p></figcaption></figure>
 
 It's important to note that since the system is read-only, you need to install Python libraries after each reboot, and the /tmp folder will be cleared. Development and refinement of the script should be done in an external system.
 
 When making REST API requests from external addresses, it's necessary to authenticate with an administrative username and password or create a user with the necessary permissions in the employee rights management module and authenticate with it.
 
 When making requests, as in this example, from the address 127.0.0.1, no authentication is required.
-
