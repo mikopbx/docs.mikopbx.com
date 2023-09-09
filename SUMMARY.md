@@ -58,6 +58,7 @@
 
 ## FAQ
 
+* [Integration with 1C](faq/1c-integrations.md)
 * [Setup](faq/setup/README.md)
   * [Reset to factory settings](faq/setup/reset-to-factory-settings.md)
   * [Fine-tuning the firewall](faq/setup/fine-tuning-the-firewall.md)
@@ -142,4 +143,3 @@
 * [Changelog](other/changelog/README.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
-* [Integration with 1C](other/1c-integrations.md)

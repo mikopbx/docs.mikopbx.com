@@ -81,10 +81,15 @@ MikoPBX manages phone accounts, service providers. You will learn how to set up 
 
 The section presents the solution of telephony problems that telephone exchange administrators most often face. By clicking on the links below, you can get acquainted with practical examples and find answers to frequently asked questions about MikoPBX.&#x20;
 
-* [Diagnosis of problems](faq/troubleshooting/)
-* [Integration with 1C ](other/1c-integrations.md)
-* [Scenarios and cases ](faq/cases/paging.md)
+* [Setup](faq/setup/)
+* [Managment](faq/management/)
+* [Troubleshooting](faq/troubleshooting/)
+* [Incoming Routing](faq/incoming-routing/)
+* [Outbound routing](faq/outbound-routing/)
+* [Integration with 1C ](faq/1c-integrations.md)
+* [Scenarios and cases ](faq/cases/)
 * [Configuring Providers ](faq/providers/)
 * [Setting up softphones ](faq/softphones/)
-* [Voip gateways ](faq/voip-gateways/)
+* [VoIP gateways ](faq/voip-gateways/)
 * [IP Phones](faq/ip-telefones/)
+* [Interconnections](faq/interconnections.md)
