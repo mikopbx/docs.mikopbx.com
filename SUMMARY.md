@@ -61,6 +61,10 @@
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 
+* [Интеграция с 1С](faq/1c-integrations/README.md)
+  * [Перехват на ответственного](faq/1c-integrations/interception/README.md)
+    * [Перехват на ответственного в панели телефонии 4.0 как в панели 1.0](faq/1c-integrations/interception/perekhvat-na-otvetstvennogo-v-paneli-telefonii-4.0-kak-v-paneli-1.0.md)
+    * [Отменить перехват на ответственного для конкретного провайдера](faq/1c-integrations/interception/otmenit-perekhvat-na-otvetstvennogo-dlya-konkretnogo-provaidera.md)
 * [Установка](faq/setup/README.md)
   * [Конвертация истории звонков FreePBX в MikoPBX](faq/setup/converting-freepbx-call-history-to-mikopbx.md)
   * [Переход со старых релизов на MikoPBX](faq/setup/switching-from-old-releases-to-mikopbx/README.md)
@@ -201,7 +205,3 @@
 * [История версий](other/changelog/README.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
-* [Интеграция с 1С](other/1c-integrations/README.md)
-  * [Перехват на ответственного](other/1c-integrations/interception/README.md)
-    * [Перехват на ответственного в панели телефонии 4.0 как в панели 1.0](other/1c-integrations/interception/perekhvat-na-otvetstvennogo-v-paneli-telefonii-4.0-kak-v-paneli-1.0.md)
-    * [Отменить перехват на ответственного для конкретного провайдера](other/1c-integrations/interception/otmenit-perekhvat-na-otvetstvennogo-dlya-konkretnogo-provaidera.md)
