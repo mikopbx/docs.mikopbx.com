@@ -6,7 +6,7 @@ MikoPBX установлена на отдельно выделенный сер
 
 ## Решение <a href="#reshenie" id="reshenie"></a>
 
-1. Подключитесь к MikoPBX через SSH-клиент по [инструкции](../troubleshooting/podklyuchenie-k-ats-s-pomoshyu-ssh-klienta.md)
+1. Подключитесь к MikoPBX через SSH-клиент по [инструкции](../troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
 2. Отключаем **storage** диск «sda4»:
 
 ```php

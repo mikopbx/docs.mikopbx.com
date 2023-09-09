@@ -8,7 +8,7 @@
 Перед работами обязательно выполните резервное копирование данных!
 {% endhint %}
 
-Для выполнения предложенных далее команд потребуется [Подключение к АТС с помощью SSH-клиента](../troubleshooting/podklyuchenie-k-ats-s-pomoshyu-ssh-klienta.md).
+Для выполнения предложенных далее команд потребуется [Подключение к АТС с помощью SSH-клиента](../troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md).
 
 ## Контроль свободного места на диске <a href="#kontrol_svobodnogo_mesta_na_diske" id="kontrol_svobodnogo_mesta_na_diske"></a>
 

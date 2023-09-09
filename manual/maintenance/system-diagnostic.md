@@ -79,7 +79,7 @@
 
 <figure><img src="../../.gitbook/assets/sistem_logi_zahv_pak_3.png" alt=""><figcaption></figcaption></figure>
 
-Если в папке **Загрузки** архив найти не удалось , можете [подключиться к АТС через WinSCP](../../faq/troubleshooting/podklyuchenie-k-ats-s-pomoshyu-winscp.md) и скачать его из директории **/storage/usbdisk1/mikopbx/tmp**  - файл **log-tcpdump-XXXXXXXXXX.zip**
+Если в папке **Загрузки** архив найти не удалось , можете [подключиться к АТС через WinSCP](../../faq/troubleshooting/connecting-to-a-pbx-using-winscp.md) и скачать его из директории **/storage/usbdisk1/mikopbx/tmp**  - файл **log-tcpdump-XXXXXXXXXX.zip**
 
 {% hint style="info" %}
 Подсказка
@@ -102,6 +102,6 @@
 
 Другие способы снятия лога:
 
-* С помощью [SSH-клиента](../../faq/troubleshooting/podklyuchenie-k-ats-s-pomoshyu-ssh-klienta.md)
+* С помощью [SSH-клиента](../../faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
 * С помощью [утилиты Wireshark](../../faq/troubleshooting/snyatie-loga-v-ats-s-pomoshyu-wireshark.md)
-* С помощью [приложения tcpdump](../../faq/troubleshooting/poluchenie-logov-s-pomoshyu-prilozheniya-tcpdump.md)
+* С помощью [приложения tcpdump](../../faq/troubleshooting/getting-logs-using-the-tcpdump-application.md)

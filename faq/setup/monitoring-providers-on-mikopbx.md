@@ -2,7 +2,7 @@
 
 При работе с поставщиками услуг связи периодически могут возникать проблемы. К примеру сервер поставщика не отвечает / не доступен. В рамках данной статьи будет предложен механизм оповещения на email системного администратора.
 
-1. Подключитесь к АТС [с помощью SSH-клиента](../troubleshooting/podklyuchenie-k-ats-s-pomoshyu-ssh-klienta.md)
+1. Подключитесь к АТС [с помощью SSH-клиента](../troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
 
 <figure><img src="../../.gitbook/assets/sshConnection.png" alt=""><figcaption><p>SSH подключение</p></figcaption></figure>
 

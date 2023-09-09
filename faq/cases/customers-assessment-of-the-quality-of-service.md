@@ -88,8 +88,8 @@ exten => bye,1,ExecIf($["x${filename_bye}" != "x"]?Playback(${filename_bye}));
 
 {% hint style="info" %}
 Файл следует сохранить на АТС по пути **/storage/usbdisk1/quality/quality\_agi.php**\
-Создать файл можно используя файловый менеджер [WinSCP](../troubleshooting/podklyuchenie-k-ats-s-pomoshyu-winscp.md)\
-Файлу следует установить права доступа на выполнение. Подключитесь по [SSH](../troubleshooting/podklyuchenie-k-ats-s-pomoshyu-ssh-klienta.md) и выполните команду
+Создать файл можно используя файловый менеджер [WinSCP](../troubleshooting/connecting-to-a-pbx-using-winscp.md)\
+Файлу следует установить права доступа на выполнение. Подключитесь по [SSH](../troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md) и выполните команду
 
 ```
 chmod +x /storage/usbdisk1/quality/quality_agi.php
