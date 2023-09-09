@@ -83,7 +83,7 @@ The section presents the solution of telephony problems that telephone exchange 
 
 * [Diagnosis of problems](faq/troubleshooting/)
 * [Integration with 1C ](other/1c-integrations.md)
-* [Scenarios and cases ](faq/cases/cases.md)
+* [Scenarios and cases ](faq/cases/paging.md)
 * [Configuring Providers ](faq/providers/)
 * [Setting up softphones ](faq/softphones/)
 * [Voip gateways ](faq/voip-gateways/)

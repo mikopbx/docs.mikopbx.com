@@ -97,7 +97,7 @@
   * [Disabling "off-hours" for VIP numbers](faq/cases/disabling-off-hours-for-vip-rooms.md)
   * [Unique background music for the queue](faq/cases/unique-background-music-for-the-queue.md)
   * [Pause for Queue agent](faq/cases/pause-for-queue-agent.md)
-  * [Setting up the "Paging" function](faq/cases/cases.md)
+  * [Setting up the "Paging" function](faq/cases/paging.md)
   * [Limit the number of authorizations per SIP account](faq/cases/limit-the-number-of-authorizations-per-sip-account.md)
   * [Call Monitoring (ChanSpy)](faq/cases/how-to-implement-the-prompter-function.md)
 * [VoIP providers](faq/providers/README.md)
