@@ -10,7 +10,7 @@ At the moment, this can only be done through the customization of the PBX.
 
 1. Go to the provider's settings and copy its ID in the browser's address bar:
 
-<figure><img src="../../.gitbook/assets/ProviderID.png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ProviderID (1).png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
 
 2. Go to the section "**System file customization**"
 

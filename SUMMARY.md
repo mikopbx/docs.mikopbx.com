@@ -91,6 +91,7 @@
   * [Number Template](faq/outbound-routing/number-template/README.md)
     * [Uniform distribution of outgoing](faq/outbound-routing/number-template/uniform-distribution-of-outgoing.md)
     * [Sample template: calls to another country](faq/outbound-routing/number-template/sample-template-calls-to-another-country.md)
+  * [Making Calls Through a Specific Provider](faq/outbound-routing/making-calls-through-a-specific-provider.md)
 * [Scenarios and cases](faq/cases/README.md)
   * [Generate extensions by REST API](faq/cases/extensions-generation-by-rest-api.md)
   * [Customer's assessment of the quality of service](faq/cases/customers-assessment-of-the-quality-of-service.md)
