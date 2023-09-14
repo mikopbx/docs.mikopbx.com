@@ -103,6 +103,7 @@
   * [Setting up the "Paging" function](faq/cases/paging.md)
   * [Limit the number of authorizations per SIP account](faq/cases/limit-the-number-of-authorizations-per-sip-account.md)
   * [Call Monitoring (ChanSpy)](faq/cases/how-to-implement-the-prompter-function.md)
+  * [Sending an incoming fax to email](faq/cases/sending-an-incoming-fax-to-email.md)
 * [VoIP providers](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
