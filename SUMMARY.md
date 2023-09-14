@@ -123,7 +123,7 @@
   * [Программное создание сотрудников](faq/cases/extensions-generation-by-rest-api.md)
   * [Уведомление в телеграмм о пропущенных](faq/cases/uvedomlenie-v-telegramm-o-propushennykh.md)
   * [Позвонить в компанию с мобильного и набрав добавочный позвонить сторонней компании](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
-  * [Отправка входящего факса на email](faq/cases/otpravka-vkhodyashego-faksa-na-email.md)
+  * [Отправка входящего факса на email](faq/cases/sending-an-incoming-fax-to-email.md)
   * [Оценка клиентом качества обслуживания](faq/cases/customers-assessment-of-the-quality-of-service.md)
   * [Имитация внешних звонков](faq/cases/imitaciya-vneshnikh-zvonkov.md)
   * [Настройка outboudproxy](faq/cases/nastroika-outboudproxy.md)
