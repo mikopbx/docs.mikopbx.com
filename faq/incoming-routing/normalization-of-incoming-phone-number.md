@@ -1,4 +1,4 @@
-# Page 1
+# Normalization of incoming phone number
 
 When connecting multiple providers to MikoPBX, you may encounter situations where customer phone numbers come in different formats:
 
