@@ -82,6 +82,7 @@
   * [Setting individual non-working hours for a provider account](faq/incoming-routing/setting-individual-non-working-hours-for-a-provider-account.md)
   * [An example of the implementation of a typical route of incoming calls](faq/incoming-routing/an-example-of-the-implementation-of-a-typical-route-of-incoming-calls.md)
   * [Routing by DID Number](faq/incoming-routing/routing-by-did-number.md)
+  * [Page 1](faq/incoming-routing/page-1.md)
 * [Outbound routing](faq/outbound-routing/README.md)
   * [Add P-Preferred-Identity and Remote-Party-ID header](faq/outbound-routing/add-p-preferred-identity-and-remote-party-id-header.md)
   * [Conference with a regular external subscriber](faq/outbound-routing/conference-with-a-regular-external-subscriber.md)
