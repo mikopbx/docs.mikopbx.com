@@ -1,5 +1,9 @@
 # Groundwire
 
+### [http://wiki.mikopbx.ru/faq:groundwire](http://wiki.mikopbx.ru/faq:groundwire)
+
+###
+
 ### Настройка GroundWire Softphone с поддержкой шифрования&#x20;
 
 1\. В учетной записи на MikoPBX включить TLS
