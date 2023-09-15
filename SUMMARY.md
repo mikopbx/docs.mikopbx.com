@@ -33,7 +33,7 @@
   * [История вызовов](manual/telefoniya/call-detail-records.md)
 * [Маршрутизация](manual/routing/README.md)
   * [Провайдеры телефонии](manual/routing/providers.md)
-  * [Входящие маршруты](manual/routing/incoming-routes.md)
+  * [Входящие маршруты](manual/routing/incoming-routing.md)
   * [Нерабочее время](manual/routing/out-off-work-time.md)
   * [Исходящие маршруты](manual/routing/outbound-routes.md)
 * [Модули](manual/modules/README.md)

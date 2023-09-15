@@ -34,7 +34,7 @@ callerid = 79257184275 <79257184275>
 6. Опишите входящие и исходящие маршруты. О том как это сделать написано в следующих документациях:
 
 * [Исходящие маршруты](../../manual/routing/outbound-routes.md)
-* [Входящие маршруты](../../manual/routing/incoming-routes.md)
+* [Входящие маршруты](../../manual/routing/incoming-routing.md)
 
 ## Настройте sip-учетку на софтфоне <a href="#nastrojte_sip-uchetku_na_softfone" id="nastrojte_sip-uchetku_na_softfone"></a>
 

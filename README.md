@@ -44,7 +44,7 @@
 &#x20;MikoPBX управляет учетными записями телефонов, поставщиков услуг. Вы узнаете, как настраивать учетные записи в этой главе.
 
 * [Провайдеры телефонии](manual/routing/providers.md)
-* [Входящие маршруты](manual/routing/incoming-routes.md)
+* [Входящие маршруты](manual/routing/incoming-routing.md)
 * [Нерабочее время](manual/routing/out-off-work-time.md)
 * [Исходящие маршруты](manual/routing/outbound-routes.md)
 
