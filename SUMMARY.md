@@ -170,6 +170,9 @@
   * [PhonerLite](faq/softphones/phonerlite.md)
   * [Linphone (MacOS)](faq/softphones/linphone-macos.md)
   * [Telephone(MacOS)](faq/softphones/telephone-macos.md)
+  * [Softphone.pro](http://wiki.mikopbx.ru/faq:softphone\_pro)
+  * [SIPML5 (WebRTC)](https://wiki.mikopbx.ru/faq:webrtc)
+  * [SIP.TG (Telegram)](https://wiki.mikopbx.ru/faq:siptg)
 * [Voip шлюзы](faq/voip-gateways/README.md)
   * [GoIP4](faq/voip-gateways/goip4.md)
   * [Yeastar NeoGate TG 400](faq/voip-gateways/yeastar-neogate-tg-400.md)
@@ -206,3 +209,8 @@
 * [История версий](other/changelog/README.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
+
+***
+
+* [Import](import/README.md)
+  * [Настройка SoftPhone.Pro \[MikoPBX WIKI\]](import/nastroika-softphone.pro-mikopbx-wiki.md)
