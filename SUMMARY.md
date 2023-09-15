@@ -161,6 +161,7 @@
   * [ID Phone(Казахтелеком)](faq/providers/id-phone-kazakhtelekom.md)
   * [Имитация внешних входящих и исходящих звонков](faq/providers/imitaciya-vneshnikh-vkhodyashikh-i-iskhodyashikh-zvonkov.md)
 * [Настройка софтфонов](faq/softphones/README.md)
+  * [Bria Solo](faq/softphones/bria-solo.md)
   * [Sessiontalk](faq/softphones/sessiontalk.md)
   * [Groundwire](faq/softphones/groundwire.md)
   * [MicroSIP](faq/softphones/microsip.md)
