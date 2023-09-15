@@ -33,7 +33,7 @@
   * [Call detail records](manual/telephony/call-detail-records.md)
 * [Call Routing](manual/routing/README.md)
   * [VoIP providers](manual/routing/providers.md)
-  * [Incoming routes](manual/routing/incoming-routes.md)
+  * [Incoming routing](manual/routing/incoming-routing.md)
   * [Night and Holiday Switch](manual/routing/out-off-work-time.md)
   * [Outbound routes](manual/routing/outbound-routes.md)
 * [Modules](manual/modules/README.md)

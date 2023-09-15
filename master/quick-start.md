@@ -49,7 +49,7 @@ To connect the provider to MikoPBX, follow these [instructions](../manual/routin
 
 At this stage, it is necessary to set the routing rules for incoming and outgoing calls, how calls coming through a certain provider will be handled.
 
-* [Incoming routing](../manual/routing/incoming-routes.md)
+* [Incoming routing](../manual/routing/incoming-routing.md)
 * [Outbound routing](../manual/routing/outbound-routes.md)
 
 To create routing rules, you may need:

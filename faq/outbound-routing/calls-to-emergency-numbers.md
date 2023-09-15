@@ -18,7 +18,7 @@ It is necessary to be able to call emergency numbers 112, 1xx
 
 4. You direct calls to emergency numbers through an arbitrary provider. The provider **must support** dialing emergency numbers. The priority of this rule should be the highest, i.e. it should be described first in the list of created outgoing routes.
 
-<figure><img src="../../.gitbook/assets/Priority.png" alt=""><figcaption><p>Priority of outbound routing</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Priority (2).png" alt=""><figcaption><p>Priority of outbound routing</p></figcaption></figure>
 
 5. Go to **System** → S**ystem file customization**
 

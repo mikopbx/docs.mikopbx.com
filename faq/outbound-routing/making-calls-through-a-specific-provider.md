@@ -41,7 +41,7 @@ The first method of implementing our task assumes that subscribers 201 and 202 w
 
 1. For the **first** provider, create an outbound rule. Go to **Routing** → **Outbound Routes**. Add a new rule.
 
-<figure><img src="../../.gitbook/assets/newRule (1).png" alt=""><figcaption><p>Creating a new rule</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newRule (1) (1).png" alt=""><figcaption><p>Creating a new rule</p></figcaption></figure>
 
 2. Fill in the parameters as shown in the screenshot below:
 

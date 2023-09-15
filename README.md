@@ -45,7 +45,7 @@ In the **Telephony** section, you can set up a list of employees, set up an inte
 MikoPBX manages phone accounts, service providers. You will learn how to set up accounts in this chapter.
 
 * [Telephony providers](manual/routing/providers.md)
-* [Incoming routing](manual/routing/incoming-routes.md)
+* [Incoming routing](manual/routing/incoming-routing.md)
 * [Outbound routing](manual/routing/outbound-routes.md)
 * [Night and Holiday Switch](manual/routing/out-off-work-time.md)
 

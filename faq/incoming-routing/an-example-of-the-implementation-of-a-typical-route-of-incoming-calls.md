@@ -66,7 +66,7 @@ Instructions for the IVR menu are available at the [link](../../manual/telephony
 ### Incoming route
 
 {% hint style="info" %}
-Instructions for incoming routes are available at the [link](../../manual/routing/incoming-routes.md).
+Instructions for incoming routes are available at the [link](../../manual/routing/incoming-routing.md).
 {% endhint %}
 
 1. At the last step, we create an incoming call route for our provider. In the **Call Routing** → **Incoming routing** add a new rule.
