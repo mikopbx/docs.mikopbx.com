@@ -1,9 +1,5 @@
 # VoIP providers
 
-Translate to English:
-
-## VoIP providers
-
 ### General Information
 
 To make or receive external phone calls over the public switched telephone network or the Internet, you must create at least one provider account. Each technology has its own account type. To add a new account or modify an existing one, go to **Routing** -> **Telephony Providers**.
