@@ -6,7 +6,7 @@
 
 1. Переходим в раздел **Маршрутизация** → **Исходящие маршруты**.&#x20;
 
-<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption><p>Раздел "<a href="../../manual/routing/outbound-routes.md">Исходящие маршруты</a>"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption><p>Раздел "<a href="../../manual/routing/outbound-routing.md">Исходящие маршруты</a>"</p></figcaption></figure>
 
 2. Добавляем новое правило
 

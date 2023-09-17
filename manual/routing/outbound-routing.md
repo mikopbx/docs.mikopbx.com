@@ -13,7 +13,7 @@
 Для одного провайдера можно создать несколько правил.
 
 {% hint style="info" %}
-Дополнительные примеры настройки исходящей маршрутизации доступны в <mark style="color:red;">разделе FAQ.</mark>
+Дополнительные примеры настройки исходящей маршрутизации доступны в разделе [FAQ](broken-reference).
 {% endhint %}
 
 ### Шаг 1. Добавление нового правила
@@ -32,7 +32,7 @@
 
 ### Шаг 3. Задание шаблона номеров
 
-Задайте шаблон для исходящих звонков. Подробнее про шаблоны номеров [в следующем параграфе](outbound-routes.md#primery-shablonov-nomerov).
+Задайте шаблон для исходящих звонков. Подробнее про шаблоны номеров [в следующем параграфе](outbound-routing.md#primery-shablonov-nomerov).
 
 <figure><img src="../../.gitbook/assets/ish_marsh_3.png" alt=""><figcaption></figcaption></figure>
 
@@ -46,7 +46,7 @@
 
 Преобразовать номер - данная настройка предназначена для удаления префикса номера и замены его на нужный префикс.&#x20;
 
-Примеры преобразования номеров приведены [в следующем параграфе](outbound-routes.md#primery-izmeneniya-prefiksov-nomerov).
+Примеры преобразования номеров приведены [в следующем параграфе](outbound-routing.md#primery-izmeneniya-prefiksov-nomerov).
 
 <figure><img src="../../.gitbook/assets/ish_marsh_9.png" alt=""><figcaption></figcaption></figure>
 

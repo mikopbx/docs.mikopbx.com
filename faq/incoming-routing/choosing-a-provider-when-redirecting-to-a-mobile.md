@@ -33,7 +33,7 @@ exten => _[0-9*#+a-zA-Z][0-9*#+a-zA-Z]!,1,NoOp(start check blacklist)
 
 <figure><img src="../../.gitbook/assets/code.png" alt=""><figcaption><p>Код для extension.conf</p></figcaption></figure>
 
-4. Для каждого провайдера необходимо описать [исходящий маршрут](../../manual/routing/outbound-routes.md)
+4. Для каждого провайдера необходимо описать [исходящий маршрут](../../manual/routing/outbound-routing.md)
 5. Заполните для сотрудников мобильные номера [см. документацию](../../manual/telefoniya/extensions.md)
 6. Ограничьте использование исходящих маршрутов для пользователей, используйте модуль «[Группы пользователей](../../modules/miko/module-users-groups.md)»
 7. Теперь если выходящий вызов направить на мобильный сотрудника, к примеру через [IVR меню](../../manual/telefoniya/ivr-menu.md), то вызов будет направлен через того же провайдера, через которого пришел

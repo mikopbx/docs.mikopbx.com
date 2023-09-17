@@ -35,7 +35,7 @@
   * [Провайдеры телефонии](manual/routing/providers.md)
   * [Входящие маршруты](manual/routing/incoming-routing.md)
   * [Нерабочее время](manual/routing/out-off-work-time.md)
-  * [Исходящие маршруты](manual/routing/outbound-routes.md)
+  * [Исходящие маршруты](manual/routing/outbound-routing.md)
 * [Модули](manual/modules/README.md)
   * [Управление модулями](manual/modules/pbx-extension-modules/README.md)
     * [Регистрация в marketplace](manual/modules/pbx-extension-modules/licensing.md)

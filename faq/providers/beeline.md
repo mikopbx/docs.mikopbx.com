@@ -113,7 +113,7 @@ outbound_proxy=;
 <figure><img src="../../.gitbook/assets/21 (4).png" alt=""><figcaption></figcaption></figure>
 
 2. Настройка как на скриншоте означает, что если номер начинается с **«7»** или **«8»** и остальная часть содержит 10 цифр, звонок будет осуществляться через провайдера Билайн.\
-   Подробнее про настройку исходящих маршрутов можно прочитать [здесь.](../../manual/routing/outbound-routes.md)
+   Подробнее про настройку исходящих маршрутов можно прочитать [здесь.](../../manual/routing/outbound-routing.md)
 
 <figure><img src="../../.gitbook/assets/22 (3).png" alt=""><figcaption></figcaption></figure>
 

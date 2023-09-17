@@ -46,7 +46,7 @@
 * [Провайдеры телефонии](manual/routing/providers.md)
 * [Входящие маршруты](manual/routing/incoming-routing.md)
 * [Нерабочее время](manual/routing/out-off-work-time.md)
-* [Исходящие маршруты](manual/routing/outbound-routes.md)
+* [Исходящие маршруты](manual/routing/outbound-routing.md)
 
 ### Глава 6. Модули
 
