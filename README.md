@@ -46,7 +46,7 @@ MikoPBX manages phone accounts, service providers. You will learn how to set up 
 
 * [Telephony providers](manual/routing/providers.md)
 * [Incoming routing](manual/routing/incoming-routing.md)
-* [Outbound routing](manual/routing/outbound-routes.md)
+* [Outbound routing](manual/routing/outbound-routing.md)
 * [Night and Holiday Switch](manual/routing/out-off-work-time.md)
 
 ## Chapter 6. Modules <a href="#glava_6_moduli" id="glava_6_moduli"></a>

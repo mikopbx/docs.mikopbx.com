@@ -1,6 +1,6 @@
 # Prohibiting calls via a backup route
 
-When describing [outgoing routes](../../manual/routing/outbound-routes.md), it is allowed to use the same phone number template.&#x20;
+When describing [outgoing routes](../../manual/routing/outbound-routing.md), it is allowed to use the same phone number template.&#x20;
 
 If several routes are used with the same template, the PBX will try to make a call on each of the routes until the call is accepted.&#x20;
 

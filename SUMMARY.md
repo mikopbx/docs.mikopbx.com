@@ -35,7 +35,7 @@
   * [VoIP providers](manual/routing/providers.md)
   * [Incoming routing](manual/routing/incoming-routing.md)
   * [Night and Holiday Switch](manual/routing/out-off-work-time.md)
-  * [Outbound routes](manual/routing/outbound-routes.md)
+  * [Outbound routing](manual/routing/outbound-routing.md)
 * [Modules](manual/modules/README.md)
   * [Extensions and plugins](manual/modules/pbx-extension-modules/README.md)
     * [Регистрация в marketplace](manual/modules/pbx-extension-modules/licensing.md)
