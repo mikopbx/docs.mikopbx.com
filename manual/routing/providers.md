@@ -1,126 +1,113 @@
 # VoIP providers
 
-## Общие сведения
+Translate to English:
 
-Чтобы совершать или принимать внешние телефонные звонки по телефонной сети общего пользования или Интернет, вы должны создать, по крайней мере, одну учетную запись провайдера.\
-Каждая технология имеет свой тип учетной записи. Для добавления новой учетной записи или изменения существующей, перейдите в **Маршрутизация** -> **Провайдеры телефонии**.
+## VoIP providers
 
-<figure><img src="../../.gitbook/assets/prov_telef_0.png" alt=""><figcaption></figcaption></figure>
+### General Information
 
-Обзор провайдеров содержит список всех доступных поставщиков услуг. Зеленый значок перед именем поставщика означает, что MikoPBX зарегистрировала этого провайдера, и Вы можете начать работу с этим провайдером. \
-С помощью переключателя слева можно включать использование провайдера и отключать соответственно.
+To make or receive external phone calls over the public switched telephone network or the Internet, you must create at least one provider account. Each technology has its own account type. To add a new account or modify an existing one, go to **Routing** -> **Telephony Providers**.
 
-<figure><img src="../../.gitbook/assets/prov_telef_0.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/providers.png" alt=""><figcaption><p>Telephony providers section</p></figcaption></figure>
 
-Для подключения новой учетной записи провайдера нажмите **Подключить SIP** или **Подключить IAX** в зависимости по типа подключаемой учетной записи.
+The provider overview contains a list of all available service providers. A green icon next to the provider's name indicates that MikoPBX has registered this provider, and you can start using this provider. You can enable or disable the use of the provider using the switch on the left.
 
-<figure><img src="../../.gitbook/assets/prov_telef_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ProvidersSection.png" alt=""><figcaption></figcaption></figure>
 
-## Настройка SIP провайдера <a href="#nastrojka_sip_provajdera" id="nastrojka_sip_provajdera"></a>
+To connect a new provider account, click **Connect SIP** or **Connect IAX** depending on the type of account you are connecting.
 
-### Общие настройки
+<figure><img src="../../.gitbook/assets/DifferentTypesOfConnection.png" alt=""><figcaption><p>Different types of connection </p></figcaption></figure>
+
+### Setting up SIP Provider <a href="#nastrojka_sip_provajdera" id="nastrojka_sip_provajdera"></a>
+
+#### General Settings
 
 {% hint style="info" %}
-Инструкции по подключению наиболее популярных поставщиков услуг можно найти в [нашем FAQ](../../faq/providers/).
+Instructions for connecting to the most popular service providers can be found in our [FAQ](broken-reference).
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/prov_telef_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ParametersOfProvider.png" alt=""><figcaption><p>General settibngs of provider</p></figcaption></figure>
 
-В общих настройках SIP провайдера укажите следующие настройки:
+In the general settings of the SIP provider, specify the following settings:
 
-**Название провайдера** - произвольное удобное вам наименование. Оно будет отображаться в списках выбора в соответствующих меню.
+**Provider Name** - an arbitrary name that is convenient for you. It will be displayed in the selection lists in the corresponding menus.
 
-**Тип учетной записи** - тип регистрации учетной записи провайдера. [Подробнее про тип регистрации](providers.md#podrobnee-pro-tip-registracii).
+**Account Type** - the type of registration for the provider account.&#x20;
 
-**Хост или IP адрес** - может быть либо URL либо IP-адресом
+**Provider host URL or IP Address** - can be either a URL or an IP address.
 
-**Логин** и **Пароль**, который предоставляет ваш провайдер
+**Username** and **Password** provided by your provider.
 
-**Режим DTMF** - определяет, как DTMF сигналы передаются через SIP. Cуществуют различные стандарты, используемые для передачи DTMF SIP-провайдерам. Попробуйте использовать различные стандарты для того, чтобы найти режим, который подойдет вам.\
-**inband** передает нажатия клавиш в качестве «тона». Для использования этого стандарта вам необходим аудио кодек высокого качества. **Auto**, **rfc** и **info** передают нажатия клавиш в SIP кодирование.
+**DTMF Mode** - determines how DTMF signals are transmitted over SIP. There are different standards used to transmit DTMF to SIP providers. Try using different standards to find the mode that suits you.
 
-### Расширенные настройки SIP провайдера <a href="#rasshirennye_nastrojki_sip_provajdera" id="rasshirennye_nastrojki_sip_provajdera"></a>
+* **inband** sends keypresses as "tones." To use this standard, you need a high-quality audio codec.
+* **Auto**, **rfc**, and **info** transmit keypresses through SIP encoding.
 
-<figure><img src="../../.gitbook/assets/prov_telef_3.png" alt=""><figcaption></figcaption></figure>
+### Advanced SIP Provider Settings <a href="#rasshirennye_nastrojki_sip_provajdera" id="rasshirennye_nastrojki_sip_provajdera"></a>
 
-#### **Дополнительные адреса провайдера**
+<figure><img src="../../.gitbook/assets/AdvancedSettings.png" alt=""><figcaption><p>Advanced Settings</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/prov_telef_4.png" alt=""><figcaption></figcaption></figure>
+**Additional provider hosts or ip**
 
-В этом разделе следует перечислить все адреса поставщика услуг связи, с которых могут приходит входящие звонки. Доступ для этих адресов к портам SIP и RTP будет автоматически открыт на firewall.
+In this section, list all communication service provider addresses from which incoming calls can arrive. Access to these addresses for SIP and RTP ports will be automatically opened on the firewall.
 
-#### **Порт соединения SIP**
+<figure><img src="../../.gitbook/assets/Additional provider hosts or ip.png" alt=""><figcaption><p>Additional provider hosts or ip</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/prov_telef_5.png" alt=""><figcaption></figcaption></figure>
+**SIP Connection Port**
 
-По умолчанию принимает значение **5060**. SIP протокол описывает, каким образом клиентское приложение (например, софтфон) может запросить начало соединения у другого, возможно, физически удалённого клиента, находящегося в той же сети, используя его уникальное имя.\
-Протокол определяет способ согласования между клиентами об открытии каналов обмена на основе других протоколов, которые могут использоваться для непосредственной передачи информации (например, RTP).
+By default, it is set to **5060**. The SIP protocol describes how a client application (e.g., a softphone) can request the initiation of a connection from another, possibly physically remote client in the same network using its unique name. The protocol defines how clients agree on opening exchange channels based on other protocols that can be used for direct information transmission (e.g., RTP).
 
-#### **Транспортный протокол**&#x20;
+<figure><img src="../../.gitbook/assets/Additional provider hosts or ip (1).png" alt=""><figcaption><p>SIP Connection Port</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/prov_telef_6.png" alt=""><figcaption></figcaption></figure>
+**Transport Protocol**
 
-Позволяет указать используемый транспортный протокол для данной учетной записи провайдера.
+Allows you to specify the transport protocol used for this provider account.
 
-#### **Outbound proxy**
+<figure><img src="../../.gitbook/assets/Additional provider hosts or ip (2).png" alt=""><figcaption><p>Transport Protocol</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/prov_telef_13.png" alt=""><figcaption></figcaption></figure>
+**Outbound Proxy**
 
-Это SIP прокси сервер провайдера для обработки запросов. Реальный SIP сервер, может отличаться от этого адреса. Outbound proxy принимает на себя первичные запросы и перенаправляет на нужный сервер.
+This is the provider's SIP proxy server for processing requests. The actual SIP server may differ from this address. The outbound proxy takes on primary requests and forwards them to the appropriate server.
 
-#### **Режим NAT**&#x20;
+<figure><img src="../../.gitbook/assets/Additional provider hosts or ip (3).png" alt=""><figcaption><p>Outbound proxy</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/prov_telef_7.png" alt=""><figcaption></figcaption></figure>
+**Support NAT Session**
 
-Режим NAT - Это механизм в сетях TCP/IP, позволяющий преобразовывать IP-адреса транзитных пакетов.
+When this option is enabled, Asterisk will send SIP OPTIONS packets. This is necessary to support NAT tunneling on your router.
 
-* **force\_rport,comedia** опция заменяющая nat=yes;
-* **force\_rport** даже если ни одного параметра rport не было указано, действовать, так, как если бы он был;
-* **comedia** отправлять RTP пакеты обратно к порту с которого они были получены, игнорируя требуемый порт в SDP заголовке;
-* <mark style="color:red;"><mark style="background-color:red;">**auto\_comedia**<mark style="background-color:red;"></mark> <mark style="color:red;"></mark><mark style="color:red;">если Asterisk сможет определить, что устройство находится за NAT, установить опцию comedia;</mark>
-* **no** не выполнять никакой специальной обработки NAT, кроме той что указана в RFC 3581.
+Specify the **frequency** with which Asterisk will send OPTIONS-type SIP messages to check if this device is working and available for making calls.
 
-#### **Поддерживать NAT сессию**&#x20;
+If this device does not respond within the specified period (default is 60 seconds), Asterisk considers it turned off and unavailable for making calls.
 
-<figure><img src="../../.gitbook/assets/prov_telef_8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NATSession.png" alt=""><figcaption><p>Support NAT Session</p></figcaption></figure>
 
-При включение этой опции Asterisk будет отправлять SIP Options пакеты. Это необходимо для поддержки NAT туннелирования на вашем маршрутизаторе.&#x20;
+**Redefining SIP Header "From"**
 
-Укажите **частоту**, с которой Asterisk будет отправлять SIP сообщение типа OPTIONS для проверки, что данное устройство работает и доступно для совершения вызовов.&#x20;
+You can disable the use of the **fromuser** field of the SIP packet header.
 
-Если данное устройство, не ответит в течение заданного периода (60 секунд по умолчанию), тогда Asterisk рассматривает это устройство как выключенное и недоступное для совершения вызовов.
+<figure><img src="../../.gitbook/assets/From.png" alt=""><figcaption><p>Redefining SIP Header "From"</p></figcaption></figure>
 
-#### **Переопределение SIP заголовка "From"**
+The **fromuser** and **fromdomain** parameters in the _pjsip.conf_ file are used for outgoing calls from Asterisk to the SIP device.
 
-Можно отключить использование поля **fromuser** заголовка SIP-пакета.
+You can override:
 
-<figure><img src="../../.gitbook/assets/prov_telef_9.png" alt=""><figcaption></figcaption></figure>
+* the username in the From field in SIP packets (**fromuser**).
+* the domain name in the From field in SIP packets (**fromdomain**).
 
-Параметры файла _pjsip.conf_ **fromuser** и **fromdomain** используются для вызовов исходящих от Asterisk в сторону SIP устройства.
+The fields **User** and **Domain** serve this purpose.
 
-Можно переопределить:&#x20;
+<figure><img src="../../.gitbook/assets/user and domain.png" alt=""><figcaption><p>User and Domain fields<br></p></figcaption></figure>
 
-* имя пользователя в поле From в SIP пакетах (**fromuser**);
-* имя домена в поле From в SIP пакетах (**fromdomain**).
+**Additional Parameters**
 
-Для этого служат поля **User** и **Domain** соответственно.
+<figure><img src="../../.gitbook/assets/advancedOptionsField.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/prov_telef_10.png" alt=""><figcaption></figcaption></figure>
+In this field, you can modify Asterisk configuration files.
 
-#### Дополнительные параметры <a href="#dopolnitelnye_parametry" id="dopolnitelnye_parametry"></a>
-
-{% hint style="warning" %}
-Актуально начиная с версии **2019.4**
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/prov_telef_12.png" alt=""><figcaption></figcaption></figure>
-
-В этом поле вы можете изменять конфигурационные файлы Asterisk.
-
-Переопределять можно практически все параметры. К примеру при использовании _chan\_pjsip_ провайдер описывается следующими секциями:
+You can override almost all parameters. For example, when using _chan\_pjsip_, the provider is described with the following sections:
 
 {% code lineNumbers="true" %}
-```
+```php
 [REG-AUTH-***]
 type = auth
 ; ----
@@ -150,69 +137,63 @@ context = incoming
 ```
 {% endcode %}
 
-Для переопределения полей в секциях следует заполнить поле **Дополнительные параметры** следующим образом:
+To override fields in sections, fill in the **Additional Parameters** field as follows:
 
 {% code lineNumbers="true" %}
-```
+```php
 [registration-auth]
-; описываем параметры авторизации для [REG-AUTH-***]
+; Describe authentication parameters for [REG-AUTH-***]
 
 [registration]
-; описываем параметры регистрации на удаленном сервере [REG-***]
+; Describe registration parameters on the remote server [REG-***]
 
 [endpoint-auth]
-; описываем параметры авторизации для исходящих звонков через провайдера
+; Describe authentication parameters for outgoing calls through the provider
 
 [identify]
-; Секция отвечает за сопоставление регистрации и endpoint. При поступлении входящего звонка 
-; согласно INVITE будет проведена проверка соответствия identify параметров с endpoint. 
-
+; This section is responsible for matching registration and endpoint. When an incoming call arrives, 
+; an identity parameter check will be carried out according to the INVITE.
+ 
 [aor]
-; Правка секции AOR для endpoint
+; Edit the AOR section for the endpoint
 
 [endpoint]
-; Правка параметров endpoint
+; Edit endpoint parameters
 ```
 {% endcode %}
 
-Для завершения настройки нажмите **Сохранить**.
+To complete the configuration, click **Save Settings**.
 
-<figure><img src="../../.gitbook/assets/prov_telef_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SaveSettings.png" alt=""><figcaption><p>Save settings</p></figcaption></figure>
 
-## Несколько провайдеров на одном IP <a href="#neskolko_provajderov_na_odnom_ip" id="neskolko_provajderov_na_odnom_ip"></a>
+### Multiple Providers on One IP <a href="#neskolko_provajderov_na_odnom_ip" id="neskolko_provajderov_na_odnom_ip"></a>
 
-{% hint style="warning" %}
-Актуально начиная с версии **2019.4**.\
-Более общая версия инструкций, которая подойдет для более ранних версий доступна в статье <mark style="color:red;">Регистрация нескольких учетных записей от одного провайдера.</mark>
-{% endhint %}
+There are cases when you need to connect multiple accounts from one communication service provider. In this case, the settings **Host or IP Address** and **SIP Connection Port** may be the same for all accounts.
 
-Бывают случаи, когда необходимо подключить несколько учетных записей одного поставщика услуг связи. В этом случае настройки **Хост или IP адрес** и **Порт соединения SIP** могут оказаться одинаковыми для всех учетных записей.
+Asterisk handles this situation differently. The PBX will not be able to correctly route the call to the desired provider, and the call will be dropped.
 
-Asterisk такую ситуацию обыгрывает по-своему. АТС не сможет корректно «приземлить» вызов на нужного провайдера и вызов оборвется.
+As a solution, in older versions of the PBX, you could describe additional inbound routes for which you would fill in the **Additional Number (DID)** field with the **Username** value for each account of the provider. This required creating N number of additional routes, equal to the number of provider accounts.
 
-В качестве решения, в старых версиях АТС можно было для какой учетной записи описать дополнительные входящие маршруты и заполнить поле **Дополнительный номер (DID)** значением **Логин**. И так для каждой учетной записи требовалось создать N-ое количество дополнительных маршрутов, равное количеству аккаунтов провайдера.
+An alternative is the <mark style="color:red;">Registering multiple accounts from one provider</mark> instruction. This approach was not very intuitive.
 
-Альтернатива инструкции <mark style="color:red;">Регистрация нескольких учетных записей от одного провайдера.</mark> Такой подход был не очевиден.
+The **Username** field, in most cases, will be used as the destination number **Additional Number (DID)** for incoming calls. Considering that outgoing routes for all **Usernames** will be configured, the call will be correctly processed by the PBX.
 
-Поле **Логин** в большинстве случаев при входящем звонке будет использоваться в качестве номера назначения **Дополнительный номер (DID)**. И, учитывая, что выходящие маршруты для всех **Логин** будут описаны, вызов будет корректно обработан телефонной станцией.
+### More about Registration Types
 
-## Подробнее про тип регистрации
+**Outgoing Registration**
 
-#### **Исходящая регистрация**
+This option is used when connecting most providers.
 
-Этот вариант используется при подключении большинства провайдеров.
+Registration is necessary when the provider cannot know from which IP address the client will connect. For example, when the PBX is behind NAT. The provider's server is usually on a public IP address.
 
-Необходимость регистрации возникает в случае, когда провайдер не может знать, с какого IP-адреса будет подключаться клиент, к примеру, когда АТС расположена за NAT. Сервер провайдера обычно на публичном IP-адресе.
+**Incoming Registration**
 
-**Входящая регистрация**
+This option is relevant for the operation of some FXO / GSM gateways when an external device must connect to your PBX using a login and password.
 
-Этот вариант актуален для работы некоторых FXO / GSM шлюзов **-** когда внешнее устройство должно подключиться к вашей АТС по логину и паролю.
+This option is also relevant when the remote device is behind NAT, and MikoPBX cannot know its IP address.
 
-Также этот вариант актуален, когда удаленное устройство находится за NAT и MikoPBX не может знать его IP адрес.
+**IP Authentication, No Password**
 
-**Аутентификация по IP адресу, без пароля**
+Relevant for secure private networks. For example, Rostelecom often lays its network cable and connects the client to its local network.
 
-Актуально для безопасных частных сетей. Так к примеру Ростелеком часто ведет свой сетевой кабель и подключает клиента к своей локальной сети.
-
-АТС и провайдер в данном случае должны находиться в одной и той же сети.
-
+In this case, the PBX and the provider must be in the same network.
