@@ -137,4 +137,27 @@
 
 <figure><img src="../../.gitbook/assets/numberMikoPBX.png" alt=""><figcaption></figcaption></figure>
 
-5. Авторизуйте все линии. После подключения отобразится "Линии подключены"
+5. Авторизуйте все линии. После подключения отобразится "**Линии подключены**". Подключенные каналы отобразятся зеленым цветом.
+
+<figure><img src="../../.gitbook/assets/extraScreen.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Кнопки авторизации отображают статус подключения:
+
+* **Красный** - Необходима авторизация
+* **Оранжевый** - Ожидается запуск сервиса
+* **Зеленый** - Соединение установлено
+
+В любом из состояний возможно запустить процесс авторизации заново.
+{% endhint %}
+
+{% hint style="warning" %}
+В случае возникновения проблем, может потребоваться очистить служебные каталоги ([с помощью SSH-клиента](../../faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)):
+
+* /storage/usbdisk1/mikopbx/custom\_modules/ModuleTelegramProvider/db/**7906660000**
+* /storage/usbdisk1/mikopbx/custom\_modules/ModuleTelegramProvider/db/madeline/**7906660000**
+
+где 7906660000 - номер телефона, логин телеграмм аккаунта
+{% endhint %}
+
+...
