@@ -202,6 +202,7 @@
   * [Модуль автообзвона](modules/miko/module-auto-dialer.md)
   * [Оценка качества разговора](modules/miko/module-quality-assessment.md)
   * [Синхронизация с LDAP/AD](modules/miko/module-ldap-sync.md)
+  * [Настройка звонков через Telegram](modules/miko/module-telegram-provider.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
