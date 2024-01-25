@@ -106,6 +106,7 @@
   * [Call Monitoring (ChanSpy)](faq/cases/how-to-implement-the-prompter-function.md)
   * [Sending an incoming fax to email](faq/cases/sending-an-incoming-fax-to-email.md)
   * [Dynamic Queue Agents](faq/cases/dynamic-queue-agents.md)
+  * [Disable forwarding to mobile for internal calls](faq/cases/disable-forwarding-to-mobile-for-internal-calls.md)
 * [VoIP providers](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
