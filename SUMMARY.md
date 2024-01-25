@@ -93,6 +93,7 @@
   * [Number Template](faq/outbound-routing/number-template/README.md)
     * [Uniform distribution of outgoing](faq/outbound-routing/number-template/uniform-distribution-of-outgoing.md)
     * [Sample template: calls to another country](faq/outbound-routing/number-template/sample-template-calls-to-another-country.md)
+    * [How to prohibit the replacement of "+" with 00](faq/outbound-routing/number-template/how-to-prohibit-the-replacement-of-+-with-00.md)
   * [Making Calls Through a Specific Provider](faq/outbound-routing/making-calls-through-a-specific-provider.md)
 * [Scenarios and cases](faq/cases/README.md)
   * [Generate extensions by REST API](faq/cases/extensions-generation-by-rest-api.md)
