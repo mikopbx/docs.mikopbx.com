@@ -94,6 +94,7 @@
     * [Uniform distribution of outgoing](faq/outbound-routing/number-templates/uniform-distribution-of-outgoing.md)
     * [Sample template: calls to another country](faq/outbound-routing/number-templates/sample-template-calls-to-another-country.md)
     * [How to prohibit the replacement of "+" with 00](faq/outbound-routing/number-templates/how-to-prohibit-the-replacement-of-+-with-00.md)
+    * [Changing the number prefix from "+345" to "347"](faq/outbound-routing/number-templates/changing-the-number-prefix-from-+345-to-347.md)
   * [Making Calls Through a Specific Provider](faq/outbound-routing/making-calls-through-a-specific-provider.md)
 * [Scenarios and cases](faq/cases/README.md)
   * [Generate extensions by REST API](faq/cases/extensions-generation-by-rest-api.md)
