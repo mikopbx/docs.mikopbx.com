@@ -162,5 +162,11 @@
 
 1. Переключите язык интерфейса на русский **Change Language / Русский**
 2. В списке выберите **Хранилище данных / Подключить диск для хранения данных**
+
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_19.png" alt=""><figcaption></figcaption></figure>
+
 3. Выберите созданный ранее диск (размер диска не менее 50Гб) для хранения записей разговоров, в нашем случае _sda_
+
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_21.png" alt=""><figcaption></figcaption></figure>
+
 4. Перезагрузите виртуальную машину
