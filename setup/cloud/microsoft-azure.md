@@ -12,70 +12,70 @@ For quick and convenient searching on the Azure portal, use the search bar.
 
 1. Open Menu / All services / General / **Resource groups**
 2. In the Resource groups tab, select **Create**
-3. Enter the group name, for example, _MikoPBX\_group_
+3. Enter the group name, for example _MikoPBX\_group_
 4. Use default values for other fields
 5. After entering the values, click the **Review + create** button, then the **Create** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_1 (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_1.png" alt=""><figcaption></figcaption></figure>
 
 ### Creating a Storage Account
 
-1. Open Menu / All services / Internet of Things / **Storage accounts**
+1. Open Menu / All services / Analyze and transform data / **Storage accounts**
 2. In the Storage accounts tab, select **Create**
 3. Specify the created resource group _MikoPBX\_group_
-4. Enter the storage account name, for example, _pbximgs_
+4. Enter the storage account name, for example _pbximgs_
 5. Use default values for other fields
 6. After entering the values, click the **Review + create** button, then the **Create** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_2.png" alt=""><figcaption></figcaption></figure>
 
 ### Configuring the Created Storage Account
 
 1. Go to the card of the created storage account _pbximgs_
-2. In the opened tab, go to the Data storage / Containers menu
+2. In the opened tab, go to the Data storage / Containers
 3. Add a new container
-4. Enter the container name, for example, _imgs_
-
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_3.png" alt=""><figcaption></figcaption></figure>
-
+4. Enter the container name, for example _imgs_
 5. Click the **Create** button
+
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_3.png" alt=""><figcaption></figcaption></figure>
+
 6. Open the created container _imgs_
 7. In the opened tab, select **Upload**
 8. Upload a file from the MikoPBX distribution with the **.vhd** extension
 9. Wait for the file to upload, then click the **Create** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_4.png" alt=""><figcaption></figcaption></figure>
 
 ### Creating an Image
 
 1. Open Menu / All services / Compute / **Images**
 2. In the Images tab, select **Create**, let's create a new image based on the uploaded \*.**vhd** file
 3. Specify the resource group _MikoPBX\_group_
-4. Enter a unique name for the image, for example, _MikoPBX\_Azure_
+4. Enter a unique name for the image, for example _MikoPBX\_Azure_
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_5.png" alt=""><figcaption></figcaption></figure>
 
 5. Specify the OS type - **Linux**
-6. Specify the generation of virtual machines - **Generation 1**
-7. Select the BLOB storage object by clicking **Browse**, _Browse_ / pbximgs / imgs / \*_.vhd_
+6. Specify the generation of virtual machines - **Gen 1**
+7. Select the blob storage object by clicking **Browse**, _Browse / pbximgs / imgs / \*.vhd_
 8. Use default values for other fields
 9. After entering the values, click the **Review + create** button, then the **Create** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_6.png" alt=""><figcaption></figcaption></figure>
 
 ### Creating a Virtual Machine
 
 1. Open Menu / All services / Compute / **Virtual machines**
 2. In the Virtual machines tab, select **Create / Azure virtual machine**
 3. Specify the resource group _MikoPBX\_group_
-4. Enter the virtual machine name, for example, _MikoPBX-vm_
+4. Enter the virtual machine name, for example _MikoPBX-vm_
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_7.png" alt=""><figcaption></figcaption></figure>
 
 5. Choose the previously created image, _See all images / Other items / My images / MikoPBX\_Azure_
 6. Specify the machine size (combination of CPU / RAM / HDD parameters)
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_8.png" alt=""><figcaption></figcaption></figure>
 
 7. Specify the username for the administrator account
 
@@ -86,89 +86,74 @@ If you have an SSH key, do the following
 
 If you do not have an SSH key, do the following
 
-8. Select the source of the SSH public key - **Create new key pair**
-9. Specify the key pair name, for example, _mikopbx\_key_
+8. Select the source of the SSH public key - **Generate new key pair**
+9. Specify the key pair name, for example _mikopbx\_key_
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_9 (1).png
-
-# Microsoft Azure
-
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_9.png" alt=""><figcaption></figcaption></figure>
 
 Continue with the following instructions:
 
 10. In the license type field, specify **Other**
 11. Use default values for the other fields
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_10.png" alt=""><figcaption></figcaption></figure>
 
 12. Go to the **Disks** tab
 13. Specify the OS disk type
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_11.png" alt=""><figcaption></figcaption></figure>
 
 14. Create a new data disk
-15. Specify the disk size to be at least 50GB
+15. Specify the disk size to be at least 50 GB
 16. Use default values for the other fields
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_12.png" alt=""><figcaption></figcaption></figure>
 
 17. After entering the values, click the **Review + create** button, then click **Create**
 
 ### Configuring Ports for Incoming Connections
 
-1. Open the virtual machine you created and go to **Networking / Network interface / Inbound port rules**
-2. In the tab, choose **Add inbound port rule**
+1. Open the virtual machine you created and go to **Networking / Network settings / Rules**
+2. In the tab, choose **Create inbound port rule**
 3. Create a rule for the Web interface
 4. Specify the destination port ranges - **80**
 5. Choose the protocol **TCP**
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_13.png" alt=""><figcaption></figcaption></figure>
 
-6. Specify a name, for example, _HTTP_80_
+6. Specify a name, for example _HTTP\_80_
 7. Use default values for the other fields
 8. After entering the values, click the **Add** button
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_14.png" alt=""><figcaption></figcaption></figure>
 
 9. Similarly, create a rule for SIP signaling TCP. Specify the destination port ranges - **5060**, protocol **TCP**, and name
 10. Similarly, create a rule for SIP signaling UDP. Specify the destination port ranges - **5060**, protocol **UDP**, and name
 11. Similarly, create a rule for RTP audio streaming. Specify the destination port ranges - **10000-10200**, protocol **UDP**, and name
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_15.png" alt=""><figcaption></figcaption></figure>
 
 ### Starting MikoPBX
 
-1. Open the virtual machine you created and go to the **Connection** section
+1. Open the virtual machine you created and go to the **Connect** section
 2. Copy the **Public IP address**
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_16.png" alt=""><figcaption></figcaption></figure>
 
 3. Enter the public IP address of your virtual machine in the browser's address bar
 4. The default login and password for access are **admin**
-5. In the PBX, under **Network & Firewall / Network interfaces**, it is mandatory to specify the **public IP address** of your router in the external IP address field
+5. In the PBX, under **Network and Firewall / Network interface**, it is mandatory to specify the **public IP address** of your router in the external IP address of your router field
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_17 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_17.png" alt=""><figcaption></figcaption></figure>
 
 ### Connecting a Data Storage Disk
 
-1. Open the virtual machine you created and go to the **Connection** section
-2. In the drop-down menu under Additional connection methods, select **Serial console**
+1. Open the virtual machine you created and go to the **Connect** section
+2. In the drop-down menu under More ways to connect, select **Serial console**
 
-<!-- Image Placeholder -->
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_18.png" alt=""><figcaption></figcaption></figure>
 
-3. Execute the command **/etc/rc/console_menu**
-4. Switch the interface language to Russian **Change Language / Русский**
-5. From the list, select **Data Storage / Connect a data storage disk**
-6. Choose the previously created disk (disk size of at least 50GB) for storing call recordings, in our case _sda_
-7. Restart the virtual machine
+3. Execute the command **/etc/rc/console\_menu**
+4. From the list, select **Data Storage / Connect a data storage disk**
+5. Choose the previously created disk (disk size of at least 50GB) for storing call recordings, in our case _sda_
+6. Restart the virtual machine
