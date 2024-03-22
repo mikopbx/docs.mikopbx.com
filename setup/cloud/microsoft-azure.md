@@ -160,6 +160,12 @@ Alternatively, you can connect to the MikoPBX PBX using an SSH client following 
 
 After connecting to MikoPBX, proceed to connect a data storage disk
 
-1. From the list select **Data Storage / Connect a data storage disk**
+1. From the list select **Data Storage / Mount drive as data storage**
+
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_19.png" alt=""><figcaption></figcaption></figure>
+
 2. Choose the previously created disk (disk size of at least 50GB) for storing call recordings, in our case _sda_
+
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_21.png" alt=""><figcaption></figcaption></figure>
+
 3. Restart the virtual machine
