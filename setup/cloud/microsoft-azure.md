@@ -148,12 +148,18 @@ Continue with the following instructions:
 
 ### Connecting a Data Storage Disk
 
+Connect to MikoPBX. You can use the built-in console for this
+
 1. Open the virtual machine you created and go to the **Connect** section
 2. In the drop-down menu under More ways to connect, select **Serial console**
+3. Execute the command **/etc/rc/console\_menu**
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_18.png" alt=""><figcaption></figcaption></figure>
 
-3. Execute the command **/etc/rc/console\_menu**
-4. From the list, select **Data Storage / Connect a data storage disk**
-5. Choose the previously created disk (disk size of at least 50GB) for storing call recordings, in our case _sda_
-6. Restart the virtual machine
+Alternatively, you can connect to the MikoPBX PBX using an SSH client following the instructions: [https://docs.mikopbx.com/mikopbx/v/english/faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client](https://docs.mikopbx.com/mikopbx/v/english/faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client)
+
+After connecting to MikoPBX, proceed to connect a data storage disk
+
+1. From the list select **Data Storage / Connect a data storage disk**
+2. Choose the previously created disk (disk size of at least 50GB) for storing call recordings, in our case _sda_
+3. Restart the virtual machine
