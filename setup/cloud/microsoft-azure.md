@@ -75,7 +75,7 @@
 5. Выберите созданный ранее образ, _Посмотреть все образы / Другие элементы / Мои изображения / MikoPBX\_Azure_
 6. Укажите размер машины (совокупность параметров ЦП / ОЗУ не менее 1Гб / HDD)
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_22.png" alt=""><figcaption></figcaption></figure>
 
 7. Укажите имя пользователя для учетной записи администратора
 
