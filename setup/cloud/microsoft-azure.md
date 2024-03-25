@@ -8,7 +8,7 @@ Let's proceed with the setup.
 For quick and convenient searching on the Azure portal, use the search bar.
 {% endhint %}
 
-### Creating a Resource Group
+### Creating a resource group
 
 1. Open Menu / All services / General / **Resource groups**
 2. In the Resource groups tab, select **Create**
@@ -18,7 +18,7 @@ For quick and convenient searching on the Azure portal, use the search bar.
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_1.png" alt=""><figcaption></figcaption></figure>
 
-### Creating a Storage Account
+### Creating a storage account
 
 1. Open Menu / All services / Analyze and transform data / **Storage accounts**
 2. In the Storage accounts tab, select **Create**
@@ -29,7 +29,7 @@ For quick and convenient searching on the Azure portal, use the search bar.
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_2.png" alt=""><figcaption></figcaption></figure>
 
-### Configuring the Created Storage Account
+### Configuring the created storage account
 
 1. Go to the card of the created storage account _pbximgs_
 2. In the opened tab, go to the Data storage / Containers
@@ -46,7 +46,7 @@ For quick and convenient searching on the Azure portal, use the search bar.
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_4.png" alt=""><figcaption></figcaption></figure>
 
-### Creating an Image
+### Creating an image
 
 1. Open Menu / All services / Compute / **Images**
 2. In the Images tab, select **Create**, let's create a new image based on the uploaded \*.**vhd** file
@@ -63,7 +63,7 @@ For quick and convenient searching on the Azure portal, use the search bar.
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_6.png" alt=""><figcaption></figcaption></figure>
 
-### Creating a Virtual Machine
+### Creating a virtual machine
 
 1. Open Menu / All services / Compute / **Virtual machines**
 2. In the Virtual machines tab, select **Create / Azure virtual machine**
@@ -73,7 +73,7 @@ For quick and convenient searching on the Azure portal, use the search bar.
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_7.png" alt=""><figcaption></figcaption></figure>
 
 5. Choose the previously created image, _See all images / Other items / My images / MikoPBX\_Azure_
-6. Specify the machine size (combination of CPU / RAM / HDD parameters)
+6. Specify the machine size (combination of CPU / RAM to be at least 1GB / HDD parameters)
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_8.png" alt=""><figcaption></figcaption></figure>
 
@@ -104,14 +104,18 @@ Continue with the following instructions:
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_11.png" alt=""><figcaption></figcaption></figure>
 
 14. Create a new data disk
-15. Specify the disk size to be at least 50 GB
+15. Specify the disk size to be at least 50GB
 16. Use default values for the other fields
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_12.png" alt=""><figcaption></figcaption></figure>
 
 17. After entering the values, click the **Review + create** button, then click **Create**
 
-### Configuring Ports for Incoming Connections
+{% hint style="info" %}
+For security, you can also configure the Azure Firewall
+{% endhint %}
+
+### Configuring ports for incoming connections
 
 1. Open the virtual machine you created and go to **Networking / Network settings / Rules**
 2. In the tab, choose **Create inbound port rule**
@@ -146,7 +150,7 @@ Continue with the following instructions:
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_17.png" alt=""><figcaption></figcaption></figure>
 
-### Connecting a Data Storage Disk
+### Connecting a data storage disk
 
 Connect to MikoPBX. You can use the built-in console for this
 
