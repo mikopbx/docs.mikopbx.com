@@ -73,7 +73,7 @@
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_7 (1).png" alt=""><figcaption></figcaption></figure>
 
 5. Выберите созданный ранее образ, _Посмотреть все образы / Другие элементы / Мои изображения / MikoPBX\_Azure_
-6. Укажите размер машины (совокупность параметров ЦП / ОЗУ / HDD)
+6. Укажите размер машины (совокупность параметров ЦП / ОЗУ не менее 1Гб / HDD)
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_8.png" alt=""><figcaption></figcaption></figure>
 
@@ -110,6 +110,10 @@
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_12.png" alt=""><figcaption></figcaption></figure>
 
 17. Завершив ввод значений, нажмите кнопку **Просмотр и создание**, затем кнопку **Создать**
+
+{% hint style="info" %}
+Для обеспечения безопасности вы также можете настроить брандмауэр Azure
+{% endhint %}
 
 ### Настройка портов для входящих соединений
 
