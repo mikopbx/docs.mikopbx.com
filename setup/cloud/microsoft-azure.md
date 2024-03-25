@@ -75,7 +75,7 @@ For quick and convenient searching on the Azure portal, use the search bar.
 5. Choose the previously created image, _See all images / Other items / My images / MikoPBX\_Azure_
 6. Specify the machine size (combination of CPU / RAM to be at least 1GB / HDD parameters)
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_22.png" alt=""><figcaption></figcaption></figure>
 
 7. Specify the username for the administrator account
 
