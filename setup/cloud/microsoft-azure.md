@@ -111,10 +111,6 @@ Continue with the following instructions:
 
 17. After entering the values, click the **Review + create** button, then click **Create**
 
-{% hint style="info" %}
-For security, you can also configure the Azure Firewall
-{% endhint %}
-
 ### Configuring ports for incoming connections
 
 1. Open the virtual machine you created and go to **Networking / Network settings / Rules**
