@@ -113,7 +113,7 @@ Continue with the following instructions:
 
 ### Configuring ports for incoming connections
 
-1. Open the virtual machine you created and go to **Networking / Network settings / Rules**
+1. Open the virtual machine you created and go to Networking / Network settings / Rules
 2. In the tab, choose **Create inbound port rule**
 3. Create a rule for the Web interface
 4. Specify the destination port ranges - **80**
