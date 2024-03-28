@@ -107,7 +107,7 @@ If you don't have an SSH key, proceed directly to step 18
 18. Use default values for other fields
 19. After entering the values, click the **CREATE** button
 
-### Setting up ports for incoming connections.
+### Configuring ports for incoming connections
 
 1. Open Navigation menu / VPC network / **Firewall**
 2. Select **CREATE FIREWALL RULE** to create a new rule for incoming connections
@@ -134,7 +134,7 @@ If you don't have an SSH key, proceed directly to step 18
 Make sure to configure the Firewall on the MikoPBX
 {% endhint %}
 
-### Launching MikoPBX.
+### Starting MikoPBX
 
 1. Open the Compute Engine tab and go to the Virtual machines / VM Instance section
 2. Copy the **External IP** of the created virtual machine
