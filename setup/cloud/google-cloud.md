@@ -102,7 +102,7 @@ If you have an SSH key, proceed as follows:
 16. In the Advanced options / Security / MANAGE ACCESS section, select **ADD ITEM**
 17. Specify it in the SSH key field
 
-If you don't have an SSH key, proceed directly to step 18.
+If you don't have an SSH key, proceed directly to step 18
 
 18. Use default values for other fields
 19. After entering the values, click the **CREATE** button
