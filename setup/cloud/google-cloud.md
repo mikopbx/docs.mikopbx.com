@@ -8,7 +8,7 @@ Let's start configuring
 For quick and convenient navigation on the Google Cloud platform, use the search pane
 {% endhint %}
 
-### Creating Storage
+### Creating storage
 
 1. Open Navigation menu / Products & solutions / Storage / **Cloud Storage**
 2. On the Cloud Storage tab select **Create**
@@ -48,7 +48,7 @@ If the required roles are not present, add them and click **SAVE**
 1. Open Navigation menu / APIs & Services / Library / Google Enterprise API / **Compute Engine API**
 2. On the opened tab select **ENABLE**
 
-### Creating an Image
+### Creating an image
 
 1. Open Navigation menu / Products & solutions / Compute / **Compute Engine**
 2. Go to the Storage / Images section
@@ -63,7 +63,7 @@ If the required roles are not present, add them and click **SAVE**
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
-### Creating a Virtual Machine
+### Creating a virtual machine
 
 1. In the **Compute Engine** tab go to the Virtual machines / VM Instance section
 2. Select **CREATE INSTANCE**
