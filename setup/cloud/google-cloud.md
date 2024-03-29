@@ -146,5 +146,5 @@ description: Установка MikoPBX в облако Google Cloud
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_17.png" alt=""><figcaption></figcaption></figure>
 
-4. Скопируйте внешний адрес **(external adress)** созданной виртуальной машины и введите его в строке браузера
-5. Для входа используйте указанные в Serial port 1 (console) логин и пароль по умолчанию
+4. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
+5. Для входа используйте указанные в Serial port 1 (console) логин и пароль
