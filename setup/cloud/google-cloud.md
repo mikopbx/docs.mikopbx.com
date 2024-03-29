@@ -137,14 +137,10 @@ Make sure to configure the Firewall on the MikoPBX
 ### Starting MikoPBX
 
 1. Open the Compute Engine tab and go to the Virtual machines / VM Instance section
-2. Copy the **External IP** of the created virtual machine
+2. Go to the created virtual machine _mikopbx-vm_
+3. On the opened tab navigate to Logs / Serial port 1 (console)
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_17.png" alt=""><figcaption></figcaption></figure>
 
-3. Enter the External IP in the browser's address bar
-4. Open the created virtual machine
-5. Copy the **Instance Id** - this is the default password for logging into MikoPBX
-
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_16.png" alt=""><figcaption></figcaption></figure>
-
-6. The default login is **admin**
+4. Copy the external address of the created virtual machine and enter it in the browser's address bar
+5. For login use the login and password provided in Serial port 1 (console)
