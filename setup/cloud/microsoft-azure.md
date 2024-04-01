@@ -99,7 +99,7 @@ Continue with the following instructions:
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_10.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 To deploy the PBX use **two** disks:
 
 * A **1 Gb** disk for the main system
@@ -141,7 +141,7 @@ To deploy the PBX use **two** disks:
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_28.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Make sure to configure the Firewall on the MikoPBX
 {% endhint %}
 
