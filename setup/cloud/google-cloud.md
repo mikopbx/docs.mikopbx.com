@@ -83,7 +83,7 @@ description: Установка MikoPBX в облако Google Cloud
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Для развертывания АТС используйте **два** диска:
 
 * диск объемом **1 Гб** для основной системы
@@ -141,7 +141,7 @@ description: Установка MikoPBX в облако Google Cloud
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Обязательно выполните настройку Firewall на самой АТС MikoPBX
 {% endhint %}
 
