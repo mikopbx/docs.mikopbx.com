@@ -107,7 +107,7 @@ Continue with the following instructions:
 
 15. Create a new data disk
 16. Specify the disk size to be at least 50GB
-17. Use default values for the other fields
+17. Use default values for the other fields, click **OK**
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_12.png" alt=""><figcaption></figcaption></figure>
 
