@@ -99,6 +99,13 @@ Continue with the following instructions:
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_10.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+To deploy the PBX use **two** disks:
+
+* A **1 Gb** disk for the main system
+* A **50+ Gb** disk for storing call recordings
+{% endhint %}
+
 12. Go to the **Disks** tab
 13. Specify the OS disk type
 14. Check the **Delete with VM** checkbox
