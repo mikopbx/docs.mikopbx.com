@@ -141,6 +141,10 @@ To deploy the PBX use **two** disks:
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_eng_28.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+Make sure to configure the Firewall on the MikoPBX
+{% endhint %}
+
 ### Starting MikoPBX
 
 1. Open the virtual machine you created and go to the **Connect** section
