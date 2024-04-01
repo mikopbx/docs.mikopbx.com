@@ -79,7 +79,7 @@ If the required roles are not present, add them and click **SAVE**
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 To deploy the PBX use **two** disks:
 
 * A **1 Gb** disk for the main system
@@ -137,7 +137,7 @@ If you don't have an SSH key, proceed directly to step 18
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Make sure to configure the Firewall on the MikoPBX
 {% endhint %}
 
