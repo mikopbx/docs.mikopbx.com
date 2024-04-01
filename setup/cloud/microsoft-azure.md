@@ -130,7 +130,7 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_27.png" alt=""><figcaption></figcaption></figure>
 
-9. Аналогично создайте правило для UDP. Укажите диапазоны портов назначения - **0 - 65535,**протокол **UDP** и имя
+9. Аналогично создайте правило для UDP. Укажите диапазоны портов назначения - **0 - 65535,** протокол **UDP** и имя
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_28.png" alt=""><figcaption></figcaption></figure>
 
