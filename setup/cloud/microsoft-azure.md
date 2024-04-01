@@ -58,10 +58,11 @@
 5. Укажите тип ОС - **Linux**
 6. Укажите поколение виртуальных машин - **Поколение 1**
 7. Выберите BLOB-объект хранилища по ссылке **Обзор**, _Обзор / pbximgs / imgs / \*.vhd_
-8. Для других полей используйте значения по умолчанию
-9. Завершив ввод значений, нажмите кнопку **Просмотр и создание**, затем кнопку **Создать**
+8. Укажите тип учетной записи - **HDD (цен. категория "Стандартный")**
+9. Для других полей используйте значения по умолчанию
+10. Завершив ввод значений, нажмите кнопку **Просмотр и создание**, затем кнопку **Создать**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_23.png" alt=""><figcaption></figcaption></figure>
 
 ### Создание виртуальной машины
 
@@ -100,73 +101,45 @@
 
 12. Перейдите на вкладку **Диски**
 13. Укажите тип диска ОС
+14. Установите флажок **Удалить с виртуальной машиной**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_24.png" alt=""><figcaption></figcaption></figure>
 
-14. Создайте новый диск данных
-15. Укажите размер диска не менее 50Гб
-16. Для других полей используйте значения по умолчанию
+15. Создайте новый диск данных
+16. Укажите размер диска не менее 50Гб
+17. Для других полей используйте значения по умолчанию, нажмите кнопку **ОК**
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_12.png" alt=""><figcaption></figcaption></figure>
 
-17. Завершив ввод значений, нажмите кнопку **Просмотр и создание**, затем кнопку **Создать**
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_25.png" alt=""><figcaption></figcaption></figure>
+
+18. Завершив ввод значений, нажмите кнопку **Просмотр и создание**, затем кнопку **Создать**
 
 ### Настройка портов для входящих соединений
 
 1. Откройте созданную виртуальную машину и перейдите в раздел Сетевые подключения / Параметры сети / Правила
 2. На вкладке выберите **Создание правила для порта / Правило входящего порта**
-3. Создайте правило для Web интерфейса
-4. Укажите диапазоны портов назначения - **80**
-5. Выберите протокол **TCP**
+3. Укажите диапазоны портов назначения - **0 - 65535**
+4. Выберите протокол **TCP**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_26.png" alt=""><figcaption></figcaption></figure>
 
-6. Укажите имя, например _HTTP\_80_
+6. Укажите имя, например _TCP_
 7. Для других полей используйте значения по умолчанию
 8. Завершив ввод значений, нажмите кнопку **Добавить**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_27.png" alt=""><figcaption></figcaption></figure>
 
-9. Аналогично создайте правило для SIP сигнализации TCP. Укажите диапазоны портов назначения - **5060,**протокол **TCP** и имя
-10. Аналогично создайте правило для SIP сигнализации UDP. Укажите диапазоны портов назначения - **5060,**протокол **UDP** и имя
-11. Аналогично создайте правило для передачи звука RTP. Укажите диапазоны портов назначения - **10000-10200,**протокол **UDP** и имя
+9. Аналогично создайте правило для UDP. Укажите диапазоны портов назначения - **0 - 65535,**протокол **UDP** и имя
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_28.png" alt=""><figcaption></figcaption></figure>
 
 ### Запуск АТС MikoPBX
 
-1. Откройте созданную виртуальную машину и перейдите в раздел **Подключение**
-2. Скопируйте **Общедоступный IP-адрес**
+1. Откройте созданную виртуальную машину и перейдите в раздел Подключение
+2. В выпадающем меню Дополнительные способы подключения выберите Серийная консоль
 
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_29.png" alt=""><figcaption></figcaption></figure>
 
-3. Введите в строке браузера общедоступный IP-адрес вашей виртуальной машины
-4. Логин и пароль для входа по умолчанию - **admin**
-5. В АТС на вкладке **Сеть и Firewall / Сетевые интерфейсы** в поле внешний IP адрес вашего маршрутизатора обязательно следует указать **общедоступный IP-адрес**
-
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_17 (2).png" alt=""><figcaption></figcaption></figure>
-
-### Подключение диска для хранения данных
-
-Подключитесь к MikoPBX, для этого вы можете использовать встроенную консоль
-
-1. Откройте созданную виртуальную машину и перейдите в раздел **Подключение**
-2. В выпадающем меню Дополнительные способы подключения выберите **Серийная консоль**
-3. Выполните команду **/etc/rc/console\_menu**
-
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_18.png" alt=""><figcaption></figcaption></figure>
-
-Или вы можете подключиться к АТС MikoPBX с помощью SSH-клиента по инструкции: [https://docs.mikopbx.com/mikopbx/faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client](https://docs.mikopbx.com/mikopbx/faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client)
-
-После подключения к MikoPBX, приступайте к подключению диска для хранения данных
-
-1. Переключите язык интерфейса на русский **Change Language / Русский**
-2. В списке выберите **Хранилище данных / Подключить диск для хранения данных**
-
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_19.png" alt=""><figcaption></figcaption></figure>
-
-3. Выберите созданный ранее диск (размер диска не менее 50Гб) для хранения записей разговоров, в нашем случае _sda_
-
-<figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_21.png" alt=""><figcaption></figcaption></figure>
-
-4. Перезагрузите виртуальную машину
+3. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
+4. Для входа используйте указанные во вкладке Последлвательная консоль логин и пароль
