@@ -79,6 +79,13 @@ If the required roles are not present, add them and click **SAVE**
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+To deploy the PBX use **two** disks:
+
+* A **1 Gb** disk for the main system
+* A **50+ Gb** disk for storing call recordings
+{% endhint %}
+
 6. In the Boot disk section select **CHANGE**
 7. On the opened tab go to CUSTOM IMAGES
 8. In the Image field select the previously created _mikopbx-new-image_
