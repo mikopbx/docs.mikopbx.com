@@ -141,6 +141,10 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_28.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+Обязательно выполните настройку Firewall на самой АТС MikoPBX
+{% endhint %}
+
 ### Запуск АТС MikoPBX
 
 1. Откройте созданную виртуальную машину и перейдите в раздел Подключение
