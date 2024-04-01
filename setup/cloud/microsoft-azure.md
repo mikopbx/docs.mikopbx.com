@@ -99,7 +99,7 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_10.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Для развертывания АТС используйте **два** диска:
 
 * диск объемом **1 Гб** для основной системы
@@ -141,7 +141,7 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_28.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Обязательно выполните настройку Firewall на самой АТС MikoPBX
 {% endhint %}
 
