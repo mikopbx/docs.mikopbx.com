@@ -124,13 +124,13 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_26.png" alt=""><figcaption></figcaption></figure>
 
-6. Укажите имя, например _TCP_
-7. Для других полей используйте значения по умолчанию
-8. Завершив ввод значений, нажмите кнопку **Добавить**
+5. Укажите имя, например _TCP_
+6. Для других полей используйте значения по умолчанию
+7. Завершив ввод значений, нажмите кнопку **Добавить**
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_27.png" alt=""><figcaption></figcaption></figure>
 
-9. Аналогично создайте правило для UDP. Укажите диапазоны портов назначения - **0 - 65535,** протокол **UDP** и имя
+8. Аналогично создайте правило для UDP. Укажите диапазоны портов назначения - **0 - 65535,** протокол **UDP** и имя
 
 <figure><img src="../../.gitbook/assets/MikoPBXAzureInstallation_ru_28.png" alt=""><figcaption></figcaption></figure>
 
