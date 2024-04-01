@@ -83,6 +83,13 @@ description: Установка MikoPBX в облако Google Cloud
 
 <figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+Для развертывания АТС используйте **два** диска:
+
+* диск объемом **1 Гб** для основной системы
+* диск объемом **50+ Гб** для хранения записей разговоров
+{% endhint %}
+
 6. В разделе Boot disk выберите **CHANGE**
 7. На открытой вкладке перейдите к CUSTOM IMAGES
 8. В поле Image выберите созданный ранее образ _mikopbx-new-image_
