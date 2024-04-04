@@ -135,4 +135,4 @@
 
 ***
 
-{% embed url="https://docs.mikopbx.com/mikopbx/faq/setup/sozdanie-instansa-utilitoi-yandex-cloud" %}
+{% embed url="https://docs.mikopbx.com/mikopbx/faq/setup/sozdanie-instansa-utilitoi-yandex-cloud" fullWidth="true" %}

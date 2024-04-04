@@ -5,7 +5,7 @@
 1. На [странице продукта](https://cloud.yandex.ru/marketplace/products/miko/mikopbx#product-ids) скопируйте значение **image\_id**. В текущем примере _**fd83g1qbk6m3jnl5cvah**_ (для версии 2022.3.15). Идентификатор образа следует укзаать в параметре **create-boot-disk image-id**
 2. Получим список каталогов
 
-```
+```bash
 yc resource-manager folder list
 ```
 
@@ -13,7 +13,7 @@ yc resource-manager folder list
 
 3. Список зон&#x20;
 
-```
+```bash
 yc compute zone list 
 ```
 
@@ -21,9 +21,10 @@ yc compute zone list
 
 4. Запускаем инстанс&#x20;
 
-<pre><code><strong>yc compute instance create \
-</strong><strong>	--folder-name apor-test-catalog \
-</strong>	--name test\
+```bash
+yc compute instance create \
+	--folder-name apor-test-catalog \
+	--name test\
 	--zone ru-central1-c \
 	--cores 2 \
 	--memory 2gb \
@@ -31,11 +32,11 @@ yc compute zone list
 	--ssh-key ~/.ssh/id_rsa.pub \
 	--public-ip \
 	--create-disk name=storage-test-mikopbx,size=20,auto-delete=1
-</code></pre>
+```
 
 5. Список инстансов обновится&#x20;
 
-```
+```bash
 yc compute instance list                 
 +----------------------+-----------------+---------------+---------+-----------------+-------------+
 |          ID          |      NAME       |    ZONE ID    | STATUS  |   EXTERNAL IP   | INTERNAL IP |
