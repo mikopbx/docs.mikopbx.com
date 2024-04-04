@@ -77,6 +77,7 @@
   * [Сброс к заводским настройкам](faq/setup/factory-reset.md)
   * [Настройка Zabbix агента (v.5)](faq/setup/configuring-zabbix-agent-v.5.md)
   * [Мониторинг провайдеров на MikoPBX](faq/setup/monitoring-providers-on-mikopbx.md)
+  * [Создание инстанса утилитой Yandex Cloud](faq/setup/sozdanie-instansa-utilitoi-yandex-cloud.md)
 * [Обслуживание](faq/management/README.md)
   * [Изменить имя для авторизации](faq/management/change-the-login-name.md)
   * [Закончилось место на доп. диске, увеличение размера диска](faq/management/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
