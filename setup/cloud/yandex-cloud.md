@@ -1,6 +1,6 @@
 # Yandex Cloud
 
-Для начала зарегистрируйтесь в сервисе Yandex Cloud [https://cloud.yandex.ru](https://cloud.yandex.ru/)
+Для начала зарегистрируйтесь в сервисе Yandex Cloud [https://console.cloud.yandex.ru/?referralCode=dn22bvnhhe64i62i71ua](https://console.cloud.yandex.ru/?referralCode=dn22bvnhhe64i62i71ua)
 
 Приступим к настройке
 
