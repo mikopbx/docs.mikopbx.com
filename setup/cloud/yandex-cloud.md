@@ -132,3 +132,7 @@
 4. Для входа используйте указанные во вкладке Серийная консоль логин и пароль
 
 <figure><img src="../../.gitbook/assets/MikoPBXYandexInstallation_16 (1).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+{% embed url="https://docs.mikopbx.com/mikopbx/faq/setup/sozdanie-instansa-utilitoi-yandex-cloud" %}
