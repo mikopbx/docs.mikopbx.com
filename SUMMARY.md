@@ -19,7 +19,6 @@
   * [Google Cloud](setup/cloud/google-cloud.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
   * [MailRu Cloud Solutions](setup/cloud/mailru-cloud-solutions.md)
-  * [Yandex Cloud](setup/cloud/yandex-cloud.md)
 * [Docker container](setup/docker.md)
 
 ## User manual <a href="#manual" id="manual"></a>
