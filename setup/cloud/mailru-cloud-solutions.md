@@ -1,2 +1,0 @@
-# MailRu Cloud Solutions
-
