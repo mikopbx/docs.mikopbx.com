@@ -4,261 +4,147 @@ description: Установка MikoPBX в облако VK Cloud solution
 
 # VK Cloud Solutions
 
-## Добавление локальной подсети
+Для начала авторизуйтесь на сайте [https://cloud.vk.com](https://cloud.vk.com/)
 
-1. Авторизуйтесь на сайте [mcs.mail.ru](https://mcs.mail.ru/).&#x20;
+Приступим к настройке
 
-<figure><img src="../../.gitbook/assets/1 (12).png" alt=""><figcaption></figcaption></figure>
+### **Добавление локальной подсети**
 
-2. Откройте меню **Виртуальных сетей**
+1. Откройте Виртуальные сети / **Сети**
+2. На вкладке Сети выберите **Создать**
+3. Введите имя новой сети, например _pbx\_network_
+4. Для других полей используйте значения по умолчанию
+5. Завершив ввод значений, нажмите кнопку **Добавить сеть**
 
-<figure><img src="../../.gitbook/assets/2 (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
-3. Перейдите во вкладку "**Сети**"
+### **Добавление ssh-rsa ключа**
 
-<figure><img src="../../.gitbook/assets/3 (16).png" alt=""><figcaption></figcaption></figure>
+1. Перейдите к своему аккаунту
+2. В выпадающем меню выберите **Ключевые пары**
 
-4.  Для начала следует убедиться, что в разделе «**Виртуальные сети**» - «**Сети**» доступа локальная подсеть.
+Если у вас есть ключ SSH, выполните следующее
 
-    MikoPBX будем устанавливать за NAT.
+1. Выберите **Импортировать ключ**
+2. Введите название ключа и укажите ключ в поле Публичный ключ
+3. Нажмите кнопку **Импортировать ключ**
 
-    Если сеть не создана: нажмите **"Создать"**
+Если у вас есть нет ключа SSH, выполните следующее
 
-<figure><img src="../../.gitbook/assets/4 (5).png" alt=""><figcaption></figcaption></figure>
+1. Выберите **Создать ключ**
+2. Введите название ключа, например _mikopbx\_ssh\_key_
+3. Нажмите кнопку **Создать ключ**
 
-&#x20;       Введите **название** Сети и нажмите "**Добавить Сеть**"
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_2.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/5 (8).png" alt=""><figcaption></figcaption></figure>
+### **Загрузка образа MikoPBX**
 
-## Добавление ssh-rsa ключа.
+1. Откройте Облачные вычисления / **Образы**
+2. На вкладке Образы выберите **Создать**
+3. Укажите источник - **Файл**
+4. Выберите файл из дистрибутива MikoPBX с расширением **.raw**
+5. Введите название образа, например _mikopbx\_image_
+6. Завершив ввод значений, нажмите кнопку **Создать образ**
 
-1. Перейдите к настройке ключевых пар:
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;       Для этого нажмите на свой e-mail, далее на надпись "**Ключевые пары**"
+### **Создание инстанса**
 
-<figure><img src="../../.gitbook/assets/6 (13).png" alt=""><figcaption></figcaption></figure>
+1. Откройте Облачные вычисления / **Виртуальные машины**
+2. На вкладке Виртуальные машины выберите **Добавить**
+3. Введите имя виртуальной машины, например _mikopbx\_vm_
+4. В поле Категория виртуальной машины выберите **Все актуальные типы виртуальных машин**
+5. Укажите Тип виртуальной машины, исходя из ожидаемой нагрузки на АТС. Для тестовой машины можно указать STD2-1-1
+6. Выберите Зону доступности
 
-2. Создайте или импортируйте ключ.
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;       Он будет использоваться при доступе к АТС по ssh.
+7. Укажите Тип диска - **HDD**
+8. В качестве Операционной системы выберите _mikopbx\_image_
 
-## Загрузка образа MikoPBX <a href="#zagruzka_obraza_mikopbx" id="zagruzka_obraza_mikopbx"></a>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_5.png" alt=""><figcaption></figcaption></figure>
 
-1. Перейдите во вкладку "**Облачные вычисления**"
+9. Перейдите к следующему шагу **Настройки сети**
+10. Выберите созданную Сеть _pbx\_network_
+11. Выберите созданный Ключ виртуальной машины _mikopbx\_ssh\_key_
+12. Включите переключатель **Назначить внешний IP**
 
-<figure><img src="../../.gitbook/assets/7 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
-2. Оттуда перейдите к вкладке "**Образы**":
+13. Для других полей используйте значения по умолчанию
+14. Завершив ввод значений, нажмите кнопку **Создать инстанс**
+15. Как только инстанс будет создан, сразу остановите его запуск
 
-<figure><img src="../../.gitbook/assets/8 (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_7.png" alt=""><figcaption></figcaption></figure>
 
-3. Нажмите "**Создать образ**":
+### **Диск для хранения данных**
 
-<figure><img src="../../.gitbook/assets/9 (5).png" alt=""><figcaption></figcaption></figure>
+{% hint style="danger" %}
+Для развертывания АТС используйте **два** диска:
 
-4. Скачайте образ диска формата raw.
+* диск объемом **1 Гб** для основной системы
+* диск объемом **50+ Гб** для хранения записей разговоров
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/extra3.png" alt=""><figcaption></figcaption></figure>
+1. Откройте Облачные вычисления / **Диски**
+2. На вкладке Диски выберите **Создать диск**
+3. Введите название диска, например _mikopbx\_storage\_disk_
+4. Укажите Источник - **Пустой диск**
+5. Укажите Тип диска - **Сетевой HDD-диск (ceph-hdd)**
+6. Выберите Зону доступности такую же, как и у инстанса
+7. Укажите размер диска не менее 50Гб
 
-5. Выберите "**Диск**", выберите скачанный образ, задайте название образа.
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_8.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;        Нажмите "**Создать образ**":
+8. Включите переключатель **Подключить диск к инстансу**
+9. Выберите созданный инстанс _mikopbx\_vm_
 
-<figure><img src="../../.gitbook/assets/extra2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/extra1.png" alt=""><figcaption></figcaption></figure>
+10. Для других полей используйте значения по умолчанию
+11. Завершив ввод значений, нажмите кнопку **Создать диск**
 
-## Создадим инстанс <a href="#sozdadim_instans" id="sozdadim_instans"></a>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
-1. Перейдите в раздел «**Облачные вычисления**» - «**Виртуальные машины**»
+12. Откройте Облачные вычисления / **Виртуальные машины**
+13. Запустите созданный инстанс _mikopbx\_vm_
 
-Нажмите "**Создать инстанс**":
+### **Firewall**
 
-<figure><img src="../../.gitbook/assets/extra6.png" alt=""><figcaption></figcaption></figure>
+1. Откройте Виртуальные сети / **Настройки firewall**
+2. На вкладке Настройки firewall выберите **Добавить**
+3. Введите имя группы правил, например _mikopbx\_rules_
+4. Нажмите кнопку **Создать группу**
 
-2. &#x20;Введите:
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
-* _Имя виртуальной машины_
-* _Тип виртуальной машины_
-* _Зону доступности_
-* _Количество машин в конфигурации_
-* _Размер Диска_
-* _Тип диска_
+5. На открытой вкладке в разделе Входящий трафик выберите **Добавить правило**
+6. Выберите Тип - **Все протоколы и все порты**
+7. Укажите Удаленный адрес - **Все IP-адреса**
+8. Нажмите кнопку **Создать правило**
 
-<mark style="color:red;">**Укажите MikoPBX в качестве операционной системы**</mark>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
-Нажмите **"Следующий шаг"**
+9. В разделе Виртуальные машины с группой правил mikopbx\_rules выберите **Добавить виртуальную машину**
+10. Выберете созданную виртуальную машину _mikopbx\_vm_ и нажмите **Добавить группу правил**
 
-<figure><img src="../../.gitbook/assets/extra4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
-3. Выберите **сеть**, **ключ виртуальной машины** и нажмите "**Следующий шаг**"
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15 (8).png" alt=""><figcaption></figcaption></figure>
+{% hint style="danger" %}
+Обязательно выполните настройку Firewall на самой АТС MikoPBX
+{% endhint %}
 
-4. Нажмите "**Создать инстанс**"
+### **Запуск АТС MikoPBX**
 
-<figure><img src="../../.gitbook/assets/16 (3).png" alt=""><figcaption></figcaption></figure>
+1. Откройте Облачные вычисления / Виртуальные машины
+2. Перейдите к созданной виртуальной машине _mikopbx-vm_
+3. На открытой вкладке перейдите в раздел Логи
 
-5. Как только инстанс будет создан, сразу остановите его запуск:
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_15.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/17 (4).png" alt=""><figcaption></figcaption></figure>
+4. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
+5. Для входа используйте указанные во вкладке Серийная консоль логин и пароль
 
-Инстанс создан.
-
-## Диск для хранения данных <a href="#disk_dlja_xranenija_dannyx" id="disk_dlja_xranenija_dannyx"></a>
-
-1. Перейдите во вкладку **Диски**, нажмите "**Создать диск**"
-
-<figure><img src="../../.gitbook/assets/18 (3).png" alt=""><figcaption></figcaption></figure>
-
-2. Введите следующие параметры:
-
-* Название диска
-* Источник **(**_Пустой диск_**)**
-* Тип диска
-* Зону доступности**(**_Должна быть такая же, как и у инстанса_**)**
-* Размер**(**_более 50 ГБ_**),**
-
-Далее отметьте галочку "**подключить диск"** и укажите инстанс MikoPBX, который мы сейчас запускаем.
-
-Нажмите "**Создать диск**"
-
-<figure><img src="../../.gitbook/assets/19 (4).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/20 (2).png" alt=""><figcaption></figcaption></figure>
-
-3. Запустите инстанс:
-
-<figure><img src="../../.gitbook/assets/extra5.png" alt=""><figcaption></figcaption></figure>
-
-4. Перейдите в консоль АТС:
-
-Зайдите во вкладку "**Виртуальные машины**", выберите свою виртуальную машину
-
-<figure><img src="../../.gitbook/assets/superExtra1.png" alt=""><figcaption></figcaption></figure>
-
-Перейдите во вкладку "**Консоль**"
-
-<figure><img src="../../.gitbook/assets/superExtra2.png" alt=""><figcaption></figcaption></figure>
-
-5. Выберите пункт «**\[6] Data storage**»
-
-<figure><img src="../../.gitbook/assets/22 (4).png" alt=""><figcaption></figcaption></figure>
-
-6. Далее выберите пункт «**\[1] Mount drive as data storage**»&#x20;
-
-<figure><img src="../../.gitbook/assets/23 (1).png" alt=""><figcaption></figcaption></figure>
-
-7. На следующем шаге нажмите **ENTER**
-
-<figure><img src="../../.gitbook/assets/24 (1).png" alt=""><figcaption></figcaption></figure>
-
-Система перезагрузится, надпись **"**<mark style="color:red;">**Storage disk not connected**</mark>**"** пропадет
-
-<figure><img src="../../.gitbook/assets/superExtra3.png" alt=""><figcaption></figcaption></figure>
-
-Диск для хранения данных успешно подключен.
-
-## Подключение <a href="#nastrojka_firewall" id="nastrojka_firewall"></a>
-
-1. Определите шлюз, маску, внешний IP-адрес с помощью раздела **"Облачные вычисления" -> "Виртуальные машины" -> "Ваша виртуальная машина" -> "Сети"**
-
-<figure><img src="../../.gitbook/assets/extra7 (2).png" alt=""><figcaption></figcaption></figure>
-
-**Для данного примера:**
-
-&#x20;  _IP-адрес: 185.130.115.36_
-
-&#x20;  _Шлюз: 185.130.115.254_
-
-&#x20;  _Маска: 22_
-
-2. Перейдите в АТС:
-
-Зайдите во вкладку "**Виртуальные машины**", выберите свою виртуальную машину
-
-<figure><img src="../../.gitbook/assets/superExtra1.png" alt=""><figcaption></figcaption></figure>
-
-Перейдите во вкладку "**Консоль**"
-
-<figure><img src="../../.gitbook/assets/superExtra2.png" alt=""><figcaption></figcaption></figure>
-
-3. Перейдите к разделу «**\[2] Configure LAN IP Address**»
-
-<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
-
-4. Выбираем «**\[2] Manual settings**»
-
-<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
-
-5. Введите внешний IP-адрес.
-
-Нажмите **Enter**
-
-<figure><img src="../../.gitbook/assets/28.png" alt=""><figcaption></figcaption></figure>
-
-6. Введите значение маски подсети
-
-Нажмите **Enter**
-
-<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
-
-7. Введите значение шлюза
-
-Нажмите **Enter:**
-
-<figure><img src="../../.gitbook/assets/30.png" alt=""><figcaption></figcaption></figure>
-
-8. Введите значение DNS
-
-Рекомендуется использовать стандартное - **8.8.8.8**
-
-Нажмите **Enter**
-
-<figure><img src="../../.gitbook/assets/31.png" alt=""><figcaption></figcaption></figure>
-
-## Firewall
-
-Для того, чтобы получить доступ к панели управления, нужно изменить стандартные настройки firewall в VKCloud
-
-Для этого: Перейдите в "**Виртуальные сети**" -> "**Настройки firewall**" -> "**Добавить**"
-
-<figure><img src="../../.gitbook/assets/32 (1).png" alt=""><figcaption></figcaption></figure>
-
-Введите **Имя группы правил, Описание**
-
-нажмите "**Создать группу**"
-
-<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption></figcaption></figure>
-
-Нажмите "**Добавить правило**" в разделе "**Входящий трафик**"
-
-<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption></figcaption></figure>
-
-4. Выберите тип "**Все протоколы и все порты**", выберете Удаленный адрес "**Все IP-адреса**"
-
-Нажмите "**Создать правило**"
-
-<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
-
-5. Нажмите "**Добавить виртуальную машину**"
-
-<figure><img src="../../.gitbook/assets/extra9.png" alt=""><figcaption></figcaption></figure>
-
-6. Выберете вашу виртуальную машину и нажмите "**Добавить группу правил**"
-
-<figure><img src="../../.gitbook/assets/extra10.png" alt=""><figcaption></figcaption></figure>
-
-_<mark style="color:red;">**Не забудьте настроить firewall внутри MikoPBX**</mark>_. Инструкцию можно прочитать [здесь.](../../manual/connectivity/firewall.md)
-
-## Первый вход в MikoPBX
-
-Для того, чтобы открыть панель управления вам надо вбить в строку браузера IP-адрес вашей виртуальной машины.
-
-<figure><img src="../../.gitbook/assets/extra8.png" alt=""><figcaption></figcaption></figure>
-
-Логин и пароль по умолчанию - **Admin**
-
-
-
-На этом установка MikoPBX на VKCloud завершена.
+<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_16 (1).png" alt=""><figcaption></figcaption></figure>
