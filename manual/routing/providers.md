@@ -19,7 +19,7 @@ To connect a new provider account, click **Connect SIP** or **Connect IAX** depe
 #### General Settings
 
 {% hint style="info" %}
-Instructions for connecting to the most popular service providers can be found in our [FAQ](broken-reference).
+Instructions for connecting to the most popular service providers can be found in our [FAQ](../../faq/providers/).
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/ParametersOfProvider.png" alt=""><figcaption><p>General settibngs of provider</p></figcaption></figure>
@@ -39,35 +39,35 @@ In the general settings of the SIP provider, specify the following settings:
 * **inband** sends keypresses as "tones." To use this standard, you need a high-quality audio codec.
 * **Auto**, **rfc**, and **info** transmit keypresses through SIP encoding.
 
-### Advanced SIP Provider Settings <a href="#rasshirennye_nastrojki_sip_provajdera" id="rasshirennye_nastrojki_sip_provajdera"></a>
+#### Advanced SIP Provider Settings <a href="#rasshirennye_nastrojki_sip_provajdera" id="rasshirennye_nastrojki_sip_provajdera"></a>
 
 <figure><img src="../../.gitbook/assets/AdvancedSettings.png" alt=""><figcaption><p>Advanced Settings</p></figcaption></figure>
 
-**Additional provider hosts or ip**
+#### **Additional provider hosts or ip**
 
 In this section, list all communication service provider addresses from which incoming calls can arrive. Access to these addresses for SIP and RTP ports will be automatically opened on the firewall.
 
 <figure><img src="../../.gitbook/assets/Additional provider hosts or ip.png" alt=""><figcaption><p>Additional provider hosts or ip</p></figcaption></figure>
 
-**SIP Connection Port**
+#### **SIP Connection Port**
 
 By default, it is set to **5060**. The SIP protocol describes how a client application (e.g., a softphone) can request the initiation of a connection from another, possibly physically remote client in the same network using its unique name. The protocol defines how clients agree on opening exchange channels based on other protocols that can be used for direct information transmission (e.g., RTP).
 
 <figure><img src="../../.gitbook/assets/Additional provider hosts or ip (1).png" alt=""><figcaption><p>SIP Connection Port</p></figcaption></figure>
 
-**Transport Protocol**
+#### **Transport Protocol**
 
 Allows you to specify the transport protocol used for this provider account.
 
 <figure><img src="../../.gitbook/assets/Additional provider hosts or ip (2).png" alt=""><figcaption><p>Transport Protocol</p></figcaption></figure>
 
-**Outbound Proxy**
+#### **Outbound Proxy**
 
 This is the provider's SIP proxy server for processing requests. The actual SIP server may differ from this address. The outbound proxy takes on primary requests and forwards them to the appropriate server.
 
 <figure><img src="../../.gitbook/assets/Additional provider hosts or ip (3).png" alt=""><figcaption><p>Outbound proxy</p></figcaption></figure>
 
-**Support NAT Session**
+#### **Support NAT Session**
 
 When this option is enabled, Asterisk will send SIP OPTIONS packets. This is necessary to support NAT tunneling on your router.
 
@@ -77,7 +77,7 @@ If this device does not respond within the specified period (default is 60 secon
 
 <figure><img src="../../.gitbook/assets/NATSession.png" alt=""><figcaption><p>Support NAT Session</p></figcaption></figure>
 
-**Redefining SIP Header "From"**
+#### **Redefining SIP Header "From"**
 
 You can disable the use of the **fromuser** field of the SIP packet header.
 
@@ -94,7 +94,7 @@ The fields **User** and **Domain** serve this purpose.
 
 <figure><img src="../../.gitbook/assets/user and domain.png" alt=""><figcaption><p>User and Domain fields<br></p></figcaption></figure>
 
-**Additional Parameters**
+#### **Additional Parameters**
 
 <figure><img src="../../.gitbook/assets/advancedOptionsField.png" alt=""><figcaption></figcaption></figure>
 
@@ -170,25 +170,25 @@ Asterisk handles this situation differently. The PBX will not be able to correct
 
 As a solution, in older versions of the PBX, you could describe additional inbound routes for which you would fill in the **Additional Number (DID)** field with the **Username** value for each account of the provider. This required creating N number of additional routes, equal to the number of provider accounts.
 
-An alternative is the <mark style="color:red;">Registering multiple accounts from one provider</mark> instruction. This approach was not very intuitive.
+An alternative is the [<mark style="color:red;">Registering multiple accounts from one provider</mark>](providers.md#neskolko\_provajderov\_na\_odnom\_ip) instruction. This approach was not very intuitive.
 
 The **Username** field, in most cases, will be used as the destination number **Additional Number (DID)** for incoming calls. Considering that outgoing routes for all **Usernames** will be configured, the call will be correctly processed by the PBX.
 
 ### More about Registration Types
 
-**Outgoing Registration**
+#### **Outgoing Registration**
 
 This option is used when connecting most providers.
 
 Registration is necessary when the provider cannot know from which IP address the client will connect. For example, when the PBX is behind NAT. The provider's server is usually on a public IP address.
 
-**Incoming Registration**
+#### **Incoming Registration**
 
 This option is relevant for the operation of some FXO / GSM gateways when an external device must connect to your PBX using a login and password.
 
 This option is also relevant when the remote device is behind NAT, and MikoPBX cannot know its IP address.
 
-**IP Authentication, No Password**
+#### **IP Authentication, No Password**
 
 Relevant for secure private networks. For example, Rostelecom often lays its network cable and connects the client to its local network.
 
