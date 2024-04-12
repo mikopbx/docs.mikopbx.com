@@ -203,14 +203,16 @@
   * [Модуль автообзвона](modules/miko/module-auto-dialer.md)
   * [Оценка качества разговора](modules/miko/module-quality-assessment.md)
   * [Синхронизация с LDAP/AD](modules/miko/module-ldap-sync.md)
-  * [Настройка звонков через Telegram](modules/miko/module-telegram-provider.md)
+  * [Провайдер для звонков Telegram](modules/miko/module-telegram-provider.md)
+  * [Zabbix агент](modules/miko/module-zabbix-agent.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
 * [Версии и пакеты Linux](other/linux-versions-and-packages.md)
 * [История версий](other/changelog/README.md)
-  * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
+  * [MikoPBX 2024.1](other/changelog/mikopbx-2024.1.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
+  * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
 
 ***
 
