@@ -4,9 +4,10 @@
 
 Для выполнения инструкций установите утилиту командной строки Amazon, для этого откройте Терминал и введите в командной строке&#x20;
 
-**curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"**&#x20;
-
-**sudo installer -pkg AWSCLIV2.pkg -target /**
+```bash
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" 
+sudo installer -pkg AWSCLIV2.pkg -target /
+```
 
 Приступим к настройке
 
@@ -25,6 +26,8 @@
 4. Скопируйте Access key и Secret access key
 
 Если у вас есть ключ доступа, скопируйте Access key и Secret access key
+
+<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
 ### **Создание бакета**
 
@@ -57,6 +60,10 @@
    2. Выполните команду **vi trust-policy.json**
    3. Перейдите в режим редактирования, нажав **i**, вставьте текст
    4. Нажмите **ESC** и напишите **:wq**, чтобы записать файл
+
+```bash
+vi trust-policy.json
+```
 
 ```json
 {
@@ -162,10 +169,29 @@ AMI_ID=$(aws ec2 register-image --name "$NAME" --description "$DESCRIPTION" --ar
 echo "AMI created with ID: $AMI_ID"
 </code></pre>
 
-5. Выполните команду **aws configure**, укажите регион и скопированные ключи Access key и Secret access key
-6. Выполните команду **aws iam create-role --role-name vmimport --assume-role-policy-document "file://trust-policy.json"**
-7. Выполните команду **aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-document "file://role-policy.json"**
-8. Выполните команду **sh import-image.sh**
+5. Выполните команду aws configure, укажите регион и скопированные ключи Access key и Secret access key
+
+```bash
+aws configure
+```
+
+6. Выполните команду&#x20;
+
+```bash
+aws iam create-role --role-name vmimport --assume-role-policy-document "file://trust-policy.json"
+```
+
+7. Выполните команду&#x20;
+
+```bash
+aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-document "file://role-policy.json"
+```
+
+8. Выполните команду
+
+```bash
+sh import-image.sh
+```
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
@@ -230,6 +256,8 @@ echo "AMI created with ID: $AMI_ID"
 
 3. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
 4. Для входа используйте указанные в EC2 serial console логин и пароль
+
+<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
 [^1]: измените
 
