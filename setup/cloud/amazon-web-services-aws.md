@@ -1,4 +1,4 @@
-# Amazon
+# Amazon Web Services (AWS)
 
 Авторизуйтесь в сервисе [https://aws.amazon.com](https://aws.amazon.com/)
 
@@ -192,6 +192,8 @@ aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-doc
 ```bash
 sh import-image.sh
 ```
+
+В случае успешного выполнения команды будет сформирован уникальный идентификатор образа AMI
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
