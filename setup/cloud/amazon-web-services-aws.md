@@ -82,7 +82,7 @@ vi trust-policy.json
 }
 ```
 
-4. Аналогично создайте файл role-policy.json, измените значение имени бакета в тексте на имя созданного вами бакета
+3. Аналогично создайте файл role-policy.json, измените значение имени бакета в тексте на имя созданного вами бакета
 
 <pre class="language-json"><code class="lang-json">{
     "Version":"2012-10-17",
@@ -235,7 +235,7 @@ sh import-image.sh
 * диск объемом **50+ Гб** для хранения записей разговоров
 {% endhint %}
 
-7. В разделе Configure storage создайте диск для системы и укажите размер 1 Гб
+7. В разделе Configure storage создайте диск для системы и укажите размер 1Гб
 8. Добавьте еще один диск для хранения данных и укажите размер диска не менее 50Гб
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_10.png" alt=""><figcaption></figcaption></figure>
