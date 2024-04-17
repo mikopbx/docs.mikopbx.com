@@ -226,10 +226,6 @@ sh import-image.sh
 
 6. В разделе Network settings установите флажки **Allow SSH traffic** и **Allow HTTPS traffic**
 
-{% hint style="danger" %}
-Обязательно выполните настройку Firewall на самой АТС MikoPBX
-{% endhint %}
-
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
@@ -252,7 +248,7 @@ sh import-image.sh
 ### **Запуск АТС MikoPBX**
 
 1. Перейдите к созданной виртуальной машине _mikopbx-vm_
-2. На открытой вкладке выберите Connect / EC2 serial console
+2. На открытой вкладке выберите Connect / EC2 serial console, дождитесь полной загрузки системы, пока не отобразятся параметры авторизации
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
@@ -260,6 +256,10 @@ sh import-image.sh
 4. Для входа используйте указанные в EC2 serial console логин и пароль
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_13.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+Обязательно выполните настройку Firewall на самой АТС MikoPBX
+{% endhint %}
 
 [^1]: измените
 
