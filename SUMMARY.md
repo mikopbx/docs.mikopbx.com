@@ -18,6 +18,7 @@
   * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
   * [Google Cloud](setup/cloud/google-cloud.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
+  * [Amazon Web Services (AWS)](setup/cloud/amazon-web-services-aws.md)
 * [Docker container](setup/docker.md)
 
 ## User manual <a href="#manual" id="manual"></a>
