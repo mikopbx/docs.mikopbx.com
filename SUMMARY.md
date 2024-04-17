@@ -20,6 +20,7 @@
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
   * [VK Cloud Solutions](setup/cloud/vk-cloud-solutions.md)
   * [Yandex Cloud](setup/cloud/yandex-cloud.md)
+  * [Amazon](setup/cloud/amazon.md)
 * [Докер контейнер](setup/docker.md)
 
 ## Руководство пользователя <a href="#manual" id="manual"></a>
