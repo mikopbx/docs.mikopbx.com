@@ -109,12 +109,11 @@
 
 4. Аналогично создайте файл import-image.sh, измените значения параметра DEFAULT\_BUCKET на имя созданного вами бакета и параметра DEFAULT\_IMAGE на имя образа, загруженного в бакет
 
-```bash
-#!/bin/bash
+<pre class="language-bash"><code class="lang-bash">#!/bin/bash
 
 # Определение переменных по умолчанию
-DEFAULT_IMAGE="mikopbx-2024.1.40-dev-x86_64.raw"
-DEFAULT_BUCKET="mikopbx-bucket"
+DEFAULT_IMAGE="<a data-footnote-ref href="#user-content-fn-3">mikopbx-2024.1.40-dev-x86_64.raw</a>"
+DEFAULT_BUCKET="<a data-footnote-ref href="#user-content-fn-4">mikopbx-bucket</a>"
 DEFAULT_DESCRIPTION="MikoPBX the best open source PBX on asterisk"
 DEFAULT_NAME="MikoPBX 2024.1.40-dev"
 
@@ -128,7 +127,7 @@ NAME="${NAME:-$DEFAULT_NAME}"
 JSON_FILE="disk_container.json"
 
 # Создание файла JSON
-cat <<EOF> ${JSON_FILE}
+cat &#x3C;&#x3C;EOF> ${JSON_FILE}
 {
   "Description": "${DESCRIPTION} image",
   "Format": "raw",
@@ -161,7 +160,7 @@ SNAPSHOT_ID=$(aws ec2 describe-import-snapshot-tasks --import-task-ids $IMPORT_T
 AMI_ID=$(aws ec2 register-image --name "$NAME" --description "$DESCRIPTION" --architecture x86_64 --virtualization-type hvm --ena-support --root-device-name "/dev/sda1" --block-device-mappings "DeviceName=/dev/sda1,Ebs={SnapshotId=$SNAPSHOT_ID}" --query 'ImageId' --output text)
 
 echo "AMI created with ID: $AMI_ID"
-```
+</code></pre>
 
 5. Выполните команду **aws configure**, укажите регион и скопированные ключи Access key и Secret access key
 6. Выполните команду **aws iam create-role --role-name vmimport --assume-role-policy-document "file://trust-policy.json"**
@@ -235,3 +234,7 @@ echo "AMI created with ID: $AMI_ID"
 [^1]: измените
 
 [^2]: измените
+
+[^3]: измените
+
+[^4]: измените
