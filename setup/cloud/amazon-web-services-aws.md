@@ -257,6 +257,8 @@ To deploy the PBX use **two** disks:
 3. Copy the external address of the created virtual machine and enter it in the browser's address bar
 4. Use the login and password provided in EC2 serial console for login
 
+<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_15.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="danger" %}
 Make sure to configure the Firewall on the MikoPBX
 {% endhint %}
