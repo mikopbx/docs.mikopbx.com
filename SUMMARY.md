@@ -19,6 +19,7 @@
   * [Google Cloud](setup/cloud/google-cloud.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
   * [1С:Облачная инфраструктура](setup/cloud/vk-cloud-solutions.md)
+  * [VK Cloud](setup/cloud/vk-cloud.md)
   * [Yandex Cloud](setup/cloud/yandex-cloud.md)
   * [Amazon Web Services (AWS)](setup/cloud/amazon-web-services-aws.md)
 * [Докер контейнер](setup/docker.md)
