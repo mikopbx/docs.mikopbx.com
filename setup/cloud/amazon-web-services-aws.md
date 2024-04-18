@@ -119,22 +119,22 @@ vi trust-policy.json
 
 <pre class="language-bash"><code class="lang-bash">#!/bin/bash
 
-# Определение переменных по умолчанию
+# Default variable definition
 DEFAULT_IMAGE="<a data-footnote-ref href="#user-content-fn-3">mikopbx-2024.1.40-dev-x86_64.raw</a>"
 DEFAULT_BUCKET="<a data-footnote-ref href="#user-content-fn-4">mikopbx-bucket</a>"
 DEFAULT_DESCRIPTION="MikoPBX the best open source PBX on asterisk"
 DEFAULT_NAME="MikoPBX 2024.1.40-dev"
 
-# Переопределение переменных значениями переменных окружения, если они установлены
+# Overriding variables with environment variable values, if set
 IMAGE="${IMAGE:-$DEFAULT_IMAGE}"
 BUCKET="${BUCKET:-$DEFAULT_BUCKET}"
 DESCRIPTION="${DESCRIPTION:-$DEFAULT_DESCRIPTION}"
 NAME="${NAME:-$DEFAULT_NAME}"
 
-# Файл JSON для команды import-snapshot
+# JSON file for import-snapshot command
 JSON_FILE="disk_container.json"
 
-# Создание файла JSON
+# Creating JSON file
 cat &#x3C;&#x3C;EOF> ${JSON_FILE}
 {
   "Description": "${DESCRIPTION} image",
@@ -146,12 +146,12 @@ cat &#x3C;&#x3C;EOF> ${JSON_FILE}
 }
 EOF
 
-# Импорт снимка
+# Importing the snapshot
 IMPORT_TASK_ID=$(aws ec2 import-snapshot --description "${DESCRIPTION} image" --disk-container "file://${JSON_FILE}" --query 'ImportTaskId' --output text)
 
 echo "Import task started with ID: $IMPORT_TASK_ID"
 
-# Ожидание завершения импорта снимка
+# Waiting for snapshot import to complete
 while true; do
 	STATUS=$(aws ec2 describe-import-snapshot-tasks --import-task-ids $IMPORT_TASK_ID --query 'ImportSnapshotTasks[0].SnapshotTaskDetail.Status' --output text)
 	echo "Current status: $STATUS"
@@ -161,10 +161,10 @@ while true; do
 	sleep 30
 done
 
-# Получение SnapshotId
+# Getting SnapshotId
 SNAPSHOT_ID=$(aws ec2 describe-import-snapshot-tasks --import-task-ids $IMPORT_TASK_ID --query 'ImportSnapshotTasks[0].SnapshotTaskDetail.SnapshotId' --output text)
 
-# Регистрация AMI
+# Registering AMI
 AMI_ID=$(aws ec2 register-image --name "$NAME" --description "$DESCRIPTION" --architecture x86_64 --virtualization-type hvm --ena-support --root-device-name "/dev/sda1" --block-device-mappings "DeviceName=/dev/sda1,Ebs={SnapshotId=$SNAPSHOT_ID}" --query 'ImageId' --output text)
 
 echo "AMI created with ID: $AMI_ID"
