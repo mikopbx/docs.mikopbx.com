@@ -1,6 +1,6 @@
 # Amazon Web Services (AWS)
 
-Sign in to the service https://aws.amazon.com
+Sign in to the service [https://aws.amazon.com](https://aws.amazon.com)
 
 To follow the instructions, install the Amazon Command Line Utility by opening Terminal and entering the following command
 
