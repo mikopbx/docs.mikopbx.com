@@ -1,6 +1,6 @@
-# VK Cloud
+# 1С:Облачная инфраструктура
 
-Для начала авторизуйтесь на сайте [https://cloud.vk.com](https://cloud.vk.com/)
+Для начала авторизуйтесь на сайте [https://cloudinf.1c.ru](https://cloudinf.1c.ru)
 
 Приступим к настройке
 
