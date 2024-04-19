@@ -165,7 +165,18 @@ done
 SNAPSHOT_ID=$(aws ec2 describe-import-snapshot-tasks --import-task-ids $IMPORT_TASK_ID --query 'ImportSnapshotTasks[0].SnapshotTaskDetail.SnapshotId' --output text)
 
 # Registering AMI
-AMI_ID=$(aws ec2 register-image --name "$NAME" --description "$DESCRIPTION" --architecture x86_64 --virtualization-type hvm --ena-support --root-device-name "/dev/sda1" --block-device-mappings "DeviceName=/dev/sda1,Ebs={SnapshotId=$SNAPSHOT_ID}" --query 'ImageId' --output text)
+AMI_ID=$(aws ec2 register-image \
+	  --name "$NAME" \
+	  --description "$DESCRIPTION" \
+	  --architecture x86_64 \
+	  --sriov-net-support simple \
+	  --virtualization-type paravirtual \
+	  --ena-support \
+	  --boot-mode legacy-bios \
+	  --root-device-name "/dev/sda1" \
+	  --block-device-mappings "[{\"DeviceName\": \"/dev/sda1\", \"Ebs\":{\"DeleteOnTermination\":true, \"VolumeSize\":1, \"SnapshotId\":\"$SNAPSHOT_ID\"}}, {\"DeviceName\": \"/dev/sdb\", \"Ebs\":{\"VolumeSize\":50}}]" \
+	  --query 'ImageId' \
+	  --output text)
 
 echo "AMI created with ID: $AMI_ID"
 
@@ -237,13 +248,12 @@ To deploy the PBX use **two** disks:
 * A **50+ Gb** disk for storing call recordings
 {% endhint %}
 
-7. In the Configure storage section, create a disk for the system and specify a size of 1GB
-8. Add another disk for data storage and specify a disk size of at least 50GB
+7. If necessary, change the size of the storage disk in Configure storage, default size is 50Gb
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
-9. For other fields use default values
-10. Click **Launch instance**
+8. For other fields use default values
+9. Click **Launch instance**
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
