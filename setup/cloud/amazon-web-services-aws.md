@@ -164,7 +164,18 @@ done
 SNAPSHOT_ID=$(aws ec2 describe-import-snapshot-tasks --import-task-ids $IMPORT_TASK_ID --query 'ImportSnapshotTasks[0].SnapshotTaskDetail.SnapshotId' --output text)
 
 # Регистрация AMI
-AMI_ID=$(aws ec2 register-image --name "$NAME" --description "$DESCRIPTION" --architecture x86_64 --virtualization-type hvm --ena-support --root-device-name "/dev/sda1" --block-device-mappings "DeviceName=/dev/sda1,Ebs={SnapshotId=$SNAPSHOT_ID}" --query 'ImageId' --output text)
+AMI_ID=$(aws ec2 register-image \
+	  --name "$NAME" \
+	  --description "$DESCRIPTION" \
+	  --architecture x86_64 \
+	  --sriov-net-support simple \
+	  --virtualization-type paravirtual \
+	  --ena-support \
+	  --boot-mode legacy-bios \
+	  --root-device-name "/dev/sda1" \
+	  --block-device-mappings "[{\"DeviceName\": \"/dev/sda1\", \"Ebs\":{\"DeleteOnTermination\":true, \"VolumeSize\":1, \"SnapshotId\":\"$SNAPSHOT_ID\"}}, {\"DeviceName\": \"/dev/sdb\", \"Ebs\":{\"VolumeSize\":50}}]" \
+	  --query 'ImageId' \
+	  --output text)
 
 echo "AMI created with ID: $AMI_ID"
 </code></pre>
@@ -235,13 +246,12 @@ sh import-image.sh
 * диск объемом **50+ Гб** для хранения записей разговоров
 {% endhint %}
 
-7. В разделе Configure storage создайте диск для системы и укажите размер 1Гб
-8. Добавьте еще один диск для хранения данных и укажите размер диска не менее 50Гб
+7. При необходимости измените размер диска для хранения данных в разделе Configure storage, по умолчанию его размер - 50Гб
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
-9. Для других полей используйте значения по умолчанию
-10. Нажмите кнопку **Launch instance**
+8. Для других полей используйте значения по умолчанию
+9. Нажмите кнопку **Launch instance**
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
