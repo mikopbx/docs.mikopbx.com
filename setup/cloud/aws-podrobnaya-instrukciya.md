@@ -1,6 +1,6 @@
-# Amazon Web Services (AWS)
+# AWS подробная инструкция
 
-Авторизуйтесь в сервисе [https://aws.amazon.com](https://aws.amazon.com/)
+Авторизуйтесь в сервисе Amazon Web Services [https://aws.amazon.com](https://aws.amazon.com/)
 
 Для выполнения инструкций установите утилиту командной строки Amazon, для этого откройте Терминал и введите в командной строке&#x20;
 
