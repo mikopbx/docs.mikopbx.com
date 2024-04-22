@@ -17,7 +17,7 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_1 (1).png" alt=""><figcaption></figcaption></figure>
 
-4. Введите имя виртуальной машины (Name), например _mikopbx-vm_
+5. Введите имя виртуальной машины (Name), например _mikopbx-vm_
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_2.png" alt=""><figcaption></figcaption></figure>
 
@@ -29,11 +29,11 @@
 
 6. Выберите **Create new key pair** и укажите имя пары ключей (Key pair name), например _mikopbx\_key_
 
-Следуйте дальше по инструкции
-
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_3.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_4.png" alt=""><figcaption></figcaption></figure>
+
+Следуйте дальше по инструкции
 
 {% hint style="danger" %}
 Для развертывания АТС используйте **два** диска:
