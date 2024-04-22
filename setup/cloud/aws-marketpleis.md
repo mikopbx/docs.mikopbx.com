@@ -13,11 +13,11 @@
 1. Откройте Services / Compute / **EC2** и перейдите в раздел Images / AMI Catalog
 2. На открытой вкладке в поисковой строке введите **MikoPBX**
 3. В разделе AWS Marketplace AMIs выберите образ MikoPBX, нажав кнопку **Select**
+4. Нажмите кнопку **Launch an instance form AMI** для создания виртуальной машины
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_1 (1).png" alt=""><figcaption></figcaption></figure>
 
-4. Нажмите кнопку **Launch an instance form AMI** для создания виртуальной машины
-5. Введите имя виртуальной машины (Name), например _mikopbx-vm_
+4. Введите имя виртуальной машины (Name), например _mikopbx-vm_
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_2.png" alt=""><figcaption></figcaption></figure>
 
