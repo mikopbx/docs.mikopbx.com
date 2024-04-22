@@ -14,7 +14,7 @@
 2. На открытой вкладке в поисковой строке введите **MikoPBX**
 3. В разделе AWS Marketplace AMIs выберите образ MikoPBX, нажав кнопку **Select**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_1 (1).png" alt=""><figcaption></figcaption></figure>
 
 4. Нажмите кнопку **Launch an instance form AMI** для создания виртуальной машины
 5. Введите имя виртуальной машины (Name), например _mikopbx-vm_
@@ -51,7 +51,7 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_s_8.png" alt=""><figcaption></figcaption></figure>
 
-#### **Запуск АТС MikoPBX**
+### **Запуск АТС MikoPBX**
 
 1. Перейдите к созданной виртуальной машине _mikopbx-vm_
 2. На открытой вкладке выберите Connect / EC2 serial console, дождитесь полной загрузки системы, пока не отобразятся параметры авторизации
