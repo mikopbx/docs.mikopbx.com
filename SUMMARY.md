@@ -22,6 +22,7 @@
   * [VK Cloud](setup/cloud/vk-cloud.md)
   * [Yandex Cloud](setup/cloud/yandex-cloud.md)
   * [AWS (Amazon Web Services) подробная инструкция](setup/cloud/aws-amazon-web-services-podrobnaya-instrukciya.md)
+  * [AWS Маркетплейс](setup/cloud/aws-marketpleis.md)
 * [Докер контейнер](setup/docker.md)
 
 ## Руководство пользователя <a href="#manual" id="manual"></a>
