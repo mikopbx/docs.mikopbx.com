@@ -18,11 +18,11 @@
   * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
   * [Google Cloud](setup/cloud/google-cloud.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
-  * [1С:Облачная инфраструктура](setup/cloud/vk-cloud-solutions.md)
+  * [1С:Облачная инфраструктура](setup/cloud/1c-oblachnaya-infrastruktura.md)
   * [VK Cloud](setup/cloud/vk-cloud.md)
   * [Yandex Cloud](setup/cloud/yandex-cloud.md)
   * [AWS подробная инструкция](setup/cloud/aws-podrobnaya-instrukciya.md)
-  * [AWS Маркетплэйс](setup/cloud/aws-marketpleis.md)
+  * [AWS Маркетплейс](setup/cloud/aws-marketplace.md)
 * [Докер контейнер](setup/docker.md)
 
 ## Руководство пользователя <a href="#manual" id="manual"></a>
