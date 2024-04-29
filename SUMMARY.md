@@ -23,7 +23,7 @@
   * [Yandex Cloud](setup/cloud/yandex-cloud.md)
   * [AWS подробная инструкция](setup/cloud/aws-podrobnaya-instrukciya.md)
   * [AWS Маркетплейс](setup/cloud/aws-marketplace.md)
-* [Докер контейнер](setup/docker.md)
+* [В Docker контейнере](setup/docker.md)
 
 ## Руководство пользователя <a href="#manual" id="manual"></a>
 
