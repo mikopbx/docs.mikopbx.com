@@ -15,11 +15,11 @@
   * [VMware Workstation Pro](setup/hypervisor/vmware-workstation-pro.md)
   * [Hyper-V](setup/hypervisor/hyper-v.md)
 * [Cloud](setup/cloud/README.md)
-  * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
-  * [Google Cloud](setup/cloud/google-cloud.md)
-  * [Microsoft Azure](setup/cloud/microsoft-azure.md)
   * [AWS deployment guide](setup/cloud/aws-deployment-guide.md)
   * [AWS Marketplace](setup/cloud/aws-marketplace.md)
+  * [Microsoft Azure](setup/cloud/microsoft-azure.md)
+  * [Google Cloud](setup/cloud/google-cloud.md)
+  * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
 * [Docker container](setup/docker.md)
 
 ## User manual <a href="#manual" id="manual"></a>
