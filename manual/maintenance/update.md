@@ -103,9 +103,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/obnov_kons_3.png" alt=""><figcaption></figcaption></figure>
 
-
-
-### Обновление докер контейнера
+## Обновление докер контейнера <a href="#docker-upgrade" id="docker-upgrade"></a>
 
 Для обновления контейнеризированной MikoPBX достаточно остановить текущий контенер, скачать последнюю версию контейнера, и запустить его.
 
