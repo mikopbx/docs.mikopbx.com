@@ -75,7 +75,7 @@ docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
 
 ### Проверка работы
 
-Чтобы убедиться, что ваше приложение MikoPBX успешно запущено и работает в Docker-контейнере, можно выполнить следующие шаги после его запуска. Эти шаги помогут проверить состояние контейнера и просмотреть его логи, чтобы убедиться, что приложение загружено корректно.
+Чтобы убедиться, что ваше приложение MikoPBX запостилось и работает в Docker-контейнере, можно выполнить следующие шаги после его запуска. Эти шаги помогут проверить состояние контейнера и просмотреть его логи.
 
 #### Шаг 1: Проверка статуса контейнера
 
@@ -85,7 +85,7 @@ docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
 docker ps
 ```
 
-Эта команда выведет информацию о всех активных контейнерах. Убедитесь, что контейнер `mikopbx` присутствует в списке и его статус указывает на то, что он запущен и работает (например, статус `Up`).
+Эта команда выведет информацию о всех активных контейнерах. Убедитесь, что контейнер `mikopbx` присутствует в списке и его статус указывает на то, что он запущен и работает (например, статус **up**).
 
 #### Шаг 2: Просмотр логов контейнера
 
@@ -203,7 +203,7 @@ docker compose -f docker-compose.yml up
 
 Также можно оганизовать запуск нескольких контенеров MikoPBX на одном хосте, но здесь надо учитывать особенности работы Docker с портами, если не использовать режим **–net=host** то это приведет к высокой нагрузке на процессор хостовой системы, т.к. Docker создает для каждого выделенного порта отдельное правило в Iptables.&#x20;
 
-С включенным режимом **–net=host** вам необходимо вручную следить за распределением доступных портов между запускаемыми контейнерами. Напирмер, для запуска двух контейнеров с MikoPBX на одном хосте, можно использовать следующий конфигурационный файл.
+С включенным режимом **–net=host** вам необходимо вручную следить за распределением доступных портов между запускаемыми контейнерами. Например, для запуска двух контейнеров с MikoPBX на одном хосте, можно использовать следующий конфигурационный файл.
 
 {% code title="docker-compose.yml" %}
 ```yaml
@@ -270,6 +270,70 @@ mikopbx-second:
       - GNATS_PORT=5223      
 ```
 {% endcode %}
+
+Существует вариант запуска контейнеров с MikoPBX в режиме **–net=bridge**, но как описано выше для использования этого режима необходимо или существенно ограничить диапазон RTP портов, или открывать к ним доступ на хостовой машине не используя возможности Docker.
+
+Для этого вам необходимо написать скрипт, для определения имени текущего мостового интерфейса и IP адреса каждого контейнера, и после запуска docker compose добавить правила iptables для диапазона RTP портов следующим образом.
+
+```bash
+COMPOSE_FILE="$1"
+
+if [ -z "$COMPOSE_FILE" ]; then
+    echo "Usage: $0 path/to/docker-compose.yaml"
+    exit 1
+fi
+
+IPTABLES_COMMENT="mikopbx-custom-rule"
+
+# Удалим все правила IPTABLES помеченные нами как созданные вручную
+iptables -S | grep "$IPTABLES_COMMENT" | sed 's/-A /-D /' | while read rule; do
+    iptables $rule
+done
+
+# Обойдем каждый сервис в файле docker-compose.yaml и получим значения
+# RTP_PORT_FROM, RTP_PORT_TO, bridge_name и container_ip
+# создадим кастомные правила IPTABLES для проброса портов
+yq e '.services[] | select(.environment[] | contains("RTP_PORT_FROM")) | {container_name, environment, network: .networks[0]}' -o json "$COMPOSE_FILE" | jq -c '.[]' | while read -r service; do
+    container_name=$(echo $service | jq -r '.container_name')
+    network_name=$(echo $service | jq -r '.network')
+    environment=$(echo $service | jq -r '.environment | from_entries')
+
+    RTP_PORT_FROM=$(echo "$environment" | jq -r '."RTP_PORT_FROM"')
+    RTP_PORT_TO=$(echo "$environment" | jq -r '."RTP_PORT_TO"')
+
+    bridge_name=$(get_bridge_name "$network_name")
+    container_ip=$(get_container_ip "$container_name")
+
+    # Set iptables rules
+    iptables -A DOCKER -t nat ! -i "$bridge_name" -p udp -m udp --dport $RTP_PORT_FROM:$RTP_PORT_TO -j DNAT --to-destination $container_ip:$RTP_PORT_FROM-$RTP_PORT_TO -m comment --comment "$IPTABLES_COMMENT"
+    iptables -A DOCKER -d $container_ip/32 ! -i "$bridge_name" -o "$bridge_name" -p udp -m udp --dport $RTP_PORT_FROM:$RTP_PORT_TO -j ACCEPT -m comment --comment "$IPTABLES_COMMENT"
+    iptables -A POSTROUTING -t nat -s $container_ip/32 -d $container_ip/32 -p udp -m udp --dport $RTP_PORT_FROM:$RTP_PORT_TO -j MASQUERADE -m comment --comment "$IPTABLES_COMMENT"
+done
+
+```
+
+### Создание контейнера из tar архива
+
+Помимо использования нашего официального реестра, вам может понадобиться вариант создания контейнера из образа, например для бета версии. В составе опубликованных релизов и предрелизов поставляется tar архив, который мы используем для создания контейнера.
+
+Вот пример кода, для его использования:
+
+```bash
+// Создаем контейнер из tar архива
+docker import \
+  --change 'ENTRYPOINT ["/bin/sh", "/sbin/docker-entrypoint"]' \
+  mikopbx-2024.1.92-x86_64.tar \
+  "mikopbx:2024.1.92"
+
+// Запускаем созданный контейнер
+docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
+	 -v mikopbx_cf:/cf \
+	 -v mikopbx_storage:/storage \
+	 -e SSH_PORT=23 \
+	 -e ID_WWW_USER="$(id -u www-user)" \
+	 -e ID_WWW_GROUP="$(id -g www-user)" \
+	 -it mikopbx:2024.1.92
+```
 
 ## Полезные команды
 
