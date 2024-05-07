@@ -78,7 +78,6 @@
   * [Тонкая настройка firewall](faq/setup/fine-tuning-the-firewall.md)
   * [Перенос MikoPBX на другой сервер](faq/setup/change-host.md)
   * [Сброс к заводским настройкам](faq/setup/factory-reset.md)
-  * [Настройка Zabbix агента (v.5)](faq/setup/configuring-zabbix-agent-v.5.md)
   * [Мониторинг провайдеров на MikoPBX](faq/setup/monitoring-providers-on-mikopbx.md)
   * [Создание инстанса утилитой Yandex Cloud](faq/setup/sozdanie-instansa-utilitoi-yandex-cloud.md)
 * [Обслуживание](faq/management/README.md)
