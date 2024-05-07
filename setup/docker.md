@@ -345,12 +345,18 @@ docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
 
 Команда для подключения к консоли АТС:
 
-```
+```bash
 docker exec -it mikopbx sh
 ```
 
 Команда для подключения к консольному меню АТС:
 
-```
+```bash
 docker exec -it mikopbx /etc/rc/console_menu
+```
+
+Подключение к shgrep для анализа SIP
+
+```bash
+docker exec -it mikopbx sngrep
 ```
