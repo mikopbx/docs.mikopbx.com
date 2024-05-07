@@ -338,14 +338,17 @@ function get_bridge_name() {
     echo $bridge_name
 }
 
+echo "Delete tagged iptables rules"
 # Удаляем все правила iptables промаркированные нашим комментарием
 iptables -S | grep "$IPTABLES_COMMENT" | sed 's/-A /-D /' | while read rule; do
-    iptables $rule
+        echo "Delete rule $rule"
+        iptables $rule
 done
 
 # Удаляем все NAT правила iptables промаркированные нашим комментарием
 iptables -S -t nat | grep "$IPTABLES_COMMENT" | sed 's/-A /-D /' | while read rule; do
-    iptables $rule
+     echo "Delete rule $rule"
+     iptables -t nat $rule
 done
 
 # Парсим docker-compose файл и получаем все необходимые параметры.
