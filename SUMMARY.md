@@ -20,7 +20,7 @@
   * [1С:Облачная инфраструктура](setup/cloud/1c-oblachnaya-infrastruktura.md)
   * [AWS](setup/cloud/aws/README.md)
     * [AWS подробная инструкция](setup/cloud/aws/aws-podrobnaya-instrukciya.md)
-    * [AWS Маркетплейс](setup/cloud/aws/aws-marketpleis.md)
+    * [AWS Маркетплейс](setup/cloud/aws/aws-marketplace.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
   * [Google Cloud](setup/cloud/google-cloud.md)
   * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
