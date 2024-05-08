@@ -9,3 +9,7 @@
 {% content-ref url="aws-podrobnaya-instrukciya.md" %}
 [aws-podrobnaya-instrukciya.md](aws-podrobnaya-instrukciya.md)
 {% endcontent-ref %}
+
+
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td><a href="aws-podrobnaya-instrukciya.md">aws-podrobnaya-instrukciya.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="aws-marketplace.md">aws-marketplace.md</a></td></tr></tbody></table>
