@@ -2,7 +2,7 @@
 
 Авторизуйтесь в сервисе Amazon Web Services [https://aws.amazon.com](https://aws.amazon.com/)
 
-Для выполнения инструкций установите утилиту командной строки Amazon, для этого откройте Терминал и введите в командной строке&#x20;
+Для выполнения инструкций установите утилиту командной строки Amazon, для этого откройте Терминал и введите в командной строке
 
 ```bash
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" 
@@ -27,7 +27,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 
 Если у вас есть ключ доступа, скопируйте Access key и Secret access key
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
 ### **Создание бакета**
 
@@ -35,12 +35,12 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 2. На вкладке выберите **Create bucket**
 3. Введите уникальное имя бакета (Bucket name)
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
 4. Для других полей используйте значения по умолчанию
 5. Завершив ввод значений, нажмите кнопку **Create bucket**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_2.png" alt=""><figcaption></figcaption></figure>
 
 6. Откройте созданный бакет и выберите **Upload**
 7. На открывшейся вкладке выберите **Add files**
@@ -48,7 +48,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 9. Нажмите кнопку **Upload**
 10. Дождитесь окончания загрузки файла
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
 ### Добавление прав и прикрепление политик
 
@@ -186,13 +186,13 @@ echo "AMI created with ID: $AMI_ID"
 aws configure
 ```
 
-6. Выполните команду&#x20;
+6. Выполните команду
 
 ```bash
 aws iam create-role --role-name vmimport --assume-role-policy-document "file://trust-policy.json"
 ```
 
-7. Выполните команду&#x20;
+7. Выполните команду
 
 ```bash
 aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-document "file://role-policy.json"
@@ -206,18 +206,18 @@ sh import-image.sh
 
 В случае успешного выполнения команды будет сформирован уникальный идентификатор образа AMI
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
 ### **Создание виртуальной машины**
 
 1. Откройте Services / Compute / **EC2** и перейдите в раздел Images / AMIs
 2. Выберите созданный образ и нажмите кнопку **Launch an instance form AMI** для создания виртуальной машины
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_5.png" alt=""><figcaption></figcaption></figure>
 
 3. Введите имя виртуальной машины (Name), например _mikopbx-vm_
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
 4. Укажите тип машины (Instance type) - **t3.micro**
 
@@ -229,15 +229,15 @@ sh import-image.sh
 
 5. Выберите **Create new key pair** и укажите имя пары ключей (Key pair name), например _mikopbx\_key_
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_7.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_8.png" alt=""><figcaption></figcaption></figure>
 
 Следуйте дальше по инструкции
 
 6. В разделе Network settings установите флажки **Allow SSH traffic** и **Allow HTTPS traffic**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 Для развертывания АТС используйте **два** диска:
@@ -248,24 +248,24 @@ sh import-image.sh
 
 7. При необходимости измените размер диска для хранения данных в разделе Configure storage, по умолчанию его размер - 50Гб
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
 8. Для других полей используйте значения по умолчанию
 9. Нажмите кнопку **Launch instance**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
 ### **Запуск АТС MikoPBX**
 
 1. Перейдите к созданной виртуальной машине _mikopbx-vm_
 2. На открытой вкладке выберите Connect / EC2 serial console, дождитесь полной загрузки системы, пока не отобразятся параметры авторизации
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
 3. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
 4. Для входа используйте указанные в EC2 serial console логин и пароль
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 Обязательно выполните настройку Firewall на самой АТС MikoPBX
