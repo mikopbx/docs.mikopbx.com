@@ -12,4 +12,4 @@
 
 
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td><a href="aws-podrobnaya-instrukciya.md">aws-podrobnaya-instrukciya.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="aws-marketplace.md">aws-marketplace.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>AWS подробная инструкция</td><td><a href="aws-podrobnaya-instrukciya.md">aws-podrobnaya-instrukciya.md</a></td><td><a href="../../../.gitbook/assets/EC2.png">EC2.png</a></td></tr><tr><td>AWS Маркетплейс</td><td><a href="aws-marketplace.md">aws-marketplace.md</a></td><td><a href="../../../.gitbook/assets/Marketplace Light.png">Marketplace Light.png</a></td></tr></tbody></table>
