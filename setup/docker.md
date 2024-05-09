@@ -470,8 +470,8 @@ While waiting for the containers to start, check the firewall settings on the ho
 
 Access each station in turn at the addresses:
 
-* https://<host machine IP>:8443
-* https://<host machine IP>:9443
+* https://\<host machine IP>:8443
+* https://\<host machine IP>:9443
 
 Each machine should have NAT mode enabled, indicating that the container is behind a router in the network interface settings. If the stations will be used within a local network, then in the external IP field, enter the local IP address of the host machine, otherwise its public IP address.
 
