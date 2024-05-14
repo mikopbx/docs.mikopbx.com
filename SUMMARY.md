@@ -15,6 +15,7 @@
   * [VMware Workstation Pro](setup/hypervisor/vmware-workstation-pro.md)
   * [Hyper-V](setup/hypervisor/hyper-v.md)
 * [Cloud](setup/cloud/README.md)
+  * [AWS](setup/cloud/aws.md)
   * [AWS deployment guide](setup/cloud/aws-deployment-guide.md)
   * [AWS Marketplace](setup/cloud/aws-marketplace.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
