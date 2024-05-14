@@ -27,7 +27,7 @@ If you don't have an access key, do the following
 
 If you already have an access key, simply copy the Access key and Secret access key
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
 ### Creating a bucket&#x20;
 
@@ -35,12 +35,12 @@ If you already have an access key, simply copy the Access key and Secret access 
 2. On the tab select **Create bucket**
 3. Enter a unique bucket name
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
 4. Use default values for other fields
 5. After entering the values, click **Create bucket**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_2.png" alt=""><figcaption></figcaption></figure>
 
 6. Open the created bucket and select **Upload**
 7. On the opened tab select **Add files**
@@ -48,7 +48,7 @@ If you already have an access key, simply copy the Access key and Secret access 
 9. Click **Upload**
 10. Wait for the file to finish uploading
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
 ### Adding permissions and attaching policies&#x20;
 
@@ -208,18 +208,18 @@ sh import-image.sh
 
 If the command executes successfully, a unique AMI identifier will be generated
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
 ### Creating a virtual machine&#x20;
 
 1. Open Services / Compute / **EC2** and navigate to Images / AMIs
 2. Select the created image and click **Launch an instance from AMI** to create a virtual machine
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_5 (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Enter the virtual machine name, for example _mikopbx-vm_
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
 4. Specify the instance type - t**3.micro**
 
@@ -231,15 +231,15 @@ If you don't have an SSH key
 
 5. Select **Create new key pair** and specify the key pair name, for example _mikopbx\_key_
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_7.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_8.png" alt=""><figcaption></figcaption></figure>
 
 Follow the instructions further
 
 6. In the Network settings section, check **Allow SSH traffic** and **Allow HTTPS traffic**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 To deploy the PBX use **two** disks:
@@ -250,24 +250,24 @@ To deploy the PBX use **two** disks:
 
 7. If necessary, change the size of the storage disk in Configure storage, default size is 50Gb
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
 8. For other fields use default values
 9. Click **Launch instance**
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
 ### Starting MikoPBX
 
 1. Go to the created virtual machine _mikopbx-vm_
 2. On the opened tab, select Connect / EC2 serial console, wait for the system to fully load until the authentication parameters are displayed
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
 3. Copy the external address of the created virtual machine and enter it in the browser's address bar
 4. Use the login and password provided in EC2 serial console for login
 
-<figure><img src="../../.gitbook/assets/MikoPBXAmazonInstallation_15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_15.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 Make sure to configure the Firewall on the MikoPBX
