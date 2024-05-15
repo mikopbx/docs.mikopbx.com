@@ -1,4 +1,8 @@
-# Создание инстанса утилитой Yandex Cloud
+---
+description: Установка MikoPBX в Yandex Cloud с помощью утилиты yc
+---
+
+# Коммандная строка YC
 
 Утилита [Yandex Cloud](https://yandex.cloud/ru/docs/cli/cli-ref/managed-services/compute/instance/) позволяет автоматизировать создание инстансов. Ее можно использовать в скриптах.&#x20;
 
