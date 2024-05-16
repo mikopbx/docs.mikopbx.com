@@ -213,7 +213,6 @@
 
 ## Прочее <a href="#other" id="other"></a>
 
-* [Версии и пакеты Linux](other/linux-versions-and-packages.md)
 * [История версий](other/changelog/README.md)
   * [MikoPBX 2024.1](other/changelog/mikopbx-2024.1.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
