@@ -24,8 +24,6 @@ Error display during installation, updates, enabling, and disabling modules has 
 
 <figure><img src="../../.gitbook/assets/Release2024.1.ModuleErrorNextToTREn.png" alt=""><figcaption></figcaption></figure>
 
-A bug that displayed system messages in English instead of the user-selected interface language has been fixed.
-
 An option to update all modules with a single button has been added.
 
 ### Licensed Module Operation During Connectivity Issues
@@ -70,13 +68,18 @@ If the brute force attempt continues through REST requests, the system blocks th
 
 The [instructions](../../setup/docker.md) for installing and updating MikoPBX in a Docker container have been completely updated.\
 Added an example of automatic deployment of multiple containers on a single host, described a way to bypass Docker's limitations on passing a large range of RTP ports.\
-Artificial limitations on working with kernel version 5+ have been removed; if the container starts and operates, then all is well.\
+Artificial limitations on working with kernel version 5+ have been removed; if the container starts and operates, then all is well.
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBXDockerEn.png" alt=""><figcaption></figcaption></figure>
+
 Added the ability to set many MikoPBX parameters via environment variables, including network settings, administrator name and password, SSH keys, SSL keys for proper HTTPS operation, and much more.
 
 ### System Optimization for Handling a Large Number of Numbers
 
 Added saving the state, sorting, and current page in the employee list. Optimized mechanisms for checking SIP passwords for security to reduce system load.\
 Implemented an automatic adjustment mechanism for the number of rows per page depending on the screen size and resolution.
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBXExtensionsEn.png" alt=""><figcaption></figcaption></figure>
 
 ### New Interface for Configuring Asterisk Manager Interface (AMI)
 
@@ -172,7 +175,10 @@ An option has been added that allows updating the router's IP address by making 
 
 ### New Interface Languages: Thai
 
-We are gradually expanding the number of available languages in the interface; Thai has been added in this release. Many thanks to our translators.\
+We are gradually expanding the number of available languages in the interface; Thai has been added in this release. Many thanks to our translators.
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ThaiInterface.png" alt=""><figcaption></figcaption></figure>
+
 If you want to help with translating the MikoPBX interface and modules, please [click here](https://weblate.mikopbx.com/projects/mikopbx/admin-web-interface/).
 
 ### Other Improvements
