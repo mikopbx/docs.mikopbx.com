@@ -218,8 +218,3 @@
   * [MikoPBX 2024.1](other/changelog/mikopbx-2024.1.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
-
-***
-
-* [Import](import/README.md)
-  * [Настройка SoftPhone.Pro \[MikoPBX WIKI\]](import/nastroika-softphone.pro-mikopbx-wiki.md)
