@@ -8,12 +8,6 @@ description: Published on 16.05.2024
 
 The Linux kernel and system libraries have been updated to the latest available versions. Notably, the Linux kernel has been updated to version 6.6.1, and Asterisk has been updated to version 20.7.0.
 
-### Module Error Visualization
-
-In the previous release, a mechanism was introduced that automatically disables modules that encounter severe errors. Some users faced difficulties identifying the cause of a module's deactivation. Now, the reason is displayed next to the toggle, and clicking on the icon reveals the error message text.
-
-<figure><img src="../../.gitbook/assets/Release2024.1.ModuleErrorEn.png" alt=""><figcaption></figcaption></figure>
-
 ### App Store Refactoring
 
 All operations for installing and updating modules have been moved to the backend. A detailed card for each module now allows users to select the version for installation, view the version history, and read the change log. It is now possible to not only update a module but also roll back to a previous version.
@@ -25,6 +19,12 @@ Error display during installation, updates, enabling, and disabling modules has 
 <figure><img src="../../.gitbook/assets/Release2024.1.ModuleErrorNextToTREn.png" alt=""><figcaption></figcaption></figure>
 
 An option to update all modules with a single button has been added.
+
+### Module Error Visualization
+
+In the previous release, a mechanism was introduced that automatically disables modules that encounter severe errors. Some users faced difficulties identifying the cause of a module's deactivation. Now, the reason is displayed next to the toggle, and clicking on the icon reveals the error message text.
+
+<figure><img src="../../.gitbook/assets/Release2024.1.ModuleErrorEn.png" alt=""><figcaption></figcaption></figure>
 
 ### Licensed Module Operation During Connectivity Issues
 
@@ -50,6 +50,16 @@ When installing in the cloud, an SSH user with root privileges and an arbitrary 
 
 After cloud installation, the web interface login uses the username **admin** and a password that matches the unique instance identifier. On first login, the system will require the password to be changed.
 
+### MikoPBX Container Installation
+
+The [instructions](../../setup/docker.md) for installing and updating MikoPBX in a Docker container have been completely updated.\
+Added an example of automatic deployment of multiple containers on a single host, described a way to bypass Docker's limitations on passing a large range of RTP ports.\
+Artificial limitations on working with kernel version 5+ have been removed; if the container starts and operates, then all is well.
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBXDockerEn.png" alt=""><figcaption></figcaption></figure>
+
+Added the ability to set many MikoPBX parameters via environment variables, including network settings, administrator name and password, SSH keys, SSL keys for proper HTTPS operation, and much more.
+
 ### Web Interface Password Brute Force Protection
 
 Previously, the fail2ban mechanism, which automatically blocked the IP address of the attacker, was used for protection. By default, entering the wrong password three times was enough for the system to stop responding to browser requests. If active protection was disabled, it was possible to continuously guess passwords.
@@ -63,16 +73,6 @@ If the wrong password is entered, the system remembers the IP address and counts
 <figure><img src="../../.gitbook/assets/Release2024.1.BruteForcrBlockEn.png" alt=""><figcaption></figcaption></figure>
 
 If the brute force attempt continues through REST requests, the system blocks the attacker's IP address for HTTP interface access on the 14th attempt.
-
-### MikoPBX Container Installation
-
-The [instructions](../../setup/docker.md) for installing and updating MikoPBX in a Docker container have been completely updated.\
-Added an example of automatic deployment of multiple containers on a single host, described a way to bypass Docker's limitations on passing a large range of RTP ports.\
-Artificial limitations on working with kernel version 5+ have been removed; if the container starts and operates, then all is well.
-
-<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBXDockerEn.png" alt=""><figcaption></figcaption></figure>
-
-Added the ability to set many MikoPBX parameters via environment variables, including network settings, administrator name and password, SSH keys, SSL keys for proper HTTPS operation, and much more.
 
 ### System Optimization for Handling a Large Number of Numbers
 
