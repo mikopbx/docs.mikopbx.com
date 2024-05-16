@@ -68,7 +68,7 @@ If the brute force attempt continues through REST requests, the system blocks th
 
 ### MikoPBX Container Installation
 
-The [instructions](../../setup/docker.md) for installing and updating MikoPBX in a Docker container have been completely updated. \
+The [instructions](../../setup/docker.md) for installing and updating MikoPBX in a Docker container have been completely updated.\
 Added an example of automatic deployment of multiple containers on a single host, described a way to bypass Docker's limitations on passing a large range of RTP ports.\
 Artificial limitations on working with kernel version 5+ have been removed; if the container starts and operates, then all is well.\
 Added the ability to set many MikoPBX parameters via environment variables, including network settings, administrator name and password, SSH keys, SSL keys for proper HTTPS operation, and much more.
@@ -82,12 +82,42 @@ Implemented an automatic adjustment mechanism for the number of rows per page de
 
 Optimized the configuration form, added the ability to allow the **command** action for manager accounts.
 
+<figure><img src="../../.gitbook/assets/Release2024.1.AMIEn.png" alt=""><figcaption></figcaption></figure>
+
 ### Updated Zabbix Monitoring Module
 
 All necessary system and firewall settings and agent startup are now automatically performed along with the module's start. The configuration file code has been moved to the module form for easy editing.\
 If the port number is changed in the zabbix configuration file, it is automatically passed to the Firewall settings section to manage access to this port at the subnet level.
 
-The zabbix_agent binary is no longer included in the main delivery; it is now delivered as part of a separate module.
+The zabbix\_agent binary is no longer included in the main delivery; it is now delivered as part of a separate module.
+
+<figure><img src="../../.gitbook/assets/ZabbixAgentEnglish.png" alt=""><figcaption></figcaption></figure>
+
+<div>
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixActiveChannels.png" alt=""><figcaption><p>PJSIP Active Chanels</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixAsteriskLive.png" alt=""><figcaption><p>Asterisk responce time</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixNetwork.png" alt=""><figcaption><p>Network interface</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixActiveCalls.png" alt=""><figcaption><p>Active calls</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixCPU.png" alt=""><figcaption><p>CPU Utilisation</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixMemory.png" alt=""><figcaption><p>Memory Utilisation</p></figcaption></figure>
+
+</div>
 
 ### Updated Access Control Module
 
@@ -99,7 +129,7 @@ Added pagination to the user list to facilitate managing call record filters and
 
 ### Optimization of Active Fail2Ban Protection
 
-In the setup form, tabs have been added, and a cross-search feature is now available in the table of blocked addresses.&#x20;
+In the setup form, tabs have been added, and a cross-search feature is now available in the table of blocked addresses.
 
 Blocked addresses and reasons for blocking are grouped by IP address into a single line.
 
@@ -114,6 +144,8 @@ Added the ability to create a copy of a provider and routing settings with one c
 This new feature allows adding a link to a calendar and using it as a source for non-working hours. Simply set periods with the **busy** status in your calendar, and all calls during these periods will be routed according to the non-working hours route.
 
 <figure><img src="../../.gitbook/assets/Release2024.1.NonWorkingHoursEn.png" alt=""><figcaption></figcaption></figure>
+
+The non-working hours mechanism has been revamped. Now, each rule is processed in an isolated context. Errors in the operation of non-working hours restrictions for providers (incoming routes) have been corrected.
 
 ### System Update Mechanism Optimization
 
@@ -131,7 +163,7 @@ When selecting the menu item - installation with the deletion of all settings, i
 
 ### Network Setting Adjustments for NAT Usage
 
-In the new version, separate parameters for external SIP and SIP_TLS ports have been added to the network interface settings, from which port forwarding is performed on the network router.\
+In the new version, separate parameters for external SIP and SIP\_TLS ports have been added to the network interface settings, from which port forwarding is performed on the network router.\
 Added reference information with a list of current ports that need to be forwarded on the router when NAT support is enabled.
 
 <figure><img src="../../.gitbook/assets/Release2024.1.NatSettingsEn.png" alt=""><figcaption></figcaption></figure>
@@ -155,7 +187,7 @@ Added the option to route a call to play a sound file in the incoming routing ru
 
 Implemented the ability to auto-answer during originate for MicroSIP and Telephone softphones.
 
-In the advanced settings of the provider, it is now possible to specify **DIAL_COMMAND** parameters.
+In the advanced settings of the provider, it is now possible to specify **DIAL\_COMMAND** parameters.
 
 Added a log of CLI commands of Asterisk to a file on disk for storage.
 
