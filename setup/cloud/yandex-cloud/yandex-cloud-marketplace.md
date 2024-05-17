@@ -22,62 +22,12 @@ description: Установка MikoPBX в Yandex Cloud из Marketplace
 
 <figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
-В сервисе Yandex Cloud есть возможность загрузить АТС MikoPBX из образа в маркетплейсе Яндекса или из образа на основе загруженного \*.raw файла из дистрибутива MikoPBX (промежуточные релизы)
-
-В случае загрузки АТС MikoPBX из образа в маркетплейсе Яндекса переходите к пункту [**Загрузка АТС MikoPBX из образа в маркетплейсе**](yandex-cloud-marketplace.md#zagruzka-ats-mikopbx-iz-obraza-v-marketpleise)
-
-В случае загрузки АТС MikoPBX из образа на основе \*.raw файла переходите к пункту [**Загрузка АТС MikoPBX из произвольного образа**](yandex-cloud-marketplace.md#zagruzka-ats-mikopbx-iz-proizvolnogo-obraza)
-
 ### Загрузка АТС MikoPBX из образа в маркетплейсе
 
 1. В разделе Выбор образа/загрузочного диска выберите Marketplace / Показать все продукты Marketplace / VoIP / **MikoPBX IP АТС**
 2. В разделе Диски и файловые хранилища скорректируйте размер загрузочного диска до **1 Гб**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_14.png" alt=""><figcaption></figcaption></figure>
-
-Завершив выбор образа, переходите к пункту [Настройка дисков](yandex-cloud-marketplace.md#nastroika-diskov)
-
-### Загрузка АТС MikoPBX из произвольного образа
-
-Перед созданием виртуальной машины необходимо предварительно загрузить образ MikoPBX в облачное хранилище
-
-1. Откройте Все сервисы / Инфраструктура и сеть / **Object Storage**
-2. На вкладке Object Storage выберите **Создать бакет**
-3. Введите имя нового бакета, например _mikopbx-imgs_
-4. Укажите макс. размер **1 Гб**
-5. Для других полей используйте значения по умолчанию
-6. Завершив ввод значений, нажмите кнопку **Создать бакет**
-
-<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_1 (1).png" alt=""><figcaption></figcaption></figure>
-
-7. Откройте созданный бакет _mikopbx-imgs_
-8. На открывшейся вкладке выберите **Загрузить объекты**
-9. Выберите файл из дистрибутива MikoPBX с расширением **.raw**
-10. Нажмите кнопку **Загрузить**
-
-<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_2.png" alt=""><figcaption></figcaption></figure>
-
-11. После завершения загрузки откройте загруженный объект
-12. Выберите Получить ссылку и скопируйте ссылку на образ
-13. Откройте Все сервисы / Инфраструктура и сеть / **Compute Cloud**
-14. Перейдите в раздел Образы
-15. На вкладке выберите **Загрузить образ**
-16. Введите имя образа, например _mikopbx-img_
-17. В поле Ссылка на образ в Object Storage укажите скопированную ранее ссылку на образ АТС
-18. Нажмите кнопку **Загрузить**
-
-<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_3.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_4.png" alt=""><figcaption></figcaption></figure>
-
-Вернемся к выбору образа на вкладке Все сервисы / Инфраструктура и сеть / Compute Cloud / Виртуальные машины
-
-1. В разделе Выбор образа/загрузочного диска выберите Свой образ / Выбрать / Наполнение - Образ / _**mikopbx-img**_
-2. В разделе Диски и файловые хранилища скорректируйте размер загрузочного диска до **1 Гб**
-
-<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_6.png" alt=""><figcaption></figcaption></figure>
-
-Завершив выбор образа, переходите к пункту [Настройка дисков](yandex-cloud-marketplace.md#nastroika-diskov)
 
 ### Настройка дисков
 
