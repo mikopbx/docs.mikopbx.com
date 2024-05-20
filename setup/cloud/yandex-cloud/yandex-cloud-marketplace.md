@@ -86,3 +86,9 @@ description: Установка MikoPBX в Yandex Cloud из Marketplace
 4. Для входа используйте указанные во вкладке Серийная консоль логин и пароль
 
 <figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_16 (1).png" alt=""><figcaption></figcaption></figure>
+
+
+
+{% content-ref url="https://app.gitbook.com/o/-MI-h3_aaVcY5WIyVzY2/snippet/15162" %}
+[Первые шаги](https://app.gitbook.com/o/-MI-h3\_aaVcY5WIyVzY2/snippet/15162)
+{% endcontent-ref %}
