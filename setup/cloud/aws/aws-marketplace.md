@@ -2,6 +2,8 @@
 
 Авторизуйтесь в сервисе Amazon Web Services [https://aws.amazon.com](https://aws.amazon.com/)
 
+MikoPBX в AWS Маркетплейс: [https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw)
+
 Приступим к настройке
 
 {% hint style="info" %}
