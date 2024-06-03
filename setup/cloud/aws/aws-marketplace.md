@@ -2,6 +2,8 @@
 
 Sign in to the service Amazon Web Services [https://aws.amazon.com](https://aws.amazon.com/)
 
+MikoPBX in AWS Marketplace: [https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw)
+
 Let's get started with the setup
 
 {% hint style="info" %}
@@ -12,10 +14,10 @@ For quick and convenient navigation within the Amazon service, use the search pa
 
 1. Open Services / Compute / **EC2** and navigate to Images / AMI Catalog
 2. In the open tab enter **MikoPBX** in the search bar
-3. In the AWS Marketplace AMIs section select the MikoPBX image by clicking the **Select** button
+3. In the AWS Marketplace AMIs section select the [MikoPBX](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw) image by clicking the **Select** button
 4. Click the **Launch an instance from AMI** button to create a virtual machine
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_12.png" alt=""><figcaption></figcaption></figure>
 
 5. Enter the virtual machine name, for example _mikopbx-vm_
 
