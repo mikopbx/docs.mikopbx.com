@@ -1,121 +1,91 @@
 # Hyper-V
 
-## Создание виртуальной машины
+### **Создание виртуальной машины**
 
-1. В оснастке Hyper-V Manager выполните действие **«Действие» - «Создать» - «Виртуальная машина...«**. Будет открыт помощник создания виртуальной машины
+1. Выберите **Action / New / Virtual Machine**
+2. На вкладке Specify Name and Location введите имя (Name) виртуальной машины, например _mikopbx-vm_
 
-<figure><img src="../../.gitbook/assets/1 (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
-2. На первом шаге введите имя виртуальной машины
+3. Перейдите к следующей вкладке Specify Generation, укажите поколение - **Generation 1**
 
-<figure><img src="../../.gitbook/assets/2 (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_2.png" alt=""><figcaption></figcaption></figure>
 
-3. Выберите вариант «**Поколение 1**»
+4. На вкладке Assign Memory выделите необходимый размер оперативной памяти, исходя из ожидаемой нагрузки на АТС. Для тестовой машины можно указать 2 Гб
 
-<figure><img src="../../.gitbook/assets/3 (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
-4. Выделите необходимый размер оперативной памяти. Мы рекомендуем **не менее 2 Гб**
+5. Перейдите к вкладке Configure Networking, выберите заранее настроенное сетевое соединение
 
-Уберите галочку с пункта **"Использовать для этой виртуальной машины динамическую память"**
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/4 (31).png" alt=""><figcaption></figcaption></figure>
+6. На вкладке Connect Virtual Hard Disk скорректируйте размер диска под систему до **1 Гб**
 
-5. Выберите подключение к сети
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_5.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/5 (23).png" alt=""><figcaption></figcaption></figure>
+7. На вкладке Installation Options установите флажок **Install an operating system from a bootable CD/DVD-ROM**
+8. Выберите **Image file (.iso)** и укажите ссылку на файл из дистрибутива MikoPBX с расширением **.iso**
 
-6. Для операционной системы выделите диск размером 1Гб
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6 (7).png" alt=""><figcaption></figcaption></figure>
+9. Завершив ввод значений, нажмите кнопку **Finish**
 
-7. Выберите заранее скачанный файл образа диска с расширением **.iso**
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_7.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (19).png" alt=""><figcaption></figcaption></figure>
+### **Диск для хранения данных**
 
-8. &#x20;Нажмите **"Готово"**
+1. Перейдите к настройкам (Settings) созданной виртуальной машины
+2. Выберите IDE контроллер, к которому подключен диск под систему
+3. На открывшейся вкладке выберите Hard Drive, нажмите кнопку **Add**
+4. Нажмите кнопку **New**
+5. На вкладке Choose disk format выберите формат - **VHD**
 
-<figure><img src="../../.gitbook/assets/8 (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_8.png" alt=""><figcaption></figcaption></figure>
 
-## Создание диска для записи разговоров
+6. На вкладке Choose disk type выберите тип диска - **Fixed size**
 
-1. Перейдите в параметры виртуальной машины
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/9 (15).png" alt=""><figcaption></figcaption></figure>
+7. На вкладке Specify name and location укажите имя (Name), например _storage.vhd_, и расположение диска
 
-2. Перейдите во вкладку "**Контроллер 0 IDE**" и нажмите "**Добавить**"
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/10 (4).png" alt=""><figcaption></figcaption></figure>
+8. На вкладке Configure Disk задайте размер диска для хранения данных не менее 50Гб
 
-3. Нажмите "**Создать**"
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11 (16).png" alt=""><figcaption></figcaption></figure>
+9. Для других полей используйте значения по умолчанию
+10. Завершите настройку, нажав кнопку **Finish**
 
-4. Выберите формат "**VHD"**
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/12 (7).png" alt=""><figcaption></figcaption></figure>
+11. Для запуска виртуальной машины нажмите **Start**
 
-5. Выберите тип диска фиксированного размера
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/13 (3).png" alt=""><figcaption></figcaption></figure>
+### **Установка АТС MikoPBX**
 
-6. Укажите **Имя** и **Расположение** диска
+1. Перейдите к вкладке Connect созданной виртуальной машины _mikopbx-vm_
+2. Если загрузка прошла успешно, появится консольное меню. Введите с клавиатуры **8** для начала установки
 
-<figure><img src="../../.gitbook/assets/14 (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
-7. Укажите **Размер** диска (Мы рекомендуем размер диска **не менее 50 Гб**)
+3. Выберите диск под систему и введите с клавиатуры имя диска, например _**sdс**_. Подтвердите выбор, введите с клавиатуры _**y**_
 
-<figure><img src="../../.gitbook/assets/15 (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_15.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-**1 час** записи разговоров занимает примерно **14мб** на диске.
-{% endhint %}
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_16.png" alt=""><figcaption></figcaption></figure>
 
-8. Нажмите "**Готово**"
+4. Подключите диск для хранения записей разговоров, ведите с клавиатуры наименование диска для подключения, например _**sdb**_
 
-<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_17.png" alt=""><figcaption></figcaption></figure>
 
-9. Удалите DVD-дисковод
+### **Запуск АТС MikoPBX**
 
-<figure><img src="../../.gitbook/assets/21 (1).png" alt=""><figcaption></figcaption></figure>
+1. На открытой вкладке Connect скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
 
-## Установка MikoPBX
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_18.png" alt=""><figcaption></figcaption></figure>
 
-1. Перейдите в "**Действие**" -> "**Пуск**"
+2. Для входа используйте логин - admin и пароль - admin
 
-<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
-
-2. Нажмите "**Подключить**"
-
-<figure><img src="../../.gitbook/assets/19 (3).png" alt=""><figcaption></figcaption></figure>
-
-3. Выберите "**\[8] Install**"
-
-<figure><img src="../../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
-
-4. Введите имя диск, на который будет установлена система, в нашем случае - **sdb**
-
-<figure><img src="../../.gitbook/assets/22 (2).png" alt=""><figcaption></figcaption></figure>
-
-5. Подтвердите ваш выбор: введите **y**
-
-<figure><img src="../../.gitbook/assets/23 (4).png" alt=""><figcaption></figcaption></figure>
-
-6. Выберите диск для записи разговоров - в нашем случае **sdc**
-
-<figure><img src="../../.gitbook/assets/24 (2).png" alt=""><figcaption></figcaption></figure>
-
-7. Система перезагрузится и надпись "Recovery mode" исчезнет. MikoPBX готова к работе.
-
-<figure><img src="../../.gitbook/assets/25 (2).png" alt=""><figcaption></figcaption></figure>
-
-## Первое подключение к MikoPBX
-
-1. IP адрес вашей станции вы можете найти в интерфейсе АТС
-
-<figure><img src="../../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
-
-2. Введите его в строку браузера и у вас откроется Веб-интерфейс MikoPBX
-
-Пароль и логин по умолчанию - **admin**
-
-<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_19.png" alt=""><figcaption></figcaption></figure>
