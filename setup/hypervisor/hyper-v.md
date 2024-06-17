@@ -3,7 +3,7 @@
 ### **Creating a virtual machine**
 
 1. Select **Action / New / Virtual Machine**
-2. On the Specify Name and Location tab, enter the name of the virtual machine, for example, _mikopbx-vm_
+2. On the Specify Name and Location tab, enter the name of the virtual machine, for example _mikopbx-vm_
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
@@ -66,26 +66,30 @@ For deploying the PBX, use **two** disks:
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
-11. To start the virtual machine, click **Start**
+### **Installing MikoPBX**
+
+1. To start the virtual machine, click **Start**
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
-### **Installing MikoPBX**
-
-1. Go to the Connect tab of the created virtual machine _mikopbx-vm_
-2. If the boot is successful, a console menu will appear. Enter **8** from the keyboard to start the installation
+2. Go to the Connect tab of the created virtual machine _mikopbx-vm_
+3. If the boot is successful, a console menu will appear. Enter **8** from the keyboard to start the installation
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
-3. Select the system disk and enter the disk name from the keyboard, for example, _**sda**_. Confirm the selection by entering _**y**_ from the keyboard
+4. Select the system disk and enter the disk name from the keyboard, for example _**sda**_. Confirm the selection by entering _**y**_ from the keyboard
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_15.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_16.png" alt=""><figcaption></figcaption></figure>
 
-4. Connect the disk for storing call recordings, and enter the disk name for connection from the keyboard, for example, _**sdb**_
+5. Connect the disk for storing call recordings, and enter the disk name for connection from the keyboard, for example _**sdb**_
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_17.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+When the message "Press any key within 30 seconds to boot from LiveCD..." appears, do not press any buttons. In this case, the system will boot from the hard drive.
+{% endhint %}
 
 ### **Starting MikoPBX**
 
@@ -95,4 +99,4 @@ For deploying the PBX, use **two** disks:
 
 2. To log in, use the username - admin and password - admin
 
-<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_20.png" alt=""><figcaption></figcaption></figure>
