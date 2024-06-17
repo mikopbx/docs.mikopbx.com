@@ -49,7 +49,7 @@
 
 11. На вкладке Network уберите флажок Firewall
 
-<figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_9_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_9_2.png" alt=""><figcaption></figcaption></figure>
 
 12. Перейдите к последней вкладке Confirm и установите флажок **Start after created**
 13. Завершив ввод значений, нажмите кнопку **Finish**
@@ -73,6 +73,10 @@
 5. Подключите диск для хранения записей разговоров, ведите с клавиатуры наименование диска для подключения, например _**sdb**_
 
 <figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_14_1.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+После появления сообщения “**Press any key within 30 seconds to boot from LiveCD…**” не нажимайте никаких кнопок. В этом случае система загрузится с жесткого диска.
+{% endhint %}
 
 ### **Запуск АТС MikoPBX**
 
