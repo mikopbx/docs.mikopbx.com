@@ -74,6 +74,10 @@ To deploy the PBX use **two** disks:
 
 <figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_14_1.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="danger" %}
+When the message "**Press any key within 30 seconds to boot from LiveCD...**" appears, do not press any buttons. In this case, the system will boot from the hard drive.
+{% endhint %}
+
 ### **Starting MikoPBX**
 
 1. On the open tab in the Console section, copy the external address of the created virtual machine and enter it in the browser address bar
