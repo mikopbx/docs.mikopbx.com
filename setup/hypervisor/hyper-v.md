@@ -66,26 +66,30 @@
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
-11. Для запуска виртуальной машины нажмите **Start**
+### **Установка АТС MikoPBX**
+
+1. Для запуска виртуальной машины нажмите **Start**
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
-### **Установка АТС MikoPBX**
-
-1. Перейдите к вкладке Connect созданной виртуальной машины _mikopbx-vm_
-2. Если загрузка прошла успешно, появится консольное меню. Введите с клавиатуры **8** для начала установки
+2. Перейдите к вкладке Connect созданной виртуальной машины _mikopbx-vm_
+3. Если загрузка прошла успешно, появится консольное меню. Введите с клавиатуры **8** для начала установки
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
-3. Выберите диск под систему и введите с клавиатуры имя диска, например _**sdс**_. Подтвердите выбор, введите с клавиатуры _**y**_
+4. Выберите диск под систему и введите с клавиатуры имя диска, например _**sdс**_. Подтвердите выбор, введите с клавиатуры _**y**_
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_15.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_16.png" alt=""><figcaption></figcaption></figure>
 
-4. Подключите диск для хранения записей разговоров, ведите с клавиатуры наименование диска для подключения, например _**sdb**_
+5. Подключите диск для хранения записей разговоров, ведите с клавиатуры наименование диска для подключения, например _**sdb**_
 
 <figure><img src="../../.gitbook/assets/MikoPBXHyperVInstallation_17.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+После появления сообщения “Press any key within 30 seconds to boot from LiveCD…” не нажимайте никаких кнопок. В этом случае система загрузится с жесткого диска.
+{% endhint %}
 
 ### **Запуск АТС MikoPBX**
 
