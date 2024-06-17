@@ -86,4 +86,4 @@ When the message "**Press any key within 30 seconds to boot from LiveCD...**" ap
 
 2. To log in, use the username - admin and password - admin
 
-<figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_17 (1).png" alt=""><figcaption></figcaption></figure>
