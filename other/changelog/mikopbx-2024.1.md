@@ -35,7 +35,7 @@ Some paid modules required guaranteed connectivity to the licensing server to fu
 The mechanism for automatic setup of MikoPBX during cloud installations has been standardized, and instructions have been updated for the following environments:
 
 * [Microsoft Azure](../../setup/cloud/microsoft-azure.md)
-* [Google Cloud Platform](../../setup/cloud/google-cloud.md)
+* [Google Cloud Platform](../../setup/cloud/google-cloud/google-cloud-deployment-guide.md)
 * [Amazon Web Services](../../setup/cloud/aws/)
 
 An automatic MTU detection mechanism has been added for operations in cloud environments.

@@ -1,4 +1,4 @@
-# Google Cloud
+# Google Cloud deployment guide
 
 Authorize on the platform [https://console.cloud.google.com/](https://console.cloud.google.com/)
 
@@ -16,14 +16,14 @@ For quick and convenient navigation on the Google Cloud platform, use the search
 4. Use default values for other fields
 5. After entering the values, click the **Create** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
 6. Open the created _miko-images_ storage
 7. On the opened tab select **UPLOAD FILES**
 8. Upload the file from the MikoPBX distribution with the **.vhd** extension
 9. Wait for the file upload to complete
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_2.png" alt=""><figcaption></figcaption></figure>
 
 ### Connecting Cloud Build API
 
@@ -61,7 +61,7 @@ If the required roles are not present, add them and click **SAVE**
 9. Use default values for other fields
 10. After entering the values, click the **Create** button and wait for the image creation to complete
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
 ### Creating a virtual machine
 
@@ -69,15 +69,15 @@ If the required roles are not present, add them and click **SAVE**
 2. Select **CREATE INSTANCE**
 3. Enter the virtual machine name, for example _mikopbx-vm_
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
 4. In the Machine configuration / General purpose table select Series - **N1**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_5.png" alt=""><figcaption></figcaption></figure>
 
 5. In the Machine type section choose **Shared-core / f1-micro** from the dropdown menu
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 To deploy the PBX use **two** disks:
@@ -92,7 +92,7 @@ To deploy the PBX use **two** disks:
 9. Use default values for other fields on the tab
 10. Click the **SELECT** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_7.png" alt=""><figcaption></figcaption></figure>
 
 11. In the Advanced options / Disks section select **ADD NEW DISK**
 12. On the opened tab enter the disk name for data storage, for example _disk-storage-mikopbx_
@@ -100,9 +100,9 @@ To deploy the PBX use **two** disks:
 14. Use default values for other fields on the tab
 15. Click the **SAVE** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
 If you have an SSH key, proceed as follows:
 
@@ -120,22 +120,22 @@ If you don't have an SSH key, proceed directly to step 18
 2. Select **CREATE FIREWALL RULE** to create a new rule for incoming connections
 3. Enter the name of the new rule, for example _internal-allow_
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
 4. Specify Direction of traffic - **Ingress**
 5. Specify Targets
 6. From the Source filter dropdown menu select **IPV4 ranges** and in the Source IPv4 ranges field enter **0.0.0.0/0**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
 7. In the Protocols and ports section check the **TCP** (Ports - **0-65535**) and **UDP** (Ports - **0-65535**) checkboxes
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
 8. Use default values for other fields
 9. After entering the values, click the **CREATE** button
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 Make sure to configure the Firewall on the MikoPBX
@@ -147,7 +147,7 @@ Make sure to configure the Firewall on the MikoPBX
 2. Go to the created virtual machine _mikopbx-vm_
 3. On the opened tab navigate to Logs / Serial port 1 (console)
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_17.png" alt=""><figcaption></figcaption></figure>
 
 4. Copy the external address of the created virtual machine and enter it in the browser's address bar
 5. For login use the login and password provided in Serial port 1 (console)
