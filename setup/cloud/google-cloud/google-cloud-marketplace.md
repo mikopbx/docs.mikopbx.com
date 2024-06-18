@@ -60,7 +60,7 @@ To deploy the PBX, use **two** disks:
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Starting MikoPBX
 
@@ -68,9 +68,9 @@ To deploy the PBX, use **two** disks:
 2. Go to the created virtual machine _mikopbx-vm-mikopbx-vm_
 3. On the opened tab, go to Logs / Serial port 1 (console)
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12 (2).png" alt=""><figcaption></figcaption></figure>
 
 4. Copy the external address of the created virtual machine and enter it in the browser address bar
 5. Use the login and password provided in Serial port 1 (console) to log in
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14 (2).png" alt=""><figcaption></figcaption></figure>
