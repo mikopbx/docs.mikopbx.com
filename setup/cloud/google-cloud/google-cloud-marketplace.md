@@ -60,7 +60,7 @@ MikoPBX в Google Cloud Маркетплейс: [https://console.cloud.google.co
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### **Запуск АТС MikoPBX**
 
@@ -68,9 +68,9 @@ MikoPBX в Google Cloud Маркетплейс: [https://console.cloud.google.co
 2. Перейдите к созданной виртуальной машине _mikopbx-vm-mikopbx-vm_
 3. На открытой вкладке перейдите к Logs / Serial port 1 (console)
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12 (2).png" alt=""><figcaption></figcaption></figure>
 
 4. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
 5. Для входа используйте указанные в Serial port 1 (console) логин и пароль
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_13 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_13 (2).png" alt=""><figcaption></figcaption></figure>
