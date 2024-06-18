@@ -27,8 +27,6 @@ MikoPBX в Google Cloud Маркетплейс: [https://console.cloud.google.co
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_2 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_3 (1).png" alt=""><figcaption></figcaption></figure>
-
 6. Нажмите кнопку **DONE**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_4 (1).png" alt=""><figcaption></figcaption></figure>
@@ -37,14 +35,11 @@ MikoPBX в Google Cloud Маркетплейс: [https://console.cloud.google.co
 
 1. Откройте Marketplace и введите в поисковой строке **MikoPBX**
 2. Выберите образ [MikoPBX](https://console.cloud.google.com/marketplace/product/mikopbx-public/mikopbx)
+3. На открытой вкладке выберите **LAUNCH**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_5 (1).png" alt=""><figcaption></figcaption></figure>
 
-3. На открытой вкладке выберите **LAUNCH**
-
-<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6 (1).png" alt=""><figcaption></figcaption></figure>
-
-4. В поле Deployment name введите имя виртуальной машины, например _mikopbx-vm_
+4. В поле Deployment name введите имя, например _mikopbx-vm_
 5. В разделе Deployment Service Account установите флажок Existing account и выберите созданный ранее сервисный аккаунт
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_7 (2).png" alt=""><figcaption></figcaption></figure>
@@ -70,7 +65,7 @@ MikoPBX в Google Cloud Маркетплейс: [https://console.cloud.google.co
 ### **Запуск АТС MikoPBX**
 
 1. Откройте вкладку Compute Engine и перейдите в раздел Virtual machines / VM Instance
-2. Перейдите к созданной виртуальной машине _mikopbx-vm_
+2. Перейдите к созданной виртуальной машине _mikopbx-vm-mikopbx-vm_
 3. На открытой вкладке перейдите к Logs / Serial port 1 (console)
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12 (1).png" alt=""><figcaption></figcaption></figure>
