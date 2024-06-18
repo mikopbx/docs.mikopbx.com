@@ -10,7 +10,7 @@ Let's start with the setup
 For quick and easy search on the Google Cloud platform, use the search bar
 {% endhint %}
 
-### Adding roles to a Service Account
+### Adding roles to a Service account
 
 If you have a service account, check if it has the necessary roles, and add them if needed
 
