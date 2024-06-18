@@ -40,7 +40,7 @@ description: Опубликован 16.05.2024
 * [Microsoft Azure](../../setup/cloud/microsoft-azure.md)
 * [VK облако](../../setup/cloud/vk-cloud.md)
 * [1C:Облачная инфраструктура](../../setup/cloud/1c-oblachnaya-infrastruktura.md)
-* [Google Cloud Platform](../../setup/cloud/google-cloud.md)
+* [Google Cloud Platform](../../setup/cloud/google-cloud/google-cloud-podrobnaya-instrukciya.md)
 * [Amazon Web Services](../../setup/cloud/aws/)
 
 Добавлен механизм автоматического определения MTU при работе в облаках.
@@ -106,23 +106,23 @@ description: Опубликован 16.05.2024
 
 <div>
 
-<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixActiveChannels.png" alt=""><figcaption>Активные каналы</figcaption></figure>
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixActiveChannels.png" alt=""><figcaption><p>Активные каналы</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixAsteriskLive.png" alt=""><figcaption>Статус Asterisk</figcaption></figure>
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixAsteriskLive.png" alt=""><figcaption><p>Статус Asterisk</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixNetwork.png" alt=""><figcaption>Загрузка сетевого интерфейса</figcaption></figure>
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixNetwork.png" alt=""><figcaption><p>Загрузка сетевого интерфейса</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixActiveCalls.png" alt=""><figcaption>Статистика звонков</figcaption></figure>
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixActiveCalls.png" alt=""><figcaption><p>Статистика звонков</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixCPU.png" alt=""><figcaption>Загрузка процессора</figcaption></figure>
+<figure><img src="../../.gitbook/assets/Release2024.1.MikoPBX.ZabbixCPU.png" alt=""><figcaption><p>Загрузка процессора</p></figcaption></figure>
 
  
 

@@ -26,7 +26,9 @@
     * [AWS подробная инструкция](setup/cloud/aws/aws-podrobnaya-instrukciya.md)
     * [AWS Маркетплейс](setup/cloud/aws/aws-marketplace.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
-  * [Google Cloud](setup/cloud/google-cloud.md)
+  * [Google Cloud](setup/cloud/google-cloud/README.md)
+    * [Google Cloud подробная инструкция](setup/cloud/google-cloud/google-cloud-podrobnaya-instrukciya.md)
+    * [Google Cloud Маркетплейс](setup/cloud/google-cloud/google-cloud-marketplace.md)
   * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
 * [В Docker контейнере](setup/docker.md)
 

@@ -2,7 +2,7 @@
 description: Установка MikoPBX в облако Google Cloud
 ---
 
-# Google Cloud
+# Google Cloud подробная инструкция
 
 Авторизуйтесь на платформе [https://console.cloud.google.com/](https://console.cloud.google.com/)
 
@@ -20,14 +20,14 @@ description: Установка MikoPBX в облако Google Cloud
 4. Для других полей используйте значения по умолчанию
 5. Завершив ввод значений, нажмите кнопку **Create**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
 6. Откройте созданное хранилище _miko-images_
 7. На открывшейся вкладке выберите **UPLOAD FILES**
 8. Загрузите файл из дистрибутива MikoPBX с расширением **.vhd**
 9. Дождитесь окончания загрузки файла
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_2.png" alt=""><figcaption></figcaption></figure>
 
 ### **Подключение C**loud Build API
 
@@ -65,7 +65,7 @@ description: Установка MikoPBX в облако Google Cloud
 9. Для других полей используйте значения по умолчанию
 10. Завершив ввод значений, нажмите кнопку **Create** и дождитесь окончания создания образа
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
 ### **Создание виртуальной машины**
 
@@ -73,15 +73,15 @@ description: Установка MikoPBX в облако Google Cloud
 2. Выберите **CREATE INSTANCE**
 3. Введите имя виртуальной машины (Name), например _mikopbx-vm_
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
 4. В таблице Machine configuration / General purpose выберите Series - **N1**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_5.png" alt=""><figcaption></figcaption></figure>
 
 5. В разделе Machine type в выпадающем меню выберите **Shared-core / f1-micro**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_6.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 Для развертывания АТС используйте **два** диска:
@@ -96,7 +96,7 @@ description: Установка MikoPBX в облако Google Cloud
 9. Для других полей на вкладке используйте значения по умолчанию
 10. Нажмите кнопку **SELECT**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_7 (1).png" alt=""><figcaption></figcaption></figure>
 
 11. В разделе Advanced options / Disks выберите **ADD NEW DISK**
 12. На открытой вкладке введите имя диска для хранения данных (Name), например _disk-storage-mikopbx_
@@ -104,9 +104,9 @@ description: Установка MikoPBX в облако Google Cloud
 14. Для других полей на вкладке используйте значения по умолчанию
 15. Нажмите кнопку **SAVE**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_10.png" alt=""><figcaption></figcaption></figure>
 
 Если у вас есть ключ SSH, выполните следующее
 
@@ -124,22 +124,22 @@ description: Установка MikoPBX в облако Google Cloud
 2. Выберите **CREATE FIREWALL RULE** для создания нового правила для входящего соединения
 3. Введите имя нового правила (Name), например _internal-allow_
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_11.png" alt=""><figcaption></figcaption></figure>
 
 4. Укажите Direction of traffic - **Ingress**
 5. Укажите Targets
 6. Из выпадающего меню в поле Source filter выберите **IPV4 ranges** и в поле Source IPv4 ranges укажите **0.0.0.0/0**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
 7. В разделе Protocols and ports установите флажок **TCP** (Ports - **0-65535**) и флажок **UDP** (Ports - **0-65535**)
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
 8. Для других полей используйте значения по умолчанию
 9. Завершив ввод значений, нажмите кнопку **CREATE**
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 Обязательно выполните настройку Firewall на самой АТС MikoPBX
@@ -151,7 +151,7 @@ description: Установка MikoPBX в облако Google Cloud
 2. Перейдите к созданной виртуальной машине _mikopbx-vm_
 3. На открытой вкладке перейдите к Logs / Serial port 1 (console)
 
-<figure><img src="../../.gitbook/assets/MikoPBXGoogleCloudInstallation_17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_17.png" alt=""><figcaption></figcaption></figure>
 
 4. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
 5. Для входа используйте указанные в Serial port 1 (console) логин и пароль
