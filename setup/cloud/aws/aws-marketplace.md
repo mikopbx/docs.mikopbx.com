@@ -15,7 +15,8 @@ MikoPBX в AWS Маркетплейс: [https://aws.amazon.com/marketplace/pp/pr
 1. Откройте Services / Compute / **EC2** и перейдите в раздел Images / AMI Catalog
 2. На открытой вкладке в поисковой строке введите **MikoPBX**
 3. В разделе AWS Marketplace AMIs выберите образ [MikoPBX](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw), нажав кнопку **Select**
-4. Нажмите кнопку **Launch an instance form AMI** для создания виртуальной машины
+4. На открытой вкладке нажмите кнопку **Subscribe now**
+5. Нажмите кнопку **Launch an instance form AMI** для создания виртуальной машины
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_12.png" alt=""><figcaption></figcaption></figure>
 
@@ -52,8 +53,8 @@ MikoPBX в AWS Маркетплейс: [https://aws.amazon.com/marketplace/pp/pr
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_6.png" alt=""><figcaption></figcaption></figure>
 
-8. Для других полей используйте значения по умолчанию
-9. Нажмите кнопку **Launch instance**
+9. Для других полей используйте значения по умолчанию
+10. Нажмите кнопку **Launch instance**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_8 (1).png" alt=""><figcaption></figcaption></figure>
 
