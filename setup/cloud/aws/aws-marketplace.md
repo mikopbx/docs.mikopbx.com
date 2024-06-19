@@ -15,21 +15,22 @@ For quick and convenient navigation within the Amazon service, use the search pa
 1. Open Services / Compute / **EC2** and navigate to Images / AMI Catalog
 2. In the open tab enter **MikoPBX** in the search bar
 3. In the AWS Marketplace AMIs section select the [MikoPBX](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw) image by clicking the **Select** button
-4. Click the **Launch an instance from AMI** button to create a virtual machine
+4. On the opened tab click **Subscribe now**
+5. Click the **Launch an instance from AMI** button to create a virtual machine
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_12.png" alt=""><figcaption></figcaption></figure>
 
-5. Enter the virtual machine name, for example _mikopbx-vm_
+6. Enter the virtual machine name, for example _mikopbx-vm_
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_2.png" alt=""><figcaption></figcaption></figure>
 
 If you have an SSH key
 
-6. Specify the SSH key in the Key pair field
+7. Specify the SSH key in the Key pair field
 
 If you don't have an SSH key
 
-6. Select **Create new key pair** and specify the key pair name, for example _mikopbx\_key_
+7. Select **Create new key pair** and specify the key pair name, for example _mikopbx\_key_
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_3.png" alt=""><figcaption></figcaption></figure>
 
@@ -44,16 +45,16 @@ To deploy the PBX use **two** disks:
 * A **50+ Gb** disk for storing call recordings
 {% endhint %}
 
-7. If necessary, change the size of the storage disk in Configure storage, default size is 50Gb
+8. If necessary, change the size of the storage disk in Configure storage, default size is 50Gb
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_7.png" alt=""><figcaption></figcaption></figure>
 
-8. Under Network settings, all required Firewall rules are configured automatically
+9. Under Network settings, all required Firewall rules are configured automatically
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_6.png" alt=""><figcaption></figcaption></figure>
 
-9. For other fields use default values
-10. Click **Launch instance**
+10. For other fields use default values
+11. Click **Launch instance**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_8.png" alt=""><figcaption></figcaption></figure>
 
