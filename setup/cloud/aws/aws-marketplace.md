@@ -48,8 +48,12 @@ To deploy the PBX use **two** disks:
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_7.png" alt=""><figcaption></figcaption></figure>
 
-8. For other fields use default values
-9. Click **Launch instance**
+8. Under Network settings, all required Firewall rules are configured automatically
+
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_6.png" alt=""><figcaption></figcaption></figure>
+
+9. For other fields use default values
+10. Click **Launch instance**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_8.png" alt=""><figcaption></figcaption></figure>
 
