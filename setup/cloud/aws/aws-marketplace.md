@@ -48,6 +48,10 @@ MikoPBX в AWS Маркетплейс: [https://aws.amazon.com/marketplace/pp/pr
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_7 (1).png" alt=""><figcaption></figcaption></figure>
 
+8. В разделе Network settings все необходимые правила Firewall настраиваются автоматически
+
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_6.png" alt=""><figcaption></figcaption></figure>
+
 8. Для других полей используйте значения по умолчанию
 9. Нажмите кнопку **Launch instance**
 
