@@ -4,6 +4,12 @@ description: Installing MikoPBX as a guest machine in VirtualBOX
 
 # VirtualBOX
 
+{% hint style="warning" %}
+Use versions of MikoPBX below 2024.1.114 for installation on VirtualBOX
+
+Version 2024.1.114 temporarily does not support installation on VirtualBOX
+{% endhint %}
+
 ## Create a virtual machine
 
 1. Download **Virtual Box** from the [link](https://www.virtualbox.org/wiki/Downloads) and install it.
