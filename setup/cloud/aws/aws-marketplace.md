@@ -20,17 +20,17 @@ MikoPBX в AWS Маркетплейс: [https://aws.amazon.com/marketplace/pp/pr
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_12.png" alt=""><figcaption></figcaption></figure>
 
-5. Введите имя виртуальной машины (Name), например _mikopbx-vm_
+6. Введите имя виртуальной машины (Name), например _mikopbx-vm_
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_2 (1).png" alt=""><figcaption></figcaption></figure>
 
 Если у вас есть ключ SSH, выполните следующее
 
-6. Укажите SSH ключ в поле Key pair
+7. Укажите SSH ключ в поле Key pair
 
 Если у вас есть нет ключа SSH, выполните следующее
 
-6. Выберите **Create new key pair** и укажите имя пары ключей (Key pair name), например _mikopbx\_key_
+7. Выберите **Create new key pair** и укажите имя пары ключей (Key pair name), например _mikopbx\_key_
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_3 (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -45,16 +45,16 @@ MikoPBX в AWS Маркетплейс: [https://aws.amazon.com/marketplace/pp/pr
 * диск объемом **50+ Гб** для хранения записей разговоров
 {% endhint %}
 
-7. При необходимости измените размер диска для хранения данных в разделе Configure storage, по умолчанию его размер - 50Гб
+8. При необходимости измените размер диска для хранения данных в разделе Configure storage, по умолчанию его размер - 50Гб
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_7 (1).png" alt=""><figcaption></figcaption></figure>
 
-8. В разделе Network settings все необходимые правила Firewall настраиваются автоматически
+9. В разделе Network settings все необходимые правила Firewall настраиваются автоматически
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_6.png" alt=""><figcaption></figcaption></figure>
 
-9. Для других полей используйте значения по умолчанию
-10. Нажмите кнопку **Launch instance**
+10. Для других полей используйте значения по умолчанию
+11. Нажмите кнопку **Launch instance**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_8 (1).png" alt=""><figcaption></figcaption></figure>
 
