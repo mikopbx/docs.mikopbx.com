@@ -92,7 +92,7 @@
 1. Сотрудники группы смогут звонить только на номера своей группы
 2. Сотрудники из других групп, не смогут позвонить на изолированную группу
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/isolate.png" alt=""><figcaption></figcaption></figure>
 
 **Шаблоны номеров, относящихся к группе. Участник группы сможет звонить только на них**
 
