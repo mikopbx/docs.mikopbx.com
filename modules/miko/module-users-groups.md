@@ -1,4 +1,4 @@
-# Группы пользователей
+# Users groups
 
 {% hint style="info" %}
 Модуль возможно использовать начиная с **MikoPBX 2019.04.134.**
@@ -29,7 +29,7 @@
 
 ![](../../.gitbook/assets/mod\_grup\_polz\_2.png)
 
-5\. На вкладке **Настройки группы** укажите ее имя и описание**.**  Затем нажмите **Сохранить.**
+5\. На вкладке **Настройки группы** укажите ее имя и описание\*\*.\*\* Затем нажмите **Сохранить.**
 
 ![](../../.gitbook/assets/mod\_grup\_polz\_3.png)
 
@@ -89,13 +89,15 @@
 
 This feature allows for the isolation of a group of employees on the PBX:
 
-1. Employees within the group can only call numbers within their own group.
-2. Employees from other groups will not be able to call the isolated group.
+1. Employees within the group can only call numbers within their own group
+2. Employees from other groups will not be able to call the isolated group
+
+<figure><img src="../../.gitbook/assets/isolate.png" alt=""><figcaption></figcaption></figure>
 
 **Number templates related to the group. A group member will be able to call only these numbers**
 
-1. The templates may include digits from 1 to 9 and the symbol X (any digit 1-9).
-2. A group member will be able to dial all numbers that match the template.
+1. The templates may include digits from 1 to 9 and the symbol X (any digit 1-9)
+2. A group member will be able to dial all numbers that match the template
 
 Examples of templates:
 
