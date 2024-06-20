@@ -55,8 +55,12 @@ To deploy the PBX, use **two** disks:
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_8.png" alt=""><figcaption></figcaption></figure>
 
-7. For other fields, use the default values
-8. After entering the values, click the **DEPLOY** button
+7. Under Networking, all required Firewall rules are configured automatically
+
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_15 (1).png" alt=""><figcaption></figcaption></figure>
+
+8. For other fields, use the default values
+9. After entering the values, click the **DEPLOY** button
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
