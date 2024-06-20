@@ -85,3 +85,20 @@
 
 ![](../../.gitbook/assets/mod\_grup\_polz\_8.png)
 
+## Group Isolation <a href="#group_isolation" id="group_isolation"></a>
+
+This feature allows for the isolation of a group of employees on the PBX:
+
+1. Employees within the group can only call numbers within their own group.
+2. Employees from other groups will not be able to call the isolated group.
+
+**Number templates related to the group. A group member will be able to call only these numbers**
+
+1. The templates may include digits from 1 to 9 and the symbol X (any digit 1-9).
+2. A group member will be able to dial all numbers that match the template.
+
+Examples of templates:
+
+* **2XX** - numbers from 200 to 299
+* **200001** - a specific internal number, such as a queue number
+* **7XXXXXXXXXX** - 11-digit numbers for Russia
