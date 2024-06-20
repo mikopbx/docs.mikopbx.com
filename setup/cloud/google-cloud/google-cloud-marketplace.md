@@ -55,8 +55,12 @@ MikoPBX в Google Cloud Маркетплейс: [https://console.cloud.google.co
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_8 (1).png" alt=""><figcaption></figcaption></figure>
 
-7. Для других полей используйте значения по умолчанию
-8. Завершив ввод значений, нажмите кнопку **DEPLOY**
+7. В разделе Networking все необходимые правила Firewall настраиваются автоматически
+
+<figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_15 (1).png" alt=""><figcaption></figcaption></figure>
+
+8. Для других полей используйте значения по умолчанию
+9. Завершив ввод значений, нажмите кнопку **DEPLOY**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXGoogleCloudInstallation_9 (1).png" alt=""><figcaption></figcaption></figure>
 
