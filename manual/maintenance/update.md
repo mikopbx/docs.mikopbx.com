@@ -1,105 +1,153 @@
 ---
 description: >-
-  Данная статья содержит пошаговые инструкции по обновлению MikoPBX на более
-  новую версию.
+  This article contains step-by-step instructions for updating MikoPBX to a newer version.
 ---
 
-# System upgrade
+# System Update
 
 {% hint style="danger" %}
-Перед обновлением обязательно сделайте резервную копию настроек АТС. Делается это при помощи [**модуля резервного копирования**](broken-reference).
+Before updating, be sure to back up your PBX settings using the [**backup module**](backup.md).
 {% endhint %}
 
-## Обновление из web-интерфейса <a href="#obnovlenie_iz_web-interfejsa" id="obnovlenie_iz_web-interfejsa"></a>
+## Updating from the web interface <a href="#web_interface_update" id="web_interface_update"></a>
 
-В некоторых разделах интерфейса (например, **Сотрудники**) в правом нижнем углу указана текущая версия MikoPBX.
+In some sections of the interface (e.g., **Employees**), the current version of MikoPBX is displayed in the lower right corner.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_0 (1).png" alt=""><figcaption></figcaption></figure>
 
-В web-интерфейсе АТС перейдите в **Обслуживание** → **Обновление PBX**.
+In the PBX web interface, go to **Maintenance** → **Update PBX**.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_1.png" alt=""><figcaption></figcaption></figure>
 
-Если есть версии АТС новее вашей текущей, они будут отображены в таблице **Доступны онлайн обновления**, в которой в первом поле номер версии, а во втором - список изменений.
+If there are newer versions of the PBX available, they will be displayed in the **Available Online Updates** table, with the version number in the first field and the list of changes in the second.
 
 {% hint style="warning" %}
-Рекомендуем проводить обновления последовательно, «не перепрыгивая» через релизы.
+We recommend performing updates sequentially without skipping releases.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/obnov_ats_2.png" alt=""><figcaption></figcaption></figure>
 
-Далее возможны два варианта обновления: **обновление онлайн, обновление скачанным img-файлом**.
+There are two update options: **online update** and **update using a downloaded img file**.
 
-### Обновление онлайн
+### Online Update
 
 {% hint style="danger" %}
-**Будьте внимательны**! Если система установлена на тот же диск, где хранятся записи разговоров, то могут быть сложности с обновлением. [см. форум](https://qa.askozia.ru/5061/%D0%BF%D1%80%D0%BE%D0%BF%D0%B0%D0%B4%D0%B0%D0%B5%D1%82-%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-6-7-7-31)
+**Be cautious**! If the system is installed on the same disk where call recordings are stored, there may be difficulties with the update. [See forum](https://qa.askozia.ru/5061/%D0%BF%D1%80%D0%BE%D0%BF%D0%B0%D0%B4%D0%B0%D0%B5%D1%82-%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-6-7-7-31)
 {% endhint %}
 
-Обновления загружаются на АТС и сразу же применяются.\
-Для обновления таким способом нажмите кнопку ![](../../.gitbook/assets/obnov\_ats\_3.png) в нужной вам версии обновления.
+Updates are downloaded to the PBX and applied immediately.\
+To update this way, click the button ![](../../.gitbook/assets/obnov\_ats\_3.png) for the desired version.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_4.png" alt=""><figcaption></figcaption></figure>
 
-Появится окно предупреждения. Нажмите в нем **Обновить.**
+A warning window will appear. Click **Update**.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_5.png" alt=""><figcaption></figcaption></figure>
 
-АТС загрузит и применит обновления, а затем перезагрузится.
+The PBX will download and apply the updates, and then reboot.
 
-### **Обновление скачанным img-файлом**
+### **Update Using a Downloaded img File**
 
 {% hint style="info" %}
-Следует сразу заметить, что данным способом можно выполнить не только обновление, но и откат на более прежнюю версию.
+Please note that this method can also be used to roll back to a previous version.
 {% endhint %}
 
-Для обновления данным способом нажмите кнопку ![](../../.gitbook/assets/obnov\_ats\_6.png) в нужной вам версии обновления.
+To update using this method, click the button ![](../../.gitbook/assets/obnov\_ats\_6.png) for the desired version.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_7.png" alt=""><figcaption></figcaption></figure>
 
-Начнется скачивание img-образа. Дождитесь завершения загрузки.
+The img file will start downloading. Wait for the download to complete.
 
-Затем нажмите кнопку ![](../../.gitbook/assets/obnov\_ats\_8.png) и выберите данный img-файл.
+Then click the button ![](../../.gitbook/assets/obnov\_ats\_8.png) and select the downloaded img file.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_0.gif" alt=""><figcaption></figcaption></figure>
 
-Затем нажмите **Применить обновление,** а в появившемся окне предупреждения нажмите **Обновить.**&#x20;
+Then click **Apply Update**, and in the warning window, click **Update**.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_1.gif" alt=""><figcaption></figcaption></figure>
 
-Начнется применение обновлений. После окончания которого АТС перезагрузится.
+The updates will be applied, and the PBX will reboot upon completion.
 
 <figure><img src="../../.gitbook/assets/obnov_ats_2.gif" alt=""><figcaption></figcaption></figure>
 
-## Обновление из консоли MikoPBX <a href="#obnovlenie_iz_konsoli_mikopbx" id="obnovlenie_iz_konsoli_mikopbx"></a>
+## Updating from the MikoPBX Console <a href="#console_update" id="console_update"></a>
 
-Ниже приведен пример с АТС, установленной на виртуальную машину VirtualBOX. Обновление производится с версии 2022.2.102 до версии 2022.3.15.\
-Скачайте из [репозитория](https://github.com/mikopbx/Core/releases) iso-образ нужной вам версии АТС.
+Below is an example of a PBX installed on a VirtualBOX virtual machine, updated from version 2022.2.102 to version 2022.3.15.\
+Download the iso image of the required PBX version from the [repository](https://github.com/mikopbx/Core/releases).
 
 <figure><img src="../../.gitbook/assets/obnov_kons_0 (1).png" alt=""><figcaption></figcaption></figure>
 
-В программе VirtualBOX откройте настройки виртуальной машины на которой установлена АТС.\
-Перейдите в раздел **Носители.**\
-Выделите виртуальный оптический привод. \
-Нажмите на значок ![](../../.gitbook/assets/obnov\_kons\_1.png) в группе **Атрибуты,** нажмите **Выбрать файл диска**.\
-Выберите скачанный iso-образ АТС.\
-Запустите машину.
+In VirtualBOX, open the settings of the virtual machine where the PBX is installed.\
+Go to the **Storage** section.\
+Select the virtual optical drive.\
+Click the icon ![](../../.gitbook/assets/obnov\_kons\_1.png) in the **Attributes** group, and click **Choose Disk File**.\
+Select the downloaded PBX iso image.\
+Start the machine.
 
 <figure><img src="../../.gitbook/assets/obn_kons_0.gif" alt=""><figcaption></figcaption></figure>
 
-В консоли отобразится соответствующая строка "<mark style="color:red;">**The system loaded in Recovery mode**</mark>" («АТС загружена в режиме восстановления» на русском).
+The console will display the line "<mark style="color:red;">**The system loaded in Recovery mode**</mark>".
 
 <figure><img src="../../.gitbook/assets/obnov_kons_2.png" alt=""><figcaption></figcaption></figure>
 
-Выберите **Install / Repair** (или нажмите на клавиатуре цифру **8)** и нажмите «**Enter**».
+Select **Install / Repair** (or press the number **8** on the keyboard) and press **Enter**.
 
-Вам нужна команда "**Update to version \*\*\*\*.\*.\*\*".** Нажмите на клавиатуре цифру **2,** затем нажмите «**Enter**».\
-Начнется установка обновления. Когда она завершится, АТС перезагрузится.
+You need the command "**Update to version \*\*\*\*.\*.\*\*".** Press the number **2** on the keyboard, then press **Enter**.\
+The update installation will begin. When it is complete, the PBX will reboot.
 
 <figure><img src="../../.gitbook/assets/obnov_kons_1.gif" alt=""><figcaption></figcaption></figure>
 
-После перезагрузки АТС сообщения "<mark style="color:red;">**The system loaded in Recovery mode**</mark>" уже не будет, что означает, что АТС загрузилась с жесткого диска, а не с виртуального оптического привода.\
-Вверху зеленым шрифтом будет обозначена установленная версия обновления.
+After the PBX reboots, the message "<mark style="color:red;">**The system loaded in Recovery mode**</mark>" will no longer appear, indicating that the PBX has booted from the hard disk and not from the virtual optical drive.\
+The installed update version will be displayed in green at the top.
 
 <figure><img src="../../.gitbook/assets/obnov_kons_3.png" alt=""><figcaption></figcaption></figure>
 
+## Updating the Docker Container <a href="#docker-upgrade" id="docker-upgrade"></a>
+
+To update the MikoPBX container to the latest version, you can follow these steps in the command line. These steps include stopping the current container, downloading the new version of the image, and running the container with the updated image. Here is an example of the process:
+
+#### Step 1: Stop the current container
+
+First, you need to properly stop the running container. This prevents data loss and ensures that all processes within the container are correctly terminated:
+
+```bash
+docker stop mikopbx
+```
+
+#### Step 2: Remove the current container
+
+After stopping the container, you can safely remove it. Removing the container allows you to start a new instance with new settings and the updated image:
+
+```bash
+docker rm mikopbx
+```
+
+#### Step 3: Download the latest version of the image
+
+The next step is to download the latest version of the MikoPBX image. Using the `latest` tag ensures you get the most recent version:
+
+```bash
+docker pull ghcr.io/mikopbx/mikopbx-x86-64:latest
+```
+
+#### Step 4: Run the new container with the updated image
+
+Finally, run the new container using the latest version of the image and the same settings as before (including volume mounts and other network parameters):
+
+```bash
+docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
+  -v mikopbx_cf:/cf \
+  -v mikopbx_storage:/storage \ 
+  -e SSH_PORT=23 \ 
+  -e ID_WWW_USER="$(id -u www-user)" \ 
+  -e ID_WWW_GROUP="$(id -g www-user)" \ 
+  -it -d --restart always ghcr.io/mikopbx/mikopbx-x86-64:latest
+```
+
+#### Notes:
+
+* **Data**: Since data is stored in Docker volumes (`mikopbx_cf` and `mikopbx_storage`), it remains untouched during the update, preserving settings and user data.
+* **Environment Variables**: Ensure that all necessary environment variables are correctly passed.
+* **Safety**: Always create backups of your data before updating.
+
+These steps will help ensure a smooth and safe update of your MikoPBX container.
