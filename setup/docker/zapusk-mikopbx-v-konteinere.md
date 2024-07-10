@@ -1,5 +1,11 @@
 # Запуск MikoPBX в контейнере
 
+Для работы с MikoPBX в контейнере необходимо установить docker и docker compose по инструкции
+
+{% content-ref url="ustanovka-dokera-i-bazovye-komandy.md" %}
+[ustanovka-dokera-i-bazovye-komandy.md](ustanovka-dokera-i-bazovye-komandy.md)
+{% endcontent-ref %}
+
 ### Запуск контейнера Docker
 
 Для запуска контейнера с вашим приложением воспользуйтесь следующими командами:
@@ -85,21 +91,20 @@ https://\<IP адрес хост системы>
 
 Пример кода, для его использования:
 
-```bash
-// Создаем контейнер из tar архива
-sudo docker import \
+<pre class="language-bash"><code class="lang-bash"><strong># Создаем контейнер из tar архива
+</strong>sudo docker import \
   --change 'ENTRYPOINT ["/bin/sh", "/sbin/docker-entrypoint"]' \
   mikopbx-2024.1.114-x86_64.tar \
   "mikopbx:2024.1.114"
 
-// Запускаем созданный контейнер
+# Запускаем созданный контейнер
 sudo docker volume create data_volume
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
 	 -v data_volume:/cf \
          -v data_volume:/storage \
 	 -e SSH_PORT=23 \
 	 -it mikopbx:2024.1.114
-```
+</code></pre>
 
 ### Переменные окружения для конфигурирования MikoPBX
 

@@ -1,5 +1,11 @@
 # Запуск MikoPBX с помощью docker compose
 
+Для работы с MikoPBX в контейнере необходимо установить docker и docker compose по инструкции
+
+{% content-ref url="ustanovka-dokera-i-bazovye-komandy.md" %}
+[ustanovka-dokera-i-bazovye-komandy.md](ustanovka-dokera-i-bazovye-komandy.md)
+{% endcontent-ref %}
+
 ### Запуск с помощью docker compose
 
 Вот пример файла `docker-compose.yml`, который может быть использован для управления вашим контейнером MikoPBX через Docker Compose:
