@@ -91,8 +91,9 @@ https://\<IP адрес хост системы>
 
 Пример кода, для его использования:
 
-<pre class="language-bash"><code class="lang-bash"><strong># Создаем контейнер из tar архива
-</strong>sudo docker import \
+```bash
+# Создаем контейнер из tar архива
+sudo docker import \
   --change 'ENTRYPOINT ["/bin/sh", "/sbin/docker-entrypoint"]' \
   mikopbx-2024.1.114-x86_64.tar \
   "mikopbx:2024.1.114"
@@ -104,7 +105,7 @@ sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx
          -v data_volume:/storage \
 	 -e SSH_PORT=23 \
 	 -it mikopbx:2024.1.114
-</code></pre>
+```
 
 ### Переменные окружения для конфигурирования MikoPBX
 
