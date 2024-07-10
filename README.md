@@ -18,7 +18,7 @@
 * [Отдельный компьютер ](setup/bare-metal.md)
 * [Виртуальная машина](setup/hypervisor/)
 * [Облако](setup/cloud/)
-* [Докер контейнер](setup/docker.md)
+* [Докер контейнер](setup/docker/)
 
 ### Глава 2. Знакомство с MikoPBX <a href="#glava_2_znakomstvo_s_mikopbx" id="glava_2_znakomstvo_s_mikopbx"></a>
 

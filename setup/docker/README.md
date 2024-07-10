@@ -1,0 +1,9 @@
+# В Docker контейнере
+
+{% hint style="danger" %}
+«**Host система**» должна быть запущена на базе Linux 5+. Тестировалось на Debian 11 и Ubuntu-21.04, Ubuntu Server 22.04 LTS
+{% endhint %}
+
+MikoPBX можно запустить в Docker, используя два основных способа. Первый способ включает в себя запуск контейнера напрямую через команду Docker с указанием необходимых параметров. Второй способ предусматривает использование Docker Compose, что упрощает управление многоконтейнерными приложениями и позволяет описать всю конфигурацию в yaml-файле, что делает развертывание и обслуживание системы более удобным.
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Установка и базовые команды</strong></td><td>Команды для установки Docker и Docker Compose</td><td><a href="ustanovka-dokera-i-bazovye-komandy.md">ustanovka-dokera-i-bazovye-komandy.md</a></td><td><a href="../../.gitbook/assets/install.png">install.png</a></td></tr><tr><td><strong>Запуск MikoPBX в контейнере</strong></td><td>Инструкции по запуску готового контейнера MikoPBX, созданию контейнера из произвольного образа и его запуску</td><td><a href="zapusk-mikopbx-v-konteinere.md">zapusk-mikopbx-v-konteinere.md</a></td><td><a href="../../.gitbook/assets/docker.png">docker.png</a></td></tr><tr><td><strong>Запуск MikoPBX с помощью docker compose</strong></td><td>Инструкции по запуску нескольких MikoPBX на одном хосте с помощью docker compose</td><td><a href="zapusk-mikopbx-s-pomoshyu-docker-compose.md">zapusk-mikopbx-s-pomoshyu-docker-compose.md</a></td><td><a href="../../.gitbook/assets/docker_compose.png">docker_compose.png</a></td></tr></tbody></table>

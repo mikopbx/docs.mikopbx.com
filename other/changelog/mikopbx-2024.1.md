@@ -59,7 +59,7 @@ description: Опубликован 16.05.2024
 
 ### Установка MikoPBX контейнер
 
-Полностью обновлена [инструкция](../../setup/docker.md) по установке и обновлению MikoPBX в контейнер Docker.
+Полностью обновлена [инструкция](../../setup/docker/) по установке и обновлению MikoPBX в контейнер Docker.
 
 <figure><img src="../../.gitbook/assets/Release2024.1.MikoPBXDockerRu (1).png" alt=""><figcaption></figcaption></figure>
 
