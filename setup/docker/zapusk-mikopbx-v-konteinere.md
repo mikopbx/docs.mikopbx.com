@@ -101,6 +101,27 @@ sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx
 	 -it mikopbx:2024.1.114
 ```
 
-{% content-ref url="https://app.gitbook.com/o/-MI-h3_aaVcY5WIyVzY2/snippet/18556" %}
-[Переменные окружения для конфигурирования MikoPBX](https://app.gitbook.com/o/-MI-h3\_aaVcY5WIyVzY2/snippet/18556)
-{% endcontent-ref %}
+### Переменные окружения для конфигурирования MikoPBX
+
+Ниже перечислены некоторые переменные окружения, которые позволят скорректировать используемые MikoPBX порты и настройки.
+
+* **SSH\_PORT** - порт для SSH (**22**)
+* **WEB\_PORT** - порт для работы web интерфейса по протоколу HTTP (**80**)
+* **WEB\_HTTPS\_PORT** - порт для работы web интерфейса по протоколу HTTPS (**443**)
+* **SIP\_PORT** - порт для подключения SIP клиента (**5060**)
+* **TLS\_PORT** - порт для подключения SIP клиента с шифрованием (**5061**)
+* **RTP\_PORT\_FROM** - начало диапазона RTP портов, передача голоса (**10000**)
+* **RTP\_PORT\_TO** - конец диапазона RTP портов, передача голоса (**10800**)
+* **IAX\_PORT** - порт для подключения IAX клиентов (**4569**)
+* **AMI\_PORT** - порт AMI (**5038**)
+* **AJAM\_PORT** - порт AJAM используется для подключения панели телефонии для 1С (**8088**)
+* **AJAM\_PORT\_TLS** - порт AJAM используется для подключения панели телефонии для 1С (**8089**)
+* **BEANSTALK\_PORT** - порт для сервера очередей **Beanstalkd** (**4229**)
+* **REDIS\_PORT** - порт для сервера **Redis** (**6379**)
+* **GNATS\_PORT** - порт для сервера **gnatsd** (**4223**)
+* **ID\_WWW\_USER** - идентификатор пользователя www-user (можно задать выражением `$(id -u www-user)`, где **www-user** имя **НЕ root** пользователя)
+* **ID\_WWW\_GROUP** - идентификатор группы www-user (можно задать выражением `$(id -g www-user)`, где **www-user** имя **НЕ root** группы)
+* **WEB\_ADMIN\_LOGIN** - логин для доступа в Web интерфейс
+* **WEB\_ADMIN\_PASSWORD** - пароль для доступа в Web интерфейс
+
+Полный список всех возможных параметров настроек доступен в исходном коде [по ссылке](https://github.com/mikopbx/Core/blob/develop/src/Common/Models/PbxSettingsConstants.php).
