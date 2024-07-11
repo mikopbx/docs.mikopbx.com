@@ -67,7 +67,7 @@ Check the command output for a message similar to the one below. This message in
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
 
-If you see the MikoPBX startup process, wait a moment and re-run the command docker logs mikopbx.
+If you see the MikoPBX startup process, wait a moment and re-run the command `sudo docker logs mikopbx`
 
 #### Step 3: Check access to the web Interface
 
