@@ -10,7 +10,6 @@ To work with MikoPBX in a container, you need to install Docker and Docker Compo
 
 To launch the container with your application, use the following commands:
 
-{% code overflow="wrap" %}
 ```bash
 # Pulling the container image
 sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64
@@ -23,7 +22,6 @@ sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx
            -e SSH_PORT=23 \
            -it -d --restart always ghcr.io/mikopbx/mikopbx-x86-64
 ```
-{% endcode %}
 
 ### Testing the functionality
 
@@ -101,7 +99,7 @@ sudo docker import \
 sudo docker volume create data_volume
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
 	 -v data_volume:/cf \
-         -v data_volume:/storage \
+	 -v data_volume:/storage \
 	 -e SSH_PORT=23 \
 	 -it mikopbx:2024.1.114
 ```
