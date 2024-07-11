@@ -71,9 +71,9 @@ If you see the MikoPBX startup process, wait a moment and re-run the command `su
 
 #### Step 3: Check access to the web Interface
 
-When the container starts, it lacks information about the host system's address, so you need to open the external address of the host system, in this case, Ubuntu, in a web browser. https://
+When the container starts, it lacks information about the host system's address, so you need to open the external address of the host system, in this case, Ubuntu, in a web browser. https://\<host machine IP>
 
-Log into the web interface using the admin login and the admin password to make sure that the web interface is accessible and functioning correctly.
+Log into the web interface using the `admin` login and the `admin` password to make sure that the web interface is accessible and functioning correctly.
 
 <figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_17 (2).png" alt=""><figcaption></figcaption></figure>
 
