@@ -19,7 +19,7 @@ There are several options for installing MikoPBX. Choose the most suitable insta
 * Installing a PBX on a **virtual machine.** [Installation instructions. ](../setup/hypervisor/)
 * Installing a PBX in a public **cloud**. [Installation instructions. ](../setup/cloud/)
 * Installing MikoPBX from **USB** to a separate dedicated server. The PC must support booting from USB. [Installation instructions. ](../setup/bare-metal.md)
-* Installing MikoPBX in a **Docker** container. [Installation instructions.](../setup/docker.md)
+* Installing MikoPBX in a **Docker** container. [Installation instructions.](../setup/docker/)
 
 ### Step 2. The first launch of the PBX!
 

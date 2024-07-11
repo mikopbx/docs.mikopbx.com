@@ -19,7 +19,7 @@ This chapter provides step-by-step instructions for installing MikoPBX on variou
 * [Separate Computer](setup/bare-metal.md)
 * [Virtual Machine](setup/hypervisor/)
 * [Cloud](setup/cloud/)
-* [Docker container](setup/docker.md)
+* [Docker container](setup/docker/)
 
 ## Chapter 2. Introduction to MikoPBX
 

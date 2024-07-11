@@ -52,7 +52,7 @@ After cloud installation, the web interface login uses the username **admin** an
 
 ### MikoPBX Container Installation
 
-The [instructions](../../setup/docker.md) for installing and updating MikoPBX in a Docker container have been completely updated.\
+The [instructions](../../setup/docker/) for installing and updating MikoPBX in a Docker container have been completely updated.\
 Added an example of automatic deployment of multiple containers on a single host, described a way to bypass Docker's limitations on passing a large range of RTP ports.\
 Artificial limitations on working with kernel version 5+ have been removed; if the container starts and operates, then all is well.
 
