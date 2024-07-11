@@ -8,11 +8,11 @@
 
 1. В разделе «**Телефония**» - «**Конференция**» создаем новую конференцию
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption><p>Раздел "Конференция"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1).png" alt=""><figcaption><p>Раздел "Конференция"</p></figcaption></figure>
 
 2. Укажем название комнаты «**Z-CONF-354233**»
 
-<figure><img src="../../.gitbook/assets/2 (1) (1) (1).png" alt=""><figcaption><p>Окно создания новой конференции</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1).png" alt=""><figcaption><p>Окно создания новой конференции</p></figcaption></figure>
 
 3. Укажем внутренний номер «**354233**»
 

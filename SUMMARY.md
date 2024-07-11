@@ -200,6 +200,7 @@
 ## Модули <a href="#modules" id="modules"></a>
 
 * [Модули МИКО](modules/miko/README.md)
+  * [Расширенная история звонков](modules/miko/module-extended-cdr.md)
   * [Интеграция с 1С](modules/miko/integraciya-s-1s/README.md)
     * [Панель телефонии 1.0 для 1С](modules/miko/integraciya-s-1s/module-pt1c-core.md)
     * [Панель телефонии 4.0 для 1С](https://docs.telefon1c.ru)

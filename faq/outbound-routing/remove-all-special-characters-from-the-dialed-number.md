@@ -6,11 +6,11 @@
 
 1. Для решения задачи «фильтрации» символов следует описать дополнительный контекст через меню [Кастомизация системных файлов](https://wiki.mikopbx.ru/custom-files)
 
-<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption><p>Окно "Кастомизация системных файлов"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption><p>Окно "Кастомизация системных файлов"</p></figcaption></figure>
 
 2. Править будем файл **extensions.conf**.&#x20;
 
-<figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption><p>Файл 'Extensions.conf"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1).png" alt=""><figcaption><p>Файл 'Extensions.conf"</p></figcaption></figure>
 
 3. Добавьте в конец файла следующий контекст:
 
