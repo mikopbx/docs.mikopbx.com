@@ -6,6 +6,8 @@
 * Отбор истории звонков по группам / по сотрудникам
 * Выгрузка истории звонков за период в Excel
 
+<figure><img src="../../.gitbook/assets/module-extended-cdr-5.png" alt=""><figcaption></figcaption></figure>
+
 ### Настройка модуля
 
 1. Выполните установку модуля в разделе [Управление модулями](../../manual/modules/pbx-extension-modules/).
