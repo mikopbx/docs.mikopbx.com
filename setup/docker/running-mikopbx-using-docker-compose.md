@@ -1,5 +1,11 @@
 # Running MikoPBX using docker compose
 
+To work with MikoPBX in a container, you need to install Docker and Docker Compose following the instructions
+
+{% content-ref url="docker-installation-and-basic-commands.md" %}
+[docker-installation-and-basic-commands.md](docker-installation-and-basic-commands.md)
+{% endcontent-ref %}
+
 ### Docker compose launch option
 
 Here is an example of a `docker-compose.yml` file that can be used to manage your MikoPBX container via Docker Compose:
