@@ -35,17 +35,16 @@ sudo docker-compose --version
 Команда для подключения к консоли АТС:
 
 ```bash
-docker exec -it mikopbx sh
+sudo docker exec -it mikopbx sh
 ```
 
 Команда для подключения к консольному меню АТС:
 
 ```bash
-docker exec -it mikopbx /etc/rc/console_menu
+sudo docker exec -it mikopbx /etc/rc/console_menu
 ```
 
 Подключение к shgrep для анализа SIP
 
-```bash
-docker exec -it mikopbx sngrep
-```
+<pre class="language-bash"><code class="lang-bash"><strong>sudo docker exec -it mikopbx sngrep
+</strong></code></pre>
