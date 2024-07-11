@@ -76,7 +76,7 @@ https://\<IP адрес хост системы>
 
 Войдите в веб-интерфейс, используя логин `admin` и пароль `admin`, чтобы убедиться, что веб-интерфейс доступен и функционирует корректно.
 
-<figure><img src="../../.gitbook/assets/FirstStart.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_16 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Особенности работы контейнизированной MikoPBX
 

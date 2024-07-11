@@ -26,6 +26,7 @@ services:
       - data_volume:/storage
     tty: true
     environment:
+      # Изменение имени станции через переменные окружения
       - PBX_NAME=MikoPBX-in-Docker
       # Изменение стандартного порта SSH на 23
       - SSH_PORT=23
