@@ -54,7 +54,7 @@ sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64:latest
 services:
   mikopbx:
     container_name: "mikopbx"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx-x86-64:latest"
     network_mode: "host"
     cap_add:
       - NET_ADMIN
