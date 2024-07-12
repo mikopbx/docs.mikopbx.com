@@ -102,7 +102,7 @@ sudo docker import \
 sudo docker volume create data_volume
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
 	 -v data_volume:/cf \
-         -v data_volume:/storage \
+	 -v data_volume:/storage \
 	 -e SSH_PORT=23 \
 	 -it mikopbx:2024.1.114
 ```
