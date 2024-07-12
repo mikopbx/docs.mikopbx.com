@@ -51,7 +51,7 @@
   * [System upgrade](manual/maintenance/update/README.md)
     * [Updating from the web interface](manual/maintenance/update/updating-from-the-web-interface.md)
     * [Updating from the MikoPBX console](manual/maintenance/update/updating-from-the-mikopbx-console.md)
-    * [Updating the docker container](manual/maintenance/update/updating-the-docker-container.md)
+    * [Updating the docker](manual/maintenance/update/updating-the-docker.md)
   * [System diagnostic](manual/maintenance/system-diagnostic.md)
   * [Reboot](manual/maintenance/restart.md)
 * [Network and Firewall](manual/connectivity/README.md)
