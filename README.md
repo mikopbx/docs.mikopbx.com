@@ -58,7 +58,7 @@ MikoPBX manages phone accounts, service providers. You will learn how to set up 
 
 ## Chapter 7. Maintenance <a href="#glava_7_obsluzhivanie" id="glava_7_obsluzhivanie"></a>
 
-* [PBX Update ](manual/maintenance/update.md)
+* [PBX Update ](manual/maintenance/update/)
 * [System log entries](manual/maintenance/system-diagnostic.md)&#x20;
 * [Reboot](manual/maintenance/restart.md)
 * [Backup module](broken-reference)
