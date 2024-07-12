@@ -57,7 +57,7 @@
 
 ### Глава 7. Обслуживание <a href="#glava_7_obsluzhivanie" id="glava_7_obsluzhivanie"></a>
 
-* [Обновление системы](manual/maintenance/update.md)
+* [Обновление системы](manual/maintenance/update/)
 * [Диагностика системы](manual/maintenance/system-diagnostic.md)
 * [Перезагрузка и выключение системы](manual/maintenance/restart.md)
 * [Модуль резервного копирования ](manual/maintenance/backup.md)

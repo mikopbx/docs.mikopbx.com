@@ -49,7 +49,7 @@
 ## Восстановление из архива <a href="#vosstanovlenie_iz_arxiva" id="vosstanovlenie_iz_arxiva"></a>
 
 {% hint style="info" %}
-Порядок перехода с **Askozia 4, 5 ME** до **MikoPBX** описан в [инструкции](../../manual/maintenance/update.md).
+Порядок перехода с **Askozia 4, 5 ME** до **MikoPBX** описан в [инструкции](../../manual/maintenance/update/).
 {% endhint %}
 
 1. В списке резервных копий выберите нужную и выполните действие "**Восстановить из резервной копии"**
