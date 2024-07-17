@@ -10,20 +10,19 @@
 
 Для запуска контейнера с вашим приложением воспользуйтесь следующими командами:
 
-{% code overflow="wrap" %}
 ```bash
 # Получение образа контейнера
 sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64
 
 # Запуск контейнера в не привилегированном режиме
-sudo docker volume create data_volume
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
-           -v data_volume:/cf \
-           -v data_volume:/storage \
+           -v /var/spool/mikopbx/cf:/cf \
+           -v /var/spool/mikopbx/storage:/storage \
            -e SSH_PORT=23 \
+           -e ID_WWW_USER="$(id -u www-user)" \
+           -e ID_WWW_GROUP="$(id -g www-user)" \
            -it -d --restart always ghcr.io/mikopbx/mikopbx-x86-64
 ```
-{% endcode %}
 
 ### Проверка работы
 
@@ -99,11 +98,12 @@ sudo docker import \
   "mikopbx:2024.1.114"
 
 # Запускаем созданный контейнер
-sudo docker volume create data_volume
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
-	 -v data_volume:/cf \
-	 -v data_volume:/storage \
+	 -v mikopbx_cf:/cf \
+	 -v mikopbx_storage:/storage \
 	 -e SSH_PORT=23 \
+	 -e ID_WWW_USER="$(id -u www-user)" \
+	 -e ID_WWW_GROUP="$(id -g www-user)" \
 	 -it mikopbx:2024.1.114
 ```
 
