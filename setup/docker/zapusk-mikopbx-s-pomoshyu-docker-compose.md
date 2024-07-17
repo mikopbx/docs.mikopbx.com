@@ -2,8 +2,8 @@
 
 Для работы с MikoPBX в контейнере необходимо установить docker и docker compose по инструкции
 
-{% content-ref url="ustanovka-dokera-i-bazovye-komandy.md" %}
-[ustanovka-dokera-i-bazovye-komandy.md](ustanovka-dokera-i-bazovye-komandy.md)
+{% content-ref url="ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md" %}
+[ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md](ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
 {% endcontent-ref %}
 
 ### Запуск с помощью docker compose

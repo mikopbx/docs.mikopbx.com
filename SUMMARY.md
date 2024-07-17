@@ -31,7 +31,7 @@
     * [Google Cloud Маркетплейс](setup/cloud/google-cloud/google-cloud-marketplace.md)
   * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
 * [В Docker контейнере](setup/docker/README.md)
-  * [Установка докера и базовые команды](setup/docker/ustanovka-dokera-i-bazovye-komandy.md)
+  * [Установка докера и cоздание пользователя и каталогов](setup/docker/ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
   * [Запуск MikoPBX в контейнере](setup/docker/zapusk-mikopbx-v-konteinere.md)
   * [Запуск MikoPBX с помощью docker compose](setup/docker/zapusk-mikopbx-s-pomoshyu-docker-compose.md)
 
