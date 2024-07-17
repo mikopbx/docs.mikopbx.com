@@ -1,6 +1,6 @@
 # Запуск MikoPBX в контейнере
 
-Для работы с MikoPBX в контейнере необходимо установить docker и docker compose по инструкции
+Для работы с MikoPBX в контейнере необходимо установить docker и docker compose, а также создать пользователя и папки для хранения настроек конфигурации и записей разговоров по инструкции
 
 {% content-ref url="ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md" %}
 [ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md](ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
