@@ -1,4 +1,4 @@
-# Docker installation and basic commands
+# Docker installation and creating a user and directories
 
 ### Installing Docker and Docker Compose on Ubuntu 22.04
 
@@ -28,6 +28,22 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo docker-compose --version
 ```
 {% endcode %}
+
+### Creating a user and directories on the host system
+
+Before creating the container on the host machine, it's necessary to create a user and group with limited permissions, as well as a folder for storing configuration settings and call recordings
+
+```bash
+# Creating a new user (e.g., www-user) without superuser rights
+sudo adduser --disabled-password --gecos "" www-user
+
+# Creating directories for data storage
+sudo mkdir -p /var/spool/mikopbx/cf
+sudo mkdir -p /var/spool/mikopbx/storage
+
+# Granting the created user ownership of the directories
+sudo chown -R www-user:www-user /var/spool/mikopbx/
+```
 
 ### Useful commands
 

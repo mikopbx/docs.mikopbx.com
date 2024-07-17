@@ -1,9 +1,9 @@
 # Running MikoPBX in a container
 
-To work with MikoPBX in a container, you need to install Docker and Docker Compose following the instructions
+To work with MikoPBX in a container, you need to install Docker and Docker Compose, as well as create a user and directories for storing configuration settings and call recordings according to the instructions
 
-{% content-ref url="docker-installation-and-basic-commands.md" %}
-[docker-installation-and-basic-commands.md](docker-installation-and-basic-commands.md)
+{% content-ref url="docker-installation-and-creating-a-user-and-directories.md" %}
+[docker-installation-and-creating-a-user-and-directories.md](docker-installation-and-creating-a-user-and-directories.md)
 {% endcontent-ref %}
 
 ### Launching the Docker container
@@ -15,11 +15,12 @@ To launch the container with your application, use the following commands:
 sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64
 
 # Running the container in unprivileged mode
-sudo docker volume create data_volume
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
-           -v data_volume:/cf \
-           -v data_volume:/storage \
+           -v /var/spool/mikopbx/cf:/cf \
+           -v /var/spool/mikopbx/storage:/storage \
            -e SSH_PORT=23 \
+           -e ID_WWW_USER="$(id -u www-user)" \
+           -e ID_WWW_GROUP="$(id -g www-user)" \
            -it -d --restart always ghcr.io/mikopbx/mikopbx-x86-64
 ```
 
@@ -96,11 +97,12 @@ sudo docker import \
   "mikopbx:2024.1.114"
 
 # Launch the created container
-sudo docker volume create data_volume
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
-	 -v data_volume:/cf \
-	 -v data_volume:/storage \
+	 -v mikopbx_cf:/cf \
+	 -v mikopbx_storage:/storage \
 	 -e SSH_PORT=23 \
+	 -e ID_WWW_USER="$(id -u www-user)" \
+	 -e ID_WWW_GROUP="$(id -g www-user)" \
 	 -it mikopbx:2024.1.114
 ```
 

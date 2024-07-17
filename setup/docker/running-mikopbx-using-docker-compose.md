@@ -2,8 +2,8 @@
 
 To work with MikoPBX in a container, you need to install Docker and Docker Compose following the instructions
 
-{% content-ref url="docker-installation-and-basic-commands.md" %}
-[docker-installation-and-basic-commands.md](docker-installation-and-basic-commands.md)
+{% content-ref url="docker-installation-and-creating-a-user-and-directories.md" %}
+[docker-installation-and-creating-a-user-and-directories.md](docker-installation-and-creating-a-user-and-directories.md)
 {% endcontent-ref %}
 
 ### Docker compose launch option
@@ -22,10 +22,12 @@ services:
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-a-docker"
     volumes:
-      - data_volume:/cf
-      - data_volume:/storage
+      - /var/spool/mikopbx/cf:/cf
+      - /var/spool/mikopbx/storage:/storage
     tty: true
     environment:
+      - ID_WWW_USER=${ID_WWW_USER}
+      - ID_WWW_GROUP=${ID_WWW_GROUP}
       # Change the station name through environment variables
       - PBX_NAME=MikoPBX-in-Docker
       # Change the default SSH port to 23
@@ -34,15 +36,14 @@ services:
       - WEB_PORT=8080
       # Change the default WEB HTTPS port to 8443
       - WEB_HTTPS_PORT=8443
-      
-volumes:
-  data_volume:
 ```
 {% endcode %}
 
 Save the contents into a file named `docker-compose.yml`, make the necessary adjustments, and launch MikoPBX using the command:
 
 ```bash
+export ID_WWW_USER=$(id -u www-user)
+export ID_WWW_GROUP=$(id -g www-user)
 sudo docker compose -f docker-compose.yml up
 ```
 
@@ -64,10 +65,12 @@ services:
     entrypoint: "/sbin/docker-entrypoint"
     hostname: "mikopbx-in-docker-first"
     volumes:
-      - first_data_volume:/cf
-      - first_data_volume:/storage
+      - /var/spool/mikopbx/first/cf:/cf
+      - /var/spool/mikopbx/first/storage:/storage
     tty: true
     environment:
+      - ID_WWW_USER=${ID_WWW_USER}
+      - ID_WWW_GROUP=${ID_WWW_GROUP}
       - PBX_NAME=MikoPBXFirst
       - PBX_FIREWALL_ENABLED=0
       - PBX_FAIL2BAN_ENABLED=0
@@ -93,9 +96,11 @@ services:
     entrypoint: "/sbin/docker-entrypoint"
     hostname: "mikopbx-in-docker-second"
     volumes:
-      - second_data_volume:/cf
-      - second_data_volume:/storage
+      - /var/spool/mikopbx/second/cf:/cf
+      - /var/spool/mikopbx/second/storage:/storage
     environment:
+      - ID_WWW_USER=${ID_WWW_USER}
+      - ID_WWW_GROUP=${ID_WWW_GROUP}
       - PBX_NAME=MikoPBXSecond
       - PBX_FIREWALL_ENABLED=0
       - PBX_FAIL2BAN_ENABLED=0
@@ -113,16 +118,14 @@ services:
       - BEANSTALK_PORT=5229
       - REDIS_PORT=7379
       - GNATS_PORT=5223
-
-volumes:
-  first_data_volume:
-  second_data_volume:
 ```
 {% endcode %}
 
 Save the contents into a file named `docker-compose.yml`, make the necessary adjustments, and launch MikoPBX using the command:
 
 ```bash
+export ID_WWW_USER=$(id -u www-user)
+export ID_WWW_GROUP=$(id -g www-user)
 sudo docker compose -f docker-compose.yml up
 ```
 
@@ -142,6 +145,10 @@ if [ -z "$COMPOSE_FILE" ]; then
     echo "Usage: $0 path/to/docker-compose.yaml"
     exit 1
 fi
+
+# We will obtain the user ID for running the container
+export ID_WWW_USER=$(id -u www-user)
+export ID_WWW_GROUP=$(id -g www-user)
 
 # Stop current containers if they are running
 docker compose -f "$COMPOSE_FILE" down
@@ -233,14 +240,16 @@ services:
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-docker-first"
     volumes:
-      - first_data_volume:/cf
-      - first_data_volume:/storage
+      - /var/spool/mikopbx/first/cf:/cf
+      - /var/spool/mikopbx/first/storage:/storage
     tty: true
     cap_add:
       - net_admin
     networks:
       - network-bridge1
     environment:
+      - ID_WWW_USER=${ID_WWW_USER}
+      - ID_WWW_GROUP=${ID_WWW_GROUP}
       - PBX_NAME=MikoPBXFirst
       - RTP_PORT_FROM=10000 # UDP range 10000-10800 on host will be directed to the container
       - RTP_PORT_TO=10800
@@ -262,9 +271,11 @@ services:
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-docker-second"
     volumes:
-      - second_data_volume:/cf
-      - second_data_volume:/storage
+      - /var/spool/mikopbx/second/cf:/cf
+      - /var/spool/mikopbx/second/storage:/storage
     environment:
+      - ID_WWW_USER=${ID_WWW_USER}
+      - ID_WWW_GROUP=${ID_WWW_GROUP}
       - PBX_NAME=MikoPBXSecond
       - RTP_PORT_FROM=20000 # UDP range 20000-20800 on host will be directed to the container
       - RTP_PORT_TO=20800
@@ -282,10 +293,6 @@ networks:
     driver: bridge
   network-bridge2:
     driver: bridge
-
-volumes:
-  first_data_volume:
-  second_data_volume:
 ```
 {% endcode %}
 
