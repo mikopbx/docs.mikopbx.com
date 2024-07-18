@@ -30,6 +30,7 @@
     * [Google Cloud подробная инструкция](setup/cloud/google-cloud/google-cloud-podrobnaya-instrukciya.md)
     * [Google Cloud Маркетплейс](setup/cloud/google-cloud/google-cloud-marketplace.md)
   * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
+  * [Vscale](setup/cloud/vscale.md)
 * [В Docker контейнере](setup/docker/README.md)
   * [Установка докера и cоздание пользователя и каталогов](setup/docker/ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
   * [Запуск MikoPBX в контейнере](setup/docker/zapusk-mikopbx-v-konteinere.md)
