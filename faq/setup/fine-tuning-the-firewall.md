@@ -21,7 +21,7 @@ iptables -I INPUT 2 -p udp -m udp --dport 5060 -m string --string 'friendly-scan
 <figure><img src="../../.gitbook/assets/CodeForfirewall_additionslFile.png" alt=""><figcaption><p>Код для файла  "/etc/firewall_additional"</p></figcaption></figure>
 
 {% hint style="warning" %}
-Добавленное правило позвонил блокировать все входящие запросы по UDP протоколу, которые содержать подстроку «**friendly-scanner**»
+Добавленное правило позволит блокировать все входящие запросы по UDP протоколу, которые содержат подстроку «**friendly-scanner**»
 {% endhint %}
 
 Более полный пример набора правил:
