@@ -10,6 +10,8 @@ description: Установка MikoPBX в качестве гостевой м�
 Версия 2024.1.114 временно не поддерживает установку на VirtualBOX
 {% endhint %}
 
+{% embed url="https://youtu.be/zr67FSiq4NY" %}
+
 ## Создание виртуальной машины <a href="#sozdanie_virtualnoj_mashiny" id="sozdanie_virtualnoj_mashiny"></a>
 
 1\. Скачайте программу **VirtualBox** по [ссылке](https://www.virtualbox.org/wiki/Downloads) и установите ее.

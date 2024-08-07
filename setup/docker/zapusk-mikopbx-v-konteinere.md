@@ -6,6 +6,8 @@
 [ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md](ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
 {% endcontent-ref %}
 
+{% embed url="https://youtu.be/Bvfepw9LhAA" %}
+
 ### Запуск контейнера Docker
 
 Для запуска контейнера с вашим приложением воспользуйтесь следующими командами:
