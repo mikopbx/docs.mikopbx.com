@@ -6,7 +6,7 @@ To work with MikoPBX in a container, you need to install Docker and Docker Compo
 [docker-installation-and-creating-a-user-and-directories.md](docker-installation-and-creating-a-user-and-directories.md)
 {% endcontent-ref %}
 
-{% embed url="https://youtu.be/Bvfepw9LhAA" %}
+{% embed url="https://youtu.be/3w7odcxcNvk" %}
 
 ### Launching the Docker container
 

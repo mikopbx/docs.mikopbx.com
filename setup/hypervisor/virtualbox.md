@@ -10,7 +10,7 @@ Use versions of MikoPBX below 2024.1.114 for installation on VirtualBOX
 Version 2024.1.114 temporarily does not support installation on VirtualBOX
 {% endhint %}
 
-{% embed url="https://youtu.be/zr67FSiq4NY" %}
+{% embed url="https://youtu.be/aBSQr58lADA" %}
 
 ## Create a virtual machine
 
