@@ -1,5 +1,7 @@
 # Hyper-V
 
+{% embed url="https://youtu.be/k0x0T8xkFts" %}
+
 ### **Creating a virtual machine**
 
 1. Select **Action / New / Virtual Machine**
