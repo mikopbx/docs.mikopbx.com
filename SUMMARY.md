@@ -216,7 +216,7 @@
   * [Автообработка пропущенных](modules/miko/module-callback-queues.md)
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
   * [Управление доступом в систему](modules/miko/module-users-u-i.md)
-  * [Модуль автообзвона](modules/miko/module-auto-dialer.md)
+  * [Модуль Автоинформатор](modules/miko/module-auto-dialer.md)
   * [Оценка качества разговора](modules/miko/module-quality-assessment.md)
   * [Синхронизация с LDAP/AD](modules/miko/module-ldap-sync.md)
   * [Провайдер для звонков Telegram](modules/miko/module-telegram-provider.md)
