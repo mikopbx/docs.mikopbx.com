@@ -3,7 +3,7 @@
 ### Загрузка образа
 
 1. Скачайте актуальный образ системы с расширением **.raw** на [сайте](https://github.com/mikopbx/Core/releases)&#x20;
-2. Выполните аторизацию на портале [https://vscale.io](https://vscale.io)&#x20;
+2. Выполните авторизацию на портале [https://vscale.io ](https://vscale.io/?invite=P721v1MUI8wvJV5ePPST)
 3.  Перейдите в раздел "**Облако**" - "**Образы**" - кликните по кнопке "**Создать**"&#x20;
 
     <figure><img src="../../.gitbook/assets/vscale-1.png" alt=""><figcaption></figcaption></figure>
