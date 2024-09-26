@@ -7,7 +7,7 @@
 
 ## Installation <a href="#setup" id="setup"></a>
 
-* [Bare-metal installation](setup/bare-metal.md)
+* [Standalone Computer](setup/bare-metal.md)
 * [Virtual Machine](setup/hypervisor/README.md)
   * [VMware ESXi](setup/hypervisor/vmware-esxi.md)
   * [VMware Fusion](setup/hypervisor/vmware-fusion.md)
