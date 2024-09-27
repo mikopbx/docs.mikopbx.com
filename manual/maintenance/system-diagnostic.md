@@ -1,107 +1,107 @@
-# System diagnostic
+# System Diagnostics
 
 <figure><img src="../../.gitbook/assets/sistem_logi_0.png" alt=""><figcaption></figcaption></figure>
 
-Содержит 3 вкладки: **просмотр логов, информация о системе, захват сетевых пакетов**.
+Contains 3 tabs: **log viewing, system information, packet capture**.
 
 <figure><img src="../../.gitbook/assets/sistem_logi_1.png" alt=""><figcaption></figcaption></figure>
 
-## Просмотр логов <a href="#prosmotr_logov" id="prosmotr_logov"></a>
+## Log Viewing <a href="#prosmotr_logov" id="prosmotr_logov"></a>
 
 <figure><img src="../../.gitbook/assets/sistem_logi_2.png" alt=""><figcaption></figcaption></figure>
 
-Раздел позволяет просмотреть файлы логов для детального анализа работы АТС
+This section allows you to view log files for detailed analysis of PBX operations.
 
-1. Для начала работы - выберите **файл**
-2. Установите **лимит** строк для выборки
-3. Установите **офсет -** значение сдвига в выборке
-4. Установите **фильтр** по вхождению строки в выборку
+1. To start, select a **file**.
+2. Set the **limit** for the number of lines to fetch.
+3. Set the **offset** value to shift the selection.
+4. Set the **filter** by entering a string to be included in the selection.
 
 <figure><img src="../../.gitbook/assets/sistem_logi_3.png" alt=""><figcaption></figcaption></figure>
 
-Доступны следующие возможности:&#x20;
+The following options are available:  
 
-1\. **Cкачать** полученную выборку в виде файла ![](<../../.gitbook/assets/sistem\_logi\_skachat (1).png>)
+1. **Download** the selected log as a file ![](../../.gitbook/assets/sistem\_logi\_skachat.png)
 
-2\. **Обновить** выборку ![](../../.gitbook/assets/sistem\_logi\_obnovit.png)
+2. **Refresh** the log ![](../../.gitbook/assets/sistem\_logi\_obnovit.png)
 
-3\. **Автоматическое обновление** выборки ![](../../.gitbook/assets/sistem\_logi\_obnovit\_avt.png)
+3. **Auto-refresh** the log ![](../../.gitbook/assets/sistem\_logi\_obnovit\_avt.png)
 
-### Пример. Анализ звонка <a href="#primer_analiz_zvonka" id="primer_analiz_zvonka"></a>
+### Example: Call Analysis <a href="#primer_analiz_zvonka" id="primer_analiz_zvonka"></a>
 
-Допустим необходимо проанализировать прохождение исходящего звонка на номер **74952293042**
+Suppose you need to analyze an outgoing call to the number **74952293042**.
 
-1. Выберите файл для анализа **asterisk/verbose**.
-2. В качестве фильтра установите номер телефона **74952293042**.
-3. В поле **лимит** укажите значение с запасом, к примеру **2000**, иначе могут быть выданы не все записи лога.
-4. В последней строке выборке следует найти идентификатор:
+1. Select the log file **asterisk/verbose**.
+2. Set the phone number **74952293042** as the filter.
+3. Set the **limit** to a sufficient value, such as **2000**, to ensure all log entries are included.
+4. In the last line of the log selection, find the identifier:
 
 ```
 [2023-03-18 16:28:17] VERBOSE[21654][C-0000000f] app_stack.c: Spawn extension (SIP-1676196499-22-outgoing, 74952293042, 13) exited non-zero on 'PJSIP/302-0000001a'
 ```
 
-5. В данном примере ID = **C-0000000f**.
-6. Повторяем запрос лога, но уже с фильтром **C-0000000f**.
-7. Будет получен весь лог прохождения dialplan.
-8. Полученные данные можно отправить специалисту технической поддержки.
+5. In this example, the ID = **C-0000000f**.
+6. Repeat the log query but use the filter **C-0000000f** this time.
+7. You will receive the entire log of the dialplan process.
+8. The obtained data can be sent to technical support for further assistance.
 
-## Информация о системе <a href="#informacija_o_sisteme" id="informacija_o_sisteme"></a>
+## System Information <a href="#informacija_o_sisteme" id="informacija_o_sisteme"></a>
 
 <figure><img src="../../.gitbook/assets/sistem_logi_4.png" alt=""><figcaption></figcaption></figure>
 
-Вкладка отображает следующую информацию:
+The tab displays the following information:
 
-* Сетевые настройки
-* Нагрузка на CPU
-* Потребляемая оперативная память
-* Настройки iptables
+* Network settings
+* CPU load
+* RAM usage
+* iptables settings
 
-### Захват сетевых пакетов <a href="#zaxvat_logov" id="zaxvat_logov"></a>
+### Packet Capture <a href="#zaxvat_logov" id="zaxvat_logov"></a>
 
 <figure><img src="../../.gitbook/assets/sistem_logi_zahv_pak_0.png" alt=""><figcaption></figcaption></figure>
 
-Данный раздел позволяет произвести детальный анализ ошибок в работе АТС.
+This section allows you to perform a detailed analysis of errors in PBX operation.
 
-#### Сбор сетевых пакетов
+#### Capturing Network Packets
 
-Вы можете запустить сбор сетевых пакетов, проходящих через сетевой интерфейс.
+You can start capturing network packets passing through the network interface.
 
-1. Для запуска процесса нажмите кнопку **Старт.**
+1. To start the process, press the **Start** button.
 
 <figure><img src="../../.gitbook/assets/sistem_logi_zahv_pak_1.png" alt=""><figcaption></figcaption></figure>
 
-2. Воспроизведите вашу проблему: совершите звонок или иное действие, приводящее к сбою / ошибке.
-3. Нажмите кнопку **Остановить и скачать**.
+2. Reproduce your issue: make a call or perform an action that causes the error or failure.
+3. Press the **Stop and Download** button.
 
 <figure><img src="../../.gitbook/assets/sistem_logi_zahv_pak_2.png" alt=""><figcaption></figcaption></figure>
 
-Сетевые пакеты будут автоматически сохранены в архив **MikoPBXLogs\_log-tcpdump-XXXXXXXXXX.** Также они должны автоматически сохраниться в папку **Загрузки** вашего браузера.&#x20;
+The network packets will automatically be saved in the archive **MikoPBXLogs\_log-tcpdump-XXXXXXXXXX**. They should also automatically save in your browser's **Downloads** folder.  
 
 <figure><img src="../../.gitbook/assets/sistem_logi_zahv_pak_3.png" alt=""><figcaption></figcaption></figure>
 
-Если в папке **Загрузки** архив найти не удалось , можете [подключиться к АТС через WinSCP](../../faq/troubleshooting/connecting-to-a-pbx-using-winscp.md) и скачать его из директории **/storage/usbdisk1/mikopbx/tmp**  - файл **log-tcpdump-XXXXXXXXXX.zip**
+If you cannot find the archive in the **Downloads** folder, you can [connect to the PBX via WinSCP](../../faq/troubleshooting/connecting-to-a-pbx-using-winscp.md) and download it from the **/storage/usbdisk1/mikopbx/tmp** directory - the file will be **log-tcpdump-XXXXXXXXXX.zip**.
 
 {% hint style="info" %}
-Подсказка
+Hint
 
-Можете, воспользовавшись поиском в WinSCP, в поле имени искомого файла ввести "**log-tcpdump\*",** а в каталоге поиска ввести просто **"/storage**" <img src="../../.gitbook/assets/sistem_logi_zahv_pak_4.png" alt="" data-size="original">
+You can use the search function in WinSCP by entering "**log-tcpdump\***" in the file name field and specifying the search directory as **"/storage"** <img src="../../.gitbook/assets/sistem_logi_zahv_pak_4.png" alt="" data-size="original">
 {% endhint %}
 
-#### **Скачать все системные логи**
+#### **Download All System Logs**
 
-Вы можете скачать все накопленные на АТС системные логи. Для этого нажмите кнопку **Скачать все системные логи.**
+You can download all system logs accumulated on the PBX. To do this, click the **Download All System Logs** button.
 
 <figure><img src="../../.gitbook/assets/sistem_logi_5.png" alt=""><figcaption></figcaption></figure>
 
-Системные логи будут автоматически сохранены в архив **MikoPBXLogs\_log-sys-XXXXXXXXXX.zip.** Логи автоматически должны сохраниться в папку **Загрузки** вашего браузера. \
-Так же данный архив с логами можно получить из каталога **/storage/usbdisk1/mikopbx/tmp**, подключившись к АТС при помощи WinSCP. Файл - **log-sys-XXXXXXXXXX.zip**
+The system logs will automatically be saved in the archive **MikoPBXLogs\_log-sys-XXXXXXXXXX.zip**. The logs should also automatically save in your browser's **Downloads** folder.  
+You can also obtain this log archive from the **/storage/usbdisk1/mikopbx/tmp** directory by connecting to the PBX using WinSCP. The file will be **log-sys-XXXXXXXXXX.zip**.
 
 {% hint style="warning" %}
-**Будьте внимательны**! При большом объеме звонков или прочей сетевой «нагрузки» на АТС логи могут занять довольно много места на диске.
+**Be careful**! If there are many calls or heavy network "load" on the PBX, logs can take up a significant amount of disk space.
 {% endhint %}
 
-Другие способы снятия лога:
+Other ways to collect logs:
 
-* С помощью [SSH-клиента](../../faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
-* С помощью [утилиты Wireshark](../../faq/troubleshooting/snyatie-loga-v-ats-s-pomoshyu-wireshark.md)
-* С помощью [приложения tcpdump](../../faq/troubleshooting/poluchenie-logov-s-pomoshyu-prilozheniya-tcpdump.md)
+* Using an [SSH client](../../faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
+* Using the [Wireshark utility](../../faq/troubleshooting/snyatie-loga-v-ats-s-pomoshyu-wireshark.md)
+* Using the [tcpdump application](../../faq/troubleshooting/getting-logs-using-the-tcpdump-application.md)
