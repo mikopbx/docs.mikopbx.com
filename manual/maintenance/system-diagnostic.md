@@ -75,21 +75,19 @@ You can start capturing network packets passing through the network interface.
 
 The network packets will automatically be saved in the archive **MikoPBXLogs\_log-tcpdump-XXXXXXXXXX**. They should also automatically save in your browser's **Downloads** folder.
 
-<figure><img src="../../.gitbook/assets/sistem_logi_zahv_pak_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/file.png" alt=""><figcaption></figcaption></figure>
 
 If you cannot find the archive in the **Downloads** folder, you can [connect to the PBX via WinSCP](../../faq/troubleshooting/connecting-to-a-pbx-using-winscp.md) and download it from the **/storage/usbdisk1/mikopbx/tmp** directory - the file will be **log-tcpdump-XXXXXXXXXX.zip**.
 
 {% hint style="info" %}
-Hint
-
-You can use the search function in WinSCP by entering "**log-tcpdump\***" in the file name field and specifying the search directory as **"/storage"** <img src="../../.gitbook/assets/sistem_logi_zahv_pak_4.png" alt="" data-size="original">
+You can use the search function in WinSCP by entering "**log-tcpdump\***" in the file name field and specifying the search directory as **"/storage"**&#x20;
 {% endhint %}
 
 #### **Download All System Logs**
 
 You can download all system logs accumulated on the PBX. To do this, click the **Download All System Logs** button.
 
-<figure><img src="../../.gitbook/assets/sistem_logi_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dnldAllSysLog.png" alt=""><figcaption></figcaption></figure>
 
 The system logs will automatically be saved in the archive **MikoPBXLogs\_log-sys-XXXXXXXXXX.zip**. The logs should also automatically save in your browser's **Downloads** folder.\
 You can also obtain this log archive from the **/storage/usbdisk1/mikopbx/tmp** directory by connecting to the PBX using WinSCP. The file will be **log-sys-XXXXXXXXXX.zip**.
