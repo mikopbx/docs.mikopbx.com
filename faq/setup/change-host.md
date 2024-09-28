@@ -104,4 +104,4 @@ php -r 'require_once "Globals.php"; use MikoPBX\Core\System\Upgrade\UpdateDataba
 
 # Copy call recordings.
 "$SYNC_APP" -r "$PBX_HOST":"$STORAGE_PBX_DIR"/astspool/monitor "$STORAGE_PBX_DIR"/astspool/monitor
-```
+
