@@ -23,7 +23,7 @@ When the employee returns, he dials **\*46** again and disables the pause. In mo
 ```php
 1,Answer()
 n,Set(PeerNumber=${CHANNEL(endpoint)})
-n,Set(MemberStatus=${DB(QueueMemberOnPause/${PeerNumber}})
+n,Set(MemberStatus=${DB(QueueMemberOnPause/${PeerNumber})})
 n,Set(AppName=${IF($[ "${MemberStatus}" != "1" ]?PauseQueueMember:UnpauseQueueMember)})
 n,Set(NewMemberStatus=${IF($[ "${MemberStatus}" == "1" ]?0:1)})
 n,Exec(${AppName}(,Local/${PeerNumber}@internal/n))

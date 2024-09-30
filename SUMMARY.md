@@ -21,7 +21,7 @@
     * [AWS Marketplace](setup/cloud/aws/aws-marketplace.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
   * [Google Cloud](setup/cloud/google-cloud/README.md)
-    * [Google Cloud deployment guide](setup/cloud/google-cloud/google-cloud-deployment-guide.md)
+    * [Google Cloud deployment guide](setup/cloud/google-cloud/google-cloud.md)
     * [Google Cloud Marketplace](setup/cloud/google-cloud/google-cloud-marketplace.md)
   * [Hetzner cloud](setup/cloud/hetzner-cloud.md)
 * [Docker container](setup/docker/README.md)
