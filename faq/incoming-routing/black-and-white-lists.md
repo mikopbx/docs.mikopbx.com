@@ -20,7 +20,7 @@ exten => _X!,1,NoOp(...)
     same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForExtensions (4).png" alt=""><figcaption><p>Code for extensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForExtensions (6).png" alt=""><figcaption><p>Code for extensions.conf</p></figcaption></figure>
 
 The whitelist of numbers sometimes needs to be described for specific providers:
 
@@ -36,5 +36,5 @@ exten => _X!,1,NoOp(...)
 
 * **PROVIDER-ID** - the value that you can find in the address bar at the time of provider configuration
 
-<figure><img src="../../.gitbook/assets/ProviderID (2).png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ProviderID (3).png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
 

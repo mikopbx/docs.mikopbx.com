@@ -48,6 +48,6 @@ n,Hangup()
 exten => *46,1,Goto(applications,<a data-footnote-ref href="#user-content-fn-1">2200105</a>,1)
 </code></pre>
 
-<figure><img src="../../.gitbook/assets/CodeForExtensionsConf (3).png" alt=""><figcaption><p>Code for extensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForExtensionsConf (4).png" alt=""><figcaption><p>Code for extensions.conf</p></figcaption></figure>
 
 [^1]: Dialplan number

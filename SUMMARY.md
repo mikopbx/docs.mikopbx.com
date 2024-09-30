@@ -1,9 +1,9 @@
 # Table of contents
 
 * [MikoPBX Manual](README.md)
-  * [Quick start](master/quick-start.md)
-  * [Getting to know MikoPBX](master/getting-to-know-mikopbx.md)
-  * [System requirements](master/system-requirements.md)
+  * [Quick start](readme/quick-start.md)
+  * [Getting to know MikoPBX](readme/getting-to-know-mikopbx.md)
+  * [System requirements](readme/system-requirements.md)
 
 ## Installation <a href="#setup" id="setup"></a>
 

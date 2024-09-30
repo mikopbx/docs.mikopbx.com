@@ -10,7 +10,7 @@ MikoPBX can determine the phone number to which the call came from the client. F
 
 In our example, the provider ID takes the form: **SIP-1687941868**
 
-<figure><img src="../../.gitbook/assets/ProviderID (3).png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ProviderID (4).png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
 
 2. Go to **System** -> **System File Customization**
 
@@ -60,7 +60,7 @@ set_var=MIKO_LINE_NAME=PT
 
 3. Open the **extensions.conf** configuration file for editing.
 
-<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption><p>extensions.conf </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>extensions.conf </p></figcaption></figure>
 
 4. Set the "**Add to end of file**" mode. In the black window, add the following code snippet:
 

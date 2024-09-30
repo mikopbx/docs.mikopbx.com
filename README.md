@@ -7,7 +7,7 @@ Thank You for choosing **MikoPBX ♥️**&#x20;
 **MikoPBX** is a telephony server with an operating system and a convenient web interface. It works with almost any phone technology in the world. MikoPBX is based on **Asterisk** and has very low PC hardware requirements.
 
 {% hint style="success" %}
-Don't know where to start? Follow [these instructions](master/quick-start.md) to help you get MikoPBX up and running as quickly as possible.
+Don't know where to start? Follow [these instructions](readme/quick-start.md) to help you get MikoPBX up and running as quickly as possible.
 {% endhint %}
 
 ## Structure of this manual
@@ -23,7 +23,7 @@ This chapter provides step-by-step instructions for installing MikoPBX on variou
 
 ## Chapter 2. Introduction to MikoPBX
 
-First steps with MikoPBX. How to find out the IP address of your system, log in to the web interface and perform basic settings. [read more...](master/getting-to-know-mikopbx.md)
+First steps with MikoPBX. How to find out the IP address of your system, log in to the web interface and perform basic settings. [read more...](readme/getting-to-know-mikopbx.md)
 
 ## Chapter 3. Configuring licensing in MikoPBX
 
