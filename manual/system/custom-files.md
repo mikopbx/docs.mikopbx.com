@@ -26,7 +26,7 @@ This section allows for customization of system and Asterisk configuration files
 | jail.local       | Fail2ban settings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | msmtp.conf       | SMTP client settings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-To edit a configuration file, use the button:  ![](<../../.gitbook/assets/image (38).png>)
+To edit a configuration file, use the button:  ![](<../../.gitbook/assets/image (37).png>)
 
 You will be presented with the configuration file editing form:
 

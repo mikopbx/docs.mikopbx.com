@@ -30,7 +30,7 @@ Otherwise, the call will be routed to the employee with extension 201.
 
 1. Find and copy the provider ID. To do this, go to the configuration of the required provider. In our example, this is **SIP-1687941868**
 
-<figure><img src="../../.gitbook/assets/ProviderID (4).png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ProviderID (3).png" alt=""><figcaption><p>Provider ID</p></figcaption></figure>
 
 2. Go to **System** -> **System file customization**
 

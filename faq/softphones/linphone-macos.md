@@ -11,19 +11,19 @@
 
 4. In the "**Username**" field, enter the internal number of the employee
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/3.jpg" alt=""><figcaption></figcaption></figure>
 
 5. In the "**SIP Domain**" field, enter the **IP address** of the MikoPBX you are going to connect to&#x20;
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/4.jpg" alt=""><figcaption></figcaption></figure>
 
 6. In the "**Password**" field, enter "**SIP password**"
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/5.jpg" alt=""><figcaption></figcaption></figure>
 
@@ -35,4 +35,4 @@ The green indicator on the top indicates successful authorization. Also, the sta
 
 <figure><img src="../../.gitbook/assets/7.jpg" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>

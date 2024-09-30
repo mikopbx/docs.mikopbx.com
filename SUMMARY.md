@@ -1,9 +1,9 @@
 # Table of contents
 
 * [MikoPBX Manual](README.md)
-  * [Quick start](readme/quick-start.md)
-  * [Getting to know MikoPBX](readme/getting-to-know-mikopbx.md)
-  * [System requirements](readme/system-requirements.md)
+  * [Quick start](master/quick-start.md)
+  * [Getting to know MikoPBX](master/getting-to-know-mikopbx.md)
+  * [System requirements](master/system-requirements.md)
 
 ## Installation <a href="#setup" id="setup"></a>
 
@@ -44,7 +44,7 @@
   * [Night and Holiday Switch](manual/routing/out-off-work-time.md)
   * [Outbound routing](manual/routing/outbound-routing.md)
 * [Modules](manual/modules/README.md)
-  * [Extensions and plugins](manual/modules/pbx-extension-modules/README.md)
+  * [Module management](manual/modules/pbx-extension-modules/README.md)
     * [Регистрация в marketplace](manual/modules/pbx-extension-modules/licensing.md)
   * [Application dialplans](manual/modules/dialplan-applications.md)
 * [Maintenance](manual/maintenance/README.md)
@@ -70,8 +70,12 @@
 
 * [Integration with 1C](faq/1c-integrations.md)
 * [Setup](faq/setup/README.md)
+  * [Page](faq/setup/page.md)
   * [Reset to factory settings](faq/setup/reset-to-factory-settings.md)
   * [Fine-tuning the firewall](faq/setup/fine-tuning-the-firewall.md)
+  * [Migrating MikoPBX to Another Server](faq/setup/change-host.md)
+  * [Conversion of Call History FreePBX -> MikoPBX](faq/setup/converting-freepbx-call-history-to-mikopbx.md)
+  * [Installation on MDADM RAID1](faq/setup/installation-on-mdadm-raid1.md)
 * [Management](faq/management/README.md)
   * [Change the login name](faq/management/change-the-login-name.md)
   * [The extra disk space has run out, the disk size has increased](faq/management/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
@@ -153,7 +157,7 @@
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
   * [Access control management](modules/miko/module-users-u-i.md)
   * [Module auto dialer](modules/miko/module-auto-dialer.md)
-  * [Call quality assessment](modules/miko/module-quality-assessment.md)
+  * [Backup](modules/miko/module-backup.md)
   * [Synchronization with LDAP/AD](modules/miko/module-ldap-sync.md)
 
 ## other
