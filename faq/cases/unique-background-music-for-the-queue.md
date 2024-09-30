@@ -20,7 +20,7 @@
 
 5. Откройте для редактирования файл «**/etc/asterisk/extensions.conf**»
 
-<figure><img src="../../.gitbook/assets/extensionsConf (1) (1).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extensionsConf (2).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
 6. Вставьте в конец файла следующий код:
 

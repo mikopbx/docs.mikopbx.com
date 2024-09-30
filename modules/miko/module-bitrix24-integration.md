@@ -20,16 +20,16 @@
 
 1. На портале **Bitrix24** необходимо установить приложение «**Интеграция с MIKOPBX**».
 
-<figure><img src="../../.gitbook/assets/1 (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (40).png" alt=""><figcaption></figcaption></figure>
 
 2. На АТС **MikoPBX** необходимо перейти в раздел "**Модули**" -> "**Управление модулями**"
 
-<figure><img src="../../.gitbook/assets/2 (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (32).png" alt=""><figcaption></figcaption></figure>
 
 3. Установите и включите модуль "**Интеграция с CRM Bitrix24**"
 
-<figure><img src="../../.gitbook/assets/3 (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (33).png" alt=""><figcaption></figcaption></figure>
 
 4. Перейдите в настройки модуля и настройте его (<mark style="color:red;">инструкция</mark>)
 
-<figure><img src="../../.gitbook/assets/4 (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (10).png" alt=""><figcaption></figcaption></figure>

@@ -6,11 +6,11 @@
 
 1. Переходим в раздел **Маршрутизация** → **Исходящие маршруты**.&#x20;
 
-<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption><p>Раздел "<a href="../../manual/routing/outbound-routing.md">Исходящие маршруты</a>"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption><p>Раздел "<a href="../../manual/routing/outbound-routing.md">Исходящие маршруты</a>"</p></figcaption></figure>
 
 2. Добавляем новое правило
 
-<figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption><p>Добавление нового правила </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption><p>Добавление нового правила </p></figcaption></figure>
 
 3. &#x20;Заполняем параметры как на скриншоте ниже:
 

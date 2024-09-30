@@ -10,15 +10,15 @@
 
 Убедитесь, что **Модуль резервного копирования** установлен и включен
 
-<figure><img src="../../.gitbook/assets/1 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (21).png" alt=""><figcaption></figcaption></figure>
 
 2. Перейдите в настройки модуля
 
-<figure><img src="../../.gitbook/assets/2 (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (38).png" alt=""><figcaption></figcaption></figure>
 
 3. Выполните действие «**Создать архивную копию**»
 
-<figure><img src="../../.gitbook/assets/3 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (5).png" alt=""><figcaption></figcaption></figure>
 
 4. Необходимо выбрать, какие именно данные будут включены в архивную копию АТС, т.е. какие данные необходимо сохранить:
    * **Настройки PBX** - все **настройки конфигурации** MikoPBX, которые были выполнены в web-интерфейсе в соответствующих разделах.
@@ -26,15 +26,15 @@
    * **Файлы с записями разговоров** - сохранение всех записей разговоров в формате \*.mp3.
    * **Звуковые файлы** - сохранение звуковых файлов, которые были загружены на АТС в разделе **Телефония** → **Звуковые файлы** ([Документация](../../manual/telefoniya/sound-files.md)).
 
-<figure><img src="../../.gitbook/assets/4 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (11).png" alt=""><figcaption></figcaption></figure>
 
 5. Выполните действие «**Создать архивную копию**».
 
-<figure><img src="../../.gitbook/assets/5 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (17).png" alt=""><figcaption></figcaption></figure>
 
 После завершения операции списке резервных копий появится новые данные:
 
-<figure><img src="../../.gitbook/assets/6 (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (6).png" alt=""><figcaption></figcaption></figure>
 
 ## Управление файлами <a href="#upravlenie_fajlami" id="upravlenie_fajlami"></a>
 
@@ -44,7 +44,7 @@
 * Скачать архив данных
 * Удалить резервную копию
 
-<figure><img src="../../.gitbook/assets/7 (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (15).png" alt=""><figcaption></figcaption></figure>
 
 ## Восстановление из архива <a href="#vosstanovlenie_iz_arxiva" id="vosstanovlenie_iz_arxiva"></a>
 
@@ -54,11 +54,11 @@
 
 1. В списке резервных копий выберите нужную и выполните действие "**Восстановить из резервной копии"**
 
-<figure><img src="../../.gitbook/assets/8 (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (17).png" alt=""><figcaption></figcaption></figure>
 
 2. Выберите категории данных к восстановлению
 
-<figure><img src="../../.gitbook/assets/9 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (9).png" alt=""><figcaption></figcaption></figure>
 
 3. Выполните действие «**Восстановить из архива**»
 
@@ -87,11 +87,11 @@
 
 1. Нажмите на кнопку "Расписание архивации" для настройки автоматического резервного копирования.
 
-<figure><img src="../../.gitbook/assets/11 (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (11).png" alt=""><figcaption></figcaption></figure>
 
 2. Для включения резервного копирования активируйте переключатель «**Архивация по расписанию"**
 
-<figure><img src="../../.gitbook/assets/12 (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (7).png" alt=""><figcaption></figcaption></figure>
 
 3. Заполните необходимые данные:
 
@@ -112,8 +112,8 @@
 * **Файлы с записями разговоров** - сохранение всех записей разговоров в формате \*.mp3
 * **Звуковые файлы** - сохранение звуковых файлов, которые были загружены на АТС в разделе **Телефония** →[ **Звуковые файлы**](../../manual/telefoniya/sound-files.md)
 
-<figure><img src="../../.gitbook/assets/13 (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (10).png" alt=""><figcaption></figcaption></figure>
 
 4. Нажмите "**Сохранить**"
 
-<figure><img src="../../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (2).png" alt=""><figcaption></figcaption></figure>

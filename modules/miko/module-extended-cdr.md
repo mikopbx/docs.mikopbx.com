@@ -14,7 +14,7 @@
 1. Выполните установку модуля в разделе [Управление модулями](../../manual/modules/pbx-extension-modules/).
 2.  Включите модуль и перейдите к его странице&#x20;
 
-    <figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/1 (7).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -38,7 +38,7 @@
 
 Панель отборов
 
-<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (9).png" alt=""><figcaption></figcaption></figure>
 
 * Позволяет установить период выборки&#x20;
 * Отображает количество вызов за выбранный период

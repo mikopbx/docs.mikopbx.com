@@ -4,17 +4,17 @@
 
 В данном разделе описываются **правила работы станции в нерабочее время, праздники и выходные дни**. В нерабочие дни обычно никто из сотрудников не может принять вызов, поэтому клиенту проигрывается голосовое уведомление с просьбой перезвонить в компанию в рабочее время.
 
-<figure><img src="../../.gitbook/assets/1 (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (55).png" alt=""><figcaption></figcaption></figure>
 
 ## Создание правила
 
 Чтобы добавить новое правило нажмите на кнопку **Добавить интервал времени.**
 
-<figure><img src="../../.gitbook/assets/2 (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (19).png" alt=""><figcaption></figcaption></figure>
 
 Откроется форма создания нового правила.
 
-<figure><img src="../../.gitbook/assets/3 (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (34).png" alt=""><figcaption></figcaption></figure>
 
 В ней:
 
@@ -32,18 +32,18 @@
 
 Активировав эту функцию, сверху у вас появится новое меню "**Ограничения по маршрутам**"
 
-<figure><img src="../../.gitbook/assets/4 (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (7).png" alt=""><figcaption></figcaption></figure>
 
 Здесь вы можете выбрать к каким конкретно маршрутам будет применяться создаваемое вами правило.
 
-<figure><img src="../../.gitbook/assets/5 (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (26).png" alt=""><figcaption></figcaption></figure>
 
 ## Примеры правил
 
 Данным правилом указываются звонки с конца рабочего дня (19:00) и до начала рабочего дня (9:00).
 
-<figure><img src="../../.gitbook/assets/6 (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (20).png" alt=""><figcaption></figcaption></figure>
 
 Данным правилом указываются звонки по субботам и воскресеньям.
 
-<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (2).png" alt=""><figcaption></figcaption></figure>

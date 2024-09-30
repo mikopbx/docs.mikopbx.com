@@ -4,11 +4,11 @@
 
 1. Перейдите в раздел "**Система**" -> "**Кастомизация системных файлов**"&#x20;
 
-<figure><img src="../../.gitbook/assets/1 (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (15).png" alt=""><figcaption></figcaption></figure>
 
 2. Откройте на редактирование **modules.conf**
 
-<figure><img src="../../.gitbook/assets/2 (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (7).png" alt=""><figcaption></figcaption></figure>
 
 3. Добавьте в конец файла
 
@@ -18,11 +18,11 @@ load => func_volume.so
 
 Сохраните изменения
 
-<figure><img src="../../.gitbook/assets/3 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (12).png" alt=""><figcaption></figcaption></figure>
 
 4. Откройте на редактирование файл **extensions.conf**
 
-<figure><img src="../../.gitbook/assets/4 (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (20).png" alt=""><figcaption></figcaption></figure>
 
 5. Добавьте следующий код в конец файла:
 
@@ -58,7 +58,7 @@ exten => down,1,NoOp()
 
 6. Откройте на редактирование файл **features.conf**
 
-<figure><img src="../../.gitbook/assets/6 (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (11).png" alt=""><figcaption></figcaption></figure>
 
 7. Добавьте в конец файла следующий код:
 
@@ -70,7 +70,7 @@ vDown => #0,self,Gosub,"volume-level-control,down,1"
 
 Сохраните изменения.
 
-<figure><img src="../../.gitbook/assets/7 (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (6).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 Громкость по умолчанию станет выше, значение 5 вместо 0. При желании сотрудник может **набрать #1 для увеличения** громкости или **#0 для уменьшения**.

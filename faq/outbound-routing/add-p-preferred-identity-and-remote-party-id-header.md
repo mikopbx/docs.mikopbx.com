@@ -4,11 +4,11 @@
 
 1. Для решения задачи следует описать дополнительные контексты через меню [Кастомизация системных файлов](../../manual/system/custom-files.md).&#x20;
 
-<figure><img src="../../.gitbook/assets/1 (57).png" alt="Раздел &#x22;Кастомизация системных файлов&#x22;"><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (63).png" alt="Раздел &#x22;Кастомизация системных файлов&#x22;"><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
 2. Править будем файл **extensions.conf**.&#x20;
 
-<figure><img src="../../.gitbook/assets/2 (43).png" alt=""><figcaption><p>Файл "extensions.conf"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (49).png" alt=""><figcaption><p>Файл "extensions.conf"</p></figcaption></figure>
 
 3. Добавьте в конец файла следующий текст:
 

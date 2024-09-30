@@ -46,49 +46,49 @@
 
 1. Перейдите в раздел "**Модули**" -> "**Управление модулями**"
 
-<figure><img src="../../../.gitbook/assets/1 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (14).png" alt=""><figcaption></figcaption></figure>
 
 2. Нажмите на значок установки любого модуля, система перенесет вас на вкладку лицензирования.
 
-<figure><img src="../../../.gitbook/assets/2 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2 (21).png" alt=""><figcaption></figcaption></figure>
 
 3. Перейдите во вкладку "**Регистрация и управление лицензией**"
 
-<figure><img src="../../../.gitbook/assets/3 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3 (19).png" alt=""><figcaption></figcaption></figure>
 
 4. Заполните всю необходимую информацию и нажмите "**Сохранить**"
 
-<figure><img src="../../../.gitbook/assets/5 (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/5 (6).png" alt=""><figcaption></figcaption></figure>
 
 5. После регистрации вам высветиться окно, подтверждающее регистрацию лицензионного ключа. Вы можете навестись и посмотреть номер своего лицензионного ключа.
 
 Нажмите "**Сохранить**"
 
-<figure><img src="../../../.gitbook/assets/6 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/6 (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Активация регистрационного номера <a href="#aktivacija_registracionnogo_nomera" id="aktivacija_registracionnogo_nomera"></a>
 
 1. Перейдите в раздел "**Модули**" -> "**Управление модулями**"
 
-<figure><img src="../../../.gitbook/assets/1 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (14).png" alt=""><figcaption></figcaption></figure>
 
 2. Нажмите на значок установки любого модуля, система перенесет вас на вкладку лицензирования.
 
-<figure><img src="../../../.gitbook/assets/2 (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2 (39).png" alt=""><figcaption></figcaption></figure>
 
 3. Перейдите во вкладку "**Регистрация и управление лицензией**"
 
-<figure><img src="../../../.gitbook/assets/3 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3 (19).png" alt=""><figcaption></figcaption></figure>
 
 4. Вставьте Ваш регистрационный номер и нажмите «**Сохранить**».
 
-<figure><img src="../../../.gitbook/assets/7 (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/7 (11).png" alt=""><figcaption></figcaption></figure>
 
 5.  После ввода регистрационного номера, подтверждающее регистрацию лицензионного ключа. Вы можете навестись и посмотреть номер своего лицензионного ключа.
 
     Нажмите "**Сохранить**"
 
-<figure><img src="../../../.gitbook/assets/6 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/6 (17).png" alt=""><figcaption></figcaption></figure>
 
 ## Активация купона <a href="#aktivacija_kupona" id="aktivacija_kupona"></a>
 
@@ -110,27 +110,27 @@
 
 1. Переходим в [MIKO SaaS сервер лицензирования](https://lic.miko.ru/).
 
-<figure><img src="../../../.gitbook/assets/8 (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/8 (19).png" alt=""><figcaption></figcaption></figure>
 
 2. Вводим **регистрационный номер** или **ранее активированный купон** и нажимаем кнопку "**Login"**. Ранее активированный купон означает, что купон был активирован в MikoPBX, т.е. была пройдена процедура активации купона.
 
-<figure><img src="../../../.gitbook/assets/9 (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/9 (15).png" alt=""><figcaption></figcaption></figure>
 
 3. Переходим в **"Sessions monitor"**
 
-<figure><img src="../../../.gitbook/assets/10 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/10 (3).png" alt=""><figcaption></figcaption></figure>
 
 4.  Таким образом на рисунке выделена привязка, которая относится к использованию лицензии для **MikoPBX**.
 
     Слева для каждой привязки в колонке **Информация** есть кнопка **i**, которая позволяет посмотреть подробную информацию о хосте, к которому привязана лицензия.
 
-<figure><img src="../../../.gitbook/assets/11 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/11 (16).png" alt=""><figcaption></figcaption></figure>
 
 #### Сброс и установка активных привязок лицензии <a href="#sbros_i_ustanovka_aktivnyx_privjazok_licenzii" id="sbros_i_ustanovka_aktivnyx_privjazok_licenzii"></a>
 
 Для каждой привязки в колонке "**Action"** есть кнопка **Drop**, которая позволяет **сбросить активную привязку** лицензии от хоста.
 
-<figure><img src="../../../.gitbook/assets/12 (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/12 (15).png" alt=""><figcaption></figcaption></figure>
 
 ## FAQ <a href="#faq_chavo" id="faq_chavo"></a>
 

@@ -11,7 +11,7 @@
 
 2. Откройте для редактирования конфигурационный файл **extensions.conf**.
 
-<figure><img src="../../.gitbook/assets/extensionsConf (1) (1).png" alt=""><figcaption><p>Редактирование файла Extensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extensionsConf (2).png" alt=""><figcaption><p>Редактирование файла Extensions.conf</p></figcaption></figure>
 
 3. Установите режим «**Добавлять в конец файла**». В черное окно добавьте следующий фрагмент кода:
 

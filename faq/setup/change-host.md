@@ -3,29 +3,27 @@
 ## Вариант №1 <a href="#variant_1" id="variant_1"></a>
 
 1. Выполните **Резервное копирование** Вашей текущей MikoPBX по[ инструкции](../../modules/miko/module-backup.md).
-2. Реализуйте сброс всех активных **настроек лицензирования** с текущей АТС по [инструкции](https://wiki.mikopbx.ru/licensing#sbros\_i\_ustanovka\_aktivnyx\_privjazok\_licenzii).
-3. Установите MikoPBX на **новый сервер**. Выполните действия, указанные в [инструкции](https://wiki.mikopbx.ru/quickstart\_lancher): [Шаг 1](https://wiki.mikopbx.ru/quickstart\_lancher#shag\_1\_ustanovka\_askozia\_pbx) и[ Шаг 2](https://wiki.mikopbx.ru/quickstart\_lancher#shag\_2\_podkljuchenie\_diska\_dlja\_xranenija\_zapisej\_razgovorov).
-4. **Загрузите** ранее выполненный бекап конфигурации MikoPBX на новом сервере по [инструкции](https://wiki.mikopbx.ru/module-backup#vosstanovlenie\_iz\_arxiva).
-5. Выполните настройки лицензирования по [инструкции](https://wiki.mikopbx.ru/licensing#aktivacija\_registracionnogo\_nomera).
+2. Установите MikoPBX на **новый сервер**. Выполните действия, указанные в [инструкции](../../readme/quick-start.md).
+3. **Загрузите** ранее выполненную резервную копию конфигурации MikoPBX на новом сервере по [инструкции](../../modules/miko/module-backup.md#vosstanovlenie\_iz\_arxiva).
 
 ### Вариант №2 <a href="#variant_2" id="variant_2"></a>
 
 **Если размер данных большой**, то имеет смысл сохранить резервную копию сразу на целевую машину. Порядок действий:
 
 1. Устанавливаем MikoPBX на новый ПК
-2. На основной MikoPBX настраиваем «[Резервное копирование по расписанию](https://wiki.mikopbx.ru/module-backup#rezervnoe\_kopirovanie\_po\_raspisaniju)»
+2. На основной MikoPBX настраиваем «[Резервное копирование по расписанию](../../modules/miko/module-backup.md#rezervnoe\_kopirovanie\_po\_raspisaniju)»
 3. Подключение должно производиться по **SFTP**
-4. **Имя пользователя** и **пароль** те, что используются для [подключения по ssh](https://wiki.mikopbx.ru/general-settings#ssh)
+4. **Имя пользователя** и **пароль** те, что используются для [подключения по ssh](../troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
 5. «**Путь на сервере**» укажите «**/storage/usbdisk1/mikopbx/backup/**»
 6. Дождитесь завершения резервного копирования
 7. **Отключите основную машину**
-8. На целевой машине выполните [восстановление из резервной копии](https://wiki.mikopbx.ru/module-backup#vosstanovlenie\_iz\_arxiva)
+8. На целевой машине выполните [восстановление из резервной копии](../../modules/miko/module-backup.md#vosstanovlenie\_iz\_arxiva)
 
 ### Вариант №3 <a href="#variant_3" id="variant_3"></a>
 
 Скрипт для переноса данных вручную.
 
-```
+```php
 #
 # MikoPBX - free phone system for small business
 # Copyright © 2017-2024 Alexey Portnov and Nikolay Beketov

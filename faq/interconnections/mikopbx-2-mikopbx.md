@@ -14,7 +14,7 @@
 
 Схематично маршрутизация вызовов представлена на рисунке.
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Схема маршрутизации</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Схема маршрутизации</p></figcaption></figure>
 
 ### Провайдеры телефонии <a href="#provajdery_telefonii" id="provajdery_telefonii"></a>
 

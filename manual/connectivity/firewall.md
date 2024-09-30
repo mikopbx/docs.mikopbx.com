@@ -10,14 +10,14 @@
 
 ## Общие настройки
 
-<figure><img src="../../.gitbook/assets/13 (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (13).png" alt=""><figcaption></figcaption></figure>
 
 Название правила можно задать произвольным.\
 Справа от **адреса подсети** есть поле **Маска подсети** в формате CIDR.&#x20;
 
 ## Доступные сервисы <a href="#dostupnye_servisy" id="dostupnye_servisy"></a>
 
-<figure><img src="../../.gitbook/assets/14 (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (6).png" alt=""><figcaption></figcaption></figure>
 
 * SIP\&RTP-регистрация телефонов и голосовой трафик - Session Initiation Protocol используется для установки соединений между VoIP телефонами
 * WEB-доступ к административному интерфейсу настройки АТС
@@ -29,7 +29,7 @@
 
 ## Дополнительные параметры <a href="#dopolnitelnye_parametry" id="dopolnitelnye_parametry"></a>
 
-<figure><img src="../../.gitbook/assets/15 (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (11).png" alt=""><figcaption></figcaption></figure>
 
 * У каждой подсети есть флаг «**Это VPN или локальная сеть**». При установке этого флага MikoPBX будет представляться всем локальным подсетям локальным IP, а не внешним.
 * Флаг «**Никогда не блокировать адреса из этой сети**» следует включать только для доверенных подсетей. Если включен данный флаг, то правила защиты от взлома на данную подсеть не распространяются.

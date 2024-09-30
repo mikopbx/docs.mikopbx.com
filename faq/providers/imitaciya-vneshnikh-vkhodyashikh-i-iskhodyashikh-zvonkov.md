@@ -6,19 +6,19 @@
 
 1. Переходим в раздел **Маршрутизация** → **Провайдеры телефонии**, нажимаем на кнопку «**Подключить SIP"**
 
-<figure><img src="../../.gitbook/assets/11 (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (6).png" alt=""><figcaption></figcaption></figure>
 
 2. Установите тип учетной записи - **Входящая регистрация**
 
-<figure><img src="../../.gitbook/assets/13 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (9).png" alt=""><figcaption></figcaption></figure>
 
 3. Перейдите в **Расширенные настройки**
 
-<figure><img src="../../.gitbook/assets/5 (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (12).png" alt=""><figcaption></figcaption></figure>
 
 4. Включите переключатель «**Отключить использование поля fromuser**»;
 
-<figure><img src="../../.gitbook/assets/3 (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (30).png" alt=""><figcaption></figcaption></figure>
 
 5. В поле "**Дополнительные параметры**" введите:
 
@@ -29,7 +29,7 @@ callerid = 79257184275 <79257184275>
 
 Где номер «**79257184275**» может быть другим. Он будет отображаться в качестве номера абонента при внешнем входящем звонке. Все остальные настройки оставьте без изменений
 
-<figure><img src="../../.gitbook/assets/4 (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (14).png" alt=""><figcaption></figcaption></figure>
 
 6. Опишите входящие и исходящие маршруты. О том как это сделать написано в следующих документациях:
 
@@ -46,10 +46,10 @@ callerid = 79257184275 <79257184275>
 * «**Username**» - сохраненный из АТС идентификатор **SIP-##########**.
 * «**Password**» - пароль провайдера
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 После успешного подключения софтфона, лампочка возле созданного провайдера загорится зеленым
 
-<figure><img src="../../.gitbook/assets/10 (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (10).png" alt=""><figcaption></figcaption></figure>
 
 На этом настройка имитации провайдера закончена. Теперь, любой внешний исходящий звонок, звонок пойдет на ваш софтфон. Позвонив с софтфона на любой номер, вызов пойдет на вашу АТС, как внешний входящий звонок через провайдера, которого вы настроили. При этом номер звонящего абонента будет отображаться тот, который вы указали в поле «Дополнительные параметры» при настройке провайдера. Вы можете изменить этот номер, чтобы изменился номер «звонящего абонента».

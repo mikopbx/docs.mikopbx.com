@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Руководство по MikoPBX](README.md)
-  * [Быстрый старт](master/quick-start.md)
+  * [Быстрый старт](readme/quick-start.md)
   * [Знакомство с MikoPBX](readme/getting-to-know-mikopbx.md)
   * [Системные требования](readme/system-requirements.md)
 
@@ -83,7 +83,7 @@
     * [Перехват на ответственного в панели телефонии 4.0 как в панели 1.0](faq/1c-integrations/interception/perekhvat-na-otvetstvennogo-v-paneli-telefonii-4.0-kak-v-paneli-1.0.md)
     * [Отменить перехват на ответственного для конкретного провайдера](faq/1c-integrations/interception/otmenit-perekhvat-na-otvetstvennogo-dlya-konkretnogo-provaidera.md)
 * [Установка](faq/setup/README.md)
-  * [Конвертация истории звонков FreePBX в MikoPBX](faq/setup/converting-freepbx-call-history-to-mikopbx.md)
+  * [Конвертация истории звонков FreePBX -> MikoPBX](faq/setup/converting-freepbx-call-history-to-mikopbx.md)
   * [Переход со старых релизов на MikoPBX](faq/setup/switching-from-old-releases-to-mikopbx/README.md)
     * [Перенос записей разговоров из Askozia 5 в MikoPBX](faq/setup/switching-from-old-releases-to-mikopbx/transferring-conversation-recordings-from-askozia-5-to-mikopbx.md)
     * [Обновление Askozia 4, 5 до версии MikoPBX](faq/setup/switching-from-old-releases-to-mikopbx/updating-askozia-4-5-to-mikopbx-version.md)

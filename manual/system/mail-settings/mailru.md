@@ -8,7 +8,7 @@
 
 1. &#x20;Введем IP адрес АТС MikoPBX в браузере и перейдем в **Система** → **Почта и уведомления**.
 
-<figure><img src="../../../.gitbook/assets/1 (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (45).png" alt=""><figcaption></figcaption></figure>
 
 Настройки SMTP клиента для сервиса Mail:
 
@@ -18,7 +18,7 @@
 * **Пароль** - пароль от электронной почты, необходимый для авторизации
 * **Метод шифрования** - Использовать TLS
 
-<figure><img src="../../../.gitbook/assets/1 (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (33).png" alt=""><figcaption></figcaption></figure>
 
 2. Возвращаемся в **Система** → **Почта и уведомления**. Осуществим отправку тестового письма на электронную почту любого сервиса. В случае успешного тестирования на указанный Вами адрес электронной почты придет тестовое письмо.
 

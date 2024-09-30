@@ -5,20 +5,20 @@
 1. Создаём новую виртуальную машину
 2. Указываем **Имя**, **Тип** и **Версию** виртуальной машины, как показано на изображении ниже.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Имя, Тип и Версия виртуальной машины</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Имя, Тип и Версия виртуальной машины</p></figcaption></figure>
 
 3. Выбираем хранилище для создания.
 4. Для данной виртуальной машины выделяем объём оперативной памяти **1024 Мб**. Создаём **новый** виртуальный жёсткий диск для основной системы размером **500 Мб**.
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Размер оперативной памяти и памяти для системного жесткого диска</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Размер оперативной памяти и памяти для системного жесткого диска</p></figcaption></figure>
 
 5. Выбираем тип контроллера SCSI и тип адаптера, как на изображении ниже
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Тип контроллера и тип адаптера </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Тип контроллера и тип адаптера </p></figcaption></figure>
 
 6. Выбираем **BIOS** в качестве **Firmware**.
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Раздел "Boot options"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Раздел "Boot options"</p></figcaption></figure>
 
 7. Проверяем и сохраняем изменения.
 
@@ -32,7 +32,7 @@
 
 2. Переходим на вкладку носителей CD/DVD Drive. Загружаем iso-образ для установки. Ставим галочку слева от пункта "Connect as power on"
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Загрузка образа системы</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Загрузка образа системы</p></figcaption></figure>
 
 ## Установка MikoPBX <a href="#ustanovka_mikopbx" id="ustanovka_mikopbx"></a>
 
