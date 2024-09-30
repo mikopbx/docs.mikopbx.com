@@ -2,22 +2,22 @@
 
 ### Option №1 <a href="#user-content-variant_1" id="user-content-variant_1"></a>
 
-1. Perform a **Backup** of your current MikoPBX following [this guide](../../modules/miko/module-backup.md).
+1. Perform a **Backup** of your current MikoPBX following [this guide](../../modules/miko/module-quality-assessment.md).
 2. Install MikoPBX on the **new server**. Follow the steps in this [guide](../../master/quick-start.md).
-3. **Upload** the previously created MikoPBX backup to the new server following [this guide](../../modules/miko/module-backup.md#vosstanovlenie\_iz\_arxiva).
+3. **Upload** the previously created MikoPBX backup to the new server following [this guide](../../modules/miko/module-quality-assessment.md#vosstanovlenie\_iz\_arxiva).
 
 ### Option №2 <a href="#user-content-variant_2" id="user-content-variant_2"></a>
 
 **If the data size is large**, it's practical to save the backup directly on the target machine. Here's the process:
 
 1. Install MikoPBX on the new machine.
-2. On the original MikoPBX, set up [Scheduled Backups](../../modules/miko/module-backup.md#rezervnoe\_kopirovanie\_po\_raspisaniju).
+2. On the original MikoPBX, set up [Scheduled Backups](../../modules/miko/module-quality-assessment.md#rezervnoe\_kopirovanie\_po\_raspisaniju).
 3. Ensure the connection is via **SFTP**.
 4. **Username** and **password** should be those used for [SSH connection](../troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md).
 5. Set the **Path on the server** to **"/storage/usbdisk1/mikopbx/backup/"**.
 6. Wait for the backup to complete.
 7. **Shut down the original machine**.
-8. On the target machine, perform a [Restore from Backup](../../modules/miko/module-backup.md#vosstanovlenie\_iz\_arxiva).
+8. On the target machine, perform a [Restore from Backup](../../modules/miko/module-quality-assessment.md#vosstanovlenie\_iz\_arxiva).
 
 ### Option №3 <a href="#user-content-variant_3" id="user-content-variant_3"></a>
 
