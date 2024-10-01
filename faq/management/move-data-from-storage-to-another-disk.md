@@ -7,7 +7,11 @@ MikoPBX установлена на отдельно выделенный сер
 ## Решение <a href="#reshenie" id="reshenie"></a>
 
 1. Подключитесь к MikoPBX через SSH-клиент по [инструкции](../troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
-2. Отключаем **storage** диск «sda4»:
+
+<figure><img src="../../.gitbook/assets/sshConnection (1).png" alt=""><figcaption></figcaption></figure>
+
+2. Перейдите в консоль - для этого выберите: **\[9] Console (Shell)**
+3. Отключаем **storage** диск «sda4»:
 
 ```php
 /etc/rc/freestorage;
