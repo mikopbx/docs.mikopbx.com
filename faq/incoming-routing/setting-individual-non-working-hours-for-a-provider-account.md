@@ -10,7 +10,7 @@ In MikoPBX, in the **Call Routing** → **Night and Holiday section**, rules for
 
 1. Go to **Modules** → **Dialplan Applications**. Create a new application (Asterisk dialplan) following the [instructions](../../manual/modules/dialplan-applications.md). Application parameters take the form:
 
-<figure><img src="../../.gitbook/assets/newDialplan.png" alt=""><figcaption><p>Parameters of the created dialplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newDialplan (1).png" alt=""><figcaption><p>Parameters of the created dialplan</p></figcaption></figure>
 
 2. The program code of the created application:
 

@@ -65,7 +65,7 @@ exten => s,1,Set(PJSIP_HEADER(add,Call-Info)=\;answer-after=0)
 
 8. Go to the "**Dialplan Applications**" section, create a new dialplan
 
-<figure><img src="../../.gitbook/assets/newDialplan (1).png" alt=""><figcaption><p>New dialplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newDialplan (1) (1).png" alt=""><figcaption><p>New dialplan</p></figcaption></figure>
 
 9. Assign an internal number, for example 2200110. Set the code type: "**Asterisk Dialplan**"
 
