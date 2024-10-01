@@ -79,7 +79,7 @@ eth1      Link encap:Ethernet  HWaddr 00:0C:29:08:EF:07
 * Стрелками **⇑** и **⇓** перемещайтесь между полями формы ввода
 * Заполните путь и имя файла
 * Выберите действие сохранить и нажмите **ENTER**
-* Скачайте файл используя [Подключение к АТС с помощью WinSCP](https://wiki.mikopbx.ru/faq:winscp)
+* Скачайте файл используя [Подключение к АТС с помощью WinSCP](connecting-to-a-pbx-using-winscp.md)
 
 ### Фильтрация <a href="#filtracija" id="filtracija"></a>
 
