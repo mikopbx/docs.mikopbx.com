@@ -104,7 +104,7 @@
   * [Подключение к АТС с помощью WinSCP](faq/troubleshooting/connecting-to-a-pbx-using-winscp.md)
   * [Получение логов с помощью приложения tcpdump](faq/troubleshooting/getting-logs-using-the-tcpdump-application.md)
   * [Снятие лога в АТС с помощью Wireshark](faq/troubleshooting/capturing-logs-from-pbx-using-wireshark.md)
-  * [Анализ трафика средствами Sngrep](faq/troubleshooting/analiz-trafika-sredstvami-sngrep.md)
+  * [Анализ трафика средствами Sngrep](faq/troubleshooting/traffic-analysis-using-sngrep.md)
   * [Настройка Jitter](faq/troubleshooting/nastroika-jitter.md)
   * [Диагностика проблем с лицензированием](faq/troubleshooting/diagnostika-problem-s-licenzirovaniem.md)
 * [Входящая маршрутизация](faq/incoming-routing/README.md)
