@@ -105,7 +105,7 @@
   * [Получение логов с помощью приложения tcpdump](faq/troubleshooting/getting-logs-using-the-tcpdump-application.md)
   * [Снятие лога в АТС с помощью Wireshark](faq/troubleshooting/capturing-logs-from-pbx-using-wireshark.md)
   * [Анализ трафика средствами Sngrep](faq/troubleshooting/traffic-analysis-using-sngrep.md)
-  * [Настройка Jitter](faq/troubleshooting/jitter-setting.md)
+  * [Настройка Jitter](faq/troubleshooting/jitter-configuration.md)
   * [Диагностика проблем с лицензированием](faq/troubleshooting/diagnostika-problem-s-licenzirovaniem.md)
 * [Входящая маршрутизация](faq/incoming-routing/README.md)
   * [Выбор провайдера при переадресации на мобильный](faq/incoming-routing/choosing-a-provider-when-redirecting-to-a-mobile.md)
