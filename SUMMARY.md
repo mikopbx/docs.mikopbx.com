@@ -82,7 +82,7 @@
 * [Troubleshooting](faq/troubleshooting/README.md)
   * [Connecting to a PBX using an SSH client](faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
   * [Connecting to a PBX using WinSCP](faq/troubleshooting/connecting-to-a-pbx-using-winscp.md)
-  * [Получение логов с помощью приложения tcpdump](faq/troubleshooting/poluchenie-logov-s-pomoshyu-prilozheniya-tcpdump.md)
+  * [Getting logs using the tcpdump application](faq/troubleshooting/poluchenie-logov-s-pomoshyu-prilozheniya-tcpdump.md)
   * [Снятие лога в АТС с помощью Wireshark](faq/troubleshooting/snyatie-loga-v-ats-s-pomoshyu-wireshark.md)
   * [Анализ трафика средствами Sngrep](faq/troubleshooting/analiz-trafika-sredstvami-sngrep.md)
   * [Adjusting the volume](faq/troubleshooting/adjusting-the-volume.md)
