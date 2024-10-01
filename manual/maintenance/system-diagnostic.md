@@ -99,5 +99,5 @@ You can also obtain this log archive from the **/storage/usbdisk1/mikopbx/tmp** 
 Other ways to collect logs:
 
 * Using an [SSH client](../../faq/troubleshooting/connecting-to-a-pbx-using-an-ssh-client.md)
-* Using the [Wireshark utility](../../faq/troubleshooting/snyatie-loga-v-ats-s-pomoshyu-wireshark.md)
-* Using the [tcpdump application](../../faq/troubleshooting/getting-logs-using-the-tcpdump-application-1.md)
+* Using the [Wireshark utility](../../faq/troubleshooting/capturing-logs-from-pbx-using-wireshark.md)
+* Using the [tcpdump application](../../faq/troubleshooting/getting-logs-using-the-tcpdump-application.md)
