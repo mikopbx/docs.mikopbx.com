@@ -1,17 +1,21 @@
 # Getting logs using the tcpdump application
 
-1. Connect to your PBX via SSH ([instructions](connecting-to-a-pbx-using-an-ssh-client.md))
-2. Run the command:
+## Capturing Logs with the tcpdump Application
 
-```
+1. Connect to your PBX via SSH (instructions [here](connecting-to-a-pbx-using-an-ssh-client.md)).
+2. Run the following command:
+
+```bash
 tcpdump -i eth0 -n -s 0 -vvv -w /tmp/capturefilename.pcap
 ```
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Command in the SSH interface</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/firstOutput.png" alt=""><figcaption><p>Command in SSH connection</p></figcaption></figure>
 
-3. Reproduce your situation, make a phone call. Next, press **CTRL + C** in the SSH console. The tcpdump application will be completed.
+3. Reproduce the issue by making a phone call. After the call, press **CTRL + C** in the SSH console to stop **tcpdump**.
 
-<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption><p>The result of tcpdump</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/secondOutput.png" alt=""><figcaption><p>Command in SSH connection</p></figcaption></figure>
 
-4. Connect to the PBX using WinSCP ([instructions](connecting-to-a-pbx-using-winscp.md))
-5. Send the call log **/tmp/capturefilename.pcap** to technical support
+4. Connect to the PBX using WinSCP (instructions [here](connecting-to-a-pbx-using-winscp.md)).
+5. Send the log file **/tmp/capturefilename.pcap** to technical support.
+
+<figure><img src="../../.gitbook/assets/fileWithLogs.png" alt=""><figcaption><p>File with logs</p></figcaption></figure>
