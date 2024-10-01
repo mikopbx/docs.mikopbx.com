@@ -8,7 +8,7 @@ This is the simplest client for users of Apple products. You can download it fro
 
 2. In the "**Domain**" field, enter the **IP address** of the MikoPBX to which the connection is being made
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
