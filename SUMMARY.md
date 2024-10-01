@@ -87,7 +87,7 @@
   * [Traffic Analysis Using Sngrep](faq/troubleshooting/traffic-analysis-using-sngrep.md)
   * [Adjusting the volume](faq/troubleshooting/adjusting-the-volume.md)
   * [Jitter Configuration](faq/troubleshooting/jitter-configuration/README.md)
-    * [Troubleshooting Audio Issues](faq/troubleshooting/jitter-configuration/troubleshooting-audio-issues.md)
+    * [Troubleshooting Audio Issues](faq/troubleshooting/jitter-configuration/solving-sound-problems.md)
 * [Incoming Routing](faq/incoming-routing/README.md)
   * [Choosing a provider when redirecting to a mobile](faq/incoming-routing/choosing-a-provider-when-redirecting-to-a-mobile.md)
   * [Notification of Employment, Call Waiting](faq/incoming-routing/notification-of-employment-call-waiting.md)

@@ -5,7 +5,7 @@ Jitter configuration is usually required when there are significant issues with 
 It is best to investigate the root cause by analyzing call dumps on the PBX, router, or upstream router. Compare the data and observe where the jitter increases.
 
 {% hint style="success" %}
-There is this [article ](troubleshooting-audio-issues.md)on sound problems.
+There is this [article ](solving-sound-problems.md)on sound problems.
 {% endhint %}
 
 However, in some cases, you may not be able to influence the quality of the communication channel. If the audio stream delay becomes too large, Asterisk will discard "late" packets. Increasing the Jitter value can solve this issue.
