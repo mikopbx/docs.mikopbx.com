@@ -126,6 +126,7 @@
   * [Dynamic Queue Agents](faq/cases/dynamic-queue-agents.md)
   * [Disable forwarding to mobile for internal calls](faq/cases/disable-forwarding-to-mobile-for-internal-calls.md)
   * [Conversion of Call History FreePBX -> MikoPBX](faq/cases/converting-freepbx-call-history-to-mikopbx.md)
+  * [SSL Certificate for MikoPBX Web Interface from OPNSense](faq/cases/opnsense-certificate.md)
 * [VoIP providers](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
