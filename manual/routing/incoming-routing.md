@@ -38,7 +38,7 @@ First, the call goes along the upper route. If the client does not get through, 
 
 To add a new incoming routing rule, click the **Add a new rule** button.
 
-<figure><img src="../../.gitbook/assets/newRule.png" alt=""><figcaption><p>New Rule</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newRule (1).png" alt=""><figcaption><p>New Rule</p></figcaption></figure>
 
 In the **Note** field, describe the route you want to implement. In the future, this will help you debug the call circuit.&#x20;
 
