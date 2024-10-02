@@ -75,4 +75,4 @@ Instructions for incoming routes are available at the [link](../../manual/routin
 
 2. Fill in the data according to the template:
 
-<figure><img src="../../.gitbook/assets/parametersOfRule.png" alt=""><figcaption><p>New incoming call handling rule</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/parametersOfRule (1).png" alt=""><figcaption><p>New incoming call handling rule</p></figcaption></figure>

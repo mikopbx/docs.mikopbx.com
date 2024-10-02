@@ -113,6 +113,7 @@
     * [Changing the number prefix from "+345" to "347"](faq/outbound-routing/number-templates/changing-the-number-prefix-from-+345-to-347.md)
     * [Changing the number prefix from "345, 347" to "+345"](faq/outbound-routing/number-templates/changing-the-number-prefix-from-345-347-to-+345.md)
     * [Removing the area code from the number](faq/outbound-routing/number-templates/removing-the-area-code-from-the-number.md)
+    * [Adding the prefix "1" to the number](faq/outbound-routing/number-templates/adding-the-prefix-1-to-the-number.md)
   * [Making Calls Through a Specific Provider](faq/outbound-routing/making-calls-through-a-specific-provider.md)
 * [Scenarios and cases](faq/cases/README.md)
   * [Generate extensions by REST API](faq/cases/extensions-generation-by-rest-api.md)
