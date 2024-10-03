@@ -144,7 +144,7 @@
   * [Имитация внешних звонков](faq/cases/imitaciya-vneshnikh-zvonkov.md)
   * [Настройка outboudproxy](faq/cases/nastroika-outboudproxy.md)
   * [Отключение "нерабочего времени" для VIP номеров](faq/cases/disabling-off-hours-for-vip-rooms.md)
-  * [Регистрация нескольких учетных записей от одного провайдера](faq/cases/registraciya-neskolkikh-uchetnykh-zapisei-ot-odnogo-provaidera.md)
+  * [Регистрация нескольких учетных записей от одного провайдера](faq/cases/registering-multiple-accounts-from-one-provider.md)
   * [Настройка индивидуального нерабочего времени для нескольких провайдеров, зарегистрированных на одном](faq/cases/nastroika-individualnogo-nerabochego-vremeni-dlya-neskolkikh-provaiderov-zaregistrirovannykh-na-odno.md)
   * [Отключить переадресацию на мобильный для внутренних звонков](faq/cases/disable-forwarding-to-mobile-for-internal-calls.md)
   * [Уникальная фоновая музыка для очереди](faq/cases/unique-background-music-for-the-queue.md)

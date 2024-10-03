@@ -1,6 +1,6 @@
 # Отключение "нерабочего времени" для VIP номеров
 
-1. Подключите провайдеров, зарегистрированных на одном хосте, как описано в [инструкции](registraciya-neskolkikh-uchetnykh-zapisei-ot-odnogo-provaidera.md).
+1. Подключите провайдеров, зарегистрированных на одном хосте, как описано в [инструкции](registering-multiple-accounts-from-one-provider.md).
 2. Перейдите в раздел **Система** → **Кастомизация системных файлов**.
 
 <figure><img src="../../.gitbook/assets/CustomizationSystemFiles.png" alt=""><figcaption><p>Раздел кастомизации системных файлов</p></figcaption></figure>
