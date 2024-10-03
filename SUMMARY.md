@@ -190,7 +190,7 @@
   * [Telephone(MacOS)](faq/softphones/telephone-macos.md)
   * [Softphone.pro](http://wiki.mikopbx.ru/faq:softphone\_pro)
   * [SIP.TG (Telegram)](https://wiki.mikopbx.ru/faq:siptg)
-  * [Настройка WebRTC клиента SIPML5](faq/softphones/nastroika-webrtc-klienta-sipml5.md)
+  * [Настройка WebRTC клиента SIPML5](faq/softphones/configuring-webrtc-client-sipml5.md)
 * [Voip шлюзы](faq/voip-gateways/README.md)
   * [GoIP4](faq/voip-gateways/goip4.md)
   * [Yeastar NeoGate TG 400](faq/voip-gateways/yeastar-neogate-tg-400.md)
