@@ -52,7 +52,7 @@
 
 В версиях АТС **2021.4.1+** появилась возможность прописать **stun** сервер, он необходим для корректного определения внешнего адреса, и на моей практике, пригодился для корректной работы webRTC клиента:
 
-<figure><img src="../../../.gitbook/assets/stunAddress.png" alt=""><figcaption><p>Адрес STUN сервера</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/stunAddress (1).png" alt=""><figcaption><p>Адрес STUN сервера</p></figcaption></figure>
 
 **Симптомы** некорректной настройки:
 
