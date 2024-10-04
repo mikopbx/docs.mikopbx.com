@@ -1,6 +1,6 @@
 # Getting logs using the tcpdump application
 
-**tcpdump** — это утилита в Linux для захвата и анализа сетевого трафика. Она позволяет в реальном времени отслеживать пакеты, проходящие через сетевой интерфейс, и сохранять их для дальнейшего анализа.
+**tcpdump** is a Linux utility for capturing and analyzing network traffic. It allows you to monitor packets passing through a network interface in real time and save them for further analysis.
 
 ## Capturing Logs with the tcpdump Application
 

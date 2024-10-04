@@ -1,6 +1,6 @@
 # Traffic Analysis Using Sngrep
 
-**Sngrep** is a command-line utility for analyzing SIP traffic.
+**Sngrep** is a command-line tool for capturing and analyzing SIP traffic. It allows you to visualize SIP sessions, filter them, and track issues in voice connections.
 
 {% hint style="info" %}
 Use this application to analyze logs and send them to technical support.

@@ -1,4 +1,4 @@
-# Troubleshooting Audio Issues
+# Troubleshooting sound problems
 
 ## **Introduction**
 
@@ -18,7 +18,7 @@ Devices attempt to "negotiate" a session by exchanging information about support
 
 If the devices cannot find a common codec, the call will likely drop, and the logs will show an error indicating that no compatible codec was found.
 
-In MikoPBX, codecs are configured in the "**General Settings**" - "**Audio/Video Codecs**" section ([see wiki](../../../manual/system/general-settings.md#audio\_video\_kodeki)). The most common codec in Russia is **alaw**. For working with webRTC, you should enable the **opus** codec.
+In MikoPBX, codecs are configured in the "**General Settings**" - "**Audio/Video Codecs**" section ([see wiki](../../manual/system/general-settings.md#audio\_video\_kodeki)). The most common codec in Russia is **alaw**. For working with webRTC, you should enable the **opus** codec.
 
 ## NAT <a href="#nat" id="nat"></a>
 
@@ -41,15 +41,15 @@ There is an external IP address **109.61.231.230**. Employees need to connect to
 For external employees to connect, you will need:
 
 * A public, static IP address - purchased from the internet service provider.
-* In the network interface settings, specify the external PBX address ([see wiki](../../../manual/connectivity/network.md)).
-* Map the external SIP and RTP ports on the router ([see wiki](../../../manual/system/general-settings.md#sip)) to the corresponding PBX ports (one-to-one). For example, if the PBX uses SIP port 5060 and RTP ports from 10000 to 20000, these ports should be opened on the router as well.
-* [Enable ](../../../manual/connectivity/firewall.md)and [configure ](../../setup/fine-tuning-the-firewall.md)the PBX firewall.
+* In the network interface settings, specify the external PBX address ([see wiki](../../manual/connectivity/network.md)).
+* Map the external SIP and RTP ports on the router ([see wiki](../../manual/system/general-settings.md#sip)) to the corresponding PBX ports (one-to-one). For example, if the PBX uses SIP port 5060 and RTP ports from 10000 to 20000, these ports should be opened on the router as well.
+* [Enable ](../../manual/connectivity/firewall.md)and [configure ](../setup/fine-tuning-the-firewall.md)the PBX firewall.
 
 In the firewall, all local subnets must be specified. **Be sure** to check the box "**This is a local subnet or VPN...**". If this box is not checked, the PBX will treat the subnet as external, and SIP messages will use the external PBX address instead of the internal one, causing audio issues.
 
 In PBX versions **2021.4.1+**, you can specify a **STUN** server, which helps correctly determine the external address. From my experience, this is useful for webRTC clients:
 
-<figure><img src="../../../.gitbook/assets/stunAddress.png" alt=""><figcaption><p>Stun server address</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/stunAddress.png" alt=""><figcaption><p>Stun server address</p></figcaption></figure>
 
 **Symptoms** of incorrect configuration:
 
@@ -76,7 +76,7 @@ There are several problems that can be harder to detect at first glance. In prac
 
 Here's an example of network traffic analysis for a problematic call:
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Example of network traffic analysis</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Example of network traffic analysis</p></figcaption></figure>
 
 In the image, you can see "**red-yellow dots**". These represent "dropped packets" that will not be played back to the client. In this case, increasing the **Jitter Buffer** value to **800** stabilized the audio and eliminated stuttering.
 
