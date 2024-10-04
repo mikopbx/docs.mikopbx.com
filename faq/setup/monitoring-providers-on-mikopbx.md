@@ -10,13 +10,13 @@
 
 <figure><img src="../../.gitbook/assets/newDialplanAppliccation.png" alt=""><figcaption><p>Создание нового приложения диалплана</p></figcaption></figure>
 
-2. Укажите название - например, Blacklist, короткий номер для приложения, к примеру 99, а так жу выберите «**Тип кода**» - «**PHP AGI Скрипт**»
+2. Укажите название - например, Provider Monitoring, короткий номер для приложения, к примеру 99, а так жу выберите «**Тип кода**» - «**PHP AGI Скрипт**»
 
-<figure><img src="../../.gitbook/assets/parametersOfDialplan.png" alt=""><figcaption><p>Параметры диалплана</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new1 (5).png" alt=""><figcaption><p>Параметры диалплана</p></figcaption></figure>
 
 3. Перейдите во вкладку "Программный код":
 
-<figure><img src="../../.gitbook/assets/programmeCodeSection.png" alt=""><figcaption><p>Раздел "Программный код"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new2 (3).png" alt=""><figcaption><p>Раздел "Программный код"</p></figcaption></figure>
 
 4. Вставьте код:
 
