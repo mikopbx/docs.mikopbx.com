@@ -1,5 +1,7 @@
 # SSL Certificate for MikoPBX Web Interface from OPNSense
 
+**OPNsense** is a FreeBSD-based operating system designed for creating firewalls and routers. It provides powerful network management tools, including VPN, traffic filtering, monitoring, and load balancing.
+
 OPNSense includes a certification authority (CA) and can issue SSL certificates for the MikoPBX web interface.
 
 First, ensure that the OPNSense certification authority is configured and that the root certificate is installed on the user's workstation.
