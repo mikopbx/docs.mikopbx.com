@@ -12,11 +12,11 @@ To enable notifications, you will need to configure the SMTP client. See instruc
 
 2. Enter a name (e.g., Blacklist), a short number for the application (e.g., 99), and select "**Code Type**" - "**PHP AGI Script**".
 
-<figure><img src="../../.gitbook/assets/parametersOfDialplan.png" alt=""><figcaption><p>Parameters of dialplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new1 (5).png" alt=""><figcaption><p>Parameters of dialplan</p></figcaption></figure>
 
 3. Go to the "Program Code" tab:
 
-<figure><img src="../../.gitbook/assets/programmeCodeSection.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new2 (4).png" alt=""><figcaption></figcaption></figure>
 
 4. Insert the following code:
 

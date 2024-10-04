@@ -146,11 +146,11 @@ You can save the **public** SSH key on the PBX in the **SSH Authorized Keys** fi
 
 In this subsection, you can increase security by changing the HTTP port (default is port 80) or activating HTTPS mode.
 
-**HTTPS (HyperText Transfer Protocol Secure)** is an extension of HTTP that supports encryption for enhanced security. HTTPS data is transmitted over cryptographic protocols such as SSL or TLS. Unlike HTTP, which uses TCP port 80, HTTPS uses TCP port 443 by default.
+**HTTPS (HyperText Transfer Protocol Secure)** is an extension of HTTP that supports encryption for enhanced security. HTTPS data is transmitted over cryptographic protocols such as SSL or TLS. Unlike HTTP, which uses TCP port 80, HTTPS uses TCP port 443 by default.&#x20;
 
 * **Redirect to HTTPS** - when attempting to open the web interface via HTTP, the user will be redirected to HTTPS.
 
-When the system starts, the PBX generates its own certificate for HTTPS operation - this is a "self-signed" certificate, not verified by a public "registrar," but it still allows HTTPS operation and encrypts traffic between the PBX and the browser.
+When the system starts, the PBX generates its own certificate for HTTPS operation - this is a "self-signed" certificate, not verified by a public "registrar," but it still allows HTTPS operation and encrypts traffic between the PBX and the browser. You can use[ Let's encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md) module.
 
 ## Web Interface Password <a href="#parol_administratora" id="parol_administratora"></a>
 

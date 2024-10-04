@@ -39,6 +39,16 @@ Choose one of four editing options:
 * "**To replace all**" - your changes will completely overwrite the configuration file.
 * **"Script"** mode in MikoPBX system file customization allows administrators to add custom scripts or commands directly into the configuration files. This mode is ideal for advanced users who need to execute specific actions, automate tasks, or modify system behavior dynamically, enhancing the flexibility of the PBX configuration. It should be used with caution to avoid system disruptions.
 
+### Customizing System Files with Scripts <a href="#customizing-system-files-with-scripts" id="customizing-system-files-with-scripts"></a>
+
+In some cases, more complex modifications to system files are required than simply adding text to the end of a configuration file. For instance, you may need to redistribute PJSIP account parameters while retaining the ability to configure the system through the web interface.
+
+We've introduced a new approach to customization, where you can describe a Bash script that will execute each time the system generates a configuration file. This way, integrators can make precise changes to configuration files without developing additional modules.
+
+For example, you can modify the **pjsip.conf** file and change the _max\_contacts_ parameter for all internal numbers, except one.
+
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption><p>File customization with "Scripts"</p></figcaption></figure>
+
 ### sip.conf <a href="#sipconf" id="sipconf"></a>
 
 You can add parameters to an existing section using the (+) syntax:
