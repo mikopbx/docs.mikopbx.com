@@ -1,5 +1,7 @@
 # Getting logs using the tcpdump application
 
+**tcpdump** — это утилита в Linux для захвата и анализа сетевого трафика. Она позволяет в реальном времени отслеживать пакеты, проходящие через сетевой интерфейс, и сохранять их для дальнейшего анализа.
+
 ## Capturing Logs with the tcpdump Application
 
 1. Connect to your PBX via SSH (instructions [here](connecting-to-a-pbx-using-an-ssh-client.md)).
