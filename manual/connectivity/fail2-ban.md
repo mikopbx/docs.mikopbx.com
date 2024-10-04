@@ -6,7 +6,7 @@ description: This section is used to configure Fail2ban
 
 Fail2ban is enabled together with the Network Firewall switch in the '**Network and Firewall**' → '**Firewall**' section.
 
-<figure><img src="../../.gitbook/assets/new1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new1 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Fail2ban blocks IP addresses with abnormal activity. When there is a failed authentication attempt, information about the error will be logged in the PBX. Fail2ban analyzes all failed attempts and keeps track of them. When the number of failed attempts exceeds the maximum allowed authentication attempts, the IP address is banned. Fail2ban is capable of slowing down the rate of failed authentication attempts. <mark style="color:red;">Please note that Fail2ban will not help with the use of simple passwords.</mark>
 

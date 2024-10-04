@@ -9,6 +9,6 @@ The task is to **add** the prefix "1" to a number. For example, numbers 49522930
     <figure><img src="../../../.gitbook/assets/newRule.png" alt=""><figcaption><p>Adding a new rule</p></figcaption></figure>
 2. Create the pattern as shown in the image:
 
-<figure><img src="../../../.gitbook/assets/parametersOfRule.png" alt=""><figcaption><p>Parameters of the new rule</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/new2 (5).png" alt=""><figcaption><p>Parameters of the new rule</p></figcaption></figure>
 
 3. Click "**Save**."
