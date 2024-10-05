@@ -6,13 +6,17 @@ description: Setting Primary Phone Numbers
 
 ## Connecting softphones
 
-* <mark style="color:red;">MicroSIP</mark>
-* <mark style="color:red;">Jitsi</mark>
+* [<mark style="color:blue;">MicroSIP</mark>](../../faq/softphones/microsip.md)
+* [Groundwire](../../faq/softphones/groundwire.md)
 * [Zoiper](../../faq/softphones/zoiper.md)
-* <mark style="color:red;">PhonerLite</mark>
-* <mark style="color:red;">Телефон (Mac OS)</mark>
-* <mark style="color:red;">WebRTC tutorial using SIPML5</mark>
-* <mark style="color:red;">Настройка телеграмм как SIP софтфон</mark>
+* [<mark style="color:blue;">Jitsi</mark>](../../faq/softphones/jitsi.md)
+* [<mark style="color:blue;">PhonerLite</mark>](../../faq/softphones/phonerlite.md)
+* [<mark style="color:blue;">Linphone(Mac OS)</mark>](../../faq/softphones/linphone-macos.md)
+* [<mark style="color:blue;">Telephone(Mac OS)</mark>](../../faq/softphones/telephone-macos.md)
+* [<mark style="color:blue;">WebRTC tutorial using SIPML5</mark>](../../faq/softphones/configuring-webrtc-client-simpl5.md)
+* <mark style="color:red;">Configuring telegram as SIP softphone</mark>
+* [<mark style="color:blue;">Softphone.pro</mark>](../../faq/softphones/softphone.pro.md)
+* [<mark style="color:blue;">Bria Solo</mark>](../../faq/softphones/bria-solo.md)
 
 ## Connecting telephones
 
