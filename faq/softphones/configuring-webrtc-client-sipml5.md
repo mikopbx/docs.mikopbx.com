@@ -38,7 +38,7 @@ webrtc=yes
 
 Должно появиться следующее сообщение:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Ответил asterisk - настройка прошла успешно.
 
@@ -63,7 +63,7 @@ sip:ВНУТРЕННИЙ_НОМЕР-WS@АДРЕС_АТС
 
 Кликните по кнопке «**Expert mode?**» и выполните дополнительную настройку:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 «**WebSocket Server URL**» опишите по шаблону
 
