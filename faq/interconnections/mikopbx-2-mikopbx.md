@@ -1,7 +1,5 @@
 # Объединение двух MikoPBX
 
-#### Содержание
-
 ### Объединение двух MikoPBX <a href="#obedinenie_dvux_mikopbx" id="obedinenie_dvux_mikopbx"></a>
 
 Компания call-центра имеет два офиса в **Москве** и **Санкт-Петербурге**.\
