@@ -122,6 +122,7 @@
   * [Customer's assessment of the quality of service](faq/cases/customers-assessment-of-the-quality-of-service.md)
   * [Disabling "off-hours" for VIP numbers](faq/cases/disabling-off-hours-for-vip-rooms.md)
   * [Registering multiple accounts from one provider](faq/cases/registering-multiple-accounts-from-one-provider.md)
+  * [Setting up individual non-working hours for several providers on one host](faq/cases/non-working-hours-for-several-providers-on-one-host.md)
   * [Unique background music for the queue](faq/cases/unique-background-music-for-the-queue.md)
   * [Pause for Queue agent](faq/cases/pause-for-queue-agent.md)
   * [Setting up the "Paging" function](faq/cases/paging.md)

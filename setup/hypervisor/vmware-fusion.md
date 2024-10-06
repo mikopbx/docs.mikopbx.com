@@ -60,7 +60,7 @@ Click "**Continue**"
 
 &#x20;Click "**Apply**"
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **1 hour** of recording conversations takes approximately **14mb** on disk.
@@ -90,7 +90,7 @@ In our case - _sdb_, enter its name and press **Enter**
 
 In our case - _sdc_, enter its name and press **Enter**
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 6. The system will reboot and MikoPBX will be ready for use.
 

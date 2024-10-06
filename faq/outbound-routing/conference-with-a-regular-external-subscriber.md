@@ -151,7 +151,7 @@ exten => _X!,1,Answer()
   same => n,Hangup()
 ```
 
-<figure><img src="../../.gitbook/assets/codeForExtensionsConf.png" alt=""><figcaption><p>Code for Extensions.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/codeForExtensionsConf (1).png" alt=""><figcaption><p>Code for Extensions.conf</p></figcaption></figure>
 
 {% hint style="info" %}
 When calling the conference number **354233**, an external subscriber with the number **37127776675** will automatically connect. As soon as the subscriber answers, the extension number **354233** will be dialed. As soon as all the "internal" participants have left the conference, the external subscriber will be disconnected.
