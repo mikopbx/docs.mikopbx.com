@@ -92,4 +92,4 @@ The section presents the solution of telephony problems that telephone exchange 
 * [Setting up softphones ](faq/softphones/)
 * [VoIP gateways ](faq/voip-gateways/)
 * [IP Phones](faq/ip-telefones/)
-* [Interconnections](faq/interconnections.md)
+* [Interconnections](faq/interconnections/)
