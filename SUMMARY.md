@@ -156,6 +156,7 @@
   * [Голосовая почта](faq/cases/golosovaya-pochta.md)
   * [Конвертация истории звонков FreePBX -> MikoPBX](faq/cases/converting-freepbx-call-history-to-mikopbx.md)
   * [SSL сертификат для web-интерфейса MIKOPBX от OPNSense](faq/cases/opnsense-certificate.md)
+  * [Скрытие номера от сотрудника](faq/cases/skrytie-nomera-ot-sotrudnika.md)
 * [Соединение нескольких АТС](faq/interconnections/README.md)
   * [Объединение двух MikoPBX](faq/interconnections/mikopbx-2-mikopbx.md)
   * [Объединение MIKOPBX и Grandstream UCM6202](faq/interconnections/mikopbx-and-grandstream-ucm6202.md)
