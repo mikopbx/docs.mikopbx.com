@@ -132,6 +132,7 @@
   * [Call Monitoring (ChanSpy)](faq/cases/how-to-implement-the-prompter-function.md)
   * [Conversion of Call History FreePBX -> MikoPBX](faq/cases/converting-freepbx-call-history-to-mikopbx.md)
   * [SSL Certificate for MikoPBX Web Interface from OPNSense](faq/cases/opnsense-certificate.md)
+  * [Hiding the Caller’s Number from Employees](faq/cases/bluring.md)
 * [Interconnections](faq/interconnections/README.md)
   * [Merging two MikoPBX](faq/interconnections/mikopbx-2-mikopbx.md)
 * [VoIP providers](faq/providers/README.md)
