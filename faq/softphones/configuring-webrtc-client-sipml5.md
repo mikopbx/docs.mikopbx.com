@@ -38,7 +38,7 @@ webrtc=yes
 
 Должно появиться следующее сообщение:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ответил asterisk - настройка прошла успешно.
 
@@ -47,7 +47,7 @@ webrtc=yes
 1. Перейдите на сайт [https://sipml5.org](https://sipml5.org/). Вы будете переправлены на страницу [https://www.doubango.org/sipml5/](https://www.doubango.org/sipml5/). Перейдите по ссылке "[Enjoy our live demo](https://www.doubango.org/sipml5/call.htm?svn=252)"
 2. Настроим Web RTC клиент:
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Поле «**Public Identity**» опишите по шаблону
 
@@ -63,7 +63,7 @@ sip:ВНУТРЕННИЙ_НОМЕР-WS@АДРЕС_АТС
 
 Кликните по кнопке «**Expert mode?**» и выполните дополнительную настройку:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 «**WebSocket Server URL**» опишите по шаблону
 

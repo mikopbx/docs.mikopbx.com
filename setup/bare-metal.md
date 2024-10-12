@@ -30,7 +30,7 @@
 
 3. Выполните действие «**Refresh drives**». Выберите **USB диск,** далее выберите файл образа. Выполните действие «**Write**»
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Руководство по записи образа на флэш-накопитель</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Руководство по записи образа на флэш-накопитель</p></figcaption></figure>
 
 4. Дождитесь окончания записи, далее подключите **USB** диск к ПК. Перезагрузите ПК для загрузки с диска.
 
@@ -50,7 +50,7 @@ diskutil list
 
 Будет отображена информация о **всех** подключенных дисках
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Список всех подключенных дисков</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Список всех подключенных дисков</p></figcaption></figure>
 
 В текущем примере имя устройства USB «**/dev/disk3**». Cравним вывод команды «diskutil list» до и после подключения устройства.
 

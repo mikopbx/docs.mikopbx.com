@@ -4,7 +4,7 @@
 
 Имеем две учетные записи от провайдера Zadarma, настроенных в MikoPBX по [инструкции](registering-multiple-accounts-from-one-provider.md).
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Две учетные записи</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Две учетные записи</p></figcaption></figure>
 
 Необходимо для каждого номера Zadarma настроить свое нерабочее время. Например, для номера +7(495)-229-30-42 рабочее время с 9.00 до 18.00 по МСК; для номера +7 (499) 638-25-84 рабочее время с 8.00 до 20.00 по МСК.
 
@@ -47,7 +47,7 @@ exten => 420296,1,NoOp(check time)
 
 Ниже красным цветом выделены фрагменты, которые Вам необходимо изменить:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Фрагменты для изменения </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Фрагменты для изменения </p></figcaption></figure>
 
 Более подробно разберём команду **ExecIfTime**. Эта команда выполняет указанное приложение Asterisk, если текущее время соответствует заданной спецификации времени. В нашем случае команда выполняет проигрывание звукового файла, расположенного в директории **/offload/asterisk/sounds/other/out\_work\_times** в MikoPBX.\
 Синтаксис команды:
