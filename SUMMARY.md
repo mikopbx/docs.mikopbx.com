@@ -135,6 +135,7 @@
   * [Hiding the Caller’s Number from Employees](faq/cases/bluring.md)
 * [Interconnections](faq/interconnections/README.md)
   * [Merging two MikoPBX](faq/interconnections/mikopbx-2-mikopbx.md)
+  * [Integration of MikoPBX and Grandstream UCM6202](faq/interconnections/mikopbx-and-grandstream-ucm6202.md)
 * [VoIP providers](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
