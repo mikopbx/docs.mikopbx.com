@@ -103,6 +103,8 @@ _90000099
 
 ## MikoPBX
 
+### Провайдер <a href="#provajder" id="provajder"></a>
+
 1. Раздел «**Маршрутизация**» - «**Провайдеры телефонии**» добавьте нового провайдера
 2. «**Название провайдера**» - произвольное, понятное имя, к примеру **Grandstream**
 3. «**Тип учетной записи**» - Аутентификация по IP адресу, без пароля
@@ -111,4 +113,54 @@ _90000099
 
 <figure><img src="../../.gitbook/assets/newProvider.jpg" alt=""><figcaption></figcaption></figure>
 
-6.
+### Входящая маршрутизация <a href="#vxodjaschaja_marshrutizacija" id="vxodjaschaja_marshrutizacija"></a>
+
+Это правило позволит абонентам Grandstream (**2XX**) звонить на внутренние номера MikoPBX **2XX**
+
+1. Раздел «**Маршрутизация**» - «**Входящие маршруты**»
+2. Добавим новое правило:&#x20;
+
+* **Провайдер**» - выберите «**Grandstream**»
+* «**DID**» - укажите шаблон «**2XX**»
+* «**Телефонный номер**» - «**Направить на сотрудника (сопоставить по DID)**»
+* «**Время в секундах…**» укажите значение **300**
+
+Сохраните изменения.
+
+<figure><img src="../../.gitbook/assets/incomingRouting.jpg" alt=""><figcaption></figcaption></figure>
+
+### Исходящие на 1XX <a href="#isxodjaschie_na_1xx" id="isxodjaschie_na_1xx"></a>
+
+Это правило позволит абонентам MikoPBX (**2XX**) звонить на внутренние номера **1XX**
+
+1. Раздел «**Маршрутизация**» - «**Исходящие маршруты**»
+2. Добавим новое правило:
+
+* Номер начинается с **«1».**
+* Остальная часть номера состоит из **«2».**
+* Направить звонок через провайдера «Grandstream».
+
+<figure><img src="../../.gitbook/assets/outgoingRouting.jpg" alt=""><figcaption></figcaption></figure>
+
+### Исходящие на Городские <a href="#isxodjaschie_na_gorodskie" id="isxodjaschie_na_gorodskie"></a>
+
+1. Раздел «**Маршрутизация**» - «**Исходящие маршруты**»
+2. Добавим новое правило:
+
+* Номер начинается с **(7|8).**
+* Остальная часть номера состоит из **10.**
+* Направить звонок через провайдера «**Grandstream**».
+
+<figure><img src="../../.gitbook/assets/outgoingRouting2.jpg" alt=""><figcaption></figcaption></figure>
+
+### Входящие на группу <a href="#vxodjaschie_na_gruppu" id="vxodjaschie_na_gruppu"></a>
+
+1. Раздел «**Телефония**» - «**Очереди вызовов**»
+2. Добавьте очередь с внутренним номером **90000099**
+3. Внутренний номер можно исправить при редактировании очереди в разделе **Расширенные настройки**«
+
+<figure><img src="../../.gitbook/assets/numberOfQueue.jpg" alt=""><figcaption></figcaption></figure>
+
+Направьте маршрут по умолчанию на очередь.&#x20;
+
+<figure><img src="../../.gitbook/assets/кщгеу.jpg" alt=""><figcaption></figcaption></figure>
