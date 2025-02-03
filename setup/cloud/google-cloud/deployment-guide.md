@@ -6,6 +6,8 @@ description: Установка MikoPBX в облако Google Cloud с помо
 
 Авторизуйтесь на платформе [https://console.cloud.google.com/](https://console.cloud.google.com/)
 
+{% embed url="https://rutube.ru/video/a0d6907541786f724d88e47df73c3752/" %}
+
 Приступим к настройке
 
 {% hint style="info" %}
