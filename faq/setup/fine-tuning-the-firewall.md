@@ -26,8 +26,7 @@ iptables -I INPUT 2 -p udp -m udp --dport 5060 -m string --string 'friendly-scan
 
 Более полный пример набора правил:
 
-{% code fullWidth="true" %}
-```php
+```
 iptables -I INPUT 2 -p udp -m udp --dport 5060 -m string --string 'sipcli' --algo bm --to 65535 -j DROP
 iptables -I INPUT 2 -p udp -m udp --dport 5060 -m string --string 'sip-scan' --algo bm --to 65535 -j DROP
 iptables -I INPUT 2 -p udp -m udp --dport 5060 -m string --string 'iWar' --algo bm --to 65535 -j DROP
@@ -46,6 +45,16 @@ iptables -I INPUT 2 -p tcp -m tcp --dport 5060 -m string --string 'sundayddr' --
 iptables -I INPUT 2 -p tcp -m tcp --dport 5060 -m string --string 'VaxSIPUserAgent' --algo bm --to 65535 -j DROP
 iptables -I INPUT 2 -p tcp -m tcp --dport 5060 -m string --string 'friendly-scanner' --algo bm --to 65535 -j DROP
 ```
-{% endcode %}
 
 Это обезопасит от большинства сканеров, которые при запросе упоминаю User-Agent.
+
+Накладываем ограничение на 40 запросов в 1 секунду.&#x20;
+
+```
+iptables -I INPUT 2 -p tcp -m recent --set --name BADGuys --mask 255.255.255.255 --rsource
+iptables -I INPUT 2 -p udp -m recent --set --name BADGuys --mask 255.255.255.255 --rsource
+iptables -I INPUT 2 -p tcp -m recent --update --seconds 1 --hitcount 40 --name BADGuys --mask 255.255.255.255 --rsource -j DROP
+iptables -I INPUT 2 -p udp -m recent --update --seconds 1 --hitcount 40 --name BADGuys --mask 255.255.255.255 --rsource -j DROP
+
+```
+
