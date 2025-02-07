@@ -48,13 +48,14 @@ iptables -I INPUT 2 -p tcp -m tcp --dport 5060 -m string --string 'friendly-scan
 
 Это обезопасит от большинства сканеров, которые при запросе упоминаю User-Agent.
 
-Накладываем ограничение на 40 запросов в 1 секунду.&#x20;
+Накладываем ограничение на 30 запросов в 1 секунду.&#x20;
 
 ```
-iptables -I INPUT 2 -p tcp -m recent --set --name BADGuys --mask 255.255.255.255 --rsource
-iptables -I INPUT 2 -p udp -m recent --set --name BADGuys --mask 255.255.255.255 --rsource
-iptables -I INPUT 2 -p tcp -m recent --update --seconds 1 --hitcount 40 --name BADGuys --mask 255.255.255.255 --rsource -j DROP
-iptables -I INPUT 2 -p udp -m recent --update --seconds 1 --hitcount 40 --name BADGuys --mask 255.255.255.255 --rsource -j DROP
+iptables -I INPUT 2 -p tcp -m state --state NEW -m recent --set --name SipAttacks5060tcp --mask 255.255.255.255 --rsource -m tcp --dport 5060
+iptables -I INPUT 2 tcp -m state --state NEW -m recent --update --seconds 1 --hitcount 30 --name SipAttacks --mask 255.255.255.255 --rsource -m tcp --dport 5060 -j DROP
+iptables -I INPUT 2 tcp -m state --state NEW -m recent --set --name SipAttacks5061tcp --mask 255.255.255.255 --rsource -m tcp --dport 5061
+iptables -I INPUT 2 tcp -m state --state NEW -m recent --update --seconds 1 --hitcount 30 --name SipAttacks --mask 255.255.255.255 --rsource -m tcp --dport 5061 -j DROP
+iptables -I INPUT 2 tcp -m tcp ! --tcp-flags FIN,SYN,RST,ACK SYN -m state --state NEW -j DROP
 
 ```
 
