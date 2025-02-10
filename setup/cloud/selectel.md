@@ -8,6 +8,8 @@ description: Установка MikoPBX с помощью Selectel
 
 Перед началом вам необходимо скачать актуальный образ MikoPBX с расширением .raw. Сделать это можно по [ссылке](https://github.com/mikopbx/Core/releases).
 
+{% embed url="https://rutube.ru/video/b8d705e1c386d8c2c9b5357ec7894158/" %}
+
 ## Загрузка образа в Selectel
 
 1. Перейдите в раздел **Облачная платформа** -> **Образы**.
