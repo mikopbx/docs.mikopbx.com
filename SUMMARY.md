@@ -148,7 +148,7 @@
   * [Позвонить в компанию с мобильного и набрав добавочный позвонить сторонней компании](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
   * [Отправка входящего факса на email](faq/cases/sending-an-incoming-fax-to-email.md)
   * [Оценка клиентом качества обслуживания](faq/cases/customers-assessment-of-the-quality-of-service.md)
-  * [Имитация внешних звонков](faq/cases/imitaciya-vneshnikh-zvonkov.md)
+  * [Имитация внешних звонков](faq/cases/simulation-of-external-calls.md)
   * [Настройка outboudproxy](faq/cases/nastroika-outboudproxy.md)
   * [Отключение "нерабочего времени" для VIP номеров](faq/cases/disabling-off-hours-for-vip-rooms.md)
   * [Регистрация нескольких учетных записей от одного провайдера](faq/cases/registering-multiple-accounts-from-one-provider.md)
