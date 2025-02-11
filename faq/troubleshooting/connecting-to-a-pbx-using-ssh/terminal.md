@@ -47,7 +47,7 @@ cat ~/.ssh/id_ed25519.pub
 Для подключения по SSH выполните следующую команду в Terminal:
 
 ```
-ssh -i C:\Users\<Username>\.ssh\id_ed25519 root@mikopbxipadress
+ssh -i Users\<Username>\.ssh\id_ed25519 root@mikopbxipadress
 ```
 
 Замените следующие данные, исходя из ваших параметров:
