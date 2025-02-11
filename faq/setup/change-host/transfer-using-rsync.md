@@ -6,6 +6,10 @@ description: A method for transferring MikoPBX to another host using rsync (pref
 
 This article discusses transferring data to a new host using `rsync`. This approach uses a generated SSH key for authentication, making it the most reliable and therefore the recommended method.
 
+Schematically, the transfer process can be depicted as follows:
+
+<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Data transfer scheme</p></figcaption></figure>
+
 ## Creating the Script File and Adding Content
 
 1. First, establish an SSH connection to your **new** MikoPBX. You can find instructions on how to do this in [this article](../../troubleshooting/connecting-to-a-pbx-using-ssh/connecting-to-a-pbx-using-an-ssh-client.md).
