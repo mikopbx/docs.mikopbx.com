@@ -6,7 +6,7 @@ description: MikoPBX Installation deployment Guide using Google Cloud
 
 Authorize on the platform [https://console.cloud.google.com/](https://console.cloud.google.com/)
 
-{% embed url="https://youtu.be/6U3XDAI9bHQ" %}
+{% embed url="https://youtu.be/6U3XDAI9bHQ?si=FVmBwEByRyytRHVT" %}
 
 Let's start configuring
 
