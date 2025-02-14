@@ -26,7 +26,7 @@
 
 Список Trunks:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Исходящие на \_2XX <a href="#isxodjaschie_na_2xx" id="isxodjaschie_na_2xx"></a>
 
@@ -47,7 +47,7 @@ _90000099
 
 6. **Privilege Level**» - в данном случае можно установить **internal**, на MikoPBX нет выхода на город / межгород
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Входящие на \_1XX <a href="#vxodjaschie_na_1xx" id="vxodjaschie_na_1xx"></a>
 
