@@ -65,7 +65,11 @@ description: Инструкции по подключению софтфона G
 
 <figure><img src="../../.gitbook/assets/tlsMode.jpg" alt=""><figcaption><p>Настройка транспортного протокола</p></figcaption></figure>
 
-2. Перейдите в интерфейс **Groundwire ->** Настройка SIP-аккаунта сотрудника. Измените **"Domain"** на **"АдресMikoPBX>:5061**".
+2. Перейдите в интерфейс **Groundwire ->** Настройка SIP-аккаунта сотрудника. Измените **"Domain"** на **"АдресMikoPBX>:НомерПортаДляTLS**".
+
+{% hint style="info" %}
+Номер порта для TLS Вы можете найти/изменить в web-интерфейсе MikoPBX: "**Общие настройки**" -> "**SIP**".
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/tlsDomain.jpg" alt="" width="295"><figcaption><p>Поле "Domain"</p></figcaption></figure>
 
