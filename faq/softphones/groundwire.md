@@ -8,15 +8,15 @@ description: Инструкции по подключению софтфона G
 
 ## Подключение софтфона
 
-1. Скачайте и откройте приложение Groundwire на смартфоне.
+1. Скачайте и откройте приложение **Groundwire** на смартфоне.
 
 <figure><img src="../../.gitbook/assets/startPageGroundWire.jpg" alt="" width="295"><figcaption><p>Главное меню Groundwire</p></figcaption></figure>
 
-2. Перейдите в настройки Groundwire, используя соответствующий элемент в верхней части экрана.
+2. Перейдите в настройки **Groundwire**, используя соответствующий элемент в верхней части экрана.
 
 <figure><img src="../../.gitbook/assets/settingsButton.jpg" alt="" width="295"><figcaption><p>Переход в настройки</p></figcaption></figure>
 
-3. Перейдите в раздел "Accounts"
+3. Перейдите в раздел "**Accounts**":
 
 <figure><img src="../../.gitbook/assets/accountsSection.jpg" alt="" width="295"><figcaption><p>Переход в раздел с аккаунтами</p></figcaption></figure>
 
@@ -31,7 +31,7 @@ description: Инструкции по подключению софтфона G
 
 <figure><img src="../../.gitbook/assets/dataForAuth.jpg" alt="" width="295"><figcaption><p>Данные для SIP-подключения</p></figcaption></figure>
 
-7. Перейдите в раздел "Advanced Settings".
+7. Перейдите в раздел "**Advanced Settings**".
 8. В разделе "**Audio Codecs**" -> "**Codecs for Wi-Fi**" укажите необходимые Вам кодеки для использования.&#x20;
 
 <figure><img src="../../.gitbook/assets/AudioCodecs.jpg" alt="" width="295"><figcaption><p>Аудио кодеки</p></figcaption></figure>
