@@ -57,7 +57,5 @@ iptables -I INPUT 2 -p tcp -m state --state NEW -m recent --set --name SipAttack
 iptables -I INPUT 2 -p tcp -m state --state NEW -m recent --update --seconds 1 --hitcount 30 --name SipAttacks --mask 255.255.255.255 --rsource -m tcp --dport 5060 -j DROP
 iptables -I INPUT 2 -p tcp -m state --state NEW -m recent --set --name SipAttacks --mask 255.255.255.255 --rsource -m tcp --dport 5061
 iptables -I INPUT 2 -p tcp -m state --state NEW -m recent --update --seconds 1 --hitcount 30 --name SipAttacks --mask 255.255.255.255 --rsource -m tcp --dport 5061 -j DROP
-iptables -I INPUT 2 -p tcp -m tcp ! --tcp-flags FIN,SYN,RST,ACK SYN -m state --state NEW -j DROP
-
 ```
 
