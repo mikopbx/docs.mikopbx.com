@@ -1,12 +1,16 @@
 ---
-description: Установка MikoPBX в сервисе DigitalOcean
+description: Установка MikoPBX с помощью сервиса DigitalOcean
 ---
 
-# DigitalOcean (В следующем релизе)
+# DigitalOcean
+
+{% hint style="danger" %}
+Инструкция актуальна для версии 2024.2.111 и новее!
+{% endhint %}
 
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы DigitalOcean.
 
-&#x20;Перед началом Вам необходимо скопировать ссылку на актуальный образ MikoPBX с расширением .raw. Сделать это можно на [github MikoPBX](https://github.com/mikopbx/core/releases).
+&#x20;Перед началом Вам необходимо скопировать ссылку на актуальный образ MikoPBX с расширением **.raw**. Сделать это можно на [github MikoPBX](https://github.com/mikopbx/core/releases).
 
 ## Загрузка образа в DigitalOcean
 
@@ -55,30 +59,54 @@ description: Установка MikoPBX в сервисе DigitalOcean
 
 6. Перейдите в раздел "**Choose authentication method**". Здесь необходимо выбрать "SSH Key" и добавить связку ключей для SSH подключения. Подробнее прочитать про их создание Вы можете в следующих статьях:
 
-* [WIndows](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/powershell.md)
+* [Windows](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/powershell.md)
 * [MacOS/Linux](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/terminal.md)
 
 <figure><img src="../../.gitbook/assets/sshKey.png" alt=""><figcaption><p>Методы авторизации</p></figcaption></figure>
 
-7. Нажмите "Create Droplet"
+7. Нажмите "**Create Droplet**".
 
 ## Подключение к консоли и первый вход в WEB-Интерфейс
 
-1. Перейдите в меню созданной машины. Дождитесь ее запуска. Далее подключитесь к ней по SSH ([интрукция](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/)), либо с помощью встроенной консоли в DigitalOcean.
+### Подключение из консоли Digital Ocean
 
-{% hint style="warning" %}
-Стандартный логин для авторизации по SSH для ВМ в DigitalOcean - do-user
-{% endhint %}
+1. Перейдите в меню созданной машины. Дождитесь ее запуска. Далее подключитесь с помощью встроенной консоли в DigitalOcean (элемент на скриншоте).
 
 <figure><img src="../../.gitbook/assets/console.png" alt=""><figcaption><p>Консоль в Digital Ocean</p></figcaption></figure>
 
-2. После загрузки системы, подключитесь через web-интерфейс, используя внешний IP-адрес.
+2. После загрузки системы, перейдите в web-интерфейс, используя внешний IP-адрес, указаный в консоли (**external**).
 
 <figure><img src="../../.gitbook/assets/externalIPAddress.png" alt=""><figcaption><p>external ip-адрес</p></figcaption></figure>
 
-3. После перехода на страницу авторизации в MikoPBX, используйте следующие данные для входа:
+3. Вставьте IP-адрес машины в строку браузера. После перехода на страницу авторизации в MikoPBX, используйте следующие данные для входа:
 
 * Логин - admin
 * Пароль - id Виртуальной машины, найти который Вы можете в адресной строке:
 
 <figure><img src="../../.gitbook/assets/MachineID.png" alt=""><figcaption><p>ID виртуальной машины</p></figcaption></figure>
+
+### Подключение по SSH
+
+1. Для подключения по SSH следуйте [инструкциям](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/). В данной статье будет пример с использованием **powershell** (windows).
+
+{% hint style="warning" %}
+Стандартный логин для авторизации по SSH для ВМ в DigitalOcean - do-user.&#x20;
+{% endhint %}
+
+2. Перейдите в Powershell и пропишите следующую команду:
+
+```
+ssh -i C:\Users\<Username>\.ssh\id_ed25519 do-user@mikopbxipadress
+```
+
+{% hint style="success" %}
+Замените:
+
+1. C:\Users\\\<Username>\\.ssh\id\_ed25519 на путь к Вашему ключу на локальном устройстве
+2. do-user на Ваш root-логин (если Вы его изменяли при созданиии ВМ)
+3. mikopbxadress на IP-адрес вашей станции (IPv4 в интерфейсе управления Виртуальной машиной)
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/sshCode.jpg" alt=""><figcaption><p>Команда для SSH подключения</p></figcaption></figure>
+
+После нажатия "**Enter**" произойдет авторизация по SSH и Вы попадете в консольное меню MikoPBX.
