@@ -198,6 +198,7 @@
   * [Telephone(MacOS)](faq/softphones/telephone-macos.md)
   * [Настройка WebRTC клиента SIPML5](faq/softphones/configuring-webrtc-client-sipml5.md)
   * [Softphone.pro](faq/softphones/softphone.pro.md)
+  * [3CX Softphone](faq/softphones/3cx-softphone.md)
   * [SIP.TG (Telegram)](https://wiki.mikopbx.ru/faq:siptg)
 * [Voip шлюзы](faq/voip-gateways/README.md)
   * [GoIP4](faq/voip-gateways/goip4/README.md)

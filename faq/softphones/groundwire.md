@@ -42,7 +42,7 @@ description: Инструкции по подключению софтфона G
 
 Сохраните параметры. Произойдет соединение. По индикатору в разделе "Сотрудники" в MikoPBX, Вы можете убедиться, что оно было успешным.
 
-<figure><img src="../../.gitbook/assets/successfulConnection.jpg" alt=""><figcaption><p>Успешное SIP-подключение</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/successfulConnection (1).jpg" alt=""><figcaption><p>Успешное SIP-подключение</p></figcaption></figure>
 
 ## Настройка отслеживания статусов сотрудников
 
