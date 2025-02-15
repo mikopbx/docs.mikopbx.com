@@ -38,4 +38,4 @@ description: Инструкции по подключению софтфона 3
 
 Произойдет соединение. Вы можете проверить его успешность по индикатору подключения сотрудника:
 
-<figure><img src="../../.gitbook/assets/successfulConnection.jpg" alt=""><figcaption><p>Успешное подключение!</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/successfulConnection (2).jpg" alt=""><figcaption><p>Успешное подключение!</p></figcaption></figure>
