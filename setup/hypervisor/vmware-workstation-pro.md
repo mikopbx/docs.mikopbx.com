@@ -14,6 +14,8 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 Версия 2024.1.114 временно не поддерживает установку с помощью VMware Workstation Pro!
 {% endhint %}
 
+{% embed url="https://rutube.ru/video/cb1cfee26d1e070018dadb14d70eae6c/" %}
+
 ## Создание виртуальной машины
 
 1. Перейдите в интерфейс VMware WorkStation Pro. Нажмите кнопку "**Create a New Virtual Machine**" для создания новой виртуальной машины.
@@ -93,11 +95,11 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 <figure><img src="../../.gitbook/assets/startPageConsole (1).png" alt=""><figcaption><p>Загруженная MikoPBX с оптического диска</p></figcaption></figure>
 
 {% hint style="info" %}
-Перемещаться по пунктам меню можно [клавишами управления курсором](https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B0%D0%B2%D0%B8%D1%88%D0%B8\_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F\_%D0%BA%D1%83%D1%80%D1%81%D0%BE%D1%80%D0%BE%D0%BC).
+Перемещаться по пунктам меню можно [клавишами управления курсором](https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B0%D0%B2%D0%B8%D1%88%D0%B8_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BA%D1%83%D1%80%D1%81%D0%BE%D1%80%D0%BE%D0%BC).
 
 Выбрать пункт меню - клавиша **Enter**.
 
-Также можно выбирать пункт меню нажав на [буквенно-цифровом блоке клавиатуры](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F\_%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%B0#%D0%91%D1%83%D0%BA%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE-%D1%86%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9\_%D0%B1%D0%BB%D0%BE%D0%BA) соответствующую пункту цифру.
+Также можно выбирать пункт меню нажав на [буквенно-цифровом блоке клавиатуры](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%B0#%D0%91%D1%83%D0%BA%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE-%D1%86%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9_%D0%B1%D0%BB%D0%BE%D0%BA) соответствующую пункту цифру.
 {% endhint %}
 
 3. Переключите язык интерфейса на русский. Для этого выполните **"\[1] Change Language"** -> **"\[2] Русский"**.&#x20;
