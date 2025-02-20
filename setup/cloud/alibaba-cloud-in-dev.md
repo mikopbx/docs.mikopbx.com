@@ -100,6 +100,34 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 <figure><img src="../../.gitbook/assets/sshKeyPairParameters.jpg" alt=""><figcaption><p>Параметры создаваемой связки ключей</p></figcaption></figure>
 
+## Создание группы правил
+
+Перед созданием виртуальной машины так же нужно создать и группу правил (firewall).&#x20;
+
+1. Перейдите в раздел "**Network & Security**" -> "**Security Groups**"
+
+<figure><img src="../../.gitbook/assets/securityGroupsSection.jpg" alt=""><figcaption><p>Раздел "Security Groups"</p></figcaption></figure>
+
+2. Нажмите "**Create Security Group**":
+
+<figure><img src="../../.gitbook/assets/createSecurityGroup.jpg" alt=""><figcaption><p>Элемент для создания новой группы правил</p></figcaption></figure>
+
+3. Укажите следующие параметры для группы правил:
+
+* "**Security Group**" -  введите произвольное название для группы правил.
+* "**Network**" - выберите вашу сеть. Если она не созданна - нажмите "**Create VPC**" справа от поля.
+* "**Security Group**" - Basic Security Group.
+* "**Resource Group**" - выбрите Вашу группу ресурсов.
+* Разрешите все входящие подключения (пример на скриншоте ниже). Все исходящие подключения разрешены по умолчанию.
+
+{% hint style="info" %}
+Обязательно настройте firewall в самой MikoPBX как можно раньше после создания виртуальной машины. Подробнее про то как это сделать, Вы можете прочитать [здесь](../../manual/connectivity/firewall.md).&#x20;
+{% endhint %}
+
+Нажмите "**Create Security Group**".
+
+<figure><img src="../../.gitbook/assets/ParametersOfTheSecurity (3).jpg" alt=""><figcaption><p>Параметры группы правил</p></figcaption></figure>
+
 ## Создание виртуальной машины
 
 1. Перейдите в раздел "**Instances & Images**" -> "**Instances**":
@@ -130,10 +158,25 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 <figure><img src="../../.gitbook/assets/VMParameters2.jpg" alt=""><figcaption><p>Параметры виртуальной машины №2</p></figcaption></figure>
 
-5. Выберите параметры для вашей виртуальной машины:
+5. Выберите параметры сети для Вашей ВМ. Группа правил будет назначена автоматически (ранее созданная):
 
-* Поставьте галочку в чек-боксе "**Assign Public IPv4 Address**"
-* Далее выберите необходимые Вам параметры пропускной способности сети.
-* Выберите "**New Security Group**". Откройте необходимые порты (**SSH, HTTP, HTTPS**).
+<figure><img src="../../.gitbook/assets/bandwidthsSecurityGroupsSection.jpg" alt=""><figcaption><p>Параметры сети</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/VMParameters3 (1).jpg" alt=""><figcaption></figcaption></figure>
+6. Нажмите "**Create Order**".
+
+<figure><img src="../../.gitbook/assets/createOrder.jpg" alt=""><figcaption><p>Элемент "Create Order"</p></figcaption></figure>
+
+## Подключение к консоли MikoPBX
+
+В разделе "**Instances**" перейдите к созданной виртуальной машине, нажав на ее название.
+
+<figure><img src="../../.gitbook/assets/goToVM.jpg" alt=""><figcaption><p>Переход к созданной виртуальной машине</p></figcaption></figure>
+
+### Подключение из встроенной в облако консоли
+
+1. Нажмите "**Connect**".&#x20;
+
+<figure><img src="../../.gitbook/assets/connectToTheConsole.jpg" alt=""><figcaption><p>Элемент "Connect"</p></figcaption></figure>
+
+2. Выберите "**VNC**". Произойдет подключение в новой вкладке Вашего браузера.
+
