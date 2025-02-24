@@ -12,6 +12,8 @@ You can download the VMware Workstation Pro installer from [the official website
 Use versions of MikoPBX other than 2024.1.114 for installation on VMware Workstation Pro. Version 2024.1.114 currently does not support installation via VMware Workstation Pro!
 {% endhint %}
 
+{% embed url="https://youtu.be/VyjsPlPLQ6o?si=BT97b3uyl1Egl7xB" %}
+
 ## Creating a Virtual Machine
 
 1. Open VMware Workstation Pro and click "**Create a New Virtual Machine**" to start creating a new virtual machine.
