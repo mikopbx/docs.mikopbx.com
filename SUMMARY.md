@@ -33,7 +33,7 @@
   * [Vscale](setup/cloud/vscale.md)
   * [Selectel](setup/cloud/selectel.md)
   * [DigitalOcean](setup/cloud/digitalocean.md)
-  * [Alibaba cloud (In dev)](setup/cloud/alibaba-cloud-in-dev.md)
+  * [Alibaba cloud](setup/cloud/alibaba-cloud.md)
 * [В Docker контейнере](setup/docker/README.md)
   * [Установка докера и cоздание пользователя и каталогов](setup/docker/ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
   * [Запуск MikoPBX в контейнере](setup/docker/zapusk-mikopbx-v-konteinere.md)

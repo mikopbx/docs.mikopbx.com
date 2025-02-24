@@ -2,10 +2,10 @@
 description: Установка MikoPBX с помощью сервиса Alibaba cloud
 ---
 
-# Alibaba cloud (In dev)
+# Alibaba cloud
 
 {% hint style="danger" %}
-Инструкция актуальна для версии 2024.2.131 и новее!
+Инструкция актуальна для версии 2024.2.135 и новее!
 {% endhint %}
 
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы Alibaba cloud.
@@ -180,3 +180,41 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 2. Выберите "**VNC**". Произойдет подключение в новой вкладке Вашего браузера.
 
+<figure><img src="../../.gitbook/assets/VNCConsole.jpg" alt=""><figcaption><p>VNC консоль</p></figcaption></figure>
+
+### Подключение по SSH
+
+{% hint style="info" %}
+Подробнее про SSH-подключения Вы можете узнать [в этом блоке статей](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/). В данной документации, в качестве примера будет продемонстрировано подключение по SSH через PowerShell.
+{% endhint %}
+
+Введите следующую команду для SSH-подключения:
+
+```powershell
+ssh -i C:\Users\username\.ssh\id_ed25519 root@ip-adress
+```
+
+Замените `C:\Users\username\.ssh\id_ed25519` на путь к ssh-ключам; `root`- на Ваше имя для ssh-авторизации (если оно было изменено при создании ВМ); `ip-adress` - на Внешний адрес MikoPBX.
+
+<figure><img src="../../.gitbook/assets/sshCommandPowerShell.jpg" alt=""><figcaption><p>Команда для ssh-подключения</p></figcaption></figure>
+
+Произойдет подключение по SSH:
+
+<figure><img src="../../.gitbook/assets/SSHConnection.jpg" alt=""><figcaption><p>SSH-подключение</p></figcaption></figure>
+
+## Первая авторизация в WEB-интерфейсе
+
+На главной странице виртуальной машины находятся несколько важных параметров для авторизации в WEB-интерфейсе.
+
+<figure><img src="../../.gitbook/assets/authorizationParametersRU.jpg" alt=""><figcaption><p>Важные параметры для авторизации в web-интерфейс</p></figcaption></figure>
+
+Вставьте IP-адрес в адресную строку браузера - Вы попадете на страницу авторизации в web-интерфейс MikoPBX.
+
+{% hint style="info" %}
+Данные для входа:
+
+* **Username** - admin
+* **Password** - ID Вашей виртуальной машины
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/mikopbxWEB.jpg" alt=""><figcaption><p>WEB-интерфейс MikoPBX</p></figcaption></figure>
