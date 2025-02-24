@@ -4,6 +4,8 @@ description: Разбор кейса с объединением двух АТС
 
 # Объединение двух MikoPBX
 
+{% embed url="https://rutube.ru/video/47c63ce88f26c27ac7a55a25e3d0e416/" %}
+
 ## Описание примера задачи <a href="#obedinenie_dvux_mikopbx" id="obedinenie_dvux_mikopbx"></a>
 
 В нашем случае-примере компания call-центра имеет два офиса: в **Москве** и в **Санкт-Петербурге**.\
