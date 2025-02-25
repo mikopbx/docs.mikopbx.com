@@ -161,7 +161,7 @@
   * [Настройка функции "Paging"](faq/cases/paging.md)
   * [Ограничить количество авторизаций на одном SIP аккаунте](faq/cases/limit-the-number-of-authorizations-per-sip-account.md)
   * [Как реализовать функцию супервизора](faq/cases/how-to-implement-the-prompter-function.md)
-  * [Голосовая почта](faq/cases/golosovaya-pochta.md)
+  * [Голосовая почта](https://docs.mikopbx.com/mikopbx/manual/system/mail-settings#golosovaja_pochta)
   * [Конвертация истории звонков FreePBX -> MikoPBX](faq/cases/converting-freepbx-call-history-to-mikopbx.md)
   * [SSL сертификат для web-интерфейса MIKOPBX от OPNSense](faq/cases/opnsense-certificate.md)
   * [Скрытие номера от сотрудника](faq/cases/bluring.md)
