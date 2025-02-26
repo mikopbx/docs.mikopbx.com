@@ -9,7 +9,7 @@
 
 ## Настройка Bitrix24 <a href="#nastrojka_bitrix24" id="nastrojka_bitrix24"></a>
 
-1. Наше приложение в [**маркетплейс Bitrix 24**](https://www.bitrix24.ru/apps/?app=miko.pbxaskozia).
+1. Наше приложение в [**маркетплейс Bitrix 24**](https://www.bitrix24.ru/apps/app/miko.integratsiya_s_besplatnoy_ats_mikopbx_na_asterisk/).
 2. Выполните установку модуля «**MikoPBX**»:
 
 <figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>MikoPBX в маркетплейсе Bitrix24</p></figcaption></figure>
