@@ -128,33 +128,62 @@ Click **Create Security Group**.
 ## Creating the Virtual Machine
 
 1. Go to **Instances & Images** → **Instances**:
+
+<figure><img src="../../.gitbook/assets/instancesSection.jpg" alt=""><figcaption><p>"Instances" section</p></figcaption></figure>
+
 2. Click **Create Instance** to create a new virtual machine:
+
+<figure><img src="../../.gitbook/assets/createInstanceButton.jpg" alt=""><figcaption><p>"Create Instance" button</p></figcaption></figure>
+
 3. Select your VM parameters:
-   * **Billing Method** – Choose how you’ll pay for the VM.
-   * **Region**, **Network, and Zone** – Select the region and zone to match your needs.
-   * **Instance** – Pick a configuration for your VM.
-4.  Configure additional VM parameters:
 
-    * **Image** – **Custom Images** → Choose the previously imported image.
-    * **Storage** – Select the type and size of the **System Disk** (20 GB is the minimum for Alibaba Cloud).
-    * **Add a second disk** by clicking **Add Data Disk**, specifying its type and size.
+* **Billing Method** – Choose how you’ll pay for the VM.
+* **Region**, **Network, and Zone** – Select the region and zone to match your needs.
+* **Instance** – Pick a configuration for your VM.
 
-    \{% hint style="info" %\} We recommend a minimum of **50GB** for call recordings. This guide uses 30GB as an example. \{% endhint %\}
+<figure><img src="../../.gitbook/assets/VMParameters1.jpg" alt=""><figcaption><p>VM Parameters №1</p></figcaption></figure>
+
+4. Configure additional VM parameters:
+
+* **Image** – **Custom Images** → Choose the previously imported image.
+* **Storage** – Select the type and size of the **System Disk** (20 GB is the minimum for Alibaba Cloud).
+* **Add a second disk** by clicking **Add Data Disk**, specifying its type and size.
+
+{% hint style="info" %}
+We recommend a minimum of **50GB** for call recordings.In this guide we use 30GB as an example.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/VMParameters2.jpg" alt=""><figcaption><p>VM Parameters №2</p></figcaption></figure>
+
 5. Choose the network parameters for your VM. The security group created earlier will be assigned automatically:
+
+<figure><img src="../../.gitbook/assets/bandwidthsSecurityGroupsSection.jpg" alt=""><figcaption><p>VM Parameters №3</p></figcaption></figure>
+
 6. Click **Create Order**.
 
-### Connecting to the MikoPBX Console
+<figure><img src="../../.gitbook/assets/createOrder.jpg" alt=""><figcaption><p>"Create Order" button</p></figcaption></figure>
+
+## Connecting to the MikoPBX Console
 
 In the **Instances** section, open the newly created VM by clicking its name.
 
-#### Connecting via Built-in Cloud Console
+<figure><img src="../../.gitbook/assets/goToVM.jpg" alt=""><figcaption><p>VM's name</p></figcaption></figure>
+
+### Connecting via Built-in Cloud Console
 
 1. Click **Connect**.
+
+<figure><img src="../../.gitbook/assets/connectToTheConsole.jpg" alt=""><figcaption><p>"Connect" button</p></figcaption></figure>
+
 2. Select **VNC**. A new tab will open in your browser with console access.
 
-#### Connecting via SSH
+<figure><img src="../../.gitbook/assets/VNCConsole.jpg" alt=""><figcaption><p>VNC Console</p></figcaption></figure>
 
-\{% hint style="info" %\} For more information on SSH connections, refer to [this set of articles](https://chatgpt.com/faq/troubleshooting/connecting-to-a-pbx-using-ssh/). In this guide, we demonstrate SSH access via PowerShell. \{% endhint %\}
+### Connecting via SSH
+
+{% hint style="info" %}
+For more information on SSH connections, refer to [this set of articles](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/). In this guide, we demonstrate SSH access via PowerShell.&#x20;
+{% endhint %}
 
 Enter the following command to connect via SSH:
 
@@ -168,15 +197,25 @@ Replace:
 * `root` if you changed the default user when creating the VM,
 * `ip-adress` with the external IP address of your MikoPBX instance.
 
+<figure><img src="../../.gitbook/assets/sshCommandPowerShell.jpg" alt=""><figcaption><p>Command for SSH connection</p></figcaption></figure>
+
 You will then connect via SSH:
 
-### First Login to the Web Interface
+<figure><img src="../../.gitbook/assets/SSHConnection.jpg" alt=""><figcaption><p>SSH Connection</p></figcaption></figure>
+
+## First Login to the Web Interface
 
 On the VM’s main page, you’ll see important parameters for logging into the MikoPBX web interface.
 
+<figure><img src="../../.gitbook/assets/authorizationParametersEN.jpg" alt=""><figcaption><p>Authorization Parameters for the WEB-interface</p></figcaption></figure>
+
 Paste the IP address into your browser’s address bar to access the MikoPBX web interface login page.
 
-\{% hint style="info" %\} **Login credentials**:
+{% hint style="info" %}
+&#x20;**Login credentials**:
 
 * **Username**: admin
-* **Password**: Your Virtual Machine’s ID \{% endhint %\}
+* **Password**: Your Virtual Machine’s ID
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/mikopbxWEB.jpg" alt=""><figcaption><p>MikoPBX WEB-interface</p></figcaption></figure>
