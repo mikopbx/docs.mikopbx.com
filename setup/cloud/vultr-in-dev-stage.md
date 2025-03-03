@@ -172,4 +172,9 @@ description: Установка MikoPBX с помощью сервиса Vultr
 
 <figure><img src="../../.gitbook/assets/MikoPBXIPadress.jpg" alt=""><figcaption><p>IP-адрес станции</p></figcaption></figure>
 
-2.
+2. Введите следующие данные для авторизации:
+
+* Логин - admin
+* Пароь - ID-виртуальной машины. Оно имеет вид "150dd137-a0e2-45f6-baf9-ddc15a600d60", найти его Вы можете в адресной строке (скриншот ниже)
+
+<figure><img src="../../.gitbook/assets/machineID.jpg" alt=""><figcaption><p>ID виртуальной машины</p></figcaption></figure>
