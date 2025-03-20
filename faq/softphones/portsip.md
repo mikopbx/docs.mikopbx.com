@@ -4,6 +4,10 @@ description: Инструкции по подключению софтфона P
 
 # PortSIP
 
+{% hint style="info" %}
+Ссылка на загрузку софтфона - [здесь](https://www.portsip.com/download-portsip-softphone/).
+{% endhint %}
+
 Ниже на скриншоте представлены необходимые данные для SIP-покдлючения:
 
 <figure><img src="../../.gitbook/assets/sipConnectionParameters.jpg" alt=""><figcaption><p>Параметры для SIP-подключения</p></figcaption></figure>
