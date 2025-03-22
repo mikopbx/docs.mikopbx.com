@@ -26,7 +26,7 @@
   * [Hetzner cloud (In dev)](setup/cloud/hetzner-cloud.md)
   * [Digital Ocean](setup/cloud/digitalocean.md)
   * [Alibaba Cloud](setup/cloud/alibaba-cloud.md)
-  * [Vultr (In dev)](setup/cloud/vultr-in-dev.md)
+  * [Vultr](setup/cloud/vultr.md)
 * [Docker container](setup/docker/README.md)
   * [Docker installation and creating a user and directories](setup/docker/docker-installation-and-creating-a-user-and-directories.md)
   * [Running MikoPBX in a container](setup/docker/running-mikopbx-in-a-container.md)

@@ -2,9 +2,7 @@
 description: Installing MikoPBX using the Vultr cloud platform
 ---
 
-# Vultr (In dev)
-
-## Vultr
+# Vultr
 
 {% hint style="danger" %}
 This guide applies to **MikoPBX version 2024.2.138** and later!
