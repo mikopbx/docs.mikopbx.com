@@ -141,7 +141,7 @@ Click **Create Security Group**.
 * **Region**, **Network, and Zone** – Select the region and zone to match your needs.
 * **Instance** – Pick a configuration for your VM.
 
-<figure><img src="../../.gitbook/assets/VMParameters1.jpg" alt=""><figcaption><p>VM Parameters №1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/VMParameters1 (1).jpg" alt=""><figcaption><p>VM Parameters №1</p></figcaption></figure>
 
 4. Configure additional VM parameters:
 
@@ -153,7 +153,7 @@ Click **Create Security Group**.
 We recommend a minimum of **50GB** for call recordings.In this guide we use 30GB as an example.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/VMParameters2.jpg" alt=""><figcaption><p>VM Parameters №2</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/VMParameters2 (1).jpg" alt=""><figcaption><p>VM Parameters №2</p></figcaption></figure>
 
 5. Choose the network parameters for your VM. The security group created earlier will be assigned automatically:
 
