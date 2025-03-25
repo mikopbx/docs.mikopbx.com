@@ -143,6 +143,7 @@
   * [Conversion of Call History FreePBX -> MikoPBX](faq/cases/converting-freepbx-call-history-to-mikopbx.md)
   * [SSL Certificate for MikoPBX Web Interface from OPNSense](faq/cases/opnsense-certificate.md)
   * [Hiding the Caller’s Number from Employees](faq/cases/bluring.md)
+  * [Simulation of external calls](faq/cases/simulation-of-external-calls.md)
 * [Interconnections](faq/interconnections/README.md)
   * [Merging two MikoPBX](faq/interconnections/mikopbx-2-mikopbx.md)
   * [Integration of MikoPBX and Grandstream UCM6202](faq/interconnections/mikopbx-and-grandstream-ucm6202.md)
