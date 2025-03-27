@@ -127,6 +127,7 @@
   * [Making Calls Through a Specific Provider](faq/outbound-routing/making-calls-through-a-specific-provider.md)
 * [Scenarios and cases](faq/cases/README.md)
   * [Generate extensions by REST API](faq/cases/extensions-generation-by-rest-api.md)
+  * [Missed Call Telegram Notifications](faq/cases/notification-in-telegram.md)
   * [Call the company from your mobile and dial an extension to call a third-party company](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
   * [Sending an incoming fax to email](faq/cases/sending-an-incoming-fax-to-email.md)
   * [Customer's assessment of the quality of service](faq/cases/customers-assessment-of-the-quality-of-service.md)
