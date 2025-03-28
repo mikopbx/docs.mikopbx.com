@@ -151,7 +151,6 @@
   * [Отправка входящего факса на email](faq/cases/sending-an-incoming-fax-to-email.md)
   * [Оценка клиентом качества обслуживания](faq/cases/customers-assessment-of-the-quality-of-service.md)
   * [Имитация внешних звонков](faq/cases/simulation-of-external-calls.md)
-  * [Настройка outboudproxy](faq/cases/nastroika-outboudproxy.md)
   * [Отключение "нерабочего времени" для VIP номеров](faq/cases/disabling-off-hours-for-vip-rooms.md)
   * [Регистрация нескольких учетных записей от одного провайдера](faq/cases/registering-multiple-accounts-from-one-provider.md)
   * [Настройка индивидуального нерабочего времени для нескольких провайдеров, на одном хосте](faq/cases/nastroika-individualnogo-nerabochego-vremeni-dlya-neskolkikh-provaiderov-zaregistrirovannykh-na-odno.md)
