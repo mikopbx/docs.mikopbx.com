@@ -171,6 +171,7 @@
   * [Объединение MikoPBX и FreePBX (PJSIP)](https://wiki.mikopbx.ru/faq:mikopbx_freepbx)
   * [Объединение MIKOPBX и FreePBX (IAX)](https://wiki.mikopbx.ru/faq:mikopbx_freepbx_iax2)
   * [Объединение MikoPBX и FreePBX (PJSIP)](faq/interconnections/mikopbx-and-freepbx-pjsip.md)
+  * [Объединение MikoPBX и FreePBX (IAX)](faq/interconnections/obedinenie-mikopbx-i-freepbx-iax.md)
 * [Настройка провайдеров](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [MTT](faq/providers/mtt.md)
