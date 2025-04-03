@@ -1,13 +1,10 @@
-# Группы пользователей
-
-{% hint style="info" %}
-Модуль возможно использовать начиная с **MikoPBX 2019.04.134.**
-{% endhint %}
+# Управление телефонными группами
 
 ## Назначение <a href="#osnovnye_zadachi_reshaemye_modulem" id="osnovnye_zadachi_reshaemye_modulem"></a>
 
 * Разграничение прав доступа к исходящим маршрутам
-* Установка caller id для исходящего вызова
+* Установка СallerID (FROM, user) для исходящего вызова
+* Изоляция групп
 
 ## Настройка модуля <a href="#nastrojka_modulja" id="nastrojka_modulja"></a>
 

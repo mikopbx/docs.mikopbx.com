@@ -232,7 +232,7 @@
   * [Интеграция с CRM Bitrix24](modules/miko/module-bitrix24-integration/README.md)
     * [Описание функционала CRM Bitrix24](modules/miko/module-bitrix24-integration/functions.md)
     * [Настройка интеграции с Bitrix24](modules/miko/module-bitrix24-integration/setting-up.md)
-  * [Группы пользователей](modules/miko/module-users-groups.md)
+  * [Управление телефонными группами](modules/miko/module-users-groups.md)
   * [Резервное копирование](modules/miko/module-backup.md)
   * [Автоматическая настройка телефонов](modules/miko/module-autoprovision.md)
   * [Автообработка пропущенных](modules/miko/module-callback-queues.md)
