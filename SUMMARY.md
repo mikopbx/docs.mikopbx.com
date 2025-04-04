@@ -148,6 +148,7 @@
 * [Interconnections](faq/interconnections/README.md)
   * [Merging two MikoPBX](faq/interconnections/mikopbx-2-mikopbx.md)
   * [Integration of MikoPBX and Grandstream UCM6202](faq/interconnections/mikopbx-and-grandstream-ucm6202.md)
+  * [Page 1](faq/interconnections/page-1.md)
 * [VoIP providers](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [Mango](faq/providers/mango.md)
