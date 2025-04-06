@@ -103,7 +103,7 @@
   * [Закончилось место на доп. диске, увеличение размера диска](faq/management/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
   * [Закончилось место на доп. диске, перенос данных на новый диск](faq/management/move-data-from-storage-to-another-disk.md)
   * [Хранение записей в общей папке windows](faq/management/storing-records-in-a-windows-shared-folder.md)
-  * [Резервный интернет и перерегистрация провайдеров](faq/management/rezervnyi-internet-i-pereregistraciya-provaiderov.md)
+  * [Резервный интернет и перерегистрация провайдеров](faq/management/backup-internet.md)
   * [Сброс пароля администратора из консоли MikoPBX](faq/management/password-reset.md)
 * [Диагностика проблем](faq/troubleshooting/README.md)
   * [Подключение к АТС с помощью SSH](faq/troubleshooting/connecting-to-a-pbx-using-ssh/README.md)
