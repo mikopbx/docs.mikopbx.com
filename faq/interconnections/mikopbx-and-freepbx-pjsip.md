@@ -85,11 +85,11 @@ Save and apply the changes.
 
 2. Define an inbound route ([“Incoming Routing” article](../../manual/routing/incoming-routing.md)) in MikoPBX:
 
-<figure><img src="../../.gitbook/assets/inboundMikoPBX.jpg" alt=""><figcaption><p>Inbound routing template MikoPBX</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inboundMikoPBX (1).jpg" alt=""><figcaption><p>Inbound routing template MikoPBX</p></figcaption></figure>
 
 If necessary, define a separate route for each DID to direct calls to the correct destination (e.g., if a FreePBX user dials **202**, route it to extension **202** on MikoPBX):
 
-<figure><img src="../../.gitbook/assets/inboundMikoPBXindividualDID.jpg" alt=""><figcaption><p>Inbound routing template (Individual DID configuring)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inboundMikoPBXindividualDID (2).jpg" alt=""><figcaption><p>Inbound routing template (Individual DID configuring)</p></figcaption></figure>
 
 3. Go to **"Connectivity"** → **"Inbound Routes"** in FreePBX and define an inbound route:
 
