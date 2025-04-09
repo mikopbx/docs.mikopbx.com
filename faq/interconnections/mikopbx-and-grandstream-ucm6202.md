@@ -1,124 +1,139 @@
+---
+description: Инструкция по объединению двух АТС
+---
+
 # Объединение MIKOPBX и Grandstream UCM6202
 
+Существует задача: в компании два отдела, один (Администрация) должен работать в рамках АТС Grandstream, другой (Отдел продаж) должен работать с MikoPBX и иметь возможность интеграции с 1C. В рамках данной статьи опишем пример объединения станций, следуя следующим правилам:
 
+* **Администрация**- имеет внутренний номерной план **1XX.**
+* **Отдел продаж** - имеет внутренний номерной план **3XX.**
+* К **Grandstream** подключена внешняя линия для звонков в город.
+* **MikoPBX** должна использовать внешнюю линию Grandstream для звонков в город.
+* Абоненты **1XX** должны иметь возможность позвонить абонентам **3XX.**
+* Абоненты **3XX** должны иметь возможность позвонить абонентам **1XX.**
 
-В компании два отдела, один (Администрация) должен работать в рамках АТС Grandstream, другой «Отдел продаж» должен работать с MikoPBX и иметь возможность интеграции с 1С. В рамках данной статьи опишем пример объединения станций:
+<figure><img src="../../.gitbook/assets/MikoPBXGranstreamScheme.jpg" alt=""><figcaption><p>Схема поставленной задачи</p></figcaption></figure>
 
-1. **Администрация**- имеет внутренний номерной план **1XX**
-2. **Отдел продаж** - имеет внутренний номерной план **3XX**
-3. К **Grandstream** подключена внешняя линия для звонков в город
-4. **MikoPBX** должна использовать внешнюю линию Grandstream для звонков в город
-5. Абоненты **1XX** должны иметь возможность позвонить абонентам **3XX**
-6. Абоненты **3XX** должны иметь возможность позвонить абонентам **1XX**
+## Настройка Grandstream UCM6202 <a href="#grandstream_ucm6202" id="grandstream_ucm6202"></a>
 
-## Grandstream UCM6202 <a href="#grandstream_ucm6202" id="grandstream_ucm6202"></a>
+### Создание Trunk <a href="#trunk" id="trunk"></a>
 
-### Trunk <a href="#trunk" id="trunk"></a>
+1. Перейдите в раздел «**Extensions / Trunk**» -«**VoIP Trunk**», нажмите «**Add SIP Trunk**». Заполните все необходимые данные:
 
-1. Раздел «**Extensions / Trunk**» -«**VoIP Trunk**», выполним «**Add SIP Trunk**»
-2. «**Provider name**» - укажите произвольное имя провайдера, к примеру **MikoPBX**
-3. «**Host Name**» - укажите адрес MikoPBX
-4. «**Transport**» - укажем **UDP**
-5. Установите флаг «**Keep Original CID**»
-6. Нажмите кнопку «**Save**»
+* «**Provider name**» - укажите произвольное имя провайдера, к примеру **MikoPBX**
+* «**Host Name**» - укажите IP-адрес Вашей MikoPBX
+* «**Transport**» - укажем **UDP**
+* Установите флаг «**Keep Original CID**»
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+Нажмите кнопку «**Save**».
 
-Список Trunks:
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Параметры создаваемого транка</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+У Вас должен получится подобный список транков:
 
-#### Исходящие на \_2XX <a href="#isxodjaschie_na_2xx" id="isxodjaschie_na_2xx"></a>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Список транков</p></figcaption></figure>
 
-Это правило позволит абонентам Grandstream (**2XX**) звонить на внутренние номера MikoPBX **2XX**
+### Настройка исходящих звонков на 2XX <a href="#isxodjaschie_na_2xx" id="isxodjaschie_na_2xx"></a>
 
-1. Раздел «**Extensions / Trunk**» - «**Outbound Routes**»
-2. Добавьте новый маршрут
-3. Установите «**Trunk**» в значение «**SIP Trunks – MikoPBX**»
-4. «**Calling Rule Name**» в значение «**MikoPBX**» (произвольное, понятное вам значение)
-5. «**Pattern**» в значение
+Добавим правило, которое позволит абонентам Grandstream (1**XX**) звонить на внутренние номера MikoPBX **2XX.** Для этого:
+
+Перейдите в раздел «**Extensions / Trunk**» - «**Outbound Routes**». Добавьте новый маршрут, укажите для него следующие параметры:
+
+* Установите «**Trunk**» в значение «**SIP Trunks – MikoPBX**»
+* «**Calling Rule Name**» в значение «**MikoPBX**» (произвольное, понятное вам значение)
+* «**Pattern**» в значение:
 
 ```
 _2XX
 _90000099
 ```
 
-тут **90000099** - это номер очереди, которую мы позже определим на MikoPBX
+{% hint style="info" %}
+**90000099** - это номер очереди, которую мы позже определим на MikoPBX
+{% endhint %}
 
-6. **Privilege Level**» - в данном случае можно установить **internal**, на MikoPBX нет выхода на город / межгород
+* «**Privilege Level**» - в данном случае можно установить **internal**, на MikoPBX нет выхода на город / межгород
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Параметры исходящего маршрута</p></figcaption></figure>
 
-#### Входящие на \_1XX <a href="#vxodjaschie_na_1xx" id="vxodjaschie_na_1xx"></a>
+### Настройка входящих звонков на 1XX <a href="#vxodjaschie_na_1xx" id="vxodjaschie_na_1xx"></a>
 
-Это правило позволит абонентам MikoPBX (**2XX**) звонить на внутренние номера **1XX**
+Добавим правило, которое позволит абонентам MikoPBX (**2XX**) звонить на внутренние номера Grandstream (**1XX).** Для этого:
 
-1. Раздел «**Extensions / Trunk**» - «**Inbound Routes**»
-2. Выберите trunk «**SIP Trunks – MikoPBX**»
-3. Добавьте маршрут с **Pattern** = **\_1XX**
-4. Установите «**Allowed DID Destination**» в значение «**Extension**»
-5. Установите «**Default detination**» в значение «**By DID**»
-6. Установите «**Privilage Level**» в значение «**internal**»
+Перейдите в раздел «**Extensions / Trunk**» - «**Inbound Routes**». Добавьте новый маршрут, укажите для него следующие параметры:
 
-#### Исходящие на \_\[78]XX... <a href="#isxodjaschie_na_78_xx" id="isxodjaschie_na_78_xx"></a>
+* Выберите trunk «**SIP Trunks – MikoPBX**»
+* Добавьте маршрут с **Pattern** = **\_1XX**
+* Установите «**Allowed DID Destination**» в значение «**Extension**»
+* Установите «**Default detination**» в значение «**By DID**»
+* Установите «**Privilage Level**» в значение «**internal**»
 
-Это правило позволит абонентам MikoPBX (2XX) звонить на внешние номера РФ
+### Настройка исходящих на \[78]XX <a href="#isxodjaschie_na_78_xx" id="isxodjaschie_na_78_xx"></a>
 
-1. Раздел «**Extensions / Trunk**» - «**Inbound Routes**»
-2. Выберите trunk «**SIP Trunks – MikoPBX**»
-3. Добавьте маршрут с **Pattern** = **\_\[78]XXXXXXXXXX**
-4. Установите флаг «**Dial trunk**»
-5. Установите «**Allowed DID Destination**» в значение «**Extension**»
-6. Установите «**Default detination**» в значение «**By DID**»
-7. Установите «**Privilage Level**» в значение «**National**»
+Добавим правило, которое позволит абонентам MikoPBX (**2XX**) звонить на внешние номера РФ
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+Перейдите в раздел «**Extensions / Trunk**» - «**Inbound Routes**». Добавьте новое правило входящей маршрутизации. Укажите следующие параметры:
 
-Входящие маршруты «**SIP Trunks – MikoPBX**»:
+* Выберите trunk «**SIP Trunks – MikoPBX**»
+* Добавьте маршрут с **Pattern** = **\_\[78]XXXXXXXXXX**
+* Установите флаг «**Dial trunk**»
+* Установите «**Allowed DID Destination**» в значение «**Extension**»
+* Установите «**Default detination**» в значение «**By DID**»
+* Установите «**Privilage Level**» в значение «**National**»
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Параметры правила входящей маршрутизации</p></figcaption></figure>
 
-### Extensions <a href="#extensions" id="extensions"></a>
+Итоговый список входящих маршрутов «**SIP Trunks – MikoPBX**»:
 
-Чтобы на стороне MikoPBX корректно отображался CID в карточке **Extension** следует прописать **CallerID Number**:
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Список маршрутов</p></figcaption></figure>
 
-* Раздел «**Extensions / Trunk**» - «**Extension**»
+### Параметры Extensions <a href="#extensions" id="extensions"></a>
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+Для того, чтобы на стороне MikoPBX корректно отображался CID в карточке **Extension,** следует прописать **CallerID Number**:
+
+Перейдите в раздел «**Extensions / Trunk**» - «**Extension**». Заполните параметры на примере скриншота ниже.
+
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Пример параметров extension</p></figcaption></figure>
 
 ### IVR <a href="#ivr" id="ivr"></a>
 
-1. Добавим возможность в IVR звонить на номера MikoPBX (**\_2XX**)
-2. Раздел «**Call Features**» - «**IVR**», создадим / откроем на редактирование IVR
+Добавим возможность в IVR звонить на номера MikoPBX (**\_2XX**). Для этого перейдите в раздел «**Call Features**» - «**IVR**», создадим / откроем на редактирование IVR:
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Раздел IVR</p></figcaption></figure>
 
-3. Установите «**Dial Other Extensions**» в значение **Yes**
-4. Установите «**Dial Trunk**» в значение **Yes**
-5. На вкладке «**Key Pressing Events**» настройте переадресацию на **External number**:
+Выполните следующие действия:
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+* Установите «**Dial Other Extensions**» в значение **Yes**
+* Установите «**Dial Trunk**» в значение **Yes**
+* На вкладке «**Key Pressing Events**» настройте переадресацию на **External number**:
 
+{% hint style="info" %}
 **90000099** - это номер очереди, которую мы позже определим на MikoPBX
+{% endhint %}
 
-## MikoPBX
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Параметры IVR маршрута</p></figcaption></figure>
 
-### Провайдер <a href="#provajder" id="provajder"></a>
+## Настройка MikoPBX
 
-1. Раздел «**Маршрутизация**» - «**Провайдеры телефонии**» добавьте нового провайдера
-2. «**Название провайдера**» - произвольное, понятное имя, к примеру **Grandstream**
-3. «**Тип учетной записи**» - Аутентификация по IP адресу, без пароля
-4. «**Хост или IP адрес**» - адрес АТС **Grandstream**
-5. Сохраните изменения.
+### Создание провайдера <a href="#provajder" id="provajder"></a>
 
-<figure><img src="../../.gitbook/assets/newProvider.jpg" alt=""><figcaption></figcaption></figure>
+Перейдите в раздел «**Маршрутизация**» - «**Провайдеры телефонии**». Добавьте нового провайдера, со следующими параметрами:
+
+* «**Название провайдера**» - произвольное, понятное имя, к примеру **Grandstream**
+* «**Тип учетной записи**» - Аутентификация по IP адресу, без пароля
+* «**Хост или IP адрес**» - адрес АТС **Grandstream**
+
+Сохраните изменения.
+
+<figure><img src="../../.gitbook/assets/newProvider.jpg" alt=""><figcaption><p>Параметры SIP-провайдера</p></figcaption></figure>
 
 ### Входящая маршрутизация <a href="#vxodjaschaja_marshrutizacija" id="vxodjaschaja_marshrutizacija"></a>
 
-Это правило позволит абонентам Grandstream (**2XX**) звонить на внутренние номера MikoPBX **2XX**
+Добавим правило, которое позволит абонентам Grandstream (1**XX**) звонить на внутренние номера MikoPBX **2XX**
 
-1. Раздел «**Маршрутизация**» - «**Входящие маршруты**»
-2. Добавим новое правило:&#x20;
+1. Перейдите в раздел «**Маршрутизация**» - «**Входящие маршруты**»
+2. Создайте новое правило со следующими параметрами:
 
 * **Провайдер**» - выберите «**Grandstream**»
 * «**DID**» - укажите шаблон «**2XX**»
@@ -127,40 +142,41 @@ _90000099
 
 Сохраните изменения.
 
-<figure><img src="../../.gitbook/assets/incomingRouting.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/incomingRouting.jpg" alt=""><figcaption><p>Параметры правила обработки входящих</p></figcaption></figure>
 
 ### Исходящие на 1XX <a href="#isxodjaschie_na_1xx" id="isxodjaschie_na_1xx"></a>
 
-Это правило позволит абонентам MikoPBX (**2XX**) звонить на внутренние номера **1XX**
+Добавим правило, которое позволит абонентам MikoPBX (**2XX**) звонить на внутренние номера Grandstream (**1XX)**
 
-1. Раздел «**Маршрутизация**» - «**Исходящие маршруты**»
-2. Добавим новое правило:
+1. Перейдите в раздел «**Маршрутизация**» - «**Исходящие маршруты**»
+2. Создайте новое правило, со следующими параметрами:
 
 * Номер начинается с **«1».**
 * Остальная часть номера состоит из **«2».**
 * Направить звонок через провайдера «Grandstream».
 
-<figure><img src="../../.gitbook/assets/outgoingRouting.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/outgoingRouting.jpg" alt=""><figcaption><p>Параметры правила обработки входящих</p></figcaption></figure>
 
 ### Исходящие на Городские <a href="#isxodjaschie_na_gorodskie" id="isxodjaschie_na_gorodskie"></a>
 
-1. Раздел «**Маршрутизация**» - «**Исходящие маршруты**»
-2. Добавим новое правило:
+1. Перейдите в раздел «**Маршрутизация**» - «**Исходящие маршруты**»
+2. Создайте новое правило, со следующими параметрами:
 
 * Номер начинается с **(7|8).**
 * Остальная часть номера состоит из **10.**
 * Направить звонок через провайдера «**Grandstream**».
 
-<figure><img src="../../.gitbook/assets/outgoingRouting2.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/outgoingRouting2.jpg" alt=""><figcaption><p>Параметры правила обработки исходящих</p></figcaption></figure>
 
 ### Входящие на группу <a href="#vxodjaschie_na_gruppu" id="vxodjaschie_na_gruppu"></a>
 
-1. Раздел «**Телефония**» - «**Очереди вызовов**»
-2. Добавьте очередь с внутренним номером **90000099**
-3. Внутренний номер можно исправить при редактировании очереди в разделе **Расширенные настройки**«
+1. Перейдите в раздел «**Телефония**» - «**Очереди вызовов**».
+2. Добавьте очередь с внутренним номером **90000099.**
 
-<figure><img src="../../.gitbook/assets/numberOfQueue.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/numberOfQueue.jpg" alt=""><figcaption><p>Создание очереди вызовов</p></figcaption></figure>
 
-Направьте маршрут по умолчанию на очередь.&#x20;
+3. Направьте маршрут по умолчанию на очередь.&#x20;
 
-<figure><img src="../../.gitbook/assets/кщгеу.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/кщгеу.jpg" alt=""><figcaption><p>Маршрут по умолчанию на очередь</p></figcaption></figure>
+
+На этом настройка завершена!
