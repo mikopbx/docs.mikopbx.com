@@ -30,7 +30,7 @@ description: Подключение и настройка телефона Snom 
 Если в вашей сети настроен DHCP сервер, то телефон получит IP адрес автоматически. При включении адрес будет отображен на аппарате.
 {% endhint %}
 
-1. Перейдите в браузере по ссылке [http://ip\_адрес\_телефона](http://xn--ip\_\_-73db0aiba9dzamwqr1b/). Авторизуйтесь в web-интерфейсе.
+1. Перейдите в браузере по ссылке [http://ip\_адрес\_телефона](http://xn--ip__-73db0aiba9dzamwqr1b/). Авторизуйтесь в web-интерфейсе.
 2. Для настройки учетной записи SIP перейдите в меню «**Setup**» -> «**Identity 1**»:
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption><p>Раздел «<strong>Setup</strong>» -> «<strong>Identity 1</strong>»</p></figcaption></figure>
@@ -49,7 +49,7 @@ description: Подключение и настройка телефона Snom 
 
 В Web интерфейсе MikoPBX, в списке сотрудников статус-иконка изменит цвет на <mark style="color:green;">**зеленый**</mark>**:**
 
-<figure><img src="../../.gitbook/assets/greenIndicator.png" alt=""><figcaption><p>Индикатор подключения </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/greenIndicator (1).png" alt=""><figcaption><p>Индикатор подключения </p></figcaption></figure>
 
 ## Дополнительные настройки <a href="#dopolnitelnye_nastrojki" id="dopolnitelnye_nastrojki"></a>
 

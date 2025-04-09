@@ -58,4 +58,4 @@ Login: admin
 
 После успешного подключения телефона, в интерфейсе MikoPBX индикатор состояния подключения загорится <mark style="color:green;">зелёным</mark>:
 
-<figure><img src="../../.gitbook/assets/greenIndicator.png" alt=""><figcaption><p>Индикатор состояния в MikoPBX</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/greenIndicator (1).png" alt=""><figcaption><p>Индикатор состояния в MikoPBX</p></figcaption></figure>
