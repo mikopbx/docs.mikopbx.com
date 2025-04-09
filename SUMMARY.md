@@ -198,7 +198,6 @@
   * [Softphone.pro](faq/softphones/softphone.pro.md)
   * [3CX Softphone](faq/softphones/3cx-softphone.md)
   * [PortSIP](faq/softphones/portsip.md)
-  * [SIP.TG (Telegram)](https://wiki.mikopbx.ru/faq:siptg)
   * [SIP.tg (Telegram)](faq/softphones/sip-tg.md)
 * [Voip шлюзы](faq/voip-gateways/README.md)
   * [GoIP4](faq/voip-gateways/goip4/README.md)
