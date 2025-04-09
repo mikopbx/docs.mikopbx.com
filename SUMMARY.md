@@ -71,7 +71,6 @@
 
 ## FAQ
 
-* [Integration with 1C](faq/1c-integrations.md)
 * [Setup](faq/setup/README.md)
   * [Installation on MDADM RAID1](faq/setup/installation-on-mdadm-raid1.md)
   * [Fine-tuning the firewall](faq/setup/fine-tuning-the-firewall.md)
