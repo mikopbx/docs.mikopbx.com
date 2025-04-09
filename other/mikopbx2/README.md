@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Руководство по MikoPBX
 
 ## Предисловие <a href="#predislovie" id="predislovie"></a>
