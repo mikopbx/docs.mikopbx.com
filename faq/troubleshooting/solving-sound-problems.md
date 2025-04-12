@@ -18,7 +18,7 @@ Devices attempt to "negotiate" a session by exchanging information about support
 
 If the devices cannot find a common codec, the call will likely drop, and the logs will show an error indicating that no compatible codec was found.
 
-In MikoPBX, codecs are configured in the "**General Settings**" - "**Audio/Video Codecs**" section ([see wiki](../../manual/system/general-settings.md#audio\_video\_kodeki)). The most common codec in Russia is **alaw**. For working with webRTC, you should enable the **opus** codec.
+In MikoPBX, codecs are configured in the "**General Settings**" - "**Audio/Video Codecs**" section ([see wiki](../../manual/system/general-settings.md#audio_video_kodeki)). The most common codec in Russia is **alaw**. For working with webRTC, you should enable the **opus** codec.
 
 ## NAT <a href="#nat" id="nat"></a>
 
@@ -76,7 +76,7 @@ There are several problems that can be harder to detect at first glance. In prac
 
 Here's an example of network traffic analysis for a problematic call:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Example of network traffic analysis</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Example of network traffic analysis</p></figcaption></figure>
 
 In the image, you can see "**red-yellow dots**". These represent "dropped packets" that will not be played back to the client. In this case, increasing the **Jitter Buffer** value to **800** stabilized the audio and eliminated stuttering.
 

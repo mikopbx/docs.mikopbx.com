@@ -29,7 +29,7 @@ The following options are available:
 
 1. **Download** the selected log as a file ![](../../.gitbook/assets/sistem_logi_skachat.png).
 2. **Refresh** the log ![](../../.gitbook/assets/sistem_logi_obnovit.png).
-3. **Auto-refresh** the log ![](../../.gitbook/assets/image.png).
+3. **Auto-refresh** the log ![](<../../.gitbook/assets/image (5).png>).
 
 <figure><img src="../../.gitbook/assets/fuilters.png" alt=""><figcaption><p>Filters</p></figcaption></figure>
 

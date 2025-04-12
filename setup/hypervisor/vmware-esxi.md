@@ -9,20 +9,20 @@ description: Installing MikoPBX using VMware ESXi.
 1. Start by creating a new virtual machine.
 2. Enter the **Name**, **Type**, and **Version** of the virtual machine, as shown in the image below.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Name, Type and Version of the virtual machine</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Name, Type and Version of the virtual machine</p></figcaption></figure>
 
 3. Select a datastore for the virtual machine.
 4. Allocate **1024 MB** of memory to the virtual machine and create a **new** virtual hard disk for the system with a size of <mark style="color:green;">**1024**</mark>**&#x20;MB**.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Size of RAM and memory for the system hard drive</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Size of RAM and memory for the system hard drive</p></figcaption></figure>
 
 5. Choose the SCSI controller type and adapter type, as shown in the image below.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Controller type and adapter type</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Controller type and adapter type</p></figcaption></figure>
 
 6. Select **BIOS** as the **Firmware** option.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>"Boot options" section</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>"Boot options" section</p></figcaption></figure>
 
 7. Review and save the changes.
 
@@ -36,7 +36,7 @@ We recommend allocating at least 50 GB for this disk.
 
 2. Go to the CD/DVD Drive tab. Upload the ISO image for installation, and check the box next to "Connect at power on."
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Loading a system image</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Loading a system image</p></figcaption></figure>
 
 ## Installing MikoPBX
 
