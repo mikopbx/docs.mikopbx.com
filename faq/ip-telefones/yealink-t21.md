@@ -40,7 +40,7 @@ Username: admin
 Login: admin
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Окно авторизации</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Окно авторизации</p></figcaption></figure>
 
 Далее выполните настройку SIP-аккаунта в Вашем телефоне:
 
@@ -50,11 +50,11 @@ Login: admin
 
 Нажмите "Сохранить"
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Параметры учетной записи в web-интерфейсе телефона</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Параметры учетной записи в web-интерфейсе телефона</p></figcaption></figure>
 
 В разделе «**Функции**» настройте параметр в «**Интерком**» -> "**Приоритет интеркома**":
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Настройка параметров</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Настройка параметров</p></figcaption></figure>
 
 После успешного подключения телефона, в интерфейсе MikoPBX индикатор состояния подключения загорится <mark style="color:green;">зелёным</mark>:
 

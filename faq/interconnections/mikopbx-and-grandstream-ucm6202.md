@@ -32,7 +32,7 @@ description: Инструкция по объединению двух АТС
 
 У Вас должен получится подобный список транков:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Список транков</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Список транков</p></figcaption></figure>
 
 ### Настройка исходящих звонков на 2XX <a href="#isxodjaschie_na_2xx" id="isxodjaschie_na_2xx"></a>
 
@@ -55,7 +55,7 @@ _90000099
 
 * «**Privilege Level**» - в данном случае можно установить **internal**, на MikoPBX нет выхода на город / межгород
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Параметры исходящего маршрута</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Параметры исходящего маршрута</p></figcaption></figure>
 
 ### Настройка входящих звонков на 1XX <a href="#vxodjaschie_na_1xx" id="vxodjaschie_na_1xx"></a>
 
@@ -82,11 +82,11 @@ _90000099
 * Установите «**Default detination**» в значение «**By DID**»
 * Установите «**Privilage Level**» в значение «**National**»
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Параметры правила входящей маршрутизации</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>Параметры правила входящей маршрутизации</p></figcaption></figure>
 
 Итоговый список входящих маршрутов «**SIP Trunks – MikoPBX**»:
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Список маршрутов</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Список маршрутов</p></figcaption></figure>
 
 ### Параметры Extensions <a href="#extensions" id="extensions"></a>
 
@@ -94,7 +94,7 @@ _90000099
 
 Перейдите в раздел «**Extensions / Trunk**» - «**Extension**». Заполните параметры на примере скриншота ниже.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Пример параметров extension</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Пример параметров extension</p></figcaption></figure>
 
 ### IVR <a href="#ivr" id="ivr"></a>
 
