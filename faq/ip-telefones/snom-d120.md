@@ -10,7 +10,7 @@ description: Connecting and configuring the Snom D120 phone
 Verify that **G.711 A-law** is enabled under **System** → **General Settings** → **Audio/Video Codecs** in MikoPBX.
 {% endhint %}
 
-## MikoPBX Employee Settings
+## MikoPBX Extensions Settings
 
 1. Open the MikoPBX web interface and go to **Telephony** → **Extensions**:
 
