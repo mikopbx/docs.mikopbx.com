@@ -62,15 +62,15 @@ chmod +x transfer-rsync.sh
 * Имя для ssh-авторизации
 * Порт для ssh-авторизации
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Ввод необходимых данных</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Ввод необходимых данных</p></figcaption></figure>
 
 4. Далее будет предложено сгенерировать новый ключ. В случае, если ранее вы этого не делали, введите "y" для подтверждения. Если ранее вы уже генерировали ключ для доступа ко второй MikoPBX - введите "n":
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Генерация нового ключа</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Генерация нового ключа</p></figcaption></figure>
 
 5. Будет создан новый ключ. Вам необходимо скопировать его и вставить в web-Интерфейсе старой MikoPBX. Сделать это нужно в разделе "**Общие настройки**" -> "**SSH**" -> Поле "**SSH Authorized keys**"
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Сгенерированный ключ ssh</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Сгенерированный ключ ssh</p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/SshAuthorizedKeysField.png" alt=""><figcaption><p>Вставленный ключ</p></figcaption></figure>
 

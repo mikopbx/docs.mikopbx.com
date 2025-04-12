@@ -32,7 +32,7 @@ description: Инструкция по объединению двух АТС
 
 У Вас должен получится подобный список транков:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Список транков</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Список транков</p></figcaption></figure>
 
 ### Настройка исходящих звонков на 2XX <a href="#isxodjaschie_na_2xx" id="isxodjaschie_na_2xx"></a>
 
@@ -55,7 +55,7 @@ _90000099
 
 * «**Privilege Level**» - в данном случае можно установить **internal**, на MikoPBX нет выхода на город / межгород
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Параметры исходящего маршрута</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Параметры исходящего маршрута</p></figcaption></figure>
 
 ### Настройка входящих звонков на 1XX <a href="#vxodjaschie_na_1xx" id="vxodjaschie_na_1xx"></a>
 
