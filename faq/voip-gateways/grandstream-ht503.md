@@ -41,15 +41,24 @@ description: Подключение Voip шлюза Grandstream HT503
 
 4. Перейдите в Расширенные настройки. Укажите порт соединения - **5062**
 
-Сохраните настройки.
-
 <figure><img src="../../.gitbook/assets/portSIP.jpg" alt=""><figcaption><p>Параметры порта соединения</p></figcaption></figure>
 
-5. Перейдите в раздел "**Система**" -> "**Общие настройки**".
+5. Отключите использование поля **fromuser.** В дополнительные параметры вставьте следующий контекст:
+
+```
+host=dynamic
+insecure=port
+```
+
+Сохраните настройки.
+
+<figure><img src="../../.gitbook/assets/extraParameters.jpg" alt=""><figcaption><p>Дополнительные параметры MikoPBX</p></figcaption></figure>
+
+6. Перейдите в раздел "**Система**" -> "**Общие настройки**".
 
 <figure><img src="../../.gitbook/assets/generalSettings.jpg" alt=""><figcaption><p>Раздел "<strong>Общие настройки</strong>"</p></figcaption></figure>
 
-6. Перейдите в раздел "**Аудио/Видео кодеки**". Оставьте включенным только кодек "**G.711 A-law**":
+7. Перейдите в раздел "**Аудио/Видео кодеки**". Оставьте включенным только кодек "**G.711 A-law**":
 
 <figure><img src="../../.gitbook/assets/g711AlawCodec.jpg" alt=""><figcaption><p>Раздел "<strong>Аудио/Видео кодеки</strong>"</p></figcaption></figure>
 
