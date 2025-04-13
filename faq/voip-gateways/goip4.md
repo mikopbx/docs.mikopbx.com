@@ -22,7 +22,7 @@ In this example, the GoIP4 gateway will register to MikoPBX.&#x20;
 * **Username** – The provider ID (e.g., “SIP-TRUNK-53A707FC”)
 * **Password** – A strong password for gateway registration on MikoPBX
 
-<figure><img src="../../.gitbook/assets/providerParameters (1).jpg" alt=""><figcaption><p>Provider Parameters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/providerParameters (1) (1).jpg" alt=""><figcaption><p>Provider Parameters</p></figcaption></figure>
 
 2. In the provider’s **Advanced Settings**, under **Advanced Options**, add:
 

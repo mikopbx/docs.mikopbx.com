@@ -79,7 +79,7 @@ For the simulation provider to work properly, you must define both incoming and 
 
 ### Outbound Routing
 
-<figure><img src="../../.gitbook/assets/outgoingTemplate (1).jpg" alt=""><figcaption><p>Outgoing Template</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/outgoingTemplate (1) (1).jpg" alt=""><figcaption><p>Outgoing Template</p></figcaption></figure>
 
 Alternatively, you can manually describe a route for simulating external calls (add this at the end of the **"extensions.conf"** file in **"System file customization"**):
 

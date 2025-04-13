@@ -173,6 +173,7 @@
 * [VoIP gateways](faq/voip-gateways/README.md)
   * [GoIP4](faq/voip-gateways/goip4.md)
   * [Grandstream HT503](faq/voip-gateways/grandstream-ht503.md)
+  * [Using a Huawei E173 USB Modem for Calls (chan\_dongle)](faq/voip-gateways/calls-through-huawei-e173.md)
 
 ## Modules
 
