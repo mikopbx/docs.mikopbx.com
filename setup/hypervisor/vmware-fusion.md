@@ -52,19 +52,19 @@ Click "**Continue**"
 
 5. Select "**Add device**"
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Add device button</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>Add device button</p></figcaption></figure>
 
 6. Select "**New Hard Disk**"
 
 &#x20;Click "**Add...**"
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>New Hard Disk</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>New Hard Disk</p></figcaption></figure>
 
 7. Choose the size of the hard drive (we recommend **at least 50 GB**)
 
 &#x20;Click "**Apply**"
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Parameters for new hard drive</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Parameters for new hard drive</p></figcaption></figure>
 
 {% hint style="info" %}
 **1 hour** of recording conversations takes approximately **14mb** on disk.
@@ -94,7 +94,7 @@ In our case - _sdb_, enter its name and press **Enter**
 
 In our case - _sdc_, enter its name and press **Enter**
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Installation process</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Installation process</p></figcaption></figure>
 
 6. The system will reboot and MikoPBX will be ready for use.
 

@@ -23,7 +23,7 @@ description: Instructions for connecting multiple PBX systems
 
 Save the parameters.
 
-<figure><img src="../../.gitbook/assets/providerParameters (1).jpg" alt=""><figcaption><p>Provider Parameters 1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/providerParameters (1) (1).jpg" alt=""><figcaption><p>Provider Parameters 1</p></figcaption></figure>
 
 4. After saving, you’ll see the **provider ID** in the browser’s address bar. Copy it into the **Username** field:
 

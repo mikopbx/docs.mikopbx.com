@@ -171,6 +171,7 @@
   * [Snom D120](faq/ip-telefones/snom-d120.md)
   * [Yealink T19](faq/ip-telefones/yealink-t19.md)
 * [VoIP gateways](faq/voip-gateways/README.md)
+  * [GoIP4](faq/voip-gateways/goip4.md)
   * [Grandstream HT503](faq/voip-gateways/grandstream-ht503.md)
 
 ## Modules

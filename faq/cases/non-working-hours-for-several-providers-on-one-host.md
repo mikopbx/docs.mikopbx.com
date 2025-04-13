@@ -4,7 +4,7 @@
 
 We have two accounts from the Zadarma provider, configured in MikoPBX following this [guide](registering-multiple-accounts-from-one-provider.md).
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Two accounts</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Two accounts</p></figcaption></figure>
 
 Each Zadarma number needs to have its own non-working hours. For example, the number +60 17 308 9237 has working hours from 9:00 AM to 6:00 PM, while the number +60 17 308 2584 has working hours from 8:00 AM to 8:00 PM.
 
@@ -46,7 +46,7 @@ In the above code fragment, you need to specify the logins for your provider acc
 
 Below, the fragments highlighted in red are the ones you need to modify:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Fragments to change</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Fragments to change</p></figcaption></figure>
 
 Let's break down the **ExecIfTime** command in more detail. This command executes the specified Asterisk application if the current time matches the given time specification. In our case, the command plays an audio file located in the directory **/offload/asterisk/sounds/other/out\_work\_times** in MikoPBX. Command syntax:
 
