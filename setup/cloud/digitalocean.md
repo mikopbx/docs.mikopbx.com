@@ -8,7 +8,7 @@ description: Установка MikoPBX с помощью сервиса Digital
 Инструкция актуальна для версии 2024.2.111 и новее!
 {% endhint %}
 
-{% embed url="https://rutube.ru/video/6a63df6503f9c70d49551957a7237e1a/" %}
+{% embed url="https://rutube.ru/video/42f3354728b9cbd56772c4f274069f3f/" %}
 
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы DigitalOcean.
 
