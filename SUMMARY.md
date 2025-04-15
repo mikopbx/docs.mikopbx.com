@@ -140,6 +140,7 @@
     * [Замена префикса номера с "+7" на "8"](faq/outbound-routing/number-templates/replacing-the-number-prefix-from-+7-to-8.md)
     * [Пример шаблона: звонки в другую страну (Украина, Беларусь, Латвия)](faq/outbound-routing/number-templates/sample-template-calls-to-another-country.md)
     * [Как запретить замену "+" на "00"](faq/outbound-routing/number-templates/how-to-prohibit-the-replacement-of-+-with-00.md)
+    * [Нормализация набираемого номера телефона](faq/outbound-routing/number-templates/normalization.md)
 * [Сценарии и кейсы](faq/cases/README.md)
   * [Программное создание сотрудников](faq/cases/extensions-generation-by-rest-api.md)
   * [Уведомление в телеграмм о пропущенных](faq/cases/notification-in-telegram.md)
