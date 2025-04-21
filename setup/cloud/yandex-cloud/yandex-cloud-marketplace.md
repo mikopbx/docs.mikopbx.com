@@ -29,7 +29,7 @@ description: Установка MikoPBX в Yandex Cloud из Marketplace
 1. В разделе Выбор образа/загрузочного диска выберите Marketplace / Показать все продукты Marketplace / VoIP / **MikoPBX IP АТС**
 2. В разделе Диски и файловые хранилища скорректируйте размер загрузочного диска до **1 Гб**
 
-<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_14.png" alt=""><figcaption><p>MikoPBX создание загрузочного диска в Yandex Cloud</p></figcaption></figure>
 
 ### Настройка дисков
 
@@ -89,8 +89,3 @@ description: Установка MikoPBX в Yandex Cloud из Marketplace
 
 <figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_16 (1).png" alt=""><figcaption></figcaption></figure>
 
-
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
