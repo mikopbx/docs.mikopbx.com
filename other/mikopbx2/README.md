@@ -30,7 +30,7 @@ hidden: true
 
 ### Глава 3. Настройка лицензирования в MikoPBX <a href="#glava_3_nastrojka_licenzirovanija_v_mikopbx" id="glava_3_nastrojka_licenzirovanija_v_mikopbx"></a>
 
-После установки MikoPBX необходимо произвести настройку программной лицензии MIKO SaaS License, без неё невозможна работа с дополнительными модулями. [читать далее...](broken-reference)
+После установки MikoPBX необходимо произвести настройку программной лицензии MIKO SaaS License, без неё невозможна работа с дополнительными модулями. [читать далее...](../../manual/modules/licensing.md)
 
 ### Глава 4. Телефония <a href="#glava_4_telefonija" id="glava_4_telefonija"></a>
 
@@ -54,7 +54,7 @@ hidden: true
 
 ### Глава 6. Модули
 
-* [Регистрация в marketplace](broken-reference)
+* [Регистрация в marketplace](../../manual/modules/licensing.md)
 * [Управление модулями ](../../manual/modules/pbx-extension-modules.md)
 * [Модули МИКО](../../modules/miko/)
 * [Приложения диалпланов](../../manual/modules/dialplan-applications.md)
