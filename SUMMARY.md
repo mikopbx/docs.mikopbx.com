@@ -243,9 +243,6 @@
 
 ## Прочее <a href="#other" id="other"></a>
 
-* [Руководство по MikoPBX](other/mikopbx2/README.md)
-  * [Быстрый старт](other/mikopbx2/quick-start.md)
-  * [Модуль резервного копирования](other/mikopbx2/backup.md)
 * [История версий](other/changelog/README.md)
   * [MikoPBX 2024.1](other/changelog/mikopbx-2024.1.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
