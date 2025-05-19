@@ -47,3 +47,11 @@ MikoPBX поддерживает установку с помощью многи
 {% content-ref url="digitalocean.md" %}
 [digitalocean.md](digitalocean.md)
 {% endcontent-ref %}
+
+{% content-ref url="alibaba-cloud.md" %}
+[alibaba-cloud.md](alibaba-cloud.md)
+{% endcontent-ref %}
+
+{% content-ref url="vultr.md" %}
+[vultr.md](vultr.md)
+{% endcontent-ref %}
