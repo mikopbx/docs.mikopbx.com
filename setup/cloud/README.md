@@ -23,3 +23,15 @@ MikoPBX supports installation via many cloud services. In this section you can f
 {% content-ref url="hetzner-cloud.md" %}
 [hetzner-cloud.md](hetzner-cloud.md)
 {% endcontent-ref %}
+
+{% content-ref url="digitalocean.md" %}
+[digitalocean.md](digitalocean.md)
+{% endcontent-ref %}
+
+{% content-ref url="alibaba-cloud.md" %}
+[alibaba-cloud.md](alibaba-cloud.md)
+{% endcontent-ref %}
+
+{% content-ref url="vultr.md" %}
+[vultr.md](vultr.md)
+{% endcontent-ref %}
