@@ -8,9 +8,11 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 Инструкция актуальна для версии 2024.2.135 и новее!
 {% endhint %}
 
+{% embed url="https://rutube.ru/video/45d138f38207a275838d7aecb685ba6f/" %}
+
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы Alibaba cloud.
 
-&#x20;Перед началом Вам необходимо скачать актуальный образ MikoPBX с расширением **.raw**. Сделать это можно на [github MikoPBX](https://github.com/mikopbx/core/releases).
+Перед началом Вам необходимо скачать актуальный образ MikoPBX с расширением **.raw**. Сделать это можно на [github MikoPBX](https://github.com/mikopbx/core/releases).
 
 ## Загрузка образа в Alibaba cloud
 
