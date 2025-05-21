@@ -8,6 +8,8 @@ description: Installing MikoPBX using the Alibaba Cloud platform
 This guide applies to **MikoPBX version 2024.2.135** and later!
 {% endhint %}
 
+{% embed url="https://youtu.be/BnQEeaIzllA" %}
+
 This step-by-step guide will walk you through installing MikoPBX on the Alibaba Cloud platform.
 
 Before starting, download the latest **.raw** MikoPBX image from [MikoPBX’s GitHub releases](https://github.com/mikopbx/core/releases).
