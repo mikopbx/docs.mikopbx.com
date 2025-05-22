@@ -191,6 +191,7 @@
   * [Backup](modules/miko/module-quality-assessment.md)
   * [Synchronization with LDAP/AD](modules/miko/module-ldap-sync.md)
   * [Callback module](modules/miko/module-callback-queues.md)
+  * [Extended call history](modules/miko/extended-call-history.md)
 
 ## other
 
