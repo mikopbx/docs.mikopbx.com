@@ -8,6 +8,8 @@ description: Установка MikoPBX с помощью сервиса Vultr
 Инструкция актуальна для версии 2024.2.138 и новее!
 {% endhint %}
 
+{% embed url="https://rutube.ru/video/2bb730a126daf8bf48d3ff57ab11b928/" %}
+
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы Vultr.
 
 Перед началом Вам необходимо скачать актуальный образ MikoPBX с расширением **.iso**. Сделать это можно на [github MikoPBX](https://github.com/mikopbx/core/releases).
