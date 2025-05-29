@@ -8,6 +8,8 @@ description: Installing MikoPBX using the Vultr cloud platform
 This guide applies to **MikoPBX version 2024.2.138** and later!
 {% endhint %}
 
+{% embed url="https://youtu.be/SuNk8t9VLs8" %}
+
 This guide provides a step-by-step process for installing MikoPBX on the Vultr cloud platform.
 
 Before starting, you must download the latest **.iso** MikoPBX image file from [MikoPBX’s GitHub releases](https://github.com/mikopbx/core/releases).
