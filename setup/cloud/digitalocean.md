@@ -8,6 +8,8 @@ description: Installing MikoPBX using the DigitalOcean Cloud Platform
 This guide applies to **MikoPBX version 2024.2.111** and newer!
 {% endhint %}
 
+{% embed url="https://youtu.be/2fL9pdPNcgE" %}
+
 In this guide, we will perform a step-by-step installation of MikoPBX using the DigitalOcean cloud platform.
 
 Before beginning, you need to copy the download link for the latest **.raw** MikoPBX image. You can find these on [MikoPBX's GitHub releases](https://github.com/mikopbx/core/releases).
