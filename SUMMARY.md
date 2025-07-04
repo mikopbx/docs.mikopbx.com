@@ -36,9 +36,9 @@
   * [Alibaba cloud](setup/cloud/alibaba-cloud.md)
   * [Vultr](setup/cloud/vultr.md)
 * [В Docker контейнере](setup/docker/README.md)
-  * [Установка докера и cоздание пользователя и каталогов](setup/docker/ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
-  * [Запуск MikoPBX в контейнере](setup/docker/zapusk-mikopbx-v-konteinere.md)
-  * [Запуск MikoPBX с помощью docker compose](setup/docker/zapusk-mikopbx-s-pomoshyu-docker-compose.md)
+  * [Установка докера и cоздание пользователя и каталогов](setup/docker/docker-installation.md)
+  * [Запуск MikoPBX в контейнере](setup/docker/running-mikopbx-in-container.md)
+  * [Запуск MikoPBX с помощью docker compose](setup/docker/running-mikopbx-using-docker-compose.md)
 
 ## Руководство пользователя <a href="#manual" id="manual"></a>
 

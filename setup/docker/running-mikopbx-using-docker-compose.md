@@ -6,8 +6,8 @@ description: Установка MikoPBX с помощью docker compose
 
 Для работы с MikoPBX в контейнере необходимо установить docker и docker compose, а также создать пользователя и папки для хранения настроек конфигурации и записей разговоров по инструкции
 
-{% content-ref url="ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md" %}
-[ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md](ustanovka-dokera-i-cozdanie-polzovatelya-i-katalogov.md)
+{% content-ref url="docker-installation.md" %}
+[docker-installation.md](docker-installation.md)
 {% endcontent-ref %}
 
 ### Запуск с помощью docker compose
