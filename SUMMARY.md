@@ -28,8 +28,8 @@
   * [Alibaba Cloud](setup/cloud/alibaba-cloud.md)
   * [Vultr](setup/cloud/vultr.md)
 * [Docker container](setup/docker/README.md)
-  * [Docker installation and creating a user and directories](setup/docker/docker-installation-and-creating-a-user-and-directories.md)
-  * [Running MikoPBX in a container](setup/docker/running-mikopbx-in-a-container.md)
+  * [Docker installation and creating a user and directories](setup/docker/docker-installation.md)
+  * [Running MikoPBX in a container](setup/docker/running-mikopbx-in-container.md)
   * [Running MikoPBX using docker compose](setup/docker/running-mikopbx-using-docker-compose.md)
 
 ## User manual <a href="#manual" id="manual"></a>

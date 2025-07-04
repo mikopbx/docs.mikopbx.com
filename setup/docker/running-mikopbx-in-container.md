@@ -6,8 +6,8 @@ description: MikoPBX Installation Guide using Docker container
 
 To work with MikoPBX in a container, you need to install Docker and Docker Compose, as well as create a user and directories for storing configuration settings and call recordings according to the instructions
 
-{% content-ref url="docker-installation-and-creating-a-user-and-directories.md" %}
-[docker-installation-and-creating-a-user-and-directories.md](docker-installation-and-creating-a-user-and-directories.md)
+{% content-ref url="docker-installation.md" %}
+[docker-installation.md](docker-installation.md)
 {% endcontent-ref %}
 
 {% embed url="https://youtu.be/3w7odcxcNvk" %}
