@@ -15,7 +15,7 @@ PT1C\_cdr это таблица с историей звонков от пане
 2.  Скачаем скрипт конвертации таблицы MySQL в Sqlite3. Скачать, если его нет.
 
     ```
-    curl '' -o 'mysql2sqlite.sh'
+    curl 'https://gist.githubusercontent.com/esperlu/943776/raw/be469f0a0ab8962350f3c5ebe8459218b915f817/mysql2sqlite.sh' -o 'mysql2sqlite.sh'
     ```
 3.  Запускаем скрипт конвертации:
 
@@ -44,7 +44,7 @@ PT1C\_cdr это таблица с историей звонков от пане
 4.  Загрузка записей разговоров и конвертация в MP3
 
     ```
-    curl '' -o ./download-and-convert.sh
+    curl 'http://files.miko.ru/s/zYyMAyhpqtLZ7Qf/download' -o ./download-and-convert.sh
     sh ./download-and-convert.sh file-for-download.txt 10.70.10.6:443
     ```
 5.  Выполним резервное копирование базы данных истории звонков:
