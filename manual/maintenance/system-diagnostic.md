@@ -119,4 +119,5 @@ description: Описание функций раздела
 
 * С помощью [SSH-клиента](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/putty.md)
 * С помощью [утилиты Wireshark](../../faq/troubleshooting/capturing-logs-from-pbx-using-wireshark.md)
-* С помощью [приложения tcpdump](../../faq/troubleshooting/getting-logs-using-the-tcpdump-application.md)
+* C помощью [Sngrep](../../faq/troubleshooting/traffic-analysis-using-sngrep.md) (дамп звонка)
+* С помощью [приложения tcpdump](../../faq/troubleshooting/getting-logs-using-the-tcpdump-application.md) (дамп сетевого трафика)
