@@ -6,7 +6,7 @@ description: Подключение и настройка телефона Fanvi
 
 IP-телефон Fanvil X3SP сочетает современный дизайн, HD-качество звука и интуитивно понятный интерфейс, обеспечивая легкость в настройке и установке.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Телефон Fanvil X3SP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Телефон Fanvil X3SP</p></figcaption></figure>
 
 {% hint style="info" %}
 Убедитесь, что в разделе "**Система**" -> "**Общие настройки**" -> "**Аудио/Видео кодеки**", кодек **G.711 A-law** включен.
@@ -40,11 +40,11 @@ IP-телефон Fanvil X3SP сочетает современный дизай
 * Login: admin
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Форма авторизации</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Форма авторизации</p></figcaption></figure>
 
 4. Перейдите в раздел "**Аккаунт**".
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Раздел "Аккаунт"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Раздел "Аккаунт"</p></figcaption></figure>
 
 5. Заполните следующие параметры:
 
@@ -61,7 +61,7 @@ IP-телефон Fanvil X3SP сочетает современный дизай
 
 Сохраните настройки нажав кнопку «**Применить**». Статус телефона отобразиться как «**Зарегистрированно**».
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Параметры SIP аккаунта</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Параметры SIP аккаунта</p></figcaption></figure>
 
 После успешного подключения телефона, в интерфейсе MikoPBX индикатор состояния подключения загорится зелёным:
 

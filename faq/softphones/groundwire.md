@@ -38,7 +38,7 @@ description: Инструкции по подключению софтфона G
 
 9. Перейдите в раздел "**Caller Id Method**". Укажите "**P-Asserted-Identify".**
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="295"><figcaption><p>Раздел "Caller Id Method"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="295"><figcaption><p>Раздел "Caller Id Method"</p></figcaption></figure>
 
 Сохраните параметры. Произойдет соединение. По индикатору в разделе "Сотрудники" в MikoPBX, Вы можете убедиться, что оно было успешным.
 

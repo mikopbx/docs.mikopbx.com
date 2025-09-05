@@ -175,7 +175,7 @@
   * [Билайн](faq/providers/beeline.md)
   * [МТС](faq/providers/mts.md)
   * [UIS (uiscom.ru)](faq/providers/uis.md)
-  * [MANGO OFFICE](faq/providers/mango-office.md)
+  * [Mango](faq/providers/mango.md)
   * [dom.ru](faq/providers/dom.ru.md)
   * [Яндекс телефония](faq/providers/yandex.md)
   * [NEW-TEL](faq/providers/new-tel.md)

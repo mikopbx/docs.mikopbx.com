@@ -29,7 +29,7 @@
 
 6. В поле «**Номер для исходящего звонка по умолчанию**» - укажите приложение «**Интеграция с MIKOPBX**» (**следует выполнить после аутентификации модуля со стороны MikoPBX**)
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Настройка номеров по умолчанию</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (2).png" alt=""><figcaption><p>Настройка номеров по умолчанию</p></figcaption></figure>
 
 ## Настройка MIKOPBX <a href="#nastrojka_mikopbx" id="nastrojka_mikopbx"></a>
 
