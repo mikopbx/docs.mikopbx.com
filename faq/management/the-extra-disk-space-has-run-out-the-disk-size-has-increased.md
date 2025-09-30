@@ -8,7 +8,7 @@ Some virtual machines allow you to increase the disk size
 Be sure to back up your data before you work!
 {% endhint %}
 
-To execute the following commands, you will need to [connect to the PBX using an SSH client](../troubleshooting/connecting-to-a-pbx-using-ssh/connecting-to-a-pbx-using-an-ssh-client.md).
+To execute the following commands, you will need to [connect to the PBX using an SSH client](../troubleshooting/connecting-to-a-pbx-using-ssh/putty.md).
 
 ## Control of free disk space
 

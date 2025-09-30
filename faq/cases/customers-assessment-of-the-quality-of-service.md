@@ -90,7 +90,7 @@ PROVIDER ID is the value that you saved in the first step of this instruction. I
 ### Evaluation result processing script
 
 {% hint style="info" %}
-The file should be saved to the PBX along the path **/storage/usbdisk1/quality/quality\_agi.php** You can create a file using the [WinSCP ](../troubleshooting/connecting-to-a-pbx-using-winscp.md)file manager The file should be set to execute access rights. Connect via [SSH ](../troubleshooting/connecting-to-a-pbx-using-ssh/connecting-to-a-pbx-using-an-ssh-client.md)and run the command&#x20;
+The file should be saved to the PBX along the path **/storage/usbdisk1/quality/quality\_agi.php** You can create a file using the [WinSCP ](../troubleshooting/connecting-to-a-pbx-using-winscp.md)file manager The file should be set to execute access rights. Connect via [SSH ](../troubleshooting/connecting-to-a-pbx-using-ssh/putty.md)and run the command&#x20;
 
 `chmod +x /storage/usbdisk1/quality/quality_agi.php`
 {% endhint %}

@@ -8,7 +8,7 @@
 
 1. Prepare a PC with two disks of the same size.
 2. Boot the machine in[ **LiveCD** or **LiveUSB** mode](../../setup/bare-metal.md).
-3. Connect to the machine via [**SSH**](../troubleshooting/connecting-to-a-pbx-using-ssh/connecting-to-a-pbx-using-an-ssh-client.md).
+3. Connect to the machine via [**SSH**](../troubleshooting/connecting-to-a-pbx-using-ssh/putty.md).
 
 ## RAID 1 Assembly
 

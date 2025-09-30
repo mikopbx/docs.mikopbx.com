@@ -4,7 +4,7 @@
 
 ## Capturing Logs with the tcpdump Application
 
-1. Connect to your PBX via SSH (instructions [here](connecting-to-a-pbx-using-ssh/connecting-to-a-pbx-using-an-ssh-client.md)).
+1. Connect to your PBX via SSH (instructions [here](connecting-to-a-pbx-using-ssh/putty.md)).
 2. Run the following command:
 
 ```bash

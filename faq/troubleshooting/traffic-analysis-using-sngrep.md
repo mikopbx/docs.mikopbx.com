@@ -6,7 +6,7 @@
 Use this application to analyze logs and send them to technical support.
 {% endhint %}
 
-To start working with the application, follow the SSH connection to the PBX [guide](connecting-to-a-pbx-using-ssh/connecting-to-a-pbx-using-an-ssh-client.md).
+To start working with the application, follow the SSH connection to the PBX [guide](connecting-to-a-pbx-using-ssh/putty.md).
 
 To **start** the application, use the command:
 

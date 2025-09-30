@@ -62,7 +62,7 @@ We recommend a minimum size of **50GB** for the call recordings disk.
 6. Go to "**Choose authentication method**." Here, you need to select "**SSH Key**" and add the key pair for SSH authentication. For more information on generating SSH keys, see:
 
 * [Windows](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/powershell.md)
-* [MacOS/Linux](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/connecting-via-ssh-linux-macos.md)
+* [MacOS/Linux](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/terminal.md)
 
 <figure><img src="../../.gitbook/assets/sshKey.png" alt=""><figcaption><p>Authentication Methods</p></figcaption></figure>
 

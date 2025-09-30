@@ -8,13 +8,14 @@ description: Overview of methods for connecting to a PBX using SSH
 
 <figure><img src="../../../.gitbook/assets/sshConnection.png" alt=""><figcaption><p>SSH connection</p></figcaption></figure>
 
-Below are two different methods for connecting to MikoPBX via the SSH protocol:
+Below are three different methods for connecting to MikoPBX via the SSH protocol:
 
 * Password-based connection using third-party applications (this article uses PuTTY as an example)
 * Key-based connection, demonstrated with examples on Windows, Linux (MacOS)
+* Connection using Google Secure Shell Extension.
 
-{% content-ref url="connecting-to-a-pbx-using-an-ssh-client.md" %}
-[connecting-to-a-pbx-using-an-ssh-client.md](connecting-to-a-pbx-using-an-ssh-client.md)
+{% content-ref url="putty.md" %}
+[putty.md](putty.md)
 {% endcontent-ref %}
 
 ***
@@ -25,6 +26,12 @@ Below are two different methods for connecting to MikoPBX via the SSH protocol:
 
 ***
 
-{% content-ref url="connecting-via-ssh-linux-macos.md" %}
-[connecting-via-ssh-linux-macos.md](connecting-via-ssh-linux-macos.md)
+{% content-ref url="terminal.md" %}
+[terminal.md](terminal.md)
+{% endcontent-ref %}
+
+***
+
+{% content-ref url="secure-shell.md" %}
+[secure-shell.md](secure-shell.md)
 {% endcontent-ref %}
