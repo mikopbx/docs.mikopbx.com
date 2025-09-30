@@ -8,10 +8,11 @@ description: Описание вариантов подключения к АТ�
 
 <figure><img src="../../../.gitbook/assets/mikopbxconsoleSSH (1).png" alt=""><figcaption><p>SSH подключение</p></figcaption></figure>
 
-Далее будет рассмотренно два разных способа подключения к MikoPBX по SSH протоколу:
+Далее будет рассмотренно три разных способа подключения к MikoPBX по протоколу Secure Shell (SSH):
 
 * Подключение с помощью пароля через сторонние приложения (в данной статье в примере - putty)
 * Подключение с помощью ключей, что и будет рассмотренно далее с примером на Windows, Linux (MacOS)
+* Подключение с помощью Google Secure Shell (доступно для браузеров Google Chrome, Yandex Browser)
 
 {% content-ref url="putty.md" %}
 [putty.md](putty.md)
@@ -27,4 +28,10 @@ description: Описание вариантов подключения к АТ�
 
 {% content-ref url="terminal.md" %}
 [terminal.md](terminal.md)
+{% endcontent-ref %}
+
+***
+
+{% content-ref url="secure-shell.md" %}
+[secure-shell.md](secure-shell.md)
 {% endcontent-ref %}

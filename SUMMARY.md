@@ -106,6 +106,7 @@
     * [Подключение к АТС с помощью SSH-клиента (Putty)](faq/troubleshooting/connecting-to-a-pbx-using-ssh/putty.md)
     * [Подключение с помощью SSH (Windows)](faq/troubleshooting/connecting-to-a-pbx-using-ssh/powershell.md)
     * [Подключение с помощью SSH (Linux/MacOS)](faq/troubleshooting/connecting-to-a-pbx-using-ssh/terminal.md)
+    * [Подключение с помощью Google Secure Shell](faq/troubleshooting/connecting-to-a-pbx-using-ssh/secure-shell.md)
   * [Подключение к АТС с помощью WinSCP](faq/troubleshooting/connecting-to-a-pbx-using-winscp.md)
   * [Получение логов с помощью приложения tcpdump](faq/troubleshooting/getting-logs-using-the-tcpdump-application.md)
   * [Снятие лога в АТС с помощью Wireshark](faq/troubleshooting/capturing-logs-from-pbx-using-wireshark.md)
