@@ -10,7 +10,7 @@ description: Подключение к MikoPBX по SSH через Google Secure
 
 ### Подключение доступа по паролю&#x20;
 
-1. Перейдите в раздел "Система" -> "**Общие настройки**".
+1. Перейдите в раздел "**Система**" -> "**Общие настройки**".
 
 <figure><img src="../../../.gitbook/assets/generalSettingsSectionMikoPBXWEB.png" alt=""><figcaption><p>Раздел "Система" - "Общие настройки"</p></figcaption></figure>
 
@@ -22,7 +22,7 @@ description: Подключение к MikoPBX по SSH через Google Secure
 
 <figure><img src="../../../.gitbook/assets/SSHPasswordAuth.png" alt=""><figcaption><p>Подключения доступа по паролю</p></figcaption></figure>
 
-### Установка расширения
+### SSH подключение
 
 1. В Web-интерфейсе MikoPBX перейдите в раздел **"Обслуживание"** -> **"SSH консоль"**.
 
