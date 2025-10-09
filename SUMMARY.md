@@ -7,7 +7,9 @@
 
 ## Установка <a href="#setup" id="setup"></a>
 
-* [Отдельный компьютер](setup/bare-metal.md)
+* [Отдельный компьютер](setup/bare-metal/README.md)
+  * [Установка с записью образа на USB-носитель (Live USB)](setup/bare-metal/live-usb.md)
+  * [Установка системы на USB носитель (Bootable USB)](setup/bare-metal/bootable-usb.md)
 * [Виртуальные машины](setup/hypervisor/README.md)
   * [VMware ESXi](setup/hypervisor/vmware-esxi.md)
   * [VMware Fusion](setup/hypervisor/vmware-fusion.md)
