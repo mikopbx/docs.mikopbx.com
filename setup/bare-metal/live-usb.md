@@ -50,12 +50,49 @@ description: Установка системы с помощью записью 
 
 ### MacOS/Linux
 
-...
+\[...]
 
 ## Установка системы
 
-Запуститесь с USB-носителя. При возникновении ошибок (черный экран) - убидитесь, что:
+1. Запуститесь с USB-носителя. При возникновении ошибок (черный экран) - убидитесь, что:
 
 * **Secure Boot** - Disabled
 * **CSM (Compatibility Support Module)** - Enabled
 
+<figure><img src="../../.gitbook/assets/MikoPBXSystemStartScreen.jpg" alt=""><figcaption><p>Загруженная система с USB-носителя</p></figcaption></figure>
+
+2. Система загружена в режиме LiveCD, об этом нам говорит красная надпись. Необходимо произвести установку. Для этого, передвигаясь стрелочками на клавиатуре, перейдите в раздел "**\[8] Install**". Нажмите "**Enter**".
+
+<figure><img src="../../.gitbook/assets/MikoPBXSystemInstallSec.jpg" alt=""><figcaption><p>Раздел "<strong>[8] Install</strong>"</p></figcaption></figure>
+
+3. Выберите диск, который будет использоваться для установки системы. Для этого введите его ID (название), например sdc в нашем случае.
+
+<figure><img src="../../.gitbook/assets/MikoPBXSystemChooseSysDisk.jpg" alt=""><figcaption><p>Выбор системного диска</p></figcaption></figure>
+
+4. Подтвердите Ваш выбор, введите "**y**" для продолжения.
+
+{% hint style="danger" %}
+Все данные с выбранного диска будут удалены!
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/MikoPBXSystemConfirmChoice.jpg" alt=""><figcaption><p>Подтверждение выбора диска</p></figcaption></figure>
+
+5. После установки системы, Вам будет предложено выбрать диск для хранения записей разговоров. По аналогии с первым диском, сделайте выбор.
+
+<figure><img src="../../.gitbook/assets/MikoPBXSystemChooseStorageDisk.jpg" alt=""><figcaption><p>Выбор диска для хранения записей разговоров</p></figcaption></figure>
+
+6. После этого система перезагрузится и будет готова к работе и первой авторизации в Web-интерфейс.
+
+<figure><img src="../../.gitbook/assets/MikoPBXSystemReady.jpg" alt=""><figcaption><p>Успешно установленная система</p></figcaption></figure>
+
+Для перехода в Web-интерфейс, введите IP-адрес Вашей MikoPBX в строку браузера. Используйте стандартные данные для авторизации.
+
+{% hint style="success" %}
+Данные для первого входа в Web-интерфейс:
+
+Логин: admin
+
+Пароль: admin
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/MikoPBXweb.jpg" alt=""><figcaption></figcaption></figure>
