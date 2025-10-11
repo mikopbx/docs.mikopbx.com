@@ -44,13 +44,54 @@ description: Установка системы с помощью записью 
 
 <figure><img src="../../.gitbook/assets/rufusConfirmFormatNew.png" alt="" width="285"><figcaption><p>Подтверждение форматирования диска</p></figcaption></figure>
 
-Дождитесь окончания записи образа. По его завершении, Вы увидите надпись "<mark style="color:$success;">READY</mark>".
+Дождитесь окончания записи образа. По его завершении, Вы увидите надпись "<mark style="color:$success;">READY</mark>". Далее перейдите к разделу ["Установка системы"](live-usb.md#ustanovka-sistemy).
 
 <figure><img src="../../.gitbook/assets/rufusImageReadyNew.png" alt="" width="285"><figcaption><p>Успешная запись образа на USB-носитель</p></figcaption></figure>
 
-### MacOS/Linux
+### MacOS
 
-\[...]
+1. Подключите Ваш usb-носитель и откройте Terminal.
+2. Выполните команду:
+
+```bash
+diskutil list
+```
+
+Будет отображена информация про все подключенные диски. Нас интересует диск с маркировкой **(external, physical)**. В нашем случае это **disk4, в Вашем случае номер может быть другим**. Используйте его номер для выполнения дальнейших шагов в этой инструкции.
+
+<figure><img src="../../.gitbook/assets/diskutilListNew.png" alt=""><figcaption><p>Список дисков</p></figcaption></figure>
+
+3. Далее необходимо отформатировать USB носитель. Для этого используйте команду:
+
+```bash
+sudo diskutil eraseDisk FAT32 NONAME  MBRFormat /dev/disk4;
+```
+
+{% hint style="danger" %}
+**Все данные на диске будут удалены!** Еще раз проверьте название диска который Вы форматируете!
+{% endhint %}
+
+Для подтверждения введите пароль администратора, дождитесь окончания форматирования.
+
+<figure><img src="../../.gitbook/assets/eraseDiskUtil.png" alt=""><figcaption><p>Форматирование USB-носителя</p></figcaption></figure>
+
+4. Отмонтируйте (отключите) диск, используя следующую команду:
+
+```bash
+sudo diskutil unmountDisk /dev/disk3;
+```
+
+<figure><img src="../../.gitbook/assets/unmount.png" alt=""><figcaption><p>Выполнение команды unmount</p></figcaption></figure>
+
+5. Запишите образ на USB-носитель, используя следующую команду:
+
+```bash
+sudo dd if=mikopbx-2024.1.114-x86_64.iso of=/dev/disk4 bs=1m;
+```
+
+Дождитесь окончания записи образа. Далее перейдите к разделу ["Установка системы"](live-usb.md#ustanovka-sistemy).
+
+<figure><img src="../../.gitbook/assets/ddWrite.png" alt=""><figcaption><p>Запись образа на USB-носитель</p></figcaption></figure>
 
 ## Установка системы
 
