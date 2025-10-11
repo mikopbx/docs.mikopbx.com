@@ -51,6 +51,11 @@ description: Установка системы с помощью записью 
 ### MacOS
 
 1. Подключите Ваш usb-носитель и откройте Terminal.
+
+{% hint style="danger" %}
+Размер USB-носителя должен быть не менее 1 ГБ. **Все данные на USB-носителе будут удалены!**
+{% endhint %}
+
 2. Выполните команду:
 
 ```bash
@@ -92,6 +97,58 @@ sudo dd if=mikopbx-2024.1.114-x86_64.iso of=/dev/disk4 bs=1m;
 Дождитесь окончания записи образа. Далее перейдите к разделу ["Установка системы"](live-usb.md#ustanovka-sistemy).
 
 <figure><img src="../../.gitbook/assets/ddWrite.png" alt=""><figcaption><p>Запись образа на USB-носитель</p></figcaption></figure>
+
+### Linux
+
+В данной инструкции в качестве примера, запись образа будет произведена на Ubuntu 24.04.
+
+1. Подключите Ваш usb-носитель и откройте Terminal.
+
+{% hint style="danger" %}
+Размер USB-носителя должен быть не менее 1 ГБ. **Все данные на USB-носителе будут удалены!**
+{% endhint %}
+
+2. Выполните команду:
+
+```bash
+lsblk
+```
+
+Будет отображена информация про все подключенные диска. Найдите в этом списке Ваш usb-носитель и запомните его наименование. В нашем случае, это диск sdb.
+
+<figure><img src="../../.gitbook/assets/lsblkCommand.png" alt=""><figcaption><p>Команда lsblk</p></figcaption></figure>
+
+3. Далее необходимо отформатировать usb-носитель, используя следующую команду:
+
+```bash
+sudo mkfs.vfat -F 32 -n NONAME /dev/sdb
+```
+
+{% hint style="danger" %}
+**Все данные на диске будут удалены!** Еще раз проверьте название диска который Вы форматируете!
+{% endhint %}
+
+Для подтверждения введите пароль администратора, дождитесь окончания форматирования.
+
+<figure><img src="../../.gitbook/assets/formatDisk(mkfs.vfat).png" alt=""><figcaption><p>Форматирование диска</p></figcaption></figure>
+
+4. Отмонтируйте (отключите) диск, используя следующую команду:
+
+```bash
+sudo umount /dev/sdb*
+```
+
+<figure><img src="../../.gitbook/assets/umountCommand.png" alt=""><figcaption><p>Команда umount</p></figcaption></figure>
+
+5. Запишите образ на USB-носитель, используя следующую команду:
+
+```bash
+sudo dd if=mikopbx-2024.1.114-x86_64.iso of=/dev/sdb bs=1M
+```
+
+Дождитесь окончания записи образа. Далее перейдите к разделу ["Установка системы"](live-usb.md#ustanovka-sistemy).
+
+<figure><img src="../../.gitbook/assets/successfulWritedImage(Ubuntu).png" alt=""><figcaption><p>Успешная запись образа на диск</p></figcaption></figure>
 
 ## Установка системы
 
