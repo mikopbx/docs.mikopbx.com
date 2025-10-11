@@ -78,12 +78,12 @@ sudo diskutil eraseDisk FAT32 NONAME  MBRFormat /dev/disk4;
 
 Для подтверждения введите пароль администратора, дождитесь окончания форматирования.
 
-<figure><img src="../../.gitbook/assets/eraseDiskUtil.png" alt=""><figcaption><p>Форматирование USB-носителя</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eraseDiskUtil (1).png" alt=""><figcaption><p>Форматирование USB-носителя</p></figcaption></figure>
 
 4. Отмонтируйте (отключите) диск, используя следующую команду:
 
 ```bash
-sudo diskutil unmountDisk /dev/disk3;
+sudo diskutil unmountDisk /dev/disk4;
 ```
 
 <figure><img src="../../.gitbook/assets/unmount.png" alt=""><figcaption><p>Выполнение команды unmount</p></figcaption></figure>
