@@ -4,7 +4,7 @@ description: Установка системы на USB-носитель
 
 # Установка системы на USB носитель (Bootable USB)
 
-Перед началом загрузите образ диска с расширением .img. Сделать это можно [здесь](https://www.mikopbx.ru/download/).
+Перед началом загрузите образ диска с расширением .raw. Сделать это можно [здесь](https://www.mikopbx.ru/download/).
 
 ### Windows
 
@@ -53,12 +53,12 @@ sudo diskutil unmountDisk /dev/disk4;
 5. Запишите образ на USB-носитель, используя следующую команду:
 
 ```bash
-sudo dd if=mikopbx-2024.1.114-x86_64.img of=/dev/disk4 bs=1m;
+sudo dd if=mikopbx-2024.1.114-x86_64.raw of=/dev/disk4 bs=1m;
 ```
 
 Дождитесь окончания записи образа. Далее перейдите к разделу "".
 
-<figure><img src="../../.gitbook/assets/ddWriteImg.png" alt=""><figcaption><p>Успешная запись образа</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ddWriteRaw.png" alt=""><figcaption><p>Успешная запись образа</p></figcaption></figure>
 
 ### Linux
 
