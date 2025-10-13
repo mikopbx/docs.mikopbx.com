@@ -148,3 +148,40 @@ sudo dd if=mikopbx-2024.1.114-x86_64.raw of=/dev/sdb bs=1M
 Дождитесь окончания записи образа. Далее перейдите к разделу "[Загрузка с USB-накопителя](bootable-usb.md#zagruzka-s-usb-nakopitelya)".
 
 ## Загрузка с USB-накопителя
+
+1. Запуститесь с USB-носителя. При возникновении ошибок (черный экран) - убидитесь, что:
+
+* **Secure Boot** - Disabled
+* **CSM (Compatibility Support Module)** - Enabled
+
+<figure><img src="../../.gitbook/assets/mikopbxStorageNotConnected.jpg" alt=""><figcaption><p>Загрузка с USB-носителя</p></figcaption></figure>
+
+2. Система успешно загружена, но не подключен диск для хранения записей разговоров. Для его подключения, передвигаясь стрелочками на клавиатуре, перейдите в пункт "\[6] Data storage" и нажмите Enter.
+
+<figure><img src="../../.gitbook/assets/DataStorageSection.jpg" alt=""><figcaption><p>Раздел "Data Storage"</p></figcaption></figure>
+
+3. Далее выберите пункт "**Mount drive as data storage**" для подключения диска.
+
+<figure><img src="../../.gitbook/assets/chooseAnActionDisk.jpg" alt=""><figcaption><p>Выбор действия</p></figcaption></figure>
+
+4. Выберите диск, который будет использоваться для хранения записей разговоров. Для этого введите его ID (название), например sdc в нашем случае.
+
+Нажмите Enter.
+
+<figure><img src="../../.gitbook/assets/chooseTheDisk.jpg" alt=""><figcaption><p>Выбор диска</p></figcaption></figure>
+
+5. После этого система перезагрузится и будет готова к работе и первой авторизации в Web-интерфейс.
+
+<figure><img src="../../.gitbook/assets/MikoPBXSystemReady.jpg" alt=""><figcaption><p>Успешно установленная система</p></figcaption></figure>
+
+Для перехода в Web-интерфейс, введите IP-адрес Вашей MikoPBX в строку браузера. Используйте стандартные данные для авторизации.
+
+{% hint style="success" %}
+Данные для первого входа в Web-интерфейс:
+
+Логин: admin
+
+Пароль: admin
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/MikoPBXweb.jpg" alt=""><figcaption></figcaption></figure>
