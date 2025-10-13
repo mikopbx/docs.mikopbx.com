@@ -7,7 +7,8 @@
 
 ## Installation <a href="#setup" id="setup"></a>
 
-* [Standalone Computer](setup/bare-metal.md)
+* [Standalone Computer](setup/bare-metal/README.md)
+  * [Installation via writing the image to a USB drive (Live USB)](setup/bare-metal/live-usb.md)
 * [Virtual Machine](setup/hypervisor/README.md)
   * [VMware ESXi](setup/hypervisor/vmware-esxi.md)
   * [VMware Fusion](setup/hypervisor/vmware-fusion.md)

@@ -7,7 +7,7 @@
 {% endhint %}
 
 1. Prepare a PC with two disks of the same size.
-2. Boot the machine in[ **LiveCD** or **LiveUSB** mode](../../setup/bare-metal.md).
+2. Boot the machine in[ **LiveCD** or **LiveUSB** mode](../../setup/bare-metal/).
 3. Connect to the machine via [**SSH**](../troubleshooting/connecting-to-a-pbx-using-ssh/putty.md).
 
 ## RAID 1 Assembly
@@ -44,7 +44,7 @@ bashCopy codemdadm --create --metadata=0.90 --verbose /dev/md0 -l 1 -n 2 /dev/sd
 ```
 
 6. When prompted with "Continue creating array?", confirm by entering "**y**".
-7. You can now proceed with the installation as per the [installation guide](../../setup/bare-metal.md). When selecting the disk during installation, choose `md0`.
+7. You can now proceed with the installation as per the [installation guide](../../setup/bare-metal/). When selecting the disk during installation, choose `md0`.
 
 ### Grub
 

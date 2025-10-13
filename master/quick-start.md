@@ -14,7 +14,7 @@ Follow the **step-by-step** instructions in the order presented for a quick and 
 
 It supports various installation methods:
 
-* Installation [on a standalone computer](../setup/bare-metal.md).
+* Installation [on a standalone computer](../setup/bare-metal/).
 * Installation [in a virtual machine](../setup/hypervisor/).
 * Installation [using cloud services](../setup/cloud/).
 * Installation in a [Docker container](../setup/docker/).

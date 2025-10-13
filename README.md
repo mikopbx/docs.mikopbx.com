@@ -30,7 +30,7 @@ MikoPBX is a fully modular interface for Asterisk, written in PHP and JavaScript
 
 To get started, you should install MikoPBX using any method convenient for you. Below are installation options. By clicking on their names, you can access detailed articles:
 
-* Installation [on a standalone computer](setup/bare-metal.md).
+* Installation [on a standalone computer](setup/bare-metal/).
 * Installation [in a virtual machine](setup/hypervisor/).
 * Installation [using cloud services](setup/cloud/).
 * Installation in a [Docker container](setup/docker/).

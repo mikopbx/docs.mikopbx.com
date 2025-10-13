@@ -32,11 +32,11 @@ To create a bootable USB drive, we recommend using the **imageUSB** application.
 1. Download and install the application.
 2. Run **ImageUSB**
 
-<figure><img src="../.gitbook/assets/startWindow.png" alt=""><figcaption><p>ImageUSB start window</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/startWindow.png" alt=""><figcaption><p>ImageUSB start window</p></figcaption></figure>
 
 3. Perform the "Refresh drives" action. Select the **USB drive**, then select the image file. Perform the "Write" action.
 
-<figure><img src="../.gitbook/assets/parametersWindow.png" alt=""><figcaption><p>Guide for writing the image to a flash drive</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/parametersWindow.png" alt=""><figcaption><p>Guide for writing the image to a flash drive</p></figcaption></figure>
 
 4. Wait for the writing process to complete, then connect the **USB** drive to the PC. Restart the PC to boot from the drive.
 
@@ -56,7 +56,7 @@ diskutil list
 
 Information about **all** connected drives will be displayed.
 
-<figure><img src="../.gitbook/assets/macosTerminal.png" alt=""><figcaption><p>List of all connected drives</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/macosTerminal.png" alt=""><figcaption><p>List of all connected drives</p></figcaption></figure>
 
 In this example, the name of the USB device is "**/dev/disk3**." Compare the output of the `diskutil list` command before and after connecting the device.
 
