@@ -65,6 +65,8 @@ diskutil list
 
 This will display information about all connected disks. Find the one labeled **(external, physical)** — for example, **disk4** (the number may differ on your system). Use its number for the next steps.
 
+<figure><img src="../../.gitbook/assets/diskutilListNew.png" alt=""><figcaption><p>List of all available disks</p></figcaption></figure>
+
 3. Next, format the USB drive with this command:
 
 ```bash
@@ -77,11 +79,15 @@ sudo diskutil eraseDisk FAT32 NONAME MBRFormat /dev/disk4;
 
 Enter your admin password when prompted and wait until formatting completes.
 
+<figure><img src="../../.gitbook/assets/eraseDiskUtil.png" alt=""><figcaption><p>Formatting the disk</p></figcaption></figure>
+
 4. Unmount (disconnect) the disk using this command:
 
 ```bash
 sudo diskutil unmountDisk /dev/disk4;
 ```
+
+<figure><img src="../../.gitbook/assets/unmount.png" alt=""><figcaption><p>unmountDisk command</p></figcaption></figure>
 
 5. Write the image to the USB drive using this command:
 
@@ -89,8 +95,9 @@ sudo diskutil unmountDisk /dev/disk4;
 sudo dd if=mikopbx-2024.1.114-x86_64.iso of=/dev/disk4 bs=1m;
 ```
 
-Wait until the writing process is complete.\
-Then proceed to the section ["System installation"](live-usb.md#system-installation).
+Wait until the writing process is complete. Then proceed to the section ["System installation"](live-usb.md#system-installation).
+
+<figure><img src="../../.gitbook/assets/ddWrite.png" alt=""><figcaption><p>Successfully writed image</p></figcaption></figure>
 
 ### Linux
 

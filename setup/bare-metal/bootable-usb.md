@@ -35,7 +35,7 @@ This guide uses the **balenaEtcher** utility. You can download it [here](https:/
 
 <figure><img src="../../.gitbook/assets/bEflash!.png" alt=""><figcaption><p>"Flash!" button</p></figcaption></figure>
 
-Wait for the process to complete. Then proceed to the section ["Booting from USB drive"](installing-the-system-on-a-usb-drive-bootable-usb.md#booting-from-usb-drive).
+Wait for the process to complete. Then proceed to the section ["Booting from USB drive"](bootable-usb.md#booting-from-usb-drive).
 
 <figure><img src="../../.gitbook/assets/bEflashComplete.png" alt=""><figcaption><p>Successfully writed image</p></figcaption></figure>
 
@@ -56,6 +56,8 @@ diskutil list
 This command displays all connected disks. Look for the disk labeled **(external, physical)**.\
 In our case, it is **disk4** (the number may differ on your system). Use this number in the following steps.
 
+<figure><img src="../../.gitbook/assets/diskutilListNew.png" alt=""><figcaption><p>List of all available disks</p></figcaption></figure>
+
 3. Next, format the USB drive using this command:
 
 ```bash
@@ -68,11 +70,15 @@ sudo diskutil eraseDisk FAT32 NONAME MBRFormat /dev/disk4;
 
 Enter your administrator password when prompted and wait for the formatting to complete.
 
+<figure><img src="../../.gitbook/assets/eraseDiskUtil.png" alt=""><figcaption><p>Formatting the disk</p></figcaption></figure>
+
 4. Unmount (disconnect) the disk using the following command:
 
 ```bash
 sudo diskutil unmountDisk /dev/disk4;
 ```
+
+<figure><img src="../../.gitbook/assets/unmount.png" alt=""><figcaption><p>unmountDisk command</p></figcaption></figure>
 
 5. Write the image to the USB drive using this command:
 
@@ -80,8 +86,9 @@ sudo diskutil unmountDisk /dev/disk4;
 sudo dd if=mikopbx-2024.1.114-x86_64.raw of=/dev/disk4 bs=1m;
 ```
 
-Wait for the writing process to complete.\
-Then proceed to the section ["Booting from USB drive"](installing-the-system-on-a-usb-drive-bootable-usb.md#booting-from-usb-drive).
+Wait for the writing process to complete. Then proceed to the section ["Booting from USB drive"](bootable-usb.md#booting-from-usb-drive).
+
+<figure><img src="../../.gitbook/assets/ddWriteRaw.png" alt=""><figcaption><p>Successfully writed image</p></figcaption></figure>
 
 ### Linux
 
@@ -131,7 +138,7 @@ sudo umount /dev/sdb*
 sudo dd if=mikopbx-2024.1.114-x86_64.raw of=/dev/sdb bs=1M
 ```
 
-Wait for the process to complete. Then proceed to the section ["Booting from USB drive"](installing-the-system-on-a-usb-drive-bootable-usb.md#booting-from-usb-drive).
+Wait for the process to complete. Then proceed to the section ["Booting from USB drive"](bootable-usb.md#booting-from-usb-drive).
 
 <figure><img src="../../.gitbook/assets/successfulWritedImage(Ubuntu)raw.png" alt=""><figcaption><p>Successfully writed image</p></figcaption></figure>
 
