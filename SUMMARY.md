@@ -9,6 +9,7 @@
 
 * [Standalone Computer](setup/bare-metal/README.md)
   * [Installation via writing the image to a USB drive (Live USB)](setup/bare-metal/live-usb.md)
+  * [Installing the system on a USB drive (Bootable USB)](setup/bare-metal/installing-the-system-on-a-usb-drive-bootable-usb.md)
 * [Virtual Machine](setup/hypervisor/README.md)
   * [VMware ESXi](setup/hypervisor/vmware-esxi.md)
   * [VMware Fusion](setup/hypervisor/vmware-fusion.md)
