@@ -243,6 +243,7 @@
   * [Zabbix агент](modules/miko/module-zabbix-agent.md)
   * [Телефонная книга](modules/miko/phone-book.md)
   * [Расширенная история звонков](modules/miko/module-extended-cdr.md)
+  * [Активные вызовы](modules/miko/aktivnye-vyzovy.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
