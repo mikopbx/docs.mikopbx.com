@@ -244,6 +244,7 @@
   * [Телефонная книга](modules/miko/phone-book.md)
   * [Расширенная история звонков](modules/miko/module-extended-cdr.md)
   * [Активные вызовы](modules/miko/aktivnye-vyzovy.md)
+  * [Подключение FMС устройств](modules/miko/podklyuchenie-fms-ustroistv.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
