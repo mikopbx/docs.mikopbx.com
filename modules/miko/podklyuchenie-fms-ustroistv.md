@@ -6,7 +6,7 @@ description: >-
 
 # Подключение FMС устройств
 
-Модуль распоространяется на платной основе. На текущий момент работает с [MCN](https://www.mcn.ru/resheniya/mobilnyye-sotrudniki-fmc/) - профайдером **FMC SIM** карт.&#x20;
+Модуль распоространяется на платной основе. На текущий момент работает с [MCN](https://www.mcn.ru/resheniya/mobilnyye-sotrudniki-fmc/) - провайдером **FMC SIM** карт.&#x20;
 
 ### Преимущества технологии FMC
 
