@@ -245,6 +245,7 @@
   * [Расширенная история звонков](modules/miko/module-extended-cdr.md)
   * [Активные вызовы](modules/miko/aktivnye-vyzovy.md)
   * [Подключение FMС устройств](modules/miko/podklyuchenie-fms-ustroistv.md)
+  * [Интеграция с Megapbx от Мегафон](modules/miko/integraciya-s-megapbx-ot-megafon.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
