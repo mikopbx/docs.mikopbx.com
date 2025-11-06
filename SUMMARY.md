@@ -170,6 +170,7 @@
   * [Объединение MIKOPBX и Grandstream UCM6202](faq/interconnections/mikopbx-and-grandstream-ucm6202.md)
   * [Объединение MikoPBX и FreePBX (PJSIP)](faq/interconnections/mikopbx-and-freepbx-pjsip.md)
   * [Объединение MikoPBX и FreePBX (IAX)](faq/interconnections/mikopbx-and-freepbx-iax.md)
+  * [WireGuard - VPN](faq/interconnections/wireguard-vpn.md)
 * [Настройка провайдеров](faq/providers/README.md)
   * [Ростелеком](faq/providers/rostelekom.md)
   * [MTT](faq/providers/mtt.md)
