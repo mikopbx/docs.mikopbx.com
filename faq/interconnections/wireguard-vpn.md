@@ -4,6 +4,10 @@ description: Пример объединения двух АТС в приват
 
 # WireGuard - VPN
 
+{% hint style="info" %}
+Настроить WG возможно на АТС версии **2024.2.301-dev** и более новых сборках.&#x20;
+{% endhint %}
+
 Подключитесь к АТС по [SSH](../troubleshooting/connecting-to-a-pbx-using-ssh/). Скачайте скрипт настройки wg на сервер и на клиент:
 
 ```
