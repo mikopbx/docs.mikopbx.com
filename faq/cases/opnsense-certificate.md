@@ -31,8 +31,7 @@ OPNSense в своем составе имеет центр сертификац
     <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf6_IguGhBqXvi4gvQlSYg8xPtMnBnXMFkvLChzkblpckXz7G9EoAnhc9hueKFCFH-GM6aRdTsrRkBPRqxh7Q9cQ_LJAaAsbTqOn4ObE0x-BnqOTUT32nFUfGqzY3She3B9HCebCu_X4tRr3aGZl01t_iYu_GN7TXZTFOOMuw?key=mKA6FU2fXdcsY4hVdKBAGA" alt=""><figcaption><p>Кнопка "Скачать"</p></figcaption></figure>
 5.  В списке скачайте публичный ключ (1) и приватный ключ (2).
 
-    \
-
+    <br>
 
     <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcDJvB_9dBFPhtigBKpgkrsXTjvwShi9cO4YOVThlyD8XObXHFkuq-SrOC9VZ0QGoStSNKHMwRHbevBp4MBBQbmqaJBqCNmbiEEvjA6ozM0V3Nu2zulggQZGgUF-DT00HsfG_ZIgiKJrFJWuHGFZA_6d5EJsLnxRATZ8Jr_?key=mKA6FU2fXdcsY4hVdKBAGA" alt=""><figcaption><p>Загрузка публичного и приватного ключа</p></figcaption></figure>
 

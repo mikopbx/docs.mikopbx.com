@@ -150,7 +150,7 @@ exten => _X!,1,Answer()
   same => n,Hangup()
 ```
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Добавление кода в конец файла "extensions.conf" </p></figcaption></figure>
+<figure><img src="/broken/files/taOHcD6zccwLpMKwFW7v" alt=""><figcaption><p>Добавление кода в конец файла "extensions.conf" </p></figcaption></figure>
 
 {% hint style="info" %}
 При звонке в конференцию по номеру **354233** автоматически будет подключаться внешний абонент с номером **84957776675**. Как только абонент ответи, будет произведен набор добавочного номера **354233**. Как только все «внутренние» участники покинули конференцию, внешний абонент будет отключен.

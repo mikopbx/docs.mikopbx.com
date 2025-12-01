@@ -164,6 +164,5 @@ extension;username;password;mobile-phone;ringtime;enable-forward;authUsername
 6. Выберите файл, с расширением **`*.csv`**
 7. Дождитесь завершения операции
 
-\
-
+<br>
 

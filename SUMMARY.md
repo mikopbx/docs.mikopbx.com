@@ -17,6 +17,7 @@
   * [VMware Workstation Pro](setup/hypervisor/vmware-workstation-pro.md)
   * [Hyper-V](setup/hypervisor/hyper-v.md)
   * [Proxmox](setup/hypervisor/proxmox.md)
+  * [UTM](setup/hypervisor/utm.md)
 * [Облачные сервисы](setup/cloud/README.md)
   * [Yandex Cloud](setup/cloud/yandex-cloud/README.md)
     * [Магазин приложений](setup/cloud/yandex-cloud/yandex-cloud-marketplace.md)
