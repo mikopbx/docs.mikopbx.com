@@ -17,6 +17,7 @@
   * [VMware Workstation Pro](setup/hypervisor/vmware-workstation-pro.md)
   * [Hyper-V](setup/hypervisor/hyper-v.md)
   * [Proxmox](setup/hypervisor/proxmox.md)
+  * [UTM](setup/hypervisor/utm.md)
 * [Cloud](setup/cloud/README.md)
   * [AWS](setup/cloud/aws/README.md)
     * [AWS deployment guide](setup/cloud/aws/aws-deployment-guide.md)
