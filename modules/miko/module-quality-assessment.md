@@ -1,7 +1,7 @@
 # Backup
 
 {% hint style="danger" %}
-**Note**: In version **2020.2.XXX**, the backup functionality has been moved to a separate module and is not included in the core package. The module can be installed via the [Module Management section](broken-reference).
+**Note**: In version **2020.2.XXX**, the backup functionality has been moved to a separate module and is not included in the core package. The module can be installed via the [Module Management section](/broken/pages/meuGOnb4IGFsWJ0CdCrB).
 {% endhint %}
 
 ### Creating a Backup <a href="#sozdanie_arxivnoj_kopii" id="sozdanie_arxivnoj_kopii"></a>

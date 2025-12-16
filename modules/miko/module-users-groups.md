@@ -11,35 +11,35 @@
 
 ## Настройка модуля <a href="#nastrojka_modulja" id="nastrojka_modulja"></a>
 
-1\. Выполните установку модуля в разделе [Управление модулями](broken-reference).
+1\. Выполните установку модуля в разделе [Управление модулями](/broken/pages/meuGOnb4IGFsWJ0CdCrB).
 
 2\. Включите модуль и зайдите в его настройки.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_0.gif)
+![](../../.gitbook/assets/mod_grup_polz_0.gif)
 
 3\. На основной странице модуля отображается список существующих групп. Сейчас он пустой.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_0.png)
+![](../../.gitbook/assets/mod_grup_polz_0.png)
 
 3\. На вкладке **Cотрудники** отображается список всех сотрудников и то, к какой группе они принадлежат. Сейчас они сотрудники не принадлежат ни к какой группе, потому что самих групп еще не создано.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_1.png)
+![](../../.gitbook/assets/mod_grup_polz_1.png)
 
 4\. Для добавления новой группы нажмите **Создать группу сотрудников.**
 
-![](../../.gitbook/assets/mod\_grup\_polz\_2.png)
+![](../../.gitbook/assets/mod_grup_polz_2.png)
 
 5\. На вкладке **Настройки группы** укажите ее имя и описание\*\*.\*\* Затем нажмите **Сохранить.**
 
-![](../../.gitbook/assets/mod\_grup\_polz\_3.png)
+![](../../.gitbook/assets/mod_grup_polz_3.png)
 
 6\. Вы перейдете на вкладку **Сотрудники группы.** Добавьте в группу необходимых сотрудников.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_1.gif)
+![](../../.gitbook/assets/mod_grup_polz_1.gif)
 
 7\. Перейдите на вкладку **Правила исходящей маршрутизации** и активируйте разрешенные маршруты.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_2.gif)
+![](../../.gitbook/assets/mod_grup_polz_2.gif)
 
 {% hint style="warning" %}
 Если все маршруты будут запрещены - то будут позволены только внутренние вызовы.
@@ -51,19 +51,19 @@
 
 1\. Создайте новую группу **Только внутренние** (название группы может быть любым).
 
-![](../../.gitbook/assets/mod\_grup\_polz\_4.png)
+![](../../.gitbook/assets/mod_grup_polz_4.png)
 
 2\. На вкладке **Сотрудники группы** заполните список сотрудников.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_5.png)
+![](../../.gitbook/assets/mod_grup_polz_5.png)
 
 3\. На вкладке **Правила исходящей маршрутизации** отключите все маршруты.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_6.png)
+![](../../.gitbook/assets/mod_grup_polz_6.png)
 
 ### Запретить сотруднику международные направления <a href="#zapretit_sotrudniku_mezhdunarodnye_napravlenija" id="zapretit_sotrudniku_mezhdunarodnye_napravlenija"></a>
 
-Настройка выполняется аналогично примеру [Разрешить сотруднику только внутренние вызовы](module-users-groups.md#razreshit\_sotrudniku\_tolko\_vnutrennie\_vyzovy) с тем лишь отличием, что следует запретить только международные маршруты.
+Настройка выполняется аналогично примеру [Разрешить сотруднику только внутренние вызовы](module-users-groups.md#razreshit_sotrudniku_tolko_vnutrennie_vyzovy) с тем лишь отличием, что следует запретить только международные маршруты.
 
 ### Персональный маршрут для каждого сотрудника <a href="#personalnyj_marshrut_dlja_kazhdogo_sotrudnika" id="personalnyj_marshrut_dlja_kazhdogo_sotrudnika"></a>
 
@@ -73,7 +73,7 @@
 
 На вкладке **Правила исходящей маршрутизации** укажите CallerID для каждого маршрута.
 
-![](../../.gitbook/assets/mod\_grup\_polz\_7.png)
+![](../../.gitbook/assets/mod_grup_polz_7.png)
 
 {% hint style="danger" %}
 Не каждый провайдер позволяет подменить CallerID. Обычно позволяют использовать только тот номер, который принадлежит организации.
@@ -83,7 +83,7 @@
 Если необходимо использовать этот функционал, то в настройках провайдера потребуется **отключить** использование поля **fromuser**.
 {% endhint %}
 
-![](../../.gitbook/assets/mod\_grup\_polz\_8.png)
+![](../../.gitbook/assets/mod_grup_polz_8.png)
 
 ## Group Isolation <a href="#group_isolation" id="group_isolation"></a>
 

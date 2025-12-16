@@ -4,8 +4,7 @@ description: In this subsection, you can configure the clock and calendar settin
 
 # Time Settings
 
-You need to set the time zone correctly to ensure accurate system time display. If the time zone is not set, notifications and call history will be recorded with incorrect timestamps.\
-
+You need to set the time zone correctly to ensure accurate system time display. If the time zone is not set, notifications and call history will be recorded with incorrect timestamps.<br>
 
 To configure the time zone, go to the "**System**" section and select "**Time Settings**":
 
