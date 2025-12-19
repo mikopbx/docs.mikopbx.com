@@ -4,6 +4,8 @@ description: Installing the system by writing the image to a USB drive
 
 # Installation via writing the image to a USB drive (Live USB)
 
+{% embed url="https://youtu.be/ONoJcUB2rrc" %}
+
 ## Writing the image to a USB drive
 
 ### Windows

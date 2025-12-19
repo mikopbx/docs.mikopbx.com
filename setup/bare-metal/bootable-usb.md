@@ -2,6 +2,8 @@
 
 Before starting, download the disk image file with the `.raw` extension. You can do this [here](https://www.mikopbx.com/download/).
 
+{% embed url="https://youtu.be/rDxNadH8u9c" %}
+
 ## Installing the system on a USB drive
 
 ### Windows
