@@ -18,7 +18,11 @@ description: Настройка почты и уведомлений
 
 Для получения уведомлений о пропущенных вызовах и сообщениях голосовой почты по электронной почте необходимо настроить SMTP-клиент. **SMTP (Simple Mail Transfer Protocol)** используется для отправки электронной почты через Интернет. SMTP-клиенты взаимодействуют с SMTP сервером, который отправляет электронную почту.
 
-<figure><img src="../../../.gitbook/assets/1 (44).png" alt=""><figcaption><p>Раздел "<strong>Почта и уведомления</strong>" в MikoPBX</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/emailSection.png" alt=""><figcaption><p>Раздел "<strong>Почта и уведомления</strong>" в MikoPBX</p></figcaption></figure>
+
+### Общие настройки
+
+<figure><img src="../../../.gitbook/assets/generalSettngs(email).png" alt=""><figcaption></figcaption></figure>
 
 * **SMTP хост** - адрес почтового сервера
 * **SMTP порт** - порт почтового сервера
