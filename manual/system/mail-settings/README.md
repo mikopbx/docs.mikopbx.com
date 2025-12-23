@@ -22,7 +22,7 @@ description: Настройка почты и уведомлений
 
 ### Общие настройки
 
-<figure><img src="../../../.gitbook/assets/generalSettngs(email).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (121).png" alt=""><figcaption></figcaption></figure>
 
 * **SMTP хост** - адрес почтового сервера
 * **SMTP порт** - порт почтового сервера
