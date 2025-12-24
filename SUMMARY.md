@@ -250,6 +250,7 @@
   * [Активные вызовы](modules/miko/aktivnye-vyzovy.md)
   * [Подключение FMС устройств](modules/miko/podklyuchenie-fms-ustroistv.md)
   * [Интеграция с Megapbx от Мегафон](modules/miko/integraciya-s-megapbx-ot-megafon.md)
+  * [Интеграция с Автосекретарь 2.0 от МТС](modules/miko/integraciya-s-avtosekretar-2.0-ot-mts.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
