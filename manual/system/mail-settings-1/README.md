@@ -6,11 +6,11 @@ description: Настройка почты и уведомлений
 
 Раздел **«Почта и уведомления»** в MikoPBX позволяет настроить отправку системных уведомлений через электронную почту. Здесь администраторы указывают параметры SMTP-сервера, определяют события для уведомлений, такие как голосовые сообщения или системные ошибки, и редактируют шаблоны писем. Этот раздел помогает своевременно информировать пользователей и администраторов о важных событиях, обеспечивая эффективный контроль за работой системы.
 
-<figure><img src="../../.gitbook/assets/emailSection.png" alt=""><figcaption><p>Раздел "<strong>Почта и уведомления</strong>" в MikoPBX</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/emailSection.png" alt=""><figcaption><p>Раздел "<strong>Почта и уведомления</strong>" в MikoPBX</p></figcaption></figure>
 
 ### Общие настройки
 
-<figure><img src="../../.gitbook/assets/generalSettngs(email).png" alt=""><figcaption><p>Общие настройки почты</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/generalSettngs(email).png" alt=""><figcaption><p>Общие настройки почты</p></figcaption></figure>
 
 * **Использовать оповещения** - позволяет включить/отключить **все оповещения на email**, включая голосовую почту.
 * Отправлять уведомления о пропущенных вызовах - позволяет включить/отключить уведомления о пропущенных вызовах.
@@ -23,7 +23,7 @@ description: Настройка почты и уведомлений
 
 ### Настройки SMTP
 
-<figure><img src="../../.gitbook/assets/SMTPparametersP1v2.png" alt=""><figcaption><p>Настройки SMTP. Часть 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SMTPparametersP1v2.png" alt=""><figcaption><p>Настройки SMTP. Часть 1</p></figcaption></figure>
 
 * **Адрес отправителя, Имя отправителя** - от имени этого адреса  и имени будут отправляться электронные письма.
 * **Тип аутентификации:**
@@ -32,7 +32,7 @@ description: Настройка почты и уведомлений
 
 #### Аунтефикация по логину и паролю
 
-<figure><img src="../../.gitbook/assets/image (122).png" alt=""><figcaption><p>Настройки SMTP. Часть 2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (122).png" alt=""><figcaption><p>Настройки SMTP. Часть 2</p></figcaption></figure>
 
 * **SMTP логин**, **SMTP пароль** - параметры авторизации.
 * **SMTP хост** - адрес почтового сервера.
@@ -45,7 +45,7 @@ description: Настройка почты и уведомлений
 
 #### Аунтефикация с OAuth2
 
-<figure><img src="../../.gitbook/assets/SMTPparametersP2.png" alt=""><figcaption><p>Настройки SMTP. Часть 3</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SMTPparametersP2.png" alt=""><figcaption><p>Настройки SMTP. Часть 3</p></figcaption></figure>
 
 * **SMTP логин -** параметры авторизации.
 * **Провайдер OAuth2** -  почтовый сервис, через который выполняется OAuth-аутентификация (например, Microsoft/Outlook, Google/Gmail).
@@ -64,8 +64,8 @@ description: Настройка почты и уведомлений
 В нашей документации приведено несколько примеров подключения для каждого из типов аунтефикации. Ниже Вы можете найти ссылки на эти инструкции.
 
 * Аунтефикация по логину и паролю:
-  * [Настройка yandex mail](mail-settings/yandex.md).
-  * [Настройка mail.ru](mail-settings/mailru.md).
+  * [Настройка yandex mail](../mail-settings/yandex.md).
+  * [Настройка mail.ru](../mail-settings/mailru.md).
 * Аунтефикация oAuth2:
   * <mark style="color:red;">Настройка Gmail (oAuth2)</mark>
   * <mark style="color:red;">Настройка</mark>

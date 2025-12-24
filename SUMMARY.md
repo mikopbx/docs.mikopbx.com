@@ -81,7 +81,8 @@
     * [Настройка E-mail уведомлений для почтового сервиса Mail.ru](manual/system/mail-settings/mailru.md)
   * [Доступ к AMI](manual/system/asterisk-managers.md)
   * [Кастомизация системных файлов](manual/system/custom-files.md)
-  * [Почта и уведомления (new)](manual/system/pochta-i-uvedomleniya-new.md)
+  * [Почта и уведомления (new)](manual/system/mail-settings-1/README.md)
+    * [Настройка Gmail (oAuth2)](manual/system/mail-settings-1/nastroika-gmail-oauth2.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 
