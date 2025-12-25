@@ -30,4 +30,17 @@ description: Настройка почты для сервиса gmail
 
 <figure><img src="../../../.gitbook/assets/googleCloudEnableGmailAPI.png" alt=""><figcaption><p>Подключение API</p></figcaption></figure>
 
-7. Перейдите на главную страницу APIs & Services.&#x20;
+7. Перейдите на главную страницу **APIs & Services**. Далее "**OAuth consent screen**".
+
+<figure><img src="../../../.gitbook/assets/googleCloudOAuthConsentScreen.png" alt=""><figcaption><p>Раздел "OAuth consent screen" в APIs &#x26; Services</p></figcaption></figure>
+
+8. Создайте проект (нажмите "**Get started**"). Заполните произвольное название и Вашу почту. В качестве Audience выберите "**External**". Нажмите "**Create**" для завершения.
+
+<figure><img src="../../../.gitbook/assets/googleCloudAudience.png" alt=""><figcaption><p>Параметр "Audience" в создании проекта</p></figcaption></figure>
+
+8. Вернитесь  на главную страницу **APIs & Services.** Далее в раздел "**Credentials**". Нажмите "**Create credentials**". Выберите "OAuth client ID" для создания.
+
+<figure><img src="../../../.gitbook/assets/googleCloudnewOAuthCredentials.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
+
+9. Создайте&#x20;
+
