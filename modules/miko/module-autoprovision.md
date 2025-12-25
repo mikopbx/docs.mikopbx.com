@@ -183,7 +183,7 @@ features.intercom.allow = 1
   <firmware_interval perm="R">2880 </firmware_interval>
 ```
 
-Документация доступна на сайте [wiki.snom.com](http://wiki.snom.com/Features/Auto\_Provisioning/Configuration\_Files/XML)
+Документация доступна на сайте [wiki.snom.com](http://wiki.snom.com/Features/Auto_Provisioning/Configuration_Files/XML)
 
 ### Fanvil <a href="#fanvil" id="fanvil"></a>
 
@@ -280,3 +280,89 @@ Oct 17 11:26:58 LIBD[548]: HTTP<5+notice> response process finish!
 Oct 17 11:26:58 LIBD[548]: HTTP<5+notice> recv : 961 bytes
 Oct 17 11:26:58 AUTP[548]: AUTP<6+info  > download file success!!
 ```
+
+## HTTP провижинг
+
+Позволяет АТС выступить в роли HTTP сервера, где опубликованы конфиг файлы.&#x20;
+
+### Настройки телефонов
+
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-12-25 в 14.24.31.png" alt=""><figcaption></figcaption></figure>
+
+На этой вкладке выполняется сопоставление сотрудника с MAC адресом устройства и шаблоном настроек.&#x20;
+
+Пример URL получения конфиг файлов:
+
+```
+Для номера 201
+http://АДРЕС_АТС/pbxcore/api/autoprovision-http/805e0c67a722.cfg
+
+Для номера 202
+http://АДРЕС_АТС/pbxcore/api/autoprovision-http/249AD886b74b.cfg 
+```
+
+{% hint style="info" %}
+При описании MAC адреса допускается использовать символ `%` - означающий "любой набор символов"\
+Шаблон `805e0c67%` будет соответстовать `805e0c670001` и `805e0c670002`
+{% endhint %}
+
+### Шаблоны настроек
+
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-12-25 в 14.26.04.png" alt=""><figcaption></figcaption></figure>
+
+Можно добавить произвольное количество шаблонов. В тексте шаблона можно использовать параметры в фигурных скобках:
+
+* `{SIP_USER_NAME}` - имя сотрудника&#x20;
+* `{SIP_NUM}` - внутренний номер (логин SIP)
+* `{SIP_PASS}` - пароль учетной записи SIP
+
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-12-25 в 14.37.18.png" alt=""><figcaption></figcaption></figure>
+
+Пример конфигурационного файла для телефона Yealink
+
+```
+#!version:1.0.0.1
+account.1.enable = 1
+account.1.label = {SIP_NUM}
+account.1.display_name = {SIP_USER_NAME}
+account.1.user_name = {SIP_NUM}
+account.1.auth_name = {SIP_NUM}
+account.1.password = {SIP_PASS}
+account.1.sip_server.1.address = pbx.local
+account.1.outbound_proxy.1.address = %NULL%
+account.1.outbound_proxy_enable = 0
+features.remote_phonebook.enable = 1
+remote_phonebook.data.1.url = http://pbx.local/phonebook
+remote_phonebook.data.1.name = MyCompany
+```
+
+### Настройки URI
+
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-12-25 в 14.27.01.png" alt=""><figcaption></figcaption></figure>
+
+На этой вкладке можно описать дополнительные произвольные URI относительно `/pbxcore/api/autoprovision-http`
+
+К примеру, если описать URI `/y000%.cfg`, то получить доступ к файлу настроек можно по ссылке:
+
+`http://АДРЕС_АТС/pbxcore/api/autoprovision-http/y0001.cfg`
+
+{% hint style="info" %}
+Все URI строятся относительно базового значения `/pbxcore/api/autoprovision-http`\
+При описании URI допускается использовать символ `%` - означающий "любой набор символов"\
+URI `/%/%/test.cfg` будет соответстовать `/1/2/test.cfg` и `/test/test3/test.cfg`
+{% endhint %}
+
+Подобный подход используется в телефона Yelink, когда телефон запрашивает некий "Общий  базовый конфиг".&#x20;
+
+### Телефонная книга
+
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-12-25 в 14.27.45.png" alt=""><figcaption></figcaption></figure>
+
+На текущий момент телефонная книга может быть сформирована для Yealink и Grandstream телефонов.&#x20;
+
+Пример получения телефонной книги
+
+* `http://АДРЕС_АТС/pbxcore/api/autoprovision-http/yealink`
+* `http://АДРЕС_АТС/pbxcore/api/autoprovision-http/grandstream`
+
+Если используется нескольо MikoPBX, то можно указать в таблице адреса дополнительных станци, телефонная книга будет построена на основе номеров всех перечисленных АТС.&#x20;
