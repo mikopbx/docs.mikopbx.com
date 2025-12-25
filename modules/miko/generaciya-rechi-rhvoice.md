@@ -50,7 +50,12 @@ curl -X GET \
 * **`format`** - расширение итогового медиа файла, допустимые варианты: `wav` / `mp3`
 * **`rate`** - темп речи, комфортное значение 60
 
-Документация
+Мы используем этот API в случаях:
+
+* Реализация голосового меню Smart IVR
+* Модуль "Автоинформатор" - для автоматических обзвонов и обработки входящих вызовов
+
+### Документация
 
 * [https://github.com/RHVoice/RHVoice/tree/master](https://github.com/RHVoice/RHVoice/tree/master)
 * [https://rhvoice.ru/](https://rhvoice.ru/)
