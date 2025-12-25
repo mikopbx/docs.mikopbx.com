@@ -38,9 +38,50 @@ description: Настройка почты для сервиса gmail
 
 <figure><img src="../../../.gitbook/assets/googleCloudAudience.png" alt=""><figcaption><p>Параметр "Audience" в создании проекта</p></figcaption></figure>
 
-8. Вернитесь  на главную страницу **APIs & Services.** Далее в раздел "**Credentials**". Нажмите "**Create credentials**". Выберите "OAuth client ID" для создания.
+9. Далее перейдите в раздел "Audience". Под разделом "Test users" добавьте Ваш email.
+
+<figure><img src="../../../.gitbook/assets/newTestUser.png" alt=""><figcaption><p>Добавление Test user</p></figcaption></figure>
+
+10. Вернитесь  на главную страницу **APIs & Services.** Далее в раздел "**Credentials**". Нажмите "**Create credentials**". Выберите "OAuth client ID" для создания.
 
 <figure><img src="../../../.gitbook/assets/googleCloudnewOAuthCredentials.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
 
-9. Создайте&#x20;
+11. В качестве Application type, выберите "**Desktop app**". Далее введите произвольное название. Нажмите "**Create**".
 
+<figure><img src="../../../.gitbook/assets/googleCloudnewOAuthClientID.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
+
+12. Будет создан OAuth client. Сохраните ClientID и Client secret себе в заметки. В будущем эти данные понадобятся для подключения.
+
+<figure><img src="../../../.gitbook/assets/OAuthclientCreated.png" alt=""><figcaption><p>Успешно созданный клиент</p></figcaption></figure>
+
+### Настройки в MikoPBX
+
+1. Перейдите в раздел "**Система**" -> "**Почта и уведомления**":
+
+<figure><img src="../../../.gitbook/assets/emailSection.png" alt=""><figcaption><p>Раздел "Почта и уведомления" в MikoPBX</p></figcaption></figure>
+
+2. Далее, "Настройки SMTP". Заполните следующие параметры:
+
+* **Адрес отправителя, Имя отправителя** - Ваша почта и от какого имени будут отправляться письма.
+* **Тип аутентификации** - OAuth2.
+* **SMTP логин** - Ваша почта.
+* **Провайдер OAuth2** - Google/Gmail.
+* **Идентификатор приложения (Client ID), Секретный ключ (Client Secret)** - данные, которые сохранены из Google Cloud (12 пункт из прошлого раздела в этой инструкции).
+
+Все остальные настройки оставьте по умолчанию. Более подробное описание Вы можете найти в главное статье о параметрах почты ([ссылка](./)).
+
+<figure><img src="../../../.gitbook/assets/SMTPParametersGmailOAuth2.png" alt=""><figcaption><p>Параметры почты для подключения Gmail</p></figcaption></figure>
+
+3. Нажмите на синюю кнопку "**Подключить через OAuth2**". Далее выберите Ваш аккаунт Gmail.
+
+<figure><img src="../../../.gitbook/assets/chooseAccountGoogle.png" alt="" width="375"><figcaption><p>Выбор аккаунта Google</p></figcaption></figure>
+
+4. Далее нажмите "**Продолжить**".
+
+<figure><img src="../../../.gitbook/assets/googleWindowContinue.png" alt="" width="375"><figcaption><p>Продолжение с предупреждением</p></figcaption></figure>
+
+5. Снова нажмите продолжить
+
+<figure><img src="../../../.gitbook/assets/LoginToTheMikoPBXEmailService.png" alt="" width="375"><figcaption><p>Продолжение настройки</p></figcaption></figure>
+
+6. Выдайте разрешение&#x20;
