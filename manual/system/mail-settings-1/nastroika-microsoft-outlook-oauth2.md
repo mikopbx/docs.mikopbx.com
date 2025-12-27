@@ -64,6 +64,21 @@ description: Настройка почты для сервиса Outlook (outloo
 
 6. Нажмите "Grant admin consent for ...".
 
-<figure><img src="../../../.gitbook/assets/grantAdminConsent.png" alt=""><figcaption><p>Выдача разрешений</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/grantAdminConsent2.png" alt=""><figcaption><p>Выдача разрешений</p></figcaption></figure>
 
-7. Далее перейдите в раздел
+7. Далее перейдите в раздел "**Certificates & secrets**" -> "**Client secrets**". Нажмите "**New client secret**".
+
+<figure><img src="../../../.gitbook/assets/creatingNewClientSecret.png" alt=""><figcaption><p>Создание нового Secret ID</p></figcaption></figure>
+
+8. Задайте необходимые параметры:
+
+* Description - произвольное описание.
+* Expires - срок на который Вы выпускаете этот SecretID.&#x20;
+
+Нажмите "**Add**".
+
+<figure><img src="../../../.gitbook/assets/newClientSecret.png" alt=""><figcaption><p>Параметры для создания нового client secret</p></figcaption></figure>
+
+9. Скопируйте Ваш secret ID. Он понадобится для настройки в веб-интерфейсе MikoPBX.
+
+<figure><img src="../../../.gitbook/assets/copyingSecretID.png" alt=""><figcaption><p>Копирование Secret ID</p></figcaption></figure>
