@@ -19,11 +19,11 @@ description: Настройка почты для сервиса Outlook (outloo
 3. Выберите следующие параметры для Вашего приложения:
 
 * Name - укажите название для Вашего приложения.
-* Supported account types - выберите параметр "Accounts in this organizational directory only (Miko only - Single tenant)" для подключения Вашей корпоративной почты созданной в Microsoft Entra (onmicrosoft.com).
+* Supported account types - выберите параметр "**Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant**)".
 
 Нажмите "**Register**".
 
-<figure><img src="../../../.gitbook/assets/ApplicationParameters.png" alt=""><figcaption><p>Параметры приложения</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ApplicationParameters2(Version_Multitenant).png" alt=""><figcaption><p>Параметры приложения</p></figcaption></figure>
 
 4. Будет созданно приложения. Сохраните client ID, в будущем он понадобится для настройки внутри веб-интерфейса MikoPBX.
 
