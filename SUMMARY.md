@@ -82,7 +82,7 @@
   * [Доступ к AMI](manual/system/asterisk-managers.md)
   * [Кастомизация системных файлов](manual/system/custom-files.md)
   * [Почта и уведомления (new)](manual/system/mail-settings-1/README.md)
-    * [Настройка Gmail (oAuth2)](manual/system/mail-settings-1/nastroika-gmail-oauth2.md)
+    * [Настройка Gmail (oAuth2)](manual/system/mail-settings-1/gmail.md)
     * [Настройка Yandex Mail (oAuth2)](manual/system/mail-settings-1/nastroika-yandex-mail-oauth2.md)
     * [Настройка Microsoft Outlook (oAuth2)](manual/system/mail-settings-1/nastroika-microsoft-outlook-oauth2.md)
 

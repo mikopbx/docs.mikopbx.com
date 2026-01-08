@@ -4,6 +4,11 @@ description: Настройка почты для сервиса gmail
 
 # Настройка Gmail (oAuth2)
 
+{% hint style="info" %}
+Для настройки OAuth 2.0 в Google требуется использовать **URL-адрес станции**.\
+Самый простой способ — создать DNS-запись на локальном сервере **или** добавить соответствие IP-адреса и доменного имени в файл `hosts` на устройстве, с которого выполняется настройка.
+{% endhint %}
+
 ### Настройки аккаунта Google
 
 1. Перед началом настройки, необходимо поменять некоторые параметры аккаунта Google. Для этого перейдите на страницу управления ([ссылка](https://myaccount.google.com/)).
@@ -42,11 +47,23 @@ description: Настройка почты для сервиса gmail
 
 <figure><img src="../../../.gitbook/assets/googleCloudnewOAuthCredentials.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
 
-10. В качестве Application type, выберите "**Desktop app**". Далее введите произвольное название. Нажмите "**Create**".
+10. В качестве Application type, выберите "**Web application**". Далее введите произвольное название. Нажмите "**Create**".
 
-<figure><img src="../../../.gitbook/assets/googleCloudnewOAuthClientID.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/creatingWebApp.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
 
-11. Будет создан OAuth client. Сохраните ClientID и Client secret себе в заметки. В будущем эти данные понадобятся для подключения.
+11. Добавьте новый "Authorized redirect URI".
+
+{% hint style="info" %}
+Формат:
+
+<mark style="color:blue;">`https://mikopbx.station.com/pbxcore/api/v3/mail-settings/oauth2-callback`</mark>&#x20;
+
+Замените "mikopbx.station.com" на URl Вашей станции.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/addingNewRedirectURl.png" alt=""><figcaption><p>Добавление нового URl для перевода</p></figcaption></figure>
+
+12. Будет создан OAuth client. Сохраните ClientID и Client secret себе в заметки. В будущем эти данные понадобятся для подключения.
 
 <figure><img src="../../../.gitbook/assets/OAuthclientCreated.png" alt=""><figcaption><p>Успешно созданный клиент</p></figcaption></figure>
 
@@ -66,18 +83,32 @@ description: Настройка почты для сервиса gmail
 
 Все остальные настройки оставьте по умолчанию. Более подробное описание Вы можете найти в главное статье о параметрах почты ([ссылка](./)).
 
+После этого нажмите "**Сохранить**"!
+
 <figure><img src="../../../.gitbook/assets/SMTPParametersGmailOAuth2.png" alt=""><figcaption><p>Параметры почты для подключения Gmail</p></figcaption></figure>
 
 3. Нажмите на синюю кнопку "**Подключить через OAuth2**". Далее выберите Ваш аккаунт Gmail.
 
-<figure><img src="../../../.gitbook/assets/chooseAccountGoogle.png" alt="" width="375"><figcaption><p>Выбор аккаунта Google</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/GoogleOauthStep1.png" alt="" width="375"><figcaption><p>Выбор аккаунта Google</p></figcaption></figure>
 
-4. Далее нажмите "**Продолжить**".
+4. Подтвердите вход: нажмите "**Continue**".
 
-<figure><img src="../../../.gitbook/assets/googleWindowContinue.png" alt="" width="375"><figcaption><p>Продолжение с предупреждением</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/GoogleOauthStep2.png" alt="" width="375"><figcaption><p>Продолжения авторизации</p></figcaption></figure>
 
-5. Снова нажмите продолжить
+5. Подтвердите выдачу необходимых разрешений. (Нажмите "**Allow**").
 
-<figure><img src="../../../.gitbook/assets/LoginToTheMikoPBXEmailService.png" alt="" width="375"><figcaption><p>Продолжение настройки</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/GoogleOauthStep3.png" alt="" width="375"><figcaption><p>Выдача разрешений</p></figcaption></figure>
 
-6. Выдайте разрешение&#x20;
+При успешной авторизации, вы увидите следующее окно.
+
+<figure><img src="../../../.gitbook/assets/GoogleOauthSuccessful.png" alt="" width="375"><figcaption><p>Успешная авторизация</p></figcaption></figure>
+
+### Решение возможных проблем
+
+**Access blocked: Authorization Error (**&#x45;rror 400: invalid\_request)
+
+<figure><img src="../../../.gitbook/assets/GoogleInvalidRequest.png" alt="" width="375"><figcaption><p>Ошибка 400: invalid_request</p></figcaption></figure>
+
+Решение: впишите URl адрес станции в Веб-интерфейсе MikoPBX: "**Сеть и Firewall**" -> "**Сетевые интерфейсы**". Перейдите в раздел "Топология сети" и впишите имя хоста в поле "**Внешнее имя хоста вашего маршрутизатора**". (Включите "**Эта станция расположена за NAT маршрутизатором**")
+
+<figure><img src="../../../.gitbook/assets/GoogleInvalidRequestSolution.png" alt=""><figcaption><p>Решение проблемы</p></figcaption></figure>
