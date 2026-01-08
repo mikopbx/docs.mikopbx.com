@@ -34,23 +34,19 @@ description: Настройка почты для сервиса gmail
 
 <figure><img src="../../../.gitbook/assets/googleCloudOAuthConsentScreen.png" alt=""><figcaption><p>Раздел "OAuth consent screen" в APIs &#x26; Services</p></figcaption></figure>
 
-8. Создайте проект (нажмите "**Get started**"). Заполните произвольное название и Вашу почту. В качестве Audience выберите "**External**". Нажмите "**Create**" для завершения.
+8. Создайте проект (нажмите "**Get started**"). Заполните произвольное название и Вашу почту. В качестве Audience выберите "**Internal**". Нажмите "**Create**" для завершения.
 
-<figure><img src="../../../.gitbook/assets/googleCloudAudience.png" alt=""><figcaption><p>Параметр "Audience" в создании проекта</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/googleCloudAudienceInternal.png" alt=""><figcaption><p>Параметр "Audience" в создании проекта</p></figcaption></figure>
 
-9. Далее перейдите в раздел "Audience". Под разделом "Test users" добавьте Ваш email.
-
-<figure><img src="../../../.gitbook/assets/newTestUser.png" alt=""><figcaption><p>Добавление Test user</p></figcaption></figure>
-
-10. Вернитесь  на главную страницу **APIs & Services.** Далее в раздел "**Credentials**". Нажмите "**Create credentials**". Выберите "OAuth client ID" для создания.
+9. Вернитесь  на главную страницу **APIs & Services.** Далее в раздел "**Credentials**". Нажмите "**Create credentials**". Выберите "OAuth client ID" для создания.
 
 <figure><img src="../../../.gitbook/assets/googleCloudnewOAuthCredentials.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
 
-11. В качестве Application type, выберите "**Desktop app**". Далее введите произвольное название. Нажмите "**Create**".
+10. В качестве Application type, выберите "**Desktop app**". Далее введите произвольное название. Нажмите "**Create**".
 
 <figure><img src="../../../.gitbook/assets/googleCloudnewOAuthClientID.png" alt=""><figcaption><p>Создание нового OAuth client ID</p></figcaption></figure>
 
-12. Будет создан OAuth client. Сохраните ClientID и Client secret себе в заметки. В будущем эти данные понадобятся для подключения.
+11. Будет создан OAuth client. Сохраните ClientID и Client secret себе в заметки. В будущем эти данные понадобятся для подключения.
 
 <figure><img src="../../../.gitbook/assets/OAuthclientCreated.png" alt=""><figcaption><p>Успешно созданный клиент</p></figcaption></figure>
 
