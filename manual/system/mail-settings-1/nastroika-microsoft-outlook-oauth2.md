@@ -12,18 +12,31 @@ description: Настройка почты для сервиса Outlook (outloo
 
 <figure><img src="../../../.gitbook/assets/MicrosoftEntraDeshboard.png" alt=""><figcaption><p>Главная страница центра администрирования Microsoft Entra</p></figcaption></figure>
 
-2. Перейдите в раздел "Entra ID" -> "App registrations". Далее нажмите "New registration" для регистрации нового приложения.
+2. Перейдите в раздел "**Entra ID**" -> "**App registrations**". Далее нажмите "**New registration**" для регистрации нового приложения.
 
 <figure><img src="../../../.gitbook/assets/MicrosoftEntraNewAppRegistration.png" alt=""><figcaption><p>Регистрация нового приложения</p></figcaption></figure>
 
 3. Выберите следующие параметры для Вашего приложения:
 
-* Name - укажите название для Вашего приложения.
-* Supported account types - выберите параметр "**Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant**)".
+* **Name** - укажите название для Вашего приложения.
+* **Supported account types** - выберите параметр "**Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant**)".
 
-Нажмите "**Register**".
+<figure><img src="../../../.gitbook/assets/ApplicationNameAccTypes.png" alt=""><figcaption><p>Параметры приложения</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/ApplicationParameters2(Version_Multitenant).png" alt=""><figcaption><p>Параметры приложения</p></figcaption></figure>
+4. Укажите Redirect URl:
+
+* **Select a platform** - выберите "**Web**".
+* **URl**:
+
+```
+https://192.168.100.60/pbxcore/api/v3/mail-settings/oauth2-callback
+```
+
+Замените 192.168.100.60 на адрес Вашей MikoPBX.
+
+Далее нажмите "**Register**".
+
+<figure><img src="../../../.gitbook/assets/MicrosoftEntraRedirectURl.png" alt=""><figcaption><p>Параметры Redirect URl</p></figcaption></figure>
 
 4. Будет созданно приложения. Сохраните client ID, в будущем он понадобится для настройки внутри веб-интерфейса MikoPBX.
 
@@ -62,7 +75,7 @@ description: Настройка почты для сервиса Outlook (outloo
 
 <figure><img src="../../../.gitbook/assets/addingPermissions2.png" alt=""><figcaption><p>Выдача разрешений</p></figcaption></figure>
 
-6. Нажмите "Grant admin consent for ...".
+6. Нажмите "**Grant admin consent for...**".
 
 <figure><img src="../../../.gitbook/assets/grantAdminConsent2.png" alt=""><figcaption><p>Выдача разрешений</p></figcaption></figure>
 
