@@ -84,7 +84,7 @@
   * [Почта и уведомления (new)](manual/system/mail-settings-1/README.md)
     * [Настройка Gmail (oAuth2)](manual/system/mail-settings-1/gmail-oauth2.md)
     * [Настройка Yandex Mail (oAuth2)](manual/system/mail-settings-1/yandex-oauth2.md)
-    * [Настройка Microsoft Outlook (oAuth2)](manual/system/mail-settings-1/nastroika-microsoft-outlook-oauth2.md)
+    * [Настройка Microsoft Outlook (oAuth2)](manual/system/mail-settings-1/microsoft-oauth2.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 
