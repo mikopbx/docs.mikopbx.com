@@ -4,6 +4,8 @@ description: Установка MikoPBX в UTM
 
 # UTM
 
+{% embed url="https://rutube.ru/video/fad26622206f64652c5fcaa920531fe9/" %}
+
 В данной иснтрукции будет произведена установка на UTM. Перед ее началом скачайте файл образа диска с расширением ".iso". Сделать это можно [по ссылке](https://github.com/mikopbx/core/releases).
 
 {% hint style="info" %}
