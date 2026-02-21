@@ -71,7 +71,8 @@
     * [Setting up E-mail notifications for the Gmail mail service](manual/system/mail-settings/gmail.md)
   * [Asterisk Manager Interface(AMI)](manual/system/asterisk-managers.md)
   * [System files customisation](manual/system/custom-files.md)
-  * [Mail Settings (New)](manual/system/mail-settings-1.md)
+  * [Mail Settings (New)](manual/system/mail-settings-1/README.md)
+    * [Gmail Setup (oAuth2)](manual/system/mail-settings-1/gmail-oauth2.md)
 
 ## FAQ
 

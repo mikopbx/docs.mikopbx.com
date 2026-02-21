@@ -6,11 +6,11 @@ description: Mail and Notifications Settings
 
 The **"Mail and Notifications"** section in MikoPBX allows you to configure sending system notifications via email. Here, administrators specify SMTP server parameters, define events for notifications such as voicemail or system errors, and edit email templates. This section helps keep users and administrators informed about important events in a timely manner, ensuring effective system monitoring.
 
-<figure><img src="../../.gitbook/assets/MikoPBXMailSection.png" alt=""><figcaption><p><strong>"Mail and notifications"</strong> section in MikoPBX</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXMailSection.png" alt=""><figcaption><p><strong>"Mail and notifications"</strong> section in MikoPBX</p></figcaption></figure>
 
 ## General Settings
 
-<figure><img src="../../.gitbook/assets/generalSettngs(email).png" alt=""><figcaption><p>General mail settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/generalSettngs(email).png" alt=""><figcaption><p>General mail settings</p></figcaption></figure>
 
 * **Enable Notifications** - enables/disables **all email notifications**, including voicemail.
 * **Send missed call notifications** - enables/disables missed call notifications.
@@ -23,7 +23,7 @@ The **"Mail and Notifications"** section in MikoPBX allows you to configure send
 
 ## SMTP Settings
 
-<figure><img src="../../.gitbook/assets/SMTPparametersP1.png" alt=""><figcaption><p>General SMTP Settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SMTPparametersP1.png" alt=""><figcaption><p>General SMTP Settings</p></figcaption></figure>
 
 * **Sender Address, Sender Name** - emails will be sent on behalf of this address and name.
 * **Authentication Type:**
@@ -32,7 +32,7 @@ The **"Mail and Notifications"** section in MikoPBX allows you to configure send
 
 #### **Login and Password Authentication**
 
-<figure><img src="../../.gitbook/assets/Login&#x26;PassAuth.png" alt=""><figcaption><p>SMTP Settings. Username and Password Authentication Type</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Login&#x26;PassAuth.png" alt=""><figcaption><p>SMTP Settings. Username and Password Authentication Type</p></figcaption></figure>
 
 * **SMTP Username**, **SMTP password** - authorization credentials.
 * **SMTP Host -** mail server address.
@@ -45,7 +45,7 @@ The **"Mail and Notifications"** section in MikoPBX allows you to configure send
 
 #### **OAuth2 Authentication**
 
-<figure><img src="../../.gitbook/assets/oAuth2Parameters.png" alt=""><figcaption><p>SMTP Settings.OAuth2 Authentication Type</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/oAuth2Parameters.png" alt=""><figcaption><p>SMTP Settings.OAuth2 Authentication Type</p></figcaption></figure>
 
 * **SMTP Username -** authorization credentials.
 * **OAuth2 Provider** - the mail service through which OAuth authentication is performed (e.g., Microsoft/Outlook, Google/Gmail).
@@ -65,8 +65,8 @@ Our documentation includes several connection examples for each authentication t
 
 * Login and password authentication:
 
-{% content-ref url="mail-settings/gmail.md" %}
-[gmail.md](mail-settings/gmail.md)
+{% content-ref url="../mail-settings/gmail.md" %}
+[gmail.md](../mail-settings/gmail.md)
 {% endcontent-ref %}
 
 * OAuth2 authentication:
