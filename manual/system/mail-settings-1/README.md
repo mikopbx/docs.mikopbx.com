@@ -63,10 +63,26 @@ description: Настройка почты и уведомлений
 
 В нашей документации приведено несколько примеров подключения для каждого из типов аунтефикации. Ниже Вы можете найти ссылки на эти инструкции.
 
-* Аунтефикация по логину и паролю:
-  * [Настройка yandex mail](../mail-settings/yandex.md).
-  * [Настройка mail.ru](../mail-settings/mailru.md).
-* Аунтефикация oAuth2:
-  * <mark style="color:red;">Настройка Gmail (oAuth2)</mark>
-  * <mark style="color:red;">Настройка</mark>
-  * <mark style="color:red;">Настройка</mark>
+* Аутентификация **по логину и паролю:**
+
+{% content-ref url="../mail-settings/yandex.md" %}
+[yandex.md](../mail-settings/yandex.md)
+{% endcontent-ref %}
+
+{% content-ref url="../mail-settings/mailru.md" %}
+[mailru.md](../mail-settings/mailru.md)
+{% endcontent-ref %}
+
+* **Аутентификация oAuth2:**
+
+{% content-ref url="gmail-oauth2.md" %}
+[gmail-oauth2.md](gmail-oauth2.md)
+{% endcontent-ref %}
+
+{% content-ref url="yandex-oauth2.md" %}
+[yandex-oauth2.md](yandex-oauth2.md)
+{% endcontent-ref %}
+
+{% content-ref url="microsoft-oauth2.md" %}
+[microsoft-oauth2.md](microsoft-oauth2.md)
+{% endcontent-ref %}
