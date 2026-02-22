@@ -85,6 +85,7 @@
     * [Настройка Gmail (oAuth2)](manual/system/mail-settings-1/gmail-oauth2.md)
     * [Настройка Yandex Mail (oAuth2)](manual/system/mail-settings-1/yandex-oauth2.md)
     * [Настройка Microsoft Outlook (oAuth2)](manual/system/mail-settings-1/microsoft-oauth2.md)
+    * [Настройка Proton (Логин, Пароль)](manual/system/mail-settings-1/nastroika-proton-login-parol.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 
