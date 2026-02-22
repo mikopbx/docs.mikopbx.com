@@ -74,6 +74,7 @@
   * [Mail Settings (New)](manual/system/mail-settings-1/README.md)
     * [Gmail Setup (oAuth2)](manual/system/mail-settings-1/gmail-oauth2.md)
     * [Microsoft Outlook Setup (OAuth2)](manual/system/mail-settings-1/microsoft-oauth2.md)
+    * [Proton Setup (Login, Password)](manual/system/mail-settings-1/proton.md)
 
 ## FAQ
 
