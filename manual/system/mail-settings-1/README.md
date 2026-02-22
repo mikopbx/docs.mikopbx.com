@@ -63,7 +63,7 @@ description: Настройка почты и уведомлений
 
 В нашей документации приведено несколько примеров подключения для каждого из типов аунтефикации. Ниже Вы можете найти ссылки на эти инструкции.
 
-* Аутентификация **по логину и паролю:**
+* **Аутентификация по логину и паролю:**
 
 {% content-ref url="../mail-settings/yandex.md" %}
 [yandex.md](../mail-settings/yandex.md)
@@ -71,6 +71,10 @@ description: Настройка почты и уведомлений
 
 {% content-ref url="../mail-settings/mailru.md" %}
 [mailru.md](../mail-settings/mailru.md)
+{% endcontent-ref %}
+
+{% content-ref url="proton.md" %}
+[proton.md](proton.md)
 {% endcontent-ref %}
 
 * **Аутентификация oAuth2:**
