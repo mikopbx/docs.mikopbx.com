@@ -4,7 +4,7 @@ description: Настройка сотрудников и основных те�
 
 # Сотрудники
 
-Сотрудники в MikoPBX — это индивидуальные пользователи системы, которым назначены внутренние номера для совершения и приема звонков. Они имеют персональные учетные записи, позволяющие настроить права доступа, переадресацию вызовов и другие персональные настройки в системе.
+Сотрудники в MikoPBX - это индивидуальные пользователи системы, которым назначены внутренние номера для совершения и приема звонков. Они имеют персональные учетные записи, позволяющие настроить права доступа, переадресацию вызовов и другие персональные настройки в системе.
 
 ## Список сотрудников <a href="#spisok_sotrudnikov" id="spisok_sotrudnikov"></a>
 
@@ -22,9 +22,83 @@ description: Настройка сотрудников и основных те�
 
 ## Добавление сотрудника <a href="#dobavlenie_sotrudnika" id="dobavlenie_sotrudnika"></a>
 
+{% hint style="info" %}
+Существует два способа добавления сотрудников:&#x20;
+
+1\) Поштучное добавление с вводом данных в Web-интерфейсе.
+
+2\) Импорт нескольких сотрудников из CSV файла.&#x20;
+{% endhint %}
+
+### Поштучное добавление сотрудников
+
 Для добавления нового сотрудника необходимо нажать кнопку **Добавить сотрудника**.
 
-<figure><img src="../../.gitbook/assets/sotrud_3.png" alt=""><figcaption><p>Элемент "<strong>Добавить сотрудника</strong>"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AddingExtensions1by1.png" alt=""><figcaption><p>Элемент "<strong>Добавить нового сотрудника</strong>"</p></figcaption></figure>
+
+### Импорт и экспорт сотрудников из CSV файла <a href="#osnovnye_parametry" id="osnovnye_parametry"></a>
+
+Существует возможность экспорта и импорта сотрудников для удобства настройки. Для этого, нажмите для стрелочку справа от кнопки "Добавить нового сотрудника".
+
+Доступны 3 опции:
+
+1. Импорт из CSV - загрузить сотрудников из CSV файла в MikoPBX.
+2. Экспорт в CSV - загрузить сотрудников в CSV файл из MikoPBX (сотрудники не будут удалены со станции).
+3. Скачать шаблон - загрузить шаблон CSV таблицы для заполнения и дальнейшего импорта в MikoPBX.
+
+<figure><img src="../../.gitbook/assets/AddingExtensionsCSVOptions.png" alt=""><figcaption><p>Возможности для группового импорта/экспорта сотрудников</p></figcaption></figure>
+
+#### Импорт <a href="#osnovnye_parametry" id="osnovnye_parametry"></a>
+
+Нажмите на "**Выбрать CSV файл**" и выберите ранее оформленный файл с данными в таблице. Рекомендуется использовать шаблоны из вкладки "**Шаблон**".
+
+После выбора файла, сотрудники будут добавлены на станцию.
+
+<figure><img src="../../.gitbook/assets/CSVImportExtensions.png" alt=""><figcaption><p>Раздел "Импорт"</p></figcaption></figure>
+
+#### Экспорт <a href="#osnovnye_parametry" id="osnovnye_parametry"></a>
+
+Существует возможность экспорта CSV файла со всеми данными текущих сотрудников. Есть несколько форматов экспорта:
+
+**Минимальный:**
+
+* number - Внутренний номер (обязательное)
+* user\_username - ФИО сотрудника (обязательное)
+* user\_email - Email адрес
+* mobile\_number - Мобильный номер
+* sip\_secret - Пароль SIP (если не указать будет сгенерирован)
+* fwd\_ringlength - Время звонка (секунды) до переадресации
+* fwd\_forwarding - Номер переадресации если не ответил
+
+**Стандартный:**
+
+* Все параметры из Минимального.
+* mobile\_dialstring - Номер для набора мобильного
+* sip\_dtmfmode - DTMF режим (auto/rfc4733/info/inband)
+* sip\_transport - Транспорт (udp/tcp/tls) по-умолчаню udp,tcp
+* sip\_enableRecording - Запись разговоров (true/false)
+* fwd\_forwardingonbusy - Номер переадресации если занят
+* fwd\_forwardingonunavailable - Номер переадресации если недоступен
+
+**Полный:**
+
+* Все параметры из Минимального и Стандартного.
+* user\_avatar - URL фотографии
+* sip\_manualattributes - Дополнительные SIP параметры
+
+Так же Вы можете указать диапазон внутренних номеров сотрудников, которых необходимо экспортировать (раздел "**Фильтр по диапазону номеров**").
+
+Нажмите "Экспортировать сотрудников". Файл будет загружен на Ваше устройство.
+
+<figure><img src="../../.gitbook/assets/CSVExporttExtensions.png" alt=""><figcaption><p>Раздел "Экспорт"</p></figcaption></figure>
+
+#### Шаблон <a href="#osnovnye_parametry" id="osnovnye_parametry"></a>
+
+На этой вкладке, Вы можете скачать шаблон пустого файла с указаными "столбцами" для заполнения и дальнейшего импорта в MikoPBX.&#x20;
+
+Выберите формат шаблона (подробнее в разделе "[Экспорт](extensions.md#osnovnye_parametry-2)"), нажмите "**Скачать CSV шаблон**".
+
+<figure><img src="../../.gitbook/assets/CSVTemplateExtensions.png" alt=""><figcaption><p>Раздел "Шаблон"</p></figcaption></figure>
 
 ## Основные параметры учетной записи <a href="#osnovnye_parametry" id="osnovnye_parametry"></a>
 
@@ -145,23 +219,14 @@ permit = 0.0.0.0/0.0.0.0
 
 Вы можете настроить эти параметры в соответствии с вашими предпочтениями и требованиями.
 
-## **Документации по подключению софтфонов**
+### **Документации по подключению софтфонов**
 
-* [MicroSIP](../../faq/softphones/microsip.md)
-* [Groundwire](../../faq/softphones/groundwire.md)
-* [Zoiper](../../faq/softphones/zoiper.md)
-* [Jitsi](../../faq/softphones/jitsi.md)
-* [PhonerLite](../../faq/softphones/phonerlite.md)
-* [Linphone(MacOS)](../../faq/softphones/linphone-macos.md)
-* [Telephone(MacOS)](../../faq/softphones/telephone-macos.md)
-* [WebRTC с помощью SIPML5](../../faq/softphones/configuring-webrtc-client-sipml5.md)
-* <mark style="color:red;">Настройка телеграмм как SIP софтфон</mark>
-* [Softphone.pro](../../faq/softphones/softphone.pro.md)
-* [Bria Solo](../../faq/softphones/bria-solo.md)
+{% content-ref url="../../faq/softphones/" %}
+[softphones](../../faq/softphones/)
+{% endcontent-ref %}
 
-## **Документации по подключению телефонов**
+### **Документации по подключению IP-телефонов**
 
-* <mark style="color:red;">Yealink T19</mark>
-* <mark style="color:red;">Yealink T21</mark>
-* <mark style="color:red;">Yealink T28</mark>
-* <mark style="color:red;">Snom D120</mark>
+{% content-ref url="../../faq/ip-telefones/" %}
+[ip-telefones](../../faq/ip-telefones/)
+{% endcontent-ref %}
