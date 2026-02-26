@@ -22,9 +22,91 @@ The form also provides the ability to sort the list of employees by name, intern
 
 ## Adding an extension
 
-To add a new employee, simply click on the "**Add new extension**" button.
+{% hint style="info" %}
+There are two ways to add employees:
 
-<figure><img src="../../.gitbook/assets/5 (26).png" alt=""><figcaption><p>Button "Add new extension"</p></figcaption></figure>
+1\) Adding employees one by one by entering data in the Web interface.
+
+2\) Importing multiple employees from a CSV file.
+{% endhint %}
+
+### Adding Employees One by One
+
+To add a new employee, click the "**Add new employee"** button.
+
+<figure><img src="../../.gitbook/assets/AddingExtensions1by1.png" alt=""><figcaption><p>Button "Add new employee"</p></figcaption></figure>
+
+### Importing and Exporting Employees from a CSV File&#x20;
+
+There is an option to export and import employees for configuration convenience. To do this, click the arrow to the right of the "Add New Employee" button.
+
+3 options are available:
+
+1. Import from CSV — load employees from a CSV file into MikoPBX.
+2. Export to CSV — download employees to a CSV file from MikoPBX (employees will not be deleted from the station).
+3. Download template — download a CSV table template to fill in and subsequently import into MikoPBX.
+
+<figure><img src="../../.gitbook/assets/AddingExtensionsCSVOptions.png" alt=""><figcaption><p>Options for bulk employee import/export</p></figcaption></figure>
+
+#### **Import**
+
+Click "**Select CSV file**" and choose the previously prepared file with data in the table. It is recommended to use templates from the "**Template**" tab.
+
+<figure><img src="../../.gitbook/assets/CSVImportExtensions.png" alt=""><figcaption><p>"Import" section</p></figcaption></figure>
+
+After selecting the file, information about all detected users in the table will be displayed. Select a duplicate handling strategy and click "**Confirm import**" to start the process.
+
+<figure><img src="../../.gitbook/assets/CSVImportExtensionsP2.png" alt=""><figcaption><p>Employee import parameters</p></figcaption></figure>
+
+After the process is complete, you will see the employee creation status as well as a notification about the end of the import.
+
+Click "**Back to list**" to return to the employee list.
+
+<figure><img src="../../.gitbook/assets/successfulImport.png" alt=""><figcaption><p>Successful employee import</p></figcaption></figure>
+
+#### **Export**&#x20;
+
+There is an option to export a CSV file with all the data of current employees. Several export formats are available:
+
+**Minimal:**
+
+* number — Internal number (required)
+* user\_username — Employee full name (required)
+* user\_email — Email address
+* mobile\_number — Mobile number
+* sip\_secret — SIP password (will be generated if not specified)
+* fwd\_ringlength — Ring time (seconds) before forwarding
+* fwd\_forwarding — Forwarding number if no answer
+
+**Standard:**
+
+* All parameters from Minimal.
+* mobile\_dialstring — Number for dialing mobile
+* sip\_dtmfmode — DTMF mode (auto/rfc4733/info/inband)
+* sip\_transport — Transport (udp/tcp/tls), default udp,tcp
+* sip\_enableRecording — Call recording (true/false)
+* fwd\_forwardingonbusy — Forwarding number if busy
+* fwd\_forwardingonunavailable — Forwarding number if unavailable
+
+**Full:**
+
+* All parameters from Minimal and Standard.
+* user\_avatar — Photo URL
+* sip\_manualattributes — Additional SIP parameters
+
+You can also specify a range of internal employee numbers to export (the "**Filter by number range**" section).
+
+Click "**Export employees**". The file will be downloaded to your device.
+
+<figure><img src="../../.gitbook/assets/CSVExporttExtensions.png" alt=""><figcaption><p>"Export" section</p></figcaption></figure>
+
+#### **Template**&#x20;
+
+On this tab, you can download a blank file template with the specified "columns" to fill in and subsequently import into MikoPBX.
+
+Select the template format (see the "[Export](extensions.md#export)" section for more details), then click "**Download CSV template**".
+
+<figure><img src="../../.gitbook/assets/CSVTemplateExtensions.png" alt=""><figcaption><p>"Template" section</p></figcaption></figure>
 
 ## Main Account Settings
 
