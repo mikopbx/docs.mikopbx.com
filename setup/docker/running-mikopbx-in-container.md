@@ -1,5 +1,5 @@
 ---
-description: Установка MikoPBX с помощью Docker
+description: Установка MikoPBX в Docker контейнер
 ---
 
 # Запуск MikoPBX в контейнере

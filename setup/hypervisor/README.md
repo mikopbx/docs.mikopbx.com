@@ -28,8 +28,8 @@ MikoPBX поддерживает установку с помощью многи
 [hyper-v.md](hyper-v.md)
 {% endcontent-ref %}
 
-{% content-ref url="proxmox.md" %}
-[proxmox.md](proxmox.md)
+{% content-ref url="proxmox/" %}
+[proxmox](proxmox/)
 {% endcontent-ref %}
 
 {% content-ref url="utm.md" %}
