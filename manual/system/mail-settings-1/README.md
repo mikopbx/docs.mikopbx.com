@@ -65,8 +65,16 @@ Our documentation includes several connection examples for each authentication t
 
 * Login and password authentication:
 
-{% content-ref url="../mail-settings/gmail.md" %}
-[gmail.md](../mail-settings/gmail.md)
+{% content-ref url="proton.md" %}
+[proton.md](proton.md)
 {% endcontent-ref %}
 
 * OAuth2 authentication:
+
+{% content-ref url="gmail-oauth2.md" %}
+[gmail-oauth2.md](gmail-oauth2.md)
+{% endcontent-ref %}
+
+{% content-ref url="microsoft-oauth2.md" %}
+[microsoft-oauth2.md](microsoft-oauth2.md)
+{% endcontent-ref %}

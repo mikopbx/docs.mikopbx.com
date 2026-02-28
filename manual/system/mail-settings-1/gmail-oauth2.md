@@ -15,7 +15,7 @@ The easiest way is to create a DNS record on the local server **or** add an IP a
 
 <figure><img src="../../../.gitbook/assets/myaccountgooglecomUpd.png" alt=""><figcaption><p>Google Account management page</p></figcaption></figure>
 
-2. Go to the "Security and sign-in" section. Make sure that two-step authentication is configured.
+2. Go to the "**Security and sign-in**" section. Make sure that two-step authentication is configured.
 
 <figure><img src="../../../.gitbook/assets/2-stepverif_google.png" alt=""><figcaption><p>Two-step authentication setup</p></figcaption></figure>
 
@@ -51,9 +51,7 @@ The easiest way is to create a DNS record on the local server **or** add an IP a
 
 <figure><img src="../../../.gitbook/assets/creatingWebApp.png" alt=""><figcaption><p>Creating a new OAuth client ID</p></figcaption></figure>
 
-11. Add a new "Authorized redirect URI".
-
-\{% hint style="info" %\}  \{% endhint %\}
+11. Add a new "**Authorized redirect URI**".
 
 {% hint style="info" %}
 Format:
@@ -83,7 +81,7 @@ Replace "mikopbx.station.com" with your station's URL.
 * **OAuth2 Provider** — Google/Gmail.
 * **Application ID (Client ID), Secret key (Client Secret)** — the data saved from Google Cloud (step 12 from the previous section of this guide).
 
-Leave all other settings at their default values. A more detailed description can be found in the main article about mail parameters ([link](https://claude.ai/chat/)).
+Leave all other settings at their default values. A more detailed description can be found in the main article about mail parameters ([link](./)).
 
 After that, click "**Save**"!
 
@@ -107,7 +105,7 @@ Upon successful authorization, you will see the following window.
 
 #### Troubleshooting
 
-\*\*Access blocked: Authorization Error (\*\*Error 400: invalid\_request)
+Access blocked: Authorization Error (\*\*Error 400: invalid\_request)
 
 <figure><img src="../../../.gitbook/assets/GoogleInvalidRequest.png" alt="" width="375"><figcaption><p>Error 400: invalid_request</p></figcaption></figure>
 

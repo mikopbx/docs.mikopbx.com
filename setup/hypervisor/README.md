@@ -28,8 +28,8 @@ MikoPBX supports installation using many virtual machines. In this section you c
 [hyper-v.md](hyper-v.md)
 {% endcontent-ref %}
 
-{% content-ref url="proxmox.md" %}
-[proxmox.md](proxmox.md)
+{% content-ref url="proxmox/" %}
+[proxmox](proxmox/)
 {% endcontent-ref %}
 
 {% content-ref url="utm.md" %}
