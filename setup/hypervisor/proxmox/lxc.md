@@ -82,3 +82,38 @@ Swap — это область на диске, которую система и
 
 <figure><img src="../../../.gitbook/assets/CreateLXCmemory.png" alt=""><figcaption><p>Параметры создаваемого контейнера (Memory)</p></figcaption></figure>
 
+9. В следующем разделе, выберите Ваши параметры сети. В нашем случае используется DHCP для получения IPv4. Firewall здесь можно не включать, но необходимо настроить его позже в MikoPBX (подробнее можно прочитать в [этой статье](../../../manual/connectivity/)).
+
+Нажмите "Next".
+
+<figure><img src="../../../.gitbook/assets/CreateLXCnetwork.png" alt=""><figcaption><p>Параметры создаваемого контейнера (Network)</p></figcaption></figure>
+
+10. В разделе с настройкой параметров DNS нажмите "Next".
+
+<figure><img src="../../../.gitbook/assets/CreateLXCdns.png" alt=""><figcaption><p>Параметры создаваемого контейнера (DNS)</p></figcaption></figure>
+
+Вы увидите итоговую конфигурацию контейнера. Нажмите "**Finish**".
+
+<figure><img src="../../../.gitbook/assets/CreateLXCconfirm.png" alt=""><figcaption><p>Итоговая конфигурация контейнера</p></figcaption></figure>
+
+### Первый запуск
+
+1. Перейдите в окно управления созданного контейнера, нажав на его название. Нажмите на кнопку "**Start**" для запуска.
+
+<figure><img src="../../../.gitbook/assets/LXCStart.png" alt=""><figcaption><p>Процесс запуска контейнера</p></figcaption></figure>
+
+2. Далее перейдите во вкладку "**Console**". Дождитесь загрузки системы и найдите IP-адрес Web-интерфейса.&#x20;
+
+<figure><img src="../../../.gitbook/assets/LXCConsole.png" alt=""><figcaption><p>IP-адрес web-интерфейса</p></figcaption></figure>
+
+Введите его в адресную строку Вашего браузера. Далее произведите первую авторизацию в MikoPBX.
+
+{% hint style="info" %}
+Данные для входа:
+
+**Login:** admin
+
+**Password:** пароль, который Вы задали на начальном этапе создания контейнера.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/LXC-MikoPBXweb.png" alt=""><figcaption><p>Web-интерфейс MikoPBX</p></figcaption></figure>
