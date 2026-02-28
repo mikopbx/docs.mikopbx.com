@@ -17,7 +17,7 @@
   * [VMware Workstation Pro](setup/hypervisor/vmware-workstation-pro.md)
   * [Hyper-V](setup/hypervisor/hyper-v.md)
   * [Proxmox](setup/hypervisor/proxmox/README.md)
-    * [Proxmox LXC контейнер](setup/hypervisor/proxmox/proxmox-lxc-konteiner.md)
+    * [Proxmox LXC контейнер](setup/hypervisor/proxmox/lxc.md)
   * [UTM](setup/hypervisor/utm.md)
 * [Облачные сервисы](setup/cloud/README.md)
   * [Yandex Cloud](setup/cloud/yandex-cloud/README.md)
