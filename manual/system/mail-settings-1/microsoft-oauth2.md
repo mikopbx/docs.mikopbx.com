@@ -1,5 +1,7 @@
 ---
-description: Mail setup for the Outlook service (outlook.com; hotmail.com)
+description: >-
+  Mail setup for the Outlook service (outlook.com; hotmail.com) via OAuth2
+  Authentication
 ---
 
 # Microsoft Outlook Setup (OAuth2)
@@ -123,10 +125,8 @@ Leave all other settings at their default values. A more detailed description ca
 
 After that, click "**Save**"!
 
-<mark style="color:$success;">To do: paste screenshot.</mark>
-
 2. Click "**Connect via OAuth2**". Sign in to your Microsoft account. Then confirm granting all requested permissions.
 
 Upon successful authorization, you will see the corresponding window.
 
-<mark style="color:$success;">To do: paste screenshot.</mark>
+<figure><img src="../../../.gitbook/assets/successfulOAuth2.png" alt="" width="375"><figcaption><p>Successful authorization</p></figcaption></figure>

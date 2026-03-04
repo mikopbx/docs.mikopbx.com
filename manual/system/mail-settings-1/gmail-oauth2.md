@@ -1,5 +1,5 @@
 ---
-description: Gmail service mail configuration
+description: Gmail service mail configuration via OAuth2 Authentication
 ---
 
 # Gmail Setup (oAuth2)
@@ -101,7 +101,7 @@ After that, click "**Save**"!
 
 Upon successful authorization, you will see the following window.
 
-<mark style="color:$success;">TO DO (INSERT IMG)</mark>
+<figure><img src="../../../.gitbook/assets/successfulOAuth2.png" alt="" width="375"><figcaption><p>Successful authorization</p></figcaption></figure>
 
 #### Troubleshooting
 
