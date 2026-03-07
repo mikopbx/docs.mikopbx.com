@@ -61,6 +61,7 @@
     * [Updating the docker](manual/maintenance/update/updating-the-docker.md)
   * [System log entries](manual/maintenance/system-diagnostic.md)
   * [Reboot](manual/maintenance/restart.md)
+  * [Storage](manual/maintenance/storage.md)
 * [Network and Firewall](manual/connectivity/README.md)
   * [Network interface](manual/connectivity/network.md)
   * [Firewall](manual/connectivity/firewall.md)
