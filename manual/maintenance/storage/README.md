@@ -8,7 +8,7 @@ description: Использование дискового пространст�
 
 Расположение раздела: "**Обслуживание**" -> "**Хранилище**".
 
-<figure><img src="../../.gitbook/assets/MikoPBXstorageSection-cut.png" alt=""><figcaption><p>Раздел "<strong>Обслуживание</strong>" -> "<strong>Хранилище</strong>"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXstorageSection-cut.png" alt=""><figcaption><p>Раздел "<strong>Обслуживание</strong>" -> "<strong>Хранилище</strong>"</p></figcaption></figure>
 
 ### Информация о хранилище&#x20;
 
@@ -24,7 +24,7 @@ description: Использование дискового пространст�
 * 🔴 Системные кеши
 * ⚫ Прочие файлы
 
-<figure><img src="../../.gitbook/assets/storageInfromationSection.png" alt=""><figcaption><p>Раздел "<strong>Информация о хранилище</strong>"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/storageInfromationSection.png" alt=""><figcaption><p>Раздел "<strong>Информация о хранилище</strong>"</p></figcaption></figure>
 
 В нижней части страницы находится список категорий данных и количество памяти, которая каждая из них занимает.
 
@@ -41,7 +41,7 @@ description: Использование дискового пространст�
 Более длительные периоды хранения требуют больше дискового пространства.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/localStorageSection.png" alt=""><figcaption><p>Вкладка "<strong>Локальное хранилище</strong>". Выбор срока хранения записей разговора.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/localStorageSection.png" alt=""><figcaption><p>Вкладка "<strong>Локальное хранилище</strong>". Выбор срока хранения записей разговора.</p></figcaption></figure>
 
 ### Облачное хранилище S3
 
@@ -58,11 +58,11 @@ description: Использование дискового пространст�
 
 Нажмите "**Сохранить**" для сохранения настроек.
 
-<figure><img src="../../.gitbook/assets/cloudStorageS3Section.png" alt=""><figcaption><p>Вкладка "Облачное хранилище S3"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cloudStorageS3Section.png" alt=""><figcaption><p>Вкладка "Облачное хранилище S3"</p></figcaption></figure>
 
 Далее нажмите кнопку **«Проверить соединение»** — система выполнит тестовое подключение и отобразит результат в верхней части страницы. При успешном подключении появится сообщение «**Подключено к S3**» и начнется синхронизация записей телефонных разговоров.
 
-<figure><img src="../../.gitbook/assets/cloudStorageSuccessful.png" alt=""><figcaption><p>Успешное соединение с S3 хранилищем</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cloudStorageSuccessful.png" alt=""><figcaption><p>Успешное соединение с S3 хранилищем</p></figcaption></figure>
 
 В нижней части вкладки расположен ползунок **«Локальное хранение (режим S3)»** — он определяет, как долго записи будут сохраняться локально на станции после выгрузки в облако, прежде чем автоматически удалятся. **Срок локального хранения не может превышать общий срок хранения.**
 
@@ -70,4 +70,4 @@ description: Использование дискового пространст�
 Более короткое локальное хранение быстрее освобождает дисковое пространство.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/cloudStorageS3LocalStorage.png" alt=""><figcaption><p>Ползунок "<strong>Локальное хранение (режим S3)</strong>"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cloudStorageS3LocalStorage.png" alt=""><figcaption><p>Ползунок "<strong>Локальное хранение (режим S3)</strong>"</p></figcaption></figure>
