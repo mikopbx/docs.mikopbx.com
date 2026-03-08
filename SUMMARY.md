@@ -70,7 +70,7 @@
   * [Диагностика системы ](manual/maintenance/system-diagnostic.md)
   * [Хранилище](manual/maintenance/storage/README.md)
     * [Подключение S3 хранилища Yandex Cloud](manual/maintenance/storage/yandex.md)
-    * [Подключение S3 хранилища AWS (IN DEV)](manual/maintenance/storage/aws.md)
+    * [Подключение S3 хранилища AWS](manual/maintenance/storage/aws.md)
   * [Перезагрузка и выключение системы](manual/maintenance/restart.md)
 * [Сеть и Firewall](manual/connectivity/README.md)
   * [Сетевые интерфейсы](manual/connectivity/network.md)
