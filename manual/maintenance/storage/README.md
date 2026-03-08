@@ -8,7 +8,7 @@ The "**Storage**" section in MikoPBX allows you to monitor disk space usage and 
 
 Section location: "**Maintenance**" -> "**Storage**".
 
-<figure><img src="../../.gitbook/assets/storageSectionMikoPBX-cut.png" alt=""><figcaption><p>"<strong>Maintenance</strong>" -> "<strong>Storage</strong>" section</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/storageSectionMikoPBX-cut.png" alt=""><figcaption><p>"<strong>Maintenance</strong>" -> "<strong>Storage</strong>" section</p></figcaption></figure>
 
 ### Storage information
 
@@ -24,7 +24,7 @@ At the top of the page there is a block with a horizontal chart that visually sh
 * 🔴 System caches
 * ⚫ Other files
 
-<figure><img src="../../.gitbook/assets/storageInformationTabMikoPBX.png" alt=""><figcaption><p>"<strong>Storage information</strong>" tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/storageInformationTabMikoPBX.png" alt=""><figcaption><p>"<strong>Storage information</strong>" tab</p></figcaption></figure>
 
 At the bottom of the page there is a list of data categories and the amount of storage each one occupies.
 
@@ -43,7 +43,7 @@ Longer retention periods require more disk space.
 
 Click "**Save**" to save the settings.
 
-<figure><img src="../../.gitbook/assets/localStorageTabMikoPBX-cut.png" alt=""><figcaption><p>"<strong>Local storage</strong>" tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/localStorageTabMikoPBX-cut.png" alt=""><figcaption><p>"<strong>Local storage</strong>" tab</p></figcaption></figure>
 
 ### S3 Cloud Storage
 
@@ -60,11 +60,11 @@ To connect to a bucket, fill in the following fields:
 
 Click "**Save**" to save the settings.
 
-<figure><img src="../../.gitbook/assets/cloudStorageS3Section.png" alt=""><figcaption><p>"<strong>Cloud storage S3</strong>" tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cloudStorageS3Section.png" alt=""><figcaption><p>"<strong>Cloud storage S3</strong>" tab</p></figcaption></figure>
 
 Next, click the **"Test Connection"** button — the system will perform a test connection and display the result at the top of the page. Upon successful connection, the message "**Connected to S3**" will appear and synchronization of call recordings will begin.
 
-<figure><img src="../../.gitbook/assets/cloudStorageSuccessful.png" alt=""><figcaption><p>Successful connection to S3 storage</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cloudStorageSuccessful.png" alt=""><figcaption><p>Successful connection to S3 storage</p></figcaption></figure>
 
 At the bottom of the tab there is a **"Local storage (S3 mode)"** slider — it determines how long recordings will be stored locally on the station after being uploaded to the cloud before being automatically deleted. **The local retention period cannot exceed the total retention period.**
 
@@ -72,4 +72,4 @@ At the bottom of the tab there is a **"Local storage (S3 mode)"** slider — it 
 Shorter local storage duration frees up disk space faster.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/cloudStorageS3LocalStorage.png" alt=""><figcaption><p>"<strong>Local storage (S3 mode)"</strong> slider</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cloudStorageS3LocalStorage.png" alt=""><figcaption><p>"<strong>Local storage (S3 mode)"</strong> slider</p></figcaption></figure>
