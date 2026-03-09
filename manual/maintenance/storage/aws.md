@@ -8,7 +8,7 @@ description: >-
 
 ### Создание бакета
 
-1. Перейдите в консоль AWS ([ссылка](https://console.yandex.cloud/)). Перейдите в раздел "**Все сервисы**" -> "**Storage**" -> "**S3**".
+1. Перейдите в консоль AWS ([ссылка](https://console.aws.amazon.com/)). Перейдите в раздел "**Все сервисы**" -> "**Storage**" -> "**S3**".
 
 <figure><img src="../../../.gitbook/assets/awsS3section-updated.png" alt=""><figcaption><p>Раздел "S3" в AWS</p></figcaption></figure>
 
