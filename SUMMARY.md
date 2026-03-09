@@ -62,7 +62,7 @@
   * [System log entries](manual/maintenance/system-diagnostic.md)
   * [Reboot](manual/maintenance/restart.md)
   * [Storage](manual/maintenance/storage/README.md)
-    * [Connecting AWS S3 Storage (In dev)](manual/maintenance/storage/aws.md)
+    * [Connecting AWS S3 Storage](manual/maintenance/storage/aws.md)
 * [Network and Firewall](manual/connectivity/README.md)
   * [Network interface](manual/connectivity/network.md)
   * [Firewall](manual/connectivity/firewall.md)
