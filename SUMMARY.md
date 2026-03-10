@@ -72,6 +72,7 @@
     * [Подключение S3 хранилища Yandex Cloud](manual/maintenance/storage/yandex.md)
     * [Подключение S3 хранилища AWS](manual/maintenance/storage/aws.md)
     * [Подключение S3 хранилища DigitalOcean](manual/maintenance/storage/digitalocean.md)
+    * [Подключение S3 хранилища Wasabi (In dev)](manual/maintenance/storage/wasabi.md)
   * [Перезагрузка и выключение системы](manual/maintenance/restart.md)
 * [Сеть и Firewall](manual/connectivity/README.md)
   * [Сетевые интерфейсы](manual/connectivity/network.md)
