@@ -63,6 +63,7 @@
   * [Reboot](manual/maintenance/restart.md)
   * [Storage](manual/maintenance/storage/README.md)
     * [Connecting AWS S3 Storage](manual/maintenance/storage/aws.md)
+    * [Connecting DigitalOcean S3 Storage](manual/maintenance/storage/digitalocean.md)
 * [Network and Firewall](manual/connectivity/README.md)
   * [Network interface](manual/connectivity/network.md)
   * [Firewall](manual/connectivity/firewall.md)
