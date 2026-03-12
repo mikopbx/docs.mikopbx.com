@@ -2,7 +2,7 @@
 description: Инструкция по подключению Wasabi Cloud Storage в качестве S3-хранилища
 ---
 
-# Подключение S3 хранилища Wasabi (In dev)
+# Подключение S3 хранилища Wasabi
 
 ### Создание бакета и ключей
 
@@ -87,18 +87,28 @@ description: Инструкция по подключению Wasabi Cloud Stora
 
 <figure><img src="../../../.gitbook/assets/S3WasabiaccessKeys.png" alt=""><figcaption><p>Access Key и Secret Key</p></figcaption></figure>
 
-### Список регионов Wasabi
+### Подключение к MikoPBX
 
-| Регион                     | Endpoint URL                              |
-| -------------------------- | ----------------------------------------- |
-| us-east-1 (N. Virginia)    | `https://s3.wasabisys.com`                |
-| us-east-2 (N. Virginia)    | `https://s3.us-east-2.wasabisys.com`      |
-| us-west-1 (Oregon)         | `https://s3.us-west-1.wasabisys.com`      |
-| eu-central-1 (Amsterdam)   | `https://s3.eu-central-1.wasabisys.com`   |
-| eu-central-2 (Frankfurt)   | `https://s3.eu-central-2.wasabisys.com`   |
-| eu-west-1 (London)         | `https://s3.eu-west-1.wasabisys.com`      |
-| eu-west-2 (Paris)          | `https://s3.eu-west-2.wasabisys.com`      |
-| ap-northeast-1 (Tokyo)     | `https://s3.ap-northeast-1.wasabisys.com` |
-| ap-northeast-2 (Osaka)     | `https://s3.ap-northeast-2.wasabisys.com` |
-| ap-southeast-1 (Singapore) | `https://s3.ap-southeast-1.wasabisys.com` |
-| ap-southeast-2 (Sydney)    | `https://s3.ap-southeast-2.wasabisys.com` |
+1. Перейдите во вкладку "**Обслуживание**" -> "**Хранилище**".
+
+<figure><img src="../../../.gitbook/assets/MikoPBXstorageSection-cut.png" alt=""><figcaption><p>Раздел "Хранилище" в MikoPBX</p></figcaption></figure>
+
+2. Перейдите на вкладку **"Облачное хранилище S3"** и заполните следующие поля:
+
+* **Автоматическая загрузка записей в облачное хранилище** — включите переключатель.
+* **URL точки доступа S3** — введите endpoint Вашего региона из таблицы ниже.\
+  Например, для региона `eu-central-1`: `https://s3.eu-central-1.wasabisys.com`
+* **Регион S3** — укажите регион Вашего бакета в Wasabi (например, `eu-central-1`).
+* **Имя бакета S3** — укажите имя бакета, созданного в Wasabi (например, `mikopbx-s3-storage`).
+* **Ключ доступа** и **Секретный ключ** — вставьте значения, полученные при создании Access Key.
+* Настройте ползунок **«Локальное хранение (режим S3)»** — выберите, как долго записи будут храниться локально до удаления после выгрузки в облако.
+
+Нажмите **«Сохранить»**.
+
+<table><thead><tr><th width="236.7578125">Регион</th><th>Endpoint URL</th></tr></thead><tbody><tr><td>us-east-1 (N. Virginia)</td><td><code>https://s3.wasabisys.com</code></td></tr><tr><td>us-east-2 (N. Virginia)</td><td><code>https://s3.us-east-2.wasabisys.com</code></td></tr><tr><td>us-west-1 (Oregon)</td><td><code>https://s3.us-west-1.wasabisys.com</code></td></tr><tr><td>eu-central-1 (Amsterdam)</td><td><code>https://s3.eu-central-1.wasabisys.com</code></td></tr><tr><td>eu-central-2 (Frankfurt)</td><td><code>https://s3.eu-central-2.wasabisys.com</code></td></tr><tr><td>eu-west-1 (London)</td><td><code>https://s3.eu-west-1.wasabisys.com</code></td></tr><tr><td>eu-west-2 (Paris)</td><td><code>https://s3.eu-west-2.wasabisys.com</code></td></tr><tr><td>ap-northeast-1 (Tokyo)</td><td><code>https://s3.ap-northeast-1.wasabisys.com</code></td></tr><tr><td>ap-northeast-2 (Osaka)</td><td><code>https://s3.ap-northeast-2.wasabisys.com</code></td></tr><tr><td>ap-southeast-1 (Singapore)</td><td><code>https://s3.ap-southeast-1.wasabisys.com</code></td></tr><tr><td>ap-southeast-2 (Sydney)</td><td><code>https://s3.ap-southeast-2.wasabisys.com</code></td></tr></tbody></table>
+
+<figure><img src="../../../.gitbook/assets/S3WasabiMikoPBXRU.png" alt=""><figcaption><p>Параметры для подключения S3 Wasabi</p></figcaption></figure>
+
+После сохранения настроек нажмите **"Проверить соединение"**. При успешном подключении появится сообщение **«Соединение с S3 успешно»** и начнётся синхронизация записей телефонных разговоров.
+
+<figure><img src="../../../.gitbook/assets/S3WasabiSuccessfulConnectionRU.png" alt=""><figcaption><p>Успешное подключение</p></figcaption></figure>
