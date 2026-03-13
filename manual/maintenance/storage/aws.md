@@ -1,7 +1,7 @@
 ---
 description: >-
-  Instructions for connecting AWS S3 as cloud storage for automatic uploading  
-  of call recordings from MikoPBX
+  Instructions for connecting AWS S3 as cloud storage for automatic uploading of
+  call recordings from MikoPBX
 ---
 
 # Connecting AWS S3 Storage

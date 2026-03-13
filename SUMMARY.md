@@ -64,6 +64,7 @@
   * [Storage](manual/maintenance/storage/README.md)
     * [Connecting AWS S3 Storage](manual/maintenance/storage/aws.md)
     * [Connecting DigitalOcean S3 Storage](manual/maintenance/storage/digitalocean.md)
+    * [Connecting Wasabi S3 Storage](manual/maintenance/storage/wasabi.md)
 * [Network and Firewall](manual/connectivity/README.md)
   * [Network interface](manual/connectivity/network.md)
   * [Firewall](manual/connectivity/firewall.md)

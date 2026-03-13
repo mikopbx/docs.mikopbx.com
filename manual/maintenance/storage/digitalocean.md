@@ -1,7 +1,7 @@
 ---
 description: >-
   Instructions for connecting DigitalOcean Spaces Object Storage as an S3
-  storage backend
+  storage
 ---
 
 # Connecting DigitalOcean S3 Storage
