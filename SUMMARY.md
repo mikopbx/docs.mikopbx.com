@@ -163,6 +163,7 @@
   * [Integration of MikoPBX and Grandstream UCM6202](faq/interconnections/mikopbx-and-grandstream-ucm6202.md)
   * [MikoPBX and FreePBX (PJSIP)](faq/interconnections/mikopbx-and-freepbx-pjsip.md)
   * [MikoPBX and FreePBX (IAX)](faq/interconnections/mikopbx-and-freepbx-iax.md)
+  * [WireGuard - VPN](faq/interconnections/wireguard-vpn.md)
 * [VoIP providers](faq/providers/README.md)
   * [Mango](faq/providers/mango.md)
   * [Zadarma](faq/providers/zadarma.md)
