@@ -196,7 +196,7 @@
     * [Панель телефонии 4.0 для 1С](modules/miko/for-1c-enterprise/module-cti-client.md)
     * [Панель телефонии 1.0 для 1С](modules/miko/for-1c-enterprise/module-pt1c-core.md)
     * [Модуль умной маршрутизации](modules/miko/for-1c-enterprise/module-smart-i-v-r.md)
-  * [Users groups](modules/miko/module-users-groups.md)
+  * [Dial groups management](modules/miko/module-users-groups.md)
   * [CRM Bitrix24 integration](modules/miko/module-bitrix24-integration.md)
   * [Autoprovision](modules/miko/module-autoprovision.md)
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)

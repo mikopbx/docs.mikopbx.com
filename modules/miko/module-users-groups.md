@@ -1,106 +1,131 @@
-# Users groups
+---
+description: Installation and step-by-step module configuration
+---
+
+# Dial groups management
+
+The module allows you to organize employees into groups and flexibly manage their permissions: block international calls, allow internal calls only, assign personal routes or CallerID. Full group isolation is supported — employees will only be able to call within their own group.
+
+### Installation and module overview
+
+1\. Go to "**Module marketplace"** -> "[**Marketplace**](../../manual/modules/pbx-extension-modules.md#marketplace)**"**. Install the **"Manage call groups"** module.
+
+<figure><img src="../../.gitbook/assets/manageCallGroupsModule.png" alt=""><figcaption><p>"Manage call groups" module in the Marketplace</p></figcaption></figure>
+
+2\. Go to "**Installed modules"** section. Enable the module and open its settings.
+
+<figure><img src="../../.gitbook/assets/InstalledModules-manageCallGroups.png" alt=""><figcaption><p>"Installed modules" section. Opening module settings.</p></figcaption></figure>
+
+In the "**Dial group list"** section you can see all existing groups. You can also set a default group here — all newly created employees will be added to it automatically. If needed, a group can be selected manually when creating an employee.
+
+<figure><img src="../../.gitbook/assets/dialGroupListTab.png" alt=""><figcaption><p>"Dial group list" tab</p></figcaption></figure>
+
+In the **"Extensions"** section you can see all employees and which group they belong to.
+
+<figure><img src="../../.gitbook/assets/dialGroupMngmntExtensions.png" alt=""><figcaption><p>"Extensions" tab</p></figcaption></figure>
+
+### Creating a new group
+
+1. To add a new group, go to the "**Dial group list"** tab and click "**Create dial plan"**.
+
+<figure><img src="../../.gitbook/assets/createNewCallGroupBtn.png" alt=""><figcaption><p>"Create dial plan" button</p></figcaption></figure>
+
+2. Specify the basic parameters for the new group:
+
+* **Group** — any name, for example "Marketing Department".
+* **Description** — a brief note, for example "External calls allowed through Telnyx only". Helps quickly identify the group's purpose later.
+
+Click "**Save**".
+
+<figure><img src="../../.gitbook/assets/basicGroupParameters.png" alt=""><figcaption><p>Basic parameters for the new group</p></figcaption></figure>
+
+3. On the "**Group staff"** tab, select the employees to include in the group.
+
+<figure><img src="../../.gitbook/assets/groupStaffTab.png" alt=""><figcaption><p>Adding employees when creating a new group</p></figcaption></figure>
+
+4. Go to the "**Outbound routing rules"** tab. Here you can enable or disable available routes for the current group. For example, activate only the Telnyx route — then group members will only be able to call through it.
+
+If needed, enter a number in the **Outbound Caller ID** field — this number will be shown to the recipient when calling through this route. If left empty, the default Caller ID from the provider settings will be used.
+
+{% hint style="warning" %}
+Not every provider allows CallerID substitution — typically only numbers belonging to the organization are permitted. The following formats are supported:
+
+* `60177876453 <admin>`
+* `60195229304`
+* `60195223045 <60195223045>`
+
+Check with your telecom provider which `FROM` header format (the `user` field) is supported.
+
+If you need to use this feature, make sure to **disable** the **`fromuser`** field in the provider settings. This setting also affects the `FROM` header and has higher priority.
+{% endhint %}
 
 {% hint style="info" %}
-Модуль возможно использовать начиная с **MikoPBX 2019.04.134.**
+If all routes are disabled, group members will only be able to make internal calls.
 {% endhint %}
 
-## Назначение <a href="#osnovnye_zadachi_reshaemye_modulem" id="osnovnye_zadachi_reshaemye_modulem"></a>
+<figure><img src="../../.gitbook/assets/outboundRoutingRulesTab.png" alt=""><figcaption><p>"Outbound routing rules" tab settings</p></figcaption></figure>
 
-* Разграничение прав доступа к исходящим маршрутам
-* Установка caller id для исходящего вызова
+### Common use cases
 
-## Настройка модуля <a href="#nastrojka_modulja" id="nastrojka_modulja"></a>
+#### **Allow internal calls only**
 
-1\. Выполните установку модуля в разделе [Управление модулями](/broken/pages/meuGOnb4IGFsWJ0CdCrB).
+If your company has interns or employees who don't need to call external numbers, you can restrict their access to internal calls only.&#x20;
 
-2\. Включите модуль и зайдите в его настройки.
+1. Go to the "**Dial group list"** module settings. Click "**Create dial plan"**. Set any name, for example "Internal Calls Only".
 
-![](../../.gitbook/assets/mod_grup_polz_0.gif)
+<figure><img src="../../.gitbook/assets/onlyInternalCalls(General)-new.png" alt=""><figcaption><p>General settings of the new group (internal calls only)</p></figcaption></figure>
 
-3\. На основной странице модуля отображается список существующих групп. Сейчас он пустой.
+2. On the "**Group staff"** tab, select the employees to include in the group.
 
-![](../../.gitbook/assets/mod_grup_polz_0.png)
+<figure><img src="../../.gitbook/assets/groupStaffTab.png" alt=""><figcaption><p>Selecting employees to add to the group</p></figcaption></figure>
 
-3\. На вкладке **Cотрудники** отображается список всех сотрудников и то, к какой группе они принадлежат. Сейчас они сотрудники не принадлежат ни к какой группе, потому что самих групп еще не создано.
+3. On the "**Outbound routing rules"** tab, disable all routes — switch all toggles to the off position.
 
-![](../../.gitbook/assets/mod_grup_polz_1.png)
+<figure><img src="../../.gitbook/assets/OutboundRulesForGroup-AllOFF.png" alt=""><figcaption><p>Disabling all outbound routes for the group</p></figcaption></figure>
 
-4\. Для добавления новой группы нажмите **Создать группу сотрудников.**
+#### **Block international calls**
 
-![](../../.gitbook/assets/mod_grup_polz_2.png)
+1. Go to the "**Dial group list"** module settings. Click "**Create dial plan"**. Set any name, for example "No international calls (only local)". <mark style="background-color:blue;">In this example, the providers for local calls are Megafon and Beeline. Telnyx will be used for worldwide (international) calls.</mark>
 
-5\. На вкладке **Настройки группы** укажите ее имя и описание\*\*.\*\* Затем нажмите **Сохранить.**
+<figure><img src="../../.gitbook/assets/noWorldwideCallsTemplate.png" alt=""><figcaption><p>General settings of the new group (no international calls)</p></figcaption></figure>
 
-![](../../.gitbook/assets/mod_grup_polz_3.png)
+2. On the "**Group staff"** tab, select the employees to include in the group.
 
-6\. Вы перейдете на вкладку **Сотрудники группы.** Добавьте в группу необходимых сотрудников.
+<figure><img src="../../.gitbook/assets/groupStaffTab.png" alt=""><figcaption><p>Selecting employees to add to the group</p></figcaption></figure>
 
-![](../../.gitbook/assets/mod_grup_polz_1.gif)
+3. On the "**Outbound routing rules"** tab, enable only local provider routes and leave the "**Telnyx**" international route disabled.
 
-7\. Перейдите на вкладку **Правила исходящей маршрутизации** и активируйте разрешенные маршруты.
+<figure><img src="../../.gitbook/assets/noWorldwideCallsTemplate-OutboundRules.png" alt=""><figcaption><p>Outbound routing template with international calls blocked</p></figcaption></figure>
 
-![](../../.gitbook/assets/mod_grup_polz_2.gif)
+### Group isolation
 
-{% hint style="warning" %}
-Если все маршруты будут запрещены - то будут позволены только внутренние вызовы.
-{% endhint %}
+After creating a group, go to **Group Settings** to configure isolation options. Two options are available:
 
-## Возможные сценарии использования <a href="#vozmozhnye_scenarii_ispolzovanija" id="vozmozhnye_scenarii_ispolzovanija"></a>
+* Isolate a group of employees.
+* Isolate the pickup function.
 
-### Разрешить сотруднику только внутренние вызовы <a href="#razreshit_sotrudniku_tolko_vnutrennie_vyzovy" id="razreshit_sotrudniku_tolko_vnutrennie_vyzovy"></a>
+#### **Isolate a group of employees**
 
-1\. Создайте новую группу **Только внутренние** (название группы может быть любым).
+This feature fully isolates the group from all other employees on the PBX:
 
-![](../../.gitbook/assets/mod_grup_polz_4.png)
+* Group members can only call numbers within their own group.
+* Employees from other groups cannot call the isolated group.
+* Call pickup (`*8`) will only work within the group.
 
-2\. На вкладке **Сотрудники группы** заполните список сотрудников.
+**Patterns of numbers related to the group. A group member will only be able to call them** - define the patterns of numbers that group members are allowed to dial. Patterns support digits 1–9 and the symbol `X` (any digit 0–9).
 
-![](../../.gitbook/assets/mod_grup_polz_5.png)
+Pattern examples:
 
-3\. На вкладке **Правила исходящей маршрутизации** отключите все маршруты.
+* `2XX` — numbers from 200 to 299
+* `200001` — a specific internal number, for example a queue number
+* `66XXXXXXXXX` — 11-digit Thai phone numbers
 
-![](../../.gitbook/assets/mod_grup_polz_6.png)
+<figure><img src="../../.gitbook/assets/isolateAGroupOfEmployees.png" alt=""><figcaption><p>Isolating the employee group</p></figcaption></figure>
 
-### Запретить сотруднику международные направления <a href="#zapretit_sotrudniku_mezhdunarodnye_napravlenija" id="zapretit_sotrudniku_mezhdunarodnye_napravlenija"></a>
+#### **Isolate the pickup function**
 
-Настройка выполняется аналогично примеру [Разрешить сотруднику только внутренние вызовы](module-users-groups.md#razreshit_sotrudniku_tolko_vnutrennie_vyzovy) с тем лишь отличием, что следует запретить только международные маршруты.
+More details about the pickup function can be found in the [documentation](../../manual/system/general-settings.md#perevody_vyzovov1).
 
-### Персональный маршрут для каждого сотрудника <a href="#personalnyj_marshrut_dlja_kazhdogo_sotrudnika" id="personalnyj_marshrut_dlja_kazhdogo_sotrudnika"></a>
+By default, the call pickup combination is `*8` or `*8phoneNumber`. When isolation is enabled, pickup will only be available within the group — the list of members is defined on the **Group Employees** tab.
 
-Для каждого сотрудника создайте отдельную группу. Укажите разрешенный маршрут.
-
-### Свой caller id для каждого маршрута <a href="#svoj_caller_id_dlja_kazhdogo_marshruta" id="svoj_caller_id_dlja_kazhdogo_marshruta"></a>
-
-На вкладке **Правила исходящей маршрутизации** укажите CallerID для каждого маршрута.
-
-![](../../.gitbook/assets/mod_grup_polz_7.png)
-
-{% hint style="danger" %}
-Не каждый провайдер позволяет подменить CallerID. Обычно позволяют использовать только тот номер, который принадлежит организации.
-{% endhint %}
-
-{% hint style="warning" %}
-Если необходимо использовать этот функционал, то в настройках провайдера потребуется **отключить** использование поля **fromuser**.
-{% endhint %}
-
-![](../../.gitbook/assets/mod_grup_polz_8.png)
-
-## Group Isolation <a href="#group_isolation" id="group_isolation"></a>
-
-This feature allows for the isolation of a group of employees on the PBX:
-
-1. Employees within the group can only call numbers within their own group
-2. Employees from other groups will not be able to call the isolated group
-
-<figure><img src="../../.gitbook/assets/isolate.png" alt=""><figcaption></figcaption></figure>
-
-**Number templates related to the group. A group member will be able to call only these numbers**
-
-1. The templates may include digits from 1 to 9 and the symbol X (any digit 1-9)
-2. A group member will be able to dial all numbers that match the template
-
-Examples of templates:
-
-* **2XX** - numbers from 200 to 299
-* **200001** - a specific internal number, such as a queue number
-* **7XXXXXXXXXX** - 11-digit numbers for Russia
+<figure><img src="../../.gitbook/assets/isolateThePickupFunction.png" alt=""><figcaption><p>Isolating the call pickup function within the group</p></figcaption></figure>
