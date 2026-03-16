@@ -21,11 +21,11 @@ description: Подключение провайдера Mango Office
 
 5. Перейдите на вкладку "**Обработка звонков"** → "**Голосовое меню и распределение звонков"**. Для подключенного номера направьте все входящие звонки на созданного вами сотрудника «**Админ 76**».
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Настройки обработки звонков</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Настройки обработки звонков</p></figcaption></figure>
 
 6. Переходим в настройки SIP-учетной записи для сотрудника «Админ 76». **Общие настройки** → **Настройки SIP**, вкладка «**Учетные записи и домены SIP**»
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Вкладка «Учетные записи и домены SIP»</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (3).png" alt=""><figcaption><p>Вкладка «Учетные записи и домены SIP»</p></figcaption></figure>
 
 Следующие данные будут использованы для SIP-подключения:
 
