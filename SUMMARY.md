@@ -92,7 +92,7 @@
     * [Настройка Yandex Mail (oAuth2)](manual/system/mail-settings-1/yandex-oauth2.md)
     * [Настройка Microsoft Outlook (oAuth2)](manual/system/mail-settings-1/microsoft-oauth2.md)
     * [Настройка Proton (Логин, Пароль)](manual/system/mail-settings-1/proton.md)
-  * [API ключи (IN DEV)](manual/system/api-keys/README.md)
+  * [API ключи](manual/system/api-keys/README.md)
     * [Справочник эндпоинтов](manual/system/api-keys/endpoints.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
