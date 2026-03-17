@@ -1,5 +1,5 @@
 ---
-description: MikoPBX REST API v3 — Руководство по Python-интеграции
+description: Инструкция с примерами по созданию и использованию API-ключей
 ---
 
 # API ключи (IN DEV)
@@ -7,51 +7,79 @@ description: MikoPBX REST API v3 — Руководство по Python-инте
 В этой статье описана работа с REST API MikoPBX на примере базовых практических задач: создание сотрудников и SIP-провайдеров, получение истории звонков, мониторинг состояния станции в реальном времени.
 
 {% hint style="info" %}
-Для корректной работы у Вас должен быть действующий https сертификат. Один из простых способов для выпуска доверенного сертификата - [Let's encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md).
+Если у вас отсутствует доверенный сертификат — добавьте `verify=False` в каждый запрос и отключите предупреждения:
+
+```python
+import urllib3
+urllib3.disable_warnings()
+```
+
+Настоятельно рекомендуется выпустить доверенный сертификат. Самый простой способ селать это - с помощью модуля [Let's encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md).
 {% endhint %}
 
 ### Подготовка: API-ключ и окружение
 
-#### Создание API-ключа
+**Создание API-ключа**
 
-1. Перейдите в раздел : "**Система" → "API ключи".**&#x20;
+1. Перейдите в раздел: **"Система" → "API ключи".**
 
-<figure><img src="../../.gitbook/assets/APIKeysSection.png" alt=""><figcaption><p>Раздел "Cистема" -> "API ключи"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/APIKeysSection.png" alt=""><figcaption><p>Раздел "Система" -> "API ключи"</p></figcaption></figure>
 
 2. Нажмите **"Добавить API ключ".**
 
 * Заполните поле **Описание** (например: `CRM Integration`)
-* Скопируйте сгенерированный API-ключ — он отображается **только один раз.**
+* Скопируйте сгенерированный API-ключ — он отображается **только один раз**
 * **Сетевой фильтр:** ограничьте доступ по IP или выберите «Разрешены с любых адресов»
-
-Выберите права по ресурсам: **«Чтение»** (GET) или **«Чтение и запись»** (POST/PUT/DELETE)
 
 В зависимости от задачи переключите тумблер **«Полные права доступа»** или настройте права вручную для каждого ресурса. Придерживайтесь принципа минимальных привилегий (Least Privilege) — каждый ключ должен иметь доступ только к тем ресурсам, которые реально нужны.
 
-{% hint style="info" %}
-API-ключ используется только для получения JWT-токена через `POST /auth`. В последующих запросах передаётся Bearer-токен, а не сам ключ.
-{% endhint %}
-
 <figure><img src="../../.gitbook/assets/APIKeyBasicSettings.png" alt=""><figcaption><p>Базовые настройки API ключа</p></figcaption></figure>
 
-В этой инструкции в качестве примеров будут приведены следующие действия с помощью REST API:
+В этой инструкции будут рассмотрены следующие задачи:
 
-* Создать сотрудника - необходимо разрешить доступ к интерфейсу "Employees Management" на уровне "Чтение и запись".
-* Создать провайдера - необходимо разрешить доступ к интерфейсу "Providers" на уровне "Чтение и запись".
-* Получить статусы регистрации сотрудников и провайдеров - необходимо разрешить доступ к интерфейсу "SIP" на уровне "Чтение".
-* Получить историю звонков - необходимо разрешить доступ к интерфейсу "Call Records" на уровне "Чтение".
+* **Создать сотрудника** — разрешите доступ к ресурсу **"Employees Management"** на уровне **"Чтение и запись"**
+* **Создать SIP-провайдера** — разрешите доступ к ресурсу **"SIP Providers"** на уровне **"Чтение и запись"**
+* **Получить статусы регистрации** сотрудников и провайдеров — разрешите доступ к ресурсу **"SIP"** на уровне **"Чтение"**
+* **Получить историю звонков** — разрешите доступ к ресурсу **"Call Records"** на уровне **"Чтение"**
 
-<mark style="color:$warning;">Так же выдайте права на интерфейс "Authentication" на уровне "Чтение и запись".</mark>
+<figure><img src="../../.gitbook/assets/APIKeyCallRecords.png" alt=""><figcaption><p>Пример настройки прав доступа</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/APIKeyCDR&#x26;Auth.png" alt=""><figcaption><p>Пример с выдачей доступа к интерфейсу "Call Records"</p></figcaption></figure>
-
-В этой статье, мы будем работать с Python, поэтому необходимо установить все зависимости:
+В этой статье, мы будем работать с Python, поэтому необходимо установить все необходимые зависимости:
 
 ```bash
 pip install requests
 ```
 
-###
+### **Подключение**
+
+Ниже приведен скрипт для подключения к станции через API-ключ. Этот шаблон необходимо использовать перед всеми скриптами, описанными в этой инструкции.
+
+API-ключ и URL для API запросов передаются напрямую в заголовке запроса - никакой дополнительной аутентификации не требуется:
+
+```python
+import requests
+
+BASE_URL = 'https://your-mikopbx.com/pbxcore/api/v3'
+API_KEY  = 'ваш-api-ключ'
+
+HEADERS = {
+    'Authorization': f'Bearer {API_KEY}',
+    'Content-Type':  'application/json',
+}
+```
+
+{% hint style="info" %}
+В шаблоне замените следующие параметры:
+
+* "**your-mikopbx.com**" на IP адрес или URL Вашей станции.
+* "**ваш-api-ключ**" на ранее созданный API-ключ с необходимыми правами.
+{% endhint %}
+
+### Работа с сотрудниками
+
+**Эндпоинт:** `POST /pbxcore/api/v3/employees`
+
+Ниже приведена таблица с параметрами (полями) для такого запроса, которые Вы можете использовать.
 
 | Поле                          | Обяз. | Тип / ограничения                      | Описание                                            |
 | ----------------------------- | ----- | -------------------------------------- | --------------------------------------------------- |
@@ -71,7 +99,7 @@ pip install requests
 | `fwd_forwardingonbusy`        | —     | number \| `hangup` \| `busy`           | Переадресация при занятости                         |
 | `fwd_forwardingonunavailable` | —     | number \| `hangup` \| `busy`           | Переадресация при недоступности                     |
 
-#### Создание сотрудника
+#### **Создание одного сотрудника**
 
 ```python
 def create_employee(
@@ -93,27 +121,25 @@ def create_employee(
     if email:  payload['user_email']    = email
     if mobile: payload['mobile_number'] = mobile
 
-    result = client.post('/employees', json=payload)
-
+    r = requests.post(f'{BASE_URL}/employees', headers=HEADERS, json=payload)
+    result = r.json()
     if result.get('result'):
-        emp_id = result['data']['id']
-        print(f'✅ Создан: {number} ({name}), id={emp_id}')
+        print(f" Создан: {number} ({name}), id={result['data']['id']}")
     else:
-        errors = result.get('messages', {}).get('error', [])
-        print(f'❌ Ошибка: {errors}')
+        print(f" Ошибка: {result.get('messages', {}).get('error', [])}")
     return result
 
 
-# Минимальный пример
+# Минимальный пример (только обязательные поля)
 create_employee(
-    number='201',
+    number='243',
     name='Иванов Иван',
     sip_secret='Secure#Pass9201',
 )
 
 # Полный пример
 create_employee(
-    number='202',
+    number='244',
     name='Петрова Анна',
     sip_secret='Secure#Pass9202',
     email='anna@company.ru',
@@ -123,7 +149,7 @@ create_employee(
 )
 ```
 
-#### Ответ API (HTTP 201)
+Ниже приведен пример ответа API (HTTP 201) на такой запрос:
 
 ```json
 {
@@ -144,108 +170,185 @@ create_employee(
 }
 ```
 
-#### Коды ответов
+Возможные коды ответов:
 
 | Код | Описание                                                             |
 | --- | -------------------------------------------------------------------- |
 | 201 | Сотрудник успешно создан                                             |
 | 400 | Ошибка валидации (слабый пароль <5 символов, неверный формат номера) |
-| 401 | Токен истёк — нужно обновить через `/auth`                           |
+| 401 | Неверный или отсутствующий API-ключ                                  |
 | 403 | Нет прав на запись для ресурса `/employees`                          |
 | 409 | Конфликт — номер уже занят                                           |
 
-#### Список сотрудников
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
+
+{% code overflow="wrap" %}
+```python
+ Создан: 243 (Иванов Иван), id=113
+ Создан: 244 (Петрова Анна), id=114
+
+Process finished with exit code 0
+```
+{% endcode %}
+
+На станции будут созданы сотрудники 243 и 244.
+
+<figure><img src="../../.gitbook/assets/createdExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
+
+#### Получение списка сотрудников
 
 ```python
 def list_employees(search: str = '', limit: int = 100, offset: int = 0) -> list:
     params = {'limit': limit, 'offset': offset}
     if search: params['search'] = search
-    result = client.get('/employees', params=params)
-    return result.get('data', result) if isinstance(result, dict) else result
+    r = requests.get(f'{BASE_URL}/employees', headers=HEADERS, params=params)
+    return r.json().get('data', {}).get('data', []) 
 
 for emp in list_employees():
     print(f"  {emp.get('number'):>6}  {emp.get('user_username', '')}")
 ```
 
-#### Массовое создание
+Будет выведен список сотрудников в следующем формате:
+
+{% code overflow="wrap" %}
+```python
+     202  Brown Brandon
+     203  Collins Melanie
+     201  Smith James
+     243  Иванов Иван
+     244  Петрова Анна
+
+Process finished with exit code 0
+```
+{% endcode %}
+
+#### **Массовое создание сотрудников**
 
 ```python
 import time
 
 employees = [
-    {'number': '201', 'name': 'Иванов Иван',  'secret': 'Pass#9201'},
-    {'number': '202', 'name': 'Петрова Анна', 'secret': 'Pass#9202'},
-    {'number': '203', 'name': 'Сидоров Пётр', 'secret': 'Pass#9203'},
+    {'number': '251', 'name': 'Иванов Иван',  'secret': 'Pass#9201'},
+    {'number': '252', 'name': 'Петрова Анна', 'secret': 'Pass#9202'},
+    {'number': '253', 'name': 'Сидоров Пётр', 'secret': 'Pass#9203'},
 ]
 
 created, failed = [], []
 for emp in employees:
-    result = client.post('/employees', json={
-        'number':        emp['number'],
-        'user_username': emp['name'],
-        'sip_secret':    emp['secret'],
-    })
+    r = requests.post(
+        f'{BASE_URL}/employees',
+        headers=HEADERS,
+        json={
+            'number':        emp['number'],
+            'user_username': emp['name'],
+            'sip_secret':    emp['secret'],
+        }
+    )
+    result = r.json()
     if result.get('result'):
         created.append(emp['number'])
-        print(f"✅ {emp['number']} {emp['name']}")
+        print(f" {emp['number']} {emp['name']}")
     else:
         failed.append(emp['number'])
-        print(f"❌ {emp['number']}: {result.get('messages', {}).get('error', [])}")
-    time.sleep(0.2)
+        print(f" {emp['number']}: {result.get('messages', {}).get('error', [])}")
+    time.sleep(0.2)  # небольшая пауза между запросами
 
 print(f'Создано: {len(created)}, Ошибок: {len(failed)}')
 ```
 
-***
+В случае успешного выполнения запроса, Вы увидите следующий вывод в консоль:
 
-### 5. Управление SIP-провайдерами
+{% code overflow="wrap" %}
+```python
+ 251 Иванов Иван
+ 252 Петрова Анна
+ 253 Сидоров Пётр
+Создано: 3, Ошибок: 0
 
-**Для CRUD:** `POST /sip-providers`\
-**Для просмотра всех (SIP + IAX):** `GET /providers` (только чтение)
+Process finished with exit code 0
+```
+{% endcode %}
 
-#### Создание SIP-провайдера
+На станции будет создано 3 сотрудника:
+
+<figure><img src="../../.gitbook/assets/created3ExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
+
+### Работа с SIP-провайдерами
+
+**Эндпоинт:** `POST /pbxcore/api/v3/sip-providers`
+
+Ниже приведена таблица с параметрами (полями) для такого запроса, которые Вы можете использовать.
+
+| Поле                | Обяз. | Тип     | Описание                                                   |
+| ------------------- | ----- | ------- | ---------------------------------------------------------- |
+| `description`       | ✅     | string  | Название провайдера                                        |
+| `host`              | ✅     | string  | Адрес SIP-сервера провайдера                               |
+| `username`          | —     | string  | Логин на сервере провайдера                                |
+| `secret`            | —     | string  | Пароль                                                     |
+| `registration_type` | —     | string  | `inbound` / `outbound` / `none`                            |
+| `qualify`           | —     | boolean | Мониторинг доступности (по умолч.: `true`)                 |
+| transport           | —     | string  | `udp` / `tcp` / `tls` / `udp,tcp` (по умолч.: `udp,tcp`)   |
+| dtmfmode            | —     | string  | `auto` / `rfc4733` / `inband` / `info` (по умолч.: `auto`) |
+| port                | —     | integer | Порт подключения (по умолч.: `5060`)                       |
+| disabled            | —     | boolean | Отключить провайдера (по умолч.: `false`)                  |
+
+#### Создание провайдера
 
 ```python
 def create_sip_provider(
-    uniqid: str,
+    description: str,
     host: str,
-    username: str,
-    password: str,
-    description: str = '',
+    username: str = '',
+    password: str = '',
+    registration_type: str = 'outbound',
     qualify: bool = True,
 ) -> dict:
     payload = {
-        'uniqid':            uniqid,
-        'description':       description or f'{username}@{host}',
-        'host':              host,
-        'username':          username,
-        'secret':            password,
-        'qualify':           qualify,
-        'registration_type': 'inbound+outbound',
+        'description': description,
+        'host':        host,
     }
-    result = client.post('/sip-providers', json=payload)
+    if username:          payload['username']          = username
+    if password:          payload['secret']            = password
+    if registration_type: payload['registration_type'] = registration_type
+    if not qualify:       payload['qualify']           = qualify
+
+    r = requests.post(f'{BASE_URL}/sip-providers', headers=HEADERS, json=payload)
+    result = r.json()
     if result.get('result'):
-        print(f'✅ Провайдер создан: {description or uniqid}')
+        print(f" Провайдер создан: {description}")
     else:
-        print(f'❌ Ошибка: {result.get("messages", {}).get("error", [])}')
+        print(f" Ошибка: {result.get('messages', {}).get('error', [])}")
     return result
 
 
 create_sip_provider(
-    uniqid='SIP-ZADARMA-001',
+    description='Zadarma',
     host='sip.zadarma.com',
     username='316811',
     password='mysecretpass',
-    description='Zadarma',
 )
 ```
 
-#### Список всех провайдеров
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
+
+{% code overflow="wrap" %}
+```python
+ Провайдер создан: Zadarma
+
+Process finished with exit code 0
+```
+{% endcode %}
+
+На станции будет создан провайдер:
+
+<figure><img src="../../.gitbook/assets/createdProviderWithAPI.png" alt=""><figcaption><p>Созданный провайдер с помощью REST API</p></figcaption></figure>
+
+#### **Список всех провайдеров**
 
 ```python
 def list_providers() -> list:
-    result = client.get('/providers')
-    return result.get('data', result) if isinstance(result, dict) else result
+    r = requests.get(f'{BASE_URL}/providers', headers=HEADERS)
+    return r.json().get('data', [])
 
 for prov in list_providers():
     print(f"  {prov.get('id'):<20} {prov.get('description', '')}  [{prov.get('type', '')}]")
@@ -253,22 +356,33 @@ for prov in list_providers():
 
 ***
 
-### 6. История звонков (CDR)
+#### История звонков (CDR)
 
-**Эндпоинт:** `GET /cdr` — только чтение.\
-Поддерживает фильтрацию по дате, номеру, статусу, длительности.
+**Эндпоинт:** `GET /pbxcore/api/v3/cdr` — только чтение.
 
-#### Базовый запрос с фильтрацией
+**Параметры запроса**
+
+| Параметр      | Тип     | Описание                                     |
+| ------------- | ------- | -------------------------------------------- |
+| `offset`      | integer | Смещение для пагинации (по умолч.: 0)        |
+| `limit`       | integer | Кол-во записей, макс. 1000                   |
+| `date_from`   | string  | Начало периода: `YYYY-MM-DD HH:MM:SS`        |
+| `date_to`     | string  | Конец периода: `YYYY-MM-DD HH:MM:SS`         |
+| `src_num`     | string  | Фильтр по номеру звонящего                   |
+| `dst_num`     | string  | Фильтр по номеру назначения                  |
+| `disposition` | string  | `ANSWERED` / `NO ANSWER` / `BUSY` / `FAILED` |
 
 ```python
+from datetime import datetime, timedelta
+
 def get_cdr(
     offset: int = 0,
     limit: int = 100,
-    date_from: str = None,    # формат: 'YYYY-MM-DD HH:MM:SS'
+    date_from: str = None,
     date_to: str = None,
     src_num: str = None,
     dst_num: str = None,
-    disposition: str = None,  # ANSWERED / NO ANSWER / BUSY / FAILED
+    disposition: str = None,
 ) -> list:
     params = {'offset': offset, 'limit': min(limit, 1000)}
     if date_from:   params['date_from']   = date_from
@@ -277,8 +391,8 @@ def get_cdr(
     if dst_num:     params['dst_num']     = dst_num
     if disposition: params['disposition'] = disposition
 
-    result = client.get('/cdr', params=params)
-    return result.get('data', result) if isinstance(result, dict) else result
+    r = requests.get(f'{BASE_URL}/cdr', headers=HEADERS, params=params)
+    return r.json().get('data', [])
 
 
 # Последние 20 звонков
@@ -290,11 +404,9 @@ for row in get_cdr(limit=20):
     )
 ```
 
-#### Статистика за период
+**Статистика за период**
 
 ```python
-from datetime import datetime, timedelta
-
 def cdr_stats(days: int = 1) -> dict:
     now  = datetime.now()
     then = now - timedelta(days=days)
@@ -320,7 +432,7 @@ print(f"Пропущено:         {stats['missed']}")
 print(f"Средняя длит.:     {stats['avg_sec']}с")
 ```
 
-#### Поля CDR-записи
+**Поля CDR-записи**
 
 | Поле            | Тип      | Описание                                     |
 | --------------- | -------- | -------------------------------------------- |
@@ -334,19 +446,20 @@ print(f"Средняя длит.:     {stats['avg_sec']}с")
 | `duration`      | int      | Полная длительность (включая дозвон)         |
 | `recordingfile` | string   | Путь к MP3-записи разговора                  |
 
-> 📼 Стриминг записей: `GET /cdr/{id}/recording` — поддерживает HTTP Range.
+\{% hint style="info" %\} Стриминг записи разговора: `GET /cdr/{id}/recording` — поддерживает HTTP Range для постепенной загрузки. \{% endhint %\}
 
 ***
 
-### 7. Мониторинг: статусы SIP и активные звонки
+#### Мониторинг: статусы SIP и активные звонки
 
-#### Статусы SIP-устройств
+**Статусы регистрации сотрудников и провайдеров**
 
-**Эндпоинт:** `GET /sip` — только мониторинг.
+**Эндпоинт:** `GET /pbxcore/api/v3/sip` — только мониторинг.
 
 ```python
 def get_sip_status() -> dict:
-    return client.get('/sip')
+    r = requests.get(f'{BASE_URL}/sip', headers=HEADERS)
+    return r.json()
 
 sip = get_sip_status()
 
@@ -365,13 +478,23 @@ for entry in registry:
     print(f"  {icon}  {entry.get('username', '?')}@{entry.get('host', '?')}  [{entry.get('state')}]")
 ```
 
-#### Активные звонки в реальном времени
+**Значения поля `state`**
 
-**Эндпоинт:** `GET /pbx-status`
+| Значение      | Описание                                               |
+| ------------- | ------------------------------------------------------ |
+| `OK`          | Устройство зарегистрировано и доступно                 |
+| `UNKNOWN`     | Не зарегистрировано (оффлайн)                          |
+| `Unreachable` | Было зарегистрировано, но не отвечает на QUALIFY-пинги |
+| `OFF`         | Регистрация отключена в настройках провайдера          |
+
+**Активные звонки в реальном времени**
+
+**Эндпоинт:** `GET /pbxcore/api/v3/pbx-status`
 
 ```python
 def get_active_calls() -> dict:
-    return client.get('/pbx-status')
+    r = requests.get(f'{BASE_URL}/pbx-status', headers=HEADERS)
+    return r.json()
 
 status   = get_active_calls()
 calls    = status.get('calls', [])
@@ -384,29 +507,25 @@ for call in calls:
     print(f"  📞 {call.get('src_num', '?')} → {call.get('dst_num', '?')}  ({call.get('duration', 0)}с)")
 ```
 
-#### Значения поля `state`
+***
 
-| Значение      | Описание                                               |
-| ------------- | ------------------------------------------------------ |
-| `OK`          | Устройство зарегистрировано и доступно                 |
-| `UNKNOWN`     | Не зарегистрировано (оффлайн)                          |
-| `Unreachable` | Было зарегистрировано, но не отвечает на QUALIFY-пинги |
-| `OFF`         | Регистрация отключена в настройках провайдера          |
-
-### 9. Полный скрипт мониторинга
+#### Полный скрипт мониторинга
 
 ```python
 """
 mikopbx_monitor.py — мониторинг MikoPBX REST API v3
 Запуск: python mikopbx_monitor.py
 """
-from mikopbx_client import MikoPBXClient
+import requests
 from datetime import datetime, timedelta
 
-BASE_URL = 'https://your-mikopbx.com'
-API_KEY  = 'YOUR_API_KEY'
+BASE_URL = 'https://your-mikopbx.com/pbxcore/api/v3'
+API_KEY  = 'ваш_api_ключ'
 
-client = MikoPBXClient(BASE_URL, API_KEY)
+HEADERS = {
+    'Authorization': f'Bearer {API_KEY}',
+    'Content-Type':  'application/json',
+}
 
 
 def section(title: str, width: int = 48):
@@ -416,7 +535,7 @@ def section(title: str, width: int = 48):
 
 def show_sip():
     section('SIP-устройства и провайдеры')
-    data     = client.get('/sip')
+    data     = requests.get(f'{BASE_URL}/sip', headers=HEADERS).json()
     peers    = data.get('peers', data.get('data', []))
     registry = data.get('registry', [])
 
@@ -434,7 +553,7 @@ def show_sip():
 
 def show_active_calls():
     section('Активные звонки')
-    status = client.get('/pbx-status')
+    status = requests.get(f'{BASE_URL}/pbx-status', headers=HEADERS).json()
     calls  = status.get('calls', [])
     if not calls:
         print('  (нет активных звонков)')
@@ -447,12 +566,16 @@ def show_cdr_summary():
     section('Статистика за последние 24 часа')
     now  = datetime.now()
     then = now - timedelta(days=1)
-    rows = client.get('/cdr', params={
-        'date_from': then.strftime('%Y-%m-%d %H:%M:%S'),
-        'date_to':   now.strftime('%Y-%m-%d %H:%M:%S'),
-        'limit': 1000
-    })
-    records  = rows.get('data', rows) if isinstance(rows, dict) else rows
+    data = requests.get(
+        f'{BASE_URL}/cdr',
+        headers=HEADERS,
+        params={
+            'date_from': then.strftime('%Y-%m-%d %H:%M:%S'),
+            'date_to':   now.strftime('%Y-%m-%d %H:%M:%S'),
+            'limit':     1000
+        }
+    ).json()
+    records  = data.get('data', [])
     answered = [r for r in records if r.get('disposition') == 'ANSWERED']
     missed   = [r for r in records if r.get('disposition') == 'NO ANSWER']
 
@@ -477,14 +600,13 @@ if __name__ == '__main__':
 
 ***
 
-### 10. Справочник эндпоинтов
+#### Справочник эндпоинтов
 
 Базовый путь: `https://YOUR_HOST/pbxcore/api/v3/`
 
-> ⚠️ «Чтение» = GET. «Чтение и запись» = GET + POST + PUT + DELETE.\
-> Права настраиваются отдельно для каждого ресурса в разделе «API ключи».
+\{% hint style="warning" %\} «Чтение» = GET. «Чтение и запись» = GET + POST + PUT + DELETE. Права настраиваются отдельно для каждого ресурса в разделе «API ключи». \{% endhint %\}
 
-#### Телефония и маршрутизация
+**Телефония и маршрутизация**
 
 | Путь                     | Методы | Описание                                             |
 | ------------------------ | ------ | ---------------------------------------------------- |
@@ -501,7 +623,7 @@ if __name__ == '__main__':
 | `/conference-rooms`      | CRUD   | Конференц-залы                                       |
 | `/dialplan-applications` | CRUD   | Приложения диалплана                                 |
 
-#### Мониторинг и статистика
+**Мониторинг и статистика**
 
 | Путь                  | Методы | Описание                                    |
 | --------------------- | ------ | ------------------------------------------- |
@@ -514,21 +636,7 @@ if __name__ == '__main__':
 | `/sysinfo`            | GET    | Аппаратная информация о сервере             |
 | `/syslog`             | GET    | Системные логи и диагностика                |
 
-#### Аутентификация и управление доступом
-
-| Путь                   | Методы   | Описание                                    |
-| ---------------------- | -------- | ------------------------------------------- |
-| `/auth`                | POST     | Получить JWT access\_token по API-ключу     |
-| `/auth/refresh`        | POST     | Обновить access\_token через refresh\_token |
-| `/api-keys`            | CRUD     | Управление API-ключами                      |
-| `/asterisk-managers`   | CRUD     | Пользователи AMI                            |
-| `/asterisk-rest-users` | CRUD     | Пользователи ARI (для ARI-приложений)       |
-| `/users`               | CRUD     | Пользователи веб-интерфейса                 |
-| `/passkeys`            | CRUD     | WebAuthn / FIDO2 passkeys                   |
-| `/passwords`           | GET/POST | Генерация и валидация паролей               |
-| `/network-filters`     | GET      | Сетевые фильтры для UI-списков              |
-
-#### Системные настройки
+**Системные настройки**
 
 | Путь                | Методы   | Описание                                |
 | ------------------- | -------- | --------------------------------------- |
@@ -549,4 +657,4 @@ if __name__ == '__main__':
 | `/search`           | GET      | Глобальный поиск по всем сущностям      |
 | `/openapi`          | GET      | OpenAPI/Swagger спецификация            |
 
-> 📖 Интерактивная Swagger-документация: `https://your-mikopbx.com/pbxcore/api/v3/openapi`
+Интерактивная Swagger-документация вашей станции: `https://your-mikopbx.com/pbxcore/api/v3/openapi`&#x20;
