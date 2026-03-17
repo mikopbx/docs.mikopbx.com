@@ -38,7 +38,7 @@ urllib3.disable_warnings()
 В этой инструкции будут рассмотрены следующие задачи:
 
 * **Создать сотрудника** — разрешите доступ к ресурсу **"Employees Management"** на уровне **"Чтение и запись"**
-* **Создать SIP-провайдера** — разрешите доступ к ресурсу **"SIP Providers"** на уровне **"Чтение и запись"**
+* **Создать SIP-провайдера** — разрешите доступ к ресурсу **"Providers"** на уровне **"Чтение и запись"**
 * **Получить статусы регистрации** сотрудников и провайдеров — разрешите доступ к ресурсу **"SIP"** на уровне **"Чтение"**
 * **Получить историю звонков** — разрешите доступ к ресурсу **"Call Records"** на уровне **"Чтение"**
 
@@ -195,7 +195,7 @@ Process finished with exit code 0
 
 <figure><img src="../../.gitbook/assets/createdExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
 
-#### Получение списка сотрудников
+#### Вывод списка сотрудников
 
 ```python
 def list_employees(search: str = '', limit: int = 100, offset: int = 0) -> list:
@@ -343,20 +343,29 @@ Process finished with exit code 0
 
 <figure><img src="../../.gitbook/assets/createdProviderWithAPI.png" alt=""><figcaption><p>Созданный провайдер с помощью REST API</p></figcaption></figure>
 
-#### **Список всех провайдеров**
+#### **Вывод списка всех провайдеров**
 
 ```python
 def list_providers() -> list:
-    r = requests.get(f'{BASE_URL}/providers', headers=HEADERS)
+    r = requests.get(f'{BASE_URL}/sip-providers', headers=HEADERS)
     return r.json().get('data', [])
 
 for prov in list_providers():
     print(f"  {prov.get('id'):<20} {prov.get('description', '')}  [{prov.get('type', '')}]")
 ```
 
-***
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
 
-#### История звонков (CDR)
+{% code overflow="wrap" %}
+```python
+  SIP-TRUNK-34F7CAFE     [SIP]
+  SIP-TRUNK-7B5977ED     [SIP]
+
+Process finished with exit code 0
+```
+{% endcode %}
+
+### Вывод истории звонков (CDR)
 
 **Эндпоинт:** `GET /pbxcore/api/v3/cdr` — только чтение.
 
@@ -365,9 +374,9 @@ for prov in list_providers():
 | Параметр      | Тип     | Описание                                     |
 | ------------- | ------- | -------------------------------------------- |
 | `offset`      | integer | Смещение для пагинации (по умолч.: 0)        |
-| `limit`       | integer | Кол-во записей, макс. 1000                   |
-| `date_from`   | string  | Начало периода: `YYYY-MM-DD HH:MM:SS`        |
-| `date_to`     | string  | Конец периода: `YYYY-MM-DD HH:MM:SS`         |
+| `limit`       | integer | Кол-во записей, макс. 100                    |
+| `dateFrom`    | string  | Начало периода: `YYYY-MM-DD HH:MM:SS`        |
+| `dateTo`      | string  | Конец периода: `YYYY-MM-DD HH:MM:SS`         |
 | `src_num`     | string  | Фильтр по номеру звонящего                   |
 | `dst_num`     | string  | Фильтр по номеру назначения                  |
 | `disposition` | string  | `ANSWERED` / `NO ANSWER` / `BUSY` / `FAILED` |
@@ -377,26 +386,31 @@ from datetime import datetime, timedelta
 
 def get_cdr(
     offset: int = 0,
-    limit: int = 100,
+    limit: int = 20,
     date_from: str = None,
     date_to: str = None,
     src_num: str = None,
     dst_num: str = None,
     disposition: str = None,
 ) -> list:
-    params = {'offset': offset, 'limit': min(limit, 1000)}
-    if date_from:   params['date_from']   = date_from
-    if date_to:     params['date_to']     = date_to
-    if src_num:     params['src_num']     = src_num
-    if dst_num:     params['dst_num']     = dst_num
+    params = {'offset': offset, 'limit': min(limit, 100)}
+    if date_from:   params['dateFrom'] = date_from
+    if date_to:     params['dateTo']   = date_to
+    if src_num:     params['src_num']  = src_num
+    if dst_num:     params['dst_num']  = dst_num
     if disposition: params['disposition'] = disposition
 
     r = requests.get(f'{BASE_URL}/cdr', headers=HEADERS, params=params)
-    return r.json().get('data', [])
+    return r.json().get('data', {}).get('records', [])
 
 
-# Последние 20 звонков
-for row in get_cdr(limit=20):
+now  = datetime.now()
+then = now - timedelta(days=7)
+
+for row in get_cdr(
+    date_from=then.strftime('%Y-%m-%dT%H:%M:%S'),
+    date_to=now.strftime('%Y-%m-%dT%H:%M:%S'),
+):
     print(
         str(row.get('start', ''))[:16],
         row.get('src_num', ''), '→', row.get('dst_num', ''),
@@ -404,16 +418,29 @@ for row in get_cdr(limit=20):
     )
 ```
 
-**Статистика за период**
+<mark style="color:$danger;">В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:</mark>
+
+{% code overflow="wrap" %}
+```python
+2026-03-16 09:12  201 → 202  ANSWERED  183 с
+2026-03-16 11:34  203 → 201  ANSWERED  47 с
+
+Process finished with exit code 0
+```
+{% endcode %}
+
+#### **Статистика за период**
+
+Для получения статистики за период добавьте следующую функцию:
 
 ```python
 def cdr_stats(days: int = 1) -> dict:
     now  = datetime.now()
     then = now - timedelta(days=days)
     records = get_cdr(
-        date_from=then.strftime('%Y-%m-%d %H:%M:%S'),
-        date_to=now.strftime('%Y-%m-%d %H:%M:%S'),
-        limit=1000
+        date_from=then.strftime('%Y-%m-%dT%H:%M:%S'),
+        date_to=now.strftime('%Y-%m-%dT%H:%M:%S'),
+        limit=100
     )
     answered  = [r for r in records if r.get('disposition') == 'ANSWERED']
     missed    = [r for r in records if r.get('disposition') == 'NO ANSWER']
@@ -432,60 +459,112 @@ print(f"Пропущено:         {stats['missed']}")
 print(f"Средняя длит.:     {stats['avg_sec']}с")
 ```
 
+<mark style="color:$danger;">В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:</mark>
+
+{% code overflow="wrap" %}
+```python
+Звонков за 7 дней: 12
+Отвечено:          9
+Пропущено:         3
+Средняя длит.:     114с
+
+Process finished with exit code 0
+```
+{% endcode %}
+
 **Поля CDR-записи**
 
 | Поле            | Тип      | Описание                                     |
 | --------------- | -------- | -------------------------------------------- |
+| `id`            | integer  | Уникальный идентификатор записи              |
 | `start`         | datetime | Время начала звонка                          |
 | `answer`        | datetime | Время ответа (пусто — пропущен)              |
 | `endtime`       | datetime | Время завершения                             |
 | `src_num`       | string   | Номер звонящего                              |
+| `src_name`      | string   | Имя звонящего                                |
 | `dst_num`       | string   | Номер назначения                             |
+| `dst_name`      | string   | Имя вызываемого                              |
 | `disposition`   | string   | `ANSWERED` / `NO ANSWER` / `BUSY` / `FAILED` |
-| `billsec`       | int      | Длительность разговора (секунды)             |
-| `duration`      | int      | Полная длительность (включая дозвон)         |
-| `recordingfile` | string   | Путь к MP3-записи разговора                  |
+| `billsec`       | integer  | Длительность разговора (секунды)             |
+| `duration`      | integer  | Полная длительность (включая дозвон)         |
+| `recordingfile` | string   | Путь к файлу записи разговора                |
+| `playback_url`  | string   | URL для воспроизведения записи               |
+| `download_url`  | string   | URL для скачивания записи                    |
+| `did`           | string   | DID номер (прямой входящий набор)            |
+| `dtmf_digits`   | string   | DTMF цифры, нажатые в IVR                    |
 
-\{% hint style="info" %\} Стриминг записи разговора: `GET /cdr/{id}/recording` — поддерживает HTTP Range для постепенной загрузки. \{% endhint %\}
+### Мониторинг: статусы SIP и активные звонки
 
-***
+#### **Статусы регистрации сотрудников и SIP-провайдеров**
 
-#### Мониторинг: статусы SIP и активные звонки
-
-**Статусы регистрации сотрудников и провайдеров**
-
-**Эндпоинт:** `GET /pbxcore/api/v3/sip` — только мониторинг.
+**Эндпоинты:** `GET /pbxcore/api/v3/sip` , `POST /pbxcore/api/v3/sip-providers`
 
 ```python
-def get_sip_status() -> dict:
-    r = requests.get(f'{BASE_URL}/sip', headers=HEADERS)
-    return r.json()
+from datetime import datetime
+def show_employees():
+    r = requests.get(f'{BASE_URL}/sip:getStatuses', headers=HEADERS)
+    peers = r.json().get('data', {})
+    for number, info in peers.items():
+        icon = '🟢' if info.get('status') == 'Available' else '🔴'
+        print(f"  {icon}  {number:>6}  {info.get('callerid', '')}  [{info.get('status', '')}]")
 
-sip = get_sip_status()
 
-# Статусы сотрудников
-peers = sip.get('peers', sip.get('data', []))
-print('\n── Сотрудники ──────────────────────────────')
-for p in peers:
-    icon = '🟢' if p.get('state') == 'OK' else '🔴'
-    print(f"  {icon}  {p.get('id'):>6}  {p.get('state', '')}")
+def show_providers():
+    r = requests.get(f'{BASE_URL}/sip-providers:getStatuses', headers=HEADERS)
 
-# Статусы провайдеров
-registry = sip.get('registry', [])
-print('\n── Провайдеры (регистрация) ─────────────────')
-for entry in registry:
-    icon = '🟢' if entry.get('state') == 'OK' else '🔴'
-    print(f"  {icon}  {entry.get('username', '?')}@{entry.get('host', '?')}  [{entry.get('state')}]")
+    providers = r.json().get('data', {}).get('sip', {})
+    for prov_id, info in providers.items():
+        icon = '🟢' if info.get('state') == 'registered' else '🔴'
+        print(f"  {icon}  {info.get('description', prov_id):>20}  {info.get('username', '')}@{info.get('host', '')}  [{info.get('state', '')}]")
+
+
+if __name__ == '__main__':
+    print(f'MikoPBX Monitor [{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}]')
+    print('\n── Сотрудники ──────────────────────────────')
+    show_employees()
+    print('\n── Провайдеры ───────────────────────────────')
+    show_providers()
 ```
 
-**Значения поля `state`**
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
 
-| Значение      | Описание                                               |
-| ------------- | ------------------------------------------------------ |
-| `OK`          | Устройство зарегистрировано и доступно                 |
-| `UNKNOWN`     | Не зарегистрировано (оффлайн)                          |
-| `Unreachable` | Было зарегистрировано, но не отвечает на QUALIFY-пинги |
-| `OFF`         | Регистрация отключена в настройках провайдера          |
+{% code overflow="wrap" fullWidth="true" %}
+```python
+MikoPBX Monitor [2026-03-17 16:47:35]
+
+── Сотрудники ──────────────────────────────
+  🔴     201  Smith James  [Unavailable]
+  🟢     202  Brown Brandon  [Available]
+  🔴     203  Collins Melanie  [Unavailable]
+  🔴     243  Иванов Иван  [Unavailable]
+  🟢     244  Петрова Анна  [Available] 
+  🔴     251  Иванов Иван  [Unavailable]
+  🟢     252  Петрова Анна  [Available]
+  🔴     253  Сидоров Пeтр  [Unavailable]
+
+── Провайдеры ───────────────────────────────
+  🔴         Demo provider  SIP-PROVIDER-122642725b9265fd7151c@demo.askozia.ru  [rejected]
+  🟢               Zadarma  316811@sip.zadarma.com  [registered]
+
+Process finished with exit code 0
+
+```
+{% endcode %}
+
+**Статусы сотрудников (поле `status`)**
+
+| Значение      | Описание                     |
+| ------------- | ---------------------------- |
+| `Available`   | Зарегистрирован и доступен   |
+| `Unavailable` | Не зарегистрирован (оффлайн) |
+
+**Статусы провайдеров (поле `state`)**
+
+| Значение       | Описание                              |
+| -------------- | ------------------------------------- |
+| `registered`   | Зарегистрирован на сервере провайдера |
+| `rejected`     | Регистрация отклонена сервером        |
+| `unregistered` | Не зарегистрирован                    |
 
 **Активные звонки в реальном времени**
 
