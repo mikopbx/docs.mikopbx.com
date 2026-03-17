@@ -14,7 +14,7 @@ import urllib3
 urllib3.disable_warnings()
 ```
 
-Настоятельно рекомендуется выпустить доверенный сертификат. Самый простой способ селать это - с помощью модуля [Let's encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md).
+Настоятельно рекомендуется выпустить доверенный сертификат. Самый простой способ селать это - с помощью модуля [Let's encrypt](../../../modules/miko/module-get-ssl-lets-encrypt.md).
 {% endhint %}
 
 ### Подготовка: API-ключ и окружение
@@ -23,7 +23,7 @@ urllib3.disable_warnings()
 
 1. Перейдите в раздел: **"Система" → "API ключи".**
 
-<figure><img src="../../.gitbook/assets/APIKeysSection.png" alt=""><figcaption><p>Раздел "Система" -> "API ключи"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/APIKeysSection.png" alt=""><figcaption><p>Раздел "Система" -> "API ключи"</p></figcaption></figure>
 
 2. Нажмите **"Добавить API ключ".**
 
@@ -33,7 +33,7 @@ urllib3.disable_warnings()
 
 В зависимости от задачи переключите тумблер **«Полные права доступа»** или настройте права вручную для каждого ресурса. Придерживайтесь принципа минимальных привилегий (Least Privilege) — каждый ключ должен иметь доступ только к тем ресурсам, которые реально нужны.
 
-<figure><img src="../../.gitbook/assets/APIKeyBasicSettings.png" alt=""><figcaption><p>Базовые настройки API ключа</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/APIKeyBasicSettings.png" alt=""><figcaption><p>Базовые настройки API ключа</p></figcaption></figure>
 
 В этой инструкции будут рассмотрены следующие задачи:
 
@@ -41,8 +41,9 @@ urllib3.disable_warnings()
 * **Создать SIP-провайдера** — разрешите доступ к ресурсу **"Providers"** на уровне **"Чтение и запись"**
 * **Получить статусы регистрации** сотрудников и провайдеров — разрешите доступ к ресурсу **"SIP"** на уровне **"Чтение"**
 * **Получить историю звонков** — разрешите доступ к ресурсу **"Call Records"** на уровне **"Чтение"**
+* Активные звонки в реальном времени — разрешите доступ к ресурсу **"PBX Status"** на уровне **"Чтение"**
 
-<figure><img src="../../.gitbook/assets/APIKeyCallRecords.png" alt=""><figcaption><p>Пример настройки прав доступа</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/APIKeyCallRecords.png" alt=""><figcaption><p>Пример настройки прав доступа</p></figcaption></figure>
 
 В этой статье, мы будем работать с Python, поэтому необходимо установить все необходимые зависимости:
 
@@ -193,7 +194,7 @@ Process finished with exit code 0
 
 На станции будут созданы сотрудники 243 и 244.
 
-<figure><img src="../../.gitbook/assets/createdExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/createdExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
 
 #### Вывод списка сотрудников
 
@@ -271,7 +272,7 @@ Process finished with exit code 0
 
 На станции будет создано 3 сотрудника:
 
-<figure><img src="../../.gitbook/assets/created3ExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/created3ExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
 
 ### Работа с SIP-провайдерами
 
@@ -341,7 +342,7 @@ Process finished with exit code 0
 
 На станции будет создан провайдер:
 
-<figure><img src="../../.gitbook/assets/createdProviderWithAPI.png" alt=""><figcaption><p>Созданный провайдер с помощью REST API</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/createdProviderWithAPI.png" alt=""><figcaption><p>Созданный провайдер с помощью REST API</p></figcaption></figure>
 
 #### **Вывод списка всех провайдеров**
 
@@ -414,16 +415,23 @@ for row in get_cdr(
     print(
         str(row.get('start', ''))[:16],
         row.get('src_num', ''), '→', row.get('dst_num', ''),
-        row.get('disposition', ''), row.get('billsec', 0), 'с'
+        row.get('disposition', ''), row.get('totalBillsec', 0), 'с'
     )
 ```
 
-<mark style="color:$danger;">В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:</mark>
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
 
 {% code overflow="wrap" %}
 ```python
-2026-03-16 09:12  201 → 202  ANSWERED  183 с
-2026-03-16 11:34  203 → 201  ANSWERED  47 с
+2026-03-17 13:30 252 → 202 ANSWERED 48 с
+2026-03-17 13:30 243 → 252 BUSY 0 с
+2026-03-17 13:30 243 → 89161111111 CHANUNAVAIL 0 с
+2026-03-17 13:29 202 → 243 NOANSWER 0 с
+2026-03-17 13:29 202 → 202 ANSWERED 2 с
+2026-03-17 13:29 202 → 243 NOANSWER 0 с
+2026-03-17 13:29 202 → 10003246 NOANSWER 0 с
+2026-03-17 13:28 202 → 243 NOANSWER 0 с
+
 
 Process finished with exit code 0
 ```
@@ -443,8 +451,8 @@ def cdr_stats(days: int = 1) -> dict:
         limit=100
     )
     answered  = [r for r in records if r.get('disposition') == 'ANSWERED']
-    missed    = [r for r in records if r.get('disposition') == 'NO ANSWER']
-    total_dur = sum(r.get('billsec', 0) for r in answered)
+    missed = [r for r in records if r.get('disposition') in ('NO ANSWER', 'NOANSWER')]
+    total_dur = sum(r.get('totalBillsec', 0) for r in answered)
     return {
         'total':    len(records),
         'answered': len(answered),
@@ -459,39 +467,41 @@ print(f"Пропущено:         {stats['missed']}")
 print(f"Средняя длит.:     {stats['avg_sec']}с")
 ```
 
-<mark style="color:$danger;">В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:</mark>
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
 
 {% code overflow="wrap" %}
 ```python
-Звонков за 7 дней: 12
-Отвечено:          9
-Пропущено:         3
-Средняя длит.:     114с
+Звонков за 7 дней: 13
+Отвечено:          2
+Пропущено:         5
+Средняя длит.:     25с
 
 Process finished with exit code 0
 ```
 {% endcode %}
 
+{% hint style="info" %}
+Звонки со статусом "CHANUNAVAIL" не учитываются в статистике "**Отвечено**", "**Пропущено**", "**Средняя длит.**".
+{% endhint %}
+
 **Поля CDR-записи**
 
-| Поле            | Тип      | Описание                                     |
-| --------------- | -------- | -------------------------------------------- |
-| `id`            | integer  | Уникальный идентификатор записи              |
-| `start`         | datetime | Время начала звонка                          |
-| `answer`        | datetime | Время ответа (пусто — пропущен)              |
-| `endtime`       | datetime | Время завершения                             |
-| `src_num`       | string   | Номер звонящего                              |
-| `src_name`      | string   | Имя звонящего                                |
-| `dst_num`       | string   | Номер назначения                             |
-| `dst_name`      | string   | Имя вызываемого                              |
-| `disposition`   | string   | `ANSWERED` / `NO ANSWER` / `BUSY` / `FAILED` |
-| `billsec`       | integer  | Длительность разговора (секунды)             |
-| `duration`      | integer  | Полная длительность (включая дозвон)         |
-| `recordingfile` | string   | Путь к файлу записи разговора                |
-| `playback_url`  | string   | URL для воспроизведения записи               |
-| `download_url`  | string   | URL для скачивания записи                    |
-| `did`           | string   | DID номер (прямой входящий набор)            |
-| `dtmf_digits`   | string   | DTMF цифры, нажатые в IVR                    |
+| Поле                      | Тип      | Описание                                                                  |
+| ------------------------- | -------- | ------------------------------------------------------------------------- |
+| `linkedid`                | string   | Уникальный идентификатор звонка                                           |
+| `start`                   | datetime | Время начала звонка                                                       |
+| `src_num`                 | string   | Номер звонящего                                                           |
+| `src_name`                | string   | Имя звонящего                                                             |
+| `dst_num`                 | string   | Номер назначения                                                          |
+| `dst_name`                | string   | Имя вызываемого                                                           |
+| `disposition`             | string   | `ANSWERED` / `NO ANSWER` / `NOANSWER` / `BUSY` / `CHANUNAVAIL` / `FAILED` |
+| `totalBillsec`            | integer  | Длительность разговора (секунды)                                          |
+| `totalDuration`           | integer  | Полная длительность (включая дозвон)                                      |
+| `records`                 | array    | Детальные записи по каждому плечу звонка                                  |
+| `records[].recordingfile` | string   | Путь к файлу записи                                                       |
+| `records[].playback_url`  | string   | URL для воспроизведения записи                                            |
+| `records[].download_url`  | string   | URL для скачивания записи                                                 |
+| `records[].dtmf_digits`   | string   | DTMF цифры, нажатые в IVR                                                 |
 
 ### Мониторинг: статусы SIP и активные звонки
 
@@ -566,174 +576,41 @@ Process finished with exit code 0
 | `rejected`     | Регистрация отклонена сервером        |
 | `unregistered` | Не зарегистрирован                    |
 
-**Активные звонки в реальном времени**
+#### **Активные звонки в реальном времени**
 
 **Эндпоинт:** `GET /pbxcore/api/v3/pbx-status`
 
 ```python
-def get_active_calls() -> dict:
-    r = requests.get(f'{BASE_URL}/pbx-status', headers=HEADERS)
-    return r.json()
+def get_active_calls() -> list:
+    r = requests.get(f'{BASE_URL}/pbx-status:getActiveCalls', headers=HEADERS)
+    return r.json().get('data', [])
 
-status   = get_active_calls()
-calls    = status.get('calls', [])
-channels = status.get('channels', [])
+calls = get_active_calls()
 
 print(f'Активных звонков: {len(calls)}')
-print(f'Активных каналов: {len(channels)}')
-
 for call in calls:
-    print(f"  📞 {call.get('src_num', '?')} → {call.get('dst_num', '?')}  ({call.get('duration', 0)}с)")
+    print(f"  {call.get('src_num', '?')} → {call.get('dst_num', '?')}  [{call.get('src_name', '')} → {call.get('dst_name', '')}]")
 ```
 
-***
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
 
-#### Полный скрипт мониторинга
-
+{% code overflow="wrap" %}
 ```python
-"""
-mikopbx_monitor.py — мониторинг MikoPBX REST API v3
-Запуск: python mikopbx_monitor.py
-"""
-import requests
-from datetime import datetime, timedelta
+Активных звонков: 1
+  243 → 252  [Иванов Иван → Петрова Анна]
 
-BASE_URL = 'https://your-mikopbx.com/pbxcore/api/v3'
-API_KEY  = 'ваш_api_ключ'
-
-HEADERS = {
-    'Authorization': f'Bearer {API_KEY}',
-    'Content-Type':  'application/json',
-}
-
-
-def section(title: str, width: int = 48):
-    pad = '─' * (width - len(title) - 2)
-    print(f'\n── {title} {pad}')
-
-
-def show_sip():
-    section('SIP-устройства и провайдеры')
-    data     = requests.get(f'{BASE_URL}/sip', headers=HEADERS).json()
-    peers    = data.get('peers', data.get('data', []))
-    registry = data.get('registry', [])
-
-    online  = [p for p in peers if p.get('state') == 'OK']
-    offline = [p for p in peers if p.get('state') != 'OK']
-    print(f'  Сотрудники — 🟢 Онлайн: {len(online)}  🔴 Оффлайн: {len(offline)}')
-    for p in offline:
-        print(f"    🔴 {p.get('id'):>6}  [{p.get('state')}]")
-
-    print('  Провайдеры:')
-    for e in registry:
-        icon = '🟢' if e.get('state') == 'OK' else '🔴'
-        print(f"    {icon}  {e.get('username', '?')}@{e.get('host', '?')}  [{e.get('state')}]")
-
-
-def show_active_calls():
-    section('Активные звонки')
-    status = requests.get(f'{BASE_URL}/pbx-status', headers=HEADERS).json()
-    calls  = status.get('calls', [])
-    if not calls:
-        print('  (нет активных звонков)')
-        return
-    for c in calls:
-        print(f"  📞  {c.get('src_num', '?')} → {c.get('dst_num', '?')}  {c.get('duration', 0)}с")
-
-
-def show_cdr_summary():
-    section('Статистика за последние 24 часа')
-    now  = datetime.now()
-    then = now - timedelta(days=1)
-    data = requests.get(
-        f'{BASE_URL}/cdr',
-        headers=HEADERS,
-        params={
-            'date_from': then.strftime('%Y-%m-%d %H:%M:%S'),
-            'date_to':   now.strftime('%Y-%m-%d %H:%M:%S'),
-            'limit':     1000
-        }
-    ).json()
-    records  = data.get('data', [])
-    answered = [r for r in records if r.get('disposition') == 'ANSWERED']
-    missed   = [r for r in records if r.get('disposition') == 'NO ANSWER']
-
-    print(f'  Всего звонков: {len(records)}')
-    print(f'  Отвечено:      {len(answered)}')
-    print(f'  Пропущено:     {len(missed)}')
-
-    print('  Последние 5 звонков:')
-    for r in records[:5]:
-        t    = str(r.get('start', ''))[:16]
-        icon = '✅' if r.get('disposition') == 'ANSWERED' else '❌'
-        print(f"    {icon} {t}  {r.get('src_num', '')} → {r.get('dst_num', '')}  {r.get('billsec', 0)}с")
-
-
-if __name__ == '__main__':
-    print(f'MikoPBX Monitor [{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}]')
-    print(f'Станция: {BASE_URL}')
-    show_sip()
-    show_active_calls()
-    show_cdr_summary()
+Process finished with exit code 0
 ```
+{% endcode %}
 
-***
+### Справочник эндпоинтов
 
-#### Справочник эндпоинтов
+Всю информацию по эндпоинтам, параметрам запроса и полям, Вы можете найти в API-справочнике у Вас в АТС. Для этого в разделе "**API ключи**", нажмите на "**Документация API**".
 
-Базовый путь: `https://YOUR_HOST/pbxcore/api/v3/`
+<figure><img src="../../../.gitbook/assets/apiDocumentation.png" alt=""><figcaption><p>Справочник по API</p></figcaption></figure>
 
-\{% hint style="warning" %\} «Чтение» = GET. «Чтение и запись» = GET + POST + PUT + DELETE. Права настраиваются отдельно для каждого ресурса в разделе «API ключи». \{% endhint %\}
+Таблицу с эндпоинтами Вы так же можете найти в подстатье текущей документации:
 
-**Телефония и маршрутизация**
-
-| Путь                     | Методы | Описание                                             |
-| ------------------------ | ------ | ---------------------------------------------------- |
-| `/employees`             | CRUD   | Сотрудники (внутренние номера)                       |
-| `/extensions`            | GET    | Все номера: сотрудники, IVR, очереди — только чтение |
-| `/sip-providers`         | CRUD   | SIP-провайдеры                                       |
-| `/iax-providers`         | CRUD   | IAX-провайдеры                                       |
-| `/providers`             | GET    | Все провайдеры (SIP + IAX) — только чтение           |
-| `/call-queues`           | CRUD   | Очереди вызовов                                      |
-| `/ivr-menu`              | CRUD   | IVR-меню                                             |
-| `/incoming-routes`       | CRUD   | Входящие маршруты (DID)                              |
-| `/outbound-routes`       | CRUD   | Исходящие маршруты                                   |
-| `/off-work-times`        | CRUD   | Расписание нерабочего времени                        |
-| `/conference-rooms`      | CRUD   | Конференц-залы                                       |
-| `/dialplan-applications` | CRUD   | Приложения диалплана                                 |
-
-**Мониторинг и статистика**
-
-| Путь                  | Методы | Описание                                    |
-| --------------------- | ------ | ------------------------------------------- |
-| `/sip`                | GET    | Статусы SIP-устройств (peers + registry)    |
-| `/iax`                | GET    | Статусы IAX-соединений                      |
-| `/pbx-status`         | GET    | Активные звонки и каналы в реальном времени |
-| `/cdr`                | GET    | История звонков с фильтрацией и пагинацией  |
-| `/cdr/{id}/recording` | GET    | Стриминг записи разговора (HTTP Range)      |
-| `/advice`             | GET    | Системные рекомендации и предупреждения     |
-| `/sysinfo`            | GET    | Аппаратная информация о сервере             |
-| `/syslog`             | GET    | Системные логи и диагностика                |
-
-**Системные настройки**
-
-| Путь                | Методы   | Описание                                |
-| ------------------- | -------- | --------------------------------------- |
-| `/system`           | GET/POST | Ping, reboot, update, factory reset     |
-| `/general-settings` | GET/PUT  | Общие настройки АТС                     |
-| `/time-settings`    | GET/PUT  | Часовой пояс и NTP                      |
-| `/network`          | GET/PUT  | Сетевые интерфейсы, IP, DNS, NAT        |
-| `/firewall`         | CRUD     | Правила файервола                       |
-| `/fail2ban`         | GET/PUT  | Политики блокировки IP                  |
-| `/mail-settings`    | GET/PUT  | Настройки SMTP / OAuth2                 |
-| `/storage`          | GET/PUT  | Управление дисками и хранилищем         |
-| `/s3-storage`       | GET/PUT  | S3-облачное хранилище записей           |
-| `/modules`          | CRUD     | Модули расширения                       |
-| `/license`          | GET/POST | Управление лицензиями                   |
-| `/sound-files`      | CRUD     | Звуковые файлы (IVR, MOH, объявления)   |
-| `/files`            | CRUD     | Управление файлами (chunked upload)     |
-| `/custom-files`     | CRUD     | Пользовательские конфигурационные файлы |
-| `/search`           | GET      | Глобальный поиск по всем сущностям      |
-| `/openapi`          | GET      | OpenAPI/Swagger спецификация            |
-
-Интерактивная Swagger-документация вашей станции: `https://your-mikopbx.com/pbxcore/api/v3/openapi`&#x20;
+{% content-ref url="endpoints.md" %}
+[endpoints.md](endpoints.md)
+{% endcontent-ref %}
