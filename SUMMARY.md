@@ -84,6 +84,7 @@
   * [Почта и уведомления](manual/system/mail-settings/README.md)
     * [Настройка Gmail (Архив)](manual/system/mail-settings/gmail.md)
     * [Настройка Yandex Mail (Логин, Пароль)](manual/system/mail-settings/yandex.md)
+    * [Настройка Mail.ru (Логин, Пароль)](manual/system/mail-settings-1/mailru.md)
     * [Настройка Mail.ru (Логин, Пароль)](manual/system/mail-settings/mailru.md)
   * [Доступ к AMI](manual/system/asterisk-managers.md)
   * [Кастомизация системных файлов](manual/system/custom-files.md)
@@ -92,6 +93,7 @@
     * [Настройка Yandex Mail (oAuth2)](manual/system/mail-settings-1/yandex-oauth2.md)
     * [Настройка Microsoft Outlook (oAuth2)](manual/system/mail-settings-1/microsoft-oauth2.md)
     * [Настройка Proton (Логин, Пароль)](manual/system/mail-settings-1/proton.md)
+    * [Настройка Mail.ru (Логин, Пароль)](manual/system/mail-settings-1/mailru.md)
   * [API ключи](manual/system/api-keys/README.md)
     * [Справочник эндпоинтов](manual/system/api-keys/endpoints.md)
 

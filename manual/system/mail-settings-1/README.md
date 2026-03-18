@@ -6,6 +6,10 @@ description: Настройка почты и уведомлений
 
 Раздел **«Почта и уведомления»** в MikoPBX позволяет настроить отправку системных уведомлений через электронную почту. Здесь администраторы указывают параметры SMTP-сервера, определяют события для уведомлений, такие как голосовые сообщения или системные ошибки, и редактируют шаблоны писем. Этот раздел помогает своевременно информировать пользователей и администраторов о важных событиях, обеспечивая эффективный контроль за работой системы.
 
+{% hint style="info" %}
+С 2026 года многие облачные провайдеры закрывают порты на SMTP по умолчанию (например Selectel, DigitalOcean). В случае ошибок подключений - уточняйте информацию у Вашего облачного провайдера.
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/emailSection.png" alt=""><figcaption><p>Раздел "<strong>Почта и уведомления</strong>" в MikoPBX</p></figcaption></figure>
 
 ### Общие настройки
@@ -69,8 +73,8 @@ description: Настройка почты и уведомлений
 [yandex.md](../mail-settings/yandex.md)
 {% endcontent-ref %}
 
-{% content-ref url="../mail-settings/mailru.md" %}
-[mailru.md](../mail-settings/mailru.md)
+{% content-ref url="mailru.md" %}
+[mailru.md](mailru.md)
 {% endcontent-ref %}
 
 {% content-ref url="proton.md" %}
