@@ -11,7 +11,7 @@ description: Настройка почты и уведомлений
 
 * [Gmail](gmail.md)
 * [Yandex](yandex.md)
-* [M](mailru.md)[ail.ru](mailru.md)
+* [M](/broken/pages/f8Q0FchRddKlHsYY8DAW)[ail.ru](/broken/pages/f8Q0FchRddKlHsYY8DAW)
 {% endhint %}
 
 ## Подключение к SMTP серверу <a href="#podkljuchenie_k_smtp_serveru" id="podkljuchenie_k_smtp_serveru"></a>
