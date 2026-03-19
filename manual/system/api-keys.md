@@ -14,7 +14,7 @@ import urllib3
 urllib3.disable_warnings()
 ```
 
-Настоятельно рекомендуется выпустить доверенный сертификат. Самый простой способ селать это - с помощью модуля [Let's encrypt](../../../modules/miko/module-get-ssl-lets-encrypt.md).
+Настоятельно рекомендуется выпустить доверенный сертификат. Самый простой способ селать это - с помощью модуля [Let's encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md).
 {% endhint %}
 
 ### Подготовка: API-ключ и окружение
@@ -23,7 +23,7 @@ urllib3.disable_warnings()
 
 1. Перейдите в раздел: **"Система" → "API ключи".**
 
-<figure><img src="../../../.gitbook/assets/APIKeysSection.png" alt=""><figcaption><p>Раздел "Система" -> "API ключи"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/APIKeysSection.png" alt=""><figcaption><p>Раздел "Система" -> "API ключи"</p></figcaption></figure>
 
 2. Нажмите **"Добавить API ключ".**
 
@@ -33,7 +33,7 @@ urllib3.disable_warnings()
 
 В зависимости от задачи переключите тумблер **«Полные права доступа»** или настройте права вручную для каждого ресурса. Придерживайтесь принципа минимальных привилегий (Least Privilege) — каждый ключ должен иметь доступ только к тем ресурсам, которые реально нужны.
 
-<figure><img src="../../../.gitbook/assets/APIKeyBasicSettings.png" alt=""><figcaption><p>Базовые настройки API ключа</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/APIKeyBasicSettings.png" alt=""><figcaption><p>Базовые настройки API ключа</p></figcaption></figure>
 
 В этой инструкции будут рассмотрены следующие задачи:
 
@@ -43,7 +43,7 @@ urllib3.disable_warnings()
 * **Получить историю звонков** — разрешите доступ к ресурсу **"Call Records"** на уровне **"Чтение"**
 * Активные звонки в реальном времени — разрешите доступ к ресурсу **"PBX Status"** на уровне **"Чтение"**
 
-<figure><img src="../../../.gitbook/assets/APIKeyCallRecords.png" alt=""><figcaption><p>Пример настройки прав доступа</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/APIKeyCallRecords.png" alt=""><figcaption><p>Пример настройки прав доступа</p></figcaption></figure>
 
 В этой статье, мы будем работать с Python, поэтому необходимо установить все необходимые зависимости:
 
@@ -194,7 +194,7 @@ Process finished with exit code 0
 
 На станции будут созданы сотрудники 243 и 244.
 
-<figure><img src="../../../.gitbook/assets/createdExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/createdExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
 
 #### Вывод списка сотрудников
 
@@ -272,7 +272,7 @@ Process finished with exit code 0
 
 На станции будет создано 3 сотрудника:
 
-<figure><img src="../../../.gitbook/assets/created3ExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/created3ExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
 
 ### Работа с SIP-провайдерами
 
@@ -342,7 +342,7 @@ Process finished with exit code 0
 
 На станции будет создан провайдер:
 
-<figure><img src="../../../.gitbook/assets/createdProviderWithAPI.png" alt=""><figcaption><p>Созданный провайдер с помощью REST API</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/createdProviderWithAPI.png" alt=""><figcaption><p>Созданный провайдер с помощью REST API</p></figcaption></figure>
 
 #### **Вывод списка всех провайдеров**
 
@@ -507,7 +507,7 @@ Process finished with exit code 0
 
 #### **Статусы регистрации сотрудников и SIP-провайдеров**
 
-**Эндпоинты:** `GET /pbxcore/api/v3/sip` , `POST /pbxcore/api/v3/sip-providers`
+**Эндпоинты:** `GET /pbxcore/api/v3/sip` , `GET /pbxcore/api/v3/sip-providers`
 
 ```python
 from datetime import datetime
@@ -607,10 +607,10 @@ Process finished with exit code 0
 
 Всю информацию по эндпоинтам, параметрам запроса и полям, Вы можете найти в API-справочнике у Вас в АТС. Для этого в разделе "**API ключи**", нажмите на "**Документация API**".
 
-<figure><img src="../../../.gitbook/assets/apiDocumentation.png" alt=""><figcaption><p>Справочник по API</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/apiDocumentation.png" alt=""><figcaption><p>Справочник по API</p></figcaption></figure>
 
 Таблицу с эндпоинтами Вы так же можете найти в подстатье текущей документации:
 
-{% content-ref url="endpoints.md" %}
-[endpoints.md](endpoints.md)
+{% content-ref url="api-klyuchi/endpoints.md" %}
+[endpoints.md](api-klyuchi/endpoints.md)
 {% endcontent-ref %}

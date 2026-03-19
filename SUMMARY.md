@@ -93,8 +93,10 @@
     * [Настройка Microsoft Outlook (oAuth2)](manual/system/mail-settings-1/microsoft-oauth2.md)
     * [Настройка Proton (Логин, Пароль)](manual/system/mail-settings-1/proton.md)
     * [Настройка Mail.ru (Логин, Пароль)](manual/system/mail-settings-1/mailru.md)
-  * [API ключи](manual/system/api-keys/README.md)
-    * [Справочник эндпоинтов](manual/system/api-keys/endpoints.md)
+  * [API ключи](manual/system/api-keys.md)
+  * [API ключи](manual/system/api-klyuchi/README.md)
+    * [Примеры использования REST API](manual/system/api-klyuchi/examples.md)
+    * [Справочник эндпоинтов](manual/system/api-klyuchi/endpoints.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 
