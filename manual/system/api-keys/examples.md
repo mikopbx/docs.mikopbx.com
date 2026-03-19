@@ -19,7 +19,7 @@ urllib3.disable_warnings()
 
 ### Подключение
 
-Для выполнения всех примеров из этой инструкции создайте API-ключ и настройте следующие права доступа (подробнее в [общей статье](../api-keys-2.md)):
+Для выполнения всех примеров из этой инструкции создайте API-ключ и настройте следующие права доступа (подробнее в [общей статье](/broken/pages/A4uke9kn3PKZNvoZrdp5)):
 
 | Ресурс               | Уровень доступа | Для каких примеров                        |
 | -------------------- | --------------- | ----------------------------------------- |
@@ -30,6 +30,12 @@ urllib3.disable_warnings()
 | PBX Status           | Чтение          | Активные звонки в реальном времени        |
 
 <figure><img src="../../../.gitbook/assets/APIKeyCallRecords.png" alt=""><figcaption><p>Пример настройки прав доступа (разрешение Call Records)</p></figcaption></figure>
+
+В этой статье, мы будем работать с Python, поэтому необходимо установить необходимые зависимости:
+
+```bash
+pip install requests
+```
 
 Ниже приведён шаблон подключения к станции через API-ключ. Используйте его перед всеми скриптами из этой инструкции. API-ключ передаётся напрямую в заголовке запроса — никакой дополнительной аутентификации не требуется:
 
@@ -154,6 +160,8 @@ Process finished with exit code 0
 
 На станции будут созданы сотрудники 243 и 244.
 
+<figure><img src="../../../.gitbook/assets/createdExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
+
 #### Вывод списка сотрудников
 
 ```python
@@ -166,6 +174,8 @@ def list_employees(search: str = '', limit: int = 100, offset: int = 0) -> list:
 for emp in list_employees():
     print(f"  {emp.get('number'):>6}  {emp.get('user_username', '')}")
 ```
+
+В случае успешного выполнения запроса Вы увидите следующий вывод в консоль:
 
 {% code overflow="wrap" %}
 ```python
@@ -213,6 +223,8 @@ for emp in employees:
 print(f'Создано: {len(created)}, Ошибок: {len(failed)}')
 ```
 
+В случае успешного выполнения запроса вы увидите следующий вывод в консоль:
+
 {% code overflow="wrap" %}
 ```python
  251 Иванов Иван
@@ -223,6 +235,10 @@ print(f'Создано: {len(created)}, Ошибок: {len(failed)}')
 Process finished with exit code 0
 ```
 {% endcode %}
+
+На станции будут создано 3 сотрудника.
+
+<figure><img src="../../../.gitbook/assets/created3ExtensionsWithAPI.png" alt=""><figcaption><p>Созданные сотрудники с помощью REST API</p></figcaption></figure>
 
 ### Работа с SIP-провайдерами
 
@@ -278,6 +294,8 @@ create_sip_provider(
 )
 ```
 
+В случае успешного выполнения запроса вы увидите следующий вывод в консоль:
+
 {% code overflow="wrap" %}
 ```python
  Провайдер создан: Zadarma
@@ -285,6 +303,10 @@ create_sip_provider(
 Process finished with exit code 0
 ```
 {% endcode %}
+
+На станции будет создан провайдер:
+
+<figure><img src="../../../.gitbook/assets/createdProviderWithAPI.png" alt=""><figcaption><p>Созданный провайдер с помощью REST API</p></figcaption></figure>
 
 #### Вывод списка всех провайдеров
 
@@ -296,6 +318,8 @@ def list_providers() -> list:
 for prov in list_providers():
     print(f"  {prov.get('id'):<20} {prov.get('description', '')}  [{prov.get('type', '')}]")
 ```
+
+В случае успешного выполнения запроса вы увидите следующий вывод в консоль:
 
 {% code overflow="wrap" %}
 ```python
@@ -357,6 +381,8 @@ for row in get_cdr(
     )
 ```
 
+В случае успешного выполнения запроса вы увидите следующий вывод в консоль:
+
 {% code overflow="wrap" %}
 ```python
 2026-03-17 13:30 252 → 202 ANSWERED 48 с
@@ -399,6 +425,8 @@ print(f"Отвечено:          {stats['answered']}")
 print(f"Пропущено:         {stats['missed']}")
 print(f"Средняя длит.:     {stats['avg_sec']}с")
 ```
+
+В случае успешного выполнения запроса вы увидите следующий вывод в консоль:
 
 {% code overflow="wrap" %}
 ```python
@@ -467,6 +495,8 @@ if __name__ == '__main__':
     show_providers()
 ```
 
+В случае успешного выполнения запроса вы увидите следующий вывод в консоль:
+
 {% code overflow="wrap" %}
 ```python
 MikoPBX Monitor [2026-03-17 16:47:35]
@@ -520,6 +550,8 @@ for call in calls:
     print(f"  {call.get('src_num', '?')} → {call.get('dst_num', '?')}  [{call.get('src_name', '')} → {call.get('dst_name', '')}]")
 ```
 
+В случае успешного выполнения запроса вы увидите следующий вывод в консоль:
+
 {% code overflow="wrap" %}
 ```python
 Активных звонков: 1
@@ -529,4 +561,4 @@ Process finished with exit code 0
 ```
 {% endcode %}
 
-> Полный список эндпоинтов и интерактивная документация — в разделе [Документация и список эндпоинтов.](endpoints.md)
+> Полный список эндпоинтов и интерактивная документация — в разделе [Интерактивная документация и список эндпоинтов.](endpoints.md)
