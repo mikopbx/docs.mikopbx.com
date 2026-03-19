@@ -2,7 +2,7 @@
 description: Инструкция с примерами по созданию и использованию API-ключей
 ---
 
-# API ключи
+# API ключи (OLD)
 
 В этой статье описана работа с REST API MikoPBX на примере базовых практических задач: создание сотрудников и SIP-провайдеров, получение истории звонков, мониторинг состояния станции в реальном времени.
 
@@ -611,6 +611,6 @@ Process finished with exit code 0
 
 Таблицу с эндпоинтами Вы так же можете найти в подстатье текущей документации:
 
-{% content-ref url="api-klyuchi/endpoints.md" %}
-[endpoints.md](api-klyuchi/endpoints.md)
+{% content-ref url="api-keys/endpoints.md" %}
+[endpoints.md](api-keys/endpoints.md)
 {% endcontent-ref %}
