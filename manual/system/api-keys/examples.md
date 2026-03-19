@@ -338,8 +338,8 @@ Process finished with exit code 0
 | ------------- | ------- | -------------------------------------------- |
 | `offset`      | integer | Смещение для пагинации (по умолч.: 0)        |
 | `limit`       | integer | Кол-во записей, макс. 100                    |
-| `dateFrom`    | string  | Начало периода: `YYYY-MM-DD HH:MM:SS`        |
-| `dateTo`      | string  | Конец периода: `YYYY-MM-DD HH:MM:SS`         |
+| `dateFrom`    | string  | Начало периода: `%Y-%m-%dT%H:%M:%S`          |
+| `dateTo`      | string  | Конец периода: `%Y-%m-%dT%H:%M:%S`           |
 | `src_num`     | string  | Фильтр по номеру звонящего                   |
 | `dst_num`     | string  | Фильтр по номеру назначения                  |
 | `disposition` | string  | `ANSWERED` / `NO ANSWER` / `BUSY` / `FAILED` |
