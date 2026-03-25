@@ -83,6 +83,7 @@
   * [API Keys](manual/system/api-keys/README.md)
     * [REST API Usage Examples](manual/system/api-keys/examples.md)
     * [Interactive Documentation and Endpoint List](manual/system/api-keys/endpoints.md)
+  * [ARI Access](manual/system/asterisk-rest-users.md)
 
 ## FAQ
 
