@@ -101,7 +101,7 @@ vi trust-policy.json
             ],
         "Resource": [
             "arn:aws:s3:::<a data-footnote-ref href="#user-content-fn-1">mikopbx-bucket</a>",
-            "arn:aws:s3:::<a data-footnote-ref href="#user-content-fn-2">mikopbx-bucket</a>/*"
+            "arn:aws:s3:::<a data-footnote-ref href="#user-content-fn-1">mikopbx-bucket</a>/*"
             ]
         },
         {
@@ -123,8 +123,8 @@ vi trust-policy.json
 <pre class="language-bash"><code class="lang-bash">#!/bin/bash
 
 # Определение переменных по умолчанию
-DEFAULT_IMAGE="<a data-footnote-ref href="#user-content-fn-3">mikopbx-2024.1.40-dev-x86_64.raw</a>"
-DEFAULT_BUCKET="<a data-footnote-ref href="#user-content-fn-4">mikopbx-bucket</a>"
+DEFAULT_IMAGE="<a data-footnote-ref href="#user-content-fn-1">mikopbx-2024.1.40-dev-x86_64.raw</a>"
+DEFAULT_BUCKET="<a data-footnote-ref href="#user-content-fn-1">mikopbx-bucket</a>"
 DEFAULT_DESCRIPTION="MikoPBX the best open source PBX on asterisk"
 DEFAULT_NAME="MikoPBX 2024.1.40-dev"
 
@@ -173,7 +173,7 @@ AMI_ID=$(aws ec2 register-image \
 	  --description "$DESCRIPTION" \
 	  --architecture x86_64 \
 	  --sriov-net-support simple \
-	  --virtualization-type paravirtual \
+	  --virtualization-type hvm \
 	  --ena-support \
 	  --boot-mode legacy-bios \
 	  --root-device-name "/dev/sda1" \
@@ -241,6 +241,10 @@ sh import-image.sh
 
 6. В разделе Network settings установите флажки **Allow SSH traffic** и **Allow HTTPS traffic**
 
+{% hint style="info" %}
+По умолчанию весь входящий трафик к EC2 в AWS запрещен, в том числе и SIP трафик. После создания ВМ не забудьте настроить security group к которой она прикреплена (разрешить необходимый трафик).
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_9.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
@@ -276,9 +280,3 @@ sh import-image.sh
 {% endhint %}
 
 [^1]: измените
-
-[^2]: измените
-
-[^3]: измените
-
-[^4]: измените

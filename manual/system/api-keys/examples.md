@@ -28,6 +28,7 @@ urllib3.disable_warnings()
 | SIP                  | Чтение          | Статусы регистрации сотрудников и транков |
 | Call Records         | Чтение          | История звонков (CDR)                     |
 | PBX Status           | Чтение          | Активные звонки в реальном времени        |
+| SIP Providers        | Чтение и запись | Создание и редактирование SIP провайдеров |
 
 <figure><img src="../../../.gitbook/assets/APIKeyCallRecords.png" alt=""><figcaption><p>Пример настройки прав доступа (разрешение Call Records)</p></figcaption></figure>
 
