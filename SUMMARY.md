@@ -80,6 +80,9 @@
     * [Gmail Setup (oAuth2)](manual/system/mail-settings-1/gmail-oauth2.md)
     * [Microsoft Outlook Setup (OAuth2)](manual/system/mail-settings-1/microsoft-oauth2.md)
     * [Proton Setup (Login, Password)](manual/system/mail-settings-1/proton.md)
+  * [API Keys](manual/system/api-keys/README.md)
+    * [REST API Usage Examples](manual/system/api-keys/examples.md)
+    * [Interactive Documentation and Endpoint List](manual/system/api-keys/endpoints.md)
 
 ## FAQ
 

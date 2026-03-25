@@ -101,7 +101,7 @@ vi trust-policy.json
             ],
         "Resource": [
             "arn:aws:s3:::<a data-footnote-ref href="#user-content-fn-1">mikopbx-bucket</a>",
-            "arn:aws:s3:::<a data-footnote-ref href="#user-content-fn-2">mikopbx-bucket</a>/*"
+            "arn:aws:s3:::<a data-footnote-ref href="#user-content-fn-1">mikopbx-bucket</a>/*"
             ]
         },
         {
@@ -124,8 +124,8 @@ vi trust-policy.json
 <pre class="language-bash"><code class="lang-bash">#!/bin/bash
 
 # Default variable definition
-DEFAULT_IMAGE="<a data-footnote-ref href="#user-content-fn-3">mikopbx-2024.1.40-dev-x86_64.raw</a>"
-DEFAULT_BUCKET="<a data-footnote-ref href="#user-content-fn-4">mikopbx-bucket</a>"
+DEFAULT_IMAGE="<a data-footnote-ref href="#user-content-fn-1">mikopbx-2024.1.40-dev-x86_64.raw</a>"
+DEFAULT_BUCKET="<a data-footnote-ref href="#user-content-fn-1">mikopbx-bucket</a>"
 DEFAULT_DESCRIPTION="MikoPBX the best open source PBX on asterisk"
 DEFAULT_NAME="MikoPBX 2024.1.40-dev"
 
@@ -174,7 +174,7 @@ AMI_ID=$(aws ec2 register-image \
 	  --description "$DESCRIPTION" \
 	  --architecture x86_64 \
 	  --sriov-net-support simple \
-	  --virtualization-type paravirtual \
+	  --virtualization-type hvm \
 	  --ena-support \
 	  --boot-mode legacy-bios \
 	  --root-device-name "/dev/sda1" \
@@ -278,9 +278,3 @@ Make sure to configure the Firewall on the MikoPBX
 {% endhint %}
 
 [^1]: change
-
-[^2]: change
-
-[^3]: change
-
-[^4]: change
