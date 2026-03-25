@@ -86,7 +86,7 @@
     * [Настройка Yandex Mail (Логин, Пароль)](manual/system/mail-settings/yandex.md)
     * [Настройка Mail.ru (Логин, Пароль)](manual/system/mail-settings-1/mailru.md)
   * [Доступ к AMI](manual/system/asterisk-managers.md)
-  * [Доступ к ARI (IN DEV)](manual/system/dostup-k-ari-in-dev.md)
+  * [Доступ к ARI ](manual/system/asterisk-rest-users.md)
   * [Кастомизация системных файлов](manual/system/custom-files.md)
   * [Почта и уведомления (new)](manual/system/mail-settings-1/README.md)
     * [Настройка Gmail (oAuth2)](manual/system/mail-settings-1/gmail-oauth2.md)
