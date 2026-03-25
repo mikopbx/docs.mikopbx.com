@@ -6,7 +6,7 @@ description: Короткое описание ARI (Asterisk REST Interface)
 
 ARI — это RESTful API с поддержкой WebSocket, который даёт полный контроль над каналами, мостами и медиапотоками Asterisk в реальном времени. В отличие от [REST API MikoPBX](api-keys/), ARI работает напрямую с ядром Asterisk и предназначен для разработки собственных телефонных приложений.
 
-**По умолчанию отключён** — включите при необходимости в разделе **«Система» → «Asterisk REST Interface (ARI)»**.
+**По умолчанию отключён** — включите при необходимости в разделе **«Система» → «Общие настройки» → «AMI\&ARI»**.
 
 {% hint style="info" %}
 Подробная документация по ARI доступна на официальном сайте Asterisk: [Asterisk REST Interface](https://docs.asterisk.org/Configuration/Interfaces/Asterisk-REST-Interface-ARI/)
