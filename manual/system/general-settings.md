@@ -145,7 +145,7 @@ MikoPBX предлагает два вида переводов: **Условн�
 
 **`SSH Public RSA Key`** - в этом поле описывает публичный, открытый SSH ключ текущей АТС. Это значение можно скопировать на другую станцию в поле  **`SSH Authorized Keys`,** это позволит подключаться к удаленному серверу без дополнительной авторизации.&#x20;
 
-## Web-интерфейс <a href="#web-interfejs" id="web-interfejs"></a>
+## HTTP/HTT{S <a href="#web-interfejs" id="web-interfejs"></a>
 
 <figure><img src="../../.gitbook/assets/10 (4).png" alt=""><figcaption><p>Раздел "Web-интерфейс" в настройках</p></figcaption></figure>
 
