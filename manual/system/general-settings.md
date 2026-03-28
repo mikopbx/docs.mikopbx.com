@@ -247,7 +247,7 @@ SSL/TLS сертификат — цифровой документ, подтве
 Чтобы добавить Passkey, нажмите кнопку **«+ Добавить Passkey»** и следуйте инструкциям браузера.
 
 {% hint style="info" %}
-Подробнее Вы можете прочитать <mark style="color:$danger;">здесь</mark>.
+Подробнее Вы можете прочитать [здесь](../../faq/management/passkeys.md).
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/WEBInterfacePwdGenSet.png" alt=""><figcaption><p>Вкладка "Пароль WEB интерфейса" в системных настройках</p></figcaption></figure>
