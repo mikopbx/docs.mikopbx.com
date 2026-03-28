@@ -97,7 +97,6 @@
   * [API ключи](manual/system/api-keys/README.md)
     * [Примеры использования REST API](manual/system/api-keys/examples.md)
     * [Интерактивная документация и список эндпоинтов](manual/system/api-keys/endpoints.md)
-  * [Общие настройки (New) - IN DEV](manual/system/obshie-nastroiki-new-in-dev.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 
