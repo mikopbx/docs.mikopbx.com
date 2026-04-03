@@ -4,9 +4,9 @@ description: >-
   пропущеных вызовах в Telegram
 ---
 
-# Уведомление в телеграмм о пропущенных
+# Уведомление в мессенджер о пропущенных
 
-## Пример на базе Dialplan <a href="#primer_na_baze_dialplan" id="primer_na_baze_dialplan"></a>
+## Уведомление Телеграм на базе Dialplan <a href="#primer_na_baze_dialplan" id="primer_na_baze_dialplan"></a>
 
 {% hint style="success" %}
 [Полезная статья](https://gist.github.com/dideler/85de4d64f66c1966788c1b2304b9caf1) по работе с Telegram-ботом средствами **curl.**
@@ -117,6 +117,55 @@ try {
 * **CHAT\_ID** - идентификатор чата, куда отправлять текстовое сообщение.
 
 Текст уведомления можно исправить в переменной «$**TEXT**».
+
+Пример скрипта для MAX
+
+```php
+
+<?php
+require_once 'Globals.php';
+use GuzzleHttp\Client;
+
+const MAX_API_HOST = 'https://platform-api.max.ru/';
+const CHAT_ID = 'CHAT_ID';
+const AUTHORIZATION = 'API_KEY'; // put real token here
+
+$agi = new MikoPBX\Core\Asterisk\AGI();
+
+$name = $agi->get_variable('CALLERID(name)', true);
+$num  = $agi->get_variable('CALLERID(num)', true);
+$did  = $agi->get_variable('FROM_DID', true);
+$id   = $agi->get_variable('CHANNEL(linkedid)', true);
+$date = date('Y.d.m H:i:s', (int)str_replace('mikopbx-', '', $id));
+
+$text = "Пропущенный вызов: {$name}\nисточник: {$did}\nдата: {$date}";
+
+$client = new Client([
+    'base_uri' => MAX_API_HOST,
+    'timeout' => 2,
+    'http_errors' => false,
+]);
+
+try {
+    $client->post('messages', [
+        'query' => [
+            'chat_id' => CHAT_ID,
+        ],
+        'headers' => [
+            'accept' => 'application/json',
+            'authorization' => AUTHORIZATION,
+            'content-type' => 'application/json',
+        ],
+        'json' => [
+            'text' => $text,
+        ],
+    ]);
+} catch (Throwable $e) {
+    // optional log
+}
+```
+
+
 
 3. После сохранения скрипта из адресной строки браузера скопируйте идентификатор скрипта, который имеет вид: «**DIALPLAN-APP-1B2B846E**»:
 
