@@ -274,6 +274,7 @@
 * [Патчи Ошибок](other/patchi-oshibok/README.md)
   * [2024.1.114](other/patchi-oshibok/2024.1.114.md)
 * [История версий](other/changelog/README.md)
+  * [MikoPBX 2026.1.223](other/changelog/mikopbx-2026.1.223.md)
   * [MikoPBX 2024.1](other/changelog/mikopbx-2024.1.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
