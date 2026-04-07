@@ -298,14 +298,3 @@ docker run -d \
 #### LXC развертывание
 
 Полная поддержка LXC-контейнеров с управлением сетью внутри контейнера, поддержкой DHCP (IPv4/IPv6) и работой firewall при наличии `CAP_NET_ADMIN`.
-
-#### Расположение файлов
-
-| Файл               | Путь                                                                          |
-| ------------------ | ----------------------------------------------------------------------------- |
-| Основная БД        | `/cf/conf/mikopbx.db` (без изменений)                                         |
-| Метаданные записей | `/storage/usbdisk1/mikopbx/astlogs/asterisk/recording_storage.db` **(новое)** |
-| Системные логи     | `/storage/usbdisk1/mikopbx/log/system/messages`                               |
-| PHP логи           | `/storage/usbdisk1/mikopbx/log/php/error.log`                                 |
-| Nginx логи         | `/storage/usbdisk1/mikopbx/log/nginx/error.log`                               |
-| Asterisk логи      | `/storage/usbdisk1/mikopbx/log/asterisk/`                                     |
