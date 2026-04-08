@@ -4,7 +4,7 @@
   * [Быстрое начало работы](readme/quick-start.md)
   * [Знакомство с MikoPBX](readme/getting-to-know-mikopbx.md)
   * [Системные требования](readme/system-requirements.md)
-  * [Обеспечение безопасности MikoPBX (in dev)](readme/security.md)
+  * [Обеспечение безопасности MikoPBX](readme/security.md)
 
 ## Установка <a href="#setup" id="setup"></a>
 
