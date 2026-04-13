@@ -6,6 +6,8 @@ description: Installing MikoPBX in an LXC container
 
 **Proxmox LXC** is a lightweight container solution within the Proxmox VE virtualization platform, based on LXC (Linux Containers) technology. They allow running isolated Linux systems with minimal resource consumption compared to full virtual machines.
 
+{% embed url="https://youtu.be/hrA8oDI3W2Q" %}
+
 ### Downloading the Container Template
 
 1. Go to the "**local**" storage, then "**CT Templates**". Click "**Download from URL**" to open the template download dialog from a URL.
