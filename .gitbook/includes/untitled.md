@@ -2,4 +2,7 @@
 title: Untitled
 ---
 
-{% embed url="https://rutube.ru/video/4b178a9d0659ba1040ab6c2da3593c85/" %}
+{% content-ref url="../../other/changelog/mikopbx-2026.1.223.md" %}
+[mikopbx-2026.1.223.md](../../other/changelog/mikopbx-2026.1.223.md)
+{% endcontent-ref %}
+
