@@ -19,7 +19,7 @@ description: Установка MikoPBX с помощью docker compose
 services:
   mikopbx:
     container_name: "mikopbx"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
     cap_add:
       - NET_ADMIN
@@ -65,7 +65,7 @@ sudo docker compose -f docker-compose.yml up
 services:
   mikopbx-first:
     container_name: "mikopbx-first"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-docker-first"
@@ -95,7 +95,7 @@ services:
       - GNATS_PORT=4223
 mikopbx-second:
     container_name: "mikopbx-second"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
     tty: true
     entrypoint: "/sbin/docker-entrypoint"
@@ -242,7 +242,7 @@ echo "iptables configuration completed successfully."
 services:
   mikopbx-first:
     container_name: "mikopbx-first"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-docker-first"
     volumes:
@@ -268,7 +268,7 @@ services:
       - "5060:5060/udp"  # UDP порт 5060 на хосте направляется на порт 5060 в контейнере
   mikopbx-second:
     container_name: "mikopbx-second"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     tty: true
     cap_add:
       - net_admin

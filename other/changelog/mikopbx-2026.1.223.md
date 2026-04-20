@@ -180,8 +180,8 @@ lxc.cap.keep: CAP_NET_ADMIN
 
 Подробнее в статье:
 
-{% content-ref url="../../manual/system/mail-settings-1/" %}
-[mail-settings-1](../../manual/system/mail-settings-1/)
+{% content-ref url="../../manual/system/mail-settings/" %}
+[mail-settings](../../manual/system/mail-settings/)
 {% endcontent-ref %}
 
 <figure><img src="../../.gitbook/assets/SMTPParametersGmailOAuth2.png" alt=""><figcaption><p>Пример настройки OAuth2 для Gmail</p></figcaption></figure>
