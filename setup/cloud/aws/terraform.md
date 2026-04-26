@@ -2,7 +2,7 @@
 description: Инструкция по развёртыванию MikoPBX в AWS через Terraform скрипт
 ---
 
-# AWS terraform скрипт (In dev)
+# AWS terraform скрипт&#x20;
 
 Данное руководство описывает развёртывание MikoPBX в AWS по принципу **Infrastructure as Code (IaC)** с помощью Terraform. Вся инфраструктура: EC2-инстанс, сетевые правила, диски и IP-адрес - описывается декларативно в коде, что обеспечивает воспроизводимость, версионирование и возможность быстрого повторного развёртывания в любом окружении.
 
@@ -279,7 +279,11 @@ mikopbx-aws-custom/
 
 #### `main.tf`
 
-Основной файл конфигурации, описывает все создаваемые ресурсы AWS: EC2-инстанс, Security Group, EBS-диски и Elastic IP.
+Основной файл конфигурации, описывает все создаваемые ресурсы AWS: EC2-инстанс, Security Group, EBS-диски и Elastic IP. По умолчанию Security Group открывает только порты, необходимые для работы MikoPBX: SSH, HTTP/HTTPS, SIP и RTP.
+
+{% hint style="danger" %}
+Не забудьте настроить firewall в MikoPBX после первой авторизации в систему! Подробнее - [здесь](../../../manual/connectivity/firewall.md).
+{% endhint %}
 
 ```hcl
 terraform {
@@ -369,7 +373,7 @@ resource "aws_security_group" "mikopbx_sg" {
 resource "aws_key_pair" "mikopbx_key" {
   count      = var.create_key_pair ? 1 : 0
   key_name   = "${var.instance_name}-key"
-  public_key = file(var.public_key_path)
+  public_key = file(pathexpand(var.public_key_path))
 }
 
 # --------------------------------------------------
@@ -408,7 +412,7 @@ resource "aws_ebs_volume" "mikopbx_storage" {
 }
 
 resource "aws_volume_attachment" "storage_attach" {
-  device_name = "/dev/sdb"
+  device_name = "/dev/sdc"
   volume_id   = aws_ebs_volume.mikopbx_storage.id
   instance_id = aws_instance.mikopbx.id
 }
@@ -429,6 +433,8 @@ resource "aws_eip" "mikopbx_eip" {
 ***
 
 #### `variables.tf`
+
+Объявляет переменные с их типами, описанием и значениями по умолчанию. Сам по себе не содержит конкретных значений - только схему.
 
 ```hcl
 variable "aws_region" {
@@ -490,22 +496,22 @@ variable "existing_key_pair_name" {
 
 #### `outputs.tf`
 
+Определяет, какие данные Terraform выведет после успешного `apply`: URL веб-интерфейса, логин и пароль для первой авторизации. Удобно для быстрого получения нужных реквизитов без входа в консоль AWS.
+
 ```hcl
-output "instance_id" {
-  value = aws_instance.mikopbx.id
-}
+output "first_login" {
+  description = "Данные для первого входа в веб-интерфейс MikoPBX"
+  value = <<-EOT
 
-output "public_ip" {
-  value = aws_eip.mikopbx_eip.public_ip
-}
+    ======================================
+     MikoPBX готова к работе!
+    ======================================
+     URL:      https://${aws_eip.mikopbx_eip.public_ip}
+     Логин:    admin
+     Пароль:   ${aws_instance.mikopbx.id}
+    ======================================
 
-output "web_ui_url" {
-  value = "https://${aws_eip.mikopbx_eip.public_ip}"
-}
-
-output "ami_used" {
-  description = "AMI, который был использован для инстанса"
-  value       = var.custom_ami_id
+  EOT
 }
 ```
 
@@ -513,9 +519,15 @@ output "ami_used" {
 
 #### `terraform.tfvars`
 
+Содержит конкретные значения переменных для вашего окружения: регион, AMI ID, тип инстанса и т.д. Именно этот файл меняется при переезде между окружениями (dev/staging/prod).
+
+{% hint style="info" %}
+В этом файле укажите Ваши параметры: замените aws\_region, instance\_name, instance\_type, storage\_disk\_size, allowed\_ssh\_cidr, create\_key\_pair, public\_key\_path если требуется. Обязательно поменяйте custom\_ami\_id на id Вашего AMI, созданного ранее.
+{% endhint %}
+
 ```hcl
-aws_region        = "us-east-1"
-custom_ami_id     = "ami-0a1b2c3d4e5f67890"   # <- ID из скрипта import-image.sh
+aws_region        = "ap-southeast-1"
+custom_ami_id     = "ami-0c8820696110d0613"   # <- ID из скрипта import-image.sh
 instance_name     = "mikopbx-vm"
 instance_type     = "t3.micro"
 storage_disk_size = 50
@@ -528,15 +540,51 @@ public_key_path   = "~/.ssh/id_rsa.pub"
 
 #### Запуск Terraform
 
+Убедитесь, что все 4 файла созданы, после этого выполните следующие команды:
+
 ```bash
-cd mikopbx-aws-custom
+cd mikopbx-aws-custom #Перейдите в директорию с созданными файлами
 
 terraform init
+```
+
+После выполнения Вы получите следующий вывод:
+
+```bash
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+```
+
+Выполните следующую команду для планирования конфигурации:
+
+```bash
 terraform plan
+```
+
+После выполнения Вы увидите конфигурацию, который terraform увидел и собирается создавать. Проверьте все параметры и преступайте к выполнению следующей команды:
+
+```bash
 terraform apply
 ```
 
-Введите `yes` для подтверждения.
+Далее введите `yes` для подтверждения. В случае успешного создания инстанса с MikoPBX, будут выведены необходимые параметры:
+
+```bash
+======================================
+ MikoPBX готов к работе!
+======================================
+ URL:      https://52.221.99.139
+ Логин:    admin
+ Пароль:   i-007352c23fa6d3b01
+======================================
+```
 
 ***
 
@@ -544,12 +592,12 @@ terraform apply
 
 После успешного `terraform apply`:
 
-1. Скопируйте `web_ui_url` из выходных значений
-2. Откройте его в браузере: `https://<public_ip>`
-3. Учётные данные первого входа — в **EC2 Serial Console**:
-   * Откройте EC2 → ваш инстанс → **Connect → EC2 serial console**
-   * Дождитесь полной загрузки системы
-   * Скопируйте логин и пароль
+1. Скопируйте `URL` из выходных значений
+2. Откройте его в браузере: `https://<URL>`
+
+<figure><img src="../../../.gitbook/assets/awsTerraformMikoPBXWEB.png" alt=""><figcaption></figcaption></figure>
+
+Для входа используйте данные, выведеные при создании инфраструктуры.
 
 > ⚠️ **После входа обязательно настройте Firewall в MikoPBX.**
 
@@ -571,7 +619,7 @@ aws ec2 deregister-image --image-id ami-0a1b2c3d4e5f67890
 aws ec2 delete-snapshot --snapshot-id snap-xxxxxxxxxxxxxxxxx
 
 # Удалить файл из S3
-aws s3 rm s3://mikopbx-bucket/mikopbx-2024.1.40-x86_64.raw
+aws s3 rm s3://mikopbx-bucket/mikopbx-2026.1.223-x86_64.raw
 
 # Удалить бакет (если пустой)
 aws s3 rb s3://mikopbx-bucket
