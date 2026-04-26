@@ -30,6 +30,7 @@
   * [AWS](setup/cloud/aws/README.md)
     * [AWS подробная инструкция](setup/cloud/aws/aws-deployment-guide.md)
     * [AWS Маркетплейс](setup/cloud/aws/aws-marketplace.md)
+    * [AWS terraform скрипт (In dev)](setup/cloud/aws/terraform.md)
   * [Microsoft Azure](setup/cloud/microsoft-azure.md)
   * [Google Cloud](setup/cloud/google-cloud/README.md)
     * [Google Cloud подробная инструкция](setup/cloud/google-cloud/deployment-guide.md)
