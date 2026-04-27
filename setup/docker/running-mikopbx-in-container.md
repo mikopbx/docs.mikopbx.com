@@ -18,7 +18,10 @@ To launch the container with your application, use the following commands:
 
 ```bash
 # Pulling the container image
-sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64
+sudo docker pull ghcr.io/mikopbx/mikopbx:latest
+
+## Alternatively, you can download the image from Docker Hub.
+# sudo docker pull mikopbx/mikopbx:latest
 
 # Running the container in unprivileged mode
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
@@ -27,8 +30,14 @@ sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx
            -e SSH_PORT=23 \
            -e ID_WWW_USER="$(id -u www-user)" \
            -e ID_WWW_GROUP="$(id -g www-user)" \
-           -it -d --restart always ghcr.io/mikopbx/mikopbx-x86-64
+           -it -d --restart always ghcr.io/mikopbx/mikopbx:latest
 ```
+
+{% hint style="info" %}
+Docker will automatically download the image for your system architecture (x86-64 or arm64).
+
+The image is also available on Docker Hub: `mikopbx/mikopbx:latest`
+{% endhint %}
 
 ### Testing the functionality
 
@@ -57,18 +66,20 @@ Check the command output for a message similar to the one below. This message in
 ```
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |               All services are fully loaded welcome                |
-|                       MikoPBX 2024.1.60.                           |
+|                         MikoPBX 2026.1.223                         |
+|       built on Tue Apr 7 03:39:14 UTC 2026 (arm64) in Docker       |
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |                        Web Interface Access                        |
 |                                                                    |
 | Local Network Address:                                             |
-| https://10.0.0.4                                                   |
+| https://192.168.65.3                                               |                                             |
 |                                                                    |
 | Web credentials:                                                   |
 |    Login: admin                                                    |
 |    Password: admin                                                 |
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 | SSH access disabled!                                               |
+|                                                                    |
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
 
@@ -86,7 +97,7 @@ Log into the web interface using the `admin` login and the `admin` password to m
 
 * The **NET\_ADMIN** flag is required for the proactive protection system **fail2ban** and the firewall **iptables** to function inside the container. When an access block is triggered, for example, by entering an incorrect password, access from the IP address of the attacker will be blocked.
 * If you need to use the "[Backup Module](../../manual/maintenance/backup.md)", the container should be run with the **–privileged** flag. When MikoPBX is run in a container, backups can also be performed by manually archiving the **cf** and **storage** directories. In this case, the privileged mode is not necessary, but the container must be stopped during copying.
-* The **–net=host** flag indicates that NAT between the host and container will not be used. MikoPBX will be directly connected to the host machine's network. All ports that the container needs to occupy will also be occupied on the host machine. If any port on the host machine is unavailable, errors will occur when loading MikoPBX. More details in the [Docker documentation...](https://docs.docker.com/network/host/)
+* The **–net=host** flag indicates that NAT between the host and container will not be used. MikoPBX will be directly connected to the host machine's network. All ports that the container needs to occupy will also be occupied on the host machine. If any port on the host machine is unavailable, errors will occur when loading MikoPBX. More details in the [Docker documentation.](https://docs.docker.com/network/host/)
 * If necessary, you can adjust the standard set of ports used by MikoPBX. This can be done by declaring environment variables when launching the container.
 
 ### Creating a container from a tar archive
@@ -96,20 +107,17 @@ In addition to using our official registry, you might need to create a container
 Here is an example code for its use:
 
 ```bash
-# Create a container from a tar archive
-sudo docker import \
-  --change 'ENTRYPOINT ["/bin/sh", "/sbin/docker-entrypoint"]' \
-  mikopbx-2024.1.114-x86_64.tar \
-  "mikopbx:2024.1.114"
+# Create a container from a tar archive (you need to download it first!)
+sudo docker load -i mikopbx-2026.1.223-x86_64-docker.tar
 
 # Launch the created container
 sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
-	 -v mikopbx_cf:/cf \
-	 -v mikopbx_storage:/storage \
-	 -e SSH_PORT=23 \
-	 -e ID_WWW_USER="$(id -u www-user)" \
-	 -e ID_WWW_GROUP="$(id -g www-user)" \
-	 -it mikopbx:2024.1.114
+     -v mikopbx_cf:/cf \
+     -v mikopbx_storage:/storage \
+     -e SSH_PORT=23 \
+     -e ID_WWW_USER="$(id -u www-user)" \
+     -e ID_WWW_GROUP="$(id -g www-user)" \
+     -it mikopbx:2026.1.223
 ```
 
 ### Environment variables for configuring MikoPBX
