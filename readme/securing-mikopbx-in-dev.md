@@ -45,7 +45,7 @@ You can read more about it [here](../other/patches/2024.1.114.md).
 
 The firewall is your first line of defense. It restricts who can connect to your PBX.
 
-Go to **Network & Firewall → Firewall**, make sure the toggle is enabled, and create rules that allow access only from the required subnets.
+Go to **Network and Firewall → Network Firewall**, make sure the toggle is enabled, and create rules that allow access only from the required subnets.
 
 Addresses to add to your rules:
 
@@ -77,8 +77,8 @@ Password requirements for SIP accounts and the web interface:
 
 What to check:
 
-* Open each employee's profile under **Telephony → Employees** and verify that the SIP password is sufficiently complex.
-* Check the web interface password under **System → General Settings → WEB Interface Password**.
+* Open each employee's profile under **Telephony → Extensions** and verify that the SIP password is sufficiently complex.
+* Check the web interface password under **System → General Settings → WEB interface password**.
 
 #### **Change the Auth Username**
 
@@ -88,7 +88,7 @@ By default, the employee's extension number (e.g., `204`) is used for SIP authen
 
 How to configure the Auth Username prefix in MikoPBX:
 
-Go to **System → General Settings → SIP** and fill in the **Auth Username Prefix** field. For example, with the prefix `MIKO`, extension `204` will authenticate as `204MIKO`.
+Go to **System → General Settings → SIP** and fill in the **Auth Username prefix for authorization** field. For example, with the prefix `MIKO`, extension `204` will authenticate as `204MIKO`.
 
 After changing the Auth Username, you must update the settings on every phone or softphone. The setting name varies by manufacturer:
 
@@ -105,11 +105,11 @@ After changing the Auth Username, you must update the settings on every phone or
 
 This setting is typically found under the **Account** or **SIP Account** section in the phone's web interface.
 
-**Enable Brute-Force Protection (Fail2Ban)**
+#### **Enable Brute-Force Protection (Fail2Ban)**
 
 Fail2Ban automatically blocks IP addresses that exhibit suspicious connection attempts.
 
-Go to **Network & Firewall → Intrusion Protection** and review the configured protection level:
+Go to **Network and Firewall → Intrusion Protection** and review the configured protection level:
 
 * **Weak** — 20 attempts in 10 min, ban for 10 min. For initial setup and trusted networks.
 * **Normal** — 10 attempts in 1 hour, ban for 1 day. Recommended for most deployments.
@@ -118,24 +118,26 @@ Go to **Network & Firewall → Intrusion Protection** and review the configured 
 
 > **Warning:** Make sure your office addresses are added to the whitelist to avoid accidentally locking yourself out.
 >
-> Fail2Ban does not replace strong passwords — even with Fail2Ban enabled, a weak password can still be brute-forced.
+> Fail2Ban does not replace strong passwords - even with Fail2Ban enabled, a weak password can still be brute-forced.
 
-**Do Not Expose the PBX on a Public IP Address**
+<figure><img src="../.gitbook/assets/Release2026.1.GeoIP2Fail2Ban.png" alt=""><figcaption><p>"Intrusion protection" section in MikoPBX web-interface</p></figcaption></figure>
+
+#### **Do Not Expose the PBX on a Public IP Address**
 
 If your PBX is directly accessible from the internet, it becomes a target for automated scanners that continuously search for vulnerable systems.
 
 * Place the PBX behind a NAT router.
 * Use VPN connections for remote employees.
 * If a public IP is unavoidable — be sure to configure the Firewall and Fail2Ban.
-* Under **Network & Firewall → Network Interfaces**, correctly specify the network topology and external address.
+* Under **Network and Firewall → Network interfaces**, correctly specify the network topology and external address.
 
 ***
 
-#### Financial Protection
+### Financial Protection
 
 Even with strong technical security, it is worth adding a financial safety net. If a breach does occur, these measures will limit potential losses.
 
-**Set a Spending Limit with Your Provider**
+#### **Set a Spending Limit with Your Provider**
 
 Contact your telephony provider and request:
 
@@ -143,14 +145,14 @@ Contact your telephony provider and request:
 * A block on service when the balance is negative
 * Blocking of international and premium-rate calls if you do not use them
 
-**Do Not Keep a Large Balance on Your Account**
+#### **Do Not Keep a Large Balance on Your Account**
 
 * Top up your balance in small amounts as needed.
 * Set up spending alerts with your provider if that option is available.
 
 ***
 
-#### What to Do If a Breach Has Already Occurred
+### What to Do If a Breach Has Already Occurred
 
 If you discover that your PBX has been compromised, follow these steps:
 
@@ -166,11 +168,9 @@ Save call recording files and system logs separately — they may be needed as e
 
 Contact your telephony provider and report the incident. The provider may be able to block further calls and officially document the breach.
 
-**Step 4 — File a Report with the FSB**
+**Step 4 — Report the Incident to the Relevant Authorities**
 
-Submit a report to your regional FSB office describing the IT security incident. Briefly explain what happened, state that calls were made without your knowledge, and indicate that you are prepared to provide logs and call recordings.
-
-> **Note:** You should contact the FSB rather than the police — this is an IT security incident, not fraud on your part. You may indicate on-site that a written response is not required.
+File a report with your national cybercrime authority or law enforcement agency. Briefly describe what happened, state that calls were made without your knowledge, and indicate that you are prepared to provide logs and call recordings as evidence.
 
 ***
 
@@ -178,26 +178,26 @@ Submit a report to your regional FSB office describing the IT security incident.
 
 Go through this list and confirm that every item has been completed:
 
-* \[ ] MikoPBX is updated to the latest version
-* \[ ] Security patch installed (for version 2024.1.114)
-* \[ ] Firewall is enabled
-* \[ ] Firewall rules restrict access to trusted subnets only
-* \[ ] Web interface and CTI are blocked from internet access
-* \[ ] All SIP passwords are strong (12+ characters, mixed case, numbers, special characters)
-* \[ ] Web interface password is strong
-* \[ ] Auth Username has been changed (does not match the internal extension number)
-* \[ ] Fail2Ban is enabled and configured
-* \[ ] PBX is behind NAT or access is restricted via VPN
-* \[ ] A spending limit is set with your telephony provider
-* \[ ] International and premium-rate destinations are blocked (if not in use)
-* \[ ] No excess funds are held on the provider balance
+* [ ] MikoPBX is updated to the latest version
+* [ ] Security patch installed (for version 2024.1.114)
+* [ ] Firewall is enabled
+* [ ] Firewall rules restrict access to trusted subnets only
+* [ ] Web interface and CTI are blocked from internet access
+* [ ] All SIP passwords are strong (12+ characters, mixed case, numbers, special characters)
+* [ ] Web interface password is strong
+* [ ] Auth Username has been changed (does not match the internal extension number)
+* [ ] Fail2Ban is enabled and configured
+* [ ] PBX is behind NAT or access is restricted via VPN
+* [ ] A spending limit is set with your telephony provider
+* [ ] International and premium-rate destinations are blocked (if not in use)
+* [ ] No excess funds are held on the provider balance
 
 ***
 
 #### Useful Links
 
-* **Firewall** — configuring access rules.
-* **Intrusion Protection (Fail2Ban)**.
-* **Network Interfaces** — network configuration, NAT, DNS.
-* **Network Routes** — manual routing configuration.
-* **Employees** — managing accounts and SIP passwords.
+* [**Firewall**](../manual/connectivity/firewall.md) — configuring access rules.
+* [**Intrusion Protection (Fail2Ban)**.](../manual/connectivity/fail2-ban.md)
+* [**Network Interfaces**](../manual/connectivity/network.md) — network configuration, NAT, DNS.
+* [**Network Routes**](../manual/connectivity/network.md#manual-configuration-of-network-routes) — manual routing configuration.
+* [**Extensions**](../manual/telephony/extensions.md) — managing accounts and SIP passwords.
