@@ -4,7 +4,7 @@
   * [Quick start](master/quick-start.md)
   * [Getting to know MikoPBX](master/getting-to-know-mikopbx.md)
   * [System requirements](master/system-requirements.md)
-  * [Securing MikoPBX (In dev)](readme/securing-mikopbx-in-dev.md)
+  * [Securing MikoPBX](readme/security.md)
 
 ## Installation <a href="#setup" id="setup"></a>
 
