@@ -47,7 +47,7 @@ aws configure
 
 3. Далее перейдите в "**Services**" -> "**Storage**" -> "**S3**"**.**
 
-<figure><img src="../../../.gitbook/assets/AWSS3StorageSection.png" alt=""><figcaption><p>Раздел "S3" в консоли MikoPBX</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AWSS3StorageSection.png" alt=""><figcaption><p>Раздел "S3" в консоли Amazon Web Services</p></figcaption></figure>
 
 4. Нажмите "**Create bucket**". Введите уникальное имя бакета (поле "**Bucket name**"). Для других полей используйте значения по умолчанию.
 
