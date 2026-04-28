@@ -120,6 +120,7 @@
   * [Резервный интернет и перерегистрация провайдеров](faq/management/backup-internet.md)
   * [Сброс пароля администратора из консоли MikoPBX](faq/management/password-reset.md)
   * [Добавление Passkeys](faq/management/passkeys.md)
+  * [Установка языковых пакетов](faq/management/language-packs.md)
 * [Диагностика проблем](faq/troubleshooting/README.md)
   * [Подключение к АТС с помощью SSH](faq/troubleshooting/connecting-to-a-pbx-using-ssh/README.md)
     * [Подключение к АТС с помощью SSH-клиента (Putty)](faq/troubleshooting/connecting-to-a-pbx-using-ssh/putty.md)
