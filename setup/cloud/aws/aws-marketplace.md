@@ -6,7 +6,13 @@ description: Installation guide for MikoPBX image from AWS Marketplace
 
 Sign in to the service Amazon Web Services [https://aws.amazon.com](https://aws.amazon.com/)
 
-MikoPBX in AWS Marketplace: [https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw)
+{% hint style="info" %}
+MikoPBX in AWS Marketplace:&#x20;
+
+X86: [https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw)
+
+ARM64: [https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow](https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow?sr=0-1\&ref_=beagle\&applicationId=AWSMPContessa)
+{% endhint %}
 
 {% embed url="https://youtu.be/HdsX1UEJ8zE?si=EPlwDQHO8bXqhrQe" %}
 
@@ -20,11 +26,11 @@ For quick and convenient navigation within the Amazon service, use the search pa
 
 1. Open Services / Compute / **EC2** and navigate to Images / AMI Catalog
 2. In the open tab enter **MikoPBX** in the search bar
-3. In the AWS Marketplace AMIs section select the [MikoPBX](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw) image by clicking the **Select** button
+3. In the AWS Marketplace AMIs section select the [MikoPBX](https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw) image (x86 or ARM version) by clicking the **Select** button
 4. On the opened tab click **Subscribe now**
 5. Click the **Launch an instance from AMI** button to create a virtual machine
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/mikopbxAWSimages.png" alt=""><figcaption><p>MikoPBX Images in the AWS Marketplace</p></figcaption></figure>
 
 6. Enter the virtual machine name, for example _mikopbx-vm_
 
