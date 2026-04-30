@@ -156,8 +156,8 @@ Secure integration with modern email services has been implemented without the n
 
 More details in the article:
 
-{% content-ref url="../../manual/system/mail-settings-1/" %}
-[mail-settings-1](../../manual/system/mail-settings-1/)
+{% content-ref url="../../manual/system/mail-settings/" %}
+[mail-settings](../../manual/system/mail-settings/)
 {% endcontent-ref %}
 
 <figure><img src="../../.gitbook/assets/SMTPParametersGmailOAuth2ast.png" alt=""><figcaption><p>Example OAuth2 configuration for Gmail</p></figcaption></figure>

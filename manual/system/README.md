@@ -30,8 +30,8 @@ The **"Time Settings"** section in MikoPBX is an interface for configuring syste
 
 ## Mail settings
 
-{% content-ref url="mail-settings/" %}
-[mail-settings](mail-settings/)
+{% content-ref url="/broken/pages/tqyJLzMpdFJ2KU2vrQld" %}
+[Broken link](/broken/pages/tqyJLzMpdFJ2KU2vrQld)
 {% endcontent-ref %}
 
 The **"Mail settings"** section in MikoPBX allows you to configure sending system notifications via email. Here, administrators specify SMTP server parameters, define events for notifications, such as voice messages or system errors, and edit email templates. This section helps to timely inform users and administrators about important events, ensuring effective control over the system's operation.

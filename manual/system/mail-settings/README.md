@@ -1,74 +1,80 @@
 ---
-description: Setting up mail and notifications
+description: Mail and Notifications Settings
 ---
 
-# Mail settings
+# Mail Settings (New)
 
-The Mail and Notifications section in MikoPBX allows you to configure sending system notifications via email. Here, administrators specify SMTP server parameters, define notification events such as voice messages or system errors, and edit email templates. This section helps to promptly inform users and administrators about important events, ensuring effective control over the system.
+The **"Mail and Notifications"** section in MikoPBX allows you to configure sending system notifications via email. Here, administrators specify SMTP server parameters, define events for notifications such as voicemail or system errors, and edit email templates. This section helps keep users and administrators informed about important events in a timely manner, ensuring effective system monitoring.
 
-## Connecting to the SMTP server
+<figure><img src="../../../.gitbook/assets/MikoPBXMailSection.png" alt=""><figcaption><p><strong>"Mail and notifications"</strong> section in MikoPBX</p></figcaption></figure>
 
-To receive notifications about missed calls and voicemail messages by email, you need to configure the SMTP client. **SMTP (Simple Mail Transfer Protocol)** is used to send e-mail over the Internet. SMTP clients interact with an SMTP server that sends email.
+## General Settings
 
-<figure><img src="../../../.gitbook/assets/1.png" alt=""><figcaption><p>"Mail settings" section in the MikoPBX system</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/generalSettngs(email).png" alt=""><figcaption><p>General mail settings</p></figcaption></figure>
 
-* **SMTP host** - address of the mail server
-* **SMTP port** - the port of the mail server
-* **SMTP login, SMTP password** - authorization parameters&#x20;
-* **Sender's address** - Emails will be sent on behalf of this address Email of the system administrator - all system notifications will be sent to this email address, for example, about the lack of disk space. When changing and saving the settings, a test email will be sent to this address&#x20;
-* **Use TLS** - activates the use of encryption when connecting to the server, to connect via SSL, you need to add a protocol description to the server address&#x20;
-* **Validate server certificate** - in some cases it is necessary to disable it when using self-signed certificates&#x20;
-* **Use mail motifications** - allows you to enable/disable all email alerts, including voice mail
+* **Enable Notifications** - enables/disables **all email notifications**, including voicemail.
+* **Send missed call notifications** - enables/disables missed call notifications.
+* **Common Email for Missed Call Notifications** - a shared email address for sending notifications about missed external calls (if an employee has no email specified, this shared address is used).
+* **Send voicemail notifications** - enables/disables voicemail notifications.
+* **Common Email for Voicemail Messages -** a shared email address for sending voicemail notifications (priority: 1. Employee's personal email; 2. The email specified in this field).
+* **Send login notifications** - enables/disables system login notifications.
+* **Send system notifications** - enables/disables sending of system notifications.
+* **System Administrator Email** - the address to which system notifications will be sent.
 
-{% hint style="warning" %}
-If the server supports a secure connection only over **SSL**, then you can explicitly specify the protocol in the "**SMTP host**" field, for example:
+## SMTP Settings
 
-```
-ssl://smtp.gmail.com
-```
-{% endhint %}
+<figure><img src="../../../.gitbook/assets/SMTPparametersP1.png" alt=""><figcaption><p>General SMTP Settings</p></figcaption></figure>
 
-{% hint style="info" %}
-Setting up notifications for mail services:
+* **Sender Address, Sender Name** - emails will be sent on behalf of this address and name.
+* **Authentication Type:**
+  * **Username and Password** - classic authentication method when connecting to an SMTP server, using a **mailbox address (login)** and **password**. All parameters (server, port, encryption, login, and password) are entered and stored manually.
+  * **OAuth2** - an authentication method in which you **do not store or transmit your mailbox password**. Instead, the application obtains a **temporary access token** from the mail provider (Microsoft 365/Outlook, Google Workspace/Gmail, etc.) and uses it when sending emails via SMTP.
 
-* [Gmail](gmail.md)
-{% endhint %}
+#### **Login and Password Authentication**
 
-## Missed Notifications
+<figure><img src="../../../.gitbook/assets/Login&#x26;PassAuth.png" alt=""><figcaption><p>SMTP Settings. Username and Password Authentication Type</p></figcaption></figure>
 
-It is possible to customize the address and template for notifications about missed calls:
+* **SMTP Username**, **SMTP password** - authorization credentials.
+* **SMTP Host -** mail server address.
+* **SMTP Port** - mail server port.
+* Encryption type:
+  * **No encryption (port 25)** - classic SMTP connection without channel protection.
+  * **STARTTLS (port 587)** - the recommended and most common method for sending mail. The connection starts without encryption, after which the client and server negotiate a transition to a secure channel.
+  * **SSL/TLS (port 465)** - SMTP connection with encryption **from the very beginning of the connection**. The channel is secured immediately after the TCP connection is established, without a switching phase.
+* **Verify server certificate** - a security setting that determines whether the client will **verify the authenticity of the SMTP server's SSL/TLS certificate** when establishing a secure connection (STARTTLS or SSL/TLS).
 
-<figure><img src="../../../.gitbook/assets/2 (20).png" alt=""><figcaption><p>"Template - missed calls" section</p></figcaption></figure>
+#### **OAuth2 Authentication**
 
-* **Email for missed notifications** - by default, missed notifications are sent to the email specified in the employee card. If the call cannot be matched with an employee or email is not specified, the call will be sent to this "shared" address
-* **The subject, text, and footer** of the letter may contain parameters in the form of PARAMETER\_NAME
+<figure><img src="../../../.gitbook/assets/oAuth2Parameters.png" alt=""><figcaption><p>SMTP Settings.OAuth2 Authentication Type</p></figcaption></figure>
 
-List of available "parameters":
+* **SMTP Username -** authorization credentials.
+* **OAuth2 Provider** - the mail service through which OAuth authentication is performed (e.g., Microsoft/Outlook, Google/Gmail).
+* **Application ID (Client ID)** - the unique identifier of the application created in the control panel of the selected OAuth provider. Used so the provider knows **which application** is requesting access to the mailbox.
+* **Secret Key (Client Secret)** - the confidential application key issued by the OAuth provider. Used together with the Client ID to verify the authenticity of the application when obtaining and refreshing access tokens. Must be kept secret and not shared with third parties.
+* **SMTP Host** - mail server address.
+* **SMTP Port** - mail server port.
+* Encryption type:
+  * **No encryption (port 25)** — classic SMTP connection without channel protection.
+  * **STARTTLS (port 587)** — the recommended and most common method for sending mail. The connection starts without encryption, after which the client and server negotiate a transition to a secure channel.
+  * **SSL/TLS (port 465)** — SMTP connection with encryption **from the very beginning of the connection**. The channel is secured immediately after the TCP connection is established, without a switching phase.
+* **Verify Server Certificate** - a security setting that determines whether the client will **verify the authenticity of the SMTP server's SSL/TLS certificate** when establishing a secure connection (STARTTLS or SSL/TLS).
 
-* **NOTIFICATION\_MISSEDCAUSE** - currently always takes the value "NOANSWER", i.e. a missed call
-* **NOTIFICATION\_CALLERID** - who was the call from
-* **NOTIFICATION\_TO** - who was the call to
-* **NOTIFICATION\_DURATION** - duration in seconds&#x20;
-* **NOTIFICATION\_DATE** - date of the call
+#### How to connect?
 
-## Voice mail
+Our documentation includes several connection examples for each authentication type. Below you can find links to these instructions.
 
-It is possible to set up an address and a template for a voicemail notification:
+* Login and password authentication:
 
-<figure><img src="../../../.gitbook/assets/3 (14).png" alt=""><figcaption><p>Template - Voicemail" section</p></figcaption></figure>
+{% content-ref url="proton.md" %}
+[proton.md](proton.md)
+{% endcontent-ref %}
 
-* Voice mail will be sent to **each** employee who missed the call (if the email is specified in his card).&#x20;
-* Voicemail will always be sent to the "**Email address to receive all voice mail records**"
-* &#x20;It is possible to listen to the voicemail recording from the [**PBX call history**](../../telephony/extensions.md)
+* OAuth2 authentication:
 
-The following "parameters" can be used in the **subject, body and footer** of the email:
+{% content-ref url="gmail-oauth2.md" %}
+[gmail-oauth2.md](gmail-oauth2.md)
+{% endcontent-ref %}
 
-* **VM\_DATE** - date and time&#x20;
-* **VM\_CALLERID** - caller's callerid, consists of name and num, example **"Alex Magnet" <101>**&#x20;
-* **VM\_DUR** - message duration
-* **VM\_CALLER\_NAME** - caller's name (taken from VM\_CALLERID)&#x20;
-* **VM\_CALLER\_NUM** - caller's phone number (taken from VM\_CALLERID)
-
-To specify a parameter, you need to use a construction of the form **PARAMETER\_NAME**.&#x20;
-
-Click **Save** to complete the setup.
+{% content-ref url="microsoft-oauth2.md" %}
+[microsoft-oauth2.md](microsoft-oauth2.md)
+{% endcontent-ref %}
