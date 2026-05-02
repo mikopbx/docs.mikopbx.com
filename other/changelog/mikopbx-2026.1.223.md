@@ -84,7 +84,7 @@ Support for logging in using biometrics or a hardware security key has been adde
 
 To set up, open **System → General Settings**, in the **Passkeys** section click **Add Passkey** and follow the browser instructions. Each key can be given a name (e.g., "MacBook Touch ID").
 
-<figure><img src="../../.gitbook/assets/addPasskeyButton.png" alt=""><figcaption><p>Adding a Passkey in system settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/addPasskeyButton (1).png" alt=""><figcaption><p>Adding a Passkey in system settings</p></figcaption></figure>
 
 A **Sign in with Passkey** button has been added to the login page — confirm with biometrics or a hardware key, and you are logged in without entering a password.
 

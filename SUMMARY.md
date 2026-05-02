@@ -102,6 +102,7 @@
   * [Storing Recordings in a Shared Windows Folder](faq/management/storing-records-in-a-windows-shared-folder.md)
   * [Resetting WEB Interface Credentials](faq/management/password-reset.md)
   * [Backup Internet and Provider Re-Registration](faq/management/backup-internet.md)
+  * [Adding Passkeys](faq/management/passkeys.md)
   * [Installing Language Packs](faq/management/language-packs.md)
 * [Troubleshooting](faq/troubleshooting/README.md)
   * [Connecting to the PBX using SSH](faq/troubleshooting/connecting-to-a-pbx-using-ssh/README.md)
