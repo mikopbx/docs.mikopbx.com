@@ -1,174 +1,266 @@
 ---
-description: Description of the settings of the main system parameters
+description: Description of the main system settings
 ---
 
 # General settings
 
-This section configures the main system parameters. It is recommended to set these parameters immediately after installing the PBX.
+This section configures the core system parameters. It is recommended to complete these settings immediately after installing the PBX.
 
-<figure><img src="../../.gitbook/assets/GnrlSettSection.png" alt=""><figcaption><p>General settings section in the MikoPBX system</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/GeneralSettingsTabMikoPBX.png" alt=""><figcaption><p>"General Settings" section in the MikoPBX web interface</p></figcaption></figure>
 
-## Main Settings <a href="#osnovnye" id="osnovnye"></a>
+### Main
 
-* **The name of the PBX** - will be displayed on the MikoPBX home page.
-* **Additional Description** - visible only to system administrators.
-* **PBX sound messages language** - specify the language for voice notifications.
-* **Maximum lenght of extension** - **maximum** length of the internal number (for employees).
-* **Maximum Timeout Between Digits When Entering Extension**.
-* **Allow incoming calls from any servers**
-* **The PBX is restarted every night** - restart Asterisk every night.
-* **Send developers information about crashes** - when an error occurs, its description will be sent to the developers (requires internet access).
-
-<figure><img src="../../.gitbook/assets/MainSettings.png" alt=""><figcaption><p>Main Settings section</p></figcaption></figure>
-
-## Call Recording <a href="#zapis_razgovorov" id="zapis_razgovorov"></a>
-
-* **Call Recording** - enables/disables call recording.
-* **Recording internal conversations** - enables/disables internal call recording.
-* **Save recordings in stereo** changes the recording mode from **mono** to **stereo**. The recording stream will be split into incoming and outgoing channels and merged into a stereo file.
-
-There is a slider that allows you to choose how long call recordings will be stored.
-
-You can also select an audio file for call recording notifications.
-
-<figure><img src="../../.gitbook/assets/CallRecordingSection.png" alt=""><figcaption><p>Call recording section</p></figcaption></figure>
-
-Phone calls are saved in **mp3** format. Here is an example of the final call recording file information:
-
-```php
-Input File     : 'mikopbx-1554098285.0_M1gEr1pgrt.mp3'
-Channels       : 1
-Sample Rate    : 8000
-Precision      : 16-bit
-Duration       : 00:00:17.64 = 141120 samples ~ 1323 CDDA sectors
-File Size      : 70.6k
-Bit Rate       : 32.0k
-Sample Encoding: MPEG audio (layer I, II or III)
-```
+* **PBX system name** - displayed on the MikoPBX main page.
+* **Additional description** - visible to system administrators only.
+* **Language of system audio messages** - language used for voice announcements.
+* **Maximum length of internal numbers** - the maximum length of an employee's internal extension number.
+* **Allow incoming calls from any servers** - allows accepting SIP calls from unauthorized devices and servers without registration.
 
 {% hint style="info" %}
-Approximately, **1 hour** of conversation takes up **14MB** of disk space.
+Enabling this option may pose a security risk. Make sure your network is properly protected and filtering rules are in place!
 {% endhint %}
 
-## Call Transfers <a href="#perevody_vyzovov" id="perevody_vyzovov"></a>
+* **Restart PBX every night** — automatic restart of Asterisk at night (at 01:00 AM system time).
+* **Send crash information to developers** — when an error occurs, its description is sent to developers (requires internet access).
 
-<figure><img src="../../.gitbook/assets/callTransfers section.png" alt=""><figcaption><p>Call transfers section</p></figcaption></figure>
+Click **"Save"**.
 
-#### Call Park Number <a href="#parkovka_uderzhanie" id="parkovka_uderzhanie"></a>
+<figure><img src="../../.gitbook/assets/MainTabGenSet.png" alt=""><figcaption><p>"General" tab in system settings</p></figcaption></figure>
 
-**Call parking** is a variant of "holding" a customer on the line. It is useful when you need to temporarily disconnect to clarify information. During parking, the customer will hear music.
+### Call Recording
 
-MikoPBX supports two methods of parking customer calls:
+* **Call Recording** - enable or disable recording of all calls.
+* **Recording** **internal conversations**- enable or disable recording of calls between employees.
 
-1. To park a customer call, enter **\*2**. The customer's call will be put on hold by MikoPBX, and you will be informed of the parked call slot number. Any employee can pick up the call by dialing the parked call slot number from their phone.
-2. In the **Call Transfers** section, assign a **Car Park Number**. When the customer's call is transferred to the parking number, **MikoPBX** will park the call, and you will be informed of the parked call slot number. Any employee can pick up the call by dialing the parked call slot number.
+Below, you can select audio files to be used as a recording notification (different audio files can be selected for incoming and outgoing calls).
 
-You can set the range of parked call slot numbers in the **Call Transfers** section: **Start Parking Slot** and **End Parking Slot**.
+<figure><img src="../../.gitbook/assets/CallRecordingTabGenSet.png" alt=""><figcaption><p>"Call Recording" tab in system settings</p></figcaption></figure>
 
-#### Call Transfers <a href="#perevody_vyzovov1" id="perevody_vyzovov1"></a>
-
-MikoPBX offers two types of transfers: **Attended** and **Unattended** (blind).
-
-* With an **attended transfer**, you can speak to the person before transferring the call. The caller will be on hold during this time. Once the person handling the transfer hangs up, the transfer is completed successfully.
-* An **unattended transfer** occurs when you transfer the call without first speaking to your colleague. For example, when you receive a second incoming call while already on the phone, you can transfer the new call to a colleague without interrupting your current call.
+Phone calls are saved in **WebM** format with the **Opus** codec. File size depends on call quality: if at least one participant uses a high-quality codec (e.g., G.722 or Opus), the recording is saved at a higher bitrate — this takes more disk space but improves speech recognition quality.
 
 {% hint style="info" %}
-- By default, the combination for an attended transfer is two pound signs (##).
-- By default, the combination for an unattended transfer is two asterisks (\*\*).
+Approximately **1 hour** of conversation takes **14–28 MB** of disk space depending on recording quality.
 {% endhint %}
 
-#### Timeouts <a href="#tajmauty" id="tajmauty"></a>
+### Call Transfers
 
-The return time for a call if there is no answer after an unattended (blind) transfer is **45 seconds**.
+#### **Parking (Hold)**
 
-#### Call Pickup <a href="#perexvat_pickup" id="perexvat_pickup"></a>
+**Call Parking** is a way to temporarily place a customer on hold while you look up information. The caller hears music while waiting.
 
-If your colleague's phone is ringing, you can intercept the call by dialing **\*8**.\
-If you don't know your colleague's number, simply dial **\*8**.
+MikoPBX supports two parking methods:
 
-## SIP <a href="#sip" id="sip"></a>
+1. Dial **\*2** during a call — the call will be placed on hold and you will be told the parking slot number. Any employee can pick up the call by dialing that number.
+2. In the settings, configure a **parking number** — when a call is transferred to this number, MikoPBX will place it on hold and announce the slot number. Any employee can retrieve the call.
 
-<figure><img src="../../.gitbook/assets/SIPSettings.png" alt=""><figcaption><p>Sip settings section</p></figcaption></figure>
+The parking slot range and parking number can be configured in this section:
 
-**Session Initiation Protocol (SIP)** is the signaling protocol used by most VoIP phones. You can change the SIP port (default is port 5060) to enhance security. Additionally, some SIP providers require additional parameters, such as **Registration Periods** (the time before the registration expires). Some firewalls close ports after a period of inactivity, which may require shortening the SIP provider's registration timeout. Another reason might be the need for different **registration timeouts** for certain SIP providers. The default values are:
+* **Call parking number** — the number to transfer a call to in order to place it on hold, default is **800**.
+* **Parking slot range** — the range of parking slot numbers, default is **801–820**.
 
-* **SIPMiniExpiry** - minimum registration duration in seconds, default is **60 seconds**.
-* **SIPMaxExpiry** - maximum registration duration in seconds, default is **3600 seconds**.
+#### **Call Transfers**
 
-In real-time, the **Transport Protocol (RTP)** defines the standard format for transmitting audio and video over IP networks. **By default**, RTP uses port ranges between **10000 and 10200**. Some routers and firewalls may require the port range to be adjusted. Another reason to adjust the port range is the number of simultaneous calls. Each call uses two RTP ports. This means if there are 200 ports, only 100 simultaneous calls are possible. If your phone system needs to handle more calls at once, you should expand the port range.
+MikoPBX supports two types of transfers:
 
-* **STUN Server** Address - helps with PBX operation behind NAT, especially when using WebRTC.
-* **Use WebRTC** - additional settings will be configured for WebRTC connections. For example, for extension 201, an additional endpoint will be created, accessible via WebRTC using the URL\
-  &#xNAN;**`sip:201-WS@IP_PBX`**
+* **Attended (Consultative) Transfer** — you can speak with a colleague before transferring the call to them. The caller is on hold during this time. The transfer completes when you hang up.
+* **Blind (Unattended) Transfer** — the call is transferred immediately, without a prior conversation with the colleague. Useful when a second call comes in while you are already busy — the call can be instantly transferred to a free employee.
 
-## Audio/Video Codecs <a href="#audio_video_kodeki" id="audio_video_kodeki"></a>
+The key combinations for transfers can be changed in this section:
 
-Configuration of allowed codecs for the PBX.
+* **Combination for attended transfer** — default is **##**.
+* **Combination for blind transfer** — default is **\*\***.
 
-<figure><img src="../../.gitbook/assets/AudioVideoCodecs.png" alt=""><figcaption><p>Audio / Video Codecs Section</p></figcaption></figure>
-
-## AMI & AJAM <a href="#ami_ajam" id="ami_ajam"></a>
-
-<figure><img src="../../.gitbook/assets/AMIandAJAMSection.png" alt=""><figcaption><p>AMI&#x26;AJAM Section</p></figcaption></figure>
-
-**Asterisk Manager Interface (AMI)** is a powerful and convenient API for Asterisk, allowing external programs to control the system. AMI allows external programs to connect to Asterisk via the TCP protocol, execute commands, read results, and receive notifications of real-time events. AMI is often used for integration with business processes and CRM (Customer Relationship Management) systems. AMI listens for connections on a network port (default **TCP port 5038**). Once a client program connects and authenticates, Asterisk responds to requests and sends notifications about changes in subsystem states.
-
-**Asynchronous Javascript Asterisk Manager (AJAM)** is a new technology that allows web browsers or other HTTP-capable applications to directly interact with the Asterisk Manager (AMI) interface via HTTP/HTTPS. By default, port **8088** is used.
-
-## SSH <a href="#ssh" id="ssh"></a>
-
-<figure><img src="../../.gitbook/assets/SSHsettings.png" alt=""><figcaption><p>SSH settings </p></figcaption></figure>
-
-**SSH** or **Secure Shell** is an encrypted protocol commonly used for interacting with and remotely managing servers. The SSH server can authenticate users using various algorithms. The most popular method is **password authentication**. It's simple but not very secure. Passwords are transmitted over a secure channel, but they may not be strong enough to resist brute-force attempts. The computing power of modern systems, combined with special scripts, makes brute-forcing very easy.
-
-{% hint style="warning" %}
-Default SSH client authorization in MikoPBX:
-
-* Login - **root**
-* Password - **admin** (we recommend changing this immediately)
+{% hint style="info" %}
+Combinations are entered from the phone during an active call, followed by the internal extension number of the employee to transfer to.&#x20;
 {% endhint %}
 
-A more secure and reliable authentication method is **SSH keys**. Each key pair consists of a public and private key. The private key is stored on the client side and should not be accessible to anyone else. If the private key is leaked, the attacker will be able to log in to the server unless additional password authentication is set up.
+#### **Timeouts**
+
+* **Call return time if no answer after attended transfer** — if no one answers after an attended transfer, the call returns. Set in seconds, default is **45 sec**.
+* **Maximum timeout between digits when entering an extension number (in milliseconds)** — the wait time for the next digit when dialing an extension. Set in milliseconds, default is **2500 ms**.
+
+#### **Call Pickup**
+
+If a colleague's phone is ringing, you can pick up the call without leaving your desk:
+
+* **\*8\<ColleagueNumber>** — pick up a specific employee's call.
+* **\*8** — pick up any incoming call when the colleague's number is unknown.
+
+The pickup combination can be changed in the **"Combination for intercepting incoming calls"** field, default is **\*8**.
+
+<figure><img src="../../.gitbook/assets/CallTransfersGenSet.png" alt=""><figcaption><p>"Call Transfers" tab in system settings</p></figcaption></figure>
+
+### SIP&#x20;
+
+**Session Initiation Protocol (SIP)** is the signaling protocol used by most VoIP phones. You can change the SIP port (default **5060**) to improve security.
+
+#### **SIP Signaling Port and RTP Range Settings**
+
+**RTP (Real-time Transport Protocol)** defines the standard format for transmitting audio and video over IP networks. The default port range is **10000–10800**. Some routers and firewalls may require additional range configuration. Another reason to expand the range is a large number of concurrent calls: each active call uses two RTP ports, meaning 200 ports support no more than 100 simultaneous calls. If load is higher — expand the range.
+
+* **SIP port for registering phones on this station** — the port for phone registration on the station, default **5060**. Changing the port can improve system security.
+* **SIP TLS port (encrypted calls)** — the port for encrypted calls, default **5061**.
+* **RTP port range** — the port range for audio transmission, default **10000–10800**.
+
+#### **Additional Parameters**
+
+* **STUN server address** — helps when the PBX is behind NAT, including when using WebRTC.
+* **Auth Username prefix for authorization** — by default, the username for SIP account authorization matches the employee's internal extension (e.g., `101`). When this setting is filled in, the specified prefix will be appended to the auth username: `username` remains `101`, but `AuthUsername` becomes `101MIKO`. This approach significantly complicates password brute-forcing for SIP accounts.
+* **Use WebRTC** — additional settings will be applied for WebRTC connections. For example, for internal extension 201, an additional endpoint will be created, accessible via WebRTC using the URL `sip:201-WS@IP_PBX`.
+
+#### **Registration Duration Settings**
+
+Some firewalls close ports after a period of inactivity — in such cases, it is advisable to reduce the registration timeout. Different SIP providers may also require different timeout values.
+
+* **Default time in seconds to send Keep-alive** — the interval for sending keep-alive packets in seconds, default **120 seconds**.
+* **Minimum Registration Time (SIPMiniExpiry)** — default **60 seconds**.
+* **Maximum Registration Time (SIPMaxExpiry)** — default **3600 seconds**.
+
+<figure><img src="../../.gitbook/assets/SIPTabGenSet.png" alt=""><figcaption><p>"SIP" tab in system settings</p></figcaption></figure>
+
+### Audio/Video Codecs&#x20;
+
+This section configures the allowed audio and video codecs for the entire PBX.
+
+<figure><img src="../../.gitbook/assets/AVCodecsGenSet.png" alt=""><figcaption><p>"Audio/Video Codecs" section in system settings</p></figcaption></figure>
+
+### AMI\&ARI
+
+**Asterisk Manager Interface (AMI)** is a powerful and convenient software interface (API) for Asterisk that allows external programs to manage the system. Through AMI, external programs can connect to Asterisk via TCP, initiate command execution, read results, and receive real-time event notifications. AMI is often used for integration with business processes and CRM (Customer Relationship Management) systems.
+
+**Asynchronous Javascript Asterisk Manager (AJAM)** is a technology that allows web browsers or other HTTP-capable applications to directly access the Asterisk Manager Interface (AMI) via HTTP/HTTPS.
+
+**Asterisk REST Interface (ARI)** is a RESTful API with WebSocket support that provides full control over Asterisk channels, bridges, and media streams in real time. Designed for developing custom telephony applications.
+
+#### **AMI Settings**
+
+* **Use AMI Interface** — enable or disable AMI.
+* **AMI Port** — the port for connecting external programs to AMI, default **5038**. A client application connects to AMI through this port and authenticates, after which Asterisk responds to requests and sends notifications about state changes in specified subsystems.
+
+#### **HTTP Server Settings**
+
+* **HTTP Port (AJAM and ARI)** — the port for HTTP connections, default **8088**.
+* **HTTPS Port (AJAM and ARI)** — the port for HTTPS connections, default **8089**.
+
+#### **AJAM Settings**
+
+* **Use AJAM Interface** — enable or disable AJAM.
+
+#### **ARI Settings**
+
+* **Use ARI Interface** — enable or disable ARI. Disabled by default.
+* **CORS allowed origins** — domains from which requests to ARI are permitted. CORS is a browser security mechanism that restricts cross-domain API requests.
 
 {% hint style="danger" %}
-We highly recommend disabling password authentication. To do this, enable the "Disable password authorization" option.
+Never use `*` in production. Only specify trusted domains over HTTPS.
 {% endhint %}
 
-The public key is used to encrypt messages, which can only be decrypted with the private key. This property is used for authentication with key pairs. The public key is uploaded to the remote server where access is needed. It should be added to the special file `~/.ssh/authorized_keys`.
+<figure><img src="../../.gitbook/assets/AMI&#x26;ARIGenSet.png" alt=""><figcaption><p>"AMI&#x26;ARI" tab in system settings</p></figcaption></figure>
 
-When the client tries to authenticate with this key, the server sends a message encrypted with the public key. If the client can decrypt it and return the correct response, authentication is successful.
+### SSH
 
-{% hint style="warning" %}
-How to create an SSH key for authorization and add it to the server? Read more [here](https://firstvds.ru/technology/dobavit-ssh-klyuch).
-{% endhint %}
+**SSH (Secure Shell)** is an encrypted protocol commonly used for interacting with and remotely managing servers. An SSH server can authenticate users using various algorithms. The most popular is password authentication. It is fairly simple but not very secure: passwords are transmitted over a secure channel, but are not complex enough to withstand brute-force attempts. The computational power of modern systems combined with specialized scripts makes brute-forcing very easy.
 
-You can save the **public** SSH key on the PBX in the **SSH Authorized Keys** field. If you have multiple public keys, you can paste them one after the other, separated by a blank line.
-
-## Web Interface <a href="#web-interfejs" id="web-interfejs"></a>
-
-<figure><img src="../../.gitbook/assets/WebIntSection.png" alt=""><figcaption><p>Web-interface section</p></figcaption></figure>
-
-In this subsection, you can increase security by changing the HTTP port (default is port 80) or activating HTTPS mode.
-
-**HTTPS (HyperText Transfer Protocol Secure)** is an extension of HTTP that supports encryption for enhanced security. HTTPS data is transmitted over cryptographic protocols such as SSL or TLS. Unlike HTTP, which uses TCP port 80, HTTPS uses TCP port 443 by default.&#x20;
-
-* **Redirect to HTTPS** - when attempting to open the web interface via HTTP, the user will be redirected to HTTPS.
-
-When the system starts, the PBX generates its own certificate for HTTPS operation - this is a "self-signed" certificate, not verified by a public "registrar," but it still allows HTTPS operation and encrypts traffic between the PBX and the browser. You can use[ Let's encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md) module.
-
-## Web Interface Password <a href="#parol_administratora" id="parol_administratora"></a>
-
-<figure><img src="../../.gitbook/assets/PasswordSettings.png" alt=""><figcaption><p>WEB interface password settings</p></figcaption></figure>
-
-In this subsection, you need to change the WEB interface Login and Password.
+A more secure authentication method is **SSH keys**. Each pair consists of a public and private key: the private key is stored on the client, and the public key is uploaded to the server in the `~/.ssh/authorized_keys` file. When connecting, the server sends a message encrypted with the public key — if the client decrypts it with the private key and returns the correct response, authentication is considered successful.
 
 {% hint style="info" %}
-Default MikoPBX authorization:
+In MikoPBX, password authentication is **disabled** by default — SSH keys must be used to connect. A key can be added in this section or when creating a virtual machine in the cloud (it will be automatically applied during MikoPBX installation).
 
-* Login - admin
-* Password - admin
+You can read more about connecting to MikoPBX via SSH [here](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/).&#x20;
 {% endhint %}
 
-## Delete all system settings <a href="#udalenie_nastroek" id="udalenie_nastroek"></a>
+#### **Section Parameters**
 
-<figure><img src="../../.gitbook/assets/deleteAllSet.png" alt=""><figcaption><p>"Delete all system settings" section</p></figcaption></figure>
+* **SSH port** — the port for SSH connections, default **22**.
+* **SSH console login** — the username for connecting.
+* **Disable password authentication** — **enabled** by default in MikoPBX (password authentication is disabled).
+* **SSH password** — the login password (available only if password authentication is **not disabled**).
+* **Authorized SSH Keys** — add your public SSH key here using the **"+ Add Key"** button. If you have multiple keys, add each one separately.
+* **System Public SSH Key** — the public SSH key of the current PBX. It can be copied into the **"Authorized SSH Keys"** field on another station — this allows connecting to the remote server without additional authentication.
+
+<figure><img src="../../.gitbook/assets/SSHTabGenSet.png" alt=""><figcaption><p>"SSH" tab in system settings</p></figcaption></figure>
+
+### HTTP/HTTPS&#x20;
+
+To improve security, you can change the HTTP port (default **80**) or enable HTTPS mode. **HTTPS** encrypts traffic between the browser and the PBX using SSL/TLS protocols. The default TCP port is **443**.
+
+* **HTTP port** — the port for accessing the web interface via HTTP, default **80**.
+* **HTTPS port** — the port for accessing the web interface via HTTPS, default **443**.
+* **Redirect to HTTPS** — when the web interface is opened via HTTP, the user will be automatically redirected to HTTPS.
+
+#### **HTTPS Public Key (SSL/TLS Certificate)**
+
+An SSL/TLS certificate is a digital document that verifies the server's identity and ensures encrypted communication between the browser and the PBX. In MikoPBX, the certificate is used for:
+
+* HTTPS access to the web interface
+* WebRTC connections (required for browser-based calls)
+* Secure AJAM and ARI connections via HTTPS
+* Secured REST API for integrations
+
+The certificate must be in **PEM** format — beginning with `-----BEGIN CERTIFICATE-----` and ending with `-----END CERTIFICATE-----`. If you have intermediate certificates, add them after the main certificate in the same field.
+
+Ways to obtain a certificate:
+
+* **Let's Encrypt Module** — automatic issuance and renewal of free certificates. Recommended method.
+* **Purchase from a Certificate Authority** (DigiCert, Comodo, GlobalSign, etc.)
+* **Self-signed Certificate** — automatically generated on first PBX startup, but causes browser warnings.
+
+{% hint style="info" %}
+We recommend using the Let's Encrypt module for automatic certificate management. Learn more [in this article](../../modules/miko/module-get-ssl-lets-encrypt.md).
+{% endhint %}
+
+#### **HTTPS private key**
+
+The secret key used to decrypt SSL/TLS connections. It must exactly match the public certificate — if they do not match, HTTPS will not work.
+
+The key must be in **PEM** format — beginning with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PRIVATE KEY-----`.
+
+{% hint style="info" %}
+Never share your private key with third parties. If the key is compromised, an attacker will be able to intercept encrypted traffic. In case of compromise — replace the key pair immediately.&#x20;
+{% endhint %}
+
+Security recommendations:
+
+* Keep a backup copy of the key in a secure location.
+* Use keys of at least **2048 bits** in length (**4096** recommended).
+* Regularly renew certificates and keys.
+
+<figure><img src="../../.gitbook/assets/HTTP-HTTPSGenSet.png" alt=""><figcaption><p>"HTTP/HTTPS" tab in system settings</p></figcaption></figure>
+
+### WEB interface password
+
+In this section, you can change the login and password for accessing the web interface, and configure login via Passkeys.
+
+{% hint style="info" %}
+Default MikoPBX credentials:
+
+* Login: **admin**
+* Password: **admin** — it is recommended to change this immediately.
+{% endhint %}
+
+* **Login** — the username for logging into the web interface.
+* **Password** — the password for logging into the web interface.
+
+#### **Passkeys (Biometric Authentication)**
+
+**Passkeys** are a modern passwordless login method using biometrics or a hardware security key: Face ID, Touch ID, Windows Hello, or YubiKey. This is faster and more secure than traditional passwords.
+
+To add a Passkey, click the **"+ Add Passkey"** button and follow the browser instructions.
+
+{% hint style="info" %}
+You can read more about this [here](../../faq/management/passkeys.md).&#x20;
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/WEBInterfacePwdGenSet.png" alt=""><figcaption><p>"WEB Interface Password" tab in system settings</p></figcaption></figure>
+
+### System settings deletion
+
+This section allows you to fully reset the system to its factory state. The reset will permanently delete all settings, call history, call recording files, and installed extension modules.
+
+{% hint style="info" %}
+This action is irreversible. Before clearing the system, make sure you have a backup of all important data.
+{% endhint %}
+
+To confirm, type **delete everything** in the input field and click **"Save"**.
+
+<figure><img src="../../.gitbook/assets/SystemSettingsDeletionGenSet.png" alt=""><figcaption><p>"System Settings Reset" section in system settings</p></figcaption></figure>
