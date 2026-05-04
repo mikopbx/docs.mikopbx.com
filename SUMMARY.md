@@ -257,6 +257,7 @@
   * [Управление доступом в систему](modules/miko/module-users-u-i.md)
   * [Модуль Автоинформатор](modules/miko/module-auto-dialer.md)
   * [Генерация речи RHVoice](modules/miko/generaciya-rechi-rhvoice.md)
+  * [Студия фраз (TTS)](modules/miko/module-phrase-studio.md)
   * [Оценка качества разговора](modules/miko/module-quality-assessment.md)
   * [Синхронизация с LDAP/AD](modules/miko/module-ldap-sync.md)
   * [Провайдер для звонков Telegram](modules/miko/module-telegram-provider.md)
