@@ -23,10 +23,10 @@ The **Phrase Studio (TTS)** module is an offline voice-phrase generator for Miko
 
 ## Bootstrapping the engine and voices
 
-The module ships empty: the Piper binary and the voice models are downloaded on demand. After enabling the module:
+The module ships empty: the Piper binary and the voice models are downloaded on demand. The first two steps are normally automatic — **enabling the module triggers a background download of the Piper engine and a refresh of the voice catalogue** — so in the common case you can jump straight to step 2:
 
-1. Open the **Engine** tab and press **Install engine** — the architecture-matched Piper binary (≈ 25 MB, statically linked) is downloaded and unpacked into `db/piper/`.
-2. Switch to the **Voices** tab, select the languages you need and press **Install** next to each one. Models are 30–60 MB each and live in `db/voices/`.
+1. *(Auto on enable, manual fallback)* Open the **Engine** tab. The architecture-matched Piper binary (≈ 25 MB, statically linked) is downloaded and unpacked into `db/piper/` automatically when the module is enabled. If the auto-bootstrap was skipped (no internet during enable, air-gapped install) or you want to re-pull the binary after a release, press **Install engine** — the same button is also exposed as **Update engine** and forces a re-download even if a working binary is already on disk.
+2. Switch to the **Voices** tab, select the languages you need and press **Install** next to each one. Models are 30–60 MB each and live in `db/voices/`. The download runs asynchronously in a detached background process: the row immediately shows an *Installing…* spinner and flips to *Installed* (or *Failed* with a diagnostic message) once the download completes. You can navigate away or reload the page — progress is tracked on the database row, not in the browser, so the spinner picks up where it left off.
 3. Go back to the **Studio** tab and start synthesizing.
 
 <figure><img src="../../.gitbook/assets/ModulePhraseStudio-Voices.png" alt=""><figcaption><p>Voice catalogue with one-click install / uninstall</p></figcaption></figure>
@@ -56,16 +56,18 @@ All endpoints are auto-discovered via PHP 8 attributes and live under `/pbxcore/
 | Method | Endpoint                      | Description                              |
 | ------ | ----------------------------- | ---------------------------------------- |
 | GET    | `engine`                      | Engine status (installed, version)       |
-| POST   | `engine:install`              | Download and install the Piper binary    |
+| POST   | `engine:install`              | Install the Piper binary. Pass `{"force":true}` in the body to force a re-download (Update flow) |
 | DELETE | `engine`                      | Remove the Piper binary                  |
-| GET    | `voices`                      | Catalogue + installed flag per voice     |
-| POST   | `voices:install`              | Download a voice model                   |
+| GET    | `voices`                      | Catalogue + installed flag per voice. Optional query: `language=ru-ru`, `installed_only=true` |
+| POST   | `voices:install`              | **Async.** Queues a voice download and returns `202 Accepted` with `install_status="installing"` — clients poll `GET voices` until the row flips to `installed` / `failed` |
 | DELETE | `voices/{id}`                 | Remove a voice model                     |
 | GET    | `phrases`                     | Phrase history                           |
 | POST   | `phrases`                     | Generate (or return cached) phrase       |
 | GET    | `phrases/{id}:download`       | Stream the WAV (HEAD = duration probe)   |
 | POST   | `phrases/{id}:promoteToTmp`   | Stage WAV for Sound Files import         |
 | DELETE | `phrases/{id}`                | Remove a single history entry            |
+
+Voice rows returned by `GET voices` carry the async-install status fields the UI uses to drive its loader: `install_status` (`""` / `"installing"` / `"installed"` / `"failed"`) and `install_error` (set only when status is `failed`). A row stuck in `installing` for over five minutes is auto-flipped to `failed` with a synthetic timeout message, so a polling loop will eventually converge without manual cleanup.
 
 Example — generate a phrase from a script:
 
@@ -74,6 +76,20 @@ curl -X POST -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"text":"Welcome to MikoPBX","voice_id":"en_US-amy-medium","sample_rate":"telephony"}' \
   https://pbx.example.com/pbxcore/api/v3/module-phrase-studio/phrases
+```
+
+Example — install a voice asynchronously and poll until ready:
+
+```bash
+curl -X POST -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"voice_id":"en_US-amy-medium"}' \
+  https://pbx.example.com/pbxcore/api/v3/module-phrase-studio/voices:install
+# → 202 {"voice_id":"en_US-amy-medium","install_status":"installing","queued":true,...}
+
+curl -H "Authorization: Bearer $TOKEN" \
+  "https://pbx.example.com/pbxcore/api/v3/module-phrase-studio/voices?installed_only=true"
+# → poll until the matching row reports install_status="installed"
 ```
 
 ## Requirements
