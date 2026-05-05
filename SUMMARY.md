@@ -264,6 +264,7 @@
   * [Zabbix агент](modules/miko/module-zabbix-agent.md)
   * [Телефонная книга](modules/miko/phone-book.md)
   * [Расширенная история звонков](modules/miko/module-extended-cdr.md)
+  * [Карта маршрутизации звонков](modules/miko/module-routing-map.md)
   * [Активные вызовы](modules/miko/aktivnye-vyzovy.md)
   * [Подключение FMС устройств](modules/miko/podklyuchenie-fms-ustroistv.md)
   * [Интеграция с Megapbx от Мегафон](modules/miko/integraciya-s-megapbx-ot-megafon.md)
