@@ -6,8 +6,6 @@ description: >-
 
 # Call Routing Map
 
-[Русская версия](module-routing-map-ru.md)
-
 The **Call Routing Map** module shows incoming and outgoing call routing as an interactive read-only diagram. It collects providers, DID routes, time conditions, IVR menus, queues, conferences, applications and extensions from the current MikoPBX configuration and displays them as a clickable graph.
 
 <figure><img src="../../.gitbook/assets/ModuleRoutingMap-RouteMap.png" alt=""><figcaption><p>Call Routing Map overview</p></figcaption></figure>
