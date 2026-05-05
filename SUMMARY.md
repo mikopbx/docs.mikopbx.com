@@ -213,6 +213,8 @@
   * [Phrase Studio (TTS)](modules/miko/module-phrase-studio.md)
   * [Callback module](modules/miko/module-callback-queues.md)
   * [Extended call history](modules/miko/module-extended-cdr.md)
+  * [Call Routing Map](modules/miko/module-routing-map.md)
+  * [Карта маршрутизации звонков](modules/miko/module-routing-map-ru.md)
 
 ## other
 
