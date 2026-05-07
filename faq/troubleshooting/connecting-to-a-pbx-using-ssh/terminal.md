@@ -4,7 +4,7 @@ description: Подключение к MikoPBX по SSH с помощью Powers
 
 # Подключение с помощью SSH (Linux/MacOS)
 
-## Создание и привязка ключа&#x20;
+## Создание и привязка ключа
 
 1. Для начала необходимо сгенерировать SSH ключ. Перейдите в терминал и введите следующую комманду для его генерации:
 
@@ -55,6 +55,6 @@ ssh -i Users\<Username>\.ssh\id_ed25519 root@mikopbxipadress
 * Путь к SSH ключу.
 * Подставьте IP вашей MikoPBX вместо _mikopbxipadress._
 
-Введите пароль от ssh. Произойдет подключение к консоли MikoPBX с помощью SSH:
+Произойдет подключение к консоли MikoPBX с помощью SSH:
 
 <figure><img src="../../../.gitbook/assets/mikopbxconsoleSSH.png" alt=""><figcaption><p>Успешное подключение!</p></figcaption></figure>
