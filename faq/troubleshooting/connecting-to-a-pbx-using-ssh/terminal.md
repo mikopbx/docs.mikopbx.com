@@ -2,7 +2,7 @@
 description: Connecting to MikoPBX via SSH using Terminal (Linux/MacOS)
 ---
 
-# Connecting via SSH (Linux/MacOS)
+# SSH Connection (Linux/MacOS Terminal)
 
 ## Generating and Linking the Key
 
@@ -52,6 +52,6 @@ Replace the following with your actual parameters:
 * The path to your SSH key (if different from default).
 * The IP address of your MikoPBX in place of `mikopbxipadress`.
 
-You will then be prompted for the SSH passphrase if you set one. Upon successful authentication, you will be connected to the MikoPBX console via SSH:
+Upon successful authentication, you will be connected to the MikoPBX console via SSH:
 
 <figure><img src="../../../.gitbook/assets/mikopbxconsoleSSH.png" alt=""><figcaption><p>Successful connection!</p></figcaption></figure>
