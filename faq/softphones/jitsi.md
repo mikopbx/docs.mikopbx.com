@@ -15,11 +15,11 @@
 
 5. В качестве идентификатора SIP вводим "**Внутренний номер"** сотрудника
 
-<figure><img src="../../.gitbook/assets/4 (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
 
 6. В качестве пароля вводим "**Пароль для SIP**"
 
-<figure><img src="../../.gitbook/assets/5 (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (5).png" alt=""><figcaption></figcaption></figure>
 
 7. Нажимаем "**Расширенные**" для отображения дополнительных настроек
 
@@ -42,7 +42,7 @@
 <figure><img src="../../.gitbook/assets/10 (6).png" alt=""><figcaption></figcaption></figure>
 
 Таким образом мы осуществили подключение софтфона Jitsi к MikoPBX. Об успешной авторизации свидетельствует статус "**В сети**".\
-Также на АТС у данного внутреннего номера должен отобразиться статус <mark style="background-color:green;">Подключен</mark><mark style="background-color:green;">**.**</mark>&#x20;
+Также на АТС у данного внутреннего номера должен отобразиться статус <mark style="background-color:green;">Подключен</mark><mark style="background-color:green;">**.**</mark>
 
 <figure><img src="../../.gitbook/assets/13 (3).png" alt=""><figcaption></figcaption></figure>
 

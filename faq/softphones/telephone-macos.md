@@ -1,6 +1,6 @@
 # Telephone(MacOS)
 
-Это самый простой клиент для пользователей продукции Apple. Скачать можно по [ссылке](https://apps.apple.com/ru/app/telephone/id406825478?l=en\&mt=12).&#x20;
+Это самый простой клиент для пользователей продукции Apple. Скачать можно по [ссылке](https://apps.apple.com/ru/app/telephone/id406825478?l=en\&mt=12).
 
 1. В поле **"Full Name"** введите имя сотрудника, которое будет отображаться в приложении
 
@@ -8,19 +8,19 @@
 
 2. В поле **"Domain"** введите **IP-адрес** MikoPBX, к которой производится подключение
 
-<figure><img src="../../.gitbook/assets/8 (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/2 (47).png" alt=""><figcaption></figcaption></figure>
 
 3. В поле **"User Name"** введите внутренний номер сотрудника
 
-<figure><img src="../../.gitbook/assets/4 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/3 (36).png" alt=""><figcaption></figcaption></figure>
 
 4. В поле **"Password"** введите "**Пароль для SIP**"
 
-<figure><img src="../../.gitbook/assets/5 (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (5).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/4 (31).png" alt=""><figcaption></figcaption></figure>
 
@@ -29,7 +29,7 @@
 <figure><img src="../../.gitbook/assets/5 (20).png" alt=""><figcaption></figcaption></figure>
 
 Об успешной авторизации свидетельствует зеленый индикатор сверху.\
-Также на АТС у данного внутреннего номера должен отобразиться статус <mark style="background-color:green;">Подключен</mark><mark style="background-color:green;">**.**</mark>&#x20;
+Также на АТС у данного внутреннего номера должен отобразиться статус <mark style="background-color:green;">Подключен</mark><mark style="background-color:green;">**.**</mark>
 
 <figure><img src="../../.gitbook/assets/6 (3).png" alt=""><figcaption></figcaption></figure>
 

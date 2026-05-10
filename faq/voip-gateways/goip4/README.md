@@ -20,7 +20,7 @@ description: Подключение GSM шлюза GOIP4
 * **Логин** - будет установлен равным ID провайдера, поменять возможности нет, пример логина «**SIP-TRUNK-3A13EB43**».
 * **Пароль** - укажем и запомним сложный пароль, с ним шлюз будет регистрироваться на MikoPBX.
 
-<figure><img src="../../../.gitbook/assets/newProvider (2).png" alt=""><figcaption><p>Параметры провайдера </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/newProvider (2).png" alt=""><figcaption><p>Параметры провайдера</p></figcaption></figure>
 
 2. В расширенных настройках провайдера, в поле "**Дополнительные параметры**", укажите:
 
@@ -35,7 +35,7 @@ trust_id_inbound=yes
 Шлюз при направлении звонка в MikoPBX будет присылать дополнительных заголовок «**Remoe Party ID**», в нем будет содержаться информация по номеру телефона клиента. MikoPBX будет устанавливать CID согласно этому заголовку.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/additionalParameters.png" alt=""><figcaption><p>Дополнительные параметры создаваемого провайдера </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/additionalParameters.png" alt=""><figcaption><p>Дополнительные параметры создаваемого провайдера</p></figcaption></figure>
 
 ## Настройка шлюза <a href="#nastrojka_shljuza" id="nastrojka_shljuza"></a>
 
@@ -79,7 +79,7 @@ trust_id_inbound=yes
 Правило dialplan ««1:-1» означает,что если номер начинается на 1, то первая цифра будет удалена, отсекаем префикс
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption><p>Параметры на вкладке "Call Out"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (89).png" alt=""><figcaption><p>Параметры на вкладке "Call Out"</p></figcaption></figure>
 
 ### Configurations - Call In <a href="#configurations_-_call_in" id="configurations_-_call_in"></a>
 

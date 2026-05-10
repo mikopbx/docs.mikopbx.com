@@ -4,7 +4,7 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 
 # VMware Workstation Pro
 
-В текущей инструкции будет описан процесс создания и настройки виртуальной машины в VMware Workstation Pro, а так же процесс установки MikoPBX.&#x20;
+В текущей инструкции будет описан процесс создания и настройки виртуальной машины в VMware Workstation Pro, а так же процесс установки MikoPBX.
 
 Скачать установщик VMware Workstation Pro можно [на сайте](https://www.vmware.com/).
 
@@ -62,7 +62,7 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 
 <figure><img src="../../.gitbook/assets/newHardDisc.png" alt=""><figcaption><p>Выбор типа нового элемента системы</p></figcaption></figure>
 
-4. Выберите "**Virtual disk type**" - "**SCSI**". Нажмите "**Next >**".&#x20;
+4. Выберите "**Virtual disk type**" - "**SCSI**". Нажмите "**Next >**".
 
 <figure><img src="../../.gitbook/assets/typeOfDisk.png" alt=""><figcaption><p>Выбор типа диска</p></figcaption></figure>
 
@@ -92,7 +92,7 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 
 2. Откроется командный интерфейс MikoPBX. АТС начнет загружаться. На данном этапе MikoPBX загружается с оптического диска, на который записан ISO-образ. На это нам указывает строчка: "<mark style="color:red;">**The system is loaded in Recovery mode**</mark>".
 
-<figure><img src="../../.gitbook/assets/startPageConsole (1).png" alt=""><figcaption><p>Загруженная MikoPBX с оптического диска</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/startPageConsole.png" alt=""><figcaption><p>Загруженная MikoPBX с оптического диска</p></figcaption></figure>
 
 {% hint style="info" %}
 Перемещаться по пунктам меню можно [клавишами управления курсором](https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B0%D0%B2%D0%B8%D1%88%D0%B8_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BA%D1%83%D1%80%D1%81%D0%BE%D1%80%D0%BE%D0%BC).
@@ -102,7 +102,7 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 Также можно выбирать пункт меню нажав на [буквенно-цифровом блоке клавиатуры](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%B0#%D0%91%D1%83%D0%BA%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE-%D1%86%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9_%D0%B1%D0%BB%D0%BE%D0%BA) соответствующую пункту цифру.
 {% endhint %}
 
-3. Переключите язык интерфейса на русский. Для этого выполните **"\[1] Change Language"** -> **"\[2] Русский"**.&#x20;
+3. Переключите язык интерфейса на русский. Для этого выполните **"\[1] Change Language"** -> **"\[2] Русский"**.
 4. Далее произведем установку MikoPBX. Перейдите в пункт "**\[8] Install**".
 5. Отобразится информация о всех **доступных** дисках (в данном примере: **sdb**, **sdc**). Системой предложен диск по умолчанию, в нашем случае - sdb. Если вы согласны с предложенным диском, который будет использоваться в качестве системного - нажмите Enter. В противном случае напишите название другого диска.
 
@@ -112,7 +112,7 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 
 <figure><img src="../../.gitbook/assets/disks (1).png" alt=""><figcaption><p>Выбор диска для системы</p></figcaption></figure>
 
-6. Далее система выдаст предупреждения.  Для подтверждение операции - введите "**y**" и нажмите Enter.
+6. Далее система выдаст предупреждения. Для подтверждение операции - введите "**y**" и нажмите Enter.
 7. После выполнения установки будет предложено выбрать диск для хранения записей разговоров. Введите имя диска (в данном примере - единственный доступный диск **sdc**) и нажмите **Enter.**
 
 <figure><img src="../../.gitbook/assets/disks2.png" alt=""><figcaption><p>Выбор диска для хранения записей разговоров</p></figcaption></figure>

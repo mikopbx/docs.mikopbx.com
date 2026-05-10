@@ -6,7 +6,7 @@
 
 2. Назначьте внутренний номер, к примеру **2200110**
 
-<figure><img src="../../.gitbook/assets/NewDialplan.png" alt=""><figcaption><p>Внутренний номер приложения </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NewDialplan.png" alt=""><figcaption><p>Внутренний номер приложения</p></figcaption></figure>
 
 3. Вставьте следующий код во вкладку "Программный код"
 
@@ -40,7 +40,7 @@ sleep(1);
 
 <figure><img src="../../.gitbook/assets/customizationFiles.png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
-5. Откройте для редактирования файл "**extensions.conf**"&#x20;
+5. Откройте для редактирования файл "**extensions.conf**"
 
 <figure><img src="../../.gitbook/assets/extensionsConf.png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
@@ -57,9 +57,9 @@ sleep(1);
 
 В коде, «**SIP-1687941868**» замените на ID своего провайдера. Подсмотреть его значение можно в карточке провайдера, в адресной строке браузера
 
-<figure><img src="../../.gitbook/assets/ProviderID.png" alt=""><figcaption><p>ID провайдера </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ProviderID.png" alt=""><figcaption><p>ID провайдера</p></figcaption></figure>
 
-7. Откройте для редактирования файл "**modules.conf**"&#x20;
+7. Откройте для редактирования файл "**modules.conf**"
 
 <figure><img src="../../.gitbook/assets/modulesConf.png" alt=""><figcaption><p>Конфигурационный файл "Modules.conf"</p></figcaption></figure>
 
@@ -80,4 +80,4 @@ fax_detect=yes
 fax_detect_timeout=30
 ```
 
-<figure><img src="../../.gitbook/assets/codeForProviders (1).png" alt=""><figcaption><p>Код в дополнительных параметрах провайдера</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/codeForProviders.png" alt=""><figcaption><p>Код в дополнительных параметрах провайдера</p></figcaption></figure>

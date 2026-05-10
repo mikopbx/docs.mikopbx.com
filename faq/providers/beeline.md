@@ -18,9 +18,9 @@
 
 <figure><img src="../../.gitbook/assets/5 (21).png" alt=""><figcaption></figcaption></figure>
 
-5. Выберите **"Загрузить SIP-сотрудников без номера"**&#x20;
+5. Выберите **"Загрузить SIP-сотрудников без номера"**
 
-Нажмите "**Загрузить номера**"&#x20;
+Нажмите "**Загрузить номера**"
 
 <figure><img src="../../.gitbook/assets/6 (25).png" alt=""><figcaption></figcaption></figure>
 
@@ -28,7 +28,7 @@
 
 <figure><img src="../../.gitbook/assets/7 (4).png" alt=""><figcaption></figcaption></figure>
 
-7. Нажмите на только что созданного сотрудника&#x20;
+7. Нажмите на только что созданного сотрудника
 
 <figure><img src="../../.gitbook/assets/8 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -46,7 +46,7 @@
 
 1. Переходим в раздел **Маршрутизация** → **Провайдеры телефонии**, нажимаем на кнопку «**Подключить SIP**»
 
-<figure><img src="../../.gitbook/assets/11 (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (6).png" alt=""><figcaption></figcaption></figure>
 
 2. Указываем настройки подключения, как показано на скриншоте ниже:
 

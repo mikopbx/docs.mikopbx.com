@@ -89,7 +89,7 @@ send_rpid=yes
 
 При необходимости опишите отдельно на каждый DID свой номер назначения в отдельном маршруте (Если пользователь FreePBX наберет номер **202**, то будет направлен на номер **202)**:
 
-<figure><img src="../../.gitbook/assets/didIndividualMikoPBX (1).jpg" alt=""><figcaption><p>Описание номера назначения для индивидуального DID-номера</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/didIndividualMikoPBX.jpg" alt=""><figcaption><p>Описание номера назначения для индивидуального DID-номера</p></figcaption></figure>
 
 3. Перейдите в раздел «**Connectivity**» - «**Inbound Routes**», опишите входящий маршрут в FreePBX:
 

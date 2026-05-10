@@ -29,7 +29,7 @@ MIKOPBX_NEW_BOT
 4. Сохраните значение «**token**»: он понадобится для настройки со стороны АТС.
 5. Создайте новую «**группу**».
 6. Перешлите любое сообщение из группы боту [@getmypid\_bot](https://t.me/getmyid_bot)
-7. Сохраните значение «chat ID», для пользователя значение вида "**190389360"**, для группы -  отрицательное, вида: "**-4190389360".**
+7. Сохраните значение «chat ID», для пользователя значение вида "**190389360"**, для группы - отрицательное, вида: "**-4190389360".**
 
 ## Настройки в MikoPBX <a href="#nastrojka_mikopbx" id="nastrojka_mikopbx"></a>
 
@@ -38,7 +38,7 @@ MIKOPBX_NEW_BOT
 В разделе «**Модули**» - «**Приложения диалплан**» создадите новое приложения, со следующими параметрами:
 
 * "**Название**" - Переслать sms в telegram (произвольное).
-* "**Тип кода**" -  PHP-AGI
+* "**Тип кода**" - PHP-AGI
 * Программный код:
 
 ```php
@@ -83,7 +83,7 @@ try {
 <figure><img src="../../../.gitbook/assets/codeForDialplan.png" alt=""><figcaption><p>Программный код для диалплана</p></figcaption></figure>
 
 \
-В адресной строке браузера нужно скопировать идентификатор приложения, он имеет вид:  «**DIALPLAN-APP-8B0D0964**»:
+В адресной строке браузера нужно скопировать идентификатор приложения, он имеет вид: «**DIALPLAN-APP-8B0D0964**»:
 
 <figure><img src="../../../.gitbook/assets/dialplanNumber.png" alt=""><figcaption><p>Идентификатор приложения диалплана</p></figcaption></figure>
 
@@ -136,4 +136,4 @@ message_context = messages-from-goip
 * «**Call mode**» - «**Mode 1**»
 * «**SMS to VoIP**» (нижнее) - укажите номер телефона sim карты
 
-<figure><img src="../../../.gitbook/assets/image (103).png" alt=""><figcaption><p>Параметры в GoIP</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (102).png" alt=""><figcaption><p>Параметры в GoIP</p></figcaption></figure>

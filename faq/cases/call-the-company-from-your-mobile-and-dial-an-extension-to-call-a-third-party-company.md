@@ -4,11 +4,11 @@
 
 1. Добавьте новое приложение dialplan (см. [**Приложения диалпланов**](../../manual/modules/dialplan-applications.md))
 
-<figure><img src="../../.gitbook/assets/newDialplan (1).png" alt=""><figcaption><p>Новое приложение диалпланов</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/newDialplan.png" alt=""><figcaption><p>Новое приложение диалпланов</p></figcaption></figure>
 
 2. Назначьте внутренний номер, к примеру **2200109**
 
-<figure><img src="../../.gitbook/assets/numOfDial.png" alt=""><figcaption><p>Номер диалплана </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/numOfDial.png" alt=""><figcaption><p>Номер диалплана</p></figcaption></figure>
 
 3. Вставьте код во вкладку "**Программный код**":
 
@@ -75,7 +75,7 @@ if(!empty($selectednum)){
 
 <figure><img src="../../.gitbook/assets/customizationFiles.png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
-6. Откройте для редактирования файл "**extensions.conf**"&#x20;
+6. Откройте для редактирования файл "**extensions.conf**"
 
 <figure><img src="../../.gitbook/assets/extensionsConf.png" alt=""><figcaption><p>Конфигурационный файл "<strong>extensions.conf</strong>"</p></figcaption></figure>
 

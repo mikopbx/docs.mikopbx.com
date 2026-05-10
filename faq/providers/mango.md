@@ -55,4 +55,4 @@ description: Подключение провайдера Mango Office
 
 Результатом успешного подключения является зеленый индикатор.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Успешное подключение провайдера</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Успешное подключение провайдера</p></figcaption></figure>

@@ -27,7 +27,7 @@ description: Подключение Voip шлюза Grandstream HT503
 
 2. В web-интерфейсе шлюза перейдите на страницу **STATUS**. Здесь отображается информация о IP адресе шлюза. Скопируйте его.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>IP-адрес шлюза</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>IP-адрес шлюза</p></figcaption></figure>
 
 3. Заполните следующие параметры:
 

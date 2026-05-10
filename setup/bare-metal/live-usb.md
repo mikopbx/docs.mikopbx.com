@@ -6,7 +6,7 @@ description: Установка системы с помощью записи о
 
 {% embed url="https://rutube.ru/video/8074a0c7ee9c91b51acbd017e0603ad4/" %}
 
-## Запись образа на USB-носитель&#x20;
+## Запись образа на USB-носитель
 
 ### Windows
 
@@ -80,7 +80,7 @@ sudo diskutil eraseDisk FAT32 NONAME  MBRFormat /dev/disk4;
 
 Для подтверждения введите пароль администратора, дождитесь окончания форматирования.
 
-<figure><img src="../../.gitbook/assets/eraseDiskUtil (1).png" alt=""><figcaption><p>Форматирование USB-носителя</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eraseDiskUtil.png" alt=""><figcaption><p>Форматирование USB-носителя</p></figcaption></figure>
 
 4. Отмонтируйте (отключите) диск, используя следующую команду:
 

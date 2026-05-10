@@ -9,9 +9,9 @@
 
 <figure><img src="../../.gitbook/assets/2 (35).png" alt=""><figcaption></figcaption></figure>
 
-4.  В поле  "**Имя пользователя**" введите внутренний номер сотрудника
+4. &#x20;В поле  "**Имя пользователя**" введите внутренний номер сотрудника
 
-<figure><img src="../../.gitbook/assets/4 (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/4 (35).png" alt=""><figcaption></figcaption></figure>
 
@@ -23,7 +23,7 @@
 
 6. В поле "**Пароль**" введите "**Пароль для SIP**"
 
-<figure><img src="../../.gitbook/assets/5 (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (5).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/5 (8).png" alt=""><figcaption></figcaption></figure>
 
@@ -32,10 +32,10 @@
 <figure><img src="../../.gitbook/assets/6 (10).png" alt=""><figcaption></figcaption></figure>
 
 Об успешной авторизации свидетельствует зеленый индикатор сверху.\
-Также на АТС у данного внутреннего номера должен отобразиться статус <mark style="background-color:green;">Подключен</mark><mark style="background-color:green;">**.**</mark>&#x20;
+Также на АТС у данного внутреннего номера должен отобразиться статус <mark style="background-color:green;">Подключен</mark><mark style="background-color:green;">**.**</mark>
 
 <figure><img src="../../.gitbook/assets/7 (13).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 TODO::Шифрованные звонки с использованием TLS ([добавить отсюда](https://qa.mikopbx.ru/14893/%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-tls-%D0%B4%D0%BB%D1%8F-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-sip-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0))

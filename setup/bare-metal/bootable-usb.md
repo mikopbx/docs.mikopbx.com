@@ -85,7 +85,7 @@ sudo diskutil eraseDisk FAT32 NONAME  MBRFormat /dev/disk4;
 sudo diskutil unmountDisk /dev/disk4;
 ```
 
-<figure><img src="../../.gitbook/assets/unmount (1).png" alt=""><figcaption><p>Отключение диска (команда unmountDisk)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/unmount.png" alt=""><figcaption><p>Отключение диска (команда unmountDisk)</p></figcaption></figure>
 
 5. Запишите образ на USB-носитель, используя следующую команду:
 

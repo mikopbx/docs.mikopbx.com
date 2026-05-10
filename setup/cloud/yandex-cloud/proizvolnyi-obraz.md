@@ -35,7 +35,7 @@ description: Установка в Yandex cloud произвольного об�
 5. Для других полей используйте значения по умолчанию
 6. Завершив ввод значений, нажмите кнопку **Создать бакет**
 
-<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_1.png" alt=""><figcaption></figcaption></figure>
 
 7. Откройте созданный бакет _mikopbx-imgs_
 8. На открывшейся вкладке выберите **Загрузить объекты**

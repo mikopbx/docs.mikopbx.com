@@ -14,7 +14,7 @@ description: Установка MikoPBX с помощью VMware Fusion.
 
 Нажимаем "**Continue**"
 
-<figure><img src="../../.gitbook/assets/2 (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (36).png" alt=""><figcaption></figcaption></figure>
 
 3. Выбираем тип операционной системы **Other Linux 5.x and later kernel 64-bit**
 
@@ -70,7 +70,7 @@ description: Установка MikoPBX с помощью VMware Fusion.
 **1 час** записи разговоров занимает примерно **14мб** на диске.
 {% endhint %}
 
-## Установка MikoPBX&#x20;
+## Установка MikoPBX
 
 1. Запустите виртуальную машину
 
@@ -80,7 +80,7 @@ description: Установка MikoPBX с помощью VMware Fusion.
 
 <figure><img src="../../.gitbook/assets/14 (3).png" alt=""><figcaption></figcaption></figure>
 
-3. Введите имя диска, на который будет установлена MikoPBX&#x20;
+3. Введите имя диска, на который будет установлена MikoPBX
 
 В нашем случае - _sdb_, введите его название и нажмите **Enter**
 
@@ -90,7 +90,7 @@ description: Установка MikoPBX с помощью VMware Fusion.
 
 <figure><img src="../../.gitbook/assets/16 (6).png" alt=""><figcaption></figcaption></figure>
 
-5. Выберите диск для записи разговоров&#x20;
+5. Выберите диск для записи разговоров
 
 В нашем случае - _sdc_, введите его название и нажмите **Enter**
 
@@ -102,11 +102,11 @@ description: Установка MikoPBX с помощью VMware Fusion.
 
 ## Первое подключение к MikoPBX
 
-1. В АТС отображается **IP адрес** станции, по которому к ней можно подключится&#x20;
+1. В АТС отображается **IP адрес** станции, по которому к ней можно подключится
 
 <figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
-2. Введите IP адрес станции в строку браузера и у вас откроется меню входа в MIkoPBX&#x20;
+2. Введите IP адрес станции в строку браузера и у вас откроется меню входа в MIkoPBX
 
 Логин и пароль по умолчанию - "**admin**"
 

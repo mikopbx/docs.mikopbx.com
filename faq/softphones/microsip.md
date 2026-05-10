@@ -17,19 +17,19 @@
 
 <figure><img src="../../.gitbook/assets/5 (27).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (2).png" alt=""><figcaption></figcaption></figure>
 
 6. В поле "**Username**" и в поле "**Login**" вводим "**Внутренний номер**" сотрудника
 
 <figure><img src="../../.gitbook/assets/6 (19).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/4 (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
 
 7. В поле "**Password**" вводим "**Пароль для SIP**":
 
 <figure><img src="../../.gitbook/assets/7 (9).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/5 (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (5).png" alt=""><figcaption></figcaption></figure>
 
 8. Нажмите **"Save"**
 
@@ -39,4 +39,4 @@
 
 <figure><img src="../../.gitbook/assets/9 (14).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/12 (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (12).png" alt=""><figcaption></figcaption></figure>

@@ -2,13 +2,13 @@
 
 В настройках [Сотрудника ](../../manual/telephony/extensions.md)есть возможность настроить маршрутизацию. Если сотрудник не доступен, то вызов можно направить на его мобильный номер телефона. Не для всех случаев эта функция необходима. К примеру часто для внутренних звонков клиенты просят ее отключить.
 
-1. Перейдите в раздел  «**Система**» -> «**Кастомизация системных файлов**»
+1. Перейдите в раздел «**Система**» -> «**Кастомизация системных файлов**»
 
-<figure><img src="../../.gitbook/assets/1 (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (15).png" alt=""><figcaption></figcaption></figure>
 
 2. Выберите для редактирования файл «**/etc/asterisk/extensions.conf**»
 
-<figure><img src="../../.gitbook/assets/4 (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (20).png" alt=""><figcaption></figcaption></figure>
 
 3. Выберите режим «**Добавлять в конец файла**»
 

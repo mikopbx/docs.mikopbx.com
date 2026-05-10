@@ -150,4 +150,4 @@ description: Установка MikoPBX с помощью 1С:Облачная �
 5. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
 6. Для входа используйте указанные во вкладке Серийная консоль логин и пароль
 
-<figure><img src="../../.gitbook/assets/MikoPBXvkInstallation_16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/FirstStart.png" alt=""><figcaption></figcaption></figure>

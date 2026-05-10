@@ -34,7 +34,7 @@ ARM64: [https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow](https://aw
 
 6. Введите имя виртуальной машины (Name), например _mikopbx-vm_
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_2.png" alt=""><figcaption></figcaption></figure>
 
 Если у вас есть ключ SSH, выполните следующее
 
@@ -44,9 +44,9 @@ ARM64: [https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow](https://aw
 
 7. Выберите **Create new key pair** и укажите имя пары ключей (Key pair name), например _mikopbx\_key_
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_3.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_4 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_4.png" alt=""><figcaption></figcaption></figure>
 
 Следуйте дальше по инструкции
 
@@ -59,7 +59,7 @@ ARM64: [https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow](https://aw
 
 8. При необходимости измените размер диска для хранения данных в разделе Configure storage, по умолчанию его размер - 50Гб
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_7.png" alt=""><figcaption></figcaption></figure>
 
 9. В разделе Network settings все необходимые правила Firewall настраиваются автоматически
 
@@ -68,19 +68,19 @@ ARM64: [https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow](https://aw
 10. Для других полей используйте значения по умолчанию
 11. Нажмите кнопку **Launch instance**
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_8 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_8.png" alt=""><figcaption></figcaption></figure>
 
 ### **Запуск АТС MikoPBX**
 
 1. Перейдите к созданной виртуальной машине _mikopbx-vm_
 2. На открытой вкладке выберите Connect / EC2 serial console, дождитесь полной загрузки системы, пока не отобразятся параметры авторизации
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_12.png" alt=""><figcaption></figcaption></figure>
 
 3. Скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
 4. Для входа используйте указанные в EC2 serial console логин и пароль
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_s_10 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_13.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 Обязательно выполните настройку Firewall на самой АТС MikoPBX

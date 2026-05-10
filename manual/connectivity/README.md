@@ -6,7 +6,7 @@ description: Описание раздела Сеть и Firewall в MikoPBX
 
 Раздел **«Сеть и Firewall»** в MikoPBX — это интерфейс для настройки сетевых параметров и управления брандмауэром системы. Здесь администраторы могут настраивать IP-адреса, сетевые интерфейсы и создавать правила брандмауэра для защиты системы от несанкционированного доступа. Этот раздел обеспечивает безопасную и стабильную работу MikoPBX в сетевой инфраструктуре организации.
 
-<figure><img src="../../.gitbook/assets/networkSection (1).png" alt=""><figcaption><p>Раздел "Сеть и Firewall" в MikoPBX</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/networkSection.png" alt=""><figcaption><p>Раздел "Сеть и Firewall" в MikoPBX</p></figcaption></figure>
 
 ### Сетевые интерфейсы
 

@@ -16,7 +16,7 @@ MikoPBX может определить номер телефона, на кот
 
 <figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
-3. Откройте для редактирования конфигурационный файл **extensions.conf**.&#x20;
+3. Откройте для редактирования конфигурационный файл **extensions.conf**.
 
 <figure><img src="../../.gitbook/assets/image (21) (1).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
@@ -53,15 +53,15 @@ set_var=MIKO_LINE_NAME=PT
 
 В нашем примере наименование линии будет идентично наименованию провайдера - **PT**.
 
-<figure><img src="../../.gitbook/assets/extraParameters (1).png" alt=""><figcaption><p>Дополнительные параметры для провайдера </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/extraParameters (1).png" alt=""><figcaption><p>Дополнительные параметры для провайдера</p></figcaption></figure>
 
 2. Перейдите в раздел **Система** -> **Кастомизация системных файлов**
 
-<figure><img src="../../.gitbook/assets/image (22) (1).png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
 3. Откройте для редактирования конфигурационный файл **extensions.conf**.
 
-<figure><img src="../../.gitbook/assets/image (23) (1).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21) (1).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
 4. Установите режим «**Добавлять в конец файла**». В черное окно добавьте следующий фрагмент кода:
 
