@@ -376,3 +376,9 @@ sudo ./start-multiple-mikopbx.sh docker-compose.yaml
 * **WEB\_ADMIN\_PASSWORD** - пароль для доступа в Web интерфейс
 
 Полный список всех возможных параметров настроек доступен в исходном коде [по ссылке](https://github.com/mikopbx/Core/blob/develop/src/Common/Models/PbxSettingsConstants.php).
+
+{% hint style="warning" %}
+В bridge-режиме (по умолчанию) внутренний файрвол MikoPBX не защищает
+веб-интерфейс — контейнер не управляет iptables хоста. См.
+[Внешний файрвол для Docker](external-firewall-enforcement.md).
+{% endhint %}

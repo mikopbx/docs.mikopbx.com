@@ -45,6 +45,7 @@
   * [Установка докера и cоздание пользователя и каталогов](setup/docker/docker-installation.md)
   * [Запуск MikoPBX в контейнере](setup/docker/running-mikopbx-in-container.md)
   * [Запуск MikoPBX с помощью docker compose](setup/docker/running-mikopbx-using-docker-compose.md)
+  * [Внешний файрвол для Docker](setup/docker/external-firewall-enforcement.md)
 
 ## Руководство пользователя <a href="#manual" id="manual"></a>
 
@@ -97,6 +98,7 @@
   * [API ключи](manual/system/api-keys/README.md)
     * [Примеры использования REST API](manual/system/api-keys/examples.md)
     * [Интерактивная документация и список эндпоинтов](manual/system/api-keys/endpoints.md)
+    * [Эндпоинт firewall-export](manual/system/api-keys/firewall-export.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 
