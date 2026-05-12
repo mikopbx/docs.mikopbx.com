@@ -92,11 +92,6 @@ services:
 
 <figure><img src="../../.gitbook/assets/bouncer-token-preset.png" alt=""><figcaption><p>Модалка с пресет-конфигом cs-firewall-bouncer после создания токена</p></figcaption></figure>
 
-Полученный токен ограничен путём `/api/v3/firewall-bouncer` и не имеет
-доступа к остальному API. Опционально привяжите токен к NetworkFilter,
-чтобы дополнительно ограничить source-IP, с которого bouncer обращается
-к АТС.
-
 #### 2. Установите bouncer на хосте
 
 ```bash
