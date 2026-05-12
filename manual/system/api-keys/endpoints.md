@@ -619,3 +619,11 @@ At the bottom of the page you will find possible response codes with brief expla
 | ------ | ------------------------------ | ---------------- |
 | POST   | `/user-page-tracker:pageView`  | Track page view  |
 | POST   | `/user-page-tracker:pageLeave` | Track page leave |
+
+***
+
+### Technical endpoints
+
+* [The firewall-export endpoint](firewall-export.md) — exports ban
+  decisions for external bouncers (CrowdSec-compatible). Available
+  starting from **MikoPBX 2026.1.76**.

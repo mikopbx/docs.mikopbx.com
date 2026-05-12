@@ -122,6 +122,13 @@ Go to **Network and Firewall → Intrusion Protection** and review the configure
 
 <figure><img src="../.gitbook/assets/Release2026.1.GeoIP2Fail2Ban.png" alt=""><figcaption><p>"Intrusion protection" section in MikoPBX web-interface</p></figcaption></figure>
 
+#### Protect the web interface in Docker
+
+* **Docker deployment**: in bridge mode the built-in firewall and
+  fail2ban do not protect the web interface. Set up an
+  [external firewall bouncer](../setup/docker/external-firewall-enforcement.md)
+  or switch the container to `network_mode: host`.
+
 #### **Do Not Expose the PBX on a Public IP Address**
 
 If your PBX is directly accessible from the internet, it becomes a target for automated scanners that continuously search for vulnerable systems.

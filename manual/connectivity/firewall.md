@@ -38,3 +38,18 @@ You can give the rule any custom name. To the right of the subnet address, there
 * The flag 'Never block addresses from this network' should be enabled only for trusted subnets. If this flag is enabled, intrusion prevention rules will not apply to this subnet
 
 <figure><img src="../../.gitbook/assets/new5.png" alt=""><figcaption><p>"Advanced options" section</p></figcaption></figure>
+
+## Behaviour in Docker containers
+
+In Docker bridge mode the MikoPBX built-in firewall and fail2ban **do
+not protect the web interface**: the container cannot manage host
+iptables, and HTTP clients arrive from the `docker0` gateway. SIP
+protection continues to work (UDP DNAT preserves the source IP).
+
+To protect the web interface in Docker, choose one of:
+
+* `network_mode: host` for the container (when the host is dedicated
+  to the PBX);
+* An external CrowdSec-compatible bouncer in front of the MikoPBX API —
+  see
+  [External firewall for Docker](../../setup/docker/external-firewall-enforcement.md).

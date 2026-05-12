@@ -37,6 +37,7 @@
   * [Docker installation and creating a user and directories](setup/docker/docker-installation.md)
   * [Running MikoPBX in a container](setup/docker/running-mikopbx-in-container.md)
   * [Running MikoPBX using docker compose](setup/docker/running-mikopbx-using-docker-compose.md)
+  * [External firewall for Docker](setup/docker/external-firewall-enforcement.md)
 
 ## User manual <a href="#manual" id="manual"></a>
 
@@ -83,6 +84,7 @@
   * [API Keys](manual/system/api-keys/README.md)
     * [REST API Usage Examples](manual/system/api-keys/examples.md)
     * [Interactive Documentation and Endpoint List](manual/system/api-keys/endpoints.md)
+    * [The firewall-export endpoint](manual/system/api-keys/firewall-export.md)
   * [ARI Access](manual/system/asterisk-rest-users.md)
 
 ## FAQ

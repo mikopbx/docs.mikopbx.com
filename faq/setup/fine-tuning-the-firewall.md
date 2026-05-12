@@ -1,5 +1,11 @@
 # Fine-tuning the firewall
 
+{% hint style="warning" %}
+This page applies to bare-metal and LXC installations. For Docker
+deployments see
+[External firewall for Docker](../../setup/docker/external-firewall-enforcement.md).
+{% endhint %}
+
 When publishing a PBX on a public IP address, the task arises to protect the speaker from scanners, pests who are trying to pick up passwords to SIP PBX accounts. If a simple numeric password is set, it will be picked up very quickly, which will cause losses.
 
 For basic protection against scanners, fail2ban must be enabled. Additionally, you can fine-tune the iptables rules.

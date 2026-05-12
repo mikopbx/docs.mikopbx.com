@@ -31,3 +31,12 @@ The list of blocked addresses shows which IP addresses are currently blocked.
 You can also unblock an address by clicking on the corresponding icon in the table.
 
 <figure><img src="../../.gitbook/assets/new3.png" alt=""><figcaption><p>Unlock button</p></figcaption></figure>
+
+{% hint style="info" %}
+**In Docker (bridge mode)** fail2ban writes bans to Redis but the
+container cannot manage host iptables — web-interface bans are not
+applied automatically. To project them to the host, run an external
+bouncer (see
+[External firewall for Docker](../../setup/docker/external-firewall-enforcement.md)).
+SIP protection works normally.
+{% endhint %}
