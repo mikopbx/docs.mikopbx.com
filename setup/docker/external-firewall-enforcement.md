@@ -79,16 +79,21 @@ Recommended for most installations.
 1. Open **System → API keys**.
 2. Click **Create bouncer token** (pre-fills the correct path
    restriction).
-3. Save. A modal will pop up with a ready-to-paste
+3. A token-creation form opens. The description ("External firewall
+   bouncer (CrowdSec-compatible)") and the API key are pre-filled —
+   optionally pick a **Network filter** to restrict the source IP the
+   bouncer is allowed to call from. Leave **Full access permissions**
+   off: the **Create bouncer token** button has already scoped the
+   token to `/api/v3/firewall-bouncer`, so it has no access to the
+   rest of the API.
+
+<figure><img src="../../.gitbook/assets/bouncer-token-form.png" alt=""><figcaption><p>Token creation form with the description and key pre-filled</p></figcaption></figure>
+
+4. Save. A modal will pop up with a ready-to-paste
    `cs-firewall-bouncer.yaml` snippet — **copy it immediately**, the API
    key is shown only once.
 
 <figure><img src="../../.gitbook/assets/bouncer-token-preset.png" alt=""><figcaption><p>Modal with the cs-firewall-bouncer preset config after creating the token</p></figcaption></figure>
-
-The resulting token is restricted to the `/api/v3/firewall-bouncer` path
-and has no access to the rest of the API. Optionally bind the token to
-a NetworkFilter to further restrict the source IP the bouncer is
-allowed to call from.
 
 #### 2. Install the bouncer on the host
 
