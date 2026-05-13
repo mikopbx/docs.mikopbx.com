@@ -1,73 +1,48 @@
-# Настройка WebRTC клиента SIPML5
+# Настройка WebRTC клиента sipml5
 
 ## Настройка АТС <a href="#nastrojka_ats" id="nastrojka_ats"></a>
 
-Для корректной работа WebRTC в большинстве браузеров необходим доверенный SSL сертификат. Рекомендуем использовать дополнительный модуль [Модуль Lets encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md). Для использования модуля АТС должна быть доступна на белом IP адресе.
-
 1. Создайте новую учетную запись [**сотрудника**](../../manual/telephony/extensions.md).
-2. **Вариант 1.** Индивидуально для каждого внутреннего номера устанавливается, что он работает только по протоколу RTС. В разделе «**Расширенные настройки**» - «**Дополнительные параметры SIP учетной записи**» Добавьте опции:
+2. Перейдите в **Система → Общие настройки → SIP** и включите переключатель «**Использовать WebRTC**».
 
-```
- [endpoint]
-webrtc=yes
-```
-
-Нажмите «**Сохранить**». С этого момента данный внутренний номер сможет работать _только_ по протоколу WebRTC.
-
-<figure><img src="../../.gitbook/assets/additionalInfoExtension (1).png" alt=""><figcaption><p>Extra options в параметрах сотрудника </p></figcaption></figure>
-
-\
-**Вариант 2.** Для всех внутренних номеров устанавливается, что они могут работать, _как по протоколу PJSIP, так и по WebRTC_.\
-Для этого в разделе **Система → Общие настройки → SIP** включите переключатель «**Использовать WebRTC**».
+Это автоматически создаёт выделенный WebRTC endpoint для каждого внутреннего номера (например, `204-WS`), что позволяет работать одновременно по протоколам PJSIP и WebRTC. Никаких дополнительных настроек для отдельных номеров не требуется.
 
 <figure><img src="../../.gitbook/assets/webrtcBtn.png" alt=""><figcaption><p>Переключатель "Использовать WebRTC"</p></figcaption></figure>
 
-3. В MikoPBX в разделе «**Сеть и Firewall**» → «**Сетевой экран**» добавить подсеть 0.0.0.0 с маской 0.0.0.0. Откройте доступ по AJAM
-
-<figure><img src="../../.gitbook/assets/ajamBtn.png" alt=""><figcaption><p>Адрес, маска, переключатель AJAM в настройках сетевого экрана</p></figcaption></figure>
-
-4. Перейдите в «**Система**» → «**Общие настройки**» → «**AMI\&AJAM**». Убедитесь, что «**Порт AJAM с шифрованием**» установлен в значение **8089.**
-
-<figure><img src="../../.gitbook/assets/ajamPort.png" alt=""><figcaption><p>Порт AJAM с шифрованием</p></figcaption></figure>
-
-5. В разделе «[Общие настройки](../../manual/system/general-settings.md)» укажите адрес STUN сервера. Например **stun.sipnet.ru**
+3. В разделе [«**Общие настройки**»](../../manual/system/general-settings.md) укажите адрес STUN сервера. Например, **stun.sipnet.ru**.
 
 <figure><img src="../../.gitbook/assets/stunAddress.png" alt=""><figcaption><p>STUN сервер</p></figcaption></figure>
 
-6. Откройте в браузере ссылку «[**https://АДРЕС\_АТС:8089/asterisk/ws**](https://xn--_-7sbbof9dici:8089/asterisk/ws)». Используйте Chrome, в других браузерах могут быть проблемы. Если сертификат самоподписанный, то может появиться предупреждение «**Подключение не защищено**», игнорируйте его и выполните действие «**Перейти на сайт**»
+4. Проверьте WebSocket соединение, открыв в браузере следующий адрес:
+   - **Локальная сеть (без SSL):** `http://АДРЕС_АТС:8088/asterisk/ws`
+   - **С SSL сертификатом:** `https://АДРЕС_АТС:8089/asterisk/ws`
 
-Должно появиться следующее сообщение:
+Если Asterisk ответил — настройка прошла успешно.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+> **Примечание:** Для подключения через интернет необходим доверенный SSL сертификат, чтобы браузер разрешил доступ к микрофону. Рекомендуем использовать [Модуль Let's Encrypt](../../modules/miko/module-get-ssl-lets-encrypt.md).
 
-Ответил asterisk - настройка прошла успешно.
+## Настройка WebRTC клиента <a href="#nastrojka_web_rtc_klienta" id="nastrojka_web_rtc_klienta"></a>
 
-## Настройка Web RTC клиента <a href="#nastrojka_web_rtc_klienta" id="nastrojka_web_rtc_klienta"></a>
-
-1. Перейдите на сайт [https://sipml5.org](https://sipml5.org/). Вы будете переправлены на страницу [https://www.doubango.org/sipml5/](https://www.doubango.org/sipml5/). Перейдите по ссылке "[Enjoy our live demo](https://www.doubango.org/sipml5/call.htm?svn=252)"
-2. Настроим Web RTC клиент:
+1. Откройте демо sipml5 в браузере: перейдите по ссылке "[Enjoy our live demo](https://www.doubango.org/sipml5/call.htm?svn=252)".
+2. Заполните основные поля:
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-Поле «**Public Identity**» опишите по шаблону
+| Поле | Значение |
+|---|---|
+| **Display Name** | Любое имя |
+| **Private Identity** | `ВНУТРЕННИЙ_НОМЕР` (например, `204`) |
+| **Public Identity** | `sip:ВНУТРЕННИЙ_НОМЕР-WS@АДРЕС_АТС` (например, `sip:204-WS@192.0.2.1`) |
+| **Password** | SIP пароль учетной записи |
+| **Realm** | `АДРЕС_АТС` |
 
-```
-sip:ВНУТРЕННИЙ_НОМЕР@АДРЕС_АТС
-```
-
-**При включении опции** [Использовать WebRTC](../../manual/system/general-settings.md#sip)
-
-```
-sip:ВНУТРЕННИЙ_НОМЕР-WS@АДРЕС_АТС
-```
-
-Кликните по кнопке «**Expert mode?**» и выполните дополнительную настройку:
+3. Нажмите **«Expert mode?»** и укажите адрес WebSocket сервера:
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-«**WebSocket Server URL**» опишите по шаблону
+| Тип подключения | WebSocket Server URL |
+|---|---|
+| Локальная сеть (без SSL) | `ws://192.0.2.1:8088/asterisk/ws` |
+| С SSL сертификатом | `wss://pbx.example.com:8089/asterisk/ws` |
 
-<pre><code><strong>wss://АДРЕС_АТС:8089/asterisk/ws
-</strong></code></pre>
-
-Выполните действие **Login.** Теперь можно совершать звонки.
+4. Нажмите **Login**. Теперь можно совершать звонки.
