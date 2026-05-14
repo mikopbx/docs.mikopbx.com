@@ -14,7 +14,7 @@ X86: [https://aws.amazon.com/marketplace/pp/prodview-ota6fb2tftuhw](https://aws.
 ARM64: [https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow](https://aws.amazon.com/marketplace/pp/prodview-nrp2sx3c4kuow?sr=0-1\&ref_=beagle\&applicationId=AWSMPContessa)
 {% endhint %}
 
-{% embed url="https://rutube.ru/video/8c04c19bb6af017a26a59a9c65344944/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239036" %}
 
 Приступим к настройке
 

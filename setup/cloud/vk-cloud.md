@@ -6,7 +6,7 @@ description: Установка MikoPBX с помощью VK Cloud
 
 Для начала авторизуйтесь на сайте [https://cloud.vk.com](https://cloud.vk.com)
 
-{% embed url="https://rutube.ru/video/21a48912fa139cd59f6096ed73b07ed0/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239038" %}
 
 Приступим к настройке
 

@@ -4,7 +4,7 @@ description: Установка системы с помощью записи о
 
 # Установка с записью образа на USB-носитель (Live USB)
 
-{% embed url="https://rutube.ru/video/8074a0c7ee9c91b51acbd017e0603ad4/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239063" %}
 
 ## Запись образа на USB-носитель
 

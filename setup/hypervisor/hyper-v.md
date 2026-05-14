@@ -4,7 +4,7 @@ description: Установка MikoPBX с помощью HyperV.
 
 # Hyper-V
 
-{% embed url="https://rutube.ru/video/99b3c9f0abab34dc19cd64306f09d690/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239035" %}
 
 ### **Создание виртуальной машины**
 

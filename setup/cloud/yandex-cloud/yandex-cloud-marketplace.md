@@ -6,7 +6,7 @@ description: Установка MikoPBX в Yandex Cloud из Marketplace
 
 Для начала зарегистрируйтесь в сервисе [Yandex Cloud](https://console.cloud.yandex.ru/?referralCode=dn22bvnhhe64i62i71ua).
 
-{% embed url="https://rutube.ru/video/134e9bc0f8df41220dcd4447f4cd8175/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239037" %}
 
 Приступим к настройке
 
@@ -70,7 +70,7 @@ description: Установка MikoPBX в Yandex Cloud из Marketplace
 ### Настройка параметров SSH
 
 1. В разделе Доступ укажите Сервисный аккаунт
-2. Введите Логин и SSH-ключ, предварительно сгенерированный по [инструкции](https://yandex.cloud/ru/docs/compute/operations/vm-connect/ssh?utm_source=console\&utm_medium=side-bar-left\&utm_campaign=compute)&#x20;
+2. Введите Логин и SSH-ключ, предварительно сгенерированный по [инструкции](https://yandex.cloud/ru/docs/compute/operations/vm-connect/ssh?utm_source=console\&utm_medium=side-bar-left\&utm_campaign=compute)
 3. В разделе Дополнительные настройки установите флажок **Разрешить доступ к серийной консоли**
 
 <figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_12.png" alt=""><figcaption></figcaption></figure>
@@ -88,4 +88,3 @@ description: Установка MikoPBX в Yandex Cloud из Marketplace
 4. Для входа используйте указанные во вкладке Серийная консоль логин и пароль
 
 <figure><img src="../../../.gitbook/assets/MikoPBXYandexInstallation_16 (1).png" alt=""><figcaption></figcaption></figure>
-

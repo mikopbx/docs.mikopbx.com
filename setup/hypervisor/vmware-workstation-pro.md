@@ -14,7 +14,7 @@ description: Установка MikoPBX с помощью VMware Workstation Pro
 Версия 2024.1.114 временно не поддерживает установку с помощью VMware Workstation Pro!
 {% endhint %}
 
-{% embed url="https://rutube.ru/video/cb1cfee26d1e070018dadb14d70eae6c/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239045" %}
 
 ## Создание виртуальной машины
 

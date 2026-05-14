@@ -8,11 +8,11 @@ description: Установка MikoPBX с помощью сервиса Digital
 Инструкция актуальна для версии 2024.2.111 и новее!
 {% endhint %}
 
-{% embed url="https://rutube.ru/video/42f3354728b9cbd56772c4f274069f3f/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239056" %}
 
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы DigitalOcean.
 
-&#x20;Перед началом Вам необходимо скопировать ссылку на актуальный образ MikoPBX с расширением **.raw**. Сделать это можно на [github MikoPBX](https://github.com/mikopbx/core/releases).
+Перед началом Вам необходимо скопировать ссылку на актуальный образ MikoPBX с расширением **.raw**. Сделать это можно на [github MikoPBX](https://github.com/mikopbx/core/releases).
 
 ## Загрузка образа в DigitalOcean
 
@@ -22,9 +22,9 @@ description: Установка MikoPBX с помощью сервиса Digital
 
 2. Перейдите в "**Custom Images**" -> "**Import via URL**":
 
-<figure><img src="../../.gitbook/assets/customImagesImportViaURL.png" alt=""><figcaption><p>"Import via URL" </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/customImagesImportViaURL.png" alt=""><figcaption><p>"Import via URL"</p></figcaption></figure>
 
-3. Вставьте ссылку на файл образа диска с расширением .raw, скопированную ранее.&#x20;
+3. Вставьте ссылку на файл образа диска с расширением .raw, скопированную ранее.
 4. Введите имя для образа, выберите регион для его загрузки (должен совпадать с будущим регионом виртуальной машины). В качестве операционной системы образа выберите "**Unknown**"
 
 Нажмите "**Upload image**"
@@ -54,7 +54,7 @@ description: Установка MikoPBX с помощью сервиса Digital
 5. Перейдите во вкладку "Additional Storage". Здесь необходимо добавить второй диск, который будет использоваться для хранения записей разговоров. Для этого нажмите "Add volume" и укажите параметры для нового диска.
 
 {% hint style="info" %}
-Рекомендуемый размер диска для хранения записей разговоров  - от 50ГБ.
+Рекомендуемый размер диска для хранения записей разговоров - от 50ГБ.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/additionalStorage.png" alt=""><figcaption><p>Раздел "Additional Storage"</p></figcaption></figure>
@@ -92,7 +92,7 @@ description: Установка MikoPBX с помощью сервиса Digital
 1. Для подключения по SSH следуйте [инструкциям](../../faq/troubleshooting/connecting-to-a-pbx-using-ssh/). В данной статье будет пример с использованием **powershell** (windows).
 
 {% hint style="warning" %}
-Стандартный логин для авторизации по SSH для ВМ в DigitalOcean - do-user.&#x20;
+Стандартный логин для авторизации по SSH для ВМ в DigitalOcean - do-user.
 {% endhint %}
 
 2. Перейдите в Powershell и пропишите следующую команду:

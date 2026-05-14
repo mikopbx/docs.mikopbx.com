@@ -6,7 +6,7 @@ description: Установка в Yandex cloud произвольного об�
 
 Для начала зарегистрируйтесь в сервисе [Yandex Cloud](https://console.cloud.yandex.ru/?referralCode=dn22bvnhhe64i62i71ua).
 
-{% embed url="https://rutube.ru/video/0fed3f457757028e1b87dc81bb3d8c27/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239041" %}
 
 Приступим к настройке
 

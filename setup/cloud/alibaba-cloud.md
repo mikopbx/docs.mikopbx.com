@@ -8,7 +8,7 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 Инструкция актуальна для версии 2024.2.135 и новее!
 {% endhint %}
 
-{% embed url="https://rutube.ru/video/45d138f38207a275838d7aecb685ba6f/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239058" %}
 
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы Alibaba cloud.
 
@@ -65,7 +65,7 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 <figure><img src="../../.gitbook/assets/importImageButton.jpg" alt=""><figcaption><p>Элемент "Import Image"</p></figcaption></figure>
 
-3. В открывшейся вкладке выберите "**Linux Operating System**" и  нажмите "**Next**".
+3. В открывшейся вкладке выберите "**Linux Operating System**" и нажмите "**Next**".
 4. Введите/выберите следующие параметры для образа:
 
 * "**Image File URL**" - вставьте ранее скопированную ссылку на загруженный файл образа диска.
@@ -83,7 +83,7 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 Далее необходимо создать и добавить связку SSH ключей в Alibaba Cloud.
 
-1. &#x20;В ESS Консоли перейдите в раздел "**Network Security**" -> "**Key Pairs**":
+1. В ESS Консоли перейдите в раздел "**Network Security**" -> "**Key Pairs**":
 
 <figure><img src="../../.gitbook/assets/keyPairsSection.jpg" alt=""><figcaption><p>Раздел "Key Pairs"</p></figcaption></figure>
 
@@ -104,7 +104,7 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 ## Создание группы правил
 
-Перед созданием виртуальной машины так же нужно создать и группу правил (firewall).&#x20;
+Перед созданием виртуальной машины так же нужно создать и группу правил (firewall).
 
 1. Перейдите в раздел "**Network & Security**" -> "**Security Groups**"
 
@@ -116,14 +116,14 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 3. Укажите следующие параметры для группы правил:
 
-* "**Security Group**" -  введите произвольное название для группы правил.
+* "**Security Group**" - введите произвольное название для группы правил.
 * "**Network**" - выберите вашу сеть. Если она не созданна - нажмите "**Create VPC**" справа от поля.
 * "**Security Group**" - Basic Security Group.
 * "**Resource Group**" - выбрите Вашу группу ресурсов.
 * Разрешите все входящие подключения (пример на скриншоте ниже). Все исходящие подключения разрешены по умолчанию.
 
 {% hint style="info" %}
-Обязательно настройте firewall в самой MikoPBX как можно раньше после создания виртуальной машины. Подробнее про то как это сделать, Вы можете прочитать [здесь](../../manual/connectivity/firewall.md).&#x20;
+Обязательно настройте firewall в самой MikoPBX как можно раньше после создания виртуальной машины. Подробнее про то как это сделать, Вы можете прочитать [здесь](../../manual/connectivity/firewall.md).
 {% endhint %}
 
 Нажмите "**Create Security Group**".
@@ -176,7 +176,7 @@ description: Установка MikoPBX с помощью сервиса Alibaba
 
 ### Подключение из встроенной в облако консоли
 
-1. Нажмите "**Connect**".&#x20;
+1. Нажмите "**Connect**".
 
 <figure><img src="../../.gitbook/assets/connectToTheConsole.jpg" alt=""><figcaption><p>Элемент "Connect"</p></figcaption></figure>
 

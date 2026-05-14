@@ -6,7 +6,7 @@ description: Установка MikoPBX с помощью 1С:Облачная �
 
 Для начала авторизуйтесь на сайте [https://cloudinf.1c.ru](https://cloudinf.1c.ru)
 
-{% embed url="https://rutube.ru/video/699e33bad3f06b717afd493401dad263/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239040" %}
 
 Приступим к настройке
 

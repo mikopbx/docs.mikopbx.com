@@ -4,11 +4,11 @@ description: Установка MikoPBX с помощью Selectel
 
 # Selectel
 
-В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы Selectel.&#x20;
+В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы Selectel.
 
 Перед началом вам необходимо скачать актуальный образ MikoPBX с расширением .raw. Сделать это можно по [ссылке](https://github.com/mikopbx/Core/releases).
 
-{% embed url="https://rutube.ru/video/b8d705e1c386d8c2c9b5357ec7894158/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239044" %}
 
 ## Загрузка образа в Selectel
 

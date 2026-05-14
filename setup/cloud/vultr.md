@@ -8,7 +8,7 @@ description: Установка MikoPBX с помощью сервиса Vultr
 Инструкция актуальна для версии 2024.2.138 и новее!
 {% endhint %}
 
-{% embed url="https://rutube.ru/video/2bb730a126daf8bf48d3ff57ab11b928/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239057" %}
 
 В данной инструкции мы пошагово произведем установку MikoPBX с помощью облачной платформы Vultr.
 
@@ -60,7 +60,7 @@ description: Установка MikoPBX с помощью сервиса Vultr
 
 <figure><img src="../../.gitbook/assets/importingFileWinSCP.jpg" alt=""><figcaption><p>Загрузка файла в хранилище</p></figcaption></figure>
 
-10. Вернитесь в интерфейс Vultr, перейдите в директорию Вашего Bucket'а.&#x20;
+10. Вернитесь в интерфейс Vultr, перейдите в директорию Вашего Bucket'а.
 
 <figure><img src="../../.gitbook/assets/bucketMenu.jpg" alt=""><figcaption><p>Директория Bucket'а</p></figcaption></figure>
 
@@ -122,7 +122,7 @@ description: Установка MikoPBX с помощью сервиса Vultr
 
 ## Создание второго диска
 
-После создания сервера, остановите его запуск.&#x20;
+После создания сервера, остановите его запуск.
 
 1. Перейдите в раздел "**Cloud Storage**" -> "**Block Storage**":
 

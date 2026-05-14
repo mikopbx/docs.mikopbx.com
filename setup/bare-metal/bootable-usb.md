@@ -6,7 +6,7 @@ description: Установка системы на USB-носитель
 
 Перед началом загрузите образ диска с расширением .raw. Сделать это можно [здесь](https://www.mikopbx.ru/download/).
 
-{% embed url="https://rutube.ru/video/f1e4397d8a46235b50cc814dfef5046f/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239064" %}
 
 ## Установка системы на USB-носитель
 

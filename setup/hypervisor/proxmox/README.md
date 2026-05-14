@@ -4,7 +4,7 @@ description: Установка MikoPBX с помощью Proxmox.
 
 # Proxmox
 
-{% embed url="https://rutube.ru/video/456f9eed5cb6428f13e66207f3591d6c/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239042" %}
 
 ### **Загрузка образа MikoPBX**
 

@@ -8,7 +8,7 @@ description: Установка MikoPBX в Google Cloud с помощью Мар
 
 MikoPBX в Google Cloud Маркетплейс: [https://console.cloud.google.com/marketplace/product/mikopbx-public/mikopbx](https://console.cloud.google.com/marketplace/product/mikopbx-public/mikopbx)
 
-{% embed url="https://rutube.ru/video/5ef0325809c019b33eaae499a3001a7f/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239039" %}
 
 Приступим к настройке
 

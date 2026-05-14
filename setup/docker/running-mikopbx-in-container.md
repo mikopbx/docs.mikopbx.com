@@ -10,7 +10,7 @@ description: Установка MikoPBX в Docker контейнер
 [docker-installation.md](docker-installation.md)
 {% endcontent-ref %}
 
-{% embed url="https://rutube.ru/video/ac7288d91ee5b48cbd1ab1c94a14dadf/" %}
+{% embed url="https://vkvideo.ru/video-100268702_456239034" %}
 
 ### Запуск контейнера Docker
 
