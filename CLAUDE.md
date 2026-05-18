@@ -1,44 +1,44 @@
-# docs.mikopbx.com repository
+# docs.mikopbx.com — English checkout
 
-## Branch layout — critical
+## Layout
 
-This repository keeps **two independent branches**, one per language:
+This working tree is the **English** documentation. The repository is
+laid out on disk as two independent checkouts side-by-side:
 
-- `russian` — Russian documentation (RU GitBook space).
-- `english` — English documentation (EN GitBook space).
+```
+docs.mikopbx.com/
+├── english/   ← you are here, branch `english`
+└── russian/   ← sibling checkout, branch `russian`
+```
 
-**These branches are unrelated and must never be merged.** Each branch
-is self-contained: `russian` has the Russian files, `english` has the
-English files. It is **not** a single tree with translations — content
-diverges in structure, screenshots and wording.
+Each folder is a complete clone with its own `.git/` directory, both
+pointing at `git@github.com:mikopbx/docs.mikopbx.com.git`. **No branch
+juggling.** You never need to `git checkout` to switch language — just
+`cd` to the sibling folder.
 
-### What this means in practice
+## Working rules
 
-- **Never `git merge russian` ↔ `english`** (or the other way around),
-  not even partially. That mixes languages and breaks both versions.
-- **Do not synchronise the branches via rebase/cherry-pick across
-  languages.** When the same change has to land in both versions, apply
-  it **separately** in each branch with the appropriate translation.
-- **PRs are opened per branch**: `russian` → `origin/russian`,
-  `english` → `origin/english`. No cross-language merges.
-- **GitBook publishing** is configured per branch to its own space.
+- Stay in this folder. Edit only the English files here; never touch
+  `../russian/`. Each side commits to its own branch independently.
+- **Never `git merge russian`** (or cherry-pick across folders). The
+  two branches are unrelated trees with diverging structure, wording
+  and screenshots — merging mixes languages and breaks both versions.
+- Commits and pushes from this folder go to `origin/english` only.
+- For bilingual updates: apply the English edit here, ask the user (or
+  a sibling agent) to apply the Russian equivalent in `../russian/`.
+  Do not synchronise the two via git plumbing.
+- GitBook publishing is wired per branch to its own space; nothing
+  here triggers the Russian space.
 
-### Typical workflow for bilingual updates
-
-1. `git checkout russian` — apply the RU edits, commit.
-2. `git checkout english` — apply the EN equivalent **manually** (or
-   copy from pre-prepared drafts), commit.
-3. Push both branches as independent commits.
-
-Drafts are often prepared upfront in a separate repository
-(e.g. `mikopbx/Core/sessions/tasks/.../docs-drafts/{ru,en}/`) and copied
-into the matching branch following an `APPLY.md` runbook.
-
-## Other notes
+## GitBook conventions
 
 - Pages are GitBook-flavoured Markdown: `{% hint %}` blocks,
-  `{% content-ref %}` references, `<figure>` for images, assets live in
-  `.gitbook/assets/`.
-- The navigation root is `SUMMARY.md` (edited in both branches in
-  parallel, but with different heading text).
+  `{% content-ref %}` references, `<figure>` for images. Assets live
+  in `.gitbook/assets/` (binary; do not rewrite by mistake).
+- The navigation root is `SUMMARY.md`.
 - Default branch on GitHub is `english`.
+
+## Path notes
+
+- This checkout's path: `/Volumes/DevDisk/Developement/docs.mikopbx.com/english`
+- Russian sibling: `/Volumes/DevDisk/Developement/docs.mikopbx.com/russian`
