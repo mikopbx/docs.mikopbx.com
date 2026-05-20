@@ -4,7 +4,7 @@ description: Creating and configuring IVR menu in MikoPBX
 
 # IVR Menu
 
-An IVR menu includes options for routing incoming calls using an interactive voice menu. It allows callers to navigate through a series of menu prompts using their telephone keypad or voice input. The IVR menu typically provides various choices or options for callers to select based on their needs or preferences. Each option in the menu can be associated with a specific action or routing destination, such as transferring the call to a particular department, providing self-service options, or connecting the caller to a specific extension or queue. The IVR menu enhances the caller's experience by offering a self-service mechanism and streamlining call routing based on their selections.
+An IVR menu includes options for routing incoming calls using an interactive voice menu. It allows callers to navigate through a series of menu prompts using their telephone keypad (DTMF). Each option in the menu can be associated with a specific action or routing destination, such as transferring the call to a particular department, providing self-service options, or connecting the caller to a specific extension or queue. The IVR menu enhances the caller's experience by offering a self-service mechanism and streamlining call routing based on their selections.
 
 ## Pre-configuration
 
@@ -63,7 +63,7 @@ Press "**Save settings**."
 The principle of operation of an IVR (Interactive Voice Response) is as follows:
 
 1. When calling the IVR menu number, the Voice **Greeting audio file** starts playing.
-2. During the playback of the voice menu, the caller can enter an extension number. The "**Allow Dialing Any Internal Number**" flag determines if callers can dial any internal number, including queues, IVRs, or internal extensions.
+2. During the playback of the voice menu, the caller can select menu options or dial an employee's internal extension. The "**Allow Dialing Any Internal Number**" flag allows callers to dial internal employee numbers with SIP accounts. Routing to queues, IVRs, conferences, and other destinations is configured separately in the IVR action table.
 3. After the voice menu is played, there is a waiting period of the "**Input Extension Timeout**" for entering an extension number.
 4. The total time allowed for entering the extension number is calculated as the sum of the audio file duration and the input extension timeout.
 5. If the total time for entering the extension number expires, a repeat voice announcement occurs, and there is another waiting period within the timeout for the next IVR attempt.

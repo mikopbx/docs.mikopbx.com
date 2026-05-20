@@ -28,7 +28,7 @@ Calls marked in <mark style="color:red;">red</mark> are **missed calls**. Their 
 
 <figure><img src="../../.gitbook/assets/missedCallsInCDR.png" alt=""><figcaption><p>Missed calls</p></figcaption></figure>
 
-For answered calls, users can listen to or download the recording. Call recordings are downloaded locally to your PC in **.mp3** format.
+For answered calls, users can listen to or download the recording. When downloading a recording, you can choose **WebM (Opus)**, **MP3**, **WAV**, or **OGG (Opus)** format.
 
 <figure><img src="../../.gitbook/assets/listenToTheRecording.png" alt=""><figcaption><p>Listen to the recording function</p></figcaption></figure>
 
@@ -50,14 +50,21 @@ You can search using either an internal staff number or an external client numbe
 
 <figure><img src="../../.gitbook/assets/details (1).png" alt=""><figcaption><p>Filter by Phone number</p></figcaption></figure>
 
-2. **Two Phone Numbers** Filter
+2. **Specific Field** Filter
 
-Enter two phone numbers separated by a space. For example, entering "74952293042 302" will display all **answered** calls between these numbers. Answered calls are those with a duration greater than **0** seconds, excluding greeting time.
+You can add a prefix to search only in a specific field:
 
-<figure><img src="../../.gitbook/assets/filterBy2Nums.png" alt=""><figcaption><p>Filter by 2 numbers</p></figcaption></figure>
+* `src:74952293042` - search by caller number;
+* `dst:302` - search by destination number;
+* `did:74952293042` - search by DID number;
+* `linkedid:mikopbx-...` - search by the unique call identifier.
+
+If no prefix is specified, MikoPBX performs a general search by caller number, destination number, DID, and employee name.
+
+<figure><img src="../../.gitbook/assets/filterBy2Nums.png" alt=""><figcaption><p>Search by number or a specific call history field</p></figcaption></figure>
 
 3. **Date** Filter
 
-When opening the Call History, the log defaults to the current date. To filter for a specific period, select the date range and click **Apply**.
+When opening the Call History, MikoPBX selects a date range based on the latest call records. To filter for a specific period, select the date range and click **Apply**.
 
 <figure><img src="../../.gitbook/assets/filterByDate.png" alt=""><figcaption><p>Filter by date</p></figcaption></figure>

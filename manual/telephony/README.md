@@ -38,7 +38,7 @@ In this article, you will find detailed documentation on creating and configurin
 [ivr-menu.md](ivr-menu.md)
 {% endcontent-ref %}
 
-**IVR menu** in MikoPBX is an interactive voice menu that allows callers to interact with the phone system by pressing keys or using voice commands. It automatically routes calls to the right departments or employees, improving call handling efficiency and customer service.
+**IVR menu** in MikoPBX is an interactive voice menu that allows callers to interact with the phone system by pressing keys (DTMF). It automatically routes calls to the right departments or employees, improving call handling efficiency and customer service.
 
 In this article, you will find documentation on creating and configuring an IVR menu.
 

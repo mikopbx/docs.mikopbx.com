@@ -15,8 +15,8 @@ To configure call queues in MikoPBX, go to the "**Telephony**" section and selec
 
 <figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption><p>"Call queue" section</p></figcaption></figure>
 
-{% hint style="warning" %}
-**The default call duration for a queue is set to 300 seconds (5 minutes)**. After this time limit is reached, the call will be automatically terminated. To bypass this limitation, you can configure "**Scenario 1**" as described in the instructions for "**Call Routing on Failures**".
+{% hint style="info" %}
+If **Scenario 1** has no backup destination selected, the queue has no overall waiting timeout: the call remains in the queue until an agent answers or the caller hangs up. To limit the waiting time, set the duration in **Scenario 1** and choose the destination for redirecting the call.
 {% endhint %}
 
 ## Main settings
@@ -40,14 +40,17 @@ In the **Queue Agents** section, you can add an arbitrary number of employees (q
 
 Here are the options for queue strategy:
 
-* _Ring All_: Calls are distributed to all **available agents** until someone answers the call (default behavior).
-* &#x20;_Least Recent_: The call is routed to the **agent who has been idle for the longest time** within the queue.
-* &#x20;_Fewest Calls_: The call is routed to the **agent who has handled the fewest number of calls** within the queue.&#x20;
-* _Random_: A **random available agent** within the queue is selected to receive the call.&#x20;
-* _Round Robin_: The call is distributed to each **agent in a sequential manner**, cycling through the list of agents.&#x20;
-* _Memory Hunt_: The system remembers the **last agent who answered a call** and starts the distribution from that agent onwards.
+* _Ring All_: Calls are distributed to all agents at the same time until someone answers the call (default behavior).
+* _Linear_: Calls are sent to agents one by one in the order configured in the **Queue Agents** list. After the **Time attempt call to agents** interval expires, the call is sent to the next agent.
+* _Linear Progressive_: The first agent starts ringing immediately. After each **Time attempt call to agents** interval, the next agent is added while the previous agents continue ringing. Make sure the timeout in **Scenario 1** is long enough for all required agents to be added.
+* _Least Recent_: The call is routed to the agent who has been idle for the longest time within the queue.
+* _Fewest Calls_: The call is routed to the agent who has handled the fewest answered calls within the queue.
+* _Random_: A random available agent within the queue is selected to receive the call.
+* _Memory Hunt_: The system remembers the last agent who answered a call and starts the next distribution from the following agent.
 
-&#x20;When setting up a queue, you can choose one of these strategies to determine how calls are distributed among the agents in the queue. The strategy you select will depend on your specific call handling requirements and the desired distribution behavior
+{% hint style="info" %}
+After saving the queue, MikoPBX regenerates and reloads the queue configuration automatically. A manual Asterisk restart is not required when changing the strategy.
+{% endhint %}
 
 ## **Advanced Settings**
 
@@ -83,7 +86,7 @@ In this section, you can provide additional information:
 
 <figure><img src="../../.gitbook/assets/9 (8).png" alt=""><figcaption><p>Call routing in case of failures</p></figcaption></figure>
 
-* **The script #1** - In this scenario, you can configure the maximum allowable wait time for a client in the queue. If none of the queue agents can answer the client within the specified time, you can set a number to which the call will be redirected.
+* **The script #1** - In this scenario, you can configure the maximum allowable wait time for a client in the queue. If none of the queue agents can answer the client within the specified time, the call will be redirected to the selected number. If no redirect destination is selected, the overall queue timeout is not applied.
 * **The script #2** - If there are no agents available in the queue (meaning no agents are currently logged into the phone system), you can specify a number to which the client's call will be transferred.
 
 {% hint style="info" %}
@@ -91,5 +94,5 @@ In these scenarios, as a redirection number, you can choose not only an internal
 {% endhint %}
 
 {% hint style="warning" %}
-**The default call duration for the queue is set to 300 seconds (5 minutes)**. If you require a longer interval, you can specify a higher duration in **Scenario 1** and provide a backup number to redirect the call to. This allows you to customize the wait time and ensure that if none of the queue agents can answer the call within the specified duration, it will be redirected to the designated backup number.
+In **Scenario 1**, specify both the waiting time and the redirect destination. If only the time is filled in without a backup destination, MikoPBX does not pass the overall timeout to the queue application so that the call is not ended without a route to continue.
 {% endhint %}

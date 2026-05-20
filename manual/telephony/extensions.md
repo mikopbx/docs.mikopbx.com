@@ -82,7 +82,7 @@ There is an option to export a CSV file with all the data of current employees. 
 
 * All parameters from Minimal.
 * mobile\_dialstring — Number for dialing mobile
-* sip\_dtmfmode — DTMF mode (auto/rfc4733/info/inband)
+* sip\_dtmfmode — DTMF mode (auto/rfc4733/info/inband/auto\_info)
 * sip\_transport — Transport (udp/tcp/tls), default udp,tcp
 * sip\_enableRecording — Call recording (true/false)
 * fwd\_forwardingonbusy — Forwarding number if busy
@@ -92,6 +92,7 @@ There is an option to export a CSV file with all the data of current employees. 
 
 * All parameters from Minimal and Standard.
 * user\_avatar — Photo URL
+* sip\_acceptMultipleCalls — Accept multiple calls at the same time (true/false)
 * sip\_manualattributes — Additional SIP parameters
 
 You can also specify a range of internal employee numbers to export (the "**Filter by number range**" section).
@@ -121,10 +122,8 @@ On the "Basic Parameters" tab, you can configure the general settings for an emp
 * **Password for SIP**
 
 {% hint style="warning" %}
-Please ensure that the passwords for SIP accounts meet the following requirements:
+Please set strong passwords for SIP accounts. MikoPBX validates the password length and strength when the account is saved. A secure SIP password should use a non-dictionary combination of uppercase and lowercase letters, digits, and special characters.
 
-* The password length should be greater than eight characters.&#x20;
-* The password should contain both uppercase and lowercase letters. The password should include numbers and special characters: "-", "\_", "\[]", "{}", "@", ";".
 * By setting complex passwords, you can enhance the security of the user accounts and protect them from unauthorized access.
 {% endhint %}
 
