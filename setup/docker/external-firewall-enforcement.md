@@ -1,6 +1,6 @@
 # External firewall for Docker deployments
 
-> ℹ️ Available starting from **MikoPBX 2026.1.76**. On earlier versions
+> ℹ️ Available starting from **MikoPBX 2026.2.76**. On earlier versions
 > the `firewall-bouncer` LAPI endpoint, the Firewall page banner, and
 > the "Create bouncer token" button do not exist.
 
