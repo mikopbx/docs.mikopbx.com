@@ -216,6 +216,7 @@
   * [Callback module](modules/miko/module-callback-queues.md)
   * [Extended call history](modules/miko/module-extended-cdr.md)
   * [Call Routing Map](modules/miko/module-routing-map.md)
+  * [VPN](modules/miko/module-vpn.md)
 
 ## other
 

@@ -10,6 +10,14 @@ WireGuard configuration is available on MikoPBX version **2024.2.301-dev** and n
 
 WireGuard allows you to connect two MikoPBX systems into a single private network over the internet. This is useful when offices are in different locations and you need to set up direct SIP communication or configuration synchronization between them.
 
+{% hint style="success" %}
+This page describes the manual command-line setup. For most scenarios the **VPN** module brings up the same WireGuard tunnel right from the web interface — no SSH or cron required, and it also supports AmneziaWG, OpenVPN and Tailscale.
+{% endhint %}
+
+{% content-ref url="../../modules/miko/module-vpn.md" %}
+[module-vpn.md](../../modules/miko/module-vpn.md)
+{% endcontent-ref %}
+
 <figure><img src="../../.gitbook/assets/WGGDiaframMikoPBXEN.png" alt=""><figcaption><p>Conenction diagram</p></figcaption></figure>
 
 ### Setting Up the Connection
