@@ -217,6 +217,7 @@
   * [Extended call history](modules/miko/module-extended-cdr.md)
   * [Call Routing Map](modules/miko/module-routing-map.md)
   * [VPN](modules/miko/module-vpn.md)
+  * [GeoIP Filtering](modules/miko/module-geo-ip.md)
 
 ## other
 
