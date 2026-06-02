@@ -273,6 +273,7 @@
   * [Интеграция с Megapbx от Мегафон](modules/miko/integraciya-s-megapbx-ot-megafon.md)
   * [Интеграция с Автосекретарь 2.0 от МТС](modules/miko/integraciya-s-avtosekretar-2.0-ot-mts.md)
   * [VPN](modules/miko/module-vpn.md)
+  * [GeoIP фильтрация](modules/miko/module-geo-ip.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
