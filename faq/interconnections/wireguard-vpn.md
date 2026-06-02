@@ -10,6 +10,14 @@ description: Пример объединения двух АТС в приват
 
 WireGuard позволяет объединить две АТС MikoPBX в единую приватную сеть через интернет. Это удобно, когда офисы находятся в разных локациях и нужно настроить между ними прямую SIP-связь или синхронизацию настроек.
 
+{% hint style="success" %}
+На этой странице описана ручная настройка через командную строку. В большинстве случаев тот же туннель WireGuard проще поднять из веб-интерфейса с помощью модуля **VPN** — без SSH и cron, к тому же модуль поддерживает AmneziaWG, OpenVPN и Tailscale.
+{% endhint %}
+
+{% content-ref url="../../modules/miko/module-vpn.md" %}
+[module-vpn.md](../../modules/miko/module-vpn.md)
+{% endcontent-ref %}
+
 <figure><img src="../../.gitbook/assets/WGGDiagramMikoPBX.png" alt=""><figcaption><p>Диаграмма подключения</p></figcaption></figure>
 
 ### Настройка подключения

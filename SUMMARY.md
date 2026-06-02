@@ -272,6 +272,7 @@
   * [Подключение FMС устройств](modules/miko/podklyuchenie-fms-ustroistv.md)
   * [Интеграция с Megapbx от Мегафон](modules/miko/integraciya-s-megapbx-ot-megafon.md)
   * [Интеграция с Автосекретарь 2.0 от МТС](modules/miko/integraciya-s-avtosekretar-2.0-ot-mts.md)
+  * [VPN](modules/miko/module-vpn.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
