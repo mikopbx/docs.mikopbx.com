@@ -93,3 +93,39 @@ description: Установка MikoPBX с помощью Proxmox.
 2. Для входа используйте логин - admin и пароль - admin
 
 <figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_16.png" alt=""><figcaption></figcaption></figure>
+
+### **Включение QEMU Guest Agent**
+
+QEMU Guest Agent позволяет Proxmox получать от MikoPBX внутренние IP-адреса, корректно завершать работу гостя по команде Shutdown и снимать консистентные бэкапы (fs-freeze). Сам бинарь `qemu-ga` уже включён в дистрибутив MikoPBX и автоматически запускается под управлением `monit` (сервис `vm-tools`) — нужно только включить канал агента на стороне Proxmox.
+
+1. Выберите виртуальную машину MikoPBX, откройте вкладку **Options** и сделайте двойной клик по строке **QEMU Guest Agent**
+2. Установите флажок **Use QEMU Guest Agent** (значение **Enabled**), параметр **Type** оставьте **VirtIO** (по умолчанию), нажмите **OK**
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_QemuAgent_1.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+После включения опции необходимо выполнить **полную остановку и повторный запуск** виртуальной машины (**Stop → Start** в WEB-интерфейсе или из CLI Proxmox: `qm stop <VMID> && qm start <VMID>`).
+
+Обычная перезагрузка (**Reboot**) **не подходит** — устройство `virtio-serial`, через которое работает агент, добавляется в процесс QEMU только при холодном старте. Без рестарта внутри MikoPBX не появится файл `/dev/virtio-ports/org.qemu.guest_agent.0` и агент стартовать не сможет.
+{% endhint %}
+
+### **Проверка работы QEMU Guest Agent**
+
+**На хосте Proxmox** (быстрая проверка «жив/мёртв»):
+
+```bash
+qm agent <VMID> ping                       # должно вернуть пустой ответ без ошибки
+qm agent <VMID> info                       # версия агента и список поддерживаемых команд
+qm guest cmd <VMID> get-host-name          # hostname гостя — подтверждает реальный ответ
+qm agent <VMID> network-get-interfaces     # IP-адреса гостя (видны в WEB-интерфейсе VM)
+```
+
+**Внутри MikoPBX** (по SSH):
+
+```sh
+ls -la /dev/virtio-ports/org.qemu.guest_agent.0   # файл должен существовать
+ps w | grep qemu-ga | grep -v grep                # процесс qemu-ga должен быть запущен
+monit summary | grep vm-tools                     # ожидаемое состояние: Running
+```
+
+Если `monit summary` показывает `vm-tools  Initializing`, а файл `/dev/virtio-ports/org.qemu.guest_agent.0` отсутствует — значит со стороны Proxmox virtio-serial-канал ещё не проброшен в VM (опция не включена либо машина не была холодно перезапущена).
