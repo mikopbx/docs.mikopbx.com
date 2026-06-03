@@ -65,7 +65,7 @@ allow=alaw&ulaw
 
 <figure><img src="../../.gitbook/assets/PEERDetailsParameters.jpg" alt=""><figcaption><p>Параметр "PEER Details"</p></figcaption></figure>
 
-5. Во вкладке «**Incoming**» заполните поле «**Register String**» в формате "**LOGIN:PASSWORD@IP\_FREE\_PBX**":
+5. Во вкладке «**Incoming**» заполните поле «**Register String**» в формате "**LOGIN:PASSWORD@IP\_MIKO\_PBX**":
 
 <figure><img src="../../.gitbook/assets/registerStringFieldFreePBX.jpg" alt=""><figcaption><p>Параметр "Register String"</p></figcaption></figure>
 
