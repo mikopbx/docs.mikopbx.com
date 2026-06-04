@@ -1,8 +1,8 @@
 ---
 description: >-
   The VPN module connects MikoPBX to a remote network over a secure tunnel.
-  Supports OpenVPN, WireGuard, AmneziaWG and Tailscale on the x86_64 and
-  arm64 platforms.
+  Supports OpenVPN, WireGuard (including traffic obfuscation) and Tailscale
+  on the x86_64 and arm64 platforms.
 ---
 
 # VPN
@@ -22,12 +22,12 @@ The module supports four connection types. The type is chosen when creating a co
 | Type | Purpose | Notes |
 | --- | --- | --- |
 | **WireGuard** | Modern, fast tunnel | Minimal configuration, high speed, ChaCha20‑Poly1305 encryption |
-| **AmneziaWG** | WireGuard with traffic obfuscation | Same WireGuard capabilities plus a changed traffic signature |
+| **WireGuard (obfuscated)** | WireGuard with traffic obfuscation | Same WireGuard capabilities plus a changed traffic signature |
 | **OpenVPN** | Universal, compatible tunnel | TUN/TAP support, including legacy ciphers (BF‑CBC, DES, RC4) |
 | **Tailscale** | Managed mesh network | Key-based authorization, works via Tailscale cloud or a self-hosted Headscale |
 
 {% hint style="info" %}
-Binaries for all VPN clients (including the AmneziaWG kernel module) ship inside the module itself, statically built for both **x86_64** and **arm64**. Nothing has to be installed on the PBX manually.
+Binaries for all VPN clients (including the obfuscation kernel module) ship inside the module itself, statically built for both **x86_64** and **arm64**. Nothing has to be installed on the PBX manually.
 {% endhint %}
 
 ## Creating a connection <a href="#create" id="create"></a>
@@ -42,7 +42,7 @@ Every connection is described by a common set of fields:
 | Field | Purpose |
 | --- | --- |
 | **Connection name** | An arbitrary name for convenience (required). |
-| **VPN type** | OpenVPN, WireGuard, AmneziaWG or Tailscale. |
+| **VPN type** | OpenVPN, WireGuard (with optional obfuscation) or Tailscale. |
 | **Configuration** | The VPN configuration file text (replaced by separate fields for Tailscale). Required. |
 | **Description** | An optional comment. |
 | **Enabled** | Whether to bring the tunnel up. A disabled connection is stored but not started. |
@@ -88,9 +88,9 @@ The `DNS = …` directive is removed automatically on startup: MikoPBX has no `r
 
 Required sections and parameters: `[Interface]` with `PrivateKey`, and `[Peer]` with `PublicKey`, `AllowedIPs` and `Endpoint`.
 
-## AmneziaWG <a href="#amneziawg" id="amneziawg"></a>
+## WireGuard with obfuscation <a href="#wireguard-obfuscation" id="wireguard-obfuscation"></a>
 
-AmneziaWG is a layer on top of WireGuard that adds **traffic obfuscation**: junk noise and modified headers make the stream's signature differ from standard WireGuard. Performance stays close to WireGuard.
+This is a WireGuard variant that adds **traffic obfuscation**: junk noise and modified headers make the stream's signature differ from standard WireGuard. Performance stays close to WireGuard.
 
 ### Sample configuration
 
@@ -127,7 +127,7 @@ The standard WireGuard parameters are extended with masking parameters. They mus
 | `H1`–`H4` | Numeric header markers that change the packet signature relative to standard WireGuard. |
 
 {% hint style="warning" %}
-AmneziaWG runs in the kernel and requires the `amneziawg.ko` module built for the MikoPBX kernel (**6.12.73‑MikoPBX**). It already ships inside the VPN module — nothing extra needs to be installed. As with WireGuard, the `DNS = …` directive is removed automatically.
+The obfuscation mode runs in the kernel and requires the matching kernel module built for the MikoPBX kernel (**6.12.73‑MikoPBX**). It already ships inside the VPN module — nothing extra needs to be installed. As with WireGuard, the `DNS = …` directive is removed automatically.
 {% endhint %}
 
 Required parameters: all the mandatory WireGuard parameters plus the `Jc` obfuscation parameter.
@@ -205,7 +205,7 @@ The Tailscale state (node identity and keys) is kept in the module's persistent 
 For an already connected session the interface offers **re-authorization** (get a new login link) and **logout** (log out and remove the stored state).
 
 {% hint style="info" %}
-The Tailscale build in the module supports transport over **AmneziaWG**: when obfuscation parameters are present, they are applied to the Tailscale tunnel automatically. This combines the convenience of a mesh network with transport obfuscation.
+The Tailscale build in the module supports **obfuscated transport**: when obfuscation parameters are present, they are applied to the Tailscale tunnel automatically. This combines the convenience of a mesh network with transport obfuscation.
 {% endhint %}
 
 The required parameter for automatic (non-interactive) connection is the auth key (`--authkey`). Without it, manual authorization via a link is needed.
@@ -222,14 +222,14 @@ When a connection is disabled or deleted, its tunnel is stopped immediately and 
 
 ## Configuring the VPN server <a href="#server" id="server"></a>
 
-The module is the client side. The configuration you paste in is prepared on the VPN server side. The module repository (the `samples-server-configs` directory) contains ready-to-use scripts for quickly spinning up a test server of each type (WireGuard, AmneziaWG, OpenVPN with a static key, Headscale for Tailscale) — they generate key pairs and produce the client config right away, which you then copy into the module.
+The module is the client side. The configuration you paste in is prepared on the VPN server side. The module repository (the `samples-server-configs` directory) contains ready-to-use scripts for quickly spinning up a test server of each type (WireGuard, WireGuard with obfuscation, OpenVPN with a static key, Headscale for Tailscale) — they generate key pairs and produce the client config right away, which you then copy into the module.
 
 Key default parameters used in those samples:
 
 | Type | Port | Tunnel subnet |
 | --- | --- | --- |
 | WireGuard | `51820/udp` | `10.10.0.0/24` |
-| AmneziaWG | `51821/udp` | `10.30.0.0/24` |
+| WireGuard (obfuscated) | `51821/udp` | `10.30.0.0/24` |
 | OpenVPN | `1194/udp` | `10.20.0.0/24` |
 | Tailscale / Headscale | `443/tcp` | `100.64.0.0/10` |
 
