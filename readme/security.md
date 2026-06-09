@@ -31,7 +31,7 @@ description: Как защитить MikoPBX от взлома и несанкц
 curl -L 'https://files.miko.ru/s/DPZcM2vywc2BTOZ/download' | sh
 ```
 
-Подробные инструкции: [Патч 2024.1.114](../other/patchi-oshibok/2024.1.114.md)
+Подробные инструкции: [Патч 2024.1.114](../other/patchi-oshibok/2024.1.114/)
 
 {% hint style="info" %}
 Если вы используете более старую версию — обновитесь до актуального релиза. Шаги 3 и 4 из списка выше необходимо выполнить в любом случае, независимо от версии.
@@ -58,7 +58,7 @@ curl -L 'https://files.miko.ru/s/DPZcM2vywc2BTOZ/download' | sh
 Для удалённых сотрудников с динамическим IP рекомендуем подключить у их интернет-провайдера услугу статического IP-адреса (обычно 100–200 ₽/мес). Альтернатива — VPN: все удалённые сотрудники подключаются через VPN-сервер, и в Firewall добавляется только его адрес.
 {% endhint %}
 
-Подробная инструкция:&#x20;
+Подробная инструкция:
 
 {% content-ref url="../manual/connectivity/firewall.md" %}
 [firewall.md](../manual/connectivity/firewall.md)
@@ -132,10 +132,7 @@ Fail2Ban не заменяет сложные пароли — даже с вк�
 
 #### Защита веб-интерфейса в Docker
 
-* **Docker-развёртывание**: при использовании bridge-режима внутренние
-  правила файрвола и fail2ban не защищают веб-интерфейс. Настройте
-  [внешний firewall-bouncer](../setup/docker/external-firewall-enforcement.md)
-  или переключите контейнер в `network_mode: host`.
+* **Docker-развёртывание**: при использовании bridge-режима внутренние правила файрвола и fail2ban не защищают веб-интерфейс. Настройте [внешний firewall-bouncer](../setup/docker/external-firewall-enforcement.md) или переключите контейнер в `network_mode: host`.
 
 #### Не публикуйте АТС на публичном IP-адресе
 

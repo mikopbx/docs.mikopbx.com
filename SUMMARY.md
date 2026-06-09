@@ -237,7 +237,6 @@
   * [Yealink T21](faq/ip-telefones/yealink-t21.md)
   * [Yealink T28](faq/ip-telefones/yealink-t28.md)
   * [Fanvil X3SP](faq/ip-telefones/fanvil-x3sp.md)
-* [Перестает работать сеть в MikoPBX](faq/perestaet-rabotat-set-v-mikopbx.md)
 
 ## Модули <a href="#modules" id="modules"></a>
 
@@ -278,7 +277,8 @@
 ## Прочее <a href="#other" id="other"></a>
 
 * [Патчи Ошибок](other/patchi-oshibok/README.md)
-  * [2024.1.114](other/patchi-oshibok/2024.1.114.md)
+  * [2024.1.114](other/patchi-oshibok/2024.1.114/README.md)
+    * [Перестает работать сеть в MikoPBX](other/patchi-oshibok/2024.1.114/perestaet-rabotat-set-v-mikopbx.md)
 * [История версий](other/changelog/README.md)
   * [MikoPBX 2026.2.118](other/changelog/mikopbx-2026.2.118.md)
   * [MikoPBX 2026.1.223](other/changelog/mikopbx-2026.1.223.md)
