@@ -56,15 +56,15 @@ Click "**Continue**"
 
 6. Select "**New Hard Disk**"
 
-&#x20;Click "**Add...**"
+Click "**Add...**"
 
 <figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>New Hard Disk</p></figcaption></figure>
 
 7. Choose the size of the hard drive (we recommend **at least 50 GB**)
 
-&#x20;Click "**Apply**"
+Click "**Apply**"
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Parameters for new hard drive</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Parameters for new hard drive</p></figcaption></figure>
 
 {% hint style="info" %}
 **1 hour** of recording conversations takes approximately **14mb** on disk.

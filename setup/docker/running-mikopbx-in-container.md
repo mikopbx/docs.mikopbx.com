@@ -91,7 +91,7 @@ When the container starts, it lacks information about the host system's address,
 
 Log into the web interface using the `admin` login and the `admin` password to make sure that the web interface is accessible and functioning correctly.
 
-<figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_17 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MikoPBXProxmoxInstallation_17 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Features of containerized MikoPBX
 

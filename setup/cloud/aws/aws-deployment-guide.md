@@ -19,7 +19,7 @@ Let's get started with the setup
 For quick and convenient navigation within the Amazon service, use the search panel
 {% endhint %}
 
-### Copying access keys&#x20;
+### Copying access keys
 
 1. Go to your account
 2. From the dropdown menu, select Security credentials
@@ -33,7 +33,7 @@ If you already have an access key, simply copy the Access key and Secret access 
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_14.png" alt=""><figcaption></figcaption></figure>
 
-### Creating a bucket&#x20;
+### Creating a bucket
 
 1. Open Services / Storage / **S3**
 2. On the tab select **Create bucket**
@@ -54,7 +54,7 @@ If you already have an access key, simply copy the Access key and Secret access 
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_3.png" alt=""><figcaption></figcaption></figure>
 
-### Adding permissions and attaching policies&#x20;
+### Adding permissions and attaching policies
 
 If not done previously for this cloud
 
@@ -214,12 +214,12 @@ If the command executes successfully, a unique AMI identifier will be generated
 
 <figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_4.png" alt=""><figcaption></figcaption></figure>
 
-### Creating a virtual machine&#x20;
+### Creating a virtual machine
 
 1. Open Services / Compute / **EC2** and navigate to Images / AMIs
 2. Select the created image and click **Launch an instance from AMI** to create a virtual machine
 
-<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXAmazonInstallation_5.png" alt=""><figcaption></figcaption></figure>
 
 3. Enter the virtual machine name, for example _mikopbx-vm_
 

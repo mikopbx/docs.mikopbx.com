@@ -23,7 +23,7 @@
 
 <figure><img src="../../.gitbook/assets/6 (12).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/4 (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (9).png" alt=""><figcaption></figcaption></figure>
 
 7. In the "**Password**" field, enter the "**SIP password**":
 
@@ -39,4 +39,4 @@ Thus, we connected the **MicroSIP** softphone to MikoPBX. Confirmation of succes
 
 <figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11 (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>

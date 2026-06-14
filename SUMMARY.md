@@ -226,5 +226,6 @@
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
   * [MikoPBX 2026.1.223](other/changelog/mikopbx-2026.1.223.md)
+  * [MikoPBX 2026.2.118](other/changelog/mikopbx-2026.2.118.md)
 * [Patches](other/patches/README.md)
   * [2024.1.114](other/patches/2024.1.114.md)

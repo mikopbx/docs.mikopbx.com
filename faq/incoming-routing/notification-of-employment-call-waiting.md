@@ -14,7 +14,7 @@
 load => func_extstate.so
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForModules.png" alt=""><figcaption><p>Code for modules.conf </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForModules.png" alt=""><figcaption><p>Code for modules.conf</p></figcaption></figure>
 
 4. Go to editing the file "**extensions.conf**"
 
@@ -30,7 +30,7 @@ exten => _X!,1,Progress()
     same => n,return
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForExtensions2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForExtensions2.png" alt=""><figcaption></figcaption></figure>
 
 6. In the extension card, in the "**Advanced Settings**" - "**Extra Options**" field, set the value
 

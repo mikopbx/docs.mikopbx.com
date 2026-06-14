@@ -8,7 +8,7 @@ Such a need may arise in many cases, For example, when a client is tired of wait
 
 2. Open the file "**queues.conf**" for editing
 
-<figure><img src="../../.gitbook/assets/queuesConf (1).png" alt=""><figcaption><p>queues.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/queuesConf.png" alt=""><figcaption><p>queues.conf</p></figcaption></figure>
 
 3. In the black window, find the queue section that you need to configure
 
@@ -21,7 +21,7 @@ Such a need may arise in many cases, For example, when a client is tired of wait
 context=internal
 ```
 
-<figure><img src="../../.gitbook/assets/CodeForQueues.png" alt=""><figcaption><p>Code for queues </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CodeForQueues.png" alt=""><figcaption><p>Code for queues</p></figcaption></figure>
 
 {% hint style="success" %}
 In this example, we have described the internal context, the dialing of all internal numbers is allowed. You can specify the context of the IVR menu, in the format ivr\<InternalNumberIVR>

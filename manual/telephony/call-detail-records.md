@@ -48,7 +48,7 @@ The search bar in the Call History page supports the following filters:
 
 You can search using either an internal staff number or an external client number.
 
-<figure><img src="../../.gitbook/assets/details (1).png" alt=""><figcaption><p>Filter by Phone number</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/details.png" alt=""><figcaption><p>Filter by Phone number</p></figcaption></figure>
 
 2. **Specific Field** Filter
 

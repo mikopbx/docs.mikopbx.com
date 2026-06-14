@@ -19,11 +19,11 @@
 
 6. Enter "**Password for SIP**" as the password
 
-<figure><img src="../../.gitbook/assets/5 (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (2).png" alt=""><figcaption></figcaption></figure>
 
 7. Click "**Advanced**" to display additional settings
 
-<figure><img src="../../.gitbook/assets/6 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (8).png" alt=""><figcaption></figcaption></figure>
 
 8. Go to the "**Connection**" section:
 
@@ -31,9 +31,9 @@
 
 9. In the "**Registrar**" field, enter the IP address of MikoPBX to which the connection is being made.
 
-<figure><img src="../../.gitbook/assets/8 (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (6).png" alt=""><figcaption></figcaption></figure>
 
-10. &#x20;Click "**Next**"
+10. Click "**Next**"
 
 <figure><img src="../../.gitbook/assets/9 (3).png" alt=""><figcaption></figcaption></figure>
 
@@ -45,4 +45,4 @@ Thus, we connected the Jitsi softphone to MikoPBX. Successful authorization is i
 
 <figure><img src="../../.gitbook/assets/13 (5).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11 (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>

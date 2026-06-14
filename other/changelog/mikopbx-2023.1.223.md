@@ -120,7 +120,7 @@ In this example, the rule will only apply to one company number.
 
 A button has been added to the call history log to navigate to the call log:
 
-<figure><img src="../../.gitbook/assets/New223CDR (1).png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Quick go to logs from CDR</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New223CDR.png" alt=""><figcaption><p>New in MikoPBX 2023.1.223 Quick go to logs from CDR</p></figcaption></figure>
 
 Such logs can be passed to technical support for analysis of PBX behavior.
 
@@ -140,12 +140,12 @@ A lot of work has been done on bug fixing. This version is considered stable. Te
 
 * [Jitter Configuration](https://wiki.mikopbx.ru/faq)
 * [Monitoring Providers on MikoPBX](https://wiki.mikopbx.ru/faq:monitoring-trunks)
-* [Integration of MIKOPBX and FreePBX (PJSIP)](https://wiki.mikopbx.ru/faq:mikopbx\_freepbx)
+* [Integration of MIKOPBX and FreePBX (PJSIP)](https://wiki.mikopbx.ru/faq:mikopbx_freepbx)
 * [Grandstream HT503 Configuration](https://wiki.mikopbx.ru/faq:grandstreamht503)
 * [GOIP Gateway Configuration](https://wiki.mikopbx.ru/faq:goip)
 * [Instructions for Setting up Mail Client](https://wiki.mikopbx.ru/mail-settings)
 * [Routing by DID Number](https://wiki.mikopbx.ru/faq:did-routs)
-* [Telegram Notification for Missed Calls](https://wiki.mikopbx.ru/faq:simple\_tg\_notify)
+* [Telegram Notification for Missed Calls](https://wiki.mikopbx.ru/faq:simple_tg_notify)
 
 ### **Conclusion**
 

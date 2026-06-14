@@ -29,7 +29,7 @@ Next, navigate to the "Users" tab of the access group and select the employees w
 
 <figure><img src="../../.gitbook/assets/SelectUsers4Group.png" alt=""><figcaption><p>To select users for the access group</p></figcaption></figure>
 
-### Scenario 2: Access Limited to IVR Menu Administration&#x20;
+### Scenario 2: Access Limited to IVR Menu Administration
 
 Create an access group with restricted privileges that grants access only to IVR menu administration.
 
@@ -41,11 +41,11 @@ Next, go to the **Setting permissions** tab and select only the necessary rights
 
 Assign the access group to employees who will administer the IVR menus and save the access group.
 
-### Scenario 3: Access to Call History with User Filtering&#x20;
+### Scenario 3: Access to Call History with User Filtering
 
 Create an access group, disable full privileges, and grant access only to the call history section with user filtering.
 
-<figure><img src="../../.gitbook/assets/en-CDR-access (1).png" alt=""><figcaption><p>Configure access to call history in MikoPBX</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/en-CDR-access.png" alt=""><figcaption><p>Configure access to call history in MikoPBX</p></figcaption></figure>
 
 When selecting this section, an additional tab appears in the module settings, allowing you to configure permissions for viewing and listening to call recordings on a per-employee basis.
 
@@ -53,7 +53,7 @@ When selecting this section, an additional tab appears in the module settings, a
 
 You can select various filtering options and employees whose call recordings can be listened to by users within this access group.
 
-### LDAP Authorization Configuration&#x20;
+### LDAP Authorization Configuration
 
 The module allows users to be authenticated either with a simple login-password pair or by using an external LDAP authentication server. To configure the connection with the server, navigate to the "Domain Authorization Settings" tab.
 

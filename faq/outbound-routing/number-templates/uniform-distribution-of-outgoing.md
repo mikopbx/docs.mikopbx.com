@@ -6,7 +6,7 @@
 
 2. Open **modules.conf** for editing
 
-<figure><img src="../../../.gitbook/assets/modulesConf (1).png" alt=""><figcaption><p>Modules.conf file </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/modulesConf.png" alt=""><figcaption><p>Modules.conf file</p></figcaption></figure>
 
 3. Add the following code to the end of the file:
 

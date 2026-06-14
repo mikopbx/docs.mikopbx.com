@@ -2,7 +2,7 @@
 description: >-
   The GeoIP module blocks incoming connections to MikoPBX from selected
   countries at the firewall level. It protects the PBX from SIP scanners,
-  password brute-forcing and unwanted calls. Works for both IPv4 and IPv6.
+  password brute-forcing and unwanted calls. Works for both
 ---
 
 # GeoIP Filtering
@@ -32,23 +32,23 @@ If the `ipset` utility is not available on the system, the module shows an **"ip
 
 The module page lists **249 countries** (the ISO 3166-1 standard). Each country shows its current status — **Blocked** or **Allowed**. A country is allowed by default; blocking is enabled explicitly.
 
-| Element | Purpose |
-| --- | --- |
-| **Search** | Quickly find a country by name. |
-| **Status filter** | Show all countries, allowed only, or blocked only. |
-| **Block all** | Block every country in the list at once. |
-| **Unblock all** | Remove blocking from every country. |
-| **Save** | Apply the changes. Firewall rules are updated immediately after saving. |
+| Element           | Purpose                                                                 |
+| ----------------- | ----------------------------------------------------------------------- |
+| **Search**        | Quickly find a country by name.                                         |
+| **Status filter** | Show all countries, allowed only, or blocked only.                      |
+| **Block all**     | Block every country in the list at once.                                |
+| **Unblock all**   | Remove blocking from every country.                                     |
+| **Save**          | Apply the changes. Firewall rules are updated immediately after saving. |
 
 ## Data source <a href="#source" id="source"></a>
 
 Per-country subnet lists can be obtained from one of three sources, selected in the **Data source** field:
 
-| Source | Notes |
-| --- | --- |
+| Source                       | Notes                                                                                                                                                           |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **DB-IP Lite** (recommended) | An up-to-date "country → subnet" database. A copy of the database **ships inside the module**, so the very first activation works even without internet access. |
-| **RIR delegation files** | Official address-allocation files from the Regional Internet Registries (RIPE, ARIN, APNIC, etc.). |
-| **ipdeny.com** | Ready-made aggregated per-country CIDR blocks. |
+| **RIR delegation files**     | Official address-allocation files from the Regional Internet Registries (RIPE, ARIN, APNIC, etc.).                                                              |
+| **ipdeny.com**               | Ready-made aggregated per-country CIDR blocks.                                                                                                                  |
 
 {% hint style="info" %}
 The **DB-IP Lite** source includes an offline copy of the database inside the module. This matters for PBXs in restricted networks where downloading the database from outside is unreliable: the module uses the bundled copy first and only goes online if it is missing.
@@ -75,5 +75,5 @@ Trusted addresses are never blocked by mistake. Even if your SIP provider's IP a
 
 ## System requirements <a href="#requirements" id="requirements"></a>
 
-- MikoPBX **2026.1.223** or newer.
-- **ipset** support in the Linux kernel (included in all standard MikoPBX builds).
+* MikoPBX **2026.1.223** or newer.
+* **ipset** support in the Linux kernel (included in all standard MikoPBX builds).

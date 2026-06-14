@@ -6,7 +6,7 @@
 
 2. Assign an internal number, for example, **2200110**.
 
-<figure><img src="../../.gitbook/assets/SettingsForDialplan (1).png" alt=""><figcaption><p>Parameters for dialplan </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SettingsForDialplan (1).png" alt=""><figcaption><p>Parameters for dialplan</p></figcaption></figure>
 
 3. Insert the following code into the "**Programme Code**" tab:
 
@@ -63,7 +63,7 @@ In the code, replace "**SIP-1687941868**" with your provider's ID. You can find 
 
 7. Open the "**modules.conf**" file for editing.
 
-<figure><img src="../../.gitbook/assets/modulesConf (1).png" alt=""><figcaption><p>Modules.conf file</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/modulesConf.png" alt=""><figcaption><p>Modules.conf file</p></figcaption></figure>
 
 8. Add the following code to the end of the file:
 

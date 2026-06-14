@@ -4,7 +4,7 @@ Let's say there is a certain number **+371 (2) 637‑23‑33**, by calling to wh
 
 1. To solve the problem, additional contexts should be described through the [Customization of System Files](../../manual/system/custom-files.md) menu.
 
-<figure><img src="../../.gitbook/assets/SystemFileCustomization.png" alt=""><figcaption><p>System file customization </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SystemFileCustomization.png" alt=""><figcaption><p>System file customization</p></figcaption></figure>
 
 2. We will edit the **extensions.conf** file.
 
@@ -37,7 +37,7 @@ exten => s,1,NoOp(Answered send DTMF...)
 
 5. Select "**Type of code**" - "**Asterisk Dialplan**"
 
-<figure><img src="../../.gitbook/assets/typeOfCodeAsterisk (1).png" alt=""><figcaption><p>Type of code for dialplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/typeOfCodeAsterisk.png" alt=""><figcaption><p>Type of code for dialplan</p></figcaption></figure>
 
 6. Let's say you need to "dial" the number 3542331, set this value to "**Number to call the application"**
 
@@ -54,6 +54,6 @@ n,Goto(z-outgoing,${ZDST},1)
 
 <figure><img src="../../.gitbook/assets/codeForDialplan (1).png" alt=""><figcaption><p>Code for dialplan</p></figcaption></figure>
 
-* If you specify the **9XXXX** template in the "**Application call number**" field, it will be possible to "dial" any five-digit numbers starting with the digit "**9**"&#x20;
-* In the application, assign the variable "ZDST" the number to which the call should be made In the "**ZDTMF**" variable, specify the number for the additional set&#x20;
+* If you specify the **9XXXX** template in the "**Application call number**" field, it will be possible to "dial" any five-digit numbers starting with the digit "**9**"
+* In the application, assign the variable "ZDST" the number to which the call should be made In the "**ZDTMF**" variable, specify the number for the additional set
 * In the "**ZPROVIDERID**" variable, specify the ID of the provider through which the outgoing call should be made. ID can be peeped in the browser address bar when editing the provider

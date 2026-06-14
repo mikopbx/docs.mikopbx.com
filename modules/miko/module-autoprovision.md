@@ -2,10 +2,10 @@
 description: >-
   Automatic configuration of IP phones in MikoPBX. The module discovers phones
   on the local network, sends them a ready-to-use SIP configuration, and can
-  even host firmware images for centralised upgrades.
+  even host firmware images for centralised upgrad
 ---
 
-# Automatic phone setup
+# Autoprovision
 
 ## What the module does
 
@@ -13,7 +13,7 @@ The **Automatic phone setup** module (Autoprovisioning Plug & Play, PnP) takes t
 
 **Supported brands:** Yealink, Snom, Fanvil, Grandstream, Htek.
 
-Tested handsets include Yealink T19/T28/T46S/T48S/W52/WP530, Snom D120/D335/D385/D715/D735/D785, Fanvil X1SP/X3SP/X5U, Grandstream GXP and GRP series, Htek UC9xx. Other models from the same vendors usually work — if a particular handset needs a tweak, edit its template (see *Settings templates* below).
+Tested handsets include Yealink T19/T28/T46S/T48S/W52/WP530, Snom D120/D335/D385/D715/D735/D785, Fanvil X1SP/X3SP/X5U, Grandstream GXP and GRP series, Htek UC9xx. Other models from the same vendors usually work — if a particular handset needs a tweak, edit its template (see _Settings templates_ below).
 
 ## Network requirements
 
@@ -40,11 +40,11 @@ The module page has six tabs. Walk through them in order.
 
 The MAC-to-extension mapping table. Each row binds one phone (by MAC address) to one MikoPBX user and one configuration template.
 
-| Field | Purpose |
-| --- | --- |
-| **User** | Pick the internal MikoPBX user from the dropdown. |
-| **MAC** | Phone's MAC address. Any case, separators are tolerated. |
-| **Template** | One of the templates from the *Settings templates* tab. |
+| Field        | Purpose                                                  |
+| ------------ | -------------------------------------------------------- |
+| **User**     | Pick the internal MikoPBX user from the dropdown.        |
+| **MAC**      | Phone's MAC address. Any case, separators are tolerated. |
+| **Template** | One of the templates from the _Settings templates_ tab.  |
 
 Phones that come up on the LAN by themselves (PnP discovery) appear in this table automatically — you only need to assign them a user and a template.
 
@@ -54,13 +54,13 @@ The text of the configuration file that the phone receives. Click **Add new** fo
 
 Templates use placeholders that are replaced at delivery time:
 
-| Placeholder | Replaced with |
-| --- | --- |
-| `{SIP_NUM}` | Extension number of the bound user. |
-| `{SIP_USER_NAME}` | SIP authentication username. |
-| `{SIP_PASS}` | SIP password. |
-| `{PBX_HOST}` | Value of *Server Registration Address* from the PnP tab. |
-| `{FIRMWARE_URL}` | Download URL of the firmware row that matches the vendor (and model, if specified). Empty when no firmware is registered. |
+| Placeholder       | Replaced with                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `{SIP_NUM}`       | Extension number of the bound user.                                                                                       |
+| `{SIP_USER_NAME}` | SIP authentication username.                                                                                              |
+| `{SIP_PASS}`      | SIP password.                                                                                                             |
+| `{PBX_HOST}`      | Value of _Server Registration Address_ from the PnP tab.                                                                  |
+| `{FIRMWARE_URL}`  | Download URL of the firmware row that matches the vendor (and model, if specified). Empty when no firmware is registered. |
 
 ### 3. URI Settings
 
@@ -83,32 +83,32 @@ Top-level options for the module.
 * **Provisioning HTTP port** — TCP port on which the module serves configuration files. Default `8480`. This is a dedicated port that bypasses the global HTTPS redirect, so it works even on PBXes that force HTTPS on the admin UI.
 * **Blacklist of MAC Addresses** — MAC addresses that will be ignored. **Blacklist wins over whitelist.**
 * **Whitelist of MAC Addresses** — MAC addresses allowed to auto-provision. If both lists are empty, every phone on the LAN is served.
-* **Additional Parameters** — extra vendor-specific lines that are merged into the generated configuration. See *Additional Parameters* below.
+* **Additional Parameters** — extra vendor-specific lines that are merged into the generated configuration. See _Additional Parameters_ below.
 * **Enable TFTP provisioning (UDP/69)** — turns on the built-in TFTP server. Phones that prefer DHCP option 66 over multicast PnP (typical for Snom and some Fanvil firmwares) pull their configuration via TFTP instead of HTTP. Use it on a trusted LAN only — TFTP traffic is unencrypted.
 
 ### 6. Firmware
 
 A built-in repository for phone firmware files. Drag a firmware blob onto the upload area, fill in vendor and model, save — MikoPBX hosts the file and exposes it through the `{FIRMWARE_URL}` placeholder.
 
-| Field | Notes |
-| --- | --- |
-| **Vendor** | `yealink`, `snom`, `fanvil`, `grandstream` or `htek`. |
-| **Model** | Free-form (for example `T46S`). Leave empty for a vendor-wide fallback. |
-| **Version** | Free-form (for example `66.86.0.15`). |
-| **Notes** | Admin comment. |
-| **File** | The firmware blob itself. |
+| Field       | Notes                                                                   |
+| ----------- | ----------------------------------------------------------------------- |
+| **Vendor**  | `yealink`, `snom`, `fanvil`, `grandstream` or `htek`.                   |
+| **Model**   | Free-form (for example `T46S`). Leave empty for a vendor-wide fallback. |
+| **Version** | Free-form (for example `66.86.0.15`).                                   |
+| **Notes**   | Admin comment.                                                          |
+| **File**    | The firmware blob itself.                                               |
 
 **Limits:** up to **80 MB per file**, **300 MB total** across all rows.
 
 **Allowed file extensions per vendor:**
 
-| Vendor | Extensions |
-| --- | --- |
-| Yealink | `.rom`, `.bin` |
-| Snom | `.bin`, `.fw` |
-| Fanvil | `.z`, `.bin` |
-| Grandstream | `.bin` |
-| Htek | `.rom`, `.bin` |
+| Vendor      | Extensions     |
+| ----------- | -------------- |
+| Yealink     | `.rom`, `.bin` |
+| Snom        | `.bin`, `.fw`  |
+| Fanvil      | `.z`, `.bin`   |
+| Grandstream | `.bin`         |
+| Htek        | `.rom`, `.bin` |
 
 Each row has Edit and Delete actions; editing lets you upload a replacement firmware in place.
 
@@ -122,7 +122,7 @@ When a phone fetches its configuration the module picks the firmware row matchin
 
 ## Additional Parameters
 
-The **Additional Parameters** field on the *PnP Settings* tab accepts vendor-specific lines, grouped into INI-style sections. Each section is merged into the corresponding vendor's generated config.
+The **Additional Parameters** field on the _PnP Settings_ tab accepts vendor-specific lines, grouped into INI-style sections. Each section is merged into the corresponding vendor's generated config.
 
 ### Yealink
 
@@ -164,10 +164,10 @@ Grandstream uses XML P-codes. Add or override any code via `[grandstream]`:
 
 ## Star-code self-binding
 
-When the module is enabled, the dial pattern from *Extension Template* (for example `*123*200`) becomes a working extension. Dial it from a fresh phone:
+When the module is enabled, the dial pattern from _Extension Template_ (for example `*123*200`) becomes a working extension. Dial it from a fresh phone:
 
 1. The phone places the call to that pattern.
-2. MikoPBX looks up the caller's IP, resolves the MAC address, and adds the phone to *Phone settings*.
+2. MikoPBX looks up the caller's IP, resolves the MAC address, and adds the phone to _Phone settings_.
 3. The phone is rebooted automatically and pulls its fresh configuration on next boot.
 
 The user is then bound to the phone — no admin action required.
@@ -189,13 +189,13 @@ The user is then bound to the phone — no admin action required.
 
 Look for `Connect Error` lines:
 
-```text
+```
 LIBD[528]: HTTP<5+notice> URL :
 LIBD[528]: HTTP<3+error > Connect Error
 AUTP[528]: AUTP<3+error > http to file failed, code = -3, msg = Connect Failed
 ```
 
-If you see `Connect Error`, the phone could not reach the PBX over HTTP — recheck *Server Registration Address* and the provisioning HTTP port.
+If you see `Connect Error`, the phone could not reach the PBX over HTTP — recheck _Server Registration Address_ and the provisioning HTTP port.
 
 ### Detailed PnP logging
 
@@ -219,7 +219,7 @@ If you turned on the TFTP channel and a phone still cannot fetch its config, dou
 
 ## Reference: what the module generates by default
 
-The snippets below show the full body of the configuration file the module produces for an empty template (no overrides, no *Additional Parameters*). Use them as a reference when comparing what your phone actually received — download the file in a browser from `http://<pbx-ip>:8480/...` and diff against the relevant example.
+The snippets below show the full body of the configuration file the module produces for an empty template (no overrides, no _Additional Parameters_). Use them as a reference when comparing what your phone actually received — download the file in a browser from `http://<pbx-ip>:8480/...` and diff against the relevant example.
 
 ### Yealink
 
@@ -271,7 +271,7 @@ features.headset_prior = 1
 
 ### Fanvil
 
-```text
+```
 <<VOIP CONFIG FILE>>Version:2.0002
 PNP Enable         :0
 <SIP CONFIG MODULE>

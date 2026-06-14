@@ -47,11 +47,11 @@ Click **Create**.
 
 ## Setting up a virtual machine
 
-1. Go to the settings of the created virtual machine.&#x20;
+1. Go to the settings of the created virtual machine.
 
-&#x20;To do this, click "**Settings" in the upper menu**.
+To do this, click "**Settings" in the upper menu**.
 
-!["Settings" button ](../../.gitbook/assets/6.png)
+!["Settings" button](../../.gitbook/assets/6.png)
 
 2. Click the "**Storage"** tab. Add a new hard drive to store call records.
 
@@ -67,23 +67,23 @@ Click **Next.**
 
 ![Creating a new hard disk](<../../.gitbook/assets/9 (1).png>)
 
-5. The hard disk must be of a **fixed size**.&#x20;
+5. The hard disk must be of a **fixed size**.
 
-&#x20;Check the box next to **"Pre-allocate Full Size"**
+Check the box next to **"Pre-allocate Full Size"**
 
-&#x20;Click **Next.**
+Click **Next.**
 
 ![Creating a new hard disk](<../../.gitbook/assets/10 (2).png>)
 
-6. Specify the **Name** of the created disk.&#x20;
+6. Specify the **Name** of the created disk.
 
-Set the Disk Size to about **50 GB**.&#x20;
+Set the Disk Size to about **50 GB**.
 
 Click **Finish.**
 
 ![Creating a new hard disk](<../../.gitbook/assets/11 (2).png>)
 
-7. &#x20;Choose the newly created drive and click **Select**.
+7. Choose the newly created drive and click **Select**.
 
 ![Selecting a new hard disk](<../../.gitbook/assets/12 (5).png>)
 
@@ -91,19 +91,19 @@ Click **Finish.**
 
 ![](<../../.gitbook/assets/16 (1).png>)
 
-9. &#x20;Please mount the MikoPBX image onto an optical disc. To do this, select the optical disc in the 'Media' section and click on the image file selection button in the 'Attributes' section.
+9. Please mount the MikoPBX image onto an optical disc. To do this, select the optical disc in the 'Media' section and click on the image file selection button in the 'Attributes' section.
 
 ![Mounting an image](<../../.gitbook/assets/13 (2).png>)
 
-10. &#x20;In the appeared menu, click on '**Choose a disk file..**.'
+10. In the appeared menu, click on '**Choose a disk file..**.'
 
-![Mounting an image](<../../.gitbook/assets/14 (2).png>)
+![Mounting an image](../../.gitbook/assets/14.png)
 
-11. &#x20;Select the downloaded **ISO disk image**.
+11. Select the downloaded **ISO disk image**.
 
 <figure><img src="../../.gitbook/assets/new1 (3).png" alt=""><figcaption><p>List of MikoPBX images option. You need .iso image!</p></figcaption></figure>
 
-12. "Go to the '**Network**' tab.&#x20;
+12. "Go to the '**Network**' tab.
 
 Set the Connection Type to '**Bridged Adapter**'. Click '**OK**' to save all the settings you have made.
 
@@ -115,7 +115,7 @@ Set the Connection Type to '**Bridged Adapter**'. Click '**OK**' to save all the
 
 ![Button for starting the created VM](../../.gitbook/assets/17.png)
 
-2. &#x20;The command interface of the PBX will open. The PBX will start booting.&#x20;
+2. The command interface of the PBX will open. The PBX will start booting.
 
 At this stage, MikoPBX is booting from the optical disc containing the ISO image. This is indicated by the message: '<mark style="color:red;">The system is loaded in Recovery mode</mark>'.
 
@@ -124,12 +124,12 @@ At this stage, MikoPBX is booting from the optical disc containing the ISO image
 {% hint style="info" %}
 You can navigate through the menu items using the [arrow keys](https://en.wikipedia.org/wiki/Arrow_keys).
 
-To select a menu item, press the Enter key.&#x20;
+To select a menu item, press the Enter key.
 
 Alternatively, you can select a menu item by pressing the corresponding [number on the alphanumeric keypad](https://en.wikipedia.org/wiki/Numeric_keypad)."
 {% endhint %}
 
-3. Install MikoPBX.&#x20;
+3. Install MikoPBX.
 
 {% hint style="danger" %}
 All data on the disk where MikoPBX is being installed will be lost
@@ -162,11 +162,11 @@ Enter the disk name (in this example, the only available disk is 'cdc') and pres
 
 ![Installation process](../../.gitbook/assets/22.png)
 
-8. After the installation is complete, the system will reboot.&#x20;
+8. After the installation is complete, the system will reboot.
 
-&#x20;      MikoPBX will now run from the sdb drive where you installed it.
+MikoPBX will now run from the sdb drive where you installed it.
 
-&#x20;      We will see that the line "<mark style="color:red;">The system is loaded in Recovery mode</mark>" is missing.
+We will see that the line "<mark style="color:red;">The system is loaded in Recovery mode</mark>" is missing.
 
 ![MikoPBX Console Page](../../.gitbook/assets/23.png)
 
@@ -188,4 +188,4 @@ Password - admin
 System will ask to change them after the first login. It is important for the security of your MikoPBX.
 {% endhint %}
 
-The installation of MikoPBX using VirtualBOX  is now complete.
+The installation of MikoPBX using VirtualBOX is now complete.
