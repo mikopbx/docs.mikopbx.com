@@ -273,8 +273,8 @@
   * [Интеграция с Автосекретарь 2.0 от МТС](modules/miko/integraciya-s-avtosekretar-2.0-ot-mts.md)
   * [VPN](modules/miko/module-vpn.md)
   * [GeoIP фильтрация](modules/miko/module-geo-ip.md)
-  * [Локальная транскрибация (In dev)](modules/miko/module-local-speech-to-text/README.md)
-    * [Настройки приложения](modules/miko/module-local-speech-to-text/nastroiki-prilozheniya.md)
+  * [Локальная транскрибация](modules/miko/module-local-speech-to-text/README.md)
+    * [MIKO AI Worker: Локальная транскрибация](modules/miko/module-local-speech-to-text/miko-ai-worker-lokalnaya-transkribaciya.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
