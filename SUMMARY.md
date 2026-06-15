@@ -274,7 +274,7 @@
   * [VPN](modules/miko/module-vpn.md)
   * [GeoIP фильтрация](modules/miko/module-geo-ip.md)
   * [Локальная транскрибация](modules/miko/module-local-speech-to-text/README.md)
-    * [MIKO AI Worker: Локальная транскрибация](modules/miko/module-local-speech-to-text/miko-ai-worker-lokalnaya-transkribaciya.md)
+    * [MIKO AI Worker: Локальная транскрибация](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
