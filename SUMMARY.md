@@ -277,8 +277,8 @@
     * [Быстрый старт](modules/miko/module-local-speech-to-text/quick-start.md)
     * [MIKO AI Worker: Локальная транскрибация](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
   * [Модуль ИИ Супервайзер](modules/miko/module-a-i-supervisor/README.md)
-    * [Быстрый старт](modules/miko/module-a-i-supervisor/bystryi-start.md)
-    * [MIKO AI Worker: ИИ-анализ](modules/miko/module-a-i-supervisor/miko-ai-worker-ii-analiz.md)
+    * [Быстрый старт](modules/miko/module-a-i-supervisor/quick-start.md)
+    * [MIKO AI Worker: ИИ-анализ](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
