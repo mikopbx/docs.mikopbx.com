@@ -19,10 +19,8 @@ Here is an example of a `docker-compose.yml` file that can be used to manage you
 services:
   mikopbx:
     container_name: "mikopbx"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
-    cap_add:
-      - NET_ADMIN
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-a-docker"
     volumes:
@@ -48,7 +46,7 @@ Save the contents into a file named `docker-compose.yml`, make the necessary adj
 ```bash
 export ID_WWW_USER=$(id -u www-user)
 export ID_WWW_GROUP=$(id -g www-user)
-sudo docker compose -f docker-compose.yml up
+sudo docker compose -f docker-compose.yml up -d
 ```
 
 ### Running Multiple MikoPBX Instances on One Host
@@ -64,7 +62,7 @@ With the –net=host mode enabled, you need to manually monitor the distribution
 services:
   mikopbx-first:
     container_name: "mikopbx-first"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
     entrypoint: "/sbin/docker-entrypoint"
     hostname: "mikopbx-in-docker-first"
@@ -94,7 +92,7 @@ services:
       - GNATS_PORT=4223
   mikopbx-second:
     container_name: "mikopbx-second"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
     tty: true
     entrypoint: "/sbin/docker-entrypoint"
@@ -130,7 +128,7 @@ Save the contents into a file named `docker-compose.yml`, make the necessary adj
 ```bash
 export ID_WWW_USER=$(id -u www-user)
 export ID_WWW_GROUP=$(id -g www-user)
-sudo docker compose -f docker-compose.yml up
+sudo docker compose -f docker-compose.yml up -d
 ```
 
 #### Network Bridge Mode (**–net=bridge**)
@@ -240,15 +238,13 @@ Let's describe several containers in the docker-compose.yaml file, specify diffe
 services:
   mikopbx-first:
     container_name: "mikopbx-first"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-docker-first"
     volumes:
       - /var/spool/mikopbx/first/cf:/cf
       - /var/spool/mikopbx/first/storage:/storage
     tty: true
-    cap_add:
-      - net_admin
     networks:
       - network-bridge1
     environment:
@@ -266,10 +262,8 @@ services:
       - "5060:5060/udp"  # UDP port 5060 on the host is directed to port 5060 in the container
   mikopbx-second:
     container_name: "mikopbx-second"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     tty: true
-    cap_add:
-      - net_admin
     networks:
       - network-bridge2
     entrypoint: "/sbin/docker-entrypoint"

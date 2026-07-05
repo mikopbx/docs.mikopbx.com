@@ -11,25 +11,26 @@ Before working with Docker, you need to install Docker and Docker Compose themse
 {% code fullWidth="true" %}
 ```bash
 # Update package list and install required dependencies
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl
 
 # Add the GPG key for Docker's official repository
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add Docker's repository to the APT sources list
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Install Docker CE
-sudo apt update
-sudo apt install docker-ce
-
-# Install Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+# Install Docker CE and Docker Compose
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Verify Docker Compose version
-sudo docker-compose --version
+sudo docker compose version
 ```
 {% endcode %}
 

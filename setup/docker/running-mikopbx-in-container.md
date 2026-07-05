@@ -24,7 +24,7 @@ sudo docker pull ghcr.io/mikopbx/mikopbx:latest
 # sudo docker pull mikopbx/mikopbx:latest
 
 # Running the container in unprivileged mode
-sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
+sudo docker run --net=host --name mikopbx --hostname mikopbx \
            -v /var/spool/mikopbx/cf:/cf \
            -v /var/spool/mikopbx/storage:/storage \
            -e SSH_PORT=23 \
@@ -111,7 +111,7 @@ Here is an example code for its use:
 sudo docker load -i mikopbx-2026.1.223-x86_64-docker.tar
 
 # Launch the created container
-sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
+sudo docker run --net=host --name mikopbx --hostname mikopbx \
      -v mikopbx_cf:/cf \
      -v mikopbx_storage:/storage \
      -e SSH_PORT=23 \
