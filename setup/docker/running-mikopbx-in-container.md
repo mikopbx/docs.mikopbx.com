@@ -121,6 +121,10 @@ sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx
      -it mikopbx:2026.1.223
 ```
 
+{% hint style="info" %}
+Не забудьте правильно настроить внешний firewall для Вашей АТС. Инструкцию по настройке Вы можете найти [по ссылке](../../security/external-firewall-enforcement.md).
+{% endhint %}
+
 ### Переменные окружения для конфигурирования MikoPBX
 
 Ниже перечислены некоторые переменные окружения, которые позволят скорректировать используемые MikoPBX порты и настройки.

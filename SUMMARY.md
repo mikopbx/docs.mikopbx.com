@@ -4,7 +4,6 @@
   * [Быстрое начало работы](readme/quick-start.md)
   * [Знакомство с MikoPBX](readme/getting-to-know-mikopbx.md)
   * [Системные требования](readme/system-requirements.md)
-  * [Обеспечение безопасности MikoPBX](readme/security.md)
 
 ## Установка <a href="#setup" id="setup"></a>
 
@@ -45,7 +44,6 @@
   * [Установка докера и cоздание пользователя и каталогов](setup/docker/docker-installation.md)
   * [Запуск MikoPBX в контейнере](setup/docker/running-mikopbx-in-container.md)
   * [Запуск MikoPBX с помощью docker compose](setup/docker/running-mikopbx-using-docker-compose.md)
-  * [Внешний файрвол для Docker](setup/docker/external-firewall-enforcement.md)
 
 ## Руководство пользователя <a href="#manual" id="manual"></a>
 
@@ -99,6 +97,12 @@
     * [Примеры использования REST API](manual/system/api-keys/examples.md)
     * [Интерактивная документация и список эндпоинтов](manual/system/api-keys/endpoints.md)
     * [Эндпоинт firewall-export](manual/system/api-keys/firewall-export.md)
+
+## Безопасность <a href="#security" id="security"></a>
+
+* [Обеспечение безопасности MikoPBX](security/guide.md)
+* [Внешний файрвол для Docker](security/external-firewall-enforcement.md)
+* [Исправление проблем безопасности на версии 2024.1.114](security/ispravlenie-problem-bezopasnosti-na-versii-2024.1.114.md)
 
 ## Часто задаваемые вопросы <a href="#faq" id="faq"></a>
 

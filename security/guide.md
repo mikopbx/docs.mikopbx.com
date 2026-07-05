@@ -132,7 +132,7 @@ Fail2Ban не заменяет сложные пароли — даже с вк�
 
 #### Защита веб-интерфейса в Docker
 
-* **Docker-развёртывание**: при использовании bridge-режима внутренние правила файрвола и fail2ban не защищают веб-интерфейс. Настройте [внешний firewall-bouncer](../setup/docker/external-firewall-enforcement.md) или переключите контейнер в `network_mode: host`.
+* **Docker-развёртывание**: при использовании bridge-режима внутренние правила файрвола и fail2ban не защищают веб-интерфейс. Настройте [внешний firewall-bouncer](external-firewall-enforcement.md) или переключите контейнер в `network_mode: host`.
 
 #### Не публикуйте АТС на публичном IP-адресе
 
