@@ -21,8 +21,6 @@ services:
     container_name: "mikopbx"
     image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
-    cap_add:
-      - NET_ADMIN
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-a-docker"
     volumes:
@@ -48,7 +46,7 @@ services:
 ```bash
 export ID_WWW_USER=$(id -u www-user)
 export ID_WWW_GROUP=$(id -g www-user)
-sudo docker compose -f docker-compose.yml up
+sudo docker compose -f docker-compose.yml up -d
 ```
 
 ### Запуск нескольких MikoPBX на одном хосте
@@ -132,7 +130,7 @@ mikopbx-second:
 
 export ID_WWW_USER=$(id -u www-user)
 export ID_WWW_GROUP=$(id -g www-user)
-sudo docker compose -f docker-compose.yml up
+sudo docker compose -f docker-compose.yml up -d
 ```
 
 #### Режим сетевого моста (**–net=bridge**)
@@ -249,8 +247,6 @@ services:
       - /var/spool/mikopbx/first/cf:/cf
       - /var/spool/mikopbx/first/storage:/storage
     tty: true
-    cap_add:
-      - net_admin
     networks:
       - network-bridge1
     environment:
@@ -270,8 +266,6 @@ services:
     container_name: "mikopbx-second"
     image: "ghcr.io/mikopbx/mikopbx:latest"
     tty: true
-    cap_add:
-      - net_admin
     networks:
       - network-bridge2
     entrypoint: "/sbin/docker-entrypoint"

@@ -15,21 +15,23 @@ description: Вариант обновления для MikoPBX в Docker кон
 sudo docker stop mikopbx
 
 # Удаление текущего контейнера
-sudo docker rm mikopbx
+sudo docker rm mikopbx
 ```
 
 Для запуска нового контейнера с использованием последней версии образа и теми же настройками, что и ранее (включая монтирование томов и прочие параметры сети), воспользуйтесь следующими командами:
 
 ```bash
 # Скачивание последней версии образа контейнера
-sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64:latest
+sudo docker pull ghcr.io/mikopbx/mikopbx:latest
 
 # Запуск контейнера в не привилегированном режиме
-sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
-           -v data_volume:/cf \
-           -v data_volume:/storage \
+sudo docker run --net=host --name mikopbx --hostname mikopbx \
+           -v /var/spool/mikopbx/cf:/cf \
+           -v /var/spool/mikopbx/storage:/storage \
            -e SSH_PORT=23 \
-           -it -d --restart always ghcr.io/mikopbx/mikopbx-x86-64:latest
+           -e ID_WWW_USER="$(id -u www-user)" \
+           -e ID_WWW_GROUP="$(id -g www-user)" \
+           -it -d --restart always ghcr.io/mikopbx/mikopbx:latest
 ```
 
 ### Обновление с помощью docker compose
@@ -37,18 +39,11 @@ sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx
 Для начала нужно корректно остановить работающий контейнер. После остановки контейнера его можно безопасно удалить
 
 ```bash
-# Остановка текущего контейнера
-sudo docker stop mikopbx
+export ID_WWW_USER=$(id -u www-user)
+export ID_WWW_GROUP=$(id -g www-user)
 
-# Удаление текущего контейнера
-sudo docker rm mikopbx
-```
-
-Следующий шаг — это скачивание последней версии образа MikoPBX:
-
-```bash
-# Скачивание последней версии образа контейнера
-sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64:latest
+sudo docker compose -f docker-compose.yml pull
+sudo docker compose -f docker-compose.yml up -d
 ```
 
 Пример файла `docker-compose.yml`, который может быть использован для обновления вашего контейнера MikoPBX через Docker Compose:
@@ -58,17 +53,17 @@ sudo docker pull ghcr.io/mikopbx/mikopbx-x86-64:latest
 services:
   mikopbx:
     container_name: "mikopbx"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64:latest"
+    image: "ghcr.io/mikopbx/mikopbx:latest"
     network_mode: "host"
-    cap_add:
-      - NET_ADMIN
     entrypoint: "/sbin/docker-entrypoint"
     hostname:  "mikopbx-in-a-docker"
     volumes:
-      - data_volume:/cf
-      - data_volume:/storage
+      - /var/spool/mikopbx/cf:/cf
+      - /var/spool/mikopbx/storage:/storage
     tty: true
     environment:
+      - ID_WWW_USER=${ID_WWW_USER}
+      - ID_WWW_GROUP=${ID_WWW_GROUP}
       # Изменение имени станции через переменные окружения
       - PBX_NAME=MikoPBX-in-Docker
       # Изменение стандартного порта SSH на 23
@@ -77,16 +72,17 @@ services:
       - WEB_PORT=8080
       # Изменение стандартного порта WEB HTTPS на 8443
       - WEB_HTTPS_PORT=8443
-      
-volumes:
-  data_volume:
 ```
 {% endcode %}
 
 Сохраните содержимое в файл `docker-compose.yml`, выполните необходимые корректировки и запускайте командой:
 
 ```bash
-sudo docker compose -f docker-compose.yml up
+export ID_WWW_USER=$(id -u www-user)
+export ID_WWW_GROUP=$(id -g www-user)
+
+sudo docker compose -f docker-compose.yml pull
+sudo docker compose -f docker-compose.yml up -d
 ```
 
 ### Примечания

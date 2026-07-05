@@ -24,7 +24,7 @@ sudo docker pull ghcr.io/mikopbx/mikopbx:latest
 # sudo docker pull mikopbx/mikopbx:latest
 
 # Запуск контейнера в не привилегированном режиме
-sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
+sudo docker run --net=host --name mikopbx --hostname mikopbx \
            -v /var/spool/mikopbx/cf:/cf \
            -v /var/spool/mikopbx/storage:/storage \
            -e SSH_PORT=23 \
@@ -96,7 +96,6 @@ https://\<IP адрес хост системы>
 
 ### Особенности работы контейнизированной MikoPBX
 
-* Флаг **NET\_ADMIN** необходим для возможности работы системы проактивной защиты **fail2ban** и фаервола **iptables** внутри контейнера. При срабатывании блокировки доступа, например при вводе неверного пароля, доступ с IP адреса злоумышленника будет заблокирован.
 * Если необходимо использовать «[Модуль резервного копирования](/broken/pages/6CXS3sHS7G3loDJ8vM9C)», то контейнер следует запускать с флагом **--privileged**. Когда MikoPBX запускается в контейнере, резервное копирование можно также выполнять архивированием каталогов **cf** и **storage** вручную . В этом случае привелегированный режим можно не использовать, но в момент копирования контейнер должен быть остановлен.
 * Флаг **--net=host** указывает на то, что NAT между хостом и контейнером не будет использоваться. MikoPBX будет подключена напрямую к сети хостовой машины. Все порты, которые должен занять контейнер будут заняты и на хост машине. Если на хост машине, какой-то из портов недоступн, то при загрузке MikoPBX возникнут ошибки. Подробнее в [документации к Docker...](https://docs.docker.com/network/host/)
 * При необходимости можно скорректировать стандартный набор портов, которые использует MikoPBX. Это можно сделать, объявляя переменные окружения при запуске контейнера.
@@ -112,7 +111,7 @@ https://\<IP адрес хост системы>
 sudo docker load -i mikopbx-2026.1.223-x86_64-docker.tar
 
 # Запускаем созданный контейнер
-sudo docker run --cap-add=NET_ADMIN --net=host --name mikopbx --hostname mikopbx \
+sudo docker run --net=host --name mikopbx --hostname mikopbx \
      -v mikopbx_cf:/cf \
      -v mikopbx_storage:/storage \
      -e SSH_PORT=23 \
