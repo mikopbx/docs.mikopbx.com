@@ -374,5 +374,5 @@ A full list of all possible setting parameters is available in the source code [
 {% hint style="warning" %}
 In the default bridge mode the built-in MikoPBX firewall does not
 protect the web interface — the container cannot manage host iptables.
-See [External firewall for Docker](external-firewall-enforcement.md).
+See [External firewall for Docker](../../security/external-firewall-enforcement.md).
 {% endhint %}

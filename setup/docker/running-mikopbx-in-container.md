@@ -95,7 +95,6 @@ Log into the web interface using the `admin` login and the `admin` password to m
 
 ### Features of containerized MikoPBX
 
-* The **NET\_ADMIN** flag is required for the proactive protection system **fail2ban** and the firewall **iptables** to function inside the container. When an access block is triggered, for example, by entering an incorrect password, access from the IP address of the attacker will be blocked.
 * If you need to use the "[Backup Module](../../manual/maintenance/backup.md)", the container should be run with the **–privileged** flag. When MikoPBX is run in a container, backups can also be performed by manually archiving the **cf** and **storage** directories. In this case, the privileged mode is not necessary, but the container must be stopped during copying.
 * The **–net=host** flag indicates that NAT between the host and container will not be used. MikoPBX will be directly connected to the host machine's network. All ports that the container needs to occupy will also be occupied on the host machine. If any port on the host machine is unavailable, errors will occur when loading MikoPBX. More details in the [Docker documentation.](https://docs.docker.com/network/host/)
 * If necessary, you can adjust the standard set of ports used by MikoPBX. This can be done by declaring environment variables when launching the container.
@@ -119,6 +118,8 @@ sudo docker run --net=host --name mikopbx --hostname mikopbx \
      -e ID_WWW_GROUP="$(id -g www-user)" \
      -it mikopbx:2026.1.223
 ```
+
+Do not forget to configure the external firewall correctly for your PBX. You can find the setup instructions [here](../../security/external-firewall-enforcement.md).
 
 ### Environment variables for configuring MikoPBX
 

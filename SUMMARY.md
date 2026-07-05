@@ -4,7 +4,6 @@
   * [Quick start](master/quick-start.md)
   * [Getting to know MikoPBX](master/getting-to-know-mikopbx.md)
   * [System requirements](master/system-requirements.md)
-  * [Securing MikoPBX](readme/security.md)
 
 ## Installation <a href="#setup" id="setup"></a>
 
@@ -37,7 +36,6 @@
   * [Docker installation and creating a user and directories](setup/docker/docker-installation.md)
   * [Running MikoPBX in a container](setup/docker/running-mikopbx-in-container.md)
   * [Running MikoPBX using docker compose](setup/docker/running-mikopbx-using-docker-compose.md)
-  * [External firewall for Docker](setup/docker/external-firewall-enforcement.md)
 
 ## User manual <a href="#manual" id="manual"></a>
 
@@ -86,6 +84,12 @@
     * [Interactive Documentation and Endpoint List](manual/system/api-keys/endpoints.md)
     * [The firewall-export endpoint](manual/system/api-keys/firewall-export.md)
   * [ARI Access](manual/system/asterisk-rest-users.md)
+
+## Security <a href="#security" id="security"></a>
+
+* [Securing MikoPBX](security/guide.md)
+* [External firewall for Docker](security/external-firewall-enforcement.md)
+* [Fixing security issues in version 2024.1.114](security/fixing-security-issues-in-version-2024.1.114.md)
 
 ## FAQ
 

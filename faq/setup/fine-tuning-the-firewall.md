@@ -3,7 +3,7 @@
 {% hint style="warning" %}
 This page applies to bare-metal and LXC installations. For Docker
 deployments see
-[External firewall for Docker](../../setup/docker/external-firewall-enforcement.md).
+[External firewall for Docker](../../security/external-firewall-enforcement.md).
 {% endhint %}
 
 When publishing a PBX on a public IP address, the task arises to protect the speaker from scanners, pests who are trying to pick up passwords to SIP PBX accounts. If a simple numeric password is set, it will be picked up very quickly, which will cause losses.

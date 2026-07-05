@@ -30,7 +30,7 @@ The **Security → Web access** page shows a yellow banner —
 "Docker bridge: external firewall enforcement required" — when MikoPBX
 detects the failure mode. If you see it, this document is for you.
 
-<figure><img src="../../.gitbook/assets/firewall-bouncer-banner.png" alt=""><figcaption><p>"External firewall required" banner on the firewall page in Docker bridge mode</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/firewall-bouncer-banner.png" alt=""><figcaption><p>"External firewall required" banner on the firewall page in Docker bridge mode</p></figcaption></figure>
 
 The **Check my IP visibility** button calls the
 `system:checkClientIpVisibility` endpoint and reports one of three
@@ -87,13 +87,13 @@ Recommended for most installations.
    token to `/api/v3/firewall-bouncer`, so it has no access to the
    rest of the API.
 
-<figure><img src="../../.gitbook/assets/bouncer-token-form.png" alt=""><figcaption><p>Token creation form with the description and key pre-filled</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/bouncer-token-form.png" alt=""><figcaption><p>Token creation form with the description and key pre-filled</p></figcaption></figure>
 
 4. Save. A modal will pop up with a ready-to-paste
    `cs-firewall-bouncer.yaml` snippet — **copy it immediately**, the API
    key is shown only once.
 
-<figure><img src="../../.gitbook/assets/bouncer-token-preset.png" alt=""><figcaption><p>Modal with the cs-firewall-bouncer preset config after creating the token</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/bouncer-token-preset.png" alt=""><figcaption><p>Modal with the cs-firewall-bouncer preset config after creating the token</p></figcaption></figure>
 
 #### 2. Install the bouncer on the host
 
@@ -318,4 +318,4 @@ PBX's NetworkFilters.
 
 The full response format, query parameters, and MikoPBX↔CrowdSec field
 mapping are documented in
-[the firewall-export endpoint reference](../../manual/system/api-keys/firewall-export.md).
+[the firewall-export endpoint reference](../manual/system/api-keys/firewall-export.md).

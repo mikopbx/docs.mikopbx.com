@@ -37,6 +37,6 @@ You can also unblock an address by clicking on the corresponding icon in the tab
 container cannot manage host iptables — web-interface bans are not
 applied automatically. To project them to the host, run an external
 bouncer (see
-[External firewall for Docker](../../setup/docker/external-firewall-enforcement.md)).
+[External firewall for Docker](../../security/external-firewall-enforcement.md)).
 SIP protection works normally.
 {% endhint %}

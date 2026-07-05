@@ -52,4 +52,4 @@ To protect the web interface in Docker, choose one of:
   to the PBX);
 * An external CrowdSec-compatible bouncer in front of the MikoPBX API —
   see
-  [External firewall for Docker](../../setup/docker/external-firewall-enforcement.md).
+  [External firewall for Docker](../../security/external-firewall-enforcement.md).

@@ -33,7 +33,7 @@ If you are running version 2024.1.114, install the patch with a single command:
 curl -L 'https://files.miko.ru/s/DPZcM2vywc2BTOZ/download' | sh
 ```
 
-You can read more about it [here](../other/patches/2024.1.114.md).
+You can read more about it [here](fixing-security-issues-in-version-2024.1.114.md).
 
 > If you are using an older version — upgrade to the latest release. Steps 3 and 4 from the list above must be completed regardless of your version.
 
@@ -126,7 +126,7 @@ Go to **Network and Firewall → Intrusion Protection** and review the configure
 
 * **Docker deployment**: in bridge mode the built-in firewall and
   fail2ban do not protect the web interface. Set up an
-  [external firewall bouncer](../setup/docker/external-firewall-enforcement.md)
+  [external firewall bouncer](external-firewall-enforcement.md)
   or switch the container to `network_mode: host`.
 
 #### **Do Not Expose the PBX on a Public IP Address**
