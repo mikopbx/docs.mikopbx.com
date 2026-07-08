@@ -86,7 +86,7 @@
     * [The firewall-export endpoint](manual/system/api-keys/firewall-export.md)
   * [ARI Access](manual/system/asterisk-rest-users.md)
 
-## Security <a href="#security" id="security"></a>
+## Security
 
 * [Securing MikoPBX](security/guide.md)
 * [External firewall for Docker](security/external-firewall-enforcement.md)
