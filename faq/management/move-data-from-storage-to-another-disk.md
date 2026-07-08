@@ -23,6 +23,11 @@ MikoPBX не использует постоянную ручную запись
 ## Предварительные требования
 
 * есть доступ к MikoPBX по SSH под `root`;
+
+{% hint style="info" %}
+Инструкцию для подключения по SSH Вы можете найти [здесь](../troubleshooting/connecting-to-a-pbx-using-ssh/).
+{% endhint %}
+
 * к серверу подключён новый свободный диск;
 * сделана актуальная резервная копия конфигурации и важных данных;
 * на диске хранилища достаточно места для временной работы системы на время копирования;
@@ -50,14 +55,13 @@ sqlite3 /cf/conf/mikopbx.db "select id,name,device,uniqid,filesystemtype,media f
 
 Дополнительно проверьте новый диск:
 
-```sh
-NEW_DISK=/dev/vdc
+<pre class="language-sh"><code class="lang-sh">NEW_DISK=<a data-footnote-ref href="#user-content-fn-1">/dev/vdc</a>
 
 lsblk -o NAME,PATH,SIZE,TYPE,FSTYPE,LABEL,UUID,MOUNTPOINTS,MODEL,SERIAL,VENDOR "$NEW_DISK"
 blkid "$NEW_DISK" || true
 wipefs -n "$NEW_DISK"
 parted -s "$NEW_DISK" print
-```
+</code></pre>
 
 Если у диска есть разделы, файловая система, UUID, точка монтирования или вы не уверены в его назначении, остановитесь и уточните, что это действительно свободный диск.
 
@@ -299,3 +303,5 @@ printf "%s\n" "$(basename "$NEW_DISK")" | /etc/rc/connect_storage
 monit summary
 asterisk -rx "core show uptime"
 ```
+
+[^1]: Укажите путь к Вашему диску, найденный на прошлом шаге
