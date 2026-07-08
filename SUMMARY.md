@@ -122,7 +122,7 @@
 * [Обслуживание](faq/management/README.md)
   * [Изменить имя для авторизации](faq/management/change-the-login-name.md)
   * [Закончилось место на доп. диске, увеличение размера диска](faq/management/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
-  * [Закончилось место на доп. диске, перенос данных на новый диск](faq/management/move-data-from-storage-to-another-disk.md)
+  * [Перенос данных MikoPBX на новый диск](faq/management/move-data-from-storage-to-another-disk.md)
   * [Хранение записей в общей папке windows](faq/management/storing-records-in-a-windows-shared-folder.md)
   * [Резервный интернет и перерегистрация провайдеров](faq/management/backup-internet.md)
   * [Сброс пароля администратора из консоли MikoPBX](faq/management/password-reset.md)
