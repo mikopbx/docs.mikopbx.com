@@ -58,20 +58,84 @@ If your provider allows registration and you do not need to connect external sub
 
 ## Manual configuration of network routes
 
-1. Go to the '**System**' → '**System file customization**' section.
+Static routes are used when MikoPBX must send traffic to a specific network through a separate gateway instead of the main Internet gateway. This is most often required in the following cases:
 
-<figure><img src="../../.gitbook/assets/4 (3).png" alt=""><figcaption><p>"System file customization" section</p></figcaption></figure>
+* the PBX has several network interfaces;
+* telephony, VPN, or remote offices are available through a separate router;
+* traffic must be routed to a specific provider or branch-office subnet;
+* the main gateway is used for Internet access, while separate internal networks must be reached through another gateway.
 
-2. Open the file **'/etc/static-routes**' for editing.
+### Where to find this setting in the interface
 
-<figure><img src="../../.gitbook/assets/5 (24).png" alt=""><figcaption><p><strong>/etc/static-routes</strong> file</p></figcaption></figure>
+1. Go to **Network and Firewall** → **Network interfaces**.
+2. At the bottom of the form, find the **Static routes** block.
 
-3. Select the '**To replace all**' mode and insert the rule. For example, _'route add -net 54.246.198.136 netmask 255.255.255.255 gw 172.16.32.15 dev eth0_'
+<figure><img src="../../.gitbook/assets/network-static-routes-section.png" alt=""><figcaption><p>Static routes configuration section</p></figcaption></figure>
 
-We specify to the operating system that the specified IP address **54.246.198.136** can be found through the network interface 'eth0' and the request should be directed to the gateway (**172.16.32.15**).
+{% hint style="info" %}
+In Docker installations, the **Static routes** block may be hidden because the network stack is managed by the container or the host system.
+{% endhint %}
 
-The netmask '**255.255.255.255**' indicates that the rule will only be applicable to the address **54.246.198.136**. If you need to create a rule for a group of addresses, for example, the entire subnet **54.246.198.0**: In fact, it is the range of addresses from **54.246.198.1** to **54.246.198.254**.&#x20;
+### How to add a route
 
-Click "**Save settings"**.
+1. In the **Static routes** block, click **Add route**.
+2. Fill in the route row.
+3. Add several routes if needed. You can change the order by dragging rows; this order is saved as the route priority.
+4. Click **Save** at the bottom of the form.
 
-<figure><img src="../../.gitbook/assets/31-05-2023 0-59-21.png" alt=""><figcaption><p>code for <strong>/etc/static-routes</strong> file</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/network-static-routes-add-route.png" alt=""><figcaption><p>Adding a static route</p></figcaption></figure>
+
+### Field description
+
+| Field | Description |
+| ----- | ----------- |
+| **Network** | Destination network address. For example, specify **192.168.10.0** for a remote subnet. If the route is needed for one specific IP address, specify that IP address and select the **32 - 255.255.255.255** mask. |
+| **Mask** | CIDR mask of the destination network. It is selected from a list in the interface, for example **24 - 255.255.255.0** for a /24 subnet or **32 - 255.255.255.255** for a single address. |
+| **Gateway** | IP address of the router through which MikoPBX should send traffic to the specified network. The gateway must be reachable from the selected interface. |
+| **Interface** | Network interface through which the route will be used. You can leave **Auto** so that the operating system chooses the interface, or select a specific interface such as **eth0** or a VLAN interface. |
+| **Description** | Administrator comment. Use it to describe the purpose of the route, for example **Branch VPN** or **SIP provider network**. |
+
+Example route to a remote subnet:
+
+| Field | Value |
+| ----- | ----- |
+| **Network** | **192.168.10.0** |
+| **Mask** | **24 - 255.255.255.0** |
+| **Gateway** | **172.16.32.15** |
+| **Interface** | **eth0** or **Auto** |
+| **Description** | **Office VPN** |
+
+Example route to a single address:
+
+| Field | Value |
+| ----- | ----- |
+| **Network** | **54.246.198.136** |
+| **Mask** | **32 - 255.255.255.255** |
+| **Gateway** | **172.16.32.15** |
+| **Interface** | **eth0** or **Auto** |
+
+### How to check that the route works
+
+Check that the required remote address or service is reachable from MikoPBX: SIP provider registration, connection to a remote phone, access to a VPN network, or another working scenario for which the route was added.
+
+If you have console or SSH access, you can additionally check which path the system selects:
+
+```bash
+ip route get 192.168.10.10
+```
+
+The output should show the expected gateway or interface. To check host reachability, you can use:
+
+```bash
+ping 192.168.10.10
+```
+
+You can also open **Maintenance** → **System logs** → **System information** and check the current network settings.
+
+### Common mistakes
+
+* **Invalid gateway.** The **Gateway** field must contain a valid IP address. If it is incorrect, MikoPBX may show the **Invalid gateway address** message.
+* **The gateway is not in the selected interface subnet.** If a specific **Interface** is selected, make sure the specified gateway is reachable through that interface. Otherwise, the route may be saved, but traffic will not go through the required path.
+* **Conflict with the main gateway.** Do not use a static route as a replacement for the main Internet gateway. The main gateway is configured in the Internet interface settings, while static routes are better suited for separate networks and addresses.
+* **Invalid mask/CIDR.** Specify the network address and the correct **Mask**. For example, for the **192.168.10.0/24** subnet, use **192.168.10.0** and **24 - 255.255.255.0**; for a single IP address, use **32 - 255.255.255.255**.
+* **The route is not applied after saving.** Check that the page was saved without errors, the route remains in the **Static routes** table, the selected gateway is reachable from MikoPBX, and **Interface** is selected correctly or set to **Auto**.
