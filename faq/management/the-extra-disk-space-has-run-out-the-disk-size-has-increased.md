@@ -1,166 +1,239 @@
-# The extra disk space has run out, the disk size has increased
+# Increasing the MikoPBX Storage Disk Size
 
-{% hint style="success" %}
-Some virtual machines allow you to increase the disk size
+Use this guide when the disk that contains the local MikoPBX storage has been expanded in the hypervisor or on the physical server, but the `/storage/usbdisk1` partition still shows the old size.
+
+The local storage contains call recordings, call history, system logs, additional modules, backups, and system caches. In a standard installation, the storage is mounted at `/storage/usbdisk1`.
+
+{% hint style="danger" %}
+Before changing partitions, create a MikoPBX backup and a virtual machine snapshot or disk backup using your hypervisor tools.
 {% endhint %}
 
 {% hint style="warning" %}
-Be sure to back up your data before you work!
+You can run diagnostics over SSH. Run the actual resize operation from the local console, hypervisor console, or serial console. The standard resize script calls `/sbin/freestorage`, which stops the SSH server `dropbear`, so the SSH session will be disconnected.
 {% endhint %}
 
-To execute the following commands, you will need to [connect to the PBX using an SSH client](../troubleshooting/connecting-to-a-pbx-using-ssh/putty.md).
+## When to Use This Guide
 
-## Control of free disk space
+Use this scenario if:
 
-```php
-~ # df -h
-Filesystem                Size      Used Available Use% Mounted on
-none                    281.3M    324.0K    281.0M   0% /dev
-/dev/sda2               392.3M    384.6M      3.8M  99% /offload
-/dev/sda3                14.1M    915.0K     12.9M   6% /cf
-/dev/sdb1                 4.9G     71.0M      4.5G   2% /storage/usbdisk1
-```
+* MikoPBX is installed on a virtual machine or a physical server;
+* the storage disk has already been expanded at the hypervisor, RAID controller, or storage subsystem level;
+* `df -h /storage/usbdisk1` still shows the old file system size;
+* the disk has unallocated space after the current storage partition.
 
-{% hint style="success" %}
-The data storage disk is usually mounted in the "/storage/usbdisk1" directory. From the example above, it can be seen that 4.5G of 4.9G is currently available.
+This guide does not apply to Docker installations. In Docker, the size of the `/storage` directory is managed by the host operating system and volume settings.
+
+## Check the Current Storage Disk
+
+Connect to MikoPBX over SSH for diagnostics only, or open the MikoPBX console and run:
+
+{% hint style="info" %}
+Instructions for connecting via SSH are available [here](../troubleshooting/connecting-to-a-pbx-using-ssh/).
 {% endhint %}
 
-## Disabling the disk
-
-Before starting work, you should unmount the disk. To do this, run the script:
-
-```
-~ # /sbin/freestorage
-```
-
-Make sure that the data storage disk is no longer mounted:
-
-```php
-~ # df -h
-Filesystem                Size      Used Available Use% Mounted on
-none                    281.3M    324.0K    281.0M   0% /dev
-/dev/sda2               392.3M    388.3M         0 100% /offload
-/dev/sda3                14.1M    915.0K     12.9M   6% /cf
+```sh
+lsblk -f
+df -h /storage/usbdisk1
+mount | grep /storage/usbdisk1
+cat /etc/fstab
+sqlite3 /cf/conf/mikopbx.db "select id,name,device,uniqid,filesystemtype,media from m_Storage;"
 ```
 
-## Editing the Partition table
+Find the disk listed in the `m_Storage` table. For example:
 
-### Deleting a partition
-
-First, delete the existing partition. This operation **does NOT delete data on the disk**, just edits the partition table.
-
-Launching the Section Editor:
-
-```
-# fdisk /dev/sdb
+```text
+1|Storage №1|/dev/vdc|854d0b18-608a-4634-b910-dea3726ae1a5|ext4|1
 ```
 
-The system will prompt you to enter a command, enter "d" and press Enter:
+In this example, the storage disk is `/dev/vdc`, and the storage partition is `/dev/vdc1`.
 
-```
-Command (m for help): d
-```
+Save the disk name to a variable:
 
-Система запросит выбрать раздел к удалению, он один, вводим номер раздела «1» и жмем Enter:
-
-```
-Selected partition 1
+```sh
+STORAGE_DISK=$(sqlite3 /cf/conf/mikopbx.db "select device from m_Storage where media='1' limit 1;")
+echo "$STORAGE_DISK"
 ```
 
-Сохраняем таблицу разделов, вводим команду «w» и жмем Enter:
+Check the disk size and unallocated free space:
 
-```
-Command (m for help): w
-```
-
-### Adding a larger section
-
-Launching the Section Editor:
-
-```
-# fdisk /dev/sdb
+```sh
+blockdev --getsize64 "$STORAGE_DISK"
+parted -s "$STORAGE_DISK" unit MiB print free
 ```
 
-The system will prompt you to enter a command, enter "n" and press Enter:
+After the disk has been expanded in the hypervisor, the output must show that the disk itself is larger and that `Free Space` appears after the existing partition.
 
-```
-Command (m for help): n
-```
+Example state before resizing:
 
-Next, specify the command "p", the section will be primary, press Enter:
+```text
+Disk /dev/vdc: 12288MiB
 
-```
-Command action p
-```
-
-Enter the number of the created section "1", press Enter:
-
-```
-Partition number (1-4): 1
+Number  Start     End       Size      File system  Name     Flags
+        0.02MiB   1.00MiB   0.98MiB   Free Space
+ 1      1.00MiB   10239MiB  10238MiB  ext4         primary
+        10239MiB  12288MiB  2049MiB   Free Space
 ```
 
-Next, the system will ask you to enter the numbers of the first and last sector "**First sector" / "Last sector**", wait for Enter, do not enter anything and agree with the "**default**" values.
+If there is no free space, first expand the disk in the hypervisor or check that you selected the correct disk.
 
-### Checking a new partition
+## Fix GPT After Expanding the Disk
+
+On GPT disks, after expanding a virtual disk, `parted` may show this warning:
+
+```text
+Warning: Not all of the space available to /dev/vdc appears to be used
+```
+
+In this case, first move the backup GPT header to the end of the new disk size:
+
+```sh
+sgdisk -e "$STORAGE_DISK"
+sync
+blockdev --rereadpt "$STORAGE_DISK" 2>/dev/null || true
+partprobe "$STORAGE_DISK" 2>/dev/null || true
+```
+
+Then repeat the check:
+
+```sh
+parted -s "$STORAGE_DISK" unit MiB print free
+```
+
+The `Not all of the space...` warning should disappear. The free space after the partition should still be visible.
+
+## Run Storage Resize
+
+Open the local MikoPBX console or the virtual machine console.
+
+In the console menu, select:
+
+```text
+Storage -> Resize storage
+```
+
+Confirm stopping processes:
+
+```text
+All processes will be completed. Continue? (y/n):
+```
+
+Enter `y`.
+
+MikoPBX will run the standard scenario:
+
+* stop services that use storage;
+* unmount `/storage/usbdisk1`;
+* expand the storage partition to the end of the disk;
+* run `e2fsck`;
+* run `resize2fs`;
+* reboot the system.
+
+If you need to run the same scenario as a command from the console, use:
+
+```sh
+/etc/rc/resize_storage_part "$STORAGE_DISK"
+```
 
 {% hint style="warning" %}
-The size of the partition must match the size of the disk.
+Do not run this command from an SSH session. During execution, `dropbear` will be stopped and the connection will be disconnected.
 {% endhint %}
 
-```php
-~ # fdisk -l 
-Disk /dev/sdb: 10 GB, 10737418240 bytes, 20971520 sectors
-1305 cylinders, 255 heads, 63 sectors/track
-Units: cylinders of 16065 * 512 = 8225280 bytes
+## Check the Result After Reboot
 
-Device  Boot StartCHS    EndCHS        StartLBA     EndLBA    Sectors  Size Id Type
-/dev/sdb1    0,1,1       1023,254,63         63   20964824   20964762  9.9G 83 Linux
+After MikoPBX boots, identify the storage disk again and run the checks:
+
+```sh
+STORAGE_DISK=$(sqlite3 /cf/conf/mikopbx.db "select device from m_Storage where media='1' limit 1;")
+echo "$STORAGE_DISK"
+
+lsblk -f
+df -h /storage/usbdisk1
+parted -s "$STORAGE_DISK" unit MiB print free
+mount | grep /storage/usbdisk1
+cat /etc/fstab
+sqlite3 /cf/conf/mikopbx.db "select id,name,device,uniqid,filesystemtype,media from m_Storage;"
 ```
 
-### Checking the section for errors
+In a correct state:
 
-Run the verification command:
+* `/storage/usbdisk1` is mounted from the same storage partition;
+* the size of `/storage/usbdisk1` has increased;
+* there is no free space after the storage partition, or only a minimal technical gap remains;
+* the UUID in `/etc/fstab` matches the UUID of the storage partition;
+* the `m_Storage` table points to the same storage disk.
 
-```
-e2fsck -f /dev/sdb1
-```
+Example result after a successful resize:
 
-Example of the result of the team's work:
-
-```php
-e2fsck 1.43.4 (31-Jan-2017)
-Pass 1: Checking inodes, blocks, and sizes
-Pass 2: Checking directory structure
-Pass 3: Checking directory connectivity
-Pass 4: Checking reference counts
-Pass 5: Checking group summary information
-/dev/sdb1: 35/655360 files (11.4% non-contiguous), 63423/2620595 blocks
-```
-
-### Partition file system size
-
-Run the command:
-
-```
-resize2fs /dev/sdb1
-```
-
-Example of command output:
-
-```php
-resize2fs 1.43.4 (31-Jan-2017)
-The filesystem is already 2620595 (4k) blocks long.  Nothing to do!
-```
-
-### Rebooting and mounting
-
-When booting, the system will automatically mount a disk for data storage:
-
-```php
-~ # df -h
+```text
 Filesystem                Size      Used Available Use% Mounted on
-none                    281.3M    324.0K    281.0M   0% /dev
-/dev/sda2               392.3M    384.6M      3.8M  99% /offload
-/dev/sda3                14.1M    915.0K     12.9M   6% /cf
-/dev/sdb1                 9.8G     73.3M      9.2G   1% /tmp/123
+/dev/vdc1                11.7G      1.1G     10.0G  10% /storage/usbdisk1
+```
+
+Check that the data is accessible:
+
+```sh
+test -d /storage/usbdisk1/mikopbx && echo "mikopbx directory OK"
+test -f /storage/usbdisk1/mikopbx/astlogs/asterisk/cdr.db && echo "cdr.db OK"
+sqlite3 /storage/usbdisk1/mikopbx/astlogs/asterisk/cdr.db "pragma integrity_check;"
+```
+
+The correct response for the call history database is:
+
+```text
+ok
+```
+
+Check services:
+
+```sh
+monit summary
+pbx-console services status
+asterisk -rx "core show uptime"
+```
+
+Immediately after reboot, some `monit` checks may be in the `Initializing` state. Wait 1-2 minutes and repeat the check.
+
+## If the Size Did Not Change
+
+If `Resize storage` reported success but `df -h /storage/usbdisk1` still shows the old size, check GPT and free space:
+
+```sh
+STORAGE_DISK=$(sqlite3 /cf/conf/mikopbx.db "select device from m_Storage where media='1' limit 1;")
+parted -s "$STORAGE_DISK" unit MiB print free
+```
+
+If the `Not all of the space...` warning is present, run:
+
+```sh
+sgdisk -e "$STORAGE_DISK"
+sync
+blockdev --rereadpt "$STORAGE_DISK" 2>/dev/null || true
+partprobe "$STORAGE_DISK" 2>/dev/null || true
+```
+
+Then run the resize operation again from the console:
+
+```sh
+/etc/rc/resize_storage_part "$STORAGE_DISK"
+```
+
+If the free space is less than 5% of the disk size, the standard script may finish without resizing. In this case, check whether the disk was actually expanded enough.
+
+## Rollback
+
+If the system does not boot or storage is not mounted after resizing, use the backup or snapshot created before the operation.
+
+If MikoPBX boots but storage is not mounted, check the UUID and database record:
+
+```sh
+blkid
+cat /etc/fstab
+sqlite3 /cf/conf/mikopbx.db "select id,name,device,uniqid,filesystemtype,media from m_Storage;"
+mount | grep /storage/usbdisk1
+```
+
+If needed, connect the storage disk again using the standard script:
+
+```sh
+printf "%s\n" "$(basename "$STORAGE_DISK")" | /etc/rc/connect_storage
 ```
