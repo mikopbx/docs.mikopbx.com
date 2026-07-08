@@ -33,7 +33,7 @@ The number of network interfaces in MikoPBX is not limited.
 
 The '**Network interface with internet access**' is the primary network interface through which access to external addresses (non-local) will be established.
 
-If no **DNS server** address is specified, the default server 8.8.8.8 will be used.
+If no **DNS server** addresses are specified, MikoPBX uses built-in fallback DNS servers. For non-Russian locales, the order is **1.1.1.1**, **8.8.8.8**, and then **77.88.8.8**; for the Russian locale, **77.88.8.8** is tried first, followed by **1.1.1.1** and **8.8.8.8**.
 
 Depending on your network topology, you need to perform the following steps to configure MikoPBX. The PBX can be behind a network router, which is the most common scenario, or it can have a public IP.
 
@@ -45,7 +45,7 @@ For all addresses that are not local to the PBX, the station will be represented
 If 'External IP address of your router' is empty and 'External hostname of your router' is filled, the PBX will be represented by the hostname (External hostname) field.
 
 {% hint style="info" %}
-The external IP address is mandatory to fill in. If a domain name is specified, it takes priority, and the external IP address field is not used.
+When NAT is enabled, specify either the external IP address of the router or the external hostname. If both fields are filled in, the hostname takes priority and the external IP address is not used. In Dual-Stack mode, the external hostname is required.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/3 (26).png" alt=""><figcaption><p>"Network topology" section</p></figcaption></figure>

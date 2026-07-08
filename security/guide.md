@@ -206,5 +206,5 @@ Go through this list and confirm that every item has been completed:
 * [**Firewall**](../manual/connectivity/firewall.md) — configuring access rules.
 * [**Intrusion Protection (Fail2Ban)**.](../manual/connectivity/fail2-ban.md)
 * [**Network Interfaces**](../manual/connectivity/network.md) — network configuration, NAT, DNS.
-* [**Network Routes**](../manual/connectivity/network.md#manual-configuration-of-network-routes) — manual routing configuration.
+* [**Static Routes**](../manual/connectivity/network.md#manual-configuration-of-network-routes) — route configuration through the web interface.
 * [**Extensions**](../manual/telephony/extensions.md) — managing accounts and SIP passwords.
