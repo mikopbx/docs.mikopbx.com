@@ -121,7 +121,7 @@
   * [Мониторинг провайдеров на MikoPBX](faq/setup/monitoring-providers-on-mikopbx.md)
 * [Обслуживание](faq/management/README.md)
   * [Изменить имя для авторизации](faq/management/change-the-login-name.md)
-  * [Закончилось место на доп. диске, увеличение размера диска](faq/management/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
+  * [Увеличение размера диска хранилища MikoPBX](faq/management/the-extra-disk-space-has-run-out-the-disk-size-has-increased.md)
   * [Перенос данных MikoPBX на новый диск](faq/management/move-data-from-storage-to-another-disk.md)
   * [Хранение записей в общей папке windows](faq/management/storing-records-in-a-windows-shared-folder.md)
   * [Резервный интернет и перерегистрация провайдеров](faq/management/backup-internet.md)
