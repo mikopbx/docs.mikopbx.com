@@ -216,7 +216,7 @@
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
   * [Access control management](modules/miko/module-users-u-i.md)
   * [Module auto dialer](modules/miko/module-auto-dialer.md)
-  * [Backup](modules/miko/module-quality-assessment.md)
+  * [Backup](modules/miko/module-backup.md)
   * [Synchronization with LDAP/AD](modules/miko/module-ldap-sync.md)
   * [Phrase Studio (TTS)](modules/miko/module-phrase-studio.md)
   * [Callback module](modules/miko/module-callback-queues.md)

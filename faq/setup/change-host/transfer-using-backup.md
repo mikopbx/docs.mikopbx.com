@@ -6,7 +6,7 @@ description: A method to transfer MikoPBX to another host using backup
 
 This method involves creating a backup of your current MikoPBX configuration, transferring it, and restoring it on the new server. It’s simple to implement and suitable for small systems. This approach is convenient for users with minimal technical experience.
 
-1. First, create a backup of your previous system. You can find detailed instructions in [this article](../../../modules/miko/module-quality-assessment.md).
+1. First, create a backup of your previous system. You can find detailed instructions in [this article](../../../modules/miko/module-backup.md).
 
 <figure><img src="../../../.gitbook/assets/createBackupCopy (2).png" alt=""><figcaption><p>Creating a new backup copy</p></figcaption></figure>
 
