@@ -215,5 +215,5 @@ Fail2Ban не заменяет сложные пароли — даже с вк�
 * [Сетевой экран](../manual/connectivity/firewall.md) — настройка правил доступа.
 * [Защита от взлома (Fail2Ban)](../manual/connectivity/fail2-ban.md).
 * [Сетевые интерфейсы](../manual/connectivity/network.md) — настройка сети, NAT, DNS.
-* [Сетевые маршруты](../manual/connectivity/network.md#ruchnaya-nastroika-setevykh-marshrutov) - ручная настройка маршрутизации.
+* [Статические маршруты](../manual/connectivity/network.md#ruchnaya-nastroika-setevykh-marshrutov) - настройка маршрутов через web-интерфейс.
 * [Сотрудники](../manual/telephony/extensions.md) — управление учётными записями и SIP-паролями.
