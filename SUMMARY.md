@@ -295,3 +295,4 @@
   * [MikoPBX 2024.1](other/changelog/mikopbx-2024.1.md)
   * [MikoPBX 2023.2](other/changelog/mikopbx-2023.2.md)
   * [MikoPBX 2023.1.223](other/changelog/mikopbx-2023.1.223.md)
+  * [MikoPBX 2026.3.40](other/changelog/mikopbx-2026.3.40.md)
