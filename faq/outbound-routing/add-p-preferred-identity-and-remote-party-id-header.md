@@ -23,7 +23,7 @@ exten => _X!,1,Dial(PJSIP/${number}@SIP-${CUT(CONTEXT,-,2)},600,${DOPTIONS}TKU(d
 exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
     same => n,Set(pt1c_is_dst=1) 
     same => n,Set(OUTGOING_CID=32672293042)
-    same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identit)=<sip:${OUTGOING_CID}@127.0.0.1>))
+    same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identity)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,Remote-Party-ID)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,Set(__PT1C_SIP_HEADER=${UNDEFINED}) 
     same => n,Set(CHANNEL(hangup_handler_wipe)=hangup_handler,s,1) 
@@ -37,6 +37,7 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
 
 1. All occurrences of the line "**SIP-1611151795**" should be replaced with the provider ID "you can find" in the browser address bar when editing an account in the MIKOPBX web interface&#x20;
 2. Instead of **"**[**sip:${OUTGOING\_CID}@127.0.0.1**](https://sip:$%7BOUTGOING\_CID%7D@127.0.0.1)**"**, the required header value should be set
+3. Pay attention to the "**-**" symbols in the provider ID if the provider ID has multiple "**-**" symbols the wrong ID will be passed causing the trunk no to be selected
 {% endhint %}
 
 #### When using the "User Groups" module:
