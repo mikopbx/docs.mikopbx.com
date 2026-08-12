@@ -79,7 +79,7 @@
   * [Обновление PBX (In dev)](manual/maintenance/obnovlenie-pbx-in-dev/README.md)
     * [Обновление физического сервера](manual/maintenance/obnovlenie-pbx-in-dev/bare-metal.md)
     * [Обновление виртуальной машины](manual/maintenance/obnovlenie-pbx-in-dev/virtual-machine.md)
-    * [Обновление облачной виртуальной машины](manual/maintenance/obnovlenie-pbx-in-dev/cloud-virtual-machine.md)
+    * [Обновление в облаке](manual/maintenance/obnovlenie-pbx-in-dev/cloud-virtual-machine.md)
     * [Обновление Docker-контейнера](manual/maintenance/obnovlenie-pbx-in-dev/docker.md)
     * [Обновление LXC-контейнера](manual/maintenance/obnovlenie-pbx-in-dev/lxc.md)
 * [Сеть и Firewall](manual/connectivity/README.md)
