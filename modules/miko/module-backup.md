@@ -51,7 +51,7 @@ description: >-
 ## Восстановление из архива <a href="#vosstanovlenie_iz_arxiva" id="vosstanovlenie_iz_arxiva"></a>
 
 {% hint style="info" %}
-Порядок перехода с **Askozia 4, 5 ME** до **MikoPBX** описан в [инструкции](../../manual/maintenance/update/).
+Порядок перехода с **Askozia 4, 5 ME** до **MikoPBX** описан в [инструкции](/broken/pages/4wpZGTIfyePCREgVNs1h).
 {% endhint %}
 
 1. В списке резервных копий выберите нужную и выполните действие "**Восстановить из резервной копии"**
@@ -139,7 +139,7 @@ extension;username;password;mobile-phone;ringtime;enable-forward;authUsername
 * **"`password`"** - **обязательное поле**, пароль для SIP аккаунта
 * **"`mobile-phone`"** - мобильный номер телефона, можно оставить пустым
 * **"`ringtime`**" - как долго звонить на внутренний номер, можно оставить пустым
-* **"`enable-forward`"** - включить адресацию на мобильный после «**`ringtime`**»,  задается числом: "`1`" - Истина, "`0`" - ложь, можно оставить пустым
+* **"`enable-forward`"** - включить адресацию на мобильный после «**`ringtime`**», задается числом: "`1`" - Истина, "`0`" - ложь, можно оставить пустым
 * **"`authUsername`"** - имя для авторизации, для случаев, когда оно не соответствует внутреннему номеру (**username** и **authusername** будут приравнены этому параметру, а не значению внутреннего номера), можно оставить пустым
 
 Пример файла:
@@ -156,7 +156,7 @@ extension;username;password;mobile-phone;ringtime;enable-forward;authUsername
 
 1. Установите в FreePBX модуль [Bulk Handler](https://wiki.freepbx.org/display/FPG/Bulk+Handler)
 2. Перейдите в интерфейс модуля «**Admin**» - «**Bulk Handler**»
-3.  Экспортируйте данные «**Extensions**»&#x20;
+3.  Экспортируйте данные «**Extensions**»
 
     <figure><img src="../../.gitbook/assets/freepbx_bulk-handler-extensions.png" alt=""><figcaption></figcaption></figure>
 4. Откройте в MikoPBX интерфейс модуля резервного копирования
@@ -165,4 +165,3 @@ extension;username;password;mobile-phone;ringtime;enable-forward;authUsername
 7. Дождитесь завершения операции
 
 <br>
-

@@ -4,10 +4,10 @@ description: >-
   новую версию.
 ---
 
-# Обновление системы
+# Обновление PBX&#x20;
 
-{% hint style="danger" %}
-Перед обновлением обязательно сделайте резервную копию настроек АТС. Делается это при помощи [**модуля резервного копирования**](/broken/pages/6CXS3sHS7G3loDJ8vM9C).
+{% hint style="info" %}
+Перед обновлением обязательно сделайте резервную копию настроек АТС. Делается это при помощи [**модуля резервного копирования**](../../../modules/miko/module-backup.md).
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Обновление онлайн из web-интерфейса</strong></td><td>Через web-интерфейс MikoPBX, используя встроенный механизм обновлений</td><td><a href="../../../.gitbook/assets/web_interface_2.png">web_interface_2.png</a></td><td><a href="obnovlenie-iz-web-interfeisa.md">obnovlenie-iz-web-interfeisa.md</a></td></tr><tr><td><strong>Обновление из консоли MikoPBX</strong></td><td>Из консоли MikoPBX командой для загрузки и установки новой версии</td><td><a href="../../../.gitbook/assets/console_1.png">console_1.png</a></td><td><a href="obnovlenie-iz-konsoli-mikopbx.md">obnovlenie-iz-konsoli-mikopbx.md</a></td></tr><tr><td><strong>Обновление Docker</strong></td><td>Путём скачивания последнего образа контейнера MikoPBX и перезапуска с новым образом</td><td><a href="../../../.gitbook/assets/docker_container_1.png">docker_container_1.png</a></td><td><a href="obnovlenie-docker.md">obnovlenie-docker.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h4><strong>Обновление физического сервера</strong></h4></td><td><a href="../../../.gitbook/assets/standalonepc-icon.png">standalonepc-icon.png</a></td><td><a href="bare-metal.md">bare-metal.md</a></td></tr><tr><td><h4><strong>Обновление виртуальной машины</strong></h4></td><td><a href="../../../.gitbook/assets/vm-icon.png">vm-icon.png</a></td><td><a href="virtual-machine.md">virtual-machine.md</a></td></tr><tr><td><h4><strong>Обновление в облаке</strong></h4></td><td><a href="../../../.gitbook/assets/cloud-icon.png">cloud-icon.png</a></td><td><a href="cloud-virtual-machine.md">cloud-virtual-machine.md</a></td></tr><tr><td><h4>Обновление Docker-контейнера</h4></td><td><a href="../../../.gitbook/assets/docker-icon.png">docker-icon.png</a></td><td><a href="docker.md">docker.md</a></td></tr><tr><td><h4>Обновление LXC-контейнера</h4></td><td><a href="../../../.gitbook/assets/lxc-icon.png">lxc-icon.png</a></td><td><a href="lxc.md">lxc.md</a></td></tr></tbody></table>
