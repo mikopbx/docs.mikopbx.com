@@ -88,12 +88,23 @@ description: Обновление MikoPBX, развернутой как вир�
 Если все условия выполняются (например как [в Vultr](../../../setup/cloud/vultr.md)), порядок действий совпадает с обычной виртуальной машиной:
 
 1. Скачайте и подключите ISO-образ нужной версии со страницы [релизов MikoPBX](https://github.com/mikopbx/Core/releases).
+
+<figure><img src="../../../.gitbook/assets/MikoPBXGithubReleases-ISO.png" alt=""><figcaption><p>Загрузка .iso c GitHub MikoPBX</p></figcaption></figure>
+
 2. Запустите машину и откройте её консоль. Дождитесь сообщения о загрузке в режиме восстановления — **System booted in recovery mode (Live CD)**.
+
+<figure><img src="../../../.gitbook/assets/MikoPBX-RecoveryMode3.40.png" alt=""><figcaption><p>Загруженная MikoPBX в Recovery mode</p></figcaption></figure>
+
 3. Нажмите на любую клавишу, чтобы перейти к консольному меню. Далее откройте **"\[4] Install or recover"**.
+
+<figure><img src="../../../.gitbook/assets/MikoPBX-3.40-InstallOrRecover.png" alt=""><figcaption><p>Раздел "Install or recover" в консольном меню MikoPBX</p></figcaption></figure>
+
 4. Выберите "**Update to version...".** В русской локализации пункт называется "**Обновить до версии...".**
 
 {% hint style="danger" %}
-Не выбирайте пункт **Install**. Он запускает новую установку и предупреждает об удалении данных на выбранном диске. Для обновления с сохранением настроек нужен пункт **Update to version ...**.
+Не выбирайте пункт **Install**. Он запускает новую установку и предупреждает об удалении данных на выбранном диске. Для обновления с сохранением настроек нужен пункт **Update to version...**
 {% endhint %}
+
+<figure><img src="../../../.gitbook/assets/MikoPBXConsole-UpdateTo3.40.png" alt=""><figcaption><p>Обновление версии на 2026.3.40</p></figcaption></figure>
 
 5. После завершения отключите ISO и загрузитесь с системного диска.
