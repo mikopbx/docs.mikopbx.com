@@ -32,17 +32,8 @@ Before updating, create two independent recovery points: a backup of the MikoPBX
 
 1. Log in to the MikoPBX web interface.
 2. Open **"Maintenance"** → **"PBX update"**.
-
-<figure><img src="../../../.gitbook/assets/PBXUpdate_Section.png" alt=""><figcaption><p>The "PBX update" section</p></figcaption></figure>
-
 3. Find the version you need in the **"Online updates available"** table. Review the list of changes and start the download.
-
-<figure><img src="../../../.gitbook/assets/updatePBXFromWeb.png" alt=""><figcaption></figcaption></figure>
-
 4. Once the download is complete, enter the phrase **"Yes, I have a backup"**. Click **Update**.
-
-<figure><img src="../../../.gitbook/assets/MikoPBX_UpdateConfirmation.png" alt=""><figcaption><p>Confirmation that a backup exists</p></figcaption></figure>
-
 5. Do not perform Restart or Stop from the cloud panel: MikoPBX will prepare the update and reboot on its own. During the reboot, the connection to the web interface will be interrupted. It is safer to monitor the process via the cloud provider's serial console or web console.
 
 ## Updating with a downloaded IMG file
@@ -55,21 +46,10 @@ Use a local file if the version is not in the list or the cloud VM does not have
 Pay attention to the architecture of your MikoPBX: if you have an ARM MikoPBX, use the update file with "arm64" in its name. If you have an x86 MikoPBX, use the update file with "x86\_64" in its name.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGithubReleases-IMG.png" alt=""><figcaption></figcaption></figure>
-
 2. Verify that the image architecture matches the VM architecture.
 3. Open **Maintenance** → **PBX update**.
-
-<figure><img src="../../../.gitbook/assets/PBXUpdate_Section.png" alt=""><figcaption><p>The "Maintenance" -> "PBX update" section</p></figcaption></figure>
-
 4. Select the downloaded `.img` and click **Apply update**.
-
-<figure><img src="../../../.gitbook/assets/MikoPBX_ApplyUdate.png" alt=""><figcaption><p>Applying the update</p></figcaption></figure>
-
 5. Enter the phrase **"Yes, I have a backup"** and confirm the operation.
-
-<figure><img src="../../../.gitbook/assets/MikoPBX_UpdateConfirmation.png" alt=""><figcaption><p>Confirmation that a backup exists</p></figcaption></figure>
-
 6. Wait for the automatic reboot and the services to start again.
 
 ## Is it possible to update a cloud VM via ISO
@@ -89,7 +69,7 @@ If all the conditions are met (for example, as [with Vultr](../../../setup/cloud
 
 1. Download and attach the ISO image of the required version from the [MikoPBX releases](https://github.com/mikopbx/Core/releases) page.
 2. Start the machine and open its console. Wait for the message about booting in recovery mode — **System booted in recovery mode (Live CD)**.
-3. Press any key to open the console menu. Then open **"[4] Install or recover"**.
+3. Press any key to open the console menu. Then open **"\[4] Install or recover"**.
 4. Select **"Update to version..."**
 
 {% hint style="danger" %}
