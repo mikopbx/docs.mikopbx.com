@@ -32,8 +32,17 @@ Before updating, create two independent recovery points: a backup of the MikoPBX
 
 1. Log in to the MikoPBX web interface.
 2. Open **"Maintenance"** → **"PBX update"**.
+
+<figure><img src="../../../.gitbook/assets/PBXUpdate_Section.png" alt=""><figcaption><p>"PBX update" section</p></figcaption></figure>
+
 3. Find the version you need in the **"Online updates available"** table. Review the list of changes and start the download.
+
+<figure><img src="../../../.gitbook/assets/updatePBXFromWeb.png" alt=""><figcaption><p>Button to update the station from the web interface</p></figcaption></figure>
+
 4. Once the download is complete, enter the phrase **"Yes, I have a backup"**. Click **Update**.
+
+<figure><img src="../../../.gitbook/assets/MikoPBX_UpdateConfirmation.png" alt=""><figcaption><p>Confirmation of backup existence</p></figcaption></figure>
+
 5. Do not perform Restart or Stop from the cloud panel: MikoPBX will prepare the update and reboot on its own. During the reboot, the connection to the web interface will be interrupted. It is safer to monitor the process via the cloud provider's serial console or web console.
 
 ## Updating with a downloaded IMG file
@@ -46,10 +55,21 @@ Use a local file if the version is not in the list or the cloud VM does not have
 Pay attention to the architecture of your MikoPBX: if you have an ARM MikoPBX, use the update file with "arm64" in its name. If you have an x86 MikoPBX, use the update file with "x86\_64" in its name.
 {% endhint %}
 
+<figure><img src="../../../.gitbook/assets/MikoPBXGithubReleases-IMG.png" alt=""><figcaption><p>Downloading .img for update</p></figcaption></figure>
+
 2. Verify that the image architecture matches the VM architecture.
 3. Open **Maintenance** → **PBX update**.
+
+<figure><img src="../../../.gitbook/assets/PBXUpdate_Section.png" alt=""><figcaption><p>"PBX update" section</p></figcaption></figure>
+
 4. Select the downloaded `.img` and click **Apply update**.
+
+<figure><img src="../../../.gitbook/assets/MikoPBXUpdate_ChooseIMG.png" alt=""><figcaption><p>Selecting and applying update file</p></figcaption></figure>
+
 5. Enter the phrase **"Yes, I have a backup"** and confirm the operation.
+
+<figure><img src="../../../.gitbook/assets/MikoPBX_UpdateConfirmation.png" alt=""><figcaption><p>Confirmation of backup existence</p></figcaption></figure>
+
 6. Wait for the automatic reboot and the services to start again.
 
 ## Is it possible to update a cloud VM via ISO
@@ -68,12 +88,27 @@ If the provider does not support ISO, do not try to imitate this method by repla
 If all the conditions are met (for example, as [with Vultr](../../../setup/cloud/vultr.md)), the procedure is the same as for a regular virtual machine:
 
 1. Download and attach the ISO image of the required version from the [MikoPBX releases](https://github.com/mikopbx/Core/releases) page.
-2. Start the machine and open its console. Wait for the message about booting in recovery mode — **System booted in recovery mode (Live CD)**.
+
+{% hint style="info" %}
+Pay attention to the architecture of your MikoPBX: if you have an ARM MikoPBX, use the update file with "arm64" in its name. If you have an x86 MikoPBX, use the update file with "x86\_64" in its name.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/MikoPBXGithubReleases-ISO.png" alt=""><figcaption><p>Downloading .iso for update</p></figcaption></figure>
+
+2. Start the machine and open its console. Wait for the message about booting in recovery mode - **System booted in recovery mode (Live CD)**.
+
+<figure><img src="../../../.gitbook/assets/MikoPBX-RecoveryMode3.40.png" alt=""><figcaption><p>MikoPBX in Recovery Mode</p></figcaption></figure>
+
 3. Press any key to open the console menu. Then open **"\[4] Install or recover"**.
+
+<figure><img src="../../../.gitbook/assets/MikoPBX-3.40-InstallOrRecover.png" alt=""><figcaption><p>"Install or recover" section in the MikoPBX console menu</p></figcaption></figure>
+
 4. Select **"Update to version..."**
 
 {% hint style="danger" %}
 Do not select the **Install** option. It starts a new installation and warns that data on the selected disk will be erased. To update while keeping the settings, use the **Update to version ...** option.
 {% endhint %}
+
+<figure><img src="../../../.gitbook/assets/MikoPBXConsole-UpdateTo3.40.png" alt=""><figcaption><p>Version update to 2026.3.40</p></figcaption></figure>
 
 5. When finished, disconnect the ISO and boot from the system disk.

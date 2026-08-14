@@ -59,7 +59,7 @@ This method is suitable if the required version is not in the list of online upd
 Pay attention to the architecture of your MikoPBX: if you have an ARM MikoPBX, use the update file with "arm64" in its name. If you have an x86 MikoPBX, use the update file with "x86\_64" in its name.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/MikoPBXGithubReleases-IMG.png" alt=""><figcaption><p>Donwloading .img for update</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXGithubReleases-IMG.png" alt=""><figcaption><p>Downloading .img for update</p></figcaption></figure>
 
 2. In the web interface, open **Maintenance** → **PBX update**.
 
