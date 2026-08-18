@@ -224,6 +224,7 @@
   * [Callback module](modules/miko/module-callback-queues.md)
   * [Extended call history](modules/miko/module-extended-cdr.md)
   * [Call Routing Map](modules/miko/module-routing-map.md)
+  * [Beeline Cloud PBX integration](modules/miko/beeline-cloud-pbx-integration.md)
   * [VPN](modules/miko/module-vpn.md)
   * [GeoIP Filtering](modules/miko/module-geo-ip.md)
 
