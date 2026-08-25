@@ -227,6 +227,9 @@
   * [Beeline Cloud PBX integration](modules/miko/beeline-cloud-pbx-integration.md)
   * [VPN](modules/miko/module-vpn.md)
   * [GeoIP Filtering](modules/miko/module-geo-ip.md)
+  * [Local Transcription](modules/miko/module-local-speech-to-text/README.md)
+    * [Quick Start](modules/miko/module-local-speech-to-text/quick-start.md)
+    * [Local STT Worker](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
 
 ## other
 
