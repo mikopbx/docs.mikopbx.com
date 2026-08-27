@@ -52,25 +52,21 @@ If the worker stops renewing its lease, the job returns to the queue.
 
 ### Settings tab
 
-| Setting                                            | Default              | Purpose                                                                                                         |
-| -------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Default language**                               | Detect automatically | Language hint for the recognition engine. In automatic mode, the worker detects the language from the result.  |
-| **Base poll interval, sec.**                       | `30`                 | Interval for scanning new CDR records. Range: `30`–`3600`.                                                      |
+| Setting                                           | Default              | Purpose                                                                                                        |
+| ------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Default language**                              | Detect automatically | Language hint for the recognition engine. In automatic mode, the worker detects the language from the result.  |
+| **Base poll interval, sec.**                      | `30`                 | Interval for scanning new CDR records. Range: `30`–`3600`.                                                     |
 | **Maximum recognizable recording duration, min.** | `60`                 | Recordings with a known duration above this limit are skipped. Range: `1`–`1440`.                              |
-| **CDR per scan**                                   | `50`                 | Number of CDR records checked in one cycle. Range: `1`–`1000`.                                                   |
-| **Job timeout, sec.**                              | `1800`               | Lease lifetime without a successful renewal. Range: `60`–`86400`.                                              |
-| **Recording processing window**                    | `30 days`            | How far back to search for completed calls with recordings: 1, 7, 30, 90, 180, or 365 days, or all recordings. |
-| **Transcript retention**                           | `1 year`             | When transcription results are deleted: after 30, 90, 180, or 365 days, or never.                              |
-| **Recognition terms**                              | Empty                | Company, product, and system names, plus other words used as recognition hints.                                |
+| **CDR per scan**                                  | `50`                 | Number of CDR records checked in one cycle. Range: `1`–`1000`.                                                 |
+| **Job timeout, sec.**                             | `1800`               | Lease lifetime without a successful renewal. Range: `60`–`86400`.                                              |
+| **Recording processing window**                   | `30 days`            | How far back to search for completed calls with recordings: 1, 7, 30, 90, 180, or 365 days, or all recordings. |
+| **Transcript retention**                          | `1 year`             | When transcription results are deleted: after 30, 90, 180, or 365 days, or never.                              |
+| **Recognition terms**                             | Empty                | Company, product, and system names, plus other words used as recognition hints.                                |
 
 The recording processing window cannot exceed the transcript retention period. Retention starts when recognition completes; CDR records and source audio recordings are not deleted.
 
 {% hint style="info" %}
 Changing the recording processing window resets the scan cursor so that the module reviews call history within the new range.
-{% endhint %}
-
-{% hint style="warning" %}
-Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. Select a WhisperKit model before processing calls in another language.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>Module settings</p></figcaption></figure>
@@ -91,16 +87,20 @@ WhisperKit model decoding parameters, normalization, VAD, maximum segment durati
 
 This tab selects the model that the PBX includes in new jobs. The selection applies centrally to all workers and appears in Local STT Worker after its settings synchronize.
 
-| Model                           | When to choose it                       | Characteristics                                                                                  |
-| ------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Parakeet TDT 0.6B v3**        | Most calls                              | Default model. Fast recognition of long-form speech in 25 languages through the Parakeet engine. |
-| **Whisper Large V3 Turbo**      | You want a proven general-purpose model | A good balance of speed and quality for typical multilingual calls through WhisperKit.           |
-| **Whisper Podlodka Turbo**      | Almost all conversations are in Russian | A Whisper model fine-tuned for Russian speech from `smkrv/whisper-podlodka-turbo-coreml`.         |
-| **Whisper Large V3**            | Quality matters more than speed         | The heaviest model in the catalog for difficult or unclear recordings. Runs through WhisperKit.  |
+{% hint style="warning" %}
+Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. Select a WhisperKit model before processing calls in another language.
+{% endhint %}
+
+| Model                      | When to choose it                       | Characteristics                                                                                  |
+| -------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Parakeet TDT 0.6B v3**   | Most calls                              | Default model. Fast recognition of long-form speech in 25 languages through the Parakeet engine. |
+| **Whisper Large V3 Turbo** | You want a proven general-purpose model | A good balance of speed and quality for typical multilingual calls through WhisperKit.           |
+| **Whisper Podlodka Turbo** | Almost all conversations are in Russian | A Whisper model fine-tuned for Russian speech from `smkrv/whisper-podlodka-turbo-coreml`.        |
+| **Whisper Large V3**       | Quality matters more than speed         | The heaviest model in the catalog for difficult or unclear recordings. Runs through WhisperKit.  |
 
 After selecting a model, click **Save model**.
 
-<figure><img src="../../../.gitbook/assets/STTModuleChoosingModel.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/STTNEWModelMarketplace4EN.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
 
 #### Catalog contents
 
@@ -119,7 +119,7 @@ Previously saved custom models do not extend the current catalog. After upgradin
 | **Pending**                    | The job is waiting for an available worker.                             |
 | **Processing**                 | The job is assigned to a worker under an active lease.                  |
 | **Done today**                 | Jobs completed during the current day.                                  |
-| **Errors**                     | Failed jobs that can be returned to the queue.                           |
+| **Errors**                     | Failed jobs that can be returned to the queue.                          |
 | **Waiting for recording file** | A CDR record was found, but the file has not appeared or is unreadable. |
 | **Skipped recordings**         | Recordings that will not be processed unless the conditions change.     |
 

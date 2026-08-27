@@ -42,24 +42,24 @@ A typical processing cycle is as follows:
 
 <figure><img src="../../../.gitbook/assets/MikoPBXModuleMarketplace.png" alt=""><figcaption><p>Module marketplace</p></figcaption></figure>
 
-3. Find **AI Supervisor** and install it.
+3. Find **AI Supervisor** module and install it.
 4. Open the **Installed modules** tab and enable the module.
 
-<mark style="color:green;">NEED A SCREENSHOT</mark>
+<figure><img src="../../../.gitbook/assets/InstalledModulesSection-EnableModule.png" alt=""><figcaption><p>Enabling the AI Supervisor module</p></figcaption></figure>
 
 5. Click the settings button to the right of the module version.
 
-<mark style="color:green;">NEED A SCREENSHOT</mark>
+<figure><img src="../../../.gitbook/assets/AIModuleGoToParams.png" alt=""><figcaption><p>Module settings button</p></figcaption></figure>
 
 ### Module navigation
 
 The current version has three main tabs:
 
-| Tab          | Purpose                                                                                         |
-| ------------ | ----------------------------------------------------------------------------------------------- |
-| **Overview** | Call metrics, AI analysis coverage, the attention queue, and aggregate analytics.               |
-| **Calls**    | Imported calls, filters, the call card, transcript, analysis, and case workflow.                |
-| **Settings** | Workers, import, analysis components, attention rules, catalogs, the queue, and diagnostics.    |
+| Tab          | Purpose                                                                                      |
+| ------------ | -------------------------------------------------------------------------------------------- |
+| **Overview** | Call metrics, AI analysis coverage, the attention queue, and aggregate analytics.            |
+| **Calls**    | Imported calls, filters, the call card, transcript, analysis, and case workflow.             |
+| **Settings** | Workers, import, analysis components, attention rules, catalogs, the queue, and diagnostics. |
 
 ### Overview tab
 
@@ -69,12 +69,12 @@ The **Overview** tab shows call supervision status for the selected period.
 
 Key metrics:
 
-| Metric                     | Meaning                                                                                                             |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Calls with transcripts** | Number of imported calls during the selected period.                                                               |
-| **AI analyzed**            | Number and proportion of calls with a saved analysis result.                                                       |
-| **Avg. call duration**     | Average duration of calls during the selected period.                                                              |
-| **Needs your attention**   | Calls not yet reviewed by an operator that match risk, quality, sentiment, or AI problem-flag rules.               |
+| Metric                     | Meaning                                                                                              |
+| -------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Calls with transcripts** | Number of imported calls during the selected period.                                                 |
+| **AI analyzed**            | Number and proportion of calls with a saved analysis result.                                         |
+| **Avg. call duration**     | Average duration of calls during the selected period.                                                |
+| **Needs your attention**   | Calls not yet reviewed by an operator that match risk, quality, sentiment, or AI problem-flag rules. |
 
 Below the metrics are charts for calls over time, employees, call directions, communication tone, and calls that need review. Selecting a metric or analytics block opens the corresponding list on the **Calls** tab.
 
@@ -88,11 +88,11 @@ You can search, sort, and filter by period, direction, employee, sentiment, qual
 
 Workflow statuses:
 
-| Status          | Purpose                                                                    |
-| --------------- | -------------------------------------------------------------------------- |
-| **New**         | The case has not yet been taken into work.                                 |
-| **In progress** | A supervisor is reviewing the case or waiting for a follow-up action.      |
-| **Processed**   | The review is complete.                                                    |
+| Status          | Purpose                                                               |
+| --------------- | --------------------------------------------------------------------- |
+| **New**         | The case has not yet been taken into work.                            |
+| **In progress** | A supervisor is reviewing the case or waiting for a follow-up action. |
+| **Processed**   | The review is complete.                                               |
 
 You can select multiple rows and use bulk actions to take cases into work, mark them as processed, or return them to New.
 
@@ -119,10 +119,6 @@ The call card combines call details, built-in recording playback, the transcript
 The queue is located under **Settings** → **System** → **Processing**. It shows active, failed, completed, and skipped jobs. You can refresh the data, retry an individual failed job, retry all failures, return expired leases to the queue, or clear the unfinished queue.
 
 The `waiting_for_stt` state means that a job needs a transcript, but neither an available snapshot nor a response from the speech recognition module is available. This waiting state is not an error: the job is not leased to a worker and does not consume attempts.
-
-<mark style="color:red;">Outdated</mark>
-
-<mark style="color:green;">NEED A SCREENSHOT</mark>
 
 ### Settings tab
 
@@ -155,20 +151,20 @@ This section defines the analysis pipeline and the models to be used:
 LLM stands for Large Language Model. It is a machine-learning model that can work with language: read text, understand its meaning in context, and generate coherent responses.
 {% endhint %}
 
-| Component                                      | Purpose                                                         |
-| ---------------------------------------------- | --------------------------------------------------------------- |
-| **Summary (LLM model)**                        | Structured call review, topics, risks, and quality.             |
-| **Voice metrics (Technical analysis)**         | Tempo, pauses, interruptions, silence, and speaker balance.     |
-| **Emotion Analysis (LLM model)**               | Text-based emotion detection for selected fragments.            |
-| **Acoustic analysis (Acoustic model)**         | Asynchronous detection of acoustic features in the recording.   |
+| Component                              | Purpose                                                       |
+| -------------------------------------- | ------------------------------------------------------------- |
+| **Summary (LLM model)**                | Structured call review, topics, risks, and quality.           |
+| **Voice metrics (Technical analysis)** | Tempo, pauses, interruptions, silence, and speaker balance.   |
+| **Emotion Analysis (LLM model)**       | Text-based emotion detection for selected fragments.          |
+| **Acoustic analysis (Acoustic model)** | Asynchronous detection of acoustic features in the recording. |
 
 Current LLM model profiles:
 
-| Profile                    | Model          | Approximate memory | Purpose                                        |
-| -------------------------- | -------------- | ------------------ | ---------------------------------------------- |
-| **Qwen3 8B Instruct Q4**   | `qwen3:8b`     | 6–9 GB             | Recommended balanced profile.                  |
-| **Qwen3.5 4B Q4**          | `qwen3.5:4b`   | 4–6 GB             | Fast, compact profile.                         |
-| **Qwen3.5 9B Q4**          | `qwen3.5:9b`   | 8–12 GB            | Detailed analysis of long and complex calls.   |
+| Profile                  | Model        | Approximate memory | Purpose                                      |
+| ------------------------ | ------------ | ------------------ | -------------------------------------------- |
+| **Qwen3 8B Instruct Q4** | `qwen3:8b`   | 6–9 GB             | Recommended balanced profile.                |
+| **Qwen3.5 4B Q4**        | `qwen3.5:4b` | 4–6 GB             | Fast, compact profile.                       |
+| **Qwen3.5 9B Q4**        | `qwen3.5:9b` | 8–12 GB            | Detailed analysis of long and complex calls. |
 
 Expert parameters include the time the model remains loaded in memory, request timeout, and number of attempts. The selected profile determines the context and chunk sizes.
 
@@ -210,17 +206,17 @@ Base path:
 /pbxcore/api/v3/module-ai-supervisor
 ```
 
-| Method                           | Address                                     | Purpose                                             |
-| -------------------------------- | ------------------------------------------- | --------------------------------------------------- |
-| `GET`, `PATCH`                   | `/settings`                                 | Read and update settings.                           |
-| `GET`                            | `/dashboard`                                | Overview data.                                      |
-| `GET`, `PATCH`                   | `/calls`, `/calls/{id}`                     | Call list, call card, and workflow updates.         |
-| `GET`, `POST`                    | `/call-notes`                               | Read and add notes.                                 |
-| `GET`                            | `/call-workflow-events`                     | Workflow history.                                   |
-| `GET`, `POST`, `PATCH`, `DELETE` | `/jobs`, `/jobs/{id}`                       | Queue and job actions.                              |
-| `GET`, `POST`, `DELETE`          | `/worker-api-keys`, `/worker-api-keys/{id}` | Worker access keys.                                 |
-| `POST`, `GET`                    | `/imports`, `/imports/{id}`                 | Start an import and read its status.                |
-| `GET`                            | `/logs`                                     | Module log.                                         |
+| Method                           | Address                                     | Purpose                                     |
+| -------------------------------- | ------------------------------------------- | ------------------------------------------- |
+| `GET`, `PATCH`                   | `/settings`                                 | Read and update settings.                   |
+| `GET`                            | `/dashboard`                                | Overview data.                              |
+| `GET`, `PATCH`                   | `/calls`, `/calls/{id}`                     | Call list, call card, and workflow updates. |
+| `GET`, `POST`                    | `/call-notes`                               | Read and add notes.                         |
+| `GET`                            | `/call-workflow-events`                     | Workflow history.                           |
+| `GET`, `POST`, `PATCH`, `DELETE` | `/jobs`, `/jobs/{id}`                       | Queue and job actions.                      |
+| `GET`, `POST`, `DELETE`          | `/worker-api-keys`, `/worker-api-keys/{id}` | Worker access keys.                         |
+| `POST`, `GET`                    | `/imports`, `/imports/{id}`                 | Start an import and read its status.        |
+| `GET`                            | `/logs`                                     | Module log.                                 |
 
 Primary worker resources:
 
