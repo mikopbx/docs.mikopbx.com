@@ -7,7 +7,7 @@ description: >-
 
 # Local Transcription
 
-The **Local Speech To Text** module recognizes speech in recorded MikoPBX calls and saves the completed transcript as a conversation. Audio files are not sent to external cloud services: the PBX creates a job queue, while a separate **Local STT Worker** application downloads the assigned recording, recognizes it locally with WhisperKit, and returns the result to MikoPBX.
+The **Local Speech To Text** module recognizes speech in recorded MikoPBX calls and saves the completed transcript as a conversation. Audio files are not sent to external cloud services: the PBX creates a job queue, while a separate **Local STT Worker** application downloads the assigned recording, recognizes it locally with the Parakeet or WhisperKit engine selected in MikoPBX, and returns the result to MikoPBX.
 
 {% hint style="info" %}
 The PBX module runs inside MikoPBX. The separate Local STT Worker application is available for Apple silicon Macs. See [Local STT Worker](miko-ai-worker.md) for a detailed description of the application.
@@ -21,7 +21,7 @@ The PBX module runs inside MikoPBX. The separate Local STT Worker application is
 2. The module's background process finds the recording and creates a job.
 3. Local STT Worker acquires a lease for the job.
 4. The PBX provides the assigned recording file to that worker.
-5. The worker prepares the audio, runs WhisperKit/Core ML, and transcribes the call recording segments.
+5. The worker prepares the audio, starts the engine and Core ML model specified in the job, and produces transcript segments.
 6. The module filters the result, saves the transcript, and publishes an event for integrations.
 
 If the worker stops renewing its lease, the job returns to the queue.
@@ -32,7 +32,7 @@ If the worker stops renewing its lease, the job returns to the queue.
 * macOS **14.0** or later on a Mac with Apple silicon.
 * Call recording enabled for the required routes, queues, or extensions.
 * Network access from the Mac to the MikoPBX web interface.
-* Internet access for the first model download from Hugging Face. After the model has been downloaded, the worker only needs access to the PBX for processing.
+* Internet access for the first download of the selected model and its supporting files. After the model has been downloaded, the worker only needs access to the PBX for processing.
 
 ### Installing the module
 
@@ -54,10 +54,10 @@ If the worker stops renewing its lease, the job returns to the queue.
 
 | Setting                                            | Default              | Purpose                                                                                                         |
 | -------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Default language**                               | Detect automatically | Language hint for WhisperKit. In automatic mode, the worker detects the language from the recognized segments. |
+| **Default language**                               | Detect automatically | Language hint for the recognition engine. In automatic mode, the worker detects the language from the result.  |
 | **Base poll interval, sec.**                       | `30`                 | Interval for scanning new CDR records. Range: `30`–`3600`.                                                      |
 | **Maximum recognizable recording duration, min.** | `60`                 | Recordings with a known duration above this limit are skipped. Range: `1`–`1440`.                              |
-| **CDR per scan**                                   | `200`                | Number of CDR records checked in one cycle. Range: `1`–`1000`.                                                  |
+| **CDR per scan**                                   | `50`                 | Number of CDR records checked in one cycle. Range: `1`–`1000`.                                                   |
 | **Job timeout, sec.**                              | `1800`               | Lease lifetime without a successful renewal. Range: `60`–`86400`.                                              |
 | **Recording processing window**                    | `30 days`            | How far back to search for completed calls with recordings: 1, 7, 30, 90, 180, or 365 days, or all recordings. |
 | **Transcript retention**                           | `1 year`             | When transcription results are deleted: after 30, 90, 180, or 365 days, or never.                              |
@@ -67,6 +67,10 @@ The recording processing window cannot exceed the transcript retention period. R
 
 {% hint style="info" %}
 Changing the recording processing window resets the scan cursor so that the module reviews call history within the new range.
+{% endhint %}
+
+{% hint style="warning" %}
+Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. Select a WhisperKit model before processing calls in another language.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>Module settings</p></figcaption></figure>
@@ -81,31 +85,29 @@ The **Download template** button saves a sample TXT file.
 
 #### Audio processing parameters
 
-The WhisperKit decoding profile, normalization, VAD, maximum segment duration, and overlap are stored centrally in MikoPBX and sent to registered workers. In the current version, the advanced block containing these parameters is hidden, so they cannot be configured through either the module or worker interface.
+WhisperKit model decoding parameters, normalization, VAD, maximum segment duration, and overlap are stored centrally in MikoPBX and sent to registered workers. In the current version, the advanced block containing these parameters is hidden, so they cannot be configured through either the module or worker interface.
 
 ### Model marketplace tab
 
-This tab selects the model that the PBX includes in new jobs.
+This tab selects the model that the PBX includes in new jobs. The selection applies centrally to all workers and appears in Local STT Worker after its settings synchronize.
 
-| Model              | When to choose it                        | Characteristics                                         |
-| ------------------ | ---------------------------------------- | ------------------------------------------------------- |
-| **Base**           | Testing and less powerful Macs           | Fastest, but less accurate with noise and short phrases. |
-| **Small**          | Large queues                             | Fast model with acceptable quality.                     |
-| **Medium**         | Everyday calls                           | A balance between quality and resource usage.           |
-| **Large V3 Turbo** | Production transcription (recommended)   | Recommended balance of quality and speed.               |
-| **Podlodka Turbo** | Conversational Russian speech            | Core ML model `smkrv/whisper-podlodka-turbo-coreml`.    |
-| **Large V3**       | Maximum quality                          | Slowest and most resource-intensive model.              |
+| Model                           | When to choose it                       | Characteristics                                                                                  |
+| ------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Parakeet TDT 0.6B v3**        | Most calls                              | Default model. Fast recognition of long-form speech in 25 languages through the Parakeet engine. |
+| **Whisper Large V3 Turbo**      | You want a proven general-purpose model | A good balance of speed and quality for typical multilingual calls through WhisperKit.           |
+| **Whisper Podlodka Turbo**      | Almost all conversations are in Russian | A Whisper model fine-tuned for Russian speech from `smkrv/whisper-podlodka-turbo-coreml`.         |
+| **Whisper Large V3**            | Quality matters more than speed         | The heaviest model in the catalog for difficult or unclear recordings. Runs through WhisperKit.  |
 
 After selecting a model, click **Save model**.
 
 <figure><img src="../../../.gitbook/assets/STTModuleChoosingModel.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
 
-#### Custom Hugging Face model
+#### Catalog contents
 
-You can add your own WhisperKit/Core ML-compatible model. Specify its `owner/repository`, runtime model name, title, language, license, tags, link, and description.
+The catalog contains only the four reviewed models listed above. Adding arbitrary custom repositories through the interface is no longer supported: the worker accepts only the engine and Core ML artifact combinations provided by the module.
 
 {% hint style="warning" %}
-A standard Hugging Face model without prepared Core ML artifacts is not compatible with Local STT Worker.
+Previously saved custom models do not extend the current catalog. After upgrading, select one of the supported models and save the selection.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/STTModuleAddHuggingFaceModel.png" alt=""><figcaption><p>Adding a Hugging Face model</p></figcaption></figure>
@@ -121,7 +123,7 @@ A standard Hugging Face model without prepared Core ML artifacts is not compatib
 | **Waiting for recording file** | A CDR record was found, but the file has not appeared or is unreadable. |
 | **Skipped recordings**         | Recordings that will not be processed unless the conditions change.     |
 
-Reasons for skipping include exceeding the maximum duration, exceeding the fixed 500 MiB limit, a missing file after the waiting period expires, and a call falling outside the processing window. An unknown or zero CDR duration does not by itself prevent the module from creating a job.
+Reasons for skipping include exceeding the maximum duration, being unable to verify the duration of a recording that appears too long in the CDR, exceeding the fixed 500 MiB limit, a missing file after the waiting period expires, and a call falling outside the processing window. An unknown or zero CDR duration does not by itself prevent the module from creating a job. When the CDR duration exceeds the limit, the module verifies the media file duration with a time-limited `ffprobe` process.
 
 <figure><img src="../../../.gitbook/assets/STTWorkerQueue.png" alt=""><figcaption><p>Queue in the module interface</p></figcaption></figure>
 
@@ -131,7 +133,7 @@ Use this tab to create access keys, view registered Macs, and check their compat
 
 A key is shown only once after it is created. A single key cannot be bound to multiple `worker_uid` values at the same time; create a separate key for each Mac. After deleting a key, register the associated worker again with a new token.
 
-The worker table shows the name, UID, IP address, model, application version, Worker API version, compatibility, status, and last activity. A worker using an unsupported API version appears as incompatible and offline.
+The worker table shows the name, UID, IP address, model selected in MikoPBX, application version, status, and last activity. Worker API version and compatibility are no longer separate columns. An incompatible worker appears offline; the update guide link remains below the table.
 
 The top of the tab includes a download section for the macOS application. Until a build is published there, the download button remains unavailable.
 
@@ -180,9 +182,13 @@ Base path:
 
 `transcripts/events` publishes idempotent `transcript.completed` events. A detailed transcript contains stable `segment_id` values, source segments, merged `turns`, and plain text.
 
+`call-transcripts` combines multiple recordings from one logical call into a versioned transcript. Its part manifest preserves `cdr_start_ms` and `cdr_end_ms`, while segments contain relative and absolute timestamps. Adjacent segments from the same participant and channel are combined into a single turn without losing their source `segment_id` values.
+
 #### Worker API v2
 
 The worker first calls `GET /worker-api-contract`, then sends the `X-MikoPBX-Worker-API-Version: 2` header with every Worker API request.
+
+The `GET /worker-processing-settings` response contains the centralized processing profile and a `selected_model` object with the model identifier, repository, engine, Core ML artifact type, and display name. Jobs also contain `model_engine` and `model_artifact_type`, which the worker uses to choose Parakeet or WhisperKit. Arbitrary engine, model, and artifact combinations are rejected.
 
 | Operation          | Endpoint                          |
 | ------------------ | --------------------------------- |
@@ -194,3 +200,5 @@ The worker first calls `GET /worker-api-contract`, then sends the `X-MikoPBX-Wor
 | Release lease      | `DELETE /job-leases/{job_id}`     |
 | Submit result      | `PUT /job-results/{job_id}`       |
 | Submit failure     | `PUT /job-failures/{job_id}`      |
+
+Legacy Worker API v1 endpoints have been removed. Local STT Worker 1.7 does not fall back to v1 and stops with upgrade guidance when it encounters an incompatible module version.

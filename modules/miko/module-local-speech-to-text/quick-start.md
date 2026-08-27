@@ -33,11 +33,11 @@ description: Quick start for the Local Speech To Text module and Local STT Worke
 ### Selecting a model
 
 1. Open the **Model marketplace** tab.
-2. Select the model for call transcription.
+2. Select the model for call transcription. The default **Parakeet TDT 0.6B v3** is recommended for most calls; use a WhisperKit model for languages outside Parakeet's 25 supported languages.
 3. Click **Save model**.
 
 {% hint style="info" %}
-The model is downloaded to the Mac when the worker receives its first job. The first download requires access to Hugging Face.
+The selected model is downloaded to the Mac when the worker receives its first job. Keep the Mac connected to the internet until the model and its supporting files finish downloading.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/STTModuleChoosingModel.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
@@ -97,7 +97,7 @@ The final step displays the MikoPBX and Speech to Text status and lets you enabl
 
 <figure><img src="../../../.gitbook/assets/UPDSTTOnboardingFinalPage.png" alt=""><figcaption><p>Final Local STT Worker setup step</p></figcaption></figure>
 
-Click **Open Local STT Worker**. On the **Overview** page, click **Start Worker** if the worker is stopped.
+Click **Open Local STT Worker**. On the **Overview** page, click **Start Worker** if the worker is stopped. The readiness panel should display the model selected in MikoPBX.
 
 ### Verifying operation
 
