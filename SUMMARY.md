@@ -230,6 +230,9 @@
   * [Local Transcription](modules/miko/module-local-speech-to-text/README.md)
     * [Quick Start](modules/miko/module-local-speech-to-text/quick-start.md)
     * [Local STT Worker](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
+  * [AI Supervisor Module](modules/miko/module-a-i-supervisor/README.md)
+    * [Quick Start](modules/miko/module-a-i-supervisor/quick-start.md)
+    * [AI Supervisor Worker](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
 
 ## other
 
