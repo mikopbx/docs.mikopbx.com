@@ -13,7 +13,7 @@ You will need:
 * network access from the Mac to the MikoPBX web interface.
 
 {% hint style="info" %}
-AI Supervisor analyzes completed transcripts. If speech recognition has not been configured yet, first follow the [Local Speech To Text quick start](../module-local-speech-to-text/quick-start.md).&#x20;
+AI Supervisor analyzes completed transcripts. If speech recognition has not been configured yet, first follow the [Local Speech To Text quick start](../module-local-speech-to-text/quick-start.md).
 {% endhint %}
 
 ### Installing the module
@@ -26,11 +26,11 @@ AI Supervisor analyzes completed transcripts. If speech recognition has not been
 3. Find **AI Supervisor** and install it.
 4. Open the **Installed modules** tab and enable the module.
 
-<mark style="color:green;">NEED A SCREENSHOT</mark>
+<figure><img src="../../../.gitbook/assets/InstalledModulesSection-EnableModule.png" alt=""><figcaption><p>Enabling the AI Supervisor module</p></figcaption></figure>
 
 5. Click the settings button to the right of the module version.
 
-<mark style="color:green;">NEED A SCREENSHOT</mark>
+<figure><img src="../../../.gitbook/assets/AIModuleGoToParams.png" alt=""><figcaption><p>Module settings button</p></figcaption></figure>
 
 ### Configuring the module
 
