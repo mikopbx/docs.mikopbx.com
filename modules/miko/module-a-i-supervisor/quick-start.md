@@ -13,7 +13,7 @@ description: Инструкция по быстрому началу работ�
 * доступ Mac к веб-интерфейсу MikoPBX.
 
 {% hint style="info" %}
-ИИ Супервайзер анализирует готовые расшифровки. Если распознавание речи ещё не настроено, сначала выполните [быстрый старт модуля локального распознавания речи](../module-local-speech-to-text/quick-start.md).
+ИИ Супервайзер анализирует готовые расшифровки. Если распознавание речи ещё не настроено, сначала выполните [быстрый старт модуля локального распознавания речи](../module-local-speech-to-text/quick-start.md).&#x20;
 {% endhint %}
 
 ### Установка модуля
@@ -79,7 +79,7 @@ description: Инструкция по быстрому началу работ�
 
 Откройте приложение **AI Supervisor Worker**. На первом этапе выберите язык интерфейса и нажмите **Продолжить**. Если приложение предложит перезапуск после смены языка, выполните его.
 
-<figure><img src="../../../.gitbook/assets/AIWorkerOBLanguage.png" alt=""><figcaption><p>Выбор языка приложения</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AIWorkerOBLanguage.png" alt=""><figcaption><p>Экран выбора языка для приложения</p></figcaption></figure>
 
 #### 3. Подключитесь к MikoPBX
 
@@ -91,7 +91,7 @@ description: Инструкция по быстрому началу работ�
 
 Откройте **Расширенные настройки**, только если нужно изменить стабильный UID обработчика, проверку TLS или выбрать собственный PEM-файл CA. Нажмите **Подключить и продолжить** - приложение проверит адрес, ключ и контракт worker API v2.
 
-<figure><img src="../../../.gitbook/assets/AIWorkerOBConnection.png" alt=""><figcaption><p>Подключение к MikoPBX</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AIWorkerOBConnection.png" alt=""><figcaption><p>Страница подключения к MikoPBX</p></figcaption></figure>
 
 #### 4. Подготовьте локальный ИИ
 
@@ -105,9 +105,9 @@ description: Инструкция по быстрому началу работ�
 
 Первая загрузка модели может занять продолжительное время. Не закрывайте приложение и убедитесь, что на Mac достаточно свободного места.
 
-<figure><img src="../../../.gitbook/assets/AIWorkerOBModelPreparation.png" alt=""><figcaption><p>Подготовка локального ИИ</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AIWorkerOBModelPreparation.png" alt=""><figcaption><p>Подготовка локальной LLM окружения</p></figcaption></figure>
 
-#### 5. Завершите настройку
+#### 4. Завершите настройку
 
 На последнем этапе проверьте состояния **MikoPBX**, **Локальная модель** и **AI Worker**.
 
@@ -118,7 +118,7 @@ description: Инструкция по быстрому началу работ�
 
 Нажмите **Открыть AI Supervisor Worker**.
 
-<figure><img src="../../../.gitbook/assets/AIWorkerOBFinal.png" alt=""><figcaption><p>Завершение первичной настройки</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AIWorkerOBFinal.png" alt=""><figcaption><p>Финальный экран первичной настройки</p></figcaption></figure>
 
 ### Проверка результата
 
@@ -126,8 +126,4 @@ description: Инструкция по быстрому началу работ�
 2. В MikoPBX откройте **Настройки** → **Система** → **Обработка** и убедитесь, что задания переходят из ожидания в работу.
 3. После завершения откройте вкладку **Звонки** и выберите обработанный звонок.
 
-<figure><img src="../../../.gitbook/assets/AIWorkerStatus.png" alt=""><figcaption><p>Раздел «Обзор» в интерфейсе приложения</p></figcaption></figure>
-
-{% hint style="info" %}
-Если задание находится в состоянии `waiting_for_stt`, оно ожидает доступную расшифровку или её снимок. Такое ожидание не расходует попытки ИИ-анализа. Проверьте модуль Local Speech To Text и состояние снимков в **Настройки** → **Система** → **Диагностика**.
-{% endhint %}
+<figure><img src="../../../.gitbook/assets/AIWorkerStatus.png" alt=""><figcaption><p>Раздел "Обзор" в интерфейсе приложения</p></figcaption></figure>
