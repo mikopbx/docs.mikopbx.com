@@ -64,7 +64,7 @@
   * [Управление модулями](manual/modules/pbx-extension-modules.md)
   * [Приложения диалпланов](manual/modules/dialplan-applications.md)
 * [Обслуживание](manual/maintenance/README.md)
-  * [Обновление PBX ](manual/maintenance/update/README.md)
+  * [Обновление PBX](manual/maintenance/update/README.md)
     * [Обновление физического сервера](manual/maintenance/update/bare-metal.md)
     * [Обновление виртуальной машины](manual/maintenance/update/virtual-machine.md)
     * [Обновление в облаке](manual/maintenance/update/cloud-virtual-machine.md)
@@ -285,7 +285,7 @@
     * [Local STT Worker](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
   * [Модуль ИИ Супервайзер](modules/miko/module-a-i-supervisor/README.md)
     * [Быстрый старт](modules/miko/module-a-i-supervisor/quick-start.md)
-    * [MIKO AI Worker: ИИ-анализ](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
+    * [AI Supervisor Worker](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
 
 ## Прочее <a href="#other" id="other"></a>
 
