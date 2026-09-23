@@ -1,0 +1,242 @@
+---
+description: Setting Primary Phone Numbers
+---
+
+# Extensions
+
+Extensions in MikoPBX are individual users of the system who are assigned internal numbers for making and receiving calls. They have personal accounts that allow you to configure access rights, call forwarding and other personal settings in the system.
+
+## Extensions List
+
+The "**Extensions**" section displays a list of internal user accounts for **employees**. On the left side of each employee, the status of the authorized device is displayed. If the device is successfully authorized under the respective internal user account, a green circle is shown; otherwise, it appears gray.
+
+<figure><img src="../../.gitbook/assets/2 (27).png" alt=""><figcaption><p>Extensions status</p></figcaption></figure>
+
+In the search bar, you can find the desired contact. You can search by the employee's name, internal number, mobile number, or email address.
+
+<figure><img src="../../.gitbook/assets/3 (4).png" alt=""><figcaption><p>Search for an employee by email</p></figcaption></figure>
+
+The form also provides the ability to sort the list of employees by name, internal number, mobile number, or email address. There are buttons for copying the account password to the clipboard, editing the account, and deleting the account.
+
+<figure><img src="../../.gitbook/assets/4 (10).png" alt=""><figcaption><p>Sorting employees and functions in the main menu</p></figcaption></figure>
+
+## Adding an extension
+
+{% hint style="info" %}
+There are two ways to add employees:
+
+1\) Adding employees one by one by entering data in the Web interface.
+
+2\) Importing multiple employees from a CSV file.
+{% endhint %}
+
+### Adding Employees One by One
+
+To add a new employee, click the "**Add new employee"** button.
+
+<figure><img src="../../.gitbook/assets/AddingExtensions1by1.png" alt=""><figcaption><p>Button "Add new employee"</p></figcaption></figure>
+
+### Importing and Exporting Employees from a CSV File
+
+There is an option to export and import employees for configuration convenience. To do this, click the arrow to the right of the "Add New Employee" button.
+
+3 options are available:
+
+1. Import from CSV — load employees from a CSV file into MikoPBX.
+2. Export to CSV — download employees to a CSV file from MikoPBX (employees will not be deleted from the station).
+3. Download template — download a CSV table template to fill in and subsequently import into MikoPBX.
+
+<figure><img src="../../.gitbook/assets/AddingExtensionsCSVOptions.png" alt=""><figcaption><p>Options for bulk employee import/export</p></figcaption></figure>
+
+#### **Import**
+
+Click "**Select CSV file**" and choose the previously prepared file with data in the table. It is recommended to use templates from the "**Template**" tab.
+
+<figure><img src="../../.gitbook/assets/CSVImportExtensions.png" alt=""><figcaption><p>"Import" section</p></figcaption></figure>
+
+After selecting the file, information about all detected users in the table will be displayed. Select a duplicate handling strategy and click "**Confirm import**" to start the process.
+
+<figure><img src="../../.gitbook/assets/CSVImportExtensionsP2.png" alt=""><figcaption><p>Employee import parameters</p></figcaption></figure>
+
+After the process is complete, you will see the employee creation status as well as a notification about the end of the import.
+
+Click "**Back to list**" to return to the employee list.
+
+<figure><img src="../../.gitbook/assets/successfulImport.png" alt=""><figcaption><p>Successful employee import</p></figcaption></figure>
+
+#### **Export**
+
+There is an option to export a CSV file with all the data of current employees. Several export formats are available:
+
+**Minimal:**
+
+* number — Internal number (required)
+* user\_username — Employee full name (required)
+* user\_email — Email address
+* mobile\_number — Mobile number
+* sip\_secret — SIP password (will be generated if not specified)
+* fwd\_ringlength — Ring time (seconds) before forwarding
+* fwd\_forwarding — Forwarding number if no answer
+
+**Standard:**
+
+* All parameters from Minimal.
+* mobile\_dialstring — Number for dialing mobile
+* sip\_dtmfmode — DTMF mode (auto/rfc4733/info/inband/auto\_info)
+* sip\_transport — Transport (udp/tcp/tls), default udp,tcp
+* sip\_enableRecording — Call recording (true/false)
+* fwd\_forwardingonbusy — Forwarding number if busy
+* fwd\_forwardingonunavailable — Forwarding number if unavailable
+
+**Full:**
+
+* All parameters from Minimal and Standard.
+* user\_avatar — Photo URL
+* sip\_acceptMultipleCalls — Accept multiple calls at the same time (true/false)
+* sip\_manualattributes — Additional SIP parameters
+
+You can also specify a range of internal employee numbers to export (the "**Filter by number range**" section).
+
+Click "**Export employees**". The file will be downloaded to your device.
+
+<figure><img src="../../.gitbook/assets/CSVExporttExtensions.png" alt=""><figcaption><p>"Export" section</p></figcaption></figure>
+
+#### **Template**
+
+On this tab, you can download a blank file template with the specified "columns" to fill in and subsequently import into MikoPBX.
+
+Select the template format (see the "[Export](extensions.md#export)" section for more details), then click "**Download CSV template**".
+
+<figure><img src="../../.gitbook/assets/CSVTemplateExtensions.png" alt=""><figcaption><p>"Template" section</p></figcaption></figure>
+
+## Main Account Settings
+
+<figure><img src="../../.gitbook/assets/6 (10).png" alt=""><figcaption><p>Employee Account Settings Tab</p></figcaption></figure>
+
+On the "Basic Parameters" tab, you can configure the general settings for an employee's internal account:
+
+* **Username**: This value will be used for name substitution and displayed in the corresponding field on the phone screen.
+* **Internal Number**: This is the employee's internal extension number, which is also used as the login when connecting the phone.
+* **Mobile Number**: It is used for additional routing purposes.
+* **Email Address**: It is used for email notifications.
+* **Password for SIP**
+
+{% hint style="warning" %}
+Please set strong passwords for SIP accounts. MikoPBX validates the password length and strength when the account is saved. A secure SIP password should use a non-dictionary combination of uppercase and lowercase letters, digits, and special characters.
+
+* By setting complex passwords, you can enhance the security of the user accounts and protect them from unauthorized access.
+{% endhint %}
+
+## Advanced Account Settings
+
+Accesses the Advanced drop-down list:
+
+<figure><img src="../../.gitbook/assets/extensionsAdvancedSettings.png" alt=""><figcaption><p>Advanced settings option</p></figcaption></figure>
+
+**Redefining the set string**
+
+<figure><img src="../../.gitbook/assets/8 (8).png" alt=""><figcaption></figcaption></figure>
+
+In the "**Redefining the set string**" field, enter the dialing rule for mobile numbers according to your provider's requirements.
+
+#### Call recording
+
+<figure><img src="../../.gitbook/assets/10 (6).png" alt=""><figcaption></figcaption></figure>
+
+If you want employees to have the ability to record conversations, you can enable the **Сall recording** feature.
+
+#### **DTMF Mode**
+
+<figure><img src="../../.gitbook/assets/11 (3).png" alt=""><figcaption></figcaption></figure>
+
+The setting determines how DTMF (Dual Tone Multi-Frequency) signals are transmitted over the SIP protocol. DTMF signals are used, for example, when dialing phone numbers or interacting with IVR systems.
+
+#### Transport protocol
+
+<figure><img src="../../.gitbook/assets/12 (2).png" alt=""><figcaption></figcaption></figure>
+
+This setting allows you to specify the transport protocol used for this account. The transport protocol determines how data is transmitted over the network. The most common transport protocols used in SIP (Session Initiation Protocol) are UDP (User Datagram Protocol), TCP (Transmission Control Protocol), and TLS (Transport Layer Security)
+
+#### Network filter
+
+<figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+
+The subnet described in the "Network Firewall" section specifies the allowed subnet for this account. It determines which IP addresses or networks are permitted to connect to this account. Connections originating from other subnets will result in authentication errors.
+
+#### Manual additional attributes for SIP
+
+<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+
+This field is used to modify/override the configuration files of Asterisk. You can override almost all parameters. For example, when using **chan\_pjsip**, a SIP account for an employee is described by the following sections:
+
+{% code lineNumbers="true" %}
+```
+[***]
+type = aor
+max_contacts = 10
+; ----
+
+[***]
+type = auth
+; ----
+
+[***]
+type = endpoint
+context = all_peers
+; ----
+
+[acl_***] 
+deny = 0.0.0.0/0.0.0.0
+permit = 0.0.0.0/0.0.0.0
+; ----
+```
+{% endcode %}
+
+To override fields in the sections, you should fill in the "Additional Parameters" field as follows:
+
+```
+[acl]
+; Describe access parameters from different subnets [acl_***]
+
+[auth] 
+; Describe authentication parameters for outbound calls
+
+[aor]
+; Edit AOR section for the endpoint
+
+[endpoint] 
+; Edit endpoint parameters
+```
+
+## Routing Settings
+
+<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption><p>"Routing settings" section</p></figcaption></figure>
+
+On this tab, you can set rules for call forwarding when the employee is unavailable, busy, or does not answer.
+
+Set the time **period** in seconds during which the call will be directed to the employee's **internal** account. If the employee cannot answer the call within the specified time, indicate to which number the call should be forwarded. By default, the call will be redirected to the employee's mobile number.
+
+You can also specify the numbers to which the call should be redirected in case of busy and unavailable status.
+
+Feel free to configure these parameters according to your preferences and requirements.
+
+## Connecting softphones
+
+* [<mark style="color:blue;">MicroSIP</mark>](../../faq/softphones/microsip.md)
+* [Groundwire](../../faq/softphones/groundwire.md)
+* [Zoiper](../../faq/softphones/zoiper.md)
+* [<mark style="color:blue;">Jitsi</mark>](../../faq/softphones/jitsi.md)
+* [<mark style="color:blue;">PhonerLite</mark>](../../faq/softphones/phonerlite.md)
+* [<mark style="color:blue;">Linphone(Mac OS)</mark>](../../faq/softphones/linphone-macos.md)
+* [<mark style="color:blue;">Telephone(Mac OS)</mark>](../../faq/softphones/telephone-macos.md)
+* [<mark style="color:blue;">WebRTC tutorial using SIPML5</mark>](../../faq/softphones/configuring-webrtc-client-simpl5.md)
+* <mark style="color:red;">Configuring telegram as SIP softphone</mark>
+* [<mark style="color:blue;">Softphone.pro</mark>](../../faq/softphones/softphone.pro.md)
+* [<mark style="color:blue;">Bria Solo</mark>](../../faq/softphones/bria-solo.md)
+
+## Connecting telephones
+
+* <mark style="color:red;">Yealink T19</mark>
+* <mark style="color:red;">Yealink T21</mark>
+* <mark style="color:red;">Yealink T28</mark>
+* <mark style="color:red;">Snom D120</mark>
