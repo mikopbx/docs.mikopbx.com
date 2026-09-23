@@ -1,0 +1,17 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: MikoPBX WiKi
+  structure:
+    - type: space
+      key: space-1
+      title: Russian
+      path: master
+      default: true
+      content:
+        directory: ./russian
+    - type: space
+      key: space-2
+      title: English
+      path: english
+      content:
+        directory: ./english
