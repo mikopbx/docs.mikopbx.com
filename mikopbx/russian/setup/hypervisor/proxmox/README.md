@@ -1,0 +1,131 @@
+---
+description: Установка MikoPBX с помощью Proxmox.
+---
+
+# Proxmox
+
+{% embed url="https://vkvideo.ru/video-100268702_456239042" %}
+
+### **Загрузка образа MikoPBX**
+
+1. Откройте вкладку local / **ISO images** и выберите **Download from URL**
+2. В поле URL вставьте ссылку на файл из дистрибутива MikoPBX с расширением **.iso**
+3. Нажмите кнопку **Download**, дождитесь окончания загрузки файла
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_1_1.png" alt=""><figcaption></figcaption></figure>
+
+### **Создание виртуальной машины**
+
+1. Выберите **Create VM**
+2. На вкладке General введите имя (Name) виртуальной машины, например _mikopbx-vm_
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_2_1.png" alt=""><figcaption></figcaption></figure>
+
+3. Перейдите к следующей вкладке OS, в поле ISO image выберите загруженный ранее образ
+4. Укажите тип OS (Type) - **Linux**
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_3_1.png" alt=""><figcaption></figcaption></figure>
+
+5. На вкладке System уберите флажок Qemu Agent, для других полей используйте значения по умолчанию
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_4_1.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+Для развертывания АТС используйте **два** диска:
+
+* диск объемом **1 Гб** для основной системы
+* диск объемом **50+ Гб** для хранения записей разговоров
+{% endhint %}
+
+6. Перейдите к вкладке Disks
+7. Скорректируйте размер диска под систему до **1 Гб**
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_5_1.png" alt=""><figcaption></figcaption></figure>
+
+8. Нажмите кнопку **Add** и добавьте дополнительный диск для хранения данных
+9. Укажите размер диска не менее 50 Гб
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_6_1.png" alt=""><figcaption></figcaption></figure>
+
+10. На вкладках CPU и Memory укажите параметры вычислительных ресурсов виртуальной машины, исходя из ожидаемой нагрузки на АТС. Для тестовой машины можно указать в поле Cores (вкладка CPU) - 2, в поле Memory (вкладка Memory) - 2 Гб
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_7_1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_8_1.png" alt=""><figcaption></figcaption></figure>
+
+11. На вкладке Network уберите флажок Firewall
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_9_2.png" alt=""><figcaption></figcaption></figure>
+
+12. Перейдите к последней вкладке Confirm и установите флажок **Start after created**
+13. Завершив ввод значений, нажмите кнопку **Finish**
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_10_1.png" alt=""><figcaption></figcaption></figure>
+
+### **Установка АТС MikoPBX**
+
+1. Перейдите к созданной виртуальной машине _mikopbx-vm_
+2. На открытой вкладке перейдите в раздел Console
+3. Если загрузка прошла успешно, появится консольное меню. Введите с клавиатуры **8** для начала установки
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_11_1.png" alt=""><figcaption></figcaption></figure>
+
+4. Выберите диск под систему и введите с клавиатуры имя диска, например _**sda**_. Подтвердите выбор, введите с клавиатуры _**y**_
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_12_1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_13_1.png" alt=""><figcaption></figcaption></figure>
+
+5. Подключите диск для хранения записей разговоров, ведите с клавиатуры наименование диска для подключения, например _**sdb**_
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_14_1.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+После появления сообщения “**Press any key within 30 seconds to boot from LiveCD…**” не нажимайте никаких кнопок. В этом случае система загрузится с жесткого диска.
+{% endhint %}
+
+### **Запуск АТС MikoPBX**
+
+1. На открытой вкладке в разделе Console скопируйте внешний адрес созданной виртуальной машины и введите его в строке браузера
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_15_1.png" alt=""><figcaption></figcaption></figure>
+
+2. Для входа используйте логин - admin и пароль - admin
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_16.png" alt=""><figcaption></figcaption></figure>
+
+### **Включение QEMU Guest Agent**
+
+QEMU Guest Agent позволяет Proxmox получать от MikoPBX внутренние IP-адреса, корректно завершать работу гостя по команде Shutdown и снимать консистентные бэкапы (fs-freeze). Сам бинарь `qemu-ga` уже включён в дистрибутив MikoPBX и автоматически запускается под управлением `monit` (сервис `vm-tools`) — нужно только включить канал агента на стороне Proxmox.
+
+1. Выберите виртуальную машину MikoPBX, откройте вкладку **Options** и сделайте двойной клик по строке **QEMU Guest Agent**
+2. Установите флажок **Use QEMU Guest Agent** (значение **Enabled**), параметр **Type** оставьте **VirtIO** (по умолчанию), нажмите **OK**
+
+<figure><img src="../../../.gitbook/assets/MikoPBXProxmoxInstallation_QemuAgent_1.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+После включения опции необходимо выполнить **полную остановку и повторный запуск** виртуальной машины (**Stop → Start** в WEB-интерфейсе или из CLI Proxmox: `qm stop <VMID> && qm start <VMID>`).
+
+Обычная перезагрузка (**Reboot**) **не подходит** — устройство `virtio-serial`, через которое работает агент, добавляется в процесс QEMU только при холодном старте. Без рестарта внутри MikoPBX не появится файл `/dev/virtio-ports/org.qemu.guest_agent.0` и агент стартовать не сможет.
+{% endhint %}
+
+### **Проверка работы QEMU Guest Agent**
+
+**На хосте Proxmox** (быстрая проверка «жив/мёртв»):
+
+```bash
+qm agent <VMID> ping                       # должно вернуть пустой ответ без ошибки
+qm agent <VMID> info                       # версия агента и список поддерживаемых команд
+qm guest cmd <VMID> get-host-name          # hostname гостя — подтверждает реальный ответ
+qm agent <VMID> network-get-interfaces     # IP-адреса гостя (видны в WEB-интерфейсе VM)
+```
+
+**Внутри MikoPBX** (по SSH):
+
+```sh
+ls -la /dev/virtio-ports/org.qemu.guest_agent.0   # файл должен существовать
+ps w | grep qemu-ga | grep -v grep                # процесс qemu-ga должен быть запущен
+monit summary | grep vm-tools                     # ожидаемое состояние: Running
+```
+
+Если `monit summary` показывает `vm-tools Initializing`, а файл `/dev/virtio-ports/org.qemu.guest_agent.0` отсутствует — значит со стороны Proxmox virtio-serial-канал ещё не проброшен в VM (опция не включена либо машина не была холодно перезапущена).
