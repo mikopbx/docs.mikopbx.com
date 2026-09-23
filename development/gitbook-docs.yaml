@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: MikoPBX development
+  structure:
+    - type: space
+      key: space-1
+      title: MikoPBX development
+      path: mikopbx-development
+      default: true
+      content:
+        directory: ./english
