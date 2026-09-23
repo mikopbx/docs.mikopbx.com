@@ -13,17 +13,17 @@ Some providers require sending an additional SIP header when initiating an outgo
 3. Add the following text to the end of the file:
 
 ```php
-[SIP-1611151795-outgoing-custom]
-exten => _X!,1,Dial(PJSIP/${number}@SIP-${CUT(CONTEXT,-,2)},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_${CUT(CONTEXT,-,2)}_custom,s,1))
+[SIP-TRUNK-A2DDBADA-outgoing-custom]
+exten => _X!,1,Dial(PJSIP/${number}@${PROVIDER_ID},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_${PROVIDER_ID}_custom,s,1))
     same => n,ExecIf($["${DIALSTATUS}" = "ANSWER"]?Hangup())
     same => n,ExecIf($["${DIALSTATUS}" = "BUSY"]?Busy(2))
     same => n,return
     
-[dial_create_chan_1611151795_custom] 
+[dial_create_chan_SIP-TRUNK-A2DDBADA_custom] 
 exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
     same => n,Set(pt1c_is_dst=1) 
     same => n,Set(OUTGOING_CID=32672293042)
-    same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identit)=<sip:${OUTGOING_CID}@127.0.0.1>))
+    same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identity)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,Remote-Party-ID)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,Set(__PT1C_SIP_HEADER=${UNDEFINED}) 
     same => n,Set(CHANNEL(hangup_handler_wipe)=hangup_handler,s,1) 
@@ -35,15 +35,16 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
 {% hint style="danger" %}
 **Pay attention:**
 
-1. All occurrences of the line "**SIP-1611151795**" should be replaced with the provider ID "you can find" in the browser address bar when editing an account in the MIKOPBX web interface
+1. Replace all occurrences of "**SIP-TRUNK-A2DDBADA**" with your provider ID. You can find it in the browser address bar when editing the provider account in the MikoPBX web interface.
 2. Instead of **"**[**sip:${OUTGOING\_CID}@127.0.0.1**](https://sip:$%7BOUTGOING_CID%7D@127.0.0.1)**"**, the required header value should be set
+3. The provider ID format depends on the MikoPBX version: current versions use `SIP-TRUNK-XXXX`, older ones use `SIP-PROVIDER-XXXX` or `SIP-XXXX`. That is why the example does not extract the provider from the context name but takes it from the `${PROVIDER_ID}` variable, which MikoPBX sets before calling the context. Versions earlier than 2024.1.114 do not set this variable — replace `${PROVIDER_ID}` with your provider ID explicitly.
 {% endhint %}
 
 #### When using the "User Groups" module:
 
 ```php
-[SIP-1611151795-outgoing-ug-custom]
-exten => _X!,1,Dial(PJSIP/${number}@SIP-${CUT(CONTEXT,-,2)},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_custom,s,1))
+[SIP-TRUNK-A2DDBADA-outgoing-ug-custom]
+exten => _X!,1,Dial(PJSIP/${number}@${PROVIDER_ID},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_custom,s,1))
 	same => n,ExecIf($["${DIALSTATUS}" = "ANSWER"]?Hangup())
 	same => n,ExecIf($["${DIALSTATUS}" = "BUSY"]?Busy(2))
     same => n,return
@@ -57,7 +58,7 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
 	same => n,ExecIf($["${GR_VARS}x" != "x"]?Exec(Set(${GR_VARS}))) 
 	same => n,ExecIf($["${GR_PERM_ENABLE}" == "1" && "${GR_ID_${tmpName}}" != "1"]?return) 
 	same => n,ExecIf($["${GR_PERM_ENABLE}" == "1" && "${GR_CID_${tmpName}}x" != "x"]?MSet(GR_OLD_CALLERID=${CALLERID(num)},OUTGOING_CID=${GR_CID_${tmpName}}))
-	same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identit)=<sip:${OUTGOING_CID}@127.0.0.1>))
+	same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identity)=<sip:${OUTGOING_CID}@127.0.0.1>))
 	same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,Remote-Party-ID)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,Set(__PT1C_SIP_HEADER=${UNDEFINED}) 
     same => n,Set(CHANNEL(hangup_handler_wipe)=hangup_handler,s,1) 

@@ -13,17 +13,17 @@
 3. Добавьте в конец файла следующий текст:
 
 ```php
-[SIP-1611151795-outgoing-custom]
-exten => _X!,1,Dial(PJSIP/${number}@SIP-${CUT(CONTEXT,-,2)},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_${CUT(CONTEXT,-,2)}_custom,s,1))
+[SIP-TRUNK-A2DDBADA-outgoing-custom]
+exten => _X!,1,Dial(PJSIP/${number}@${PROVIDER_ID},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_${PROVIDER_ID}_custom,s,1))
     same => n,ExecIf($["${DIALSTATUS}" = "ANSWER"]?Hangup())
     same => n,ExecIf($["${DIALSTATUS}" = "BUSY"]?Busy(2))
     same => n,return
     
-[dial_create_chan_1611151795_custom] 
+[dial_create_chan_SIP-TRUNK-A2DDBADA_custom] 
 exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
     same => n,Set(pt1c_is_dst=1) 
     same => n,Set(OUTGOING_CID=74952293042)
-    same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identit)=<sip:${OUTGOING_CID}@127.0.0.1>))
+    same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identity)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,Remote-Party-ID)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,Set(__PT1C_SIP_HEADER=${UNDEFINED}) 
     same => n,Set(CHANNEL(hangup_handler_wipe)=hangup_handler,s,1) 
@@ -35,15 +35,16 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
 {% hint style="danger" %}
 **Обратите внимание**:
 
-1. Все вхождения строки «**SIP-1611151795**» следует заменить на ID провайдера «**найти**» можно в адресной строке браузера при редактировании учетной записи в web интерфейсе MIKOPBX
+1. Все вхождения строки «**SIP-TRUNK-A2DDBADA**» замените на ID своего провайдера. Его можно найти в адресной строке браузера при редактировании учетной записи провайдера в веб-интерфейсе MikoPBX.
 2. Вместо «**\<sip:${OUTGOING\_CID}@127.0.0.1>**» следует задать требуемое значение заголовков
+3. Формат ID провайдера зависит от версии MikoPBX: в актуальных версиях это `SIP-TRUNK-XXXX`, в старых — `SIP-PROVIDER-XXXX` или `SIP-XXXX`. Поэтому провайдер в примере не вычисляется из имени контекста, а берется из переменной `${PROVIDER_ID}`, которую MikoPBX устанавливает перед вызовом контекста. В версиях до 2024.1.114 этой переменной нет — замените `${PROVIDER_ID}` на ID провайдера явно.
 {% endhint %}
 
 #### При использовании модуля «Группы пользователей»:
 
 ```php
-[SIP-1611151795-outgoing-ug-custom]
-exten => _X!,1,Dial(PJSIP/${number}@SIP-${CUT(CONTEXT,-,2)},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_custom,s,1))
+[SIP-TRUNK-A2DDBADA-outgoing-ug-custom]
+exten => _X!,1,Dial(PJSIP/${number}@${PROVIDER_ID},600,${DOPTIONS}TKU(dial_answer)b(dial_create_chan_custom,s,1))
 	same => n,ExecIf($["${DIALSTATUS}" = "ANSWER"]?Hangup())
 	same => n,ExecIf($["${DIALSTATUS}" = "BUSY"]?Busy(2))
     same => n,return
@@ -57,7 +58,7 @@ exten => s,1,Gosub(lua_${ISTRANSFER}dial_create_chan,${EXTEN},1)
 	same => n,ExecIf($["${GR_VARS}x" != "x"]?Exec(Set(${GR_VARS}))) 
 	same => n,ExecIf($["${GR_PERM_ENABLE}" == "1" && "${GR_ID_${tmpName}}" != "1"]?return) 
 	same => n,ExecIf($["${GR_PERM_ENABLE}" == "1" && "${GR_CID_${tmpName}}x" != "x"]?MSet(GR_OLD_CALLERID=${CALLERID(num)},OUTGOING_CID=${GR_CID_${tmpName}}))
-	same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identit)=<sip:${OUTGOING_CID}@127.0.0.1>))
+	same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,P-Preferred-Identity)=<sip:${OUTGOING_CID}@127.0.0.1>))
 	same => n,ExecIf($["${OUTGOING_CID}x" != "x"]?Set(PJSIP_HEADER(add,Remote-Party-ID)=<sip:${OUTGOING_CID}@127.0.0.1>))
     same => n,Set(__PT1C_SIP_HEADER=${UNDEFINED}) 
     same => n,Set(CHANNEL(hangup_handler_wipe)=hangup_handler,s,1) 
