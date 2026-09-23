@@ -8,7 +8,7 @@ site:
       path: master
       default: true
       content:
-        directory: ./russian
+        directory: null
     - type: space
       key: space-2
       title: English
