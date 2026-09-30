@@ -27,9 +27,7 @@ description: Быстрый запуск модуля локальной тра�
 3. При необходимости добавьте внутренние названия и сокращения в список терминов.
 4. Сохраните настройки.
 
-Записи длиннее 180 минут или больше 500 MiB не обрабатываются; эти ограничения фиксированы.
-
-<figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>УСТАРЕЛО. Страница настроек</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3009STTModuleSettings.png" alt=""><figcaption><p>Страница настроек</p></figcaption></figure>
 
 ### Выбор модели
 
@@ -41,7 +39,7 @@ description: Быстрый запуск модуля локальной тра�
 Выбранная модель загружается на Mac при первом задании. До завершения первой загрузки модели и ее служебных файлов Mac должен иметь доступ в интернет.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleChoosingModel.png" alt=""><figcaption><p>УСТАРЕЛО. Выбор модели распознавания</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3009STTModels.png" alt=""><figcaption><p>Выбор модели распознавания</p></figcaption></figure>
 
 ### Загрузка Worker и создание ключа
 
@@ -54,7 +52,7 @@ description: Быстрый запуск модуля локальной тра�
 Для каждого Mac рекомендуется создавать отдельный ключ. Один ключ нельзя привязать к нескольким UID обработчиков.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleCreatingANewWorkerKey.png" alt=""><figcaption><p>УСТАРЕЛО. Вкладка обработчиков</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3009STTModuleWorkers-QS.png" alt=""><figcaption><p>Вкладка обработчиков</p></figcaption></figure>
 
 ### Подключение Local STT Worker
 
