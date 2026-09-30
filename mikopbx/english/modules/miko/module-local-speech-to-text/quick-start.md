@@ -39,7 +39,7 @@ description: Quick start for the Local Speech To Text module and Local STT Worke
 The selected model is downloaded to the Mac when the worker receives its first job. Keep the Mac connected to the internet until the model and its supporting files finish downloading.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleChoosingModel.png" alt=""><figcaption><p>OUTDATED. Selecting a recognition model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/0110STTModels.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
 
 ### Downloading the worker and creating an API key
 
@@ -52,7 +52,7 @@ The selected model is downloaded to the Mac when the worker receives its first j
 Create a separate key for each Mac. One key cannot be bound to multiple worker UIDs.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleCreatingANewWorkerKey.png" alt=""><figcaption><p>OUTDATED. Creating a Worker API key</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/0110STTModuleWorkers-QS-2.png" alt=""><figcaption><p>Creating a Worker API key</p></figcaption></figure>
 
 ### Connecting Local STT Worker
 

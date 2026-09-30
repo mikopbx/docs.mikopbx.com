@@ -13,7 +13,7 @@ The **Local Speech To Text** module recognizes speech in recorded MikoPBX calls 
 The PBX module runs inside MikoPBX. The separate Local STT Worker application is available for Apple silicon Macs. See [Local STT Worker](miko-ai-worker.md) for a detailed description of the application.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleTranscriptCard.png" alt=""><figcaption><p>OUTDATED. Example transcription result</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/0110STTModuleTranscript.png" alt=""><figcaption><p>Example of transcription result</p></figcaption></figure>
 
 ### How processing works
 
@@ -52,12 +52,12 @@ If the worker stops renewing its lease, the job returns to the queue. Each job g
 
 ### Settings tab
 
-| Setting                         | Default              | Purpose                                                                                                                  |
-| ------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Default language**            | Auto - detect automatically | Language hint for the recognition engine. In automatic mode, the call language is detected during recognition.           |
-| **Recording processing window** | `30 days`            | How far back to search for completed calls with recordings: 1, 7, 30, or 90 days, 6 months, 1 year, or all recordings.   |
-| **Transcript retention**        | `1 year`             | When transcription results are deleted: after 30, 90, or 180 days, 1 year, or unlimited.                                 |
-| **Recognition terms**           | Empty                | Company, product, and system names, plus other words used as recognition hints.                                          |
+| Setting                         | Default                     | Purpose                                                                                                                |
+| ------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Default language**            | Auto - detect automatically | Language hint for the recognition engine. In automatic mode, the call language is detected during recognition.         |
+| **Recording processing window** | `30 days`                   | How far back to search for completed calls with recordings: 1, 7, 30, or 90 days, 6 months, 1 year, or all recordings. |
+| **Transcript retention**        | `1 year`                    | When transcription results are deleted: after 30, 90, or 180 days, 1 year, or unlimited.                               |
+| **Recognition terms**           | Empty                       | Company, product, and system names, plus other words used as recognition hints.                                        |
 
 The recording processing window cannot exceed the transcript retention period: on a conflict, the module shows a warning and does not let you save the settings. Retention starts when recognition completes; CDR records and source audio recordings are not deleted.
 
@@ -67,7 +67,7 @@ The list of languages depends on the model selected on the **Model marketplace**
 Changing the recording processing window resets the scan cursor so that the module reviews call history within the new range.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>OUTDATED. Module settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/0110STTModuleSettings.png" alt=""><figcaption><p>Module settings</p></figcaption></figure>
 
 ### Model marketplace tab
 
@@ -103,7 +103,7 @@ The **Processing state** block shows the number of recordings in each status and
 
 The **Retry failed recordings** button returns all jobs in the **Errors** status to the queue.
 
-<figure><img src="../../../.gitbook/assets/STTWorkerQueue.png" alt=""><figcaption><p>OUTDATED. Queue in the module interface</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/STTWorkerQueue.png" alt=""><figcaption><p>Queue in the module interface</p></figcaption></figure>
 
 ### Workers tab
 
@@ -123,25 +123,27 @@ A single key cannot be bound to multiple `worker_uid` values at the same time; c
 
 The worker table shows the name, UID, IP address, model selected in MikoPBX, application version, status, and last activity. An incompatible worker appears offline. Until the first worker is registered, a three-step **How to connect a worker** hint is displayed above the table.
 
-<figure><img src="../../../.gitbook/assets/STTModuleCreatingANewWorkerKey.png" alt=""><figcaption><p>OUTDATED. Workers tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/0110STTModuleWorkers-QS.png" alt=""><figcaption><p>Workers tab</p></figcaption></figure>
 
 ### Transcripts tab
 
 You can filter the list by call date range and search the transcript text. Clicking a row opens the conversation.
 
-<figure><img src="../../../.gitbook/assets/STTModuleTranscripts.png" alt=""><figcaption><p>OUTDATED. Transcript list</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/0110STTModuleTransripts.png" alt=""><figcaption><p>Transcript list</p></figcaption></figure>
 
-#### Conversation view
+#### Transcript card
 
 Clicking a turn or the timeline moves the player to the corresponding point in the recording.
 
 The actions menu offers **Download TXT**, **Download JSON**, and **Delete transcript**. Deletion requires confirmation: the transcript and related module data are removed, while the MikoPBX CDR record and the source call recording are kept.
 
-<figure><img src="../../../.gitbook/assets/STTModuleTranscriptCard.png" alt=""><figcaption><p>OUTDATED. Transcript conversation view</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/0110STTModuleTranscript.png" alt=""><figcaption><p>Transcript conversation view</p></figcaption></figure>
 
 ### Transcript in call history
 
 The module adds a **Show transcript** button to the MikoPBX **Call Detail Records** section for calls with a completed transcript.
+
+<figure><img src="../../../.gitbook/assets/0110TranscriptInCDR.png" alt=""><figcaption><p>Button to open the transcript from the CDR log</p></figcaption></figure>
 
 ### Logging tab
 
@@ -151,11 +153,11 @@ The log contains structured technical events from the module and workers, withou
 
 When the user access management module (ModuleUsersUI) is used, separate permissions are available for Local Speech To Text:
 
-| Permission                                       | What it opens                                                                          |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| **View transcripts and call recordings**         | The **Transcripts** tab, conversation view, export, and the transcript in call history. |
-| **Delete transcripts**                           | The **Delete transcript** action in the conversation view.                                          |
-| **Manage module settings**                       | The **Settings** and **Model marketplace** tabs.                                       |
-| **Connect workers and manage the queue and logs** | The **Queue**, **Workers**, and **Logging** tabs.                                      |
+| Permission                                        | What it opens                                                                           |
+| ------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **View transcripts and call recordings**          | The **Transcripts** tab, conversation view, export, and the transcript in call history. |
+| **Delete transcripts**                            | The **Delete transcript** action in the conversation view.                              |
+| **Manage module settings**                        | The **Settings** and **Model marketplace** tabs.                                        |
+| **Connect workers and manage the queue and logs** | The **Queue**, **Workers**, and **Logging** tabs.                                       |
 
 Tabs the user has no permission for are not displayed. These permissions do not grant access to the module's REST API.
