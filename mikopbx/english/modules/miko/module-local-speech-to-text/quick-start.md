@@ -22,13 +22,14 @@ description: Quick start for the Local Speech To Text module and Local STT Worke
 
 ### Initial module setup
 
-1. On the **Settings** tab, select the main language used in calls or leave **Detect automatically** selected.
-2. Check **Maximum recognizable recording duration, min.** The default is 60 minutes.
-3. Select the **Recording processing window** and **Transcript retention**. The processing window cannot exceed the retention period.
-4. If necessary, add internal names and abbreviations under **Recognition terms**.
-5. Save the settings.
+1. On the **Settings** tab, select the main language used in calls or leave **Auto - detect automatically** selected.
+2. Select the **Recording processing window** and **Transcript retention**. The processing window cannot exceed the retention period.
+3. If necessary, add internal names and abbreviations under **Recognition terms**.
+4. Save the settings.
 
-<figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>Module settings</p></figcaption></figure>
+Recordings longer than 180 minutes or larger than 500 MiB are not processed; these limits are fixed.
+
+<figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>OUTDATED. Module settings</p></figcaption></figure>
 
 ### Selecting a model
 
@@ -40,19 +41,20 @@ description: Quick start for the Local Speech To Text module and Local STT Worke
 The selected model is downloaded to the Mac when the worker receives its first job. Keep the Mac connected to the internet until the model and its supporting files finish downloading.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleChoosingModel.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/STTModuleChoosingModel.png" alt=""><figcaption><p>OUTDATED. Selecting a recognition model</p></figcaption></figure>
 
-### Creating a Worker API key
+### Downloading the worker and creating an API key
 
-1. Open the **Workers** tab.
-2. Click **Create API key**.
-3. Copy the displayed token immediately. It cannot be viewed again after the page is refreshed.
+1. Open the **Workers** tab. Use HTTPS for the web interface: over HTTP, the created key is not displayed.
+2. Click **Download for macOS** to download Local STT Worker.
+3. Click **Create API key**.
+4. Copy the displayed token immediately. It cannot be viewed again after the page is refreshed.
 
 {% hint style="info" %}
 Create a separate key for each Mac. One key cannot be bound to multiple worker UIDs.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/STTModuleCreatingANewWorkerKey.png" alt=""><figcaption><p>Creating a Worker API key</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/STTModuleCreatingANewWorkerKey.png" alt=""><figcaption><p>OUTDATED. Creating a Worker API key</p></figcaption></figure>
 
 ### Connecting Local STT Worker
 
@@ -105,7 +107,7 @@ Click **Open Local STT Worker**. On the **Overview** page, click **Start Worker*
 2. Wait for a job to appear on the module's **Queue** tab.
 3. On first use, wait for the model to download to the Mac.
 4. Check local processing stages under **Overview**, or review events under **Diagnostics**.
-5. Open the completed result on the **Transcripts** tab in MikoPBX.
+5. Open the completed result on the **Transcripts** tab in MikoPBX, or click **Show transcript** in the call history.
 
 <figure><img src="../../../.gitbook/assets/STTWorkerTranscribationProcess.png" alt=""><figcaption><p>Call processing on the worker Overview page</p></figcaption></figure>
 

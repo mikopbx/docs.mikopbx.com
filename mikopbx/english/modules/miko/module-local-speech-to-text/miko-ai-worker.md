@@ -180,5 +180,5 @@ For Parakeet, the worker verifies the expected model and repository, downloads c
 
 | Location             | Settings                                                                                                                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **MikoPBX / module** | Processing window, retention period, maximum recording duration, engine and model, job language, recognition terms, processing profile, queue, keys, transcripts, and module log. |
+| **MikoPBX / module** | Processing window, retention period, engine and model, job language, recognition terms, processing profile, queue, keys, transcripts, and module log. |
 | **Local STT Worker** | Connection settings, Mac UID and name, worker startup and recovery, local model cache, temporary folder, TLS/CA, local history, and diagnostics.                                  |
