@@ -6,7 +6,7 @@ description: >-
 
 # Local STT Worker
 
-**Local STT Worker** is an application that locally recognizes MikoPBX call recordings. It downloads one assigned job, prepares the audio with the bundled `ffmpeg` and `ffprobe`, runs the Parakeet or WhisperKit engine selected in MikoPBX with a Core ML model, and sends timestamped segments and technical diagnostics back to the PBX.
+**Local STT Worker** is an application that locally recognizes MikoPBX call recordings. It downloads one assigned job, prepares the audio, runs the engine selected in MikoPBX, and sends timestamped segments and technical diagnostics back to the PBX.
 
 <figure><img src="../../../.gitbook/assets/STTWorkerTranscribationProcess.png" alt=""><figcaption><p>Overview page in Local STT Worker</p></figcaption></figure>
 
@@ -17,18 +17,6 @@ description: >-
 * MikoPBX 2025.1.1 or later.
 * Network access to the PBX.
 * Internet access for the first download of the selected model and its supporting files.
-
-The worker uses WhisperKit or FluidAudio for recognition, depending on the model in the job. `ffmpeg` and `ffprobe` are included in the worker build and do not need to be installed separately.
-
-### Engines and models
-
-Models are selected only in MikoPBX. Each job provides the engine, model, repository, and artifact type identifiers. The worker validates their compatibility and starts the corresponding engine automatically.
-
-* **Parakeet TDT 0.6B v3** runs through FluidAudio and is the default model. It is intended for long-form speech and supports 25 European languages, including Russian and Ukrainian.
-* **Whisper Large V3 Turbo**, **Whisper Podlodka Turbo**, and **Whisper Large V3** run through WhisperKit.
-* Arbitrary custom models are not supported. The worker accepts only models in the current MikoPBX catalog.
-
-Recognition terms are passed to both engines. WhisperKit uses them as context, while Parakeet compiles them into a local decoder bias.
 
 ### First launch
 

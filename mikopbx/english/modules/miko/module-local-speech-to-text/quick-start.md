@@ -27,8 +27,6 @@ description: Quick start for the Local Speech To Text module and Local STT Worke
 3. If necessary, add internal names and abbreviations under **Recognition terms**.
 4. Save the settings.
 
-Recordings longer than 180 minutes or larger than 500 MiB are not processed; these limits are fixed.
-
 <figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>OUTDATED. Module settings</p></figcaption></figure>
 
 ### Selecting a model
@@ -76,8 +74,6 @@ Complete these fields:
 | **Worker name**      | A recognizable Mac name that will be displayed in MikoPBX.                    |
 | **STT worker token** | The key created on the **Workers** tab.                                       |
 
-The token is stored in macOS Keychain and is never written to logs.
-
 <figure><img src="../../../.gitbook/assets/UPDSTTOndoardConnection.png" alt=""><figcaption><p>Configuring the MikoPBX connection</p></figcaption></figure>
 
 Expand **Advanced settings** to configure:
@@ -92,14 +88,14 @@ Click **Connect and continue**. The application checks the connection and valida
 
 #### Step 3. Ready to use
 
-The final step displays the MikoPBX and Speech to Text status and lets you enable two options:
+The final step displays the worker status. You can also enable two options here:
 
 * **Launch at login** — open Local STT Worker automatically when you sign in to macOS.
-* **Keep worker running** — resume the worker automatically after the network connection is restored or the Mac wakes from sleep.
+* **Keep worker running** — resume the worker automatically after the network connection is restored, the Mac wakes from sleep, or a temporary error occurs.
 
 <figure><img src="../../../.gitbook/assets/UPDSTTOnboardingFinalPage.png" alt=""><figcaption><p>Final Local STT Worker setup step</p></figcaption></figure>
 
-Click **Open Local STT Worker**. On the **Overview** page, click **Start Worker** if the worker is stopped. The readiness panel should display the model selected in MikoPBX.
+In the application, open **Overview**. If the worker is stopped, click **Start Worker**. The readiness panel should display the model selected in MikoPBX.
 
 ### Verifying operation
 

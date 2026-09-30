@@ -69,35 +69,12 @@ Changing the recording processing window resets the scan cursor so that the modu
 
 <figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>OUTDATED. Module settings</p></figcaption></figure>
 
-#### Fixed limits
-
-The poll interval, batch size, job timeout, and maximum recording duration are no longer configurable in the interface. The module uses fixed values:
-
-| Parameter                          | Value       |
-| ---------------------------------- | ----------- |
-| Maximum recording duration         | 180 minutes |
-| Maximum recording file size        | 500 MiB     |
-| Interval for finding new recordings | 15 seconds  |
-| CDR records per scan               | 30          |
-| Lease lifetime without renewal     | 600 seconds |
-| Processing attempts per job        | 3           |
-
-#### Recognition terms
-
-Enter terms in the text field, separated by commas, semicolons, or new lines. The module removes duplicates and sends the worker up to 100 terms, each no longer than 120 characters.
-
-<figure><img src="../../../.gitbook/assets/STTTerminology.png" alt=""><figcaption><p>OUTDATED. Recognition terms</p></figcaption></figure>
-
-#### Audio processing parameters
-
-WhisperKit model decoding parameters, normalization, VAD, maximum segment duration, and overlap are stored centrally in MikoPBX and sent to registered workers. In the current version, the advanced block containing these parameters is hidden, so they cannot be configured through either the module or worker interface.
-
 ### Model marketplace tab
 
 This tab selects the model that the PBX includes in new jobs. The selection applies centrally to all workers and appears in Local STT Worker after its settings synchronize.
 
 {% hint style="warning" %}
-Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. Select a WhisperKit model before processing calls in another language.
+Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. For another language, select a WhisperKit model or change the model before processing such calls.
 {% endhint %}
 
 | Model                      | When to choose it                       | Characteristics                                                                                  |
@@ -109,19 +86,7 @@ Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, Engli
 
 After selecting a model, click **Save model**.
 
-If the language selected on the **Settings** tab is not supported by the chosen model, a warning appears above the table. In that case, select **Auto - detect automatically** or a compatible language.
-
 <figure><img src="../../../.gitbook/assets/STTNEWModelMarketplace4EN.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
-
-#### Catalog contents
-
-The catalog contains only the four reviewed models listed above. Adding arbitrary custom repositories through the interface is not supported: the worker accepts only the engine and Core ML artifact combinations provided by the module.
-
-{% hint style="warning" %}
-Previously saved custom models do not extend the current catalog. After upgrading, select one of the supported models and save the selection.
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/STTModuleAddHuggingFaceModel.png" alt=""><figcaption><p>OUTDATED. Adding a Hugging Face model (feature removed)</p></figcaption></figure>
 
 ### Queue tab
 
@@ -138,10 +103,6 @@ The **Processing state** block shows the number of recordings in each status and
 
 The **Retry failed recordings** button returns all jobs in the **Errors** status to the queue.
 
-Below it, the **File queue** table lists active recordings: recording date, status with details, source, call ID, worker, number of attempts, and creation and update times.
-
-Reasons for skipping include exceeding the maximum duration (180 minutes), exceeding the fixed 500 MiB limit, a missing file after the waiting period expires, and a call falling outside the processing window. An unknown or zero CDR duration does not by itself prevent the module from creating a job. When the CDR duration exceeds the limit, the module verifies the media file duration with a time-limited `ffprobe` process; if the duration cannot be determined, the check is repeated later.
-
 <figure><img src="../../../.gitbook/assets/STTWorkerQueue.png" alt=""><figcaption><p>OUTDATED. Queue in the module interface</p></figcaption></figure>
 
 ### Workers tab
@@ -150,17 +111,13 @@ Use this tab to download the macOS application, create access keys, and view reg
 
 #### Worker application
 
-The **Download for macOS** button at the top of the tab downloads Local STT Worker for Apple silicon Macs from `releases.mikopbx.com`. The download is available with an active license; if the release is unavailable for the license or the licensing server does not respond, the module shows a corresponding message.
+The **Download for macOS** button at the top of the tab downloads Local STT Worker for Apple silicon Macs from `releases.mikopbx.com`.
 
 #### Worker API keys
 
-The **Create API key** button generates a new key. It is shown only once after it is created, so copy it immediately. The key table shows the shortened key, creation date, last use time, and number of bound workers; a key can be deleted with the button at the end of its row.
+The **Create API key** button generates a new key. It is shown only once after it is created, so copy it immediately.
 
-A single key cannot be bound to multiple `worker_uid` values at the same time; create a separate key for each Mac. After deleting a key, register the associated worker again with a new token.
-
-{% hint style="warning" %}
-If the web interface is opened over HTTP, the tab shows an **Insecure connection** warning and the key is not displayed after creation. Use HTTPS to create keys.
-{% endhint %}
+A single key cannot be bound to multiple `worker_uid` values at the same time; create a separate key for each Mac.
 
 #### Registered workers
 
@@ -170,35 +127,25 @@ The worker table shows the name, UID, IP address, model selected in MikoPBX, app
 
 ### Transcripts tab
 
-You can filter the list by call date range and search the transcript text. The table shows the call direction, call date, client, employees, duration, and update time. For transferred calls, the employees column shows the chain of participants. Clicking a row opens the conversation.
+You can filter the list by call date range and search the transcript text. Clicking a row opens the conversation.
 
 <figure><img src="../../../.gitbook/assets/STTModuleTranscripts.png" alt=""><figcaption><p>OUTDATED. Transcript list</p></figcaption></figure>
 
 #### Conversation view
 
-The conversation view includes:
-
-* recording details;
-* a player with `0.5x`, `1x`, and `2x` speed options and recording download;
-* a timeline with a separate lane for each participant;
-* timestamped turns with pause markers;
-* search across turns and a filter by participant.
-
 Clicking a turn or the timeline moves the player to the corresponding point in the recording.
 
-The actions menu offers **Download TXT**, **Download JSON**, and **Delete transcript**. Deletion requires confirmation: the transcript and related module data are removed, while the MikoPBX CDR record and the source call recording are kept. A transcript cannot be deleted while that call is still being processed.
-
-If the call included a consultative transfer, the view is split into the **Customer conversation** and **Internal consultation** tabs.
+The actions menu offers **Download TXT**, **Download JSON**, and **Delete transcript**. Deletion requires confirmation: the transcript and related module data are removed, while the MikoPBX CDR record and the source call recording are kept.
 
 <figure><img src="../../../.gitbook/assets/STTModuleTranscriptCard.png" alt=""><figcaption><p>OUTDATED. Transcript conversation view</p></figcaption></figure>
 
 ### Transcript in call history
 
-The module adds a **Show transcript** button to the MikoPBX **Call Detail Records** section for calls with a completed transcript. The transcript opens in the **Call transcript** window without leaving the call history page.
+The module adds a **Show transcript** button to the MikoPBX **Call Detail Records** section for calls with a completed transcript.
 
 ### Logging tab
 
-The log contains structured technical events from the module and workers, without transcripts, audio recordings, or secrets. Available periods are `1h`, `3h`, `12h`, `1d`, and the entire log. You can filter by level and component, perform a full-text search, and refresh the list. The interface displays no more than the latest 1,000 matching events.
+The log contains structured technical events from the module and workers, without transcripts, audio recordings, or secrets.
 
 ### Access rights
 
@@ -212,75 +159,3 @@ When the user access management module (ModuleUsersUI) is used, separate permiss
 | **Connect workers and manage the queue and logs** | The **Queue**, **Workers**, and **Logging** tabs.                                      |
 
 Tabs the user has no permission for are not displayed. These permissions do not grant access to the module's REST API.
-
-### Updating the module and worker
-
-The module and Local STT Worker communicate through Worker API v2. When upgrading from older versions, update the components in this order:
-
-1. Update ModuleLocalSpeechToText to the current version.
-2. Workers using Worker API v1 become incompatible and offline; their active leases return to the queue without increasing the attempt count.
-3. Update Local STT Worker to version 1.7 or later.
-4. Open **Diagnostics** or **Settings** in the worker and run the connection check again.
-
-The queue, completed results, settings, worker UIDs, and existing API keys are preserved. A MikoPBX Core version newer than 2025.1.1 is not required.
-
-### REST API
-
-Base path:
-
-```
-/pbxcore/api/v3/module-local-speech-to-text
-```
-
-Requests are authorized with a Bearer token.
-
-#### Transcripts for integrations
-
-* `GET /transcripts?limit=50&offset=0&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD&search={text}`
-* `GET /transcripts/{result_id}`
-* `GET /call-transcripts/{call_transcript_id}?revision={revision}`
-* `GET /call-transcripts/events?cursor=created_at:event_id&limit=100&include_deleted=false`
-
-`transcripts` returns recognition results for individual recordings. The `limit` parameter accepts values from 1 to 200, and `search` is a query against the transcript text. A detailed transcript contains stable `segment_id` values, source segments, merged `turns`, and plain text.
-
-`call-transcripts` combines multiple recordings from one logical call into a versioned transcript. Its part manifest preserves `cdr_start_ms` and `cdr_end_ms`, while segments contain relative and absolute timestamps. Adjacent segments from the same participant and channel are combined into a single turn without losing their source `segment_id` values. The response includes `source_instance_id`, a permanent identifier of the module's data set, and `contract_version`.
-
-`call-transcripts/events` publishes idempotent `call-transcript.completed` and `call-transcript.updated` events. To read from the beginning, use the cursor `0:0`; store `next_cursor` only after all returned events have been processed successfully. With `include_deleted=true`, the stream also returns `call-transcript.deleted` events with the `deleted_at` and `deletion_reason` fields: `manual` for manual deletion, `retention` for an expired retention period.
-
-#### Administration
-
-| Operation                             | Endpoint                            |
-| ------------------------------------- | ----------------------------------- |
-| List jobs                             | `GET /jobs`                         |
-| Get a job                             | `GET /jobs/{job_id}`                |
-| Create a job for a recording file     | `POST /jobs`                        |
-| Retry or reset a failed job           | `PATCH /jobs/{job_id}`              |
-| Retry or reset several jobs           | `PATCH /jobs`                       |
-| Delete a job                          | `DELETE /jobs/{job_id}`             |
-| Bulk delete by status                 | `DELETE /jobs`                      |
-| List workers                          | `GET /workers`                      |
-| Get a worker                          | `GET /workers/{worker_id}`          |
-| Update a worker                       | `PUT`, `PATCH /workers/{worker_id}` |
-| Delete a worker                       | `DELETE /workers/{worker_id}`       |
-
-The `retry` action keeps the attempt counter, while `reset` clears it; only failed jobs can be changed. Only a pending or failed job without saved results can be deleted. A worker can be deleted only when it has no active lease; job and result history is preserved. Worker credentials do not grant access to job management.
-
-#### Worker API v2
-
-The worker first calls `GET /worker-api-contract`, then sends the `X-MikoPBX-Worker-API-Version: 2` header with every Worker API request. A request without a matching version is rejected with code `426` and the `worker_upgrade_required` error.
-
-The `GET /worker-processing-settings` response contains the centralized processing profile and a `selected_model` object with the model identifier, repository, engine, Core ML artifact type, and display name. Jobs also contain `model_engine` and `model_artifact_type`, which the worker uses to choose Parakeet or WhisperKit. Arbitrary engine, model, and artifact combinations are rejected.
-
-| Operation                 | Endpoint                          |
-| ------------------------- | --------------------------------- |
-| Registration              | `POST /workers`                   |
-| Processing profile        | `GET /worker-processing-settings` |
-| Worker update license     | `GET /worker-update-license`      |
-| Acquire lease             | `POST /job-leases`                |
-| Download recording        | `GET /job-recordings/{job_id}`    |
-| Renew lease               | `PATCH /job-leases/{job_id}`      |
-| Release lease             | `DELETE /job-leases/{job_id}`     |
-| Submit result             | `PUT /job-results/{job_id}`       |
-| Submit failure            | `PUT /job-failures/{job_id}`      |
-
-Legacy Worker API v1 endpoints have been removed. Local STT Worker 1.7 does not fall back to v1 and stops with upgrade guidance when it encounters an incompatible module version.
