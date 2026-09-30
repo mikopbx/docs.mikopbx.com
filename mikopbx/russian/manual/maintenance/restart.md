@@ -8,7 +8,7 @@ description: Описание возможностей раздела
 
 Меню выключения/перезагрузки системы вы можете найти в MikoPBX в "**Перезагрузка**" -> "**Обслуживание**".
 
-<figure><img src="../../.gitbook/assets/1 (17).png" alt=""><figcaption><p>Раздел "<strong>Обслуживание</strong>" -> "<strong>Перезагрузка</strong>"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (17) (1).png" alt=""><figcaption><p>Раздел "<strong>Обслуживание</strong>" -> "<strong>Перезагрузка</strong>"</p></figcaption></figure>
 
 При открытии страницы будет отображен список активных звонков на АТС. Отображается дата начала звонка, «**Кто**» и «**Кому**» звонит.
 

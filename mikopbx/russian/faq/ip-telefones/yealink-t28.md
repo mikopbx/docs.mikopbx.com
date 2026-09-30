@@ -39,7 +39,7 @@ Username: admin
 Login: admin
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Окно авторизации</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28) (1).png" alt=""><figcaption><p>Окно авторизации</p></figcaption></figure>
 
 4. Далее выполните настройку SIP-аккаунта в Вашем телефоне:
 
@@ -49,11 +49,11 @@ Login: admin
 
 Нажмите "**Сохранить**"
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Параметры аккаунта</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29) (1).png" alt=""><figcaption><p>Параметры аккаунта</p></figcaption></figure>
 
 5. На вкладке **Расширенные** установите **Caller ID Source**, чтобы при переадресации отображался **корректный callerid**. В этой настройке мы указываем телефону, из каких SIP заголовков брать callerid и в каком приоритете.
 
-<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Параметр "Caller ID Source"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30) (1).png" alt=""><figcaption><p>Параметр "Caller ID Source"</p></figcaption></figure>
 
 6. У Yealink SIP-T28 есть особенность - это кнопки «расширения», дополнительный набор кнопок со световой индикацией **BLF**. BLF кнопки показывают статус сотрудников и при нажатии на данную кнопку сработает **безконсультативная переадресация**. На рисунке ниже представлен пример настройки отслеживания статуса для 317 номера.
 

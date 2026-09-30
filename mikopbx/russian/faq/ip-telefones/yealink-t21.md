@@ -50,11 +50,11 @@ Login: admin
 
 Нажмите "Сохранить"
 
-<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Параметры учетной записи в web-интерфейсе телефона</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34) (1).png" alt=""><figcaption><p>Параметры учетной записи в web-интерфейсе телефона</p></figcaption></figure>
 
 В разделе «**Функции**» настройте параметр в «**Интерком**» -> "**Приоритет интеркома**":
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Настройка параметров</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35) (1).png" alt=""><figcaption><p>Настройка параметров</p></figcaption></figure>
 
 После успешного подключения телефона, в интерфейсе MikoPBX индикатор состояния подключения загорится <mark style="color:green;">зелёным</mark>:
 

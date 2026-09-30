@@ -21,7 +21,7 @@
 
 Звонки во внешний мир (в город) через обоих провайдеров реализуются по **одинаковому исходящему правилу**: это десятизначный номер, начинающийся с 7. Схематично задачу можно изобразить следующим образом:
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Схема поставленной задачи</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24) (1).png" alt=""><figcaption><p>Схема поставленной задачи</p></figcaption></figure>
 
 ## Решение <a href="#reshenie" id="reshenie"></a>
 
@@ -32,7 +32,7 @@
 
 Схематично это можно изобразить следующим образом:<br>
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Схема решения задачи</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25) (1).png" alt=""><figcaption><p>Схема решения задачи</p></figcaption></figure>
 
 Реализовать эту задачу можно двумя способами в MikoPBX:
 

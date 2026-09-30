@@ -26,7 +26,7 @@
 1. Откройте демо sipml5 в браузере: перейдите по ссылке "[Enjoy our live demo](https://www.doubango.org/sipml5/call.htm?svn=252)".
 2. Заполните основные поля:
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
 
 | Поле                 | Значение                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
