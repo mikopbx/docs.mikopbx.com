@@ -1,5 +1,5 @@
 ---
-description: Quick start guide for the AI Supervisor module
+description: Quick start for the Local AI Supervisor module and AI Supervisor Worker
 ---
 
 # Quick Start
@@ -8,122 +8,127 @@ description: Quick start guide for the AI Supervisor module
 
 You will need:
 
-* MikoPBX 2025.1.1 or later;
-* a Mac with Apple silicon and macOS 14 or later;
+* MikoPBX **2025.1.1** or later;
+* an installed and configured transcription module: **Local Transcription** 1.102+ or **Cloud Speech-to-Text** 1.75+;
+* an Apple silicon Mac with macOS 14 or later;
 * network access from the Mac to the MikoPBX web interface.
 
 {% hint style="info" %}
-AI Supervisor analyzes completed transcripts. If speech recognition has not been configured yet, first follow the [Local Speech To Text quick start](../module-local-speech-to-text/quick-start.md).
+Local AI Supervisor analyzes completed transcripts. If transcription has not been configured yet, first follow the [Local Transcription quick start](../module-local-speech-to-text/quick-start.md) or set up the [Cloud Speech-to-Text module](../module-cloud-speech-to-text/).
 {% endhint %}
 
 ### Installing the module
 
 1. Open the MikoPBX web interface.
-2. Go to **Modules** → **Module marketplace**.
+2. Go to **Modules** → **Module Marketplace**.
 
-<figure><img src="../../../.gitbook/assets/MikoPBXModuleMarketplace.png" alt=""><figcaption><p>Module marketplace</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/MikoPBXModuleMarketplace.png" alt=""><figcaption><p>The "Module Marketplace" section</p></figcaption></figure>
 
-3. Find **AI Supervisor** and install it.
-4. Open the **Installed modules** tab and enable the module.
-
-<figure><img src="../../../.gitbook/assets/InstalledModulesSection-EnableModule.png" alt=""><figcaption><p>Enabling the AI Supervisor module</p></figcaption></figure>
-
+3. Find the **Local AI Supervisor** module and install it.
+4. Open the list of installed modules and enable the module.
 5. Click the settings button to the right of the module version.
 
-<figure><img src="../../../.gitbook/assets/AIModuleGoToParams.png" alt=""><figcaption><p>Module settings button</p></figcaption></figure>
+SCREENSHOT: The "Installed modules" section - enabling "Local AI Supervisor" and the button that opens its settings
 
-### Configuring the module
+### Step 1. Select the transcript source
 
-#### 1. Create a worker key
+The setup wizard starts when you open the module for the first time.
 
-Open **Settings** → **Workers**. Click **Generate API key**.
+1. Select the transcription module that will provide transcripts. The source must be in the **Ready** state.
+2. Choose from which moment calls are analyzed: **From now**, **Last day**, **Last 7 days**, or **Last 30 days**.
+3. Click **Next**.
 
-Copy the displayed value. The complete key is shown only once. After you close the window, only safe information about the key remains in the list.
+{% hint style="info" %}
+The longer the period, the more calls end up in the queue after the start. For a first look at the module, **Last day** is a convenient choice: results appear quickly, and you can review them right away.
+{% endhint %}
 
-<figure><img src="../../../.gitbook/assets/QSAIModule-CreatingAKey.png" alt=""><figcaption><p>Creating a worker key</p></figcaption></figure>
+SCREENSHOT: Setup wizard - step 1 "Transcript source"
 
-#### 2. Select the analysis components and model
+### Step 2. Download the application and create a key
 
-Open **Settings** → **AI analysis**.
+1. Click **Download worker** and install AI Supervisor Worker from the downloaded `.dmg` on the Mac.
+2. Click **Generate API key** and copy the key right away: it is shown only once.
 
-Select the analysis pipeline components that suit your needs:
+Keep the wizard open - once the application connects, the wizard shows the worker status.
 
-* **Summary** — a structured call review covering topics, risks, and quality. This is the module's core component and is produced by the selected LLM.
-* **Voice metrics** — tempo, pauses, interruptions, silence, and speaker balance. This component analyzes the technical aspects of a call.
-* **Emotion Analysis** — text-based emotion detection for conversation fragments.
-* **Acoustic analysis** — detection of acoustic features in the recording with an acoustic model. It helps confirm or challenge the results of voice metrics and LLM-based emotion analysis.
+SCREENSHOT: Setup wizard - step 2 "Local worker": downloading the application and creating a key
 
-Also select a model profile. See [AI analysis](./#ai-analysis) for more information.
+### Setting up AI Supervisor Worker
 
-<figure><img src="../../../.gitbook/assets/AISupervisorAIAnalysis.png" alt=""><figcaption><p>Selecting analysis components</p></figcaption></figure>
-
-#### 3. Enable the call flow
-
-Open **Settings** → **Call flow** and check that:
-
-* **Automatically analyze new transcripts** is enabled;
-* **Automatic import** is enabled;
-* the required AI result language is selected;
-* **Process internal calls** is enabled if required;
-* an appropriate data retention period is selected.
-
-<figure><img src="../../../.gitbook/assets/AISupervisorAIFlow.png" alt=""><figcaption><p>Call flow settings</p></figcaption></figure>
-
-### Configuring AI Supervisor Worker
-
-#### 1. Install the application
-
-Open **Workers**, click **Download worker**, and install the downloaded DMG.
-
-#### 2. Select the language
+#### 1. Select the language
 
 Open **AI Supervisor Worker**. On the first screen, select the interface language and click **Continue**. Restart the application if it prompts you to do so after the language change.
 
 <figure><img src="../../../.gitbook/assets/AIWorkerOBLanguage.png" alt=""><figcaption><p>Application language selection</p></figcaption></figure>
 
-#### 3. Connect to MikoPBX
+#### 2. Connect to MikoPBX
 
 On the connection screen, enter:
 
 * the MikoPBX address in `https://...` or `http://...` format;
 * a friendly name for this Mac;
-* the AI Supervisor worker key created earlier in the module.
+* the access key created in the module setup wizard.
 
-Open **Advanced settings** only if you need to change the stable Worker UID, TLS verification, or select a custom PEM CA file. Click **Connect and continue**. The application verifies the address, key, and worker API v2 contract.
+Open **Advanced settings** only if you need to change the worker UID, disable TLS verification, or select a custom PEM CA file. Click **Connect and continue** - the application verifies the address and the key.
 
 <figure><img src="../../../.gitbook/assets/AIWorkerOBConnection.png" alt=""><figcaption><p>Connecting to MikoPBX</p></figcaption></figure>
 
-#### 4. Prepare local AI
+#### 3. Prepare local AI
 
-On the **Prepare local analysis** screen, the application checks in sequence:
+On the **Prepare local analysis** screen, the application checks:
 
 1. the local Ollama runtime;
 2. the model selected in MikoPBX;
 3. worker readiness.
 
-If Ollama is not installed, click **Install Ollama**. After installation, click **Prepare and start**. The application downloads the selected model, registers this Mac, and starts the worker.
+If Ollama is not installed, click **Install Ollama**. Then click **Prepare and start**: the application downloads the model, registers the Mac in MikoPBX and starts the worker.
 
+{% hint style="warning" %}
 The first model download may take a long time. Do not close the application, and make sure the Mac has enough free disk space.
+{% endhint %}
 
-<figure><img src="../../../.gitbook/assets/AIWorkerOBModelPreparation.png" alt=""><figcaption><p>Preparing the local LLM runtime</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AIWorkerOBModelPreparation.png" alt=""><figcaption><p>Preparing the local model</p></figcaption></figure>
 
-#### 5. Finish setup
+#### 4. Finish the application setup
 
-On the final screen, check the **MikoPBX**, **Local model**, and **AI Worker** states.
+On the final screen, check the **MikoPBX**, **Local model** and **AI Worker** states.
 
 If necessary, enable:
 
-* **Launch at login** — the application opens automatically when you sign in to macOS.
-* **Keep worker running** — the worker automatically resumes after the network or PBX connection is restored, or after the Mac wakes from sleep.
+* **Launch at login** - the application opens automatically when you sign in to macOS;
+* **Keep worker running** - the worker resumes on its own after the network is restored or the Mac wakes from sleep.
 
 Click **Open AI Supervisor Worker**.
 
-<figure><img src="../../../.gitbook/assets/AIWorkerOBFinal.png" alt=""><figcaption><p>Final onboarding screen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AIWorkerOBFinal.png" alt=""><figcaption><p>Final onboarding screen of the application</p></figcaption></figure>
+
+### Step 3. Finish the wizard in MikoPBX
+
+Return to the MikoPBX web interface. When the application connects, the worker status in the wizard changes to **Connected and online**. Click **Finish setup**.
+
+The wizard shows **Analysis is running**: calls start being imported and analyzed. Click **Go to overview**.
+
+SCREENSHOT: Setup wizard - the final "Analysis is running" screen
+
+{% hint style="info" %}
+If the Mac is not ready yet, you can click **Skip, I will connect it later** on step 2. Call import starts right away, and analysis starts once the application is connected. In this case, the access key is created in **Settings** → **Workers**.
+{% endhint %}
 
 ### Verifying the result
 
-1. In AI Supervisor Worker, open **Overview**. The status should show that the worker is ready for the next job.
-2. In MikoPBX, open **Settings** → **System** → **Processing** and make sure jobs move from waiting to in progress.
-3. When processing finishes, open the **Calls** tab and select the processed call.
+1. In AI Supervisor Worker, open **Overview**: the status should show that the worker is ready for new jobs.
 
 <figure><img src="../../../.gitbook/assets/AIWorkerStatus.png" alt=""><figcaption><p>Overview in AI Supervisor Worker</p></figcaption></figure>
+
+2. In MikoPBX, open **Settings** → **System** → **Processing** and make sure jobs move from **Pending** to **In progress** and **Done**.
+3. Open the **Calls** tab and select a processed call to see the analysis result.
+
+SCREENSHOT: The "Calls" tab - the first analyzed call
+
+### What to configure next
+
+* **Settings** → **Call flow** - enable internal call processing, choose the AI result language and the data retention period.
+* **Settings** → **AI analysis** - enable additional analysis components and, if needed, select the higher-quality model.
+* **Settings** → **Scripts** - define conversation requirements for employees.
+
+All sections are described in detail in [Local AI Supervisor](./).

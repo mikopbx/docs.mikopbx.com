@@ -231,7 +231,7 @@
     * [Quick Start](modules/miko/module-local-speech-to-text/quick-start.md)
     * [Local STT Worker](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
     * [REST API](modules/miko/module-local-speech-to-text/rest-api.md)
-  * [AI Supervisor Module](modules/miko/module-a-i-supervisor/README.md)
+  * [Local AI Supervisor](modules/miko/module-a-i-supervisor/README.md)
     * [Quick Start](modules/miko/module-a-i-supervisor/quick-start.md)
     * [AI Supervisor Worker](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
   * [Cloud Speech-to-Text](modules/miko/module-cloud-speech-to-text/README.md)

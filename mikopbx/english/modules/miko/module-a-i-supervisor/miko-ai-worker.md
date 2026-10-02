@@ -6,7 +6,7 @@ description: >-
 
 # AI Supervisor Worker
 
-**AI Supervisor Worker** is a standalone macOS application that performs local AI analysis of completed MikoPBX transcripts. The application receives jobs from the **AI Supervisor** module, uses a local language model, processes the call recording, and sends a structured result back to the PBX.
+**AI Supervisor Worker** is a standalone macOS application that performs local AI analysis of completed MikoPBX transcripts. The application receives jobs from the **[Local AI Supervisor](./)** module, uses a local language model, processes the call recording, and sends a structured result back to the PBX.
 
 The application does not select which calls to analyze and does not store the server-side queue. Transcript import, analysis components, model profile, result language, attention rules, and saved results are managed by the module in MikoPBX.
 
@@ -17,6 +17,7 @@ The application does not select which calls to analyze and does not store the se
 * A Mac with Apple silicon.
 * macOS 14 or later.
 * MikoPBX 2025.1.1 or later.
+* Application version 1.78 or later - for call quality scoring.
 * Network access from the Mac to MikoPBX.
 * A local Ollama runtime or an OpenAI-compatible local endpoint.
 * Internet access for the initial runtime and model installation.
@@ -139,7 +140,7 @@ Required fields:
 | Field               | Description                                                   |
 | ------------------- | ------------------------------------------------------------- |
 | **MikoPBX Address** | Full address beginning with `http://` or `https://`.          |
-| **Worker token**    | Key created under AI Supervisor → **Settings** → **Workers**. |
+| **Worker token**    | Key created in the module → **Settings** → **Workers**.        |
 | **Worker name**     | A friendly name for this Mac in MikoPBX.                      |
 | **Worker UID**      | A stable technical identifier.                                |
 
