@@ -287,6 +287,8 @@
   * [Локальный ИИ Супервайзер](modules/miko/module-a-i-supervisor/README.md)
     * [Быстрый старт](modules/miko/module-a-i-supervisor/quick-start.md)
     * [AI Supervisor Worker](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
+    * [Правила оценки качества звонка](modules/miko/module-a-i-supervisor/pravila-ocenki-kachestva-zvonka.md)
+    * [REST API](modules/miko/module-a-i-supervisor/rest-api.md)
   * [Облачная транскрибация](modules/miko/module-cloud-speech-to-text/README.md)
     * [REST API](modules/miko/module-cloud-speech-to-text/rest-api.md)
 
