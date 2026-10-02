@@ -22,7 +22,7 @@ Conference recordings are available from call history again: links that could pr
 
 When downloading a recording, the interface shows download progress, speed, and estimated time remaining. This is especially useful for long conversations and slow connections.
 
-<figure><img src="../../.gitbook/assets/2026.4.47AudioDownloadStatus.png" alt="Call recording download progress"><figcaption><p>Call recording download progress</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2026.4.47AudioDownloadStatus (1).png" alt="Call recording download progress"><figcaption><p>Call recording download progress</p></figcaption></figure>
 
 Stereo recordings now include information identifying which participant each audio track belongs to. This helps transcription systems and CRMs distinguish the employee's speech from the customer's in both incoming and outgoing calls.
 
@@ -42,7 +42,7 @@ After an enabled module is installed or updated, its changes take effect without
 
 Long-running module operations are more reliable. The installation indicator shows the current stage and no longer disappears immediately after an operation starts or freezes because of an interface error.
 
-<figure><img src="../../.gitbook/assets/2026.4.47ModuleUpdateStatus.png" alt="Module update progress"><figcaption><p>Module update in progress</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2026.4.47ModuleUpdateStatus (1).png" alt="Module update progress"><figcaption><p>Module update in progress</p></figcaption></figure>
 
 The system log now shows who started installing, removing, enabling, or disabling a module. During a bulk update, this information is retained for each module.
 
