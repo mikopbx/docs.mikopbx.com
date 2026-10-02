@@ -14,7 +14,7 @@ The module is fully autonomous: no separate worker application is required. If a
 Submitting a recording for recognition is a paid action: the cost is deducted from your MIKO license balance. You can check prices and top up your balance at [lm.miko.ru](https://lm.miko.ru).
 {% endhint %}
 
-SCREENSHOT: Example of a call transcript created by the Cloud Speech-to-Text module.
+<figure><img src="../../../.gitbook/assets/CloudSTTTranscriptCard.png" alt=""><figcaption><p>Example of a call transcript created by the Cloud Speech-to-Text module</p></figcaption></figure>
 
 ### Requirements and compatibility
 
@@ -26,15 +26,15 @@ SCREENSHOT: Example of a call transcript created by the Cloud Speech-to-Text mod
 
 1. Open the MikoPBX web interface. Go to **Modules** → **Module Marketplace**.
 
-SCREENSHOT: The Module Marketplace section in MikoPBX.
+<figure><img src="../../../.gitbook/assets/MikoPBXModuleMarketplace.png" alt=""><figcaption><p>MikoPBX Module Marketplace section</p></figcaption></figure>
 
-2. Find the **Cloud Speech-to-Text** module and install it.
+2. Find the **Cloud Transcription** module and install it.
 
-SCREENSHOT: The Cloud Speech-to-Text module in the Marketplace.
+<figure><img src="../../../.gitbook/assets/CloudSTTMarketplace.png" alt=""><figcaption><p>The Cloud Transcription module in the Marketplace</p></figcaption></figure>
 
 3. Open the list of installed modules and enable the module. Click the settings button to the right of the module version.
 
-SCREENSHOT: Enabling the module and opening its page from the installed modules list.
+<figure><img src="../../../.gitbook/assets/ClouddSTTModuleInstalled.png" alt=""><figcaption><p>Enabling the module and opening its page from the installed modules list.</p></figcaption></figure>
 
 ### First launch
 
@@ -60,13 +60,13 @@ This tab opens by default and shows the module status:
 * the **Successfully transcribed in the last 7 days** chart, showing minutes of recognized audio by day;
 * the **Recent jobs** list with statuses and a link to the queue.
 
-SCREENSHOT: The module's main screen, showing the Overview tab.
+<figure><img src="../../../.gitbook/assets/CloudSTTOverview.png" alt=""><figcaption><p>The module's main screen, showing the Overview tab.</p></figcaption></figure>
 
 ### Transcripts tab
 
 This tab contains recognition results stored locally. You can filter the list by call period using the calendar or **Today**, and search by number, employee, or transcript text. The table shows the date, direction, counterparty, employee, status (complete or partial), duration, and update time.
 
-SCREENSHOT: The Transcripts tab in the Cloud Speech-to-Text module.
+<figure><img src="../../../.gitbook/assets/CloudSTTTranscripts.png" alt=""><figcaption><p>The Transcripts tab in the Cloud Speech-to-Text module</p></figcaption></figure>
 
 Click a transcript to open its card. It contains:
 
@@ -78,28 +78,28 @@ Click a transcript to open its card. It contains:
 
 Clicking a turn moves the player to the corresponding point in the recording.
 
-SCREENSHOT: A transcript card with conversation turns and the recording player.
+<figure><img src="../../../.gitbook/assets/CloudSTTTranscriptCard.png" alt=""><figcaption><p>A transcript card with conversation turns and the recording player.</p></figcaption></figure>
 
 ### Queue tab
 
 This tab manages the local job queue. It provides a status filter, a period filter (1 day or all time), search by number or direction, and pagination.
 
-| Filter group | Job states |
-| ------------ | ---------- |
-| **Waiting** | Discovered, Waiting for recording, Ready to submit, Waiting for safe submission |
-| **Processing** | Submitting, Accepted by service, Recognizing |
+| Filter group        | Job states                                                                                                     |
+| ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Waiting**         | Discovered, Waiting for recording, Ready to submit, Waiting for safe submission                                |
+| **Processing**      | Submitting, Accepted by service, Recognizing                                                                   |
 | **Needs attention** | Submission outcome unknown, Local failure, Service failure, Invalid result, Processing stalled, Result expired |
-| **Completed** | Completed, Result discarded after deletion, Cancelled |
+| **Completed**       | Completed, Result discarded after deletion, Cancelled                                                          |
 
 Technical information is available for each job: job ID, run number (generation), processing stage, error code, HTTP status and network error type, CDR ID, audio size, and audio format.
 
-| Action | Availability and behavior |
-| ------ | ------------------------- |
-| **Cancel job** | Available only before audio upload begins. No confirmation is required. |
-| **Retry job** | Requires explicit confirmation of a paid action. Creates a new job generation and may cause another charge. The module does not retry jobs automatically. |
-| **Open transcript** | Opens the completed transcript on the Transcripts tab. |
+| Action              | Availability and behavior                                                                                                                                 |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cancel job**      | Available only before audio upload begins. No confirmation is required.                                                                                   |
+| **Retry job**       | Requires explicit confirmation of a paid action. Creates a new job generation and may cause another charge. The module does not retry jobs automatically. |
+| **Open transcript** | Opens the completed transcript on the Transcripts tab.                                                                                                    |
 
-SCREENSHOT: The Queue tab in the Cloud Speech-to-Text module.
+<figure><img src="../../../.gitbook/assets/CloudSTTQueue.png" alt=""><figcaption><p>The Queue tab in the Cloud Speech-to-Text module</p></figcaption></figure>
 
 ### Settings tab
 
@@ -113,7 +113,7 @@ This tab configures call recognition settings: which calls to recognize and whic
 
 Rules include or exclude numbers from processing. Each rule specifies the direction (either direction, incoming, or outgoing), match type (exact number or prefix), number, and action (include or exclude).
 
-SCREENSHOT: The Number rules settings section.
+<figure><img src="../../../.gitbook/assets/CloudSTTNumberRules.png" alt=""><figcaption><p>The Number rules settings section</p></figcaption></figure>
 
 #### **Processing limits**
 
@@ -135,16 +135,18 @@ This section sets the recognition language and mode, as well as the retention pe
 After the retention period expires, transcripts are deleted during scheduled daily cleanup. MikoPBX CDR records and audio recordings are not affected.
 {% endhint %}
 
+<figure><img src="../../../.gitbook/assets/CloudSTTOtherSettings.png" alt=""><figcaption><p>Processing limits, Mode and retention settings</p></figcaption></figure>
+
 ### Pausing processing
 
 The **Pause recording processing** button in the module header temporarily stops the selection and submission of new recordings, for example during maintenance or while investigating an incident. Jobs already accepted by the service continue to be polled until completion. The **Resume recording processing** button returns the module to normal operation.
 
-SCREENSHOT: The button for pausing recording processing in the module header.
+<figure><img src="../../../.gitbook/assets/CloudSTTStopScanner.png" alt=""><figcaption><p>The button for pausing recording processing in the module header</p></figcaption></figure>
 
 ### Transcript in call history
 
 In the MikoPBX **Call history** section, a call with a completed transcript provides a **Call transcript** dialog containing the conversation text and an **Open transcript** button to open it in the module.
 
-SCREENSHOT: The button for opening a call transcript from the MikoPBX call history.
+<figure><img src="../../../.gitbook/assets/CloudSTTCDR.png" alt=""><figcaption><p>The button for opening a call transcript from the MikoPBX call history</p></figcaption></figure>
 
-SCREENSHOT: A transcript opened from the MikoPBX call history.
+<figure><img src="../../../.gitbook/assets/CloudSTTTranscriptCardFromCDR.png" alt=""><figcaption><p>A transcript opened from the MikoPBX call history</p></figcaption></figure>
