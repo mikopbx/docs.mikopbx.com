@@ -10,7 +10,7 @@
 
 <figure><img src="../../.gitbook/assets/8 (16).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/2 (18) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (18).png" alt=""><figcaption></figcaption></figure>
 
 3. В поле **"User Name"** введите внутренний номер сотрудника
 
@@ -33,4 +33,4 @@
 
 <figure><img src="../../.gitbook/assets/6 (23).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (84) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>

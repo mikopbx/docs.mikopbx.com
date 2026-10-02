@@ -32,7 +32,7 @@ description: Инструкция по объединению двух АТС
 
 У Вас должен получится подобный список транков:
 
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Список транков</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Список транков</p></figcaption></figure>
 
 ### Настройка исходящих звонков на 2XX <a href="#isxodjaschie_na_2xx" id="isxodjaschie_na_2xx"></a>
 
@@ -82,11 +82,11 @@ _90000099
 * Установите «**Default detination**» в значение «**By DID**»
 * Установите «**Privilage Level**» в значение «**National**»
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Параметры правила входящей маршрутизации</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Параметры правила входящей маршрутизации</p></figcaption></figure>
 
 Итоговый список входящих маршрутов «**SIP Trunks – MikoPBX**»:
 
-<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Список маршрутов</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Список маршрутов</p></figcaption></figure>
 
 ### Параметры Extensions <a href="#extensions" id="extensions"></a>
 
@@ -94,13 +94,13 @@ _90000099
 
 Перейдите в раздел «**Extensions / Trunk**» - «**Extension**». Заполните параметры на примере скриншота ниже.
 
-<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption><p>Пример параметров extension</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Пример параметров extension</p></figcaption></figure>
 
 ### IVR <a href="#ivr" id="ivr"></a>
 
 Добавим возможность в IVR звонить на номера MikoPBX (**\_2XX**). Для этого перейдите в раздел «**Call Features**» - «**IVR**», создадим / откроем на редактирование IVR:
 
-<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Раздел IVR</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Раздел IVR</p></figcaption></figure>
 
 Выполните следующие действия:
 
@@ -112,7 +112,7 @@ _90000099
 **90000099** - это номер очереди, которую мы позже определим на MikoPBX
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption><p>Параметры IVR маршрута</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Параметры IVR маршрута</p></figcaption></figure>
 
 ## Настройка MikoPBX
 

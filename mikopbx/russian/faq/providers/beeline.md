@@ -22,7 +22,7 @@
 
 Нажмите "**Загрузить номера**"
 
-<figure><img src="../../.gitbook/assets/6 (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (8).png" alt=""><figcaption></figcaption></figure>
 
 6. Выберите внутренний номер для сотрудника и нажмите "**Подключить номера**"
 
@@ -36,7 +36,7 @@
 
 Данные, обведенные ниже понадобятся для авторизации провайдера в MikoPBX
 
-<figure><img src="../../.gitbook/assets/9 (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (7).png" alt=""><figcaption></figcaption></figure>
 
 9. Заполните поле "**Пароль**"
 

@@ -30,7 +30,7 @@
 
 4. Установите режим «**Добавлять в конец файла**».
 
-<figure><img src="../../.gitbook/assets/4 (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (7).png" alt=""><figcaption></figcaption></figure>
 
 5. В черное окно добавьте следующий фрагмент кода:
 

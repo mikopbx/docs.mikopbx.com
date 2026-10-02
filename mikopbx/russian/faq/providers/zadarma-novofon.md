@@ -14,7 +14,7 @@
 
 Параметры «**Логин**» / «**Пароль**» / «**Сервер**» понадобятся в дальнейшем для настройки подключения со стороны MikoPBX
 
-<figure><img src="../../.gitbook/assets/4 (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (14).png" alt=""><figcaption></figcaption></figure>
 
 4. Перейдите в настройки созданного номера
 
@@ -53,7 +53,7 @@
 
 Результатом успешного подключения является зеленый индикатор.
 
-<figure><img src="../../.gitbook/assets/13 (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (6).png" alt=""><figcaption></figcaption></figure>
 
 ## Настройка входящей маршрутизации <a href="#nastrojka_vxodjaschej_marshrutizacii" id="nastrojka_vxodjaschej_marshrutizacii"></a>
 

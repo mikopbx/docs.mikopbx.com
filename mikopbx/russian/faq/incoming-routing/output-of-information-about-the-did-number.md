@@ -10,15 +10,15 @@ MikoPBX может определить номер телефона, на кот
    \
    В нашем примере ID провайдера принимает вид: **SIP-1687941868**
 
-<figure><img src="../../.gitbook/assets/image (85) (1).png" alt=""><figcaption><p>ID провайдера</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption><p>ID провайдера</p></figcaption></figure>
 
 2. Перейдите в раздел **Система** -> **Кастомизация системных файлов**
 
-<figure><img src="../../.gitbook/assets/image (86) (1).png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
 3. Откройте для редактирования конфигурационный файл **extensions.conf**.
 
-<figure><img src="../../.gitbook/assets/image (87) (1).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
 4. Установите режим «**Добавлять в конец файла**». В черное окно добавьте следующий фрагмент кода:
 
@@ -57,11 +57,11 @@ set_var=MIKO_LINE_NAME=PT
 
 2. Перейдите в раздел **Система** -> **Кастомизация системных файлов**
 
-<figure><img src="../../.gitbook/assets/image (86) (1).png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption><p>Раздел "Кастомизация системных файлов"</p></figcaption></figure>
 
 3. Откройте для редактирования конфигурационный файл **extensions.conf**.
 
-<figure><img src="../../.gitbook/assets/image (87) (1).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption><p>Конфигурационный файл "extensions.conf"</p></figcaption></figure>
 
 4. Установите режим «**Добавлять в конец файла**». В черное окно добавьте следующий фрагмент кода:
 

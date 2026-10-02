@@ -2,7 +2,7 @@
 
 1. Добавьте новое приложение dialplan (см. [**Приложения диалпланов**](../../manual/modules/dialplan-applications.md))
 
-<figure><img src="../../.gitbook/assets/image (89) (1).png" alt=""><figcaption><p>Новое приложение диалпланов</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption><p>Новое приложение диалпланов</p></figcaption></figure>
 
 2. Назначьте внутренний номер, к примеру **2200110**
 

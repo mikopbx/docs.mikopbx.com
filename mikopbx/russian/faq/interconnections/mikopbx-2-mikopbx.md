@@ -22,7 +22,7 @@ description: Разбор кейса с объединением двух АТС
 
 Схематично маршрутизация вызовов представлена на рисунке ниже.
 
-<figure><img src="../../.gitbook/assets/image (88) (1).png" alt=""><figcaption><p>Схема маршрутизации</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p>Схема маршрутизации</p></figcaption></figure>
 
 ## Провайдеры телефонии <a href="#provajdery_telefonii" id="provajdery_telefonii"></a>
 

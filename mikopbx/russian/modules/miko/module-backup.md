@@ -56,7 +56,7 @@ description: >-
 
 1. В списке резервных копий выберите нужную и выполните действие "**Восстановить из резервной копии"**
 
-<figure><img src="../../.gitbook/assets/8 (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (8).png" alt=""><figcaption></figcaption></figure>
 
 2. Выберите категории данных к восстановлению
 
