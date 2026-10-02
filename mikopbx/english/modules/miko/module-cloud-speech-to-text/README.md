@@ -40,17 +40,17 @@ Submitting a recording for recognition is a paid action: the cost is deducted fr
 
 The setup wizard opens when you launch the module for the first time. On the first page, the module warns that selected call recordings are sent to `speech.mikolab.ru` for recognition. Confirm your consent by clicking **Continue**.
 
-SCREENSHOT: The Privacy step of the first-launch setup wizard.
+<figure><img src="../../../.gitbook/assets/CloudSTTOnboardingStep1.png" alt=""><figcaption><p>The Privacy step of the first-launch setup wizard.</p></figcaption></figure>
 
 At the second onboarding step, click **Check connection**: the module checks the service API availability, license authorization, and balance status.
 
-SCREENSHOT: The Connection step of the first-launch setup wizard.
+<figure><img src="../../../.gitbook/assets/CloudSTTOnboardingStep2.png" alt=""><figcaption><p>The Connection step of the first-launch setup wizard.</p></figcaption></figure>
 
 At the next step, review the call selection rules (directions, employees, and limits). Confirm that automatic selection should be enabled and click **Activate module**. The first submission will occur only after an eligible recording appears.
 
-SCREENSHOT: Call selection rules in the Rules and activation step of the first-launch setup wizard.
+<figure><img src="../../../.gitbook/assets/CloudSTTOnboardingStep3p1 (1).png" alt=""><figcaption><p>Call selection rules in the Rules and activation step of the first-launch setup wizard.</p></figcaption></figure>
 
-SCREENSHOT: Confirmation of automatic call selection and module activation in the Rules and activation step.
+<figure><img src="../../../.gitbook/assets/CloudSTTOnboardingStep3p2 (1).png" alt=""><figcaption><p>Confirmation of automatic call selection and module activation in the Rules and activation step</p></figcaption></figure>
 
 ### Overview tab
 
