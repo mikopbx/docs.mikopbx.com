@@ -59,3 +59,42 @@ Specify the time during which the call will be sent to the phone number you spec
 <figure><img src="../../.gitbook/assets/parameters3.png" alt=""><figcaption><p>Parameters for a new rule</p></figcaption></figure>
 
 If after the specified time interval no one answers the incoming call, the call will be routed to the next priority rule.
+
+## DID number field templates and CallerID restriction <a href="#did-cid-templates" id="did-cid-templates"></a>
+
+The **`Additional DID number`** field can be set as an exact number, as an Asterisk pattern, or additionally restricted by the caller's number (CallerID).
+
+### DID templates
+
+The field is matched against the number the client dialed (DID). If the value consists only of pattern characters, MikoPBX treats it as an Asterisk pattern; exact numbers are entered as-is.
+
+| DID field value   | What it matches                            | Examples              |
+| ----------------- | ------------------------------------------ | --------------------- |
+| empty or `X!`     | any incoming call (default route)          | all calls             |
+| `XZZ`             | 3 digits, 2nd and 3rd are 1–9              | 711, 923              |
+| `3XX`             | 300–399                                    | 300, 350, 399         |
+| `4XX`             | 400–499                                    | 400, 455              |
+| `[3-4]XX`         | 300–499                                    | 312, 489              |
+| `NXX`             | first digit 2–9, then any two digits       | 234, 900              |
+| `74952293042`     | exact DID                                  | only 74952293042      |
+| `+79066643322`    | exact DID with `+`                         | only +79066643322     |
+
+Notation: `X` — digit 0–9, `Z` — digit 1–9, `N` — digit 2–9, `[a-b]` — range, `.` — one or more of any character, `!` — zero or more characters.
+
+{% hint style="warning" %}
+Use only **uppercase** `X`, `Z`, `N`. Lowercase (e.g. `3xx`) is treated by MikoPBX as an exact number, not a pattern.
+{% endhint %}
+
+### CallerID restriction
+
+Asterisk lets you specify both the DID and the allowed caller's number in a single field using `/`: the part before `/` is matched against the dialed number (DID), the part after — against the caller's number (CallerID).
+
+| DID field value                | What it matches                                                   |
+| ------------------------------ | ----------------------------------------------------------------- |
+| `74951234567/+79261234567`     | DID = 74951234567 **and** CallerID = +79261234567                 |
+| `_X!/+79261234567`             | any DID **and** CallerID = +79261234567                           |
+| `_3XX/_79XXXXXXXXX`            | DID in 300–399 **and** CallerID matching `79XXXXXXXXX`            |
+
+{% hint style="info" %}
+Without `_` both parts are treated as exact matches. To use a pattern, start the corresponding part with `_` (e.g. `_X!` — "any DID", `_79XXXXXXXXX` — a CallerID pattern).
+{% endhint %}
