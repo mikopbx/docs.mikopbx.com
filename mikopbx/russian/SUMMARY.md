@@ -174,7 +174,7 @@
 * [Сценарии и кейсы](faq/cases/README.md)
   * [Программное создание сотрудников](faq/cases/extensions-generation-by-rest-api.md)
   * [Уведомление в мессенджер о пропущенных](faq/cases/notification-in-telegram.md)
-  * [Позвонить в компанию с мобильного и набрав добавочный позвонить сторонней компании](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
+  * [Позвонить в компанию с мобильного и набрав добавочный позвонить сторонней компании!](faq/cases/call-the-company-from-your-mobile-and-dial-an-extension-to-call-a-third-party-company.md)
   * [Отправка входящего факса на email](faq/cases/sending-an-incoming-fax-to-email.md)
   * [Оценка клиентом качества обслуживания](faq/cases/customers-assessment-of-the-quality-of-service.md)
   * [Имитация внешних звонков](faq/cases/simulation-of-external-calls.md)
