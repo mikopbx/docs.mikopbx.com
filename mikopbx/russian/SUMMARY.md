@@ -154,6 +154,7 @@
   * [Вывод информации о did-номере](faq/incoming-routing/output-of-information-about-the-did-number.md)
   * [Пример реализации типового маршрута входящих вызовов](faq/incoming-routing/an-example-of-the-implementation-of-a-typical-route-of-incoming-calls.md)
   * [Базовый пример IVR](faq/incoming-routing/basic-ivr-example.md)
+  * [Callback: перезваниваем клиенту и заводим в IVR](faq/incoming-routing/callback-call-the-client-back-and-route-into-ivr.md)
 * [Исходящая маршрутизация](faq/outbound-routing/README.md)
   * [Добавить P-Preferred-Identity и Remote-Party-ID заголовок](faq/outbound-routing/add-p-preferred-identity-and-remote-party-id-header.md)
   * [Конференция с постоянным внешним абонентом](faq/outbound-routing/conference-with-a-permanent-external-subscriber.md)

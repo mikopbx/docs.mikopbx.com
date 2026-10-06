@@ -138,6 +138,7 @@
   * [Routing by DID Number](faq/incoming-routing/routing-by-did-number.md)
   * [Normalization of incoming phone number](faq/incoming-routing/normalization-of-incoming-phone-number.md)
   * [Basic IVR example](faq/incoming-routing/basic-ivr-example.md)
+  * [Callback: call the client back and route into an IVR](faq/incoming-routing/callback-call-the-client-back-and-route-into-ivr.md)
 * [Outbound routing](faq/outbound-routing/README.md)
   * [Add P-Preferred-Identity and Remote-Party-ID header](faq/outbound-routing/add-p-preferred-identity-and-remote-party-id-header.md)
   * [Conference with a regular external subscriber](faq/outbound-routing/conference-with-a-regular-external-subscriber.md)
