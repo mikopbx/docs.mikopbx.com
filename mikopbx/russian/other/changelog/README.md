@@ -1,7 +1,7 @@
 # История версий
 
-{% content-ref url="mikopbx-2026.4.47.md" %}
-[mikopbx-2026.4.47.md](mikopbx-2026.4.47.md)
+{% content-ref url="mikopbx-2026.5.6.md" %}
+[mikopbx-2026.5.6.md](mikopbx-2026.5.6.md)
 {% endcontent-ref %}
 
 {% content-ref url="mikopbx-2026.1.223.md" %}
