@@ -2,11 +2,11 @@
 description: Changes since MikoPBX 2026.3.40
 ---
 
-# MikoPBX 2026.4.47
+# MikoPBX 2026.5.6
 
-MikoPBX 2026.4.47 makes call recording, transfers, and call pickup more reliable. Module and integration handling has been improved, and PBX security has been strengthened. The web interface is easier to use, while network settings changes and system updates are more dependable.
+MikoPBX 2026.5.6 makes call recording, transfers, and call pickup more reliable. Module and integration handling has been improved, and PBX security has been strengthened. The web interface is easier to use, while network settings changes and system updates are more dependable.
 
-<figure><img src="../../.gitbook/assets/mikopbx-2026.4.47-header-logo.png" alt="MikoPBX 2026.4.47"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mikopbx-2026.5.6-header-logo.png" alt="MikoPBX 2026.4.47"><figcaption></figcaption></figure>
 
 ### Call recordings and call history
 
