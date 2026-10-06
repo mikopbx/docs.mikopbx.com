@@ -2,11 +2,11 @@
 description: Изменения по сравнению с MikoPBX 2026.3.40
 ---
 
-# MikoPBX 2026.4.47
+# MikoPBX 2026.5.6
 
 Выпуск MikoPBX 2026.4.47 делает надёжнее запись разговоров, переводы и перехват вызовов. Улучшена работа модулей и интеграций, усилена защита станции. Веб-интерфейс стал удобнее, а изменения сетевых настроек и обновление системы - стабильнее.
 
-<figure><img src="../../.gitbook/assets/mikopbx-2026.4.47-header-logo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mikopbx-2026.5.6-header-logo.png" alt=""><figcaption></figcaption></figure>
 
 ### Записи разговоров и история вызовов
 
