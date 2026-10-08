@@ -284,6 +284,7 @@
   * [Локальная транскрибация](modules/miko/module-local-speech-to-text/README.md)
     * [Быстрый старт](modules/miko/module-local-speech-to-text/quick-start.md)
     * [Local STT Worker](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
+    * [Docker-обработчик (Linux)](modules/miko/module-local-speech-to-text/docker-worker.md)
     * [REST API](modules/miko/module-local-speech-to-text/rest-api.md)
   * [Локальный ИИ Супервайзер](modules/miko/module-a-i-supervisor/README.md)
     * [Быстрый старт](modules/miko/module-a-i-supervisor/quick-start.md)
