@@ -46,37 +46,15 @@ Docker-обработчик - альтернатива [Local STT Worker для 
 
 Установите Docker Engine и плагин Compose:
 
-{% tabs %}
-{% tab title="Официальный скрипт Docker" %}
 ```bash
 curl -fsSL https://get.docker.com | sudo sh
 sudo usermod -aG docker "$USER"      # чтобы запускать docker без sudo
 newgrp docker                        # или перезайдите в сессию
 ```
-{% endtab %}
 
-{% tab title="Пакеты Ubuntu" %}
-Подходит, если `download.docker.com` недоступен с сервера. В Ubuntu 24.04 это Docker 29 и Compose 2.40.
-
-```bash
-sudo apt-get update
-sudo apt-get install -y docker.io docker-compose-v2
-sudo systemctl enable --now docker
-sudo usermod -aG docker "$USER"
-newgrp docker
-```
-{% endtab %}
-{% endtabs %}
-
-Проверьте, что системному разделу доступен весь диск. Установщик Ubuntu Server по умолчанию отдает разделу `/` только половину диска, а остальное оставляет свободным в группе томов LVM:
-
-```bash
-df -h /                 # размер раздела /
-sudo vgs                # VFree - нераспределенное место
-sudo lvextend -l +100%FREE -r /dev/ubuntu-vg/ubuntu-lv   # отдать разделу / все свободное место
-```
-
-Команда `lvextend` увеличивает раздел и файловую систему на работающей системе, без перезагрузки и потери данных.
+{% hint style="info" %}
+Если `get.docker.com` недоступен с сервера, в Ubuntu и Debian установите Docker из пакетов дистрибутива: `sudo apt-get install -y docker.io docker-compose-v2`.
+{% endhint %}
 
 Проверьте установку и процессор:
 
