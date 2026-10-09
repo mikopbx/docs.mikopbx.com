@@ -10,9 +10,7 @@ description: >-
 
 Docker-обработчик - альтернатива [Local STT Worker для macOS](miko-ai-worker.md). На одной станции в каждый момент работает одна платформа: какая именно, определяется моделью, выбранной на вкладке **Каталог моделей**.
 
-{% hint style="warning" %}
-Образ пока не опубликован. Значения в угловых скобках, например `ghcr.io/mikopbx/<имя-образа>:<версия>-cpu`, - заглушки: их нужно заменить точным именем и версией образа после публикации в GitHub Container Registry.
-{% endhint %}
+Образ опубликован в Docker Hub: [`excla1m/mikopbx-stt-worker`](https://hub.docker.com/r/excla1m/mikopbx-stt-worker). Тег `latest` всегда указывает на последнюю стабильную версию.
 
 ### Требования
 
@@ -23,7 +21,7 @@ Docker-обработчик - альтернатива [Local STT Worker для 
 | Память | 4 ГБ | 8 ГБ (нужно для T-one) |
 | Диск | 30 ГБ | 50 ГБ |
 | Docker | Docker Engine с плагином Compose 2.24 или новее | последняя стабильная версия |
-| Сеть | исходящий HTTPS до MikoPBX и до huggingface.co | то же; входящие порты не нужны |
+| Сеть | исходящий HTTPS до MikoPBX, Docker Hub и huggingface.co | то же; входящие порты не нужны |
 | MikoPBX | 2025.1.1 и модуль с платформой **Linux (Docker)** в **Каталоге моделей** | последняя версия модуля |
 
 {% hint style="info" %}
@@ -65,10 +63,11 @@ uname -m                                       # x86_64 или aarch64
 grep -o -w avx2 /proc/cpuinfo | head -1        # на x86_64 должно вывести avx2
 ```
 
-Проверьте доступ к MikoPBX и к хранилищу моделей:
+Проверьте доступ к MikoPBX, Docker Hub и хранилищу моделей:
 
 ```bash
 curl -skI https://<адрес-mikopbx> | head -1
+curl -sI https://registry-1.docker.io/v2/ | head -1   # ответ 401 - это нормально, реестр доступен
 curl -sI https://huggingface.co | head -1
 ```
 
@@ -85,40 +84,19 @@ curl -sI https://huggingface.co | head -1
 
 ### Шаг 3. Получение образа
 
-Выберите один из вариантов.
-
-{% tabs %}
-{% tab title="Из реестра GitHub" %}
 ```bash
-docker pull ghcr.io/mikopbx/<имя-образа>:<версия>-cpu
+docker pull excla1m/mikopbx-stt-worker:latest
 ```
 
-Docker сам выберет архитектуру сервера (x86_64 или arm64).
-{% endtab %}
+Docker сам выберет архитектуру сервера (x86_64 или arm64). Образ занимает около 2 ГБ.
 
-{% tab title="Из архива релиза" %}
-Для серверов без доступа к реестру образ выкладывается архивом вместе с контрольными суммами. Скачивайте архив под архитектуру сервера: `x86_64` или `arm64`.
-
-```bash
-mkdir -p ~/stt-image && cd ~/stt-image
-curl -fLO <ссылка-на-релиз>/docker-stt-worker-<версия>-x86_64-cpu-docker.tar
-curl -fLO <ссылка-на-релиз>/checksum.sha256
-
-sha256sum -c checksum.sha256 --ignore-missing   # должно вывести: OK
-docker load -i docker-stt-worker-<версия>-x86_64-cpu-docker.tar
-```
-
-Последняя строка `docker load` покажет имя загруженного образа: используйте его в шаге 4.
-
-{% hint style="warning" %}
-Если контрольная сумма не совпала, архив поврежден при скачивании. Скачайте его заново: браузер может испортить большой файл при прерванной загрузке.
+{% hint style="info" %}
+На вкладке **Обработчики** в блоке загрузки есть переключатель **Docker**: там показана готовая команда `docker run` с адресом этой станции и только что созданным ключом. Она подходит для быстрой проверки; для постоянной работы используйте `compose.yaml` из шага 4 - в нем включены ограничения контейнера и корректная остановка.
 {% endhint %}
-{% endtab %}
-{% endtabs %}
 
 ### Шаг 4. Файл compose.yaml
 
-Создайте каталог обработчика и файл `compose.yaml`. В строке `image` укажите образ из шага 3.
+Создайте каталог обработчика и файл `compose.yaml`:
 
 ```bash
 sudo mkdir -p /opt/mikopbx-stt-worker
@@ -130,7 +108,7 @@ name: local-stt-worker
 
 services:
   worker:
-    image: ghcr.io/mikopbx/<имя-образа>:<версия>-cpu
+    image: excla1m/mikopbx-stt-worker:latest
     container_name: local-stt-worker
     restart: unless-stopped
     env_file:
@@ -275,22 +253,23 @@ Job #3087 done: 215 segments, language ru, 70.9s for 769.0s of audio (RTF 0.0923
 
 ### Обновление
 
-Получите новый образ (шаг 3), укажите его версию в строке `image` файла `compose.yaml` и пересоздайте контейнер. Модели и настройки хранятся в томах и сохраняются.
+Скачайте новую версию образа и пересоздайте контейнер. Модели и настройки хранятся в томах и сохраняются.
 
 ```bash
 cd /opt/mikopbx-stt-worker
-nano compose.yaml              # image: ghcr.io/mikopbx/<имя-образа>:<новая-версия>-cpu
-docker compose pull            # для архива вместо этого: docker load -i <новый-архив>.tar
+docker compose pull
 docker compose up -d
 docker compose exec worker local-stt-worker status
 ```
+
+Текущее задание при пересоздании контейнера завершается или возвращается в очередь. Чтобы закрепить конкретную версию, укажите в строке `image` тег вида `excla1m/mikopbx-stt-worker:<версия>-cpu` - список версий есть на вкладке **Tags** в [Docker Hub](https://hub.docker.com/r/excla1m/mikopbx-stt-worker/tags).
 
 ### Удаление
 
 ```bash
 cd /opt/mikopbx-stt-worker
 docker compose down -v         # контейнер и тома: модели, настройки, UID
-docker image rm ghcr.io/mikopbx/<имя-образа>:<версия>-cpu
+docker image rm excla1m/mikopbx-stt-worker:latest
 ```
 
 Затем в MikoPBX на вкладке **Обработчики** удалите ключ доступа этого обработчика. Без `-v` тома сохраняются, и при повторной установке модель не придется скачивать заново.
@@ -336,6 +315,7 @@ docker compose up -d
 | `status`: `waiting: this image cannot run the selected model` | Выбранная модель не поддерживается этой версией образа. Обновите образ или выберите другую модель. |
 | `MikoPBX rejected the worker key` | Ключ удален, введен с ошибкой или уже привязан к другому обработчику. Создайте новый ключ на вкладке **Обработчики** и запустите `setup` еще раз. |
 | Ошибка TLS при подключении | Включена проверка сертификата, а сертификат MikoPBX недоверенный. Выключите проверку или передайте свой CA. |
+| `docker pull` завершается ошибкой `connection reset` или по тайм-ауту | Нет доступа к Docker Hub. Откройте исходящий HTTPS до `registry-1.docker.io` и `production.cloudfront.docker.com` или настройте зеркало реестра. |
 | Модель не скачивается | Нет доступа к huggingface.co. Откройте исходящий HTTPS для сервера или прокси. |
 | Распознавание медленное (RTF больше 0,3 для GigaAM) | Мало ядер или процессор без AVX2. Добавьте ядра виртуальной машине и проверьте режим EVC. |
 | Контейнер `unhealthy` | Цикл обработчика не отчитывался 10 минут. Посмотрите `docker compose logs --tail 200`. |
