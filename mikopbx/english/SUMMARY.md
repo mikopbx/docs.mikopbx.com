@@ -231,6 +231,7 @@
   * [Local Transcription](modules/miko/module-local-speech-to-text/README.md)
     * [Quick Start](modules/miko/module-local-speech-to-text/quick-start.md)
     * [Local STT Worker](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
+    * [Docker worker (Linux)](modules/miko/module-local-speech-to-text/docker-worker.md)
     * [REST API](modules/miko/module-local-speech-to-text/rest-api.md)
   * [Local AI Supervisor](modules/miko/module-a-i-supervisor/README.md)
     * [Quick Start](modules/miko/module-a-i-supervisor/quick-start.md)
