@@ -18,6 +18,21 @@ description: >-
 * Network access to the PBX.
 * Internet access for the first download of the selected model and its supporting files.
 
+### Models
+
+The model is selected in MikoPBX: **Modules** → **Local Transcription** → the **Model marketplace** tab, platform **macOS (Apple Silicon)**. The worker downloads the model with the first job and keeps it locally (see the Models section of the application below). The models run on Core ML with Apple hardware acceleration.
+
+{% hint style="warning" %}
+Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. For another language, select a WhisperKit model or change the model before processing such calls.
+{% endhint %}
+
+| Model                      | When to choose it                       | Characteristics                                                                                  |
+| -------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Parakeet TDT 0.6B v3**   | Most calls                              | Default model. Fast recognition of long-form speech in 25 languages through the Parakeet engine. |
+| **Whisper Large V3 Turbo** | You want a proven general-purpose model | A good balance of speed and quality for typical multilingual calls through WhisperKit.           |
+| **Whisper Podlodka Turbo** | Almost all conversations are in Russian | A Whisper model fine-tuned for Russian speech from `smkrv/whisper-podlodka-turbo-coreml`.        |
+| **Whisper Large V3**       | Quality matters more than speed         | The heaviest model in the catalog for difficult or unclear recordings. Runs through WhisperKit.  |
+
 ### First launch
 
 {% hint style="info" %}

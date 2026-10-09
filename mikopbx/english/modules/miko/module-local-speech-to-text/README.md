@@ -71,18 +71,12 @@ Changing the recording processing window resets the scan cursor so that the modu
 
 ### Model marketplace tab
 
-This tab selects the model that the PBX includes in new jobs. The selection applies centrally to all workers and appears in Local STT Worker after its settings synchronize.
+This tab selects the model that the PBX includes in new jobs. The selection applies centrally to all workers and appears in the worker after its settings synchronize.
 
-{% hint style="warning" %}
-Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. For another language, select a WhisperKit model or change the model before processing such calls.
-{% endhint %}
+The platform switch above the model list selects the worker type whose models are shown. Each worker type has its own set of models; their descriptions, languages and recommendations are in the **Models** section of the worker article:
 
-| Model                      | When to choose it                       | Characteristics                                                                                  |
-| -------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Parakeet TDT 0.6B v3**   | Most calls                              | Default model. Fast recognition of long-form speech in 25 languages through the Parakeet engine. |
-| **Whisper Large V3 Turbo** | You want a proven general-purpose model | A good balance of speed and quality for typical multilingual calls through WhisperKit.           |
-| **Whisper Podlodka Turbo** | Almost all conversations are in Russian | A Whisper model fine-tuned for Russian speech from `smkrv/whisper-podlodka-turbo-coreml`.        |
-| **Whisper Large V3**       | Quality matters more than speed         | The heaviest model in the catalog for difficult or unclear recordings. Runs through WhisperKit.  |
+* **macOS (Apple Silicon)** - Parakeet and Whisper on Core ML: [Local STT Worker](miko-ai-worker.md);
+* **Linux (Docker)** - GigaAM, T-one, Parakeet and Whisper on the CPU: [Docker worker (Linux)](docker-worker.md).
 
 After selecting a model, click **Save model**.
 
