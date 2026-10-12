@@ -69,6 +69,7 @@
     * [Connecting DigitalOcean S3 Storage](manual/maintenance/storage/digitalocean.md)
     * [Connecting MinIO S3 Storage](manual/maintenance/storage/minio.md)
     * [Connecting Wasabi S3 Storage](manual/maintenance/storage/wasabi.md)
+    * [Moving to Another S3 Bucket](manual/maintenance/storage/migration.md)
 * [Network and Firewall](manual/connectivity/README.md)
   * [Network interface](manual/connectivity/network.md)
   * [Firewall](manual/connectivity/firewall.md)

@@ -79,3 +79,9 @@ Shorter local storage duration frees up disk space faster.
 {% content-ref url="aws.md" %}
 [aws.md](aws.md)
 {% endcontent-ref %}
+
+#### Moving recordings to another bucket
+
+{% content-ref url="migration.md" %}
+[migration.md](migration.md)
+{% endcontent-ref %}
