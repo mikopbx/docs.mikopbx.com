@@ -77,6 +77,7 @@
     * [Подключение S3 хранилища DigitalOcean](manual/maintenance/storage/digitalocean.md)
     * [Подключение S3 хранилища Wasabi](manual/maintenance/storage/wasabi.md)
     * [Подключение S3 хранилища MinIO (self-hosted)](manual/maintenance/storage/minio.md)
+    * [Переезд на другой S3 бакет](manual/maintenance/storage/migration.md)
   * [Перезагрузка и выключение системы](manual/maintenance/restart.md)
 * [Сеть и Firewall](manual/connectivity/README.md)
   * [Сетевые интерфейсы](manual/connectivity/network.md)

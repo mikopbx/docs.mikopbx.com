@@ -83,3 +83,9 @@ description: Использование дискового пространст�
 {% content-ref url="aws.md" %}
 [aws.md](aws.md)
 {% endcontent-ref %}
+
+#### Перенос записей в другой бакет
+
+{% content-ref url="migration.md" %}
+[migration.md](migration.md)
+{% endcontent-ref %}
