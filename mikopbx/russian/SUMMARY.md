@@ -40,6 +40,7 @@
   * [DigitalOcean](setup/cloud/digitalocean.md)
   * [Alibaba cloud](setup/cloud/alibaba-cloud.md)
   * [Vultr](setup/cloud/vultr.md)
+  * [Cloud.ru](setup/cloud/cloudru.md)
 * [В Docker контейнере](setup/docker/README.md)
   * [Установка докера и cоздание пользователя и каталогов](setup/docker/docker-installation.md)
   * [Запуск MikoPBX в контейнере](setup/docker/running-mikopbx-in-container.md)
