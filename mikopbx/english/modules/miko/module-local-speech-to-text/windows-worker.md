@@ -19,7 +19,7 @@ The Windows worker runs at the same time as [Local STT Worker for macOS](miko-ai
 | ---------- | ----------------------------------------------------------------------------------------------- |
 | OS         | Windows 10/11 or Windows Server 2019 or newer, 64-bit (x64)                                     |
 | Memory     | 8 GB                                                                                            |
-| Disk       | about 0.5 GB for the program plus space for the selected model (up to 2.5 GB)                   |
+| Disk       | about 0.3 GB for the program plus space for the selected model (up to 2.5 GB)                   |
 | Components | [Visual C++ 2015-2022 x64 runtime](https://aka.ms/vs/17/release/vc_redist.x64.exe)              |
 | MikoPBX    | 2025.1.1 or newer, with a **Local Transcription** module that offers the **Windows** platform in the model marketplace |
 | Network    | outbound HTTPS to MikoPBX and huggingface.co (for the first model download)                     |
@@ -111,6 +111,15 @@ The wizard asks for:
 The wizard then checks the connection and registers the worker. A successful result looks like this:
 
 ```
+MikoPBX Local STT Worker setup
+Data folder: C:\ProgramData\MikoPBX\LocalSTTWorker
+
+PBX address (https://host[:port]): https://pbx.example.com
+Accept a self-signed PBX certificate? Only on a trusted network [y/N]: y
+Worker UID (letters, digits, '.', '_', '-') [windows-office-pc]:
+Worker name shown in the module [Windows STT Worker (OFFICE-PC)]:
+Worker API key from the module's Workers tab (leave empty to keep the stored one):
+
 Settings saved. Checking the connection...
 [ OK ] Bundled tools verified (ffmpeg, whisper.cpp, ONNX assets).
 [ OK ] Settings: https://pbx.example.com as 'windows-office-pc'.
@@ -144,14 +153,24 @@ To change the address, key or name, run `setup` again. Press Enter to keep the c
 
 <summary>Setup without typing the key (for scripts)</summary>
 
-With the `--token-stdin` flag the wizard reads the key from standard input instead of the keyboard. The key is never passed on the command line.
+The wizard can read its answers from standard input, one line per question in the same order: address, self-signed certificate, UID, name, key. An empty line keeps the default value. With the `--token-stdin` flag the key is read from standard input as well. The key is never passed on the command line.
 
-```powershell
-Get-Content .\worker.key | .\LocalSTTWorker.exe setup --token-stdin
-Remove-Item .\worker.key     # the key is already stored in the protected store
+Create an `answers.txt` file:
+
+```
+https://<mikopbx-address>
+y
+
+
+<worker-key>
 ```
 
-In this mode the wizard reads the other answers from standard input as well, one line per answer.
+and pass it to the wizard:
+
+```powershell
+Get-Content .\answers.txt | .\LocalSTTWorker.exe setup --token-stdin
+Remove-Item .\answers.txt    # the key is already stored in the protected store
+```
 
 </details>
 
@@ -161,7 +180,7 @@ In this mode the wizard reads the other answers from standard input as well, one
 .\LocalSTTWorker.exe status
 ```
 
-On the first job the worker downloads the model (GigaAM v3 is about 0.9 GB) and checks its checksums, then starts recognizing.
+On the first job the worker downloads the model (GigaAM v3 is about 0.9 GB) and checks its checksums, then starts recognizing. That is why the first job takes a few minutes longer than the others.
 
 1. In MikoPBX, the **Workers** tab shows the worker as **Online**, with the **Windows** platform, its IP and model.
 2. `status` shows the service and worker state and a growing job counter:
@@ -169,18 +188,25 @@ On the first job the worker downloads the model (GigaAM v3 is about 0.9 GB) and 
 ```
 Service      : RUNNING
 Worker state : polling
-Updated      : 2026-10-20 12:30:05 (12 s ago)
+Updated      : 2026-10-20 16:02:40 (0 s ago)
 Worker UID   : windows-office-pc
 Version      : 0.1.22
 Model        : GigaAM v3
-Jobs         : 50 done, 0 failed, 0 released, 120.5 min of audio
-Last job     : #399, 70.4 s audio in 6.8 s (RTF 0.097)
+Jobs         : 3 done, 0 failed, 0 released, 7.2 min of audio
+Last job     : #847, 141.1 s audio in 48.0 s (RTF 0.340)
 Logs         : C:\ProgramData\MikoPBX\LocalSTTWorker\Logs
 ```
 
-3. The call card shows the transcript, and its technical information shows the engine and the processing time.
+3. The worker log `C:\ProgramData\MikoPBX\LocalSTTWorker\Logs\worker-yyyyMMdd.log` shows every job:
 
-**RTF** is the ratio of processing time to recording length. For example, an RTF of 0.1 means a 10-minute call is recognized in one minute.
+```
+[info] worker job #853: Claimed job #853 (call mikopbx-1792307715.71) for model 'GigaAM v3'.
+[info] worker job #853: Submitted result for job #853: 74 segment(s), duration 251030 ms, processed in 85.4 s.
+```
+
+4. The call card shows the transcript, and its technical information shows the model, the processing time and the RTF.
+
+**RTF** is the ratio of processing time to recording length. For example, an RTF of 0.1 means a 10-minute call is recognized in one minute. For reference: GigaAM v3 on an Intel Xeon E5-2670 (from 2012, without AVX2) runs at an RTF of about 0.34, so a 10-minute call takes about 3.5 minutes.
 
 | State (`Worker state`)                           | Meaning                                                                    |
 | ------------------------------------------------ | -------------------------------------------------------------------------- |
@@ -203,7 +229,7 @@ Logs         : C:\ProgramData\MikoPBX\LocalSTTWorker\Logs
 | Change the settings           | `.\LocalSTTWorker.exe setup`                           |
 | Run in the console            | `.\LocalSTTWorker.exe run` (with the service stopped)  |
 
-Run the commands in the program folder as administrator. The service can also be controlled in the **Services** snap-in (`services.msc`). It starts automatically (delayed start) and restarts after a failure: after one minute, then after five minutes for repeated failures. When it stops, the current job finishes or returns to the MikoPBX queue; new calls wait in the queue.
+Run the commands in the program folder as administrator. The service can also be controlled in the **Services** snap-in (`services.msc`). It starts automatically (delayed start) as LocalSystem and restarts after a failure: after one minute the first two times, then after five minutes. When it stops, the current job finishes or returns to the MikoPBX queue; new calls wait in the queue.
 
 ### Updating
 
@@ -266,7 +292,7 @@ To check the worker, run `.\LocalSTTWorker.exe check`: it checks the program fil
 | `'setup' needs administrator rights`                                        | The command prompt runs without administrator rights. Open it with **Run as administrator**.                                             |
 | The MSI installer reports that Visual C++ is missing                        | Install the [Visual C++ 2015-2022 x64 runtime](https://aka.ms/vs/17/release/vc_redist.x64.exe) and run the installer again.               |
 | `status`: `not_configured`                                                  | The worker is not configured. Run `setup`.                                                                                               |
-| `PBX rejected the worker API token`                                         | The key was deleted, mistyped or is already bound to another worker. Create a new key on the **Workers** tab and run `setup`.            |
+| `PBX rejected the worker API token` or `PBX refused the worker credentials`  | The key was deleted, mistyped or is already bound to another worker. Create a new key on the **Workers** tab and run `setup`.            |
 | `update ModuleLocalSpeechToText` or `status`: `waiting_for_windows_model`   | The module version does not support the Windows platform. Update **Local Transcription**.                                                |
 | `status`: `unsupported_model`                                               | The selected model is not supported by this worker version. Update the worker or select another model.                                   |
 | TLS error when connecting                                                   | The MikoPBX certificate is not trusted. Allow a self-signed certificate in `setup` or install your CA (see the TLS section).               |
