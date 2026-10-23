@@ -49,7 +49,7 @@ For calls over mobile data, the PBX must be reachable from the internet: a **pub
 
 Additionally, in the PBX's own firewall settings (**"System" → "Network & Firewall" → "Firewall"**), enable the **Softphone RTP** service for the **"Internet"** profile — or at least for **"Trusted networks"** if employees only place calls from the office network. Otherwise, audio traffic is blocked by the built-in firewall.
 
-<figure><img src="../../.gitbook/assets/softphone-firewall.png" alt=""><figcaption><p>The Softphone RTP service in the PBX firewall settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/softphone-firewall (1).png" alt=""><figcaption><p>The Softphone RTP service in the PBX firewall settings</p></figcaption></figure>
 
 For secure connections (HTTPS/WSS), use the [Let's Encrypt](module-get-ssl-lets-encrypt.md) module — it issues a trusted SSL certificate. A certificate can also be obtained for an IP address; a domain name is not required.
 
@@ -66,7 +66,7 @@ The app is connected via an auto-configuration link. Open the module settings, *
 
 The link can be shared by any convenient means; the QR code can be scanned with the iPhone camera. The app downloads the settings and asks to confirm sign-in.
 
-<figure><img src="../../.gitbook/assets/softphone-provision.png" alt=""><figcaption><p>The "Device setup" tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/softphone-provision (1).png" alt=""><figcaption><p>The "Device setup" tab</p></figcaption></figure>
 
 The same tab contains the employee table: search by name or number, emailing a QR code to one employee or to selected ones (**"Send to selected"**, up to 100 at a time). The email goes to the address specified in the employee's card.
 
@@ -86,7 +86,7 @@ The module settings show each employee's active sessions and last activity time.
 
 ## Module settings <a href="#settings" id="settings"></a>
 
-<figure><img src="../../.gitbook/assets/softphone-settings.png" alt=""><figcaption><p>The "Settings" tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/softphone-settings (1).png" alt=""><figcaption><p>The "Settings" tab</p></figcaption></figure>
 
 ### External server <a href="#external-server" id="external-server"></a>
 
@@ -129,7 +129,7 @@ At the top of the settings page are component indicators: **nginx**, **push-serv
 
 ## Access rights and supervisors <a href="#access" id="access"></a>
 
-<figure><img src="../../.gitbook/assets/softphone-access.png" alt=""><figcaption><p>The "Access rights" tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/softphone-access (1).png" alt=""><figcaption><p>The "Access rights" tab</p></figcaption></figure>
 
 ### Basic rights <a href="#access-basic" id="access-basic"></a>
 
@@ -146,7 +146,7 @@ An access group combines employees and defines their rights within the group:
 | Pick up calls within the group        | One can answer an incoming call ringing for a colleague        |
 | View the group's active conversations | Active calls of group members and the call parties are visible |
 
-<figure><img src="../../.gitbook/assets/softphone-access-edit.png" alt=""><figcaption><p>Editing an access group</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/softphone-access-edit (1).png" alt=""><figcaption><p>Editing an access group</p></figcaption></figure>
 
 The selected rights are automatically granted to all group members.
 
@@ -154,7 +154,7 @@ The selected rights are automatically granted to all group members.
 
 A supervisor is an employee with extended rights over their own and **controlled groups** (the list is defined during setup). Besides monitoring, the supervisor can act on calls:
 
-<figure><img src="../../.gitbook/assets/softphone-supervisor.png" alt=""><figcaption><p>The "Supervisor" tab — extended rights over controlled groups</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/softphone-supervisor (1).png" alt=""><figcaption><p>The "Supervisor" tab — extended rights over controlled groups</p></figcaption></figure>
 
 | Right                    | Description                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------- |
