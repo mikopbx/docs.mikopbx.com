@@ -252,6 +252,9 @@ The wizard asks for:
 The wizard then checks the connection and saves the settings to the `data` volume (`/data/config.json`, mode 600). Example:
 
 ```
+AI Supervisor Worker setup. Settings are saved to /data/config.json.
+In MikoPBX open AI Supervisor → Workers and generate a worker API key first.
+
 PBX address (https://host[:port]): https://pbx.example.com
 Verify the PBX certificate? (yes/no; no accepts a self-signed one) [no]:
 Worker API key:
@@ -260,14 +263,14 @@ Local AI runtime (OpenAI-compatible or Ollama URL) [http://ollama:11434/v1]:
 Model to prepare before the first job [qwen3.5:4b]:
 
 Checking the PBX…
-  OK: https://pbx.example.com: ModuleAISupervisor 1.162.1, worker API v2; key accepted
+  OK: ModuleAISupervisor 1.162.1, worker API v2; key accepted
 Checking the local AI runtime…
-  Reachable: Local runtime is reachable, but model "qwen3.5:4b" is not installed yet.
+  OK: Local AI endpoint is reachable and model "qwen3.5:4b" is installed.
 
 Saved. Worker UID ai-docker-e16a7a84fc7a4919. Start the worker with `docker compose up -d`.
 ```
 
-The `Reachable ... not installed yet` line is expected on the first setup: the model is downloaded after the start.
+On the first installation the model is not in Ollama yet, so the last check prints `Reachable: Local runtime is reachable, but model "qwen3.5:4b" is not installed yet.` instead - this is expected: the model is downloaded after the start.
 
 <details>
 
