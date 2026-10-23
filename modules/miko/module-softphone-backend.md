@@ -154,6 +154,8 @@ The selected rights are automatically granted to all group members.
 
 A supervisor is an employee with extended rights over their own and **controlled groups** (the list is defined during setup). Besides monitoring, the supervisor can act on calls:
 
+<figure><img src="../../.gitbook/assets/softphone-supervisor.png" alt=""><figcaption><p>The "Supervisor" tab — extended rights over controlled groups</p></figcaption></figure>
+
 | Right | Description |
 | --- | --- |
 | Call pickup | Answer an incoming call for a group employee |
