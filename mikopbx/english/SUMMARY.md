@@ -233,6 +233,7 @@
   * [Local AI Supervisor](modules/miko/module-a-i-supervisor/README.md)
     * [Quick Start](modules/miko/module-a-i-supervisor/quick-start.md)
     * [AI Supervisor Worker](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
+    * [Docker worker (Linux)](modules/miko/module-a-i-supervisor/docker-worker.md)
   * [Cloud Speech-to-Text](modules/miko/module-cloud-speech-to-text/README.md)
     * [REST API](modules/miko/module-cloud-speech-to-text/rest-api.md)
 

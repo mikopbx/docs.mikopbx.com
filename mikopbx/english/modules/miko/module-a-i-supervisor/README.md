@@ -10,7 +10,7 @@ description: >-
 **Local AI Supervisor** helps supervisors keep track of how phone conversations go. The module takes completed call transcripts and uses a local language model to review each call: it writes a short and a detailed summary, identifies the contact reason, the outcome and the next step, highlights topics and risks, evaluates the communication tone and scores how well the employee handled the call. Calls that need a supervisor's attention are collected in a separate list, so you do not have to look for them manually.
 
 {% hint style="info" %}
-The module does not run a language model inside MikoPBX. The analysis is performed by a separate **AI Supervisor Worker** application on an Apple silicon Mac. It uses the local Ollama runtime, so transcripts and analysis results never leave your infrastructure. See [AI Supervisor Worker](miko-ai-worker.md) for details about the application.
+The module does not run a language model inside MikoPBX. The analysis is performed by a separate **AI Supervisor Worker** application on an Apple silicon Mac. It uses the local Ollama runtime, so transcripts and analysis results never leave your infrastructure. See [AI Supervisor Worker](miko-ai-worker.md) for details about the application. Instead of a Mac, the analysis can run in the [Docker worker](docker-worker.md) on a Linux server, including servers with an NVIDIA GPU.
 {% endhint %}
 
 SCREENSHOT: The module's "Overview" tab - general view of the home page
