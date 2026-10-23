@@ -1,7 +1,7 @@
 # Описание функционала
 
 {% hint style="info" %}
-Для корректной работы большинства функций MikoPBX должна быть на "белом" IP адресе. Смотреть - [системные требования](amocrm-integration.md#sistemnye_trebovanija).
+Для корректной работы большинства функций MikoPBX должна быть на "белом" (публичном) IP адресе. Смотреть - [системные требования](amocrm-integration.md#sistemnye_trebovanija).
 {% endhint %}
 
 ## Панель управления вызовами <a href="#panel_upravlenija_vyzovami" id="panel_upravlenija_vyzovami"></a>
