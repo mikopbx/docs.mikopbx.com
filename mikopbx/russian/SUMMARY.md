@@ -254,6 +254,7 @@
     * [Панель телефонии 1.0 для 1С](modules/miko/integraciya-s-1s/module-pt1c-core.md)
     * [Панель телефонии 4.0 для 1С](https://docs.telefon1c.ru)
     * [Модуль умной маршрутизации](https://docs.telefon1c.ru/user-guides/routing/smart-ivr-miko/)
+  * [Софтфон MikoTalk](modules/miko/softfon-mikotalk.md)
   * [Интеграция с amoCRM](modules/miko/amocrm/README.md)
     * [Описание функционала](modules/miko/amocrm/amocrm-functional.md)
     * [Настройка интеграции](modules/miko/amocrm/amocrm-integration.md)
