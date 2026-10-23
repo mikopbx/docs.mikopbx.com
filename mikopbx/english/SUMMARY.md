@@ -211,6 +211,7 @@
 
 * [MIKO modules](modules/miko/README.md)
   * [Dial groups management](modules/miko/module-users-groups.md)
+  * [MikoTalk Softphone](modules/miko/mikotalk-softphone.md)
   * [Autoprovision](modules/miko/module-autoprovision.md)
   * [Let's Encrypt](modules/miko/module-get-ssl-lets-encrypt.md)
   * [Access control management](modules/miko/module-users-u-i.md)
