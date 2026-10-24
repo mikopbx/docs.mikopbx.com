@@ -44,12 +44,6 @@ Downloading updates from the web interface works again: previously, clicking the
 
 The system log keeps nine archived parts instead of two, so a busy PBX retains a longer history. After a factory reset, logs continue to be written.
 
-### Licensing
-
-A new license confirmation mechanism has been prepared. It supports operation without internet access: a request file is downloaded on the licensing page, exchanged for a response file in the licensing portal, and uploaded back. The mechanism is disabled by default.
-
-The license key and the trial license form are validated before contacting the server, so input errors are reported immediately.
-
 ### For developers
 
 Module REST APIs return proper HTTP error codes instead of `200` for `result: false`. Empty JSON objects in responses are no longer turned into arrays. A timeout returns `504`, and an overloaded queue returns `503`.
