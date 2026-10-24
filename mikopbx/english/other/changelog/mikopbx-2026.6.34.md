@@ -9,8 +9,10 @@ The main focus of MikoPBX 2026.6.34 is security. PHP has been updated to 8.4.27,
 Call recording and MP3 playback have also been improved, employee call forwarding is more reliable, and Cloud.ru Evolution is now supported.
 
 {% hint style="warning" %}
-Back up the PBX before updating. When updating from 2026.5.6, upload the IMG image manually: the "Download" button does not work in that version. For PBXs installed before 2026.1.1, use the IMG-legacy image.
+Back up the PBX before updating. When updating from 2026.5.6, upload the IMG image manually: the "Download" button does not work in that version. For PBXs installed before 2026.1.1, use the .img image.
 {% endhint %}
+
+<figure><img src="../../.gitbook/assets/mikopbx-2026.6.34-header-dark.png" alt="MikoPBX 2026.6.34"><figcaption></figcaption></figure>
 
 ### Security
 
@@ -18,11 +20,11 @@ PHP has been updated to 8.4.27 (CVE-2026-109618, CVE-2026-109619), along with ng
 
 The built-in attack protection now scans the whole request body, including `DELETE` requests. The scan runs after blocklist and rate limit checks and does not add load during brute-force attempts. REST API requests larger than 4 MB are rejected with a clear error.
 
-Internal recording view links are no longer reachable from the network, and system log archive downloads are restricted to generated archives only. On Alibaba Cloud, a hostname containing the instance ID is no longer used: the ID serves as the initial password and must not appear on the login page.
+Internal recording view links are no longer reachable from the network, and system log archive downloads are restricted to generated archives only.
 
 ### Call recordings and call history
 
-If a transfer is rejected in a custom dialplan subroutine, for example with `Busy()` in `[internal-users-custom]`, the agent's recording resumes once the call returns. Previously, the part of the conversation after a failed transfer was lost.
+If a call transfer fails because of the PBX's custom dialplan rules and the caller returns to the agent, recording continues. Previously, the conversation after the return was not recorded.
 
 A transfer answered via `*8` pickup is now stored in call history as an answered call with its own recording. Previously, such a conversation appeared as missed, and its recording file was left on disk unlinked from the call.
 
@@ -32,7 +34,7 @@ When recordings are played or downloaded as MP3, WAV, or OGG, the converted file
 
 ### Call forwarding and SIP
 
-Employee call forwarding settings are applied more reliably. They are no longer lost if telephony was unavailable at the moment of saving, and a disabled forward stops working immediately, without restarting the PBX.
+Employee call forwarding changes are now always applied after saving. Previously, if telephony was restarting at that moment or SIP settings could not be applied, a new forward could silently fail to take effect.
 
 {% hint style="warning" %}
 If a custom dialplan reads forwarding from the Asterisk database (`DB(FW...)`), it must be updated: the values are now stored in the global variables `FW_<number>`, `FW_BUSY_<number>`, `FW_UNAV_<number>`, and `FW_TIME_<number>`.
@@ -52,7 +54,7 @@ Swap now uses a compressed area in RAM. The swap file on disk is used only when 
 
 Downloading updates from the web interface works again for future updates: previously, clicking the button did not start the download. Installation from LiveCD works again: the installer no longer exits on its own without waiting for disk selection and confirmation.
 
-The system log keeps nine archived parts instead of two, so a busy PBX retains a longer history. After a factory reset, logs continue to be written.
+The system log no longer loses entries prematurely: nine archived parts are kept instead of two. The progress of a factory reset is now saved in the log, which makes a failed reset easier to investigate.
 
 ### For developers
 
