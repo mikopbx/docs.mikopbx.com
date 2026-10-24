@@ -248,6 +248,7 @@
   * [MikoPBX 2026.2.118](other/changelog/mikopbx-2026.2.118.md)
   * [MikoPBX 2026.3.40](other/changelog/mikopbx-2026.3.40.md)
   * [MikoPBX 2026.5.6](other/changelog/mikopbx-2026.5.6.md)
+  * [MikoPBX 2026.6.34](other/changelog/mikopbx-2026.6.34.md)
 * [Patches](other/patches/README.md)
   * [2024.1.114](other/patches/2024.1.114/README.md)
     * [Network stops working in MikoPBX](other/patches/2024.1.114/network-stops-working-in-mikopbx.md)
