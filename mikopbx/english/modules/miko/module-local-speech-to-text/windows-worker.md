@@ -20,6 +20,7 @@ The Windows worker runs at the same time as [Local STT Worker for macOS](miko-ai
 | OS         | Windows 10/11 or Windows Server 2019 or newer, 64-bit (x64)                                     |
 | Memory     | 8 GB                                                                                            |
 | Disk       | about 0.3 GB for the program plus space for the selected model (up to 2.5 GB)                   |
+| Summarization | if turned on in the module: 4 GB more free RAM and 3 GB more disk space                     |
 | Components | [Visual C++ 2015-2022 x64 runtime](https://aka.ms/vs/17/release/vc_redist.x64.exe)              |
 | MikoPBX    | 2025.1.1 or newer, with a **Local Transcription** module that offers the **Windows** platform in the model marketplace |
 | Network    | outbound HTTPS to MikoPBX and huggingface.co (for the first model download)                     |
@@ -48,13 +49,13 @@ GigaAM v3 recognizes Russian speech only: keep the module's default language at 
 ### Step 1. Prepare MikoPBX
 
 1. Open **Modules** → **Local Transcription** → **Model marketplace** tab.
-2. Switch the platform to **Windows** and select a model, for example **GigaAM v3**.
+2. Switch the platform to **Windows**, select a model, for example **GigaAM v3**, and click **Save model**.
 3. Go to the **Workers** tab and select the **Windows** platform.
 4. Click **Create API key** and copy the key: it is shown once and is not available after the page is reloaded.
 
 ### Step 2. Download the worker
 
-The **Workers** tab has two download buttons for the **Windows** platform:
+On the **Workers** tab, with the **Windows** platform selected, click **Download for Windows**. A menu opens with two packages; each one shows its file name and size:
 
 | Package | File                                          | When to choose                                                     |
 | ------- | --------------------------------------------- | ------------------------------------------------------------------ |
@@ -276,6 +277,15 @@ Then delete the program folder.
 {% endtabs %}
 
 The `C:\ProgramData\MikoPBX\LocalSTTWorker` folder with the settings, key, models and logs is kept on purpose, so a reinstall does not download the model again. Delete this folder to remove everything. Then delete this worker's API key on the **Workers** tab in MikoPBX.
+
+### Summarization
+
+If **Get call summarization** is on in the module settings, the worker also writes the topic and a short summary of every new call. The **Gemma 3 4B** model runs right on this computer, using a runtime that ships with the worker.
+
+* The model, about 2.5 GB, is downloaded in the background into the `Models\` folder; transcription keeps working meanwhile.
+* Summaries are written only when there are no recordings to transcribe.
+* Summarization needs about 4 GB of free RAM while it runs. If there is not enough memory, turn summarization off or connect a worker on a more powerful computer.
+* `status` shows the summarization state: `off`, `downloading_model`, `ready`, `summarizing`, or `error` (see the log for details).
 
 ### TLS
 

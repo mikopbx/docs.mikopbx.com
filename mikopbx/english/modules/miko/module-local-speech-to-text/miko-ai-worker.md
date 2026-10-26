@@ -22,8 +22,10 @@ description: >-
 
 The model is selected in MikoPBX: **Modules** → **Local Transcription** → the **Model marketplace** tab, platform **macOS (Apple Silicon)**. The worker downloads the model with the first job and keeps it locally (see the Models section of the application below). The models run on Core ML with Apple hardware acceleration.
 
+The Mac worker can run at the same time as the [Docker worker](docker-worker.md) and the [Windows worker](windows-worker.md): each platform has its own model, and each worker receives jobs with the model of its own platform.
+
 {% hint style="warning" %}
-Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. For another language, select a WhisperKit model or change the model before processing such calls.
+Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish, Russian, and Ukrainian. For another language, select one of the Whisper models.
 {% endhint %}
 
 | Model                      | When to choose it                       | Characteristics                                                                                  |
@@ -159,6 +161,15 @@ The **Run setup again** button opens the onboarding wizard again.
 
 <figure><img src="../../../.gitbook/assets/STTNEWSettings.png" alt=""><figcaption><p>Settings in Local STT Worker</p></figcaption></figure>
 
+### Summarization
+
+If **Get call summarization** is on in the module settings, Local STT Worker 1.8 or later writes the topic and a short summary of every new call. It uses the **Gemma 3 4B** model, which runs right on the Mac.
+
+* The model, about 2.5 GB, is downloaded in the background when the feature is first turned on. Call transcription keeps working meanwhile.
+* Summaries are written only when there are no recordings to transcribe.
+* Summarization needs about 4 GB of free RAM while it runs.
+* The **Overview** section shows the summarization state: off, downloading the model, ready, summarizing, or error.
+
 ### Menu bar status
 
 The Local STT Worker menu bar icon shows whether Speech to Text is running, a transcription is in progress, or attention is required. The menu contains the status, current stage or last-contact time, and the **Open App** button.
@@ -183,5 +194,5 @@ For Parakeet, the worker verifies the expected model and repository, downloads c
 
 | Location             | Settings                                                                                                                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **MikoPBX / module** | Processing window, retention period, engine and model, job language, recognition terms, processing profile, queue, keys, transcripts, and module log. |
+| **MikoPBX / module** | Processing window, retention period, model for the macOS platform, job language, recognition terms, summarization, queue, keys, transcripts, and module log. |
 | **Local STT Worker** | Connection settings, Mac UID and name, worker startup and recovery, local model cache, temporary folder, TLS/CA, local history, and diagnostics.                                  |

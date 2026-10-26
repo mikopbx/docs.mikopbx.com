@@ -4,6 +4,8 @@ description: Quick start for the Local Speech To Text module and Local STT Worke
 
 # Quick Start
 
+This guide shows how to get started with the Mac worker. If calls will be transcribed by a Linux server or a Windows computer, install and set up the module following the first two sections, then continue with [Docker worker (Linux)](docker-worker.md) or [Windows worker](windows-worker.md).
+
 ### Installing the module
 
 1. Open the MikoPBX web interface.
@@ -25,15 +27,17 @@ description: Quick start for the Local Speech To Text module and Local STT Worke
 1. On the **Settings** tab, select the main language used in calls or leave **Auto - detect automatically** selected.
 2. Select the **Recording processing window** and **Transcript retention**. The processing window cannot exceed the retention period.
 3. If necessary, add internal names and abbreviations under **Recognition terms**.
-4. Save the settings.
+4. If you want short call summaries, turn on **Get call summarization**. The worker will need about 4 GB of additional RAM and 3 GB of additional disk space.
+5. Save the settings.
 
 <figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>OUTDATED. Module settings</p></figcaption></figure>
 
 ### Selecting a model
 
 1. Open the **Model marketplace** tab.
-2. Select the model for call transcription. The default **Parakeet TDT 0.6B v3** is recommended for most calls; use a WhisperKit model for languages outside Parakeet's 25 supported languages.
-3. Click **Save model**.
+2. In the **Worker platform** switch, select **macOS (Apple Silicon)**.
+3. Select the model for call transcription. The default **Parakeet TDT 0.6B v3** is recommended for most calls; for languages outside Parakeet's 25 supported languages, select one of the Whisper models.
+4. Click **Save model**.
 
 {% hint style="info" %}
 The selected model is downloaded to the Mac when the worker receives its first job. Keep the Mac connected to the internet until the model and its supporting files finish downloading.
@@ -44,9 +48,10 @@ The selected model is downloaded to the Mac when the worker receives its first j
 ### Downloading the worker and creating an API key
 
 1. Open the **Workers** tab. Use HTTPS for the web interface: over HTTP, the created key is not displayed.
-2. Click **Download for macOS** to download Local STT Worker.
-3. Click **Create API key**.
-4. Copy the displayed token immediately. It cannot be viewed again after the page is refreshed.
+2. In the **Platform** switch, select **macOS (Apple Silicon)**.
+3. Click **Download for macOS** to download Local STT Worker.
+4. Click **Create API key**.
+5. Copy the displayed token immediately. It cannot be viewed again after the page is refreshed.
 
 {% hint style="info" %}
 Create a separate key for each Mac. One key cannot be bound to multiple worker UIDs.

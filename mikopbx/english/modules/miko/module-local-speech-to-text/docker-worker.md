@@ -9,7 +9,7 @@ description: >-
 
 The **Docker worker** is a container that recognizes call recordings locally on your Linux server. It takes jobs from the queue of the **Local Transcription** module, downloads the recording, recognizes it with the model selected in MikoPBX, and sends timestamped segments and technical diagnostics back to the PBX. Recordings never leave your network.
 
-The Docker worker is an alternative to [Local STT Worker for macOS](miko-ai-worker.md). Only one platform works on a PBX at a time: the model selected on the **Model marketplace** tab decides which one.
+The Docker worker can run at the same time as [Local STT Worker for macOS](miko-ai-worker.md) and the [Windows worker](windows-worker.md): each platform has its own model selected on the **Model marketplace** tab, and each worker receives jobs with the model of its own platform.
 
 The image is published on Docker Hub: [`excla1m/mikopbx-stt-worker`](https://hub.docker.com/r/excla1m/mikopbx-stt-worker). The `latest` tag always points to the latest stable version.
 
@@ -19,11 +19,11 @@ The image is published on Docker Hub: [`excla1m/mikopbx-stt-worker`](https://hub
 | --- | --- | --- |
 | OS | 64-bit Linux (x86_64 or arm64) | Ubuntu Server 24.04 LTS or Debian 12 |
 | CPU | 4 cores | 8 cores with AVX2 support |
-| Memory | 4 GB | 8 GB (required for T-one) |
+| Memory | 4 GB | 8 GB (required for T-one); 4 GB more with summarization |
 | Disk | 30 GB | 50 GB |
 | Docker | Docker Engine with the Compose plugin 2.24 or newer | latest stable version |
 | Network | outbound HTTPS to MikoPBX, Docker Hub and huggingface.co | the same; no inbound ports are needed |
-| MikoPBX | 2025.1.1 and a module version with the **Linux (Docker)** platform on the **Model marketplace** tab | latest module version |
+| MikoPBX | 2025.1.1 and a module version with the **Docker** platform on the **Model marketplace** tab | latest module version |
 
 {% hint style="info" %}
 On a VMware virtual machine, make sure the CPU compatibility mode (EVC) does not hide AVX2 instructions: without them recognition is several times slower. Step 1 shows how to check.
@@ -75,13 +75,9 @@ curl -sI https://huggingface.co | head -1
 ### Step 2. Prepare MikoPBX
 
 1. Open **Modules** → **Local Transcription** → the **Model marketplace** tab.
-2. Switch the platform to **Linux (Docker)** and select a model, for example **GigaAM v3**.
-3. Go to the **Workers** tab and click **Create API key**.
+2. Switch the platform to **Docker**, select a model, for example **GigaAM v3**, and click **Save model**.
+3. Go to the **Workers** tab, select the **Docker** platform, and click **Create API key**.
 4. Copy the key: it is shown only once and is no longer available after the page is reloaded.
-
-{% hint style="info" %}
-If a macOS model is selected on the PBX, the Docker worker connects but does not take jobs, and `status` shows `waiting: MikoPBX has a macOS model selected (choose a Linux model)`.
-{% endhint %}
 
 ### Step 3. Get the image
 
@@ -301,6 +297,15 @@ docker compose up -d
 | `HEARTBEAT_INTERVAL` | `60` | Job lease renewal interval, seconds |
 | `LOG_LEVEL` | `INFO` | `DEBUG`, `INFO`, `WARNING`, `ERROR` |
 
+### Summarization
+
+If **Get call summarization** is on in the module settings, the worker also writes the topic and a short summary of every new call. The **Gemma 3 4B** model runtime is already in the image, so there is nothing extra to install.
+
+* The model, about 2.5 GB, is downloaded in the background into the `models` volume; transcription keeps working meanwhile.
+* Summaries are written only when there are no recordings to transcribe. One summary takes about 30-60 seconds on 4 cores.
+* While the model is loaded it needs about 3 GB of RAM; plan for **4 GB**. If you limited the container memory (`mem_limit`, `deploy.resources.limits.memory`, or `--memory`), raise the limit by about 4 GB, otherwise summarization will fail.
+* `status` shows the summarization state in the `Summarization` line: off, downloading the model with a percentage, ready, summarizing, or the error.
+
 ### TLS
 
 Certificate verification is off by default: the worker accepts any MikoPBX certificate (self-signed, issued for another name, or when connecting by IP address), and the traffic is still encrypted. This matches Local STT Worker for macOS.
@@ -311,7 +316,7 @@ To reject untrusted certificates, turn verification on in `setup` or set `PBX_TL
 
 | Symptom | Cause and solution |
 | --- | --- |
-| `status`: `waiting: MikoPBX has a macOS model selected (choose a Linux model)` | A macOS model is selected on the PBX. Switch **Model marketplace** to **Linux (Docker)** and select a model. |
+| `status`: `waiting: MikoPBX has a macOS model selected (choose a Linux model)` | An old module version is installed, in which only one platform works at a time. Update **Local Transcription**. |
 | `status`: `waiting: update ModuleLocalSpeechToText` | The module version does not support the Linux platform. Update **Local Transcription**. |
 | `status`: `waiting: this image cannot run the selected model` | This image version does not support the selected model. Update the image or select another model. |
 | `MikoPBX rejected the worker key` | The key was deleted, mistyped, or is already bound to another worker. Create a new key on the **Workers** tab and run `setup` again. |
@@ -320,10 +325,6 @@ To reject untrusted certificates, turn verification on in `setup` or set `PBX_TL
 | The model does not download | huggingface.co is not reachable. Allow outbound HTTPS for the server or set up a proxy. |
 | Recognition is slow (RTF above 0.3 for GigaAM) | Too few cores or a CPU without AVX2. Add cores to the virtual machine and check the EVC mode. |
 | The container is `unhealthy` | The worker loop has not reported for 10 minutes. Check `docker compose logs --tail 200`. |
-
-{% hint style="info" %}
-For good phrase splitting, turn on **Voice activity detection (VAD)** in the module settings: without it, the recording is cut into fixed-length windows instead of at pauses in speech.
-{% endhint %}
 
 ### Data and security
 
