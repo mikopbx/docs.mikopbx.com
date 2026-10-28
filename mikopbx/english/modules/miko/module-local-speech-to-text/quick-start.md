@@ -2,7 +2,7 @@
 description: Quick start for the Local Speech To Text module and Local STT Worker
 ---
 
-# Quick Start
+# Connecting the macOS worker
 
 This guide shows how to get started with the Mac worker. If calls will be transcribed by a Linux server or a Windows computer, install and set up the module following the first two sections, then continue with [Docker worker (Linux)](docker-worker.md) or [Windows worker](windows-worker.md).
 

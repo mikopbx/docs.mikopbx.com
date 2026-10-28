@@ -4,7 +4,7 @@ description: >-
   history, models, diagnostics, settings, and Worker API updates.
 ---
 
-# Local STT Worker
+# macOS worker overview
 
 **Local STT Worker** is an application that locally recognizes MikoPBX call recordings. It downloads one assigned job, prepares the audio, runs the engine selected in MikoPBX, and sends timestamped segments and technical diagnostics back to the PBX.
 
@@ -38,7 +38,7 @@ Parakeet supports 25 languages: Bulgarian, Croatian, Czech, Danish, Dutch, Engli
 ### First launch
 
 {% hint style="info" %}
-The onboarding process is described in detail in the [Quick Start guide](quick-start.md#step-1.-language).
+The onboarding process is described in detail in [Connecting the macOS worker](quick-start.md#step-1.-language).
 {% endhint %}
 
 The onboarding wizard has three steps:

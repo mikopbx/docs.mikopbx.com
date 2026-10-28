@@ -5,7 +5,7 @@ description: >-
   removing it.
 ---
 
-# Docker worker (Linux)
+# Connecting the Docker worker
 
 The **Docker worker** is a container that recognizes call recordings locally on your Linux server. It takes jobs from the queue of the **Local Transcription** module, downloads the recording, recognizes it with the model selected in MikoPBX, and sends timestamped segments and technical diagnostics back to the PBX. Recordings never leave your network.
 

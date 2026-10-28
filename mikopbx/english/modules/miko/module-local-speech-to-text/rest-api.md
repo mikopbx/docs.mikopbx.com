@@ -1,4 +1,4 @@
-# REST API
+# Module REST API reference
 
 Base path:
 

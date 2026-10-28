@@ -5,7 +5,7 @@ description: >-
   removing it.
 ---
 
-# Windows worker
+# Connecting the Windows worker
 
 The **Windows worker** is a Windows service that recognizes call recordings locally on your computer or server. It takes jobs from the queue of the **Local Transcription** module, downloads the recording, recognizes it with the model selected in MikoPBX, and sends timestamped segments and technical diagnostics back to the PBX. Recordings never leave your network.
 
