@@ -30,7 +30,7 @@ This guide shows how to get started with the Mac worker. If calls will be transc
 4. If you want short call summaries, turn on **Get call summarization**. The worker will need about 4 GB of additional RAM and 3 GB of additional disk space.
 5. Save the settings.
 
-<figure><img src="../../../.gitbook/assets/STTModuleMain.png" alt=""><figcaption><p>OUTDATED. Module settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSTTSettings.png" alt=""><figcaption><p>Module settings</p></figcaption></figure>
 
 ### Selecting a model
 
@@ -43,7 +43,7 @@ This guide shows how to get started with the Mac worker. If calls will be transc
 The selected model is downloaded to the Mac when the worker receives its first job. Keep the Mac connected to the internet until the model and its supporting files finish downloading.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/0110STTModels.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSttModels.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
 
 ### Downloading the worker and creating an API key
 
@@ -57,7 +57,7 @@ The selected model is downloaded to the Mac when the worker receives its first j
 Create a separate key for each Mac. One key cannot be bound to multiple worker UIDs.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/0110STTModuleWorkers-QS-2.png" alt=""><figcaption><p>Creating a Worker API key</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSTTModuleWorkers.png" alt=""><figcaption><p>Creating a Worker API key</p></figcaption></figure>
 
 ### Connecting Local STT Worker
 

@@ -16,7 +16,7 @@ Optionally, the worker also writes a **summary** of every call: its topic and a 
 The PBX module runs inside MikoPBX, while recognition runs on a worker on a separate computer or server. There are three kinds of workers: an application for Mac, a Docker container, and a Windows service. See **Worker types** below for a comparison.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/0110STTModuleTranscript.png" alt=""><figcaption><p>Example of transcription result</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSTTTranscript.png" alt=""><figcaption><p>Example of transcription result</p></figcaption></figure>
 
 ### Worker types
 
@@ -88,7 +88,7 @@ The **Default language** list contains only the languages supported by the model
 Changing the recording processing window resets the scan cursor so that the module reviews call history within the new range.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/0110STTModuleSettings.png" alt=""><figcaption><p>Module settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSTTSettings.png" alt=""><figcaption><p>Module settings</p></figcaption></figure>
 
 #### Summarization
 
@@ -114,7 +114,7 @@ The **Worker platform** switch above the list shows the models of the selected p
 
 Select a model for the platform you need and click **Save model**. If the default language on the **Settings** tab is not supported by the selected model, the module shows a warning: choose **Auto - detect automatically** or a supported language.
 
-<figure><img src="../../../.gitbook/assets/STTNEWModelMarketplace4EN.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSttModels.png" alt=""><figcaption><p>Selecting a recognition model</p></figcaption></figure>
 
 ### Queue tab
 
@@ -159,7 +159,7 @@ The worker table shows the name, UID, IP address, platform, model, application v
 
 Until the first worker is connected, a three-step **How to connect a worker** hint is displayed above the table on the **macOS (Apple Silicon)** platform.
 
-<figure><img src="../../../.gitbook/assets/0110STTModuleWorkers-QS.png" alt=""><figcaption><p>Workers tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSTTModuleWorkers.png" alt=""><figcaption><p>Workers tab</p></figcaption></figure>
 
 ### Transcripts tab
 
@@ -177,7 +177,7 @@ When summarization is on, a **Summarization** block with the call topic and summ
 
 The actions menu offers **Download TXT**, **Download JSON**, and **Delete transcript**. Deletion requires confirmation: the transcript and related module data are removed, while the MikoPBX CDR record and the source call recording are kept.
 
-<figure><img src="../../../.gitbook/assets/0110STTModuleTranscript.png" alt=""><figcaption><p>Transcript conversation view</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EN2810LocalSTTTranscript.png" alt=""><figcaption><p>Transcript conversation view</p></figcaption></figure>
 
 ### Transcript in call history
 
