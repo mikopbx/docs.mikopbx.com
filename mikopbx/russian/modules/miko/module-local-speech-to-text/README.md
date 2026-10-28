@@ -16,7 +16,7 @@ description: >-
 PBX-модуль работает внутри MikoPBX, а распознавание выполняет обработчик на отдельном компьютере или сервере. Обработчик бывает трех видов: приложение для Mac, Docker-контейнер и служба Windows. Сравнение приведено в разделе **Виды обработчиков** ниже.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/3009STTModuleTranscript.png" alt=""><figcaption><p>Пример результата транскрибации</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2810LocalSTTTranscript.png" alt=""><figcaption><p>Пример результата транскрибации</p></figcaption></figure>
 
 ### Виды обработчиков
 
@@ -88,7 +88,7 @@ PBX-модуль работает внутри MikoPBX, а распознава�
 При изменении периода обработки позиция сканирования сбрасывается, чтобы модуль пересмотрел историю в новом диапазоне.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/3009STTModuleSettings.png" alt=""><figcaption><p>Раздел настроек модуля</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2810LocalSttSettings.png" alt=""><figcaption><p>Раздел настроек модуля</p></figcaption></figure>
 
 #### Суммаризация
 
@@ -114,7 +114,7 @@ PBX-модуль работает внутри MikoPBX, а распознава�
 
 Выберите модель для нужной платформы и нажмите **Сохранить модель**. Если язык по умолчанию на вкладке **Настройки** не поддерживается выбранной моделью, модуль покажет предупреждение: выберите **Определять автоматически** или подходящий язык.
 
-<figure><img src="../../../.gitbook/assets/0910STTModels.png" alt=""><figcaption><p>Выбор модели</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2810LocalSttModels.png" alt=""><figcaption><p>Выбор модели</p></figcaption></figure>
 
 ### Вкладка «Очередь»
 
@@ -159,7 +159,7 @@ PBX-модуль работает внутри MikoPBX, а распознава�
 
 Пока ни один обработчик не подключен, на платформе **macOS (Apple Silicon)** над таблицей выводится подсказка **Как подключить обработчик** из трех шагов.
 
-<figure><img src="../../../.gitbook/assets/0910ModuleWorkers.png" alt=""><figcaption><p>Вкладка обработчиков</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2810LocalSTTModuleWorkers.png" alt=""><figcaption><p>Вкладка обработчиков</p></figcaption></figure>
 
 ### Вкладка «Расшифровки»
 
@@ -177,7 +177,7 @@ PBX-модуль работает внутри MikoPBX, а распознава�
 
 Меню действий в карточке позволяет **Скачать TXT**, **Скачать JSON** и **Удалить транскрипт**. При удалении требуется подтверждение: удаляются расшифровка и связанные данные модуля, а CDR MikoPBX и исходная запись разговора сохраняются.
 
-<figure><img src="../../../.gitbook/assets/3009STTModuleTranscript.png" alt=""><figcaption><p>УСТАРЕЛО. Вид карточки расшифровки</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2810LocalSTTTranscript.png" alt=""><figcaption><p>Вид карточки расшифровки</p></figcaption></figure>
 
 ### Расшифровка в истории звонков
 

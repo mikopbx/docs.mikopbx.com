@@ -30,7 +30,7 @@ description: Быстрый запуск модуля локальной тра�
 4. Если нужны краткие итоги разговоров, включите **Получать суммаризацию звонка**. Обработчику понадобится дополнительно около 4 ГБ оперативной памяти и 3 ГБ на диске.
 5. Сохраните настройки.
 
-<figure><img src="../../../.gitbook/assets/3009STTModuleSettings.png" alt=""><figcaption><p>Страница настроек</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2810LocalSttSettings.png" alt=""><figcaption><p>Страница настроек</p></figcaption></figure>
 
 ### Выбор модели
 
