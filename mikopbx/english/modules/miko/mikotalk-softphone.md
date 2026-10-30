@@ -6,7 +6,7 @@ description: >-
 
 # MikoTalk Softphone
 
-The **Softphone Backend** module turns an employee's iPhone into a full-featured PBX extension: calls over Wi-Fi and mobile data, incoming calls delivered via push notifications — just like a regular call, even when the app is closed.
+The **MikoTalk Push Softphone API** module turns an employee's iPhone into a full-featured PBX extension: calls over Wi-Fi and mobile data, incoming calls delivered via push notifications — just like a regular call, even when the app is closed.
 
 Setting up the softphone is as simple as scanning a QR code or opening an auto-configuration link.
 
@@ -24,9 +24,9 @@ Setting up the softphone is as simple as scanning a QR code or opening an auto-c
 
 ## Installation <a href="#install" id="install"></a>
 
-Install the **WebRTC Softphone Backend** module from the MikoPBX [modules marketplace](../../manual/modules/pbx-extension-modules.md#marketplace).
+Install the **MikoTalk Push Softphone API** module from the MikoPBX [modules marketplace](../../manual/modules/pbx-extension-modules.md#marketplace).
 
-Once installed, open the module settings: **"Modules" → "WebRTC Softphone Backend"**. A license is required — see [Requirements and licensing](mikotalk-softphone.md#requirements).
+Once installed, open the module settings: **"Modules" → "MikoTalk Push Softphone API"**. A license is required — see [Requirements and licensing](mikotalk-softphone.md#requirements).
 
 ## Requirements and licensing <a href="#requirements" id="requirements"></a>
 
