@@ -7,7 +7,7 @@ description: >-
 
 # Софтфон MikoTalk
 
-Модуль **Softphone Backend** превращает iPhone сотрудника в полноценный софтфон АТС: звонки по Wi-Fi и мобильному интернету, входящие вызовы через push-уведомление — как обычный звонок, даже если приложение закрыто.
+Модуль **MikoTalk: API для push софтфона** (MikoTalk Push Softphone API) превращает iPhone сотрудника в полноценный софтфон АТС: звонки по Wi-Fi и мобильному интернету, входящие вызовы через push-уведомление — как обычный звонок, даже если приложение закрыто.
 
 Для настройки софтфона достаточно отсканировать QR-код или перейти по ссылке автонастройки.
 
@@ -25,9 +25,9 @@ description: >-
 
 ## Установка <a href="#install" id="install"></a>
 
-Установите модуль **WebRTC Softphone Backend** из [маркетплейса модулей](../../manual/modules/pbx-extension-modules.md#marketpleis-modulei) MikoPBX.
+Установите модуль **MikoTalk: API для push софтфона** из [маркетплейса модулей](../../manual/modules/pbx-extension-modules.md#marketpleis-modulei) MikoPBX.
 
-После установки откройте настройки модуля: **«Модули» → «WebRTC Softphone Backend»**. Для работы требуется лицензия — см. [Требования и лицензирование](softfon-mikotalk.md#requirements).
+После установки откройте настройки модуля: **«Модули» → «MikoTalk: API для push софтфона»**. Для работы требуется лицензия — см. [Требования и лицензирование](softfon-mikotalk.md#requirements).
 
 ## Требования и лицензирование <a href="#requirements" id="requirements"></a>
 
