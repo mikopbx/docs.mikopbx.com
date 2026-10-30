@@ -24,9 +24,51 @@ Setting up the softphone is as simple as scanning a QR code or opening an auto-c
 
 ## Installation <a href="#install" id="install"></a>
 
-Install the **MikoTalk Push Softphone API** module from the MikoPBX [modules marketplace](../../manual/modules/pbx-extension-modules.md#marketplace).
+Connecting the softphone takes four steps: prepare the PBX, issue an SSL certificate, install the module and connect the employee's iPhone.
 
-Once installed, open the module settings: **"Modules" → "MikoTalk Push Softphone API"**. A license is required — see [Requirements and licensing](mikotalk-softphone.md#requirements).
+### Step 1. Install MikoPBX <a href="#install-pbx" id="install-pbx"></a>
+
+Install MikoPBX **2026.1.223** or later — on a standalone computer, in a virtual machine or in the cloud. See [Quick start](../../readme/quick-start.md) for the procedure. If the PBX is already running, check its version and update if necessary.
+
+For employees to call over mobile data, the PBX must be reachable from the internet: a public static IP address or port forwarding (1:1 NAT). The port list and built-in firewall setup are described in [System requirements](mikotalk-softphone.md#system-requirements).
+
+### Step 2. Obtain an SSL certificate <a href="#install-ssl" id="install-ssl"></a>
+
+The app connects to the PBX over a secure connection only (HTTPS/WSS), so a trusted certificate is required — a self-signed one will not work.
+
+1. Install the ["Let's Encrypt SSL certificate generator"](module-get-ssl-lets-encrypt.md) module from the marketplace.
+2. In the module settings, enter the PBX's public IP address — a domain name is not required, the certificate can be issued for an IP address.
+3. Select the **HTTP-01** verification method: during verification the PBX must be reachable from the internet on port **80**, and **"Redirect to HTTPS"** must be disabled in **"System" → "General Settings" → "HTTP/HTTPS"**.
+4. Enable **"Renew certificate automatically"** and click **"Get/Renew SSL Certificate"**.
+
+{% hint style="warning" %}
+A Let's Encrypt certificate for an IP address is short-lived: it is valid for only a few days. The module automatically tries to renew it every 5th day if **"Renew certificate automatically"** is enabled — do not disable it: once the certificate expires, the app can no longer connect to the PBX. See the [Let's Encrypt module instructions](module-get-ssl-lets-encrypt.md) for module setup and checking the issued certificate.
+{% endhint %}
+
+### Step 3. Install the MikoTalk module <a href="#install-module" id="install-module"></a>
+
+1. In **"Modules" → "Modules Marketplace"** ([more about the marketplace](../../manual/modules/pbx-extension-modules.md#marketplace)), install the **MikoTalk Push Softphone API** module (formerly "WebRTC Softphone Backend").
+2. Enable the module on the **"Installed Modules"** tab. A trial license is activated automatically on first installation — see [Requirements and licensing](mikotalk-softphone.md#requirements).
+3. Open the module settings: **"Modules" → "MikoTalk Push Softphone API"**.
+4. Wait for the [status panel](mikotalk-softphone.md#health) indicators to turn green — this usually takes up to a minute after enabling the module:
+   * **nginx** — the app API is published;
+   * **push-server** — push notification delivery is working;
+   * **STUN** — the built-in coturn is running and the PBX's public address is determined;
+   * **Built-in status service** — employee statuses and active calls;
+   * **SSL certificate** — the certificate is trusted and issued for the address in the [external server](mikotalk-softphone.md#external-server) settings.
+
+{% hint style="info" %}
+If an indicator stays red or yellow, hover over it to see the reason. The most common causes are a missing or undetected public PBX address or a self-signed certificate: check the **Host** and **Connection** fields in the [external server settings](mikotalk-softphone.md#external-server).
+{% endhint %}
+
+### Step 4. Connect the iPhone softphone <a href="#ios" id="ios"></a>
+
+1. Install the [MikoTalk app from the App Store](https://apps.apple.com/si/app/mikotalk/id6759347414) on the employee's iPhone.
+2. In the module settings, **"Device setup"** tab, create an [auto-configuration link](mikotalk-softphone.md#provision) for the employee's extension.
+3. Scan the QR code with the iPhone camera or open the email with the link on the iPhone, then confirm sign-in in the app.
+4. Allow notifications — without them, incoming calls will not be delivered.
+
+After connecting, place a test call to the employee's extension with the app closed: it should arrive as a regular incoming call.
 
 ## Requirements and licensing <a href="#requirements" id="requirements"></a>
 
@@ -73,12 +115,6 @@ The same tab contains the employee table: search by name or number, emailing a Q
 {% hint style="info" %}
 To email connection parameters, first configure the PBX mail server: **"System" → "Mail and Notifications"**. See the [Mail and Notifications](../../manual/system/mail-settings/) section for instructions.
 {% endhint %}
-
-### Installing MikoTalk <a href="#ios" id="ios"></a>
-
-1. Install the [MikoTalk app from the App Store](https://apps.apple.com/si/app/mikotalk/id6759347414).
-2. Open the auto-configuration link email on the iPhone, or scan the QR code from the module page.
-3. Allow notifications — without them, incoming calls will not be delivered.
 
 ### Employee sessions <a href="#sessions" id="sessions"></a>
 
