@@ -1,4 +1,10 @@
-# Module REST API reference
+---
+description: How to fetch call transcripts and summaries from the Local Transcription module over REST API
+---
+
+# REST API
+
+The module delivers finished call transcripts to external systems — a CRM, a Telegram bot, corporate analytics. There is no need to touch the PBX database: everything is available through a few simple requests.
 
 Base path:
 
@@ -6,83 +12,108 @@ Base path:
 /pbxcore/api/v3/module-local-speech-to-text
 ```
 
-Requests are authorized with a Bearer token. Integration responses include `source_instance_id`, a permanent identifier of the module's data set, and `contract_version` (the current contract version is `3`).
+## Access key
 
-#### Dialog and summary of a call
+1. In the PBX web interface, open **System → API keys** and create a new key.
+2. In the key permissions, keep a single row — read access to `/api/v3/module-local-speech-to-text/call-transcripts`.
+3. Send the key with every request in the header:
 
-The simplest way to get the result for a specific call is to request it by the PBX call identifier. `{call_id}` can be the call's `linkedid` or the `UNIQUEID` of any of its recorded parts. The response is always built from the latest published transcript revision.
+```bash
+Authorization: Bearer YOUR_KEY
+```
 
-* `GET /call-dialogs/{call_id}` - the call dialog. Each turn in `turns` contains `start_ms`, `end_ms`, `channel`, the participant role `speaker` (`client` or `employee`), the employee name `speaker_name`, and `text`. The `text` field holds the whole dialog as plain text with speaker labels, and `direction` is the call direction (`incoming`, `outgoing`, `internal`).
-* `GET /call-summaries/{call_id}` - the call summary: `topic`, `summary`, `model`, and the completion time `finished_at`. The `status` field takes these values:
+Requests made from the PBX itself (for example, by another installed module) do not require a key.
 
-| Status        | Meaning                                                                                  |
-| ------------- | ---------------------------------------------------------------------------------------- |
-| `done`        | The summary is ready.                                                                    |
-| `pending`     | The summary is queued or in progress, including a new run after the call content changed. |
-| `skipped`     | The conversation is too short to summarize.                                              |
-| `error`       | The call could not be summarized.                                                        |
-| `unavailable` | Summarization is off, or the call was transcribed before it was turned on.               |
+{% hint style="info" %}
+Every response is wrapped in a standard envelope: `result` (success flag), `data` (the payload) and `messages` (error text). The sections below describe the contents of `data`.
+{% endhint %}
 
-#### Transcripts for integrations
+## Call dialog
 
-* `GET /transcripts?limit=50&offset=0&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD&search={text}`
-* `GET /transcripts/{result_id}`
-* `GET /call-transcripts/{call_transcript_id}?revision={revision}`
-* `GET /call-transcripts/events?cursor=0:0&limit=100&include_deleted=false&include_summaries=false`
+The most common scenario is fetching a finished dialog by the call identifier. Use the call's `linkedid` or the `UNIQUEID` of any of its recorded legs (visible in the call history and in the recording file name):
 
-`transcripts` returns recognition results for individual recordings. The `limit` parameter accepts values from 1 to 200, and `search` is a query against the transcript text. A detailed transcript contains stable `segment_id` values, source segments, merged `turns`, and plain text.
+```bash
+curl -H "Authorization: Bearer YOUR_KEY" \
+  "https://pbx-address/pbxcore/api/v3/module-local-speech-to-text/call-transcripts/mikopbx-1791275140.999663_claea922:dialog"
+```
 
-`call-transcripts` combines multiple recordings from one logical call into a versioned transcript. Its part manifest preserves `cdr_start_ms` and `cdr_end_ms`, while segments contain relative and absolute timestamps. Adjacent segments from the same participant and channel are combined into a single turn without losing their source `segment_id` values. The response also contains the call language `language`, the PBX time zone `pbx_timezone`, the `is_current` flag (the requested revision is the current one), and the revision creation time `created_at`.
+The response always contains the latest published transcript revision:
 
-`call-transcripts/events` publishes idempotent `call-transcript.completed` and `call-transcript.updated` events. To read from the beginning, use the cursor `0:0` (the default); `limit` is 1 to 200, 100 by default. Store `next_cursor` only after all returned events have been processed successfully. Additional events are turned on with parameters:
+* `turns` — dialog turns: `text`, `start_ms`/`end_ms` timings, the `channel`, and the speaker `speaker` (`client` or `employee`) with the employee's name `speaker_name`;
+* `text` — the whole dialog as plain text, one turn per line, each starting with the speaker's name;
+* `direction` — call direction: `incoming`, `outgoing` or `internal`;
+* `language` — the detected conversation language.
 
-* `include_deleted=true` - `call-transcript.deleted` events with the `deleted_at` and `deletion_reason` fields: `manual` for manual deletion, `retention` for an expired retention period;
-* `include_summaries=true` - `call-summary.completed` events when a call summary is finished (`done`, `skipped`, or `error`). Then get the summary itself with `GET /call-summaries/{call_id}`.
+If the call has not been transcribed yet, you get a `404` with the code `call_transcript_not_found`.
 
-#### Administration
+## Call summary
 
-| Operation                         | Endpoint                            |
-| --------------------------------- | ----------------------------------- |
-| List jobs                         | `GET /jobs`                         |
-| Get a job                         | `GET /jobs/{job_id}`                |
-| Create a job for a recording file | `POST /jobs`                        |
-| Retry or reset a failed job       | `PATCH /jobs/{job_id}`              |
-| Retry or reset several jobs       | `PATCH /jobs`                       |
-| Delete a job                      | `DELETE /jobs/{job_id}`             |
-| Bulk delete by status             | `DELETE /jobs`                      |
-| List workers                      | `GET /workers`                      |
-| Get a worker                      | `GET /workers/{worker_id}`          |
-| Update a worker                   | `PUT`, `PATCH /workers/{worker_id}` |
-| Delete a worker                   | `DELETE /workers/{worker_id}`       |
+```bash
+curl -H "Authorization: Bearer YOUR_KEY" \
+  "https://pbx-address/pbxcore/api/v3/module-local-speech-to-text/call-transcripts/mikopbx-1791275140.999663_claea922:summary"
+```
 
-The `retry` action keeps the attempt counter, while `reset` clears it; only failed jobs can be changed. Only a pending or failed job without saved results can be deleted. A worker can be deleted only when it has no active lease; job and result history is preserved. Worker credentials do not grant access to job management.
+Returns a single summary for the whole call: `topic`, the `summary` text, the `model`, and the completion time `finished_at`. The `status` field tells you what to do with it:
 
-#### Worker API v2
+| Status        | Meaning                                                                  |
+| ------------- | ------------------------------------------------------------------------ |
+| `done`        | The summary is ready.                                                    |
+| `pending`     | Queued or still being generated; ask again later.                        |
+| `skipped`     | The conversation is too short; there will be no summary.                 |
+| `error`       | The summary could not be produced.                                       |
+| `unavailable` | Summarization is off, or the call was transcribed before it was enabled. |
 
-The worker first calls `GET /worker-api-contract`, then sends the `X-MikoPBX-Worker-API-Version: 2` header with every Worker API request. A request without a matching version is rejected with code `426` and the `worker_upgrade_required` error.
+## List of transcribed calls
 
-On registration, the worker sends its platform `worker_platform` (`macos`, `linux`, or `windows`; `macos` if omitted) and a list of optional features in `capabilities`, for example `call-summaries`. The same list can be sent in `worker_capabilities` when requesting a job.
+```bash
+curl -H "Authorization: Bearer YOUR_KEY" \
+  "https://pbx-address/pbxcore/api/v3/module-local-speech-to-text/call-transcripts?limit=50&offset=0&date_from=2026-10-01&date_to=2026-10-31&search=delivery"
+```
 
-The `GET /worker-processing-settings` response contains the processing profile, a `selected_model` object with the model selected for this worker's platform, and a `summarization` block with the summarization settings. Jobs also contain `model_engine` and `model_artifact_type`, which the worker uses to choose the recognition engine. Arbitrary engine, model, and artifact combinations are rejected.
+The list is ordered from the newest calls to the oldest. Parameters:
 
-| Operation             | Endpoint                          |
-| --------------------- | --------------------------------- |
-| Registration          | `POST /workers`                   |
-| Processing profile    | `GET /worker-processing-settings` |
-| Worker update license | `GET /worker-update-license`      |
-| Acquire lease         | `POST /job-leases`                |
-| Download recording    | `GET /job-recordings/{job_id}`    |
-| Renew lease           | `PATCH /job-leases/{job_id}`      |
-| Release lease         | `DELETE /job-leases/{job_id}`     |
-| Submit result         | `PUT /job-results/{job_id}`       |
-| Submit failure        | `PUT /job-failures/{job_id}`      |
+* `limit` — how many records to return (1 to 200, default 50), `offset` — how many to skip;
+* `date_from`, `date_to` — filter by call date;
+* `search` — full-text search over the transcripts.
 
-Summary tasks are given to a worker only when there are no transcription jobs for it:
+Each list item contains `call_id`, `aggregate_id`, `revision`, the call date `call_started_at` and the number of legs `part_count`; the `pagination` object holds the total record count.
 
-| Operation              | Endpoint                      |
-| ---------------------- | ----------------------------- |
-| Acquire a summary task | `POST /summary-leases`        |
-| Renew                  | `PATCH /summary-leases/{id}`  |
-| Release                | `DELETE /summary-leases/{id}` |
-| Submit summary         | `PUT /summary-results/{id}`   |
-| Submit summary failure | `PUT /summary-failures/{id}`  |
+## Full transcript
+
+```bash
+curl -H "Authorization: Bearer YOUR_KEY" \
+  "https://pbx-address/pbxcore/api/v3/module-local-speech-to-text/call-transcripts/77"
+```
+
+Instead of the number, you can pass the same call identifier as for the dialog. The response contains:
+
+* `transcript.segments` — every phrase with exact timings, both within the call and within the recording;
+* `transcript.turns` — phrases merged into turns by channel and speaker;
+* `transcript.text` — the full text;
+* `part_manifest` — which recordings the call was assembled from;
+* `revision` and `is_current` — the transcript revision and whether it is the current one (an older revision can be fetched with `?revision=N`).
+
+## New-transcript events
+
+To avoid polling the list, subscribe to the event feed:
+
+```bash
+curl -H "Authorization: Bearer YOUR_KEY" \
+  "https://pbx-address/pbxcore/api/v3/module-local-speech-to-text/call-transcripts:events?limit=100"
+```
+
+* Make the first request without the `cursor` parameter — it will return events from the very beginning. Store the `next_cursor` from the response only after you have successfully processed all received events, and pass it in the next request.
+* `call-transcript.completed` and `call-transcript.updated` — a call was transcribed or its transcript was updated; after these, request the dialog or the full transcript.
+* `include_deleted=true` — also adds `call-transcript.deleted` events with the deletion reason: `manual` (deleted by an administrator) or `retention` (retention period expired).
+* `include_summaries=true` — also adds `call-summary.completed` events telling you a call summary is ready.
+
+## Identifiers
+
+* `call_id` — the permanent PBX call identifier (`linkedid`); the `UNIQUEID` of a recorded leg also works for lookups.
+* `aggregate_id` — the module's number of the call transcript.
+* `source_instance_id` — a permanent identifier of this module's data set; store it in your system so that after a module reinstall you do not process the same calls again.
+* `contract_version` — the response format version (currently `4`).
+
+{% hint style="info" %}
+The rest of the module's API (job and worker management) is for internal use: it serves the module's web interface and the worker applications. Only the requests described above are intended for integrations.
+{% endhint %}

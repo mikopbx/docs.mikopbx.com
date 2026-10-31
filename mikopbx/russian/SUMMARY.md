@@ -289,7 +289,7 @@
     * [Описание MacOS обработчика](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
     * [Подключение Docker-обработчика](modules/miko/module-local-speech-to-text/docker-worker.md)
     * [Подключение Windows-обработчика](modules/miko/module-local-speech-to-text/windows-worker.md)
-    * [Описание REST API модуля](modules/miko/module-local-speech-to-text/rest-api.md)
+    * [REST API](modules/miko/module-local-speech-to-text/rest-api.md)
     * [Предоставление доступа к звонкам определенных сотрудников](modules/miko/module-local-speech-to-text/predostavlenie-dostupa-k-zvonkam-opredelennykh-sotrudnikov.md)
   * [Локальный ИИ Супервайзер](modules/miko/module-a-i-supervisor/README.md)
     * [Быстрый старт](modules/miko/module-a-i-supervisor/quick-start.md)

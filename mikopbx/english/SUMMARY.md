@@ -230,11 +230,12 @@
     * [macOS worker overview](modules/miko/module-local-speech-to-text/miko-ai-worker.md)
     * [Connecting the Docker worker](modules/miko/module-local-speech-to-text/docker-worker.md)
     * [Connecting the Windows worker](modules/miko/module-local-speech-to-text/windows-worker.md)
-    * [Module REST API reference](modules/miko/module-local-speech-to-text/rest-api.md)
+    * [REST API](modules/miko/module-local-speech-to-text/rest-api.md)
   * [Local AI Supervisor](modules/miko/module-a-i-supervisor/README.md)
     * [Quick Start](modules/miko/module-a-i-supervisor/quick-start.md)
     * [AI Supervisor Worker](modules/miko/module-a-i-supervisor/miko-ai-worker.md)
     * [Docker worker (Linux)](modules/miko/module-a-i-supervisor/docker-worker.md)
+    * [REST API](modules/miko/module-a-i-supervisor/rest-api.md)
   * [Cloud Speech-to-Text](modules/miko/module-cloud-speech-to-text/README.md)
     * [REST API](modules/miko/module-cloud-speech-to-text/rest-api.md)
 
