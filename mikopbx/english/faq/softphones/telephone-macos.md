@@ -33,3 +33,13 @@ The green indicator on the top indicates successful authorization. Also, the sta
 <figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+
+### TLS Connection
+
+To connect via a secure TLS channel, you need to go to the Network section and select TLS as the “SIP Transport” parameter.
+
+<figure><img src="../../.gitbook/assets/TelephoneSIPTransport.png" alt=""><figcaption><p>The “SIP Transport” parameter</p></figcaption></figure>
+
+Next, go to the “Network” section and add “-TLS” after the internal number.
+
+<figure><img src="../../.gitbook/assets/TelephoneTLS.png" alt=""><figcaption><p>The postfix “TLS” after the internal number.</p></figcaption></figure>

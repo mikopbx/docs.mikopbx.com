@@ -2,8 +2,7 @@
 description: >-
   Local call transcription in MikoPBX: recordings stay inside your network,
   recognition runs on a worker on a Mac, in Docker or on Windows, and completed
-  transcripts and short call summaries are available in the module interface
-  and through the REST API.
+  transcripts and short call summaries are availab
 ---
 
 # Local Transcription
@@ -20,13 +19,13 @@ The PBX module runs inside MikoPBX, while recognition runs on a worker on a sepa
 
 ### Worker types
 
-|                    | **Local STT Worker for macOS**                                        | **Docker worker**                                                                                        | **Windows worker**                                                     |
-| ------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Where it runs      | Mac with Apple silicon (M1 or newer), macOS 14 or later               | Linux server or Mac with Docker, x86\_64 or arm64                                                        | Windows 10/11 or Windows Server 2019 or later, x64                     |
+|                     | **Local STT Worker for macOS**                                        | **Docker worker**                                                                                         | **Windows worker**                                                          |
+| ------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Where it runs       | Mac with Apple silicon (M1 or newer), macOS 14 or later               | Linux server or Mac with Docker, x86\_64 or arm64                                                         | Windows 10/11 or Windows Server 2019 or later, x64                          |
 | How it is installed | Application, the **Download for macOS** button on the **Workers** tab | Image [`excla1m/mikopbx-stt-worker`](https://hub.docker.com/r/excla1m/mikopbx-stt-worker) from Docker Hub | Windows service, the **Download for Windows** button on the **Workers** tab |
-| Models             | Parakeet and Whisper on Core ML with Apple acceleration               | GigaAM v3, GigaAM Multilingual, T-one, Parakeet and Whisper Turbo on the CPU                             | GigaAM v3, GigaAM Multilingual, Parakeet and Whisper Turbo on the CPU  |
-| When to choose it  | You have a spare Mac; you need Whisper with hardware acceleration     | You have a Linux server or virtual machine; most calls are in Russian                                    | You have a spare Windows computer or server                            |
-| Details            | [Local STT Worker](miko-ai-worker.md)                                 | [Docker worker (Linux)](docker-worker.md)                                                                | [Windows worker](windows-worker.md)                                    |
+| Models              | Parakeet and Whisper on Core ML with Apple acceleration               | GigaAM v3, GigaAM Multilingual, T-one, Parakeet and Whisper Turbo on the CPU                              | GigaAM v3, GigaAM Multilingual, Parakeet and Whisper Turbo on the CPU       |
+| When to choose it   | You have a spare Mac; you need Whisper with hardware acceleration     | You have a Linux server or virtual machine; most calls are in Russian                                     | You have a spare Windows computer or server                                 |
+| Details             | [Local STT Worker](miko-ai-worker.md)                                 | [Docker worker (Linux)](docker-worker.md)                                                                 | [Windows worker](windows-worker.md)                                         |
 
 Workers of different kinds can be connected at the same time. Each platform has its own model selected on the **Model marketplace** tab, and each worker receives jobs with the model of its own platform. For example, a Docker worker can transcribe calls with GigaAM v3 while a Mac transcribes other calls with Whisper.
 
