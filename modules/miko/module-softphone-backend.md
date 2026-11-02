@@ -24,13 +24,13 @@ Setting up the softphone is as simple as scanning a QR code or opening an auto-c
 
 ## Installation <a href="#install" id="install"></a>
 
-Connecting the softphone takes four steps: prepare the PBX, issue an SSL certificate, install the module and connect the employee's iPhone.
+Connecting the softphone takes five steps: prepare the PBX, issue an SSL certificate, install the module, configure the firewall and connect the employee's iPhone.
 
 ### Step 1. Install MikoPBX <a href="#install-pbx" id="install-pbx"></a>
 
 Install MikoPBX **2026.1.223** or later — on a standalone computer, in a virtual machine or in the cloud. See [Quick start](../../master/quick-start.md) for the procedure. If the PBX is already running, check its version and update if necessary.
 
-For employees to call over mobile data, the PBX must be reachable from the internet: a public static IP address or port forwarding (1:1 NAT). The port list and built-in firewall setup are described in [System requirements](module-softphone-backend.md#system-requirements).
+For employees to call over mobile data, the PBX must be reachable from the internet via a public IP address / domain name.
 
 ### Step 2. Obtain an SSL certificate <a href="#install-ssl" id="install-ssl"></a>
 
@@ -48,7 +48,7 @@ A Let's Encrypt certificate for an IP address is short-lived: it is valid for on
 ### Step 3. Install the MikoTalk module <a href="#install-module" id="install-module"></a>
 
 1. In **"Modules" → "Modules Marketplace"** ([more about the marketplace](../../manual/modules/pbx-extension-modules.md#marketplace)), install the **MikoTalk Push Softphone API** module (formerly "WebRTC Softphone Backend").
-2. Enable the module on the **"Installed Modules"** tab. A trial license is activated automatically on first installation — see [Requirements and licensing](module-softphone-backend.md#requirements).
+2. Enable the module on the **"Installed Modules"** tab. A trial license is activated automatically on first installation — see [Licensing](module-softphone-backend.md#requirements).
 3. Open the module settings: **"Modules" → "MikoTalk Push Softphone API"**.
 4. Wait for the [status panel](module-softphone-backend.md#health) indicators to turn green — this usually takes up to a minute after enabling the module:
    * **nginx** — the app API is published;
@@ -58,10 +58,16 @@ A Let's Encrypt certificate for an IP address is short-lived: it is valid for on
    * **SSL certificate** — the certificate is trusted and issued for the address in the [external server](module-softphone-backend.md#external-server) settings.
 
 {% hint style="info" %}
-If an indicator stays red or yellow, hover over it to see the reason. The most common causes are a missing or undetected public PBX address or a self-signed certificate: check the **Host** and **Connection** fields in the [external server settings](module-softphone-backend.md#external-server).
+If the indicators are still not green after a couple of minutes, reload the page manually: the state may have changed while the panel has not re-read the statuses yet. If an indicator is still red or yellow after reloading, hover over it to see the reason. The most common causes are a missing or undetected public PBX address or a self-signed certificate: check the **Host** and **Connection** fields in the [external server settings](module-softphone-backend.md#external-server).
 {% endhint %}
 
-### Step 4. Connect the iPhone softphone <a href="#ios" id="ios"></a>
+### Step 4. Firewall configuration <a href="#install-firewall" id="install-firewall"></a>
+
+In in the PBX's own firewall settings (**"System" → "Network & Firewall" → "Firewall"**), enable the **Softphone RTP** service for the **"Internet"** profile — or at least for **"Trusted networks"** if employees only place calls from the office network. Otherwise, audio traffic is blocked by the built-in firewall.
+
+<figure><img src="../../.gitbook/assets/softphone-firewall.png" alt=""><figcaption><p>The Softphone RTP service in the PBX firewall settings</p></figcaption></figure>
+
+### Step 5. Connect the iPhone softphone <a href="#ios" id="ios"></a>
 
 1. Install the [MikoTalk app from the App Store](https://apps.apple.com/si/app/mikotalk/id6759347414) on the employee's iPhone.
 2. In the module settings, **"Device setup"** tab, create an [auto-configuration link](module-softphone-backend.md#provision) for the employee's extension.
@@ -70,7 +76,7 @@ If an indicator stays red or yellow, hover over it to see the reason. The most c
 
 After connecting, place a test call to the employee's extension with the app closed: it should arrive as a regular incoming call.
 
-## Requirements and licensing <a href="#requirements" id="requirements"></a>
+## Licensing <a href="#requirements" id="requirements"></a>
 
 * MikoPBX **2026.1.223** or later.
 * Licenses are issued **per employee**: all devices of the same employee consume a single license.
@@ -79,7 +85,7 @@ After connecting, place a test call to the employee's extension with the app clo
 The module is installed from the marketplace. A **trial license** is activated automatically on first installation, so you can try the softphone before purchasing. See [Registration in the modules marketplace](../../manual/modules/licensing.md) for details on registering and renewing licenses.
 {% endhint %}
 
-### System requirements <a href="#system-requirements" id="system-requirements"></a>
+## Internet access to the PBX <a href="#system-requirements" id="system-requirements"></a>
 
 For calls over mobile data, the PBX must be reachable from the internet: a **public static IP address** or port forwarding from an external IP/domain to the PBX (1:1 NAT). The following ports must be open and forwarded:
 
@@ -89,9 +95,7 @@ For calls over mobile data, the PBX must be reachable from the internet: a **pub
 | **3478** (STUN/TURN, built-in coturn)        | UDP and TCP | NAT traversal: helps the app discover its public address and build a media route to the PBX                                                                           |
 | PBX RTP port range (default **10000–12000**) | UDP         | Call audio traffic. The range is configured in the MikoPBX network settings                                                                                           |
 
-Additionally, in the PBX's own firewall settings (**"System" → "Network & Firewall" → "Firewall"**), enable the **Softphone RTP** service for the **"Internet"** profile — or at least for **"Trusted networks"** if employees only place calls from the office network. Otherwise, audio traffic is blocked by the built-in firewall.
-
-<figure><img src="../../.gitbook/assets/softphone-firewall.png" alt=""><figcaption><p>The Softphone RTP service in the PBX firewall settings</p></figcaption></figure>
+Additionally, the **Softphone RTP** service must be enabled in the PBX's built-in firewall — see [Step 4. Firewall configuration](module-softphone-backend.md#install-firewall).
 
 For secure connections (HTTPS/WSS), use the [Let's Encrypt](module-get-ssl-lets-encrypt.md) module — it issues a trusted SSL certificate. A certificate can also be obtained for an IP address; a domain name is not required.
 
