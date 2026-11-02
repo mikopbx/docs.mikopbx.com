@@ -34,3 +34,13 @@
 <figure><img src="../../.gitbook/assets/6 (23).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+
+### TLS подключение
+
+Для подключения по защищенному TLS каналу, необходимо перейти в раздел Network и выбрать TLS в качестве параметра "SIP Transport"
+
+<figure><img src="../../.gitbook/assets/TelephoneSIPTransport.png" alt=""><figcaption><p>Параметр "SIP Transport"</p></figcaption></figure>
+
+Далее перейдите в раздел "Network" и добавьте "-TLS" после внутреннего номера.
+
+<figure><img src="../../.gitbook/assets/TelephoneTLS.png" alt=""><figcaption><p>Постфикс "TLS" после внутреннего номера</p></figcaption></figure>
