@@ -8,6 +8,8 @@ description: Установка MikoPBX на платформу Cloud.ru
 
 Перед началом вам необходимо скачать актуальный образ MikoPBX с расширением .raw. Сделать это можно по [ссылке](https://github.com/mikopbx/Core/releases).
 
+{% embed url="https://vkvideo.ru/video-100268702_456239068" %}
+
 ## Загрузка образа в cloud.ru
 
 1. Перейдите в раздел "**Сервисы**" -> "**Образы**".
