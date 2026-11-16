@@ -77,6 +77,10 @@ description: >-
 
 После подключения сделайте тестовый звонок на внутренний номер сотрудника при закрытом приложении: он должен прийти как обычный входящий вызов.
 
+{% hint style="info" %}
+Звонить можно и с компьютера — из браузера Google Chrome. Сотрудник подключается по той же ссылке автонастройки: см. инструкцию [Softphone MikoPBX (Google Chrome)](../../faq/softphones/softphone-mikopbx-chrome.md).
+{% endhint %}
+
 ## Лицензирование <a href="#requirements" id="requirements"></a>
 
 * MikoPBX не ниже версии **2026.1.223**.
