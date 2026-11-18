@@ -307,6 +307,7 @@
   * [2024.1.114](other/patchi-oshibok/2024.1.114/README.md)
     * [Перестает работать сеть в MikoPBX](other/patchi-oshibok/2024.1.114/network-stops-working-in-mikopbx.md)
 * [История версий](other/changelog/README.md)
+  * [MikoPBX 2026.8.2](other/changelog/mikopbx-2026.8.2.md)
   * [MikoPBX 2026.6.99](other/changelog/mikopbx-2026.6.99.md)
   * [MikoPBX 2026.6.34](other/changelog/mikopbx-2026.6.34.md)
   * [MikoPBX 2026.5.6](other/changelog/mikopbx-2026.5.6.md)
