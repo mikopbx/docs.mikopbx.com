@@ -10,6 +10,8 @@ The main focus of MikoPBX 2026.8.2 is security and fixes after 2026.6.99. Vulner
 Back up the PBX before updating. After the update, web interface users need to sign in again once. When updating from 2026.5.6, upload the IMG image manually. For PBXs installed before 2026.1.1, use the IMG-legacy image.
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/mikopbx-2026.8.2-header.png" alt="MikoPBX 2026.8.2"><figcaption></figcaption></figure>
+
 ### Security
 
 A user with a restricted role can no longer call module actions without permission. The module menu item form can no longer be used to change system settings or inject markup into the menu.
