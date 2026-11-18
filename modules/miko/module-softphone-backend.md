@@ -6,9 +6,13 @@ description: >-
 
 # MikoTalk Softphone
 
-The **MikoTalk Push Softphone API** module turns an employee's iPhone into a full-featured PBX extension: calls over Wi-Fi and mobile data, incoming calls delivered via push notifications — just like a regular call, even when the app is closed.
+The **MikoTalk Push Softphone API** module turns an employee's smartphone (iPhone or Android) into a full-featured PBX extension: calls over Wi-Fi and mobile data, incoming calls delivered via push notifications — just like a regular call, even when the app is closed.
 
 Setting up the softphone is as simple as scanning a QR code or opening an auto-configuration link.
+
+{% hint style="info" %}
+Instructions for employees — installing the app from a QR code, connecting to the PBX and allowing incoming calls: [MikoTalk for iPhone and Android](../../faq/softphones/mikotalk-mobile.md).
+{% endhint %}
 
 ## Features <a href="#features" id="features"></a>
 
@@ -24,7 +28,7 @@ Setting up the softphone is as simple as scanning a QR code or opening an auto-c
 
 ## Installation <a href="#install" id="install"></a>
 
-Connecting the softphone takes five steps: prepare the PBX, issue an SSL certificate, install the module, configure the firewall and connect the employee's iPhone.
+Connecting the softphone takes five steps: prepare the PBX, issue an SSL certificate, install the module, configure the firewall and connect the employee's smartphone.
 
 ### Step 1. Install MikoPBX <a href="#install-pbx" id="install-pbx"></a>
 
@@ -67,12 +71,14 @@ In in the PBX's own firewall settings (**"System" → "Network & Firewall" → "
 
 <figure><img src="../../.gitbook/assets/softphone-firewall.png" alt=""><figcaption><p>The Softphone RTP service in the PBX firewall settings</p></figcaption></figure>
 
-### Step 5. Connect the iPhone softphone <a href="#ios" id="ios"></a>
+### Step 5. Connect the employee's smartphone <a href="#ios" id="ios"></a>
 
-1. Install the [MikoTalk app from the App Store](https://apps.apple.com/si/app/mikotalk/id6759347414) on the employee's iPhone.
+1. Install the MikoTalk app on the employee's smartphone — [from the App Store](https://apps.apple.com/app/id6759347414) for iPhone or [from Google Play](https://play.google.com/store/apps/details?id=ru.miko.sipsoftphone) for Android.
 2. In the module settings, **"Device setup"** tab, create an [auto-configuration link](module-softphone-backend.md#provision) for the employee's extension.
-3. Scan the QR code with the iPhone camera or open the email with the link on the iPhone, then confirm sign-in in the app.
-4. Allow notifications — without them, incoming calls will not be delivered.
+3. Scan the QR code with the smartphone camera or open the email with the link on the smartphone, then confirm sign-in in the app.
+4. Allow notifications and the other incoming call permissions — without them, calls will not arrive while the app is closed.
+
+Step-by-step instructions for employees, with QR codes for installing the app: [MikoTalk for iPhone and Android](../../faq/softphones/mikotalk-mobile.md).
 
 After connecting, place a test call to the employee's extension with the app closed: it should arrive as a regular incoming call.
 
@@ -110,7 +116,7 @@ The app is connected via an auto-configuration link. Open the module settings, *
 3. Optionally enable **"One-time link"** — the link stops working after the first use.
 4. Click **"Create"** — the module shows a QR code and the link itself.
 
-The link can be shared by any convenient means; the QR code can be scanned with the iPhone camera. The app downloads the settings and asks to confirm sign-in.
+The link can be shared by any convenient means; the QR code can be scanned with the smartphone camera. The app downloads the settings and asks to confirm sign-in. What the employee sees when connecting is described in [MikoTalk for iPhone and Android](../../faq/softphones/mikotalk-mobile.md#provision).
 
 <figure><img src="../../.gitbook/assets/softphone-provision.png" alt=""><figcaption><p>The "Device setup" tab</p></figcaption></figure>
 

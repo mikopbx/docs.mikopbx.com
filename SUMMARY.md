@@ -197,6 +197,7 @@
   * [Softphone.pro](faq/softphones/softphone.pro.md)
   * [3CX Softphone](faq/softphones/3cx-softphone.md)
   * [PortSIP](faq/softphones/portsip.md)
+  * [MikoTalk for iPhone and Android](faq/softphones/mikotalk-mobile.md)
 * [IP telefones](faq/ip-telefones/README.md)
   * [Snom D120](faq/ip-telefones/snom-d120.md)
   * [Yealink T19](faq/ip-telefones/yealink-t19.md)
